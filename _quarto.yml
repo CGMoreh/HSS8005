@@ -16,6 +16,8 @@ website:
       - content.qmd
       #- href: index.qmd
       #  text: Home
+      - Materials
+      - Data
   
   sidebar:
     - title: "Materials"
