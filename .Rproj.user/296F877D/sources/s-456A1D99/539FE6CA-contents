@@ -1,0 +1,28 @@
+author: Chris More
+
+instructor:
+  name: Dr. Chris Moreh
+  name_no_title: Chris Moreh
+  email: chris.moreh@newcastle.ac.uk
+  url: "https://chrismoreh.com"
+  twitter: CGMoreh
+  github: cgmoreh
+  office: "HDB.4.106"
+  contact_policy: "By e-mail"
+  appointment_url: "Microsoft Bookings"
+
+course:
+  number: "HSS8005"
+  semester: "2022, Semester 2"
+  days: "Thursdays"
+  time: ""
+  location: ""
+  dates: ""
+  github: ""
+  url: ""
+  copyright_year: "2022"
+  canvas: ""
+
+university:
+  name: "Newcastle University"
+  url: ""

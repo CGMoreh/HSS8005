@@ -1,0 +1,13 @@
+"0","headings <- tribble("
+"0","  ~Week,"
+"0","  ~Date,"
+"0","  ~Topic,	"
+"0","  ~Readings,"
+"0","  ~Notes,"
+"0","  ~Lecture,"
+"0","  ~Slides,"
+"0","  ~Worksheets,"
+"0","  ~Handouts)"
+"2","Error in tribble(~Week, ~Date, ~Topic, ~Readings, ~Notes, ~Lecture, ~Slides,  : 
+  could not find function ""tribble""
+"
