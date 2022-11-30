@@ -2,8 +2,12 @@
 .Rproj.user*
 .Rproj.user\
 .Rproj.user\*
+.Rproj.user/
+/.Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
 .DS_Store
 /.quarto/
+
+/.luarc.json
