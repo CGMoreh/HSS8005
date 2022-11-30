@@ -1,5 +1,6 @@
 project:
   type: website
+  output_dir: _docs
   render:
     - "*.qmd"
     - "*.Rmd"
