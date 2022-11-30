@@ -1,6 +1,9 @@
 project:
   type: website
-  output_dir: _docs
+  output-dir: _docs
+  preview:
+    port: 4000
+    browser: true
   render:
     - "*.qmd"
     - "*.Rmd"
