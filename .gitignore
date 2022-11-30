@@ -1,12 +1,9 @@
 .Rproj.user
+.Rproj.user*
+.Rproj.user\
+.Rproj.user\*
 .Rhistory
 .RData
 .Ruserdata
 .DS_Store
-
-
-*conflicted\ copy
-
-
-**/*_files/*
-**/*_cache/*
+/.quarto/
