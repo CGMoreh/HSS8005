@@ -1,0 +1,16 @@
+{
+  "hash": "f505b92d68859847e216950ec5e14fbc",
+  "result": {
+    "markdown": "---\ntitle: \"Materials\"\n---\n\n\nMaterials for each week are available from the side menu. \n\n\n\n\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

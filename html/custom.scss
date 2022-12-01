@@ -26,6 +26,8 @@ $green:   #02b875 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
+$ncl-blue:  #0e3b6a;
+
 $primary:       $blue !default;
 $secondary:     $gray-500 !default;
 $success:       $green !default;
@@ -38,7 +40,7 @@ $dark:          $gray-800 !default;
 $font-family-sans-serif:      Fira Sans Condensed, sans-serif !default;
 $font-family-serif:           Barlow, serif !default;  /* Not actually a serif font but whatever */
 
-$font-size-base:              1rem !default;
+$font-size-base:              1.2rem !default;
 $headings-font-weight:        700 !default;
 
 $h1-font-size: $font-size-base * 2.45;
@@ -59,6 +61,16 @@ $monokai-bg: #2e3440;
 
 
 /*-- scss:rules --*/
+
+.navbar {
+    font-size: 1.3333rem;
+    border: none;
+}
+
+.navbar-dark {
+    background-color: #0e3b6a;
+}
+
 h2 {
   border-bottom: none;
 }
@@ -75,6 +87,15 @@ ol {
   padding-bottom: 1em;
 }
 
+.course-title {
+  font-size: 3.6rem;
+  margin-top: 0;
+}
+
+.course-subtitle {
+  font-size: 1.7rem;
+}
+
 .course-details {
   margin: 0 0 1em;
   border-bottom: 3px solid $gray-200;
@@ -85,29 +106,10 @@ ol {
   margin-top: 0;
 }
 
-.course-title {
-  font-size: 3.6rem;
-  margin-top: 0;
-}
-
-.course-subtitle {
-  font-size: 1.7rem;
-}
-
-.course-meta {
-  font-size: 1.2rem;
-  color: $gray-600;
-}
-
 .course-details ul {
   list-style: none;
   text-indent: -0.7rem;
   padding-left: 1.4rem;
-}
-
-.contact-policy p {
-  font-size: 1rem;
-  line-height: 1.5;
 }
 
 .course-details-smaller li {
@@ -118,6 +120,15 @@ ol {
   font-size: 1.4rem;
 }
 
+.contact-policy p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.course-meta {
+  font-size: 1.2rem;
+  color: $gray-600;
+}
 
 // Footer stuff
 .nav-footer-left {

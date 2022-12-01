@@ -1,0 +1,18 @@
+---
+title: " "
+page-layout: full
+---
+
+  <p style="text-align:center; font-size:230px; font-weight: bold; color:#900C3F">404</p>
+
+```{r}
+
+Error <- function(error){
+  error = 404
+  print("The page you are looking for cannot be found") 
+  warning("There may still be content here in the future, so visit back!")
+}
+
+Error(404)
+
+```

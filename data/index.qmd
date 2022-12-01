@@ -1,0 +1,5 @@
+---
+title: "Data overview"
+---
+
+We will be using a variety of real-world data from public sources and published research. You can read the `data dictionary` for each dataset from the side menu. You will be able to access the data from a dedicated {{< fa brands r-project size="sm">}} package `{hss8005data}` (note: work in progress and may be updated during the course).

@@ -1,0 +1,22 @@
+---
+title: "Materials"
+---
+
+Materials for each week are available from the side menu. 
+
+
+```{r, eval=F, include=FALSE, error=FALSE, warning=FALSE}
+ten <- 1:10
+for (j in seq_along(ten)){
+  ifelse(j<10,
+  folder<-dir.create(paste0("week_0", ten[j])),
+  folder<-dir.create(paste0("week_", ten[j])))
+}
+```
+
+```{r, eval=F, include=FALSE, error=FALSE, warning=FALSE}
+for (j in c("notes", "slides", "worksheets", "handouts")){
+dir.create(j)
+}
+```
+

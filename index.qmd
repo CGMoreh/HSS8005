@@ -9,14 +9,14 @@ toc: false
 page-layout: full
 format:
   html:
-    template-partials:
-      - html/home/title-block.html
+   template-partials:
+     - html/home/title-block.html
 course-logo: /files/img/ncl_coa_hss8005.png
 ---
 
 ::: {.grid .course-details}
 
-::: {.g-col-12 .g-col-sm-6}
+::: {.g-col-4 .g-col-sm-4}
 
 ### Module leader
 
@@ -31,16 +31,14 @@ course-logo: /files/img/ncl_coa_hss8005.png
 
 :::
 
-::: {.g-col-12 .g-col-sm-6}
+::: {.g-col-8 .g-col-sm-8}
 
 ### Module description
-
-What this module is about...
 
 - {{< fa calendar-alt >}} &nbsp; {{< var course.dates >}}
 - {{< fa clock >}} &nbsp; {{< var course.time >}}
 - {{< fa location-dot >}} &nbsp; {{< var course.location >}}
-- {{< iconify arcticons canvasstudent >}} &nbsp; 
+- {{< iconify arcticons canvasstudent >}} &nbsp; {{< var course.location >}}
 :::
 
 :::

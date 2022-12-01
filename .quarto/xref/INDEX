@@ -7,5 +7,38 @@
   },
   "index.qmd": {
     "index.html": "91dcd838"
+  },
+  "materials/index.qmd": {
+    "index.html": "460dcf95"
+  },
+  "materials/handouts/index.qmd": {
+    "index.html": "c134d70e"
+  },
+  "materials/notes/index.qmd": {
+    "index.html": "b8870c20"
+  },
+  "materials/slides/index.qmd": {
+    "index.html": "0b207fbe"
+  },
+  "materials/worksheets/index.qmd": {
+    "index.html": "cf323d3a"
+  },
+  "data/index.qmd": {
+    "index.html": "580e2bd1"
+  },
+  "data/data1.qmd": {
+    "data1.html": "5df055d4"
+  },
+  "data/data2.qmd": {
+    "data2.html": "dd8f50b1"
+  },
+  "data/overview.qmd": {
+    "overview.html": "53670148"
+  },
+  "plan.qmd": {
+    "plan.html": "55f72247"
+  },
+  "404.qmd": {
+    "404.html": "de3839b0"
   }
 }
