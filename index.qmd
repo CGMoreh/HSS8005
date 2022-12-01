@@ -20,25 +20,32 @@ course-logo: /files/img/ncl_coa_hss8005.png
 
 ### Module leader
 
-- {{< fa user >}} &nbsp; Name and link
-- {{< fa university >}} &nbsp; office
-- {{< fa envelope >}} &nbsp; e-mail
-- {{< fa calendar-check >}} &nbsp; tutorial booking
-
-### Teaching Assistants
-- {{< fa user >}} &nbsp; Name and link
-- {{< fa user >}} &nbsp; Name and link
+- {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
+- {{< fa university >}} &nbsp; {{< var instructor.office >}}
+- {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
+- {{< fa calendar-check >}} &nbsp; tutorial booker
 
 :::
 
-::: {.g-col-8 .g-col-sm-8}
+::: {.g-col-4 .g-col-sm-4}
 
-### Module description
+### Teaching Assistants
+- {{< fa user >}} &nbsp; tbc
+- {{< fa user >}} &nbsp; tbc
 
-- {{< fa calendar-alt >}} &nbsp; {{< var course.dates >}}
-- {{< fa clock >}} &nbsp; {{< var course.time >}}
-- {{< fa location-dot >}} &nbsp; {{< var course.location >}}
-- {{< iconify arcticons canvasstudent >}} &nbsp; {{< var course.location >}}
+:::
+
+::: {.g-col-4 .g-col-sm-4}
+
+### Session details
+
+- {{< fa calendar-alt >}} &nbsp; {{< var session.days >}}
+- &thinsp;{{< fa location-dot >}} &nbsp; {{< var session.location >}}
+- {{< fa solid display >}} &nbsp; {{< var session.lecture >}}
+- {{< fa solid laptop-code >}} &nbsp; {{< var session.labs >}}
+<!-- - {{< fa clock >}} &nbsp; {{< var session.lecture >}} -->
+<!-- {{< iconify arcticons canvasstudent >}} &nbsp; [Module Canvas page]({{< var course.canvas >}}) -->
+
 :::
 
 :::

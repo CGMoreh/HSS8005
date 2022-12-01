@@ -36,16 +36,18 @@ website:
         - text: " "
           href: materials/index.qmd
         - section: "Week 1"
+          href: materials/notes/info_w1.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/notes_w1.qmd
             - text: "Presentation X"
-              href: materials/slides/week_
+              href: materials/slides/slides_w1.qmd
             - text: "Worksheet X"
-              href: materials/worksheets/week_
+              href: materials/worksheets/worksheet_w1.qmd
             - text: "Handout X"
-              href: materials/handouts/week_
+              href: materials/handouts/handout_w1.qmd
         - section: "Week 2"
+          href: materials/notes/info_w2.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_
@@ -56,6 +58,7 @@ website:
             - text: "Handout X"
               href: materials/handouts/week_
         - section: "Week 3"
+          href: materials/notes/info_w3.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_
@@ -66,6 +69,7 @@ website:
             - text: "Handout X"
               href: materials/handouts/week_
         - section: "Week 4"
+          href: materials/notes/info_w4.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_
@@ -76,6 +80,7 @@ website:
             - text: "Handout X"
               href: materials/handouts/week_
         - section: "Week 5"
+          href: materials/notes/info_w5.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_
@@ -86,6 +91,7 @@ website:
             - text: "Handout X"
               href: materials/handouts/week_
         - section: "Week 6"
+          href: materials/notes/info_w6.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_
@@ -96,6 +102,7 @@ website:
             - text: "Handout X"
               href: materials/handouts/week_
         - section: "Week 7"
+          href: materials/notes/info_w7.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_
@@ -106,6 +113,7 @@ website:
             - text: "Handout X"
               href: materials/handouts/week_
         - section: "Week 8"
+          href: materials/notes/info_w8.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_
@@ -116,6 +124,7 @@ website:
             - text: "Handout X"
               href: materials/handouts/week_
         - section: "Week 9"
+          href: materials/notes/info_w9.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_
@@ -126,6 +135,7 @@ website:
             - text: "Handout X"
               href: materials/handouts/week_
         - section: "Week 10"
+          href: materials/notes/info_w10.qmd
           contents:
             - text: "Introduction"
               href: materials/notes/week_

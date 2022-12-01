@@ -1,0 +1,11 @@
+---
+title: "Week 1"
+subtitle: "Introduction"
+---
+
+This week will be a general introduction to the module, probability theory, the history of statistics and the software that we will be using.
+
+The labs will be an introduction to the {{< iconify simple-icons tidyverse size="1x">}}`{tidyverse}` dialect of the {{< fa brands r-project size="1x">}} statistical programming language via the {{< iconify simple-icons rstudio size="1x">}} API.
+
+
+

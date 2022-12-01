@@ -63,7 +63,7 @@ $monokai-bg: #2e3440;
 /*-- scss:rules --*/
 
 .navbar {
-    font-size: 1.3333rem;
+    font-size: 1.2222rem;
     border: none;
 }
 
@@ -84,7 +84,7 @@ ol {
 .title-block {
   margin: 1em 0;
   border-bottom: 3px solid $gray-200;
-  padding-bottom: 1em;
+  padding-bottom: 4em;
 }
 
 .course-title {
@@ -99,17 +99,19 @@ ol {
 .course-details {
   margin: 0 0 1em;
   border-bottom: 3px solid $gray-200;
-  padding-bottom: 1em;
+  padding-bottom: 0;
 }
 
 .course-details h3 {
   margin-top: 0;
+  font-size: 1.3rem;
 }
 
 .course-details ul {
   list-style: none;
   text-indent: -0.7rem;
   padding-left: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .course-details-smaller li {
@@ -117,7 +119,7 @@ ol {
 }
 
 .course-details-smaller h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .contact-policy p {

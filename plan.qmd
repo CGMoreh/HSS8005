@@ -15,57 +15,51 @@ library(lubridate)
 library(glue)
 ```
    
-<!-- - [**Materials**](/materials/) ({{< fa book-open-reader >}}): This page contains the readings, slides, and recorded lectures (if any) for the topic. Read/watch these first. -->
-<!-- - **Tutorial** ({{< fa laptop-code >}}): A link to the tutorial for that week.  -->
-<!-- - **Assignment** ({{< fa pen-ruler >}}): This page contains the instructions for each assignment. **Assignments are due by 11:59 PM on the day they're listed.** -->
-
 
 ```{r build-table}
 #| echo=FALSE,
 #| results="asis" 
 
-# headings <- tribble(
-#   ~Week,
-#   ~Date,
-#   ~Topic,	
-#   ~Readings,
-#   ~Notes,
-#   ~Lecture,
-#   ~Slides,
-#   ~Worksheets,
-#   ~Handouts)
-# 
-# write_csv(headings, "edit_content.csv")
+week0 <- as_date("02-02-2023", format = '%d-%m-%Y')-7
 
-content <- read_csv("content.csv", show_col_types = FALSE) 
+contents <- tibble(
+  Week = c(paste("Week", 1:10)),
+  TW = c(22:29, 34:35),
+  Date = c(week0+7*1:8, week0+7*13:14),
+#  Topic = rep("tbc", 10),
+  Topic = c(paste("Topic", 1:10)),
+  Info = c(paste0("/materials/notes/info_w", 1:10)),
+  Notes = c(paste0("/materials/notes/notes_w", 1:10)),
+  Lecture = c(paste0("/materials/slides/slides_w", 1:10)),
+  Labs = c(paste0("/materials/worksheets/lab_w", 1:10)),
+  Handouts = c(paste0("/materials/handouts/sheet_w", 1:10)),
+  )
 
-content <- content |>
-  mutate(Topic = recode(Topic, 
-                        "Week 1" = "Introduction", 
-                        "Week 2" = "Review of linear models",
-                        "Week 3" = "Something else"),
-         Date = str_sub(Date, end=-6))
+write_csv(contents, "files/contents.csv") 
 
+contents <- contents |>
+  mutate(Date = format(as_date(Date), "%d %B"),
+         Info = glue('<a href="{Info}.qmd"><i class="fa-solid fa-circle-info fa-lg"></i></a>'),
+         Notes = glue('<a href="{Notes}.qmd"><i class="fa-solid fa-book-open fa-lg"></i></a>'),
+         Lecture = glue('<a href="{Lecture}.qmd"><i class="fa-solid fa-person-chalkboard fa-lg"></i></a>'),
+         Labs = glue('<a href="{Labs}.qmd"><i class="fa-solid fa-laptop-code fa-lg"></i></a>'),
+         Handouts = glue('<a href="{Handouts}.qmd"><i class="fa-solid fa-sheet-plastic fa-lg"></i></i></a>'),
+         Topic = recode(Topic, 
+                        "Topic 1" = "Introduction", 
+                        "Topic 2" = "Review of linear models",
+                        "Topic 3" = "Something else"))
 
-# week_count <- content |> count(Week)
-# week_index <- week_count |> pull(n) |> set_names(paste0("Week ", week_count$Week))
-
-tbl <- content |>
-  kbl(escap = FALSE, align = "lllcccccc", table.attr = 'class="schedule-table"') |>
+tbl <- contents |>
+  kbl(escap = FALSE, align = "llllccccc", table.attr = 'class="schedule-table"') |>
   kable_styling() |>
-  column_spec(1, width = "10%") |>  
-  column_spec(2, width = "15%") |>  
-  column_spec(3, width = "40%") |>  
-  column_spec(c(4:6), width = "5%") 
-# |>
-#   pack_rows(index = week_index,
-#               label_row_css = "border-bottom: 2px solid #000000;")
+  column_spec(1, width = "8%") |>  
+  column_spec(2, width = "5%") |>  
+  column_spec(3, width = "10%") |>  
+  column_spec(4, width = "45%") |>  
+  column_spec(c(5:9), width = "5%") 
 
   cat(tbl)
 
-
 ```
-
-
 
   

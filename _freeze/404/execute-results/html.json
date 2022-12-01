@@ -1,7 +1,7 @@
 {
-  "hash": "de7aad0108162280dc0ec6fa30559191",
+  "hash": "25d60b04e924e242fd335a177ef46b1c",
   "result": {
-    "markdown": "---\ntitle: \" \"\npage-layout: full\n---\n\n\n  <p style=\"text-align:center; font-size:230px; font-weight: bold; color:#900C3F\">404</p>\n\n\n::: {.cell}\n\n```{.r .cell-code}\nError <- function(error){\n  error = 404\n  print(\"The page you are looking for cannot be found\") \n  warning(\"There may still be content here in the future, so visit back!\")\n}\n\nError(404)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"The page you are looking for cannot be found\"\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning in Error(404): There may still be content here in the future, so visit\nback!\n```\n:::\n:::",
+    "markdown": "---\ntitle: \" \"\n#format: \n#  html: \n#    template-partials:\n#      - html/home/404.html\n---\n\n\n<head>\n  <style>\n  body {\n    background-image: url('/files/img/mechanics.jpg');\n    background-repeat: no-repeat;\n    background-attachment: fixed;\n    background-size: cover;\n    background-color: rgba(255,255,255,0.7);\n    background-blend-mode: lighten;\n  }\n  </style>\n</head>\n\n  <p style=\"text-align:center; font-size:230px; font-weight: bold; color:#900C3F\">404</p>\n\n\n::: {.cell}\n\n```{.r .cell-code}\nError <- function(error){\n  error = 404\n  print(\"The page you are looking for cannot be found\") \n  warning(\"There may still be content here in the future, so visit back!\")\n}\n\nError(404)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"The page you are looking for cannot be found\"\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning in Error(404): There may still be content here in the future, so visit\nback!\n```\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
