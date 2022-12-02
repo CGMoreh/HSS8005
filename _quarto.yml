@@ -8,7 +8,17 @@ project:
     - "*.qmd"
     - "*.Rmd"
     - "*.md"
-    - "!files/"    
+    - "!files/"
+
+format:
+  html:
+    theme: 
+      - litera
+      - html/custom.scss
+    toc: true
+
+# execute:
+#   freeze: auto
 
 website:
   title: "HSS8005 {{< iconify line-md plus >}}"
@@ -156,14 +166,3 @@ website:
           file: data/data1.qmd
         - text: "Data 2"
           file: data/data2.qmd
-
-format:
-  html:
-    theme: 
-      - litera
-      - html/custom.scss
-    toc: true
-
-execute:
-  freeze: auto
-

@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "\n            Quantitative analysis \n        ",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
     "text": "Quantitative analysis \n        \n        \n            HSS8005 • 2022 • Newcastle University (UK)\n        \n        \n            A second course in applied statistics and probability for the understanding of society and culture.\n        \n    \n\n\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh@newcastle.ac.uk\n   tutorial booker\n\n\n\nTeaching Assistants\n\n   tbc\n   tbc\n\n\n\nSession details\n\n   Thursdays\n    HDB.6.19\n   Lecture: 10:00-11:00\n   Labs:   13:00-14:00 (Group 03)        14:00-15:00 (Group 04)"
   },
@@ -37,14 +37,7 @@
   {
     "objectID": "plan.html",
     "href": "plan.html",
-    "title": "Module plan and contents",
-    "section": "",
-    "text": "Week\n\n\nTW\n\n\nDate\n\n\nTopic\n\n\nInfo\n\n\nNotes\n\n\nLecture\n\n\nLabs\n\n\nHandouts\n\n\n\n\n\n\nWeek 1\n\n\n22\n\n\n02 February\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n23\n\n\n09 February\n\n\nReview of linear models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n24\n\n\n16 February\n\n\nSomething else\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n25\n\n\n23 February\n\n\nTopic 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n26\n\n\n02 March\n\n\nTopic 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n27\n\n\n09 March\n\n\nTopic 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n28\n\n\n16 March\n\n\nTopic 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n29\n\n\n23 March\n\n\nTopic 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n34\n\n\n27 April\n\n\nTopic 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n35\n\n\n04 May\n\n\nTopic 10"
-  },
-  {
-    "objectID": "test.html",
-    "href": "test.html",
-    "title": "checking",
+    "title": "Module plan",
     "section": "",
     "text": "Week\n\n\nTW\n\n\nDate\n\n\nTopic\n\n\nInfo\n\n\nNotes\n\n\nLecture\n\n\nLabs\n\n\nHandouts\n\n\n\n\n\n\nWeek 1\n\n\n22\n\n\n02 February\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n23\n\n\n09 February\n\n\nReview of linear models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n24\n\n\n16 February\n\n\nSomething else\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n25\n\n\n23 February\n\n\nTopic 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n26\n\n\n02 March\n\n\nTopic 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n27\n\n\n09 March\n\n\nTopic 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n28\n\n\n16 March\n\n\nTopic 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n29\n\n\n23 March\n\n\nTopic 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n34\n\n\n27 April\n\n\nTopic 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n35\n\n\n04 May\n\n\nTopic 10"
   }

@@ -1,7 +1,7 @@
 ---
-title: "Module plan and contents"
+title: "Module plan"
 slug: plan
-summary: "Topic content with links for the HSS8005 module"
+summary: "Module topic plan with session timetable and link to materials"
 toc: false
 sidebar: false
 page-layout: full
@@ -14,16 +14,16 @@ library(kableExtra)
 library(lubridate)
 library(glue)
 ```
-   
+
 
 ```{r build-table, echo=FALSE, results="asis"}
 
-week0 <- as_date("02-02-2023", format = '%d-%m-%Y')-7
+week0 <- as_date("02-02-2023", format = '%d-%m-%Y') - 7
 
 contents <- tibble(
   Week = c(paste("Week", 1:10)),
   TW = c(22:29, 34:35),
-  Date = c(week0+7*1:8, week0+7*13:14),
+  Date = c(week0 + 7*1:8, week0 + 7*13:14),
 #  Topic = rep("tbc", 10),
   Topic = c(paste("Topic", 1:10)),
   Info = c(paste0("/materials/notes/info_w", 1:10)),
@@ -37,11 +37,11 @@ contents <- tibble(
 
 contents <- contents |>
   mutate(Date = format(as_date(Date), "%d %B"),
-         Info = glue('<a href="{Info}.qmd"><i class="fa-solid fa-circle-info fa-lg"></i></a>'),
-         Notes = glue('<a href="{Notes}.qmd"><i class="fa-solid fa-book-open fa-lg"></i></a>'),
-         Lecture = glue('<a href="{Lecture}.qmd"><i class="fa-solid fa-person-chalkboard fa-lg"></i></a>'),
-         Labs = glue('<a href="{Labs}.qmd"><i class="fa-solid fa-laptop-code fa-lg"></i></a>'),
-         Handouts = glue('<a href="{Handouts}.qmd"><i class="fa-solid fa-sheet-plastic fa-lg"></i></i></a>'),
+         Info = paste0("[{{< fa solid circle-info >}}]", glue('({Info}.qmd)')),
+         Notes = paste0("[{{< fa solid book-open >}}]", glue('({Notes}.qmd)')),
+         Lecture = paste0("[{{< fa solid person-chalkboard >}}]", glue('({Lecture}.qmd)')),
+         Labs = paste0("[{{< fa solid laptop-code >}}]", glue('({Labs}.qmd)')),
+         Handouts = paste0("[{{< fa solid sheet-plastic >}}]", glue('({Handouts}.qmd)')),
          Topic = recode(Topic, 
                         "Topic 1" = "Introduction", 
                         "Topic 2" = "Review of linear models",
