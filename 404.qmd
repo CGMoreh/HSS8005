@@ -1,23 +1,6 @@
 ---
 title: " "
-#format: 
-#  html: 
-#    template-partials:
-#      - html/home/404.html
 ---
-
-<head>
-  <style>
-  body {
-    background-image: url('/files/img/mechanics.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: rgba(255,255,255,0.7);
-    background-blend-mode: lighten;
-  }
-  </style>
-</head>
 
   <p style="text-align:center; font-size:230px; font-weight: bold; color:#900C3F">404</p>
 
@@ -32,4 +15,3 @@ Error <- function(error){
 Error(404)
 
 ```
-

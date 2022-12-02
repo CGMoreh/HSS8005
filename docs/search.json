@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\nNothing important here"
-  },
-  {
-    "objectID": "content.html",
-    "href": "content.html",
-    "title": "Module plan and contents",
-    "section": "",
-    "text": "Here’s a guide to the schedule:\n\n\n\n\n\n\n\n\nWeek\n\n\nDate\n\n\nTopic\n\n\nReadings\n\n\nNotes\n\n\nLecture\n\n\nSlides\n\n\nWorksheets\n\n\nHandouts\n\n\n\n\n\n\nWeek 1\n\n\n02 February 2023\n\n\nWeek 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n09 February 2023\n\n\nWeek 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n16 February 2023\n\n\nWeek 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n23 February 2023\n\n\nWeek 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n02 March 2023\n\n\nWeek 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n09 March 2023\n\n\nWeek 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n16 March 2023\n\n\nWeek 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n23 March 2023\n\n\nWeek 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n27 April 2023\n\n\nWeek 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n04 May 2023\n\n\nWeek 10"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "\n            Quantitative analysis \n        ",
@@ -21,39 +7,11 @@
     "text": "Quantitative analysis \n        \n        \n            HSS8005 • 2022 • Newcastle University (UK)\n        \n        \n            A second course in applied statistics and probability for the understanding of society and culture.\n        \n    \n\n\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh@newcastle.ac.uk\n   tutorial booker\n\n\n\nTeaching Assistants\n\n   tbc\n   tbc\n\n\n\nSession details\n\n   Thursdays\n    HDB.6.19\n   Lecture: 10:00-11:00\n   Labs:   13:00-14:00 (Group 03)        14:00-15:00 (Group 04)"
   },
   {
-    "objectID": "materials/index.html",
-    "href": "materials/index.html",
-    "title": "Materials",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Materials for each week are available from the side menu."
-  },
-  {
-    "objectID": "materials/handouts/index.html",
-    "href": "materials/handouts/index.html",
-    "title": "Readings, lectures, and videos",
-    "section": "",
-    "text": "Each class session has a set of required readings that you should complete before attempting the tutorials.\nAll lecture notes combined into one PDF (updated 10/18): gov50notes.pdf"
-  },
-  {
-    "objectID": "materials/notes/index.html",
-    "href": "materials/notes/index.html",
-    "title": "Readings, lectures, and videos",
-    "section": "",
-    "text": "Each class session has a set of required readings that you should complete before attempting the tutorials.\nAll lecture notes combined into one PDF (updated 10/18): gov50notes.pdf"
-  },
-  {
-    "objectID": "materials/slides/index.html",
-    "href": "materials/slides/index.html",
-    "title": "Readings, lectures, and videos",
-    "section": "",
-    "text": "Each class session has a set of required readings that you should complete before attempting the tutorials.\nAll lecture notes combined into one PDF (updated 10/18): gov50notes.pdf"
-  },
-  {
-    "objectID": "materials/worksheets/index.html",
-    "href": "materials/worksheets/index.html",
-    "title": "Readings, lectures, and videos",
-    "section": "",
-    "text": "Each class session has a set of required readings that you should complete before attempting the tutorials.\nAll lecture notes combined into one PDF (updated 10/18): gov50notes.pdf"
+    "text": "About this site\nNothing important here"
   },
   {
     "objectID": "data/index.html",
@@ -63,25 +21,11 @@
     "text": "We will be using a variety of real-world data from public sources and published research. You can read the data dictionary for each dataset from the side menu. You will be able to access the data from a dedicated  package {hss8005data} (note: work in progress and may be updated during the course)."
   },
   {
-    "objectID": "data/data1.html",
-    "href": "data/data1.html",
-    "title": "Dataset 1",
+    "objectID": "materials/index.html",
+    "href": "materials/index.html",
+    "title": "Materials",
     "section": "",
-    "text": "Data description"
-  },
-  {
-    "objectID": "data/overview.html",
-    "href": "data/overview.html",
-    "title": "Data overview",
-    "section": "",
-    "text": "We will be using a variety of real-world data from public sources and published research. You can read the data dictionary for each dataset from the side menu."
-  },
-  {
-    "objectID": "plan.html",
-    "href": "plan.html",
-    "title": "Module plan and contents",
-    "section": "",
-    "text": "Week\n\n\nTW\n\n\nDate\n\n\nTopic\n\n\nInfo\n\n\nNotes\n\n\nLecture\n\n\nLabs\n\n\nHandouts\n\n\n\n\n\n\nWeek 1\n\n\n22\n\n\n02 February\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n23\n\n\n09 February\n\n\nReview of linear models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n24\n\n\n16 February\n\n\nSomething else\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n25\n\n\n23 February\n\n\nTopic 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n26\n\n\n02 March\n\n\nTopic 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n27\n\n\n09 March\n\n\nTopic 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n28\n\n\n16 March\n\n\nTopic 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n29\n\n\n23 March\n\n\nTopic 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n34\n\n\n27 April\n\n\nTopic 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n35\n\n\n04 May\n\n\nTopic 10"
+    "text": "Materials for each week are available from the side menu."
   },
   {
     "objectID": "materials/notes/info_w1.html",
@@ -91,17 +35,17 @@
     "text": "This week will be a general introduction to the module, probability theory, the history of statistics and the software that we will be using.\nThe labs will be an introduction to the {tidyverse} dialect of the  statistical programming language via the  API."
   },
   {
-    "objectID": "materials/notes/notes_w1_draft.html",
-    "href": "materials/notes/notes_w1_draft.html",
-    "title": "1. Introduction",
+    "objectID": "plan.html",
+    "href": "plan.html",
+    "title": "Module plan and contents",
     "section": "",
-    "text": "hhh fvv\n\n\nsdc;nosdv v sfda v fa v fda v fdabfdbfdbsfd\nfd b fdb\nfdbfdb dfbfdbfd\n\n\n\nasfgfdg\nfdfdfdbdb"
+    "text": "Week\n\n\nTW\n\n\nDate\n\n\nTopic\n\n\nInfo\n\n\nNotes\n\n\nLecture\n\n\nLabs\n\n\nHandouts\n\n\n\n\n\n\nWeek 1\n\n\n22\n\n\n02 February\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n23\n\n\n09 February\n\n\nReview of linear models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n24\n\n\n16 February\n\n\nSomething else\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n25\n\n\n23 February\n\n\nTopic 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n26\n\n\n02 March\n\n\nTopic 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n27\n\n\n09 March\n\n\nTopic 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n28\n\n\n16 March\n\n\nTopic 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n29\n\n\n23 March\n\n\nTopic 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n34\n\n\n27 April\n\n\nTopic 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n35\n\n\n04 May\n\n\nTopic 10"
   },
   {
-    "objectID": "materials/notes/notes_w1_draft.html#now-again",
-    "href": "materials/notes/notes_w1_draft.html#now-again",
-    "title": "1. Introduction",
-    "section": "Now again",
-    "text": "Now again\nsfdgdbfgs"
+    "objectID": "test.html",
+    "href": "test.html",
+    "title": "checking",
+    "section": "",
+    "text": "Week\n\n\nTW\n\n\nDate\n\n\nTopic\n\n\nInfo\n\n\nNotes\n\n\nLecture\n\n\nLabs\n\n\nHandouts\n\n\n\n\n\n\nWeek 1\n\n\n22\n\n\n02 February\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n23\n\n\n09 February\n\n\nReview of linear models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n24\n\n\n16 February\n\n\nSomething else\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n25\n\n\n23 February\n\n\nTopic 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n26\n\n\n02 March\n\n\nTopic 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n27\n\n\n09 March\n\n\nTopic 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n28\n\n\n16 March\n\n\nTopic 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n29\n\n\n23 March\n\n\nTopic 8\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n34\n\n\n27 April\n\n\nTopic 9\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n35\n\n\n04 May\n\n\nTopic 10"
   }
 ]

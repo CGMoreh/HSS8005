@@ -1,6 +1,5 @@
 ---
-title: "Module plan and contents"
-slug: plan
+title: "checking"
 summary: "Topic content with links for the HSS8005 module"
 toc: false
 sidebar: false
@@ -16,7 +15,9 @@ library(glue)
 ```
    
 
-```{r build-table, echo=FALSE, results="asis"}
+```{r build-table}
+#| echo=FALSE,
+#| results="asis" 
 
 week0 <- as_date("02-02-2023", format = '%d-%m-%Y')-7
 
@@ -59,4 +60,3 @@ tbl <- contents |>
   cat(tbl)
 
 ```
-
