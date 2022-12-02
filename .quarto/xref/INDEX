@@ -55,5 +55,32 @@
   },
   "schedule.qmd": {
     "schedule.html": "8d6f9fb3"
+  },
+  "materials/notes/info_w2.qmd": {
+    "info_w2.html": "8447b06e"
+  },
+  "materials/notes/info_w5.qmd": {
+    "info_w5.html": "2d07b206"
+  },
+  "materials/notes/info_w3.qmd": {
+    "info_w3.html": "2bdbcc5c"
+  },
+  "materials/notes/info_w4.qmd": {
+    "info_w4.html": "b206d381"
+  },
+  "materials/notes/info_w6.qmd": {
+    "info_w6.html": "b45e552a"
+  },
+  "materials/notes/info_w7.qmd": {
+    "info_w7.html": "d572e61a"
+  },
+  "materials/notes/info_w8.qmd": {
+    "info_w8.html": "1c736380"
+  },
+  "materials/notes/info_w9.qmd": {
+    "info_w9.html": "64954d86"
+  },
+  "materials/notes/info_w10.qmd": {
+    "info_w10.html": "25c70f52"
   }
 }

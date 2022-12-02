@@ -30,3 +30,15 @@ university:
   name: "Newcastle University"
   url: ""
   
+
+topic:
+  w1: "A brief history of probability"
+  w2: "Revisiting Flatland"
+  w3: "Dear Philippa, how should I deal with my `X`s?"
+  w4: "The `Y` question"
+  w5: "Do we live in a simulation?"
+  w6: "Clusters"
+  w7: "The unobserved"
+  w8: "*Networks"
+  w9: "*Texts"
+  w10: "Sum up, divide, and conquer"

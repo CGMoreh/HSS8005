@@ -1,0 +1,8 @@
+---
+title: "Week 8"
+subtitle: "{{< var topic.w8 >}}"
+---
+
+
+Introduction to (social) *network analysis* and a little text analysis.
+

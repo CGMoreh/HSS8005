@@ -25,7 +25,7 @@ contents <- tibble(
   TW = c(22:29, 34:35),
   Date = c(week0 + 7*1:8, week0 + 7*13:14),
 #  Topic = rep("tbc", 10),
-  Topic = c(paste("Topic", 1:10)),
+  Topic = c(paste0("var topic.w", 1:10)),
   Info = c(paste0("/materials/notes/info_w", 1:10)),
   Notes = c(paste0("/materials/notes/notes_w", 1:10)),
   Lecture = c(paste0("/materials/slides/slides_w", 1:10)),
@@ -42,10 +42,7 @@ contents <- contents |>
          Lecture = paste0("[{{< fa solid person-chalkboard >}}]", glue('({Lecture}.qmd)')),
          Labs = paste0("[{{< fa solid laptop-code >}}]", glue('({Labs}.qmd)')),
          Handouts = paste0("[{{< fa solid sheet-plastic >}}]", glue('({Handouts}.qmd)')),
-         Topic = recode(Topic, 
-                        "Topic 1" = "Introduction", 
-                        "Topic 2" = "Review of linear models",
-                        "Topic 3" = "Something else"))
+         Topic = paste("{{< ", Topic, " >}}"))
 
 tbl <- contents |>
   kbl(escap = FALSE, align = "llllccccc", table.attr = 'class="schedule-table"') |>
@@ -60,3 +57,4 @@ tbl <- contents |>
 
 ```
 
+**Please note** that this plan and the content are still work in progress. The **info sheets** under {{< fa solid circle-info >}} are available in a very rudimentary form, just to give some more boring details about how these planned topics map on to statistical methods that will be covered. The topics marked with an **\*** have a very borderline-significant *p-value* when tested on the null-hypothesis that they have 0 probability of actually being covered *in practice*. It will depend somewhat on our interests and the pace of our progress through the previous topics. 

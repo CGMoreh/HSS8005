@@ -1,0 +1,9 @@
+---
+title: "Week 9"
+subtitle: "{{< var topic.w9 >}}"
+---
+
+Introduction to using *text as data*.
+
+
+

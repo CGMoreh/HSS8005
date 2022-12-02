@@ -1,0 +1,8 @@
+---
+title: "Week 2"
+subtitle: "{{< var topic.w2 >}}"
+---
+
+A broad review of simple linear regression modelling.
+
+

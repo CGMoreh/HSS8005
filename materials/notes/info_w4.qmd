@@ -1,0 +1,9 @@
+---
+title: "Week 4"
+subtitle:  "{{< var topic.w4 >}}"
+---
+
+An introduction to *generalised linear models*; logistic and count models.
+
+
+

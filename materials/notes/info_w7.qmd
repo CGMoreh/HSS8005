@@ -1,0 +1,8 @@
+---
+title: "Week 7"
+subtitle: "{{< var topic.w7 >}}"
+---
+
+
+Introduction to *factor analysis* and *Structural Equation Models (SEM)*.
+
