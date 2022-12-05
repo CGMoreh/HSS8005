@@ -2,8 +2,6 @@
 title: " "
 ---
 
-<link rel="stylesheet" type="text/css" media="screen" href="/docs/html/custom.scss">
-
   <p style="text-align:center; font-size:230px; font-weight: bold; color:#900C3F">404</p>
 
 ```{r}
