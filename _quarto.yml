@@ -24,7 +24,7 @@ website:
   title: "HSS8005 {{< iconify line-md plus >}}"
   favicon: "files/img/ncl_coa_hss8005.png"
   search: false
-  site-path: "/docs/"
+  site-path: "/HSS8005/"
   navbar:
     pinned: true
     background: $ncl-blue
