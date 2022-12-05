@@ -5,6 +5,7 @@ title: " "
   <p style="text-align:center; font-size:230px; font-weight: bold; color:#900C3F">404</p>
 
 ```{r}
+#| column: page
 
 Error <- function(error){
   error = 404
