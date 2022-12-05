@@ -1,5 +1,13 @@
 ---
 title: " "
+sidebar: false
+toc: false
+page-layout: full
+format:
+  html:
+   template-partials:
+     - html/home/title-block.html
+css: /html/custom.scss
 ---
 
   <p style="text-align:center; font-size:230px; font-weight: bold; color:#900C3F">404</p>
