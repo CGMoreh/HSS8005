@@ -161,18 +161,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
 <p style="text-align:center; font-size:230px; font-weight: bold; color:#900C3F">
 404
 </p>
-<div class="cell column-screen">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Error <span class="ot">&lt;-</span> <span class="cf">function</span>(error){</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  error <span class="ot">=</span> <span class="dv">404</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"The page you are looking for cannot be found"</span>) </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">"There may still be content here in the future, so visit back!"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">"There may still be content here in the future, so visit back!"</span>, <span class="at">noBreaks =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">Error</span>(<span class="dv">404</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -181,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in Error(404): There may still be content here in the future, so visit
-back!</code></pre>
+back!TRUE</code></pre>
 </div>
 </div>
 
