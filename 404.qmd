@@ -11,7 +11,8 @@ What_Is_This <- function(error_message){
   print("The page you are looking for cannot be found") 
   warning("There may still be content here in the future, so visit back!")
 }
+```
 
+```{r}
 What_Is_This("404")
-
 ```
