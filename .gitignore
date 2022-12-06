@@ -1,9 +1,10 @@
 .Rproj.user
 .Rproj.user*
-.Rproj.user\
+.Rproj.user\*
 .Rproj.user\*
 .Rproj.user/
 /.Rproj.user/
+Rproj.user\*
 .Rhistory
 .RData
 .Ruserdata
@@ -11,3 +12,4 @@
 /.quarto/
 
 /.luarc.json
+.Rproj.user/shared/notebooks/paths
