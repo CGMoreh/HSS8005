@@ -8,11 +8,15 @@ page-layout: full
 ---
           
 ```{r packages-data, include=FALSE} 
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(lubridate)
-library(glue)
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    tidyverse,
+    knitr,
+    kableExtra,
+    lubridate,
+    glue
+    )
 ```
 
 

@@ -14,7 +14,7 @@ format:
 course-logo: /files/img/ncl_coa_hss8005.png
 ---
 
-**Please note that this space is still work in progress. Information and materials will be addedd and may change before the start of the module in February 2023**
+**Please note that this space is still work in progress. Information and materials will be added and may change before the start of the module in February 2023**
 
 ::: {.grid .course-details}
 
