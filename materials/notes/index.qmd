@@ -1,5 +1,9 @@
 ---
-title: "Lecture notes"
+title: "Introduction"
+page-layout: article
+bibliography: ../../hss8005.bib
+# reference-location: margin
+toc-location: left
 ---
 
- 
+Just a page

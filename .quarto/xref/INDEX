@@ -48,7 +48,8 @@
     "info_w1.html": "0b71c0f7"
   },
   "materials/notes/notes_w1_draft.qmd": {
-    "notes_w1_draft.html": "8a594b5f"
+    "notes_w1_draft.html": "8a594b5f",
+    "notes_w1_draft.tex": "4acf6f1c"
   },
   "test.qmd": {
     "test.html": "21b5466b"
@@ -82,5 +83,17 @@
   },
   "materials/notes/info_w10.qmd": {
     "info_w10.html": "25c70f52"
+  },
+  "plan10.qmd": {
+    "plan10.html": "7701e7e3"
+  },
+  "plan8.qmd": {
+    "plan8.html": "63469c5e"
+  },
+  "readings.qmd": {
+    "readings.html": "f5a1b9f1"
+  },
+  "materials/worksheets/lab_w1.qmd": {
+    "lab_w1.html": "1997ba01"
   }
 }

@@ -1,0 +1,100 @@
+---
+title: ""
+slug: plan
+summary: "Module topic plan with session timetable and link to materials"
+toc: false
+sidebar: false
+page-layout: custom
+---
+
+```{css echo=FALSE}
+#quarto-document-content {
+  width: 100%;
+}
+
+.table {
+  font-size: 1.25rem;
+}
+```
+          
+```{r packages-data, include=FALSE} 
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+    tidyverse,
+    knitr,
+    kableExtra,
+    lubridate,
+    glue
+    )
+```
+
+
+```{r build-table, echo=FALSE, results="asis"}
+
+week1 <- as_date("02-02-2023", format = '%d-%m-%Y')
+
+contents <- tibble(
+  Week = c("", paste("Week", 1:8), ""),
+  TW = c(22, 22:29, 29),
+  Date = c(week1 - 3, week1 + 7*0:7, week1 + 7*7 + 1),
+  Topic = c("Introduction", paste("{{< ", paste0("var topic.w", 1:8), " >}}"), "Conclusion"),
+  Info = c(NA, paste0("./materials/notes/info_w", 1:8), NA),
+  Notes = c(NA, paste0("./materials/notes/notes_w", 1:8), NA),
+  Lecture = c(NA, paste0("./materials/slides/slides_w", 1:8), NA),
+  Labs = c(NA, paste0("./materials/worksheets/lab_w", 1:8), NA),
+  Handouts = c(NA, paste0("./materials/handouts/sheet_w", 1:8), NA),
+  )
+
+# write_csv(contents, "files/plan8.csv") 
+
+contents <- contents |>
+  mutate(Date = format(as_date(Date), "%d %B"),
+         Info = ifelse(is.na(Info), "",
+                       ifelse(file.exists(glue('{Info}.qmd')),
+                              paste0("[{{< fa solid circle-info >}}]", glue('({Info}.qmd)')),
+                              "<font color=#F0E2DF> {{< fa solid circle-info >}} </font>")),
+         Notes = ifelse(is.na(Notes), "",
+                       ifelse(file.exists(glue('{Notes}.qmd')),
+                              paste0("[{{< fa solid book-open >}}]", glue('({Notes}.qmd)')),
+                              "<font color=#F0E2DF> {{< fa solid book-open >}} </font>")),
+         Lecture = ifelse(is.na(Lecture), "",
+                       ifelse(file.exists(glue('{Lecture}.qmd')),
+                              paste0("[{{< fa solid person-chalkboard >}}]", glue('({Lecture}.qmd)')),
+                              "<font color=#F0E2DF> {{< fa solid person-chalkboard >}} </font>")),
+         Labs = ifelse(is.na(Labs), "",
+                       ifelse(file.exists(glue('{Labs}.qmd')),
+                              paste0("[{{< fa solid laptop-code >}}]", glue('({Labs}.qmd)')),
+                              "<font color=#F0E2DF> {{< fa solid laptop-code >}} </font>")),
+         Handouts = ifelse(is.na(Handouts), "",
+                       ifelse(file.exists(glue('{Handouts}.qmd')),
+                              paste0("[{{< fa solid sheet-plastic >}}]", glue('({Handouts}.qmd)')),
+                              "<font color=#F0E2DF> {{< fa solid sheet-plastic >}} </font>")))
+
+
+tbl <- contents |>
+  kbl(escap = FALSE, align = "lcllccccc", table.attr = 'class="schedule-table"') |>
+  kable_styling() |>
+  column_spec(1, width = "7%") |>  
+  column_spec(2, width = "5%") |>  
+  column_spec(3, width = "12%") |>  
+  column_spec(4, width = "45%") |>  
+  column_spec(c(5:9), width = "5%") 
+
+```
+
+::: {.content-block}
+
+```{r print-table, echo=FALSE, results="asis"}
+
+cat(tbl)
+
+```
+
+<!--
+**Please note** that this plan and the content are still work in progress. The **info sheets** under {{< fa solid circle-info >}} are available in a very rudimentary form, just to give some more boring details about how these planned topics map on to statistical methods that will be covered. The topics marked with an **\*** have a very borderline-significant *p-value* when tested on the null-hypothesis that they have 0 probability of actually being covered *in practice*. It will depend somewhat on our interests and the pace of our progress through the previous topics.
+-->
+
+Click on the icons to navigate to a specific section of the materials. <font color=#F0E2DF> Light-coloured</font> icons do not (yet) contain material.
+
+:::

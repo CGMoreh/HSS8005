@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Chris Moreh">
 
-<title>HSS8005  - Week 2</title>
+<title>HSS8005  - 1. Introduction to probability</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,12 +21,31 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<link href="../../materials/notes/week_" rel="next">
-<link href="../../materials/handouts/handout_w1.qmd" rel="prev">
+<link href="../../materials/slides/slides_w1.qmd" rel="next">
+<link href="../../materials/notes/info_w1.html" rel="prev">
 <link href="../../files/img/ncl_coa_hss8005.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -93,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Week 2</h1>
+      <h1 class="quarto-secondary-nav-title">1. Introduction to probability</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -101,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
@@ -115,14 +135,14 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../materials/notes/info_w1.html" class="sidebar-item-text sidebar-link">Week 1</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../materials/notes/notes_w1.html" class="sidebar-item-text sidebar-link">Notes</a>
+  <a href="../../materials/notes/notes_w1.html" class="sidebar-item-text sidebar-link active">Notes</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -144,12 +164,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../materials/notes/info_w2.html" class="sidebar-item-text sidebar-link active">Week 2</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a href="../../materials/notes/info_w2.html" class="sidebar-item-text sidebar-link">Week 2</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../materials/notes/week_" class="sidebar-item-text sidebar-link">Notes</a>
@@ -354,24 +374,42 @@ ul.task-list li input[type="checkbox"] {
   </li>
     </ul>
     </div>
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#heading-2" id="toc-heading-2" class="nav-link active" data-scroll-target="#heading-2">Heading 2</a></li>
+  <li><a href="#ff" id="toc-ff" class="nav-link" data-scroll-target="#ff">ff</a></li>
+  <li><a href="#gg" id="toc-gg" class="nav-link" data-scroll-target="#gg">gg</a>
+  <ul class="collapse">
+  <li><a href="#gg-1" id="toc-gg-1" class="nav-link" data-scroll-target="#gg-1">gg</a></li>
+  </ul></li>
+  <li><a href="#g" id="toc-g" class="nav-link" data-scroll-target="#g">g</a></li>
+  <li><a href="#l" id="toc-l" class="nav-link" data-scroll-target="#l">l</a></li>
+  </ul>
+</nav>
 </nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Week 2</h1>
-<p class="subtitle lead">Revisiting Flatland</p>
+<h1 class="title d-none d-lg-block">1. Introduction to probability</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Chris Moreh </p>
+          </div>
+  </div>
     
   
     
@@ -380,11 +418,38 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>A broad review of simple linear regression modelling.</p>
+<p>nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.</p>
+<section id="heading-2" class="level2">
+<h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
+<p>nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n. <span class="citation" data-cites="abadía-barrero2019">(<a href="#ref-abadía-barrero2019" role="doc-biblioref">Abadía-Barrero and Bugbee 2019</a>)</span></p>
+</section>
+<section id="ff" class="level1">
+<h1>ff</h1>
+<p>nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n. <span class="citation" data-cites="abadía-barrero2019">(<a href="#ref-abadía-barrero2019" role="doc-biblioref">Abadía-Barrero and Bugbee 2019</a>)</span></p>
+</section>
+<section id="gg" class="level1">
+<h1>gg</h1>
+<p>nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.</p>
+<section id="gg-1" class="level2">
+<h2 class="anchored" data-anchor-id="gg-1">gg</h2>
+<p>nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.</p>
+</section>
+</section>
+<section id="g" class="level1">
+<h1>g</h1>
+</section>
+<section id="l" class="level1">
 
 
 
-</main> <!-- /main -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">l</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-abadía-barrero2019" class="csl-entry" role="doc-biblioentry">
+Abadía-Barrero, César Ernesto, and Mary Bugbee. 2019. <span>“Primary Health Care for Universal Health Coverage? Contributions for a Critical Anthropological Agenda.”</span> <em>Medical Anthropology</em> 38 (5): 427–35. <a href="https://doi.org/10.1080/01459740.2019.1620744">https://doi.org/10.1080/01459740.2019.1620744</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -518,15 +583,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
+<nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="../../materials/handouts/handout_w1.qmd" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Handout</span>
+      <a href="../../materials/notes/info_w1.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 1</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../materials/notes/week_" class="pagination-link">
-        <span class="nav-page-text">Notes</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../materials/slides/slides_w1.qmd" class="pagination-link">
+        <span class="nav-page-text">Presentation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -40,18 +40,18 @@ $dark:          $gray-800 !default;
 $font-family-sans-serif:      Fira Sans Condensed, sans-serif !default;
 $font-family-serif:           Barlow, serif !default;  /* Not actually a serif font but whatever */
 
-$font-size-base:              1.2rem !default;
+$font-size-base:              1rem !default;
 $headings-font-weight:        700 !default;
 
-$h1-font-size: $font-size-base * 2.45;
-$h2-font-size: $font-size-base * 1.85;
-$h3-font-size: $font-size-base * 1.5;
+$h1-font-size: $font-size-base * 2.2;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.3;
 $h4-font-size: $font-size-base * 1.2;
-$h5-font-size: $font-size-base * 1;
-$h6-font-size: $font-size-base * 0.8;
+$h5-font-size: $font-size-base * 1.1;
+$h6-font-size: $font-size-base * 1;
 
-$toc-font-size: 1.1rem;
-$sidebar-font-size: 1.1rem;
+$toc-font-size: 1rem;
+$sidebar-font-size: 1rem;
 $sidebar-font-size-section: 0.9rem;
 
 $link-color: $red;
@@ -61,6 +61,11 @@ $monokai-bg: #2e3440;
 
 
 /*-- scss:rules --*/
+
+/* Larger module title on the navbar */
+.navbar-brand {
+    font-size: 1.8rem;
+}
 
 .navbar {
     font-size: 1.2222rem;
@@ -239,8 +244,8 @@ main {
 // Increase font size in sidebar
 .sidebar-navigation .sidebar-section .sidebar-item,
 .sidebar-navigation .sidebar-item{
-  line-height: 1.2;
-  padding-bottom: 0.4rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
 }
 
 .sidebar-item .sidebar-item-toggle .bi {
@@ -259,8 +264,8 @@ main {
 }
 
 .sidebar nav[role="doc-toc"] > ul li a {
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
 }
 
 
@@ -292,4 +297,38 @@ pre.text, pre.sourceCode, .cell-output pre {
 
 pre.text {
   color: #ffffff;
+}
+
+// Content page width
+
+.content-block {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+}
+
+/*
+#quarto-document-content {
+  width: 130%;
+}
+
+
+#quarto-margin-sidebar {
+  padding-left: 600px;
+}
+
+*/
+
+// Table 
+
+.table td, th {
+  padding: 0.4rem;
+  vertical-align: middle;
+}
+
+.table p {
+  display: table-cell;
+  vertical-align: middle;
 }

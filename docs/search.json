@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
-    "text": "Quantitative analysis \n        \n        \n            HSS8005 • 2022 • Newcastle University (UK)\n        \n        \n            A second course in applied statistics and probability for the understanding of society and culture.\n        \n    \n\n\nPlease note that this space is still work in progress. Information and materials will be added and may change before the start of the module in February 2023\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh@newcastle.ac.uk\n   tutorial booker\n\n\n\nTeaching Assistants\n\n   tbc\n   tbc\n\n\n\nSession details\n\n   Thursdays\n    HDB.6.19\n   Lecture: 10:00-11:00\n   Labs:   13:00-14:00 (Group 03)        14:00-15:00 (Group 04)"
+    "text": "Quantitative analysis \n        \n        \n            HSS8005 • Advanced stream • 2023\nNewcastle University (UK)\n        \n        \n            A second course in applied statistics and probability for the understanding of society and culture.\n        \n    \n\n\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh@newcastle.ac.uk\n   tutorial booker\n\n\n\nTeaching Assistants\n\n   tbc\n   tbc\n\n\n\nSession details\n\n   Thursdays \n   Lecture: 10:00-11:30\n   Labs:   13:00-14:30 (Group 03)        14:30-16:00 (Group 04)"
   },
   {
     "objectID": "about.html",
@@ -25,12 +25,12 @@
     "href": "materials/index.html",
     "title": "Materials",
     "section": "",
-    "text": "Materials for each week are available from the side menu."
+    "text": "Materials for each week are available from the side menu.\nNotes can found here: link to page"
   },
   {
     "objectID": "materials/notes/info_w1.html",
     "href": "materials/notes/info_w1.html",
-    "title": "Week 1",
+    "title": "Week 1  Gamblers, God, Guinness and peas",
     "section": "",
     "text": "This week will be a general introduction to the module, probability theory, the history of statistics and the software that we will be using.\nThe labs will be an introduction to the {tidyverse} dialect of the  statistical programming language via the  API."
   },
@@ -103,5 +103,187 @@
     "title": "Week 10",
     "section": "",
     "text": "Time for some conclusions and for hoping that we feel we have conquered some of the complications of applying statistical models to understanding human society and culture."
+  },
+  {
+    "objectID": "plan10.html",
+    "href": "plan10.html",
+    "title": "Module plan",
+    "section": "",
+    "text": "Week\n\n\nTW\n\n\nDate\n\n\nTopic\n\n\nInfo\n\n\nNotes\n\n\nLecture\n\n\nLabs\n\n\nHandouts\n\n\n\n\n\n\nWeek 1\n\n\n22\n\n\n02 February\n\n\nGamblers, God, Guinness and peas: a brief history of probability\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n23\n\n\n09 February\n\n\nRevisiting Flatland\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\n24\n\n\n16 February\n\n\nDear Philippa, how should I deal with my Xs?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\n25\n\n\n23 February\n\n\nThe Y question\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\n26\n\n\n02 March\n\n\nDo we live in a simulation?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\n27\n\n\n09 March\n\n\nChallenging hierarchies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\n28\n\n\n16 March\n\n\nThe unobserved\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\n29\n\n\n23 March\n\n\n*Networks\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\n34\n\n\n27 April\n\n\n*Texts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\n35\n\n\n04 May\n\n\nSum up, divide, and conquer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlease note that this plan and the content are still work in progress. The info sheets under  are available in a very rudimentary form, just to give some more boring details about how these planned topics map on to statistical methods that will be covered. The topics marked with an * have a very borderline-significant p-value when tested on the null-hypothesis that they have 0 probability of actually being covered in practice. It will depend somewhat on our interests and the pace of our progress through the previous topics."
+  },
+  {
+    "objectID": "plan8.html",
+    "href": "plan8.html",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "Week\n\n\nTW\n\n\nDate\n\n\nTopic\n\n\nInfo\n\n\nNotes\n\n\nLecture\n\n\nLabs\n\n\nHandouts\n\n\n\n\n\n\n\n\n22\n\n\n30 January\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\n22\n\n\n02 February\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\n\n  \n\n\n\n\nWeek 2\n\n\n23\n\n\n09 February\n\n\nRevisiting Flatland\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\n\n  \n\n\n\n\nWeek 3\n\n\n24\n\n\n16 February\n\n\nDear Philippa, how should I deal with my Xs?\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\n\n  \n\n\n\n\nWeek 4\n\n\n25\n\n\n23 February\n\n\nThe Y question\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\n\n  \n\n\n\n\nWeek 5\n\n\n26\n\n\n02 March\n\n\nDo we live in a simulation?\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\n\n  \n\n\n\n\nWeek 6\n\n\n27\n\n\n09 March\n\n\nChallenging hierarchies\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\n\n  \n\n\n\n\nWeek 7\n\n\n28\n\n\n16 March\n\n\nThe unobserved\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\n\n  \n\n\n\n\nWeek 8\n\n\n29\n\n\n23 March\n\n\nNetworks\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\n\n  \n\n\n\n\n\n\n29\n\n\n24 March\n\n\nConclusion"
+  },
+  {
+    "objectID": "readings.html",
+    "href": "readings.html",
+    "title": "Readings",
+    "section": "",
+    "text": "Regression and Other Stories\nTelling Stories with Data\nMaximum Likelihood for Social Science\nBeyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R"
+  },
+  {
+    "objectID": "readings.html#history-of-statistics",
+    "href": "readings.html#history-of-statistics",
+    "title": "Readings",
+    "section": "History of statistics",
+    "text": "History of statistics\n\nGelman and Vehtari: What are the most important statistical ideas of the past 50 years?\n(Gelman and Vehtari 2021)"
+  },
+  {
+    "objectID": "readings.html#simulation-and-study-design",
+    "href": "readings.html#simulation-and-study-design",
+    "title": "Readings",
+    "section": "Simulation and study design",
+    "text": "Simulation and study design\n\nhttps://iqss.github.io/prefresher/simulation.html#fnref27\nReinhart: RegressinatorR package\nData simulation in the context of multilevel regression and post-stratification: https://tellingstorieswithdata.com/15-mrp.html#simulation\nDesign and Analysis of Experiments and Observational Studies using R\nThe Survey Quality Predictor (SQP)"
+  },
+  {
+    "objectID": "readings.html#causality",
+    "href": "readings.html#causality",
+    "title": "Readings",
+    "section": "Causality",
+    "text": "Causality\n\nDAGs: Deffner, Dominik, Julia M. Rohrer, and Richard McElreath. 2022. ‘A Causal Framework for Cross-Cultural Generalizability’. Advances in Methods and Practices in Psychological Science 5(3):25152459221106370. doi: 10.1177/25152459221106366."
+  },
+  {
+    "objectID": "readings.html#network-analysis",
+    "href": "readings.html#network-analysis",
+    "title": "Readings",
+    "section": "Network analysis",
+    "text": "Network analysis\n\nhttps://ladal.edu.au/net.html\nhttps://bookdown.org/jdholster1/idsr/network-analysis.html"
+  },
+  {
+    "objectID": "readings.html#hierarchies",
+    "href": "readings.html#hierarchies",
+    "title": "Readings",
+    "section": "Hierarchies",
+    "text": "Hierarchies\n\nSadler, Michael E., and Christopher J. Miller. 2010. ‘Performance Anxiety: A Longitudinal Study of the Roles of Personality and Experience in Musicians’. Social Psychological and Personality Science 1(3):280–87. doi: 10.1177/1948550610370492.\n\ndata: musicdata.csv\nsource: https://github.com/proback/BeyondMLR/tree/master/data\nusage: https://bookdown.org/roback/bookdown-BeyondMLR/ch-multilevelintro.html#cs:music\n\nShakespeare, Austen, Bronte, Dickens data used in the context of multilevel modelling: https://tellingstorieswithdata.com/15-mrp.html#austen-bront%C3%AB-dickens-and-shakespeare\nDeffner, Dominik, Julia M. Rohrer, and Richard McElreath. 2022. ‘A Causal Framework for Cross-Cultural Generalizability’. Advances in Methods and Practices in Psychological Science 5(3):25152459221106370. doi: 10.1177/25152459221106366. - also use multilevel regression with post-stratification"
+  },
+  {
+    "objectID": "readings.html#timelines",
+    "href": "readings.html#timelines",
+    "title": "Readings",
+    "section": "Timelines",
+    "text": "Timelines\n\nBernal, James Lopez, Steven Cummins, and Antonio Gasparrini. 2017. ‘Interrupted Time Series Regression for the Evaluation of Public Health Interventions: A Tutorial’. International Journal of Epidemiology 46(1):348–55. doi: 10.1093/ije/dyw098.\n\ndata: sicily.rda\nsource: https://hbiostat.org/data/\nusage scripts: http://hbiostat.org/rmsc/genreg.html#complex-curve-fitting-example"
+  },
+  {
+    "objectID": "readings.html#spacecraft",
+    "href": "readings.html#spacecraft",
+    "title": "Readings",
+    "section": "Spacecraft",
+    "text": "Spacecraft\n\nSpatial regression models\nSpatial Data Science"
+  },
+  {
+    "objectID": "readings.html#text-as-data",
+    "href": "readings.html#text-as-data",
+    "title": "Readings",
+    "section": "Text as data",
+    "text": "Text as data\n\nText Mining with R: A Tidy Approach (Dissferent Austen data used: https://www.tidytextmining.com/tfidf.html)\nhttps://tellingstorieswithdata.com/16-text.html\nChris Bail: https://cbail.github.io/textasdata/"
+  },
+  {
+    "objectID": "readings.html#classification-ml",
+    "href": "readings.html#classification-ml",
+    "title": "Readings",
+    "section": "Classification, ML",
+    "text": "Classification, ML\n\nhttps://towardsdatascience.com/machine-learning-techniques-for-investigative-reporting-344d74f69f84 - a very interesting data analysis on Brexit voting prediction; unfortunately the dataset cannot be located, but may be reproducible from other sources."
+  },
+  {
+    "objectID": "readings.html#intuition-building",
+    "href": "readings.html#intuition-building",
+    "title": "Readings",
+    "section": "Intuition building",
+    "text": "Intuition building\n\nHamming, Richard W. 1997. The Art of Doing Science and Engineering: Learning to Learn. Amsterdam: Gordon and Breach.\nhttps://data-feminism.mitpress.mit.edu/\nMcElreath, Richard. 2020. Statistical Rethinking: A Bayesian Course with Examples in R and Stan. 2nd ed. Boca Raton: Taylor and Francis, CRC Press. - First two chapters freely available\nSmoking debate:\n\nSee “The book of Why” for the story of how Fisher in particular was involved in the sceptical resistance to linking tobacco with cancer\nAlex Reinhart: The history of “How to Lie with Smoking Statistics” - Daryll Huff’s involvement.\nSee also: Gelman, Andrew. 2012. ‘Ethics and Statistics: Statistics for Cigarette Sellers’. CHANCE 25(3):43–46. doi: 10.1080/09332480.2012.726563\n\nReinhart: Statistics done wrong"
+  },
+  {
+    "objectID": "readings.html#r-style-guides",
+    "href": "readings.html#r-style-guides",
+    "title": "Readings",
+    "section": "R style guides",
+    "text": "R style guides\n\nhttps://style.tidyverse.org/\nhttps://google.github.io/styleguide/Rguide.html"
+  },
+  {
+    "objectID": "readings.html#project-management",
+    "href": "readings.html#project-management",
+    "title": "Readings",
+    "section": "Project management",
+    "text": "Project management\n\nhttps://web.stanford.edu/~gentzkow/research/CodeAndData.pdf\nhttps://learningds.org/ch/01/lifecycle_intro.html\nReproducible, transparent, credible research: https://worldbank.github.io/dime-data-handbook/\nQuarto for Scientists"
+  },
+  {
+    "objectID": "readings.html#data-sources",
+    "href": "readings.html#data-sources",
+    "title": "Readings",
+    "section": "Data sources",
+    "text": "Data sources\n\nhttps://data.london.gov.uk/\nhttps://i4replication.org/reports.html\nAlgorithmic Bias - full data and code\nhttps://economics.mit.edu/people/faculty/josh-angrist/angrist-data-archive\nhttps://economics.mit.edu/people/faculty/josh-angrist/mhe-data-archive\nNorris, Pippa, 2020, “Global Party Survey, 2019”\nLarge-scale cross-cultural prosocial behaviour study:\n\nHouse, Bailey R., Patricia Kanngiesser, H. Clark Barrett, Tanya Broesch, Senay Cebioglu, Alyssa N. Crittenden, Alejandro Erut, Sheina Lew-Levy, Carla Sebastian-Enesco, Andrew Marcus Smith, Süheyla Yilmaz, and Joan B. Silk. 2020. ‘Universal Norm Psychology Leads to Societal Diversity in Prosocial Behaviour and Development’. Nature Human Behaviour 4(1):36–44. doi: 10.1038/s41562-019-0734-z.\nData analyised by (Deffner, Rohrer, and McElreath 2022)\n\nSimpson’s paradox:\n\nBickel, P. J., E. A. Hammel, and J. W. O’Connell. 1975. ‘Sex Bias in Graduate Admissions: Data from Berkeley’. Science 187(4175):398–404. doi: 10.1126/science.187.4175.398.\n\nhere - here\n\n\nLEGO bricksets:\n\nPeterson, Anna D., and Laura Ziegler. 2021. ‘Building a Multiple Linear Regression Model With LEGO Brick Data’. Journal of Statistics and Data Science Education 29(3):297–303. doi: 10.1080/26939169.2021.1946450.\nData and code: C:\\Users\\moreh\\OneDrive - Newcastle University\\DATA\\Peterson, Ziegler (2021) LEGO data"
+  },
+  {
+    "objectID": "materials/notes/notes_w1_draft.html",
+    "href": "materials/notes/notes_w1_draft.html",
+    "title": "1. Introduction to probability",
+    "section": "",
+    "text": "Include a reference here too: (Gelman and Vehtari 2021)"
+  },
+  {
+    "objectID": "materials/notes/index.html",
+    "href": "materials/notes/index.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Just a page"
+  },
+  {
+    "objectID": "materials/notes/index.html#gg-1",
+    "href": "materials/notes/index.html#gg-1",
+    "title": "Introduction",
+    "section": "gg",
+    "text": "gg\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
+  },
+  {
+    "objectID": "materials/notes/notes_w1.html",
+    "href": "materials/notes/notes_w1.html",
+    "title": "1. Introduction to probability",
+    "section": "",
+    "text": "nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
+  },
+  {
+    "objectID": "materials/notes/index.html#heading-2",
+    "href": "materials/notes/index.html#heading-2",
+    "title": "Introduction",
+    "section": "Heading 2",
+    "text": "Heading 2\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n. (Abadía-Barrero and Bugbee 2019)"
+  },
+  {
+    "objectID": "materials/notes/notes_w1.html#heading-2",
+    "href": "materials/notes/notes_w1.html#heading-2",
+    "title": "1. Introduction to probability",
+    "section": "Heading 2",
+    "text": "Heading 2\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n. (Abadía-Barrero and Bugbee 2019)"
+  },
+  {
+    "objectID": "materials/notes/notes_w1.html#gg-1",
+    "href": "materials/notes/notes_w1.html#gg-1",
+    "title": "1. Introduction to probability",
+    "section": "gg",
+    "text": "gg\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
+  },
+  {
+    "objectID": "materials/worksheets/lab_w1.html",
+    "href": "materials/worksheets/lab_w1.html",
+    "title": "Week 1 Computer Lab Worksheet",
+    "section": "",
+    "text": "library(\"downlit\")"
+  },
+  {
+    "objectID": "materials/worksheets/lab_w1.html#gg-1",
+    "href": "materials/worksheets/lab_w1.html#gg-1",
+    "title": "Week 1 Computer Lab Worksheet",
+    "section": "gg",
+    "text": "gg\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
+  },
+  {
+    "objectID": "materials/worksheets/lab_w1.html#heading-2",
+    "href": "materials/worksheets/lab_w1.html#heading-2",
+    "title": "Week 1 Computer Lab Worksheet",
+    "section": "Heading 2",
+    "text": "Heading 2\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
   }
 ]

@@ -2,8 +2,11 @@
 title: "Materials"
 ---
 
-Materials for each week are available from the side menu. 
+Materials for each week are available from the side menu.
 
+Notes can found here:  [link to page](/materials/notes/index.qmd)
+
+<!-- ----------------------- Creating folders ----------------------------- -->
 
 ```{r, eval=F, include=FALSE, error=FALSE, warning=FALSE}
 ten <- 1:10
@@ -19,4 +22,3 @@ for (j in c("notes", "slides", "worksheets", "handouts")){
 dir.create(j)
 }
 ```
-

@@ -9,36 +9,37 @@ instructor:
   github: cgmoreh
   office: "HDB.4.106"
   contact_policy: "By e-mail"
-  appointment_url: "Microsoft Bookings"
+  booking: "Microsoft Bookings"
 
 course:
   number: "HSS8005"
-  semester: "2022, Semester 2"
+  semester: "22/23, Semester 2"
   github: ""
   url: ""
-  copyright_year: "2022"
+  copyright_year: "2023"
   canvas: "https://canvas.ncl.ac.uk/login/"
 
 session:
-  lecture: "Lecture: 10:00-11:00"
-  labs: "Labs: &emsp; 13:00-14:00 (Group 03) <br> &emsp;&emsp;&emsp;&emsp;&thinsp; 14:00-15:00 (Group 04)"
+  lecture: "Lecture: 10:00-11:30"
+  labs: "Labs: &emsp; 13:00-14:30 (Group 03) <br> &emsp;&emsp;&emsp;&emsp;&thinsp; 14:30-16:00 (Group 04)"
   days: "Thursdays"
-  location: "HDB.6.19"
+  location: "Henry Daysh Building (check timetable for room number)"
   
 
-university:
+institution:
   name: "Newcastle University"
-  url: ""
+  red: "[School X - Researcher Education and Development](https://www.ncl.ac.uk/school-x/study/red/)"
+  hass: "[Faculty of Humanities and Social Sciences](https://www.ncl.ac.uk/hass/)"
   
 
 topic:
-  w1: "Gamblers, God, Guinness and peas: a brief history of probability"
+  w1: "Gamblers, God, Guinness and peas"
   w2: "Revisiting Flatland"
   w3: "Dear Philippa, how should I deal with my `X`s?"
   w4: "The `Y` question"
   w5: "Do we live in a simulation?"
   w6: "Challenging hierarchies"
   w7: "The unobserved"
-  w8: "*Networks"
+  w8: "Networks"
   w9: "*Texts"
   w10: "Sum up, divide, and conquer"

@@ -1,7 +1,8 @@
 ---
 title: "Quantitative analysis {{< iconify bi plus-square-dotted >}}"
 subtitle: |
-  HSS8005 • 2022 • Newcastle University (UK)
+  | HSS8005 • Advanced stream • 2023
+  | Newcastle University (UK)
 details: |
   A second course in applied statistics and probability for the understanding of society and culture.
 sidebar: false
@@ -14,11 +15,10 @@ format:
 course-logo: /files/img/ncl_coa_hss8005.png
 ---
 
-**Please note that this space is still work in progress. Information and materials will be added and may change before the start of the module in February 2023**
-
 ::: {.grid .course-details}
 
 ::: {.g-col-4 .g-col-sm-4}
+
 
 ### Module leader
 
@@ -42,7 +42,7 @@ course-logo: /files/img/ncl_coa_hss8005.png
 ### Session details
 
 - {{< fa calendar-alt >}} &nbsp; {{< var session.days >}}
-- &thinsp;{{< fa location-dot >}} &nbsp; {{< var session.location >}}
+<!-- - &thinsp;{{< fa location-dot >}} &nbsp; {{< var session.location >}} -->
 - {{< fa solid display >}} &nbsp; {{< var session.lecture >}}
 - {{< fa solid laptop-code >}} &nbsp; {{< var session.labs >}}
 <!-- - {{< fa clock >}} &nbsp; {{< var session.lecture >}} -->
@@ -51,3 +51,4 @@ course-logo: /files/img/ncl_coa_hss8005.png
 :::
 
 :::
+
