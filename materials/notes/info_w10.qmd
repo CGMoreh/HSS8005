@@ -1,9 +1,0 @@
----
-title: "Week 10"
-subtitle: "{{< var topic.w10 >}}"
----
-
-
-Time for some conclusions and for hoping that we feel we have conquered some of the complications of applying statistical models to understanding human society and culture.
-
-

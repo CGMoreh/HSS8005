@@ -33,13 +33,86 @@ institution:
   
 
 topic:
+  w0: "Introduction: module overview"
   w1: "Gamblers, God, Guinness and peas"
   w2: "Revisiting Flatland"
+  w3: "Dear Prudence, Help! I may be cheating with my `X`"
+  w4: "The `Y` question"
+  w5: "Do we live in a simulation?"
+  w6: "Challenging hierarchies"
+  w7: "The unobserved"
+  w8: "Words! Mere words!"
+  w8+: "Conclusions: sum up, divide, and conquer"
+  # w9: "Networks"
+  # w10: "Sum up, divide, and conquer"
+
+subtitle:
+  w1: "A brief history of statistics"
+  w2: "A review of general linear models"
+  w3: "Interactions and the logic of causal inference"
+  w4: "Generalised linear models"
+  w5: "Basic data simulation for statistical inference and power analysis"
+  w6: "Multilevel models"
+  w7: "Structural equation models"
+  w8: "Text as data"
+  # w9: "Networks"
+  # w10: "Sum up, divide, and conquer"
+
+
+topic-abstract:
+  w1: >
+    This lecture is a broad introduction to the aims of statistical modeling and the history of probability theory. 
+    We will look back on the development of some core statistical concepts and learn about the ideas and preoccupations that influenced them 
+    over three centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn about later. 
+    The outcome will be a much clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.  
+    
+    The IT labs, on the other hand, will provide a very hands-on practical introduction to the `R` statistical programming language, 
+    its currently most popular dialect, the `{tidyverse}`, and its usage in the *RStudio* application programming interface. 
+    The session will also introduce some other tools of literate programming, project management and plain-text social science (such as *markdown* and 
+    *Quarto*), all essential skills in contemporary quantitative research in the social sciences and humanities.
+  w2: "A review of linear regression models"
   w3: "Dear Philippa, how should I deal with my `X`s?"
   w4: "The `Y` question"
   w5: "Do we live in a simulation?"
   w6: "Challenging hierarchies"
   w7: "The unobserved"
-  w8: "Networks"
-  w9: "*Texts"
+  w8: ""
+  w9: "Last: Words! Mere words!"
   w10: "Sum up, divide, and conquer"
+
+
+worksheet-abstract:
+  w1: "A brief history of statistics"
+  w2: "A review of linear regression models"
+  w3: "Interactions and the logic of causal inference"
+  w4: "Generalised linear regression models"
+  w5: "Basic data simulation for statistical inference and power analysis"
+  w6: "Multilevel models"
+  w7: "Structural equation models"
+  w8: "Text as data"
+  # w9: "Networks"
+  # w10: "Sum up, divide, and conquer"
+
+
+date:
+  wIntro: "2023-01-30"
+  w1: "2023-02-02"
+  w2: "2023-02-09"
+  w3: "2023-02-16"
+  w4: "2023-02-23"
+  w5: "2023-03-02"
+  w6: "2023-03-09"
+  w7: "2023-03-16"
+  w8: "2023-03-23"
+  wConclusion: "2023-03-24"
+
+
+slides:
+  w1: "https://cgmoreh.github.io/webslides/HSS8005/w1"
+  w2: "https://cgmoreh.github.io/webslides/HSS8005/w2"
+  w3: "https://cgmoreh.github.io/webslides/HSS8005/w3"
+  w4: "https://cgmoreh.github.io/webslides/HSS8005/w4"
+  w5: "https://cgmoreh.github.io/webslides/HSS8005/w5"
+  w6: "https://cgmoreh.github.io/webslides/HSS8005/w6"
+  w7: "https://cgmoreh.github.io/webslides/HSS8005/w7"
+  w8: "https://cgmoreh.github.io/webslides/HSS8005/w8"

@@ -1,0 +1,8 @@
+---
+title: "Week REPLACE Computer Lab Worksheet"
+author: "{{< var author >}}"
+abstract: "{{< var worksheet-abstract.wREPLACE >}}"
+abstract-title: "Description"
+---
+
+## Session aims

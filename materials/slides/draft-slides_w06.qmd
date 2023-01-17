@@ -1,0 +1,13 @@
+---
+title: "Week 6 {{< fa minus >}} {{< var topic.w6 >}}"
+subtitle: "{{< var subtitle.w6 >}}"
+---
+
+:::{.column-page-right}
+
+```{=html}
+<iframe class="slide-deck" src="{{< var slides.w6 >}}"></iframe>
+```
+
+View the slides full-screen in a standalone browser window [**here**]({{< var slides.w6 >}}){target="_blank"}. The lecture recording is available on [**ReCap**](https://campus.recap.ncl.ac.uk/Panopto/Pages/Sessions/List.aspx#folderID=%22699937e9-4554-40ed-8e00-af8d00092271%22){target="_blank"} (requires Newcastle University institutional login)
+:::

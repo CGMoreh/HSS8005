@@ -38,12 +38,12 @@ contents <- tibble(
   Week = c("", paste("Week", 1:8), ""),
   TW = c(22, 22:29, 29),
   Date = c(week1 - 3, week1 + 7*0:7, week1 + 7*7 + 1),
-  Topic = c("Introduction", paste("{{< ", paste0("var topic.w", 1:8), " >}}"), "Conclusion"),
-  Info = c(NA, paste0("./materials/notes/info_w", 1:8), NA),
-  Notes = c(NA, paste0("./materials/notes/notes_w", 1:8), NA),
-  Lecture = c(NA, paste0("./materials/slides/slides_w", 1:8), NA),
-  Labs = c(NA, paste0("./materials/worksheets/lab_w", 1:8), NA),
-  Handouts = c(NA, paste0("./materials/handouts/sheet_w", 1:8), NA),
+  Topic = c(paste("{{< ", paste0("var topic.w", 0:8), " >}}"), "{{< var topic.w8+ >}}"),
+  Info = c(NA, paste0("./materials/info/info_w0", 1:8), NA),
+  Notes = c(NA, paste0("./materials/notes/notes_w0", 1:8), NA),
+  Lecture = c(NA, paste0("./materials/slides/slides_w0", 1:8), NA),
+  Labs = c(NA, paste0("./materials/worksheets/lab_w0", 1:8), NA),
+  Handouts = c(NA, paste0("./materials/handouts/sheet_w0", 1:8), NA),
   )
 
 # write_csv(contents, "files/plan8.csv") 
@@ -96,5 +96,4 @@ cat(tbl)
 -->
 
 Click on the icons to navigate to a specific section of the materials. <font color=#F0E2DF> Light-coloured</font> icons do not (yet) contain material.
-
 :::

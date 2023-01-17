@@ -95,5 +95,119 @@
   },
   "materials/worksheets/lab_w1.qmd": {
     "lab_w1.html": "1997ba01"
+  },
+  "materials/templates/handouts_template.qmd": {
+    "handouts_template.html": "191ea45a"
+  },
+  "materials/templates/index.qmd": {
+    "index.html": "0646dc58"
+  },
+  "materials/templates/notes_template.qmd": {
+    "notes_template.html": "17a49e3d"
+  },
+  "materials/templates/slides_template.qmd": {
+    "slides_template.html": "1b6203d7"
+  },
+  "materials/templates/worksheets_template.qmd": {
+    "worksheets_template.html": "a103c7ee"
+  },
+  "resources/index.qmd": {
+    "index.html": "e8a3ff80"
+  },
+  "teachingResources.qmd": {
+    "teachingResources.html": "8ee39c1a"
+  },
+  "materials/info/info_w1.qmd": {
+    "info_w1.html": "0d032367"
+  },
+  "materials/info/info_w10.qmd": {
+    "info_w10.html": "abf5cb0a"
+  },
+  "materials/info/info_w2.qmd": {
+    "info_w2.html": "5fb16cb8"
+  },
+  "materials/info/info_w3.qmd": {
+    "info_w3.html": "ab0fef99"
+  },
+  "materials/info/info_w4.qmd": {
+    "info_w4.html": "36ad6344"
+  },
+  "materials/info/info_w5.qmd": {
+    "info_w5.html": "0c64e14d"
+  },
+  "materials/info/info_w6.qmd": {
+    "info_w6.html": "bc668be2"
+  },
+  "materials/info/info_w7.qmd": {
+    "info_w7.html": "7f72c5c0"
+  },
+  "materials/info/info_w8.qmd": {
+    "info_w8.html": "9ac1b101"
+  },
+  "materials/info/info_w9.qmd": {
+    "info_w9.html": "877cf1c7"
+  },
+  "materials/info/info_listing.qmd": {
+    "info_listing.html": "e566778b"
+  },
+  "materials/info/index.qmd": {
+    "index.html": "cdad1340"
+  },
+  "materials/info/info_w01.qmd": {
+    "info_w01.html": "63b32834"
+  },
+  "materials/info/info_w02.qmd": {
+    "info_w02.html": "c4fcac2f"
+  },
+  "materials/info/info_w05.qmd": {
+    "info_w05.html": "3d2ded97"
+  },
+  "materials/info/info_w04.qmd": {
+    "info_w04.html": "49f84993"
+  },
+  "materials/info/info_w06.qmd": {
+    "info_w06.html": "4e457ed1"
+  },
+  "materials/info/info_w07.qmd": {
+    "info_w07.html": "302dfceb"
+  },
+  "materials/info/info_w08.qmd": {
+    "info_w08.html": "08b9c5a3"
+  },
+  "materials/info/info_w03.qmd": {
+    "info_w03.html": "4a354d0e"
+  },
+  "materials/info/listings.qmd": {
+    "listings.html": "c3cf261d"
+  },
+  "materials/notes/notes_w01.qmd": {
+    "notes_w01.html": "59d92ad0"
+  },
+  "materials/slides/slides_w01.qmd": {
+    "slides_w01.html": "8cf9d137"
+  },
+  "materials/slides/draft-slides_w01.qmd": {
+    "draft-slides_w01.html": "b5ff78b8"
+  },
+  "materials/slides/draft-slides_w02.qmd": {
+    "draft-slides_w02.html": "58f4a47a"
+  },
+  "materials/slides/draft-slides_w03.qmd": {
+    "draft-slides_w03.html": "8786d449"
+  },
+  "materials/slides/draft-slides_w04.qmd": {
+    "draft-slides_w04.html": "4dc5bfa8"
+  },
+  "materials/slides/draft-slides_w05.qmd": {
+    "draft-slides_w05.html": "38dae541"
+  },
+  "materials/slides/draft-slides_w06.qmd": {
+    "draft-slides_w06.html": "f989e901"
+  },
+  "materials/slides/draft-slides_w07.qmd": {
+    "draft-slides_w07.html": "0cb7e969"
+  },
+  "materials/slides/draft-slides_w08.qmd": {
+    "draft-slides_w08.html": "5719ea05"
   }
 }

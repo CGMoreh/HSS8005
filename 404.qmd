@@ -1,8 +1,12 @@
 ---
 title: " "
+page-layout: full
+code-link: true
 ---
 
-  <p style="text-align:center; font-size:230px; font-weight: bold; color:#900C3F">404</p>
+::: {.content-block}
+
+<p style="text-align:center;  font-size:230px; font-weight: bold; color:#900C3F">404</p>
 
 ```{r}
 
@@ -16,3 +20,36 @@ What_Is_This <- function(error_message){
 ```{r}
 What_Is_This("404")
 ```
+
+
+<style>
+.backbutton {
+  background-color: #900C3F;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+</style>
+
+
+
+<script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
+
+<body>
+<button class="backbutton" style="margin: 10px; position: absolute; left: 50%; -ms-transform: translate(-50%); transform: translate(-50%)" onclick="goBack()">Go Back</button>
+</body>
+
+:::

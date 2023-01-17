@@ -1,0 +1,45 @@
+[
+  {
+    "listing": "/materials/handouts/index.html",
+    "items": []
+  },
+  {
+    "listing": "/materials/info/index.html",
+    "items": [
+      "/materials/info/info_w01.html",
+      "/materials/info/info_w02.html",
+      "/materials/info/info_w03.html",
+      "/materials/info/info_w04.html",
+      "/materials/info/info_w05.html",
+      "/materials/info/info_w06.html",
+      "/materials/info/info_w07.html",
+      "/materials/info/info_w08.html"
+    ]
+  },
+  {
+    "listing": "/materials/notes/index.html",
+    "items": [
+      "/materials/notes/notes_w01.html"
+    ]
+  },
+  {
+    "listing": "/materials/slides/index.html",
+    "items": [
+      "/materials/slides/draft-slides_w01.html",
+      "/materials/slides/draft-slides_w02.html",
+      "/materials/slides/draft-slides_w03.html",
+      "/materials/slides/draft-slides_w04.html",
+      "/materials/slides/draft-slides_w05.html",
+      "/materials/slides/draft-slides_w06.html",
+      "/materials/slides/draft-slides_w07.html",
+      "/materials/slides/draft-slides_w08.html",
+      "/materials/slides/slides_w01.html"
+    ]
+  },
+  {
+    "listing": "/materials/worksheets/index.html",
+    "items": [
+      "/materials/worksheets/lab_w1.html"
+    ]
+  }
+]

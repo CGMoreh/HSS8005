@@ -1,0 +1,201 @@
+---
+title: "Readings"
+slug: readings
+toc: false
+sidebar: false
+page-layout: full
+bibliography: hss8005.bib
+---
+
+# Main
+
+-   [Regression and Other Stories](https://avehtari.github.io/ROS-Examples/)
+-   [Telling Stories with Data](https://tellingstorieswithdata.com/)
+-   [Maximum Likelihood for Social Science](http://www.maxlikebook.com/)
+-   [Beyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R](https://bookdown.org/roback/bookdown-BeyondMLR/)
+
+# Other
+
+-   [Regression Modeling Strategies (for biostatistics)](http://hbiostat.org/rmsc/) - course website here: https://hbiostat.org/doc/rms/#content
+
+-   Shalizi: [Advanced Data Analysis from an Elementary Point of View](https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/) - and [related course (2019)](https://www.stat.cmu.edu/~cshalizi/uADA/19/)
+
+-   [Practical R for Mass Communication and Journalism](https://www.machlis.com/R4Journalists/)
+
+-   [Answering questions with data (for psychologists)](https://crumplab.com/statistics/)
+
+-   Agresti: [Categorical Data Analysis](https://users.stat.ufl.edu/~aa/cda/cda.html)
+
+-   [Math prefresher for political scientists](https://iqss.github.io/prefresher/)
+
+-   Kennedy, Ryan, and Philip Waggoner. 2021. *Introduction to R for Social Scientists: A Tidy Programming Approach*. 1st ed. Boca Raton: CRC Press. - [data and code site](https://i2rss.weebly.com/resources.html)
+
+## History of statistics
+
+-   Gelman and Vehtari: [What are the most important statistical ideas of the past 50 years?](http://www.stat.columbia.edu/~gelman/research/unpublished/stat50.pdf)
+
+-   [@gelman2021]
+
+-   History of games of chance and their relationship to divinity: https://www.britannica.com/topic/gambling/History; https://www.pokcas.com/the-origins-of-games-of-chance-how-gambling-has-evolved-over-5000-years/
+
+## General and Generalised Linear models
+
+-   I found this page on [The General Linear Model (GLM)](https://www.brainvoyager.com/bv/doc/UsersGuide/StatisticalAnalysis/TheGeneralLinearModel.html) quite easy to read.
+
+-   And this one on [General**ised** Linear Models](https://www.mygreatlearning.com/blog/generalized-linear-models/#:~:text=Generalized%20Linear%20Model%20(GLiM%2C%20or,other%20than%20a%20normal%20distribution.):
+
+    > **What is a Generalized Linear Model?**
+    >
+    > Generalized Linear Model (GLiM, or GLM) is an advanced statistical modelling technique formulated by John Nelder and Robert Wedderburn in 1972. It is an umbrella term that encompasses many other models, which allows the response variable y to have an error distribution other than a normal distribution. The models include Linear Regression, Logistic Regression, and Poisson Regression.
+    >
+    > In a Linear Regression Model, the response (aka dependent/target) variable \'y\' is expressed as a linear function/linear combination of all the predictors \'X\' (aka independent/regression/explanatory/observed variables). The underlying relationship between the response and the predictors is linear (i.e. we can simply visualize the relationship in the form of a straight line). Also, the error distribution of the response variable should be normally distributed. Therefore we are building a linear model.
+    >
+    > GLM models allow us to build a linear relationship between the response and predictors, even though their underlying relationship is not linear. This is made possible by using a link function, which links the response variable to a linear model. Unlike Linear Regression models, the error distribution of the response variable need not be normally distributed. The errors in the response variable are assumed to follow an exponential family of distribution (i.e. normal, binomial, Poisson, or gamma distributions). Since we are trying to generalize a linear regression model that can also be applied in these cases, the name Generalized Linear Models.
+
+# Inference
+
+-   Why not p-values - [Alexander 2023](https://tellingstorieswithdata.com/12-ijalm.html#simple-linear-regression:~:text=We%20will%20not%20make,data%20are%20high%2Dquality.)
+
+-   Agresti article on [Bayesian Inference for Categorical Data Analysis](https://users.stat.ufl.edu/~aa/cda/bayes.pdf){style="font-size: 11pt;"}
+
+-   Lady tasting tea: <https://bookdown.org/johnnydoorn/bayesbookdown/the-lady-tasting-tea.html>
+
+## Simulation and study design
+
+-   <https://iqss.github.io/prefresher/simulation.html#fnref27>
+
+-   Reinhart*: [Regressinator](https://www.refsmmat.com/regressinator/index.html)*[R package](https://www.refsmmat.com/regressinator/index.html)
+
+-   Data simulation in the context of multilevel regression and post-stratification: <https://tellingstorieswithdata.com/15-mrp.html#simulation>
+
+-   [*Design and Analysis of Experiments and Observational Studies using R*](http://designexptr.org/)
+
+-   <https://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/>
+
+-   [The Survey Quality Predictor (SQP)](http://sqp.upf.edu/)
+
+## Causality
+
+-   **DAGs:** Deffner, Dominik, Julia M. Rohrer, and **Richard McElreath**. 2022. 'A Causal Framework for Cross-Cultural Generalizability'. *Advances in Methods and Practices in Psychological Science* 5(3):25152459221106370. doi: [10.1177/25152459221106366](https://doi.org/10.1177/25152459221106366).
+
+## Network analysis
+
+-   https://ladal.edu.au/net.html
+
+-   https://bookdown.org/jdholster1/idsr/network-analysis.html
+
+-   
+
+## Hierarchies
+
+-   Sadler, Michael E., and Christopher J. Miller. 2010. 'Performance Anxiety: A Longitudinal Study of the Roles of Personality and Experience in Musicians'. *Social Psychological and Personality Science* 1(3):280--87. doi: [10.1177/1948550610370492](https://doi.org/10.1177/1948550610370492).
+
+    -   data: musicdata.csv
+
+    -   source: <https://github.com/proback/BeyondMLR/tree/master/data>
+
+    -   usage: <https://bookdown.org/roback/bookdown-BeyondMLR/ch-multilevelintro.html#cs:music>
+
+-   Shakespeare, Austen, Bronte, Dickens data used in the context of multilevel modelling: <https://tellingstorieswithdata.com/15-mrp.html#austen-bront%C3%AB-dickens-and-shakespeare>
+
+-   Deffner, Dominik, Julia M. Rohrer, and **Richard McElreath**. 2022. 'A Causal Framework for Cross-Cultural Generalizability'. *Advances in Methods and Practices in Psychological Science* 5(3):25152459221106370. doi: [10.1177/25152459221106366](https://doi.org/10.1177/25152459221106366). - also use **multilevel regression with post-stratification**
+
+## Timelines
+
+-   Bernal, James Lopez, Steven Cummins, and Antonio Gasparrini. 2017. 'Interrupted Time Series Regression for the Evaluation of Public Health Interventions: A Tutorial'. *International Journal of Epidemiology* 46(1):348--55. doi: [10.1093/ije/dyw098](https://doi.org/10.1093/ije/dyw098).
+
+    -   data: sicily.rda
+
+    -   source: https://hbiostat.org/data/
+
+    -   usage scripts: http://hbiostat.org/rmsc/genreg.html#complex-curve-fitting-example
+
+## Spacecraft
+
+-   [Spatial regression models](http://www.srmbook.com/)
+
+-   [Spatial Data Science](https://r-spatial.org/book/)
+
+-   
+
+## Text as data
+
+-   [Text Mining with R: A Tidy Approach](https://www.tidytextmining.com/index.html "A Tidy Approach") (Dissferent Austen data used: <https://www.tidytextmining.com/tfidf.html>)
+
+-   <https://tellingstorieswithdata.com/16-text.html>
+
+-   Chris Bail: <https://cbail.github.io/textasdata/>
+
+## Classification, ML
+
+-   <https://towardsdatascience.com/machine-learning-techniques-for-investigative-reporting-344d74f69f84> - a very interesting data analysis on Brexit voting prediction; unfortunately the dataset cannot be located, but may be reproducible from other sources.
+
+## Intuition building
+
+-   Hamming, Richard W. 1997. *The Art of Doing Science and Engineering: Learning to Learn*. Amsterdam: Gordon and Breach.
+
+-   <https://data-feminism.mitpress.mit.edu/>
+
+-   McElreath, Richard. 2020. *Statistical Rethinking: A Bayesian Course with Examples in R and Stan*. 2nd ed. Boca Raton: Taylor and Francis, CRC Press. - [First two chapters freely available](http://xcelab.net/rmpubs/sr2/statisticalrethinking2_chapters1and2.pdf)
+
+-   Smoking debate:
+
+    -   See "The book of Why" for the story of how Fisher in particular was involved in the sceptical resistance to linking tobacco with cancer
+
+    -   Alex Reinhart: [The history of "How to Lie with Smoking Statistics"](https://www.refsmmat.com/articles/smoking-statistics.html) - Daryll Huff's involvement.
+
+    -   See also: Gelman, Andrew. 2012. 'Ethics and Statistics: Statistics for Cigarette Sellers'. *CHANCE* 25(3):43--46. doi: [10.1080/09332480.2012.726563](https://doi.org/10.1080/09332480.2012.726563)
+
+-   Reinhart: [Statistics done wrong](https://www.statisticsdonewrong.com/index.html)
+
+## R style guides
+
+-   https://style.tidyverse.org/
+
+-   https://google.github.io/styleguide/Rguide.html
+
+-   
+
+## Project management
+
+-   https://web.stanford.edu/\~gentzkow/research/CodeAndData.pdf
+
+-   https://learningds.org/ch/01/lifecycle_intro.html
+
+-   Reproducible, transparent, credible research: https://worldbank.github.io/dime-data-handbook/
+
+-   [Quarto for Scientists](https://qmd4sci.njtierney.com/)
+
+## Data sources
+
+-   https://data.london.gov.uk/
+
+-   https://i4replication.org/reports.html
+
+-   [Algorithmic Bias](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) - [full data and code](https://github.com/propublica/compas-analysis)
+
+-   https://economics.mit.edu/people/faculty/josh-angrist/angrist-data-archive
+
+-   https://economics.mit.edu/people/faculty/josh-angrist/mhe-data-archive
+
+-   Norris, Pippa, 2020, ["Global Party Survey, 2019"](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FWMGTNS)
+
+-   Large-scale cross-cultural prosocial behaviour study:
+
+    -   House, Bailey R., Patricia Kanngiesser, H. Clark Barrett, Tanya Broesch, Senay Cebioglu, Alyssa N. Crittenden, Alejandro Erut, Sheina Lew-Levy, Carla Sebastian-Enesco, Andrew Marcus Smith, Süheyla Yilmaz, and Joan B. Silk. 2020. 'Universal Norm Psychology Leads to Societal Diversity in Prosocial Behaviour and Development'. *Nature Human Behaviour* 4(1):36--44. doi: [10.1038/s41562-019-0734-z](https://doi.org/10.1038/s41562-019-0734-z).
+
+    -   Data analyised by (Deffner, Rohrer, and McElreath 2022)
+
+-   Simpson's paradox:
+
+    -   Bickel, P. J., E. A. Hammel, and J. W. O'Connell. 1975. 'Sex Bias in Graduate Admissions: Data from Berkeley'. *Science* 187(4175):398--404. doi: [10.1126/science.187.4175.398](https://doi.org/10.1126/science.187.4175.398).
+
+    -   
+
+        -   [here](https://crumplab.com/statistics/01-Science_Data.html#the-cautionary-tale-of-simpsons-paradox) - [here](https://www.refsmmat.com/posts/2016-05-08-simpsons-paradox-berkeley.html#fnref1)
+
+-   LEGO bricksets:
+
+    -   Peterson, Anna D., and Laura Ziegler. 2021. 'Building a Multiple Linear Regression Model With LEGO Brick Data'. *Journal of Statistics and Data Science Education* 29(3):297--303. doi: [10.1080/26939169.2021.1946450](https://doi.org/10.1080/26939169.2021.1946450).
+
+    -   Data and code: C:\\Users\\moreh\\OneDrive - Newcastle University\\DATA\\Peterson, Ziegler (2021) LEGO data

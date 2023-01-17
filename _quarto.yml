@@ -8,8 +8,7 @@ project:
     - "*.qmd"
     - "*.Rmd"
     - "*.md"
-    - "!files/"
-
+    - "!materials/templates/"
 format:
   html:
     theme: 
@@ -24,15 +23,13 @@ format:
 
 bibliography: hss8005.bib
 
-
-
-
 website:
   title: "HSS8005 {{< iconify line-md plus >}}"
   favicon: "files/img/ncl_coa_hss8005.png"
   search: false
   site-path: "/HSS8005/"
   page-navigation: true
+  # reader-mode: true
   
   navbar:
     pinned: true
@@ -46,148 +43,6 @@ website:
         href: data/index.qmd
       - text: "{{< iconify arcticons canvasstudent size=l >}} Canvas"
         href: https://canvas.ncl.ac.uk/login/
-  
-  sidebar:
-    - title: "Materials"
-      style: "docked"
-      search: false
-      background: $ncl-blue
-      collapse-level: 1
-      # footer: "© Chris Moreh"
-      contents:
-        - text: "Weekly materials"
-          href: materials/index.qmd
-        - "---"
-        - section: "Week 1"
-          href: materials/notes/info_w1.qmd
-          contents:
-            - text: "Notes"
-              href: materials/notes/notes_w1.qmd
-            - text: "Presentation"
-              href: materials/slides/slides_w1.qmd
-            - text: "Worksheet"
-              href: materials/worksheets/lab_w1.qmd
-            - text: "Handout"
-              href: materials/handouts/handout_w1.qmd
-        - section: "Week 2"
-          href: materials/notes/info_w2.qmd
-          contents:
-            - text: "Notes"
-              href: materials/notes/week_
-            - text: "Presentation"
-              href: materials/slides/week_
-            - text: "Worksheet"
-              href: materials/worksheets/week_
-            - text: "Handout"
-              href: materials/handouts/week_
-        - section: "Week 3"
-          href: materials/notes/info_w3.qmd
-          contents:
-            - text: "Notes"
-              href: materials/notes/week_
-            - text: "Presentation"
-              href: materials/slides/week_
-            - text: "Worksheet"
-              href: materials/worksheets/week_
-            - text: "Handout"
-              href: materials/handouts/week_
-        - section: "Week 4"
-          href: materials/notes/info_w4.qmd
-          contents:
-            - text: "Notes"
-              href: materials/notes/week_
-            - text: "Presentation"
-              href: materials/slides/week_
-            - text: "Worksheet"
-              href: materials/worksheets/week_
-            - text: "Handout"
-              href: materials/handouts/week_
-        - section: "Week 5"
-          href: materials/notes/info_w5.qmd
-          contents:
-            - text: "Notes"
-              href: materials/notes/week_
-            - text: "Presentation"
-              href: materials/slides/week_
-            - text: "Worksheet"
-              href: materials/worksheets/week_
-            - text: "Handout"
-              href: materials/handouts/week_
-        - section: "Week 6"
-          href: materials/notes/info_w6.qmd
-          contents:
-            - text: "Notes"
-              href: materials/notes/week_
-            - text: "Presentation"
-              href: materials/slides/week_
-            - text: "Worksheet"
-              href: materials/worksheets/week_
-            - text: "Handout"
-              href: materials/handouts/week_
-        - section: "Week 7"
-          href: materials/notes/info_w7.qmd
-          contents:
-            - text: "Notes"
-              href: materials/notes/week_
-            - text: "Presentation"
-              href: materials/slides/week_
-            - text: "Worksheet"
-              href: materials/worksheets/week_
-            - text: "Handout"
-              href: materials/handouts/week_
-        - section: "Week 8"
-          href: materials/notes/info_w8.qmd
-          contents:
-            - text: "Notes"
-              href: materials/notes/week_
-            - text: "Presentation"
-              href: materials/slides/week_
-            - text: "Worksheet"
-              href: materials/worksheets/week_
-            - text: "Handout"
-              href: materials/handouts/week_
-        # - section: "Week 9"
-        #   href: materials/notes/info_w9.qmd
-        #   contents:
-        #     - text: "Notes"
-        #       href: materials/notes/week_
-        #     - text: "Presentation"
-        #       href: materials/slides/week_
-        #     - text: "Worksheet"
-        #       href: materials/worksheets/week_
-        #     - text: "Handout"
-        #       href: materials/handouts/week_
-        # - section: "Week 10"
-        #   href: materials/notes/info_w10.qmd
-        #   contents:
-        #     - text: "Notes"
-        #       href: materials/notes/week_
-        #     - text: "Presentation"
-        #       href: materials/slides/week_
-        #     - text: "Worksheet"
-        #       href: materials/worksheets/week_
-        #     - text: "Handout"
-        #       href: materials/handouts/week_
-    - title: "Data"
-      contents:
-        - text: "Data dictionaries"
-          file: data/index.qmd
-        - "---"
-        - text: "Data 1"
-          file: data/data1.qmd
-        - text: "Data 2"
-          file: data/data2.qmd
-    - title: "Notes"
-      contents:
-        - text: "Lecture notes"
-          file: materials/notes/index.qmd
-#        - "---"
-        - text: "1. {{< var topic.w1 >}}"
-          file: materials/notes/notes_w1.qmd
-        - text: "2. {{< var topic.w2 >}}"
-        - text: "3. {{< var topic.w3 >}}"
-        - text: "4. {{< var topic.w4 >}}"
-        - text: "5. {{< var topic.w5 >}}"
-        - text: "6. {{< var topic.w6 >}}"
-        - text: "7. {{< var topic.w7 >}}"
-        - text: "8. {{< var topic.w8 >}}"
+
+metadata-files:
+  - _sidebar.yml

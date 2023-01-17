@@ -1,0 +1,10 @@
+---
+title: "{{< var topic.w1 >}}"
+subtitle: "{{< var subtitle.wREPLACE >}}"
+author: "{{< var author >}}"
+abstract: "{{< var topic-abstract.wREPLACE >}}"
+abstract-title: "Abstract"
+format:
+  html: default
+#  pdf: default
+---
