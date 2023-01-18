@@ -58,6 +58,18 @@ subtitle:
   # w9: "Networks"
   # w10: "Sum up, divide, and conquer"
 
+lab:
+  w1: "Introduction to R, RStudio and Quarto"
+  w2: "General linear models"
+  w3: "Interactions and causal inference"
+  w4: "Generalised linear models"
+  w5: "Basic data simulation for statistical inference and power analysis"
+  w6: "Multilevel models"
+  w7: "Structural equation models"
+  w8: "Text as data"
+  # w9: "Networks"
+  # w10: "Sum up, divide, and conquer"
+
 
 topic-abstract:
   w1: >
@@ -71,28 +83,28 @@ topic-abstract:
     the <!-- {{< iconify simple-icons rstudio size="1x">}} !! Changed to HTML code to add colour --> <iconify-icon inline icon="file-icons:rstudio" style="color: #7dbefc;"></iconify-icon>**Studio** application programming interface. 
     The session will also introduce some other tools of literate programming and [plain-text social science](https://plain-text.co/) (such as {{< iconify ri markdown-fill size="large">}} / {{< iconify file-icons rmarkdown size="1x" >}} / 
     **Quarto**&reg; markup languages), all essential skills in contemporary computational social science and humanities research.
-  w2: "A review of linear regression models"
-  w3: "Dear Philippa, how should I deal with my `X`s?"
-  w4: "The `Y` question"
-  w5: "Do we live in a simulation?"
-  w6: "Challenging hierarchies"
-  w7: "The unobserved"
+  w2: ""
+  w3: ""
+  w4: ""
+  w5: ""
+  w6: ""
+  w7: ""
   w8: ""
-  w9: "Last: Words! Mere words!"
-  w10: "Sum up, divide, and conquer"
+  w9: ""
+  w10: ""
 
 
 worksheet-abstract:
-  w1: "A brief history of statistics"
-  w2: "A review of linear regression models"
-  w3: "Interactions and the logic of causal inference"
-  w4: "Generalised linear regression models"
-  w5: "Basic data simulation for statistical inference and power analysis"
-  w6: "Multilevel models"
-  w7: "Structural equation models"
-  w8: "Text as data"
-  # w9: "Networks"
-  # w10: "Sum up, divide, and conquer"
+  w1: "Introduction to R, RStudio and Quarto"
+  w2: ""
+  w3: ""
+  w4: ""
+  w5: ""
+  w6: ""
+  w7: ""
+  w8: ""
+  w9: ""
+  w10: ""
 
 
 date:

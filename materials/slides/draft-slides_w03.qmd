@@ -9,5 +9,5 @@ subtitle: "{{< var subtitle.w3 >}}"
 <iframe class="slide-deck" src="{{< var slides.w3 >}}"></iframe>
 ```
 
-View the slides full-screen in a standalone browser window [**here**]({{< var slides.w3 >}}){target="_blank"}. The lecture recording is available on [**ReCap**](https://campus.recap.ncl.ac.uk/Panopto/Pages/Sessions/List.aspx#folderID=%22699937e9-4554-40ed-8e00-af8d00092271%22){target="_blank"} (requires Newcastle University institutional login)
+View the slides full-screen in a standalone browser window [**here**]({{< var slides.w3 >}}){target="_blank"}. The lecture recording is available on [**ReCap**](https://campus.recap.ncl.ac.uk/Panopto/Pages/Sessions/List.aspx#folderID=%22699937e9-4554-40ed-8e00-af8d00092271%22){target="_blank"} (requires Newcastle University login)
 :::

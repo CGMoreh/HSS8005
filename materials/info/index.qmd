@@ -1,6 +1,7 @@
 ---
 title: ""
 toc-location: body
+page-layout: full
 listing:
   type: table
   sort: "filename"

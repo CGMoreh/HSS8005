@@ -2,13 +2,6 @@
   {
     "listing": "/materials/handouts/index.html",
     "items": [
-      "/materials/handouts/draft-handouts_w02.pdf",
-      "/materials/handouts/draft-handouts_w03.pdf",
-      "/materials/handouts/draft-handouts_w04.pdf",
-      "/materials/handouts/draft-handouts_w05.pdf",
-      "/materials/handouts/draft-handouts_w06.pdf",
-      "/materials/handouts/draft-handouts_w07.pdf",
-      "/materials/handouts/draft-handouts_w08.pdf",
       "/materials/handouts/handouts-frame_w01.html",
       "/materials/handouts/handouts-frame_w02.html",
       "/materials/handouts/handouts-frame_w03.html",
@@ -43,8 +36,7 @@
       "/materials/notes/draft-notes_w05.html",
       "/materials/notes/draft-notes_w06.html",
       "/materials/notes/draft-notes_w07.html",
-      "/materials/notes/draft-notes_w08.html",
-      "/materials/notes/notes_w01.html"
+      "/materials/notes/draft-notes_w08.html"
     ]
   },
   {
@@ -71,8 +63,7 @@
       "/materials/worksheets/draft-worksheets_w05.html",
       "/materials/worksheets/draft-worksheets_w06.html",
       "/materials/worksheets/draft-worksheets_w07.html",
-      "/materials/worksheets/draft-worksheets_w08.html",
-      "/materials/worksheets/worksheets_w01.html"
+      "/materials/worksheets/draft-worksheets_w08.html"
     ]
   }
 ]

@@ -1,7 +1,7 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "abouDELt.html",
+    "href": "abouDELt.html",
     "title": "About",
     "section": "",
     "text": "About this site\nNothing important here"
@@ -18,112 +18,91 @@
     "href": "index.html",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
-    "text": "Quantitative analysis \n        \n        \n            HSS8005 • Advanced stream • 2023 Newcastle University (UK)\n        \n        \n            A second course in applied statistics and probability for the understanding of society and culture.\n        \n    \n\n\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh@newcastle.ac.uk\n   tutorial booker\n\n\n\nTeaching Assistants\n\n   tbc\n   tbc\n\n\n\nSession details\n\n   Thursdays \n   Lecture: 10:00-11:30\n   Labs:   13:00-14:30 (Group 03)        14:30-16:00 (Group 04)"
+    "text": "Quantitative analysis \n        \n        \n            HSS8005 • Advanced stream • 2023\nNewcastle University (UK)\n        \n        \n            A second course in applied statistics and probability for the understanding of society and culture.\n        \n    \n\n\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh@newcastle.ac.uk\n   tutorial booker\n\n\n\nTeaching Assistants\n\n   tbc\n   tbc\n\n\n\nSession details\n\n   Thursdays \n   Lecture: 10:00-11:30\n   Labs:   13:00-14:30 (Group 03)        14:30-16:00 (Group 04)"
   },
   {
     "objectID": "materials/handouts/index.html",
     "href": "materials/handouts/index.html",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nWeek 2 handout sheet\n\n\n\n\n0 min\n\n\n\n\nWeek 3 handout sheet\n\n\n\n\n0 min\n\n\n\n\nWeek 4 handout sheet\n\n\n\n\n0 min\n\n\n\n\nWeek 5 handout sheet\n\n\n\n\n0 min\n\n\n\n\nWeek 6 handout sheet\n\n\n\n\n0 min\n\n\n\n\nWeek 7 handout sheet\n\n\n\n\n0 min\n\n\n\n\nWeek 8 handout sheet\n\n\n\n\n0 min\n\n\n\n\nWeek 1 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 2 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 3 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 4 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 5 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 6 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 7 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 8 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 1 handout sheet\n\n\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Title\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nWeek 1 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 2 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 3 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 4 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 5 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 6 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 7 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 8 handout\n\n\n\n\n0 min\n\n\n\n\nWeek 1 handout sheet\n\n\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "materials/index.html",
     "href": "materials/index.html",
     "title": "Materials",
     "section": "",
-    "text": "Materials for each week are available from the side menu.\nWeekly topics list can found here: link to page\nNotes list can found here: link to page"
+    "text": "Materials for each week are available from the side menu.\nWeekly topics list can found here: link to page"
   },
   {
     "objectID": "materials/info/index.html",
     "href": "materials/info/index.html",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDescription\n\n\n\n\n\n\nWeek 1  Gamblers, God, Guinness and peas\n\n\nA brief history of statistics\n\n\nThis lecture is a broad introduction to the aims of statistical modeling and the history of probability theory. We will look back on the development of some core statistical concepts and learn about the ideas and preoccupations that influenced them over three centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn about later. The outcome will be a much clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.\nThe IT lab, on the other hand, will provide a very hands-on practical introduction to the  statistical programming language and its currently most popular dialect – the {tidyverse} – via the  Studio application programming interface. The session will also introduce some other tools of literate programming and plain-text social science (such as  /  / Quarto® markup languages), all essential skills in contemporary computational social science and humanities research.\n\n\n\n\nWeek 2  Revisiting Flatland\n\n\nA review of general linear models\n\n\nA review of linear regression models\n\n\n\n\nWeek 3  Dear Prudence, Help! I may be cheating with my X\n\n\nInteractions and the logic of causal inference\n\n\nDear Philippa, how should I deal with my Xs?\n\n\n\n\nWeek 4  The Y question\n\n\nGeneralised linear models\n\n\nThe Y question\n\n\n\n\nWeek 5  Do we live in a simulation?\n\n\nBasic data simulation for statistical inference and power analysis\n\n\nDo we live in a simulation?\n\n\n\n\nWeek 6  Challenging hierarchies\n\n\nMultilevel models\n\n\nChallenging hierarchies\n\n\n\n\nWeek 7  The unobserved\n\n\nStructural equation models\n\n\nThe unobserved\n\n\n\n\nWeek 8  Words! Mere words!\n\n\nText as data\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Title\n\n\nSubtitle\n\n\nDescription\n\n\n\n\n\n\nWeek 1  Gamblers, God, Guinness and peas\n\n\nA brief history of statistics\n\n\nThis lecture is a broad introduction to the aims of statistical modeling and the history of probability theory. We will look back on the development of some core statistical concepts and learn about the ideas and preoccupations that influenced them over three centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn about later. The outcome will be a much clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.\nThe IT lab, on the other hand, will provide a very hands-on practical introduction to the  statistical programming language and its currently most popular dialect – the {tidyverse} – via the  Studio application programming interface. The session will also introduce some other tools of literate programming and plain-text social science (such as  /  / Quarto® markup languages), all essential skills in contemporary computational social science and humanities research.\n\n\n\n\nWeek 2  Revisiting Flatland\n\n\nA review of general linear models\n\n\n\n\n\n\n\nWeek 3  Dear Prudence, Help! I may be cheating with my X\n\n\nInteractions and the logic of causal inference\n\n\n\n\n\n\n\nWeek 4  The Y question\n\n\nGeneralised linear models\n\n\n\n\n\n\n\nWeek 5  Do we live in a simulation?\n\n\nBasic data simulation for statistical inference and power analysis\n\n\n\n\n\n\n\nWeek 6  Challenging hierarchies\n\n\nMultilevel models\n\n\n\n\n\n\n\nWeek 7  The unobserved\n\n\nStructural equation models\n\n\n\n\n\n\n\nWeek 8  Words! Mere words!\n\n\nText as data\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "materials/notes/index.html",
     "href": "materials/notes/index.html",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nGamblers, God, Guinness and peas\n\n\nThis lecture is a broad introduction to the aims of statistical modeling and the history of probability theory. We will look back on the development of some core statistical concepts and learn about the ideas and preoccupations that influenced them over three centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn about later. The outcome will be a much clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.\nThe IT lab, on the other hand, will provide a very hands-on practical introduction to the  statistical programming language and its currently most popular dialect – the {tidyverse} – via the  Studio application programming interface. The session will also introduce some other tools of literate programming and plain-text social science (such as  /  / Quarto® markup languages), all essential skills in contemporary computational social science and humanities research.\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\nA review of linear regression models\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\nDear Philippa, how should I deal with my Xs?\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\nThe Y question\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\nDo we live in a simulation?\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\nChallenging hierarchies\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\nThe unobserved\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n0 min\n\n\n\n\n1. Introduction to probability\n\n\n\n\n12 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "materials/notes/notes_w01.html",
-    "href": "materials/notes/notes_w01.html",
-    "title": "1. Introduction to probability",
-    "section": "",
-    "text": "sidebar <- readLines(\"../../_sidebar.yml\")\n\nreadLines(\"../../_sidebar.yml\") |>\n  stringr::str_replace(\n    pattern = \"#href: materials/slides/slides_w1.qmd\", \n    replace = \"href: materials/slides/slides_w1.qmd\") |> \n  writeLines(con = \"../../_sidebar.yml\")\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
-  },
-  {
-    "objectID": "materials/notes/notes_w01.html#heading-2",
-    "href": "materials/notes/notes_w01.html#heading-2",
-    "title": "1. Introduction to probability",
-    "section": "Heading 2",
-    "text": "Heading 2\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n. (Abadía-Barrero and Bugbee 2019)"
-  },
-  {
-    "objectID": "materials/notes/notes_w01.html#gg-1",
-    "href": "materials/notes/notes_w01.html#gg-1",
-    "title": "1. Introduction to probability",
-    "section": "gg",
-    "text": "gg\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
+    "text": "Title\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nGamblers, God, Guinness and peas\n\n\nThis lecture is a broad introduction to the aims of statistical modeling and the history of probability theory. We will look back on the development of some core statistical concepts and learn about the ideas and preoccupations that influenced them over three centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn about later. The outcome will be a much clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.\nThe IT lab, on the other hand, will provide a very hands-on practical introduction to the  statistical programming language and its currently most popular dialect – the {tidyverse} – via the  Studio application programming interface. The session will also introduce some other tools of literate programming and plain-text social science (such as  /  / Quarto® markup languages), all essential skills in contemporary computational social science and humanities research.\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n0 min\n\n\n\n\nGamblers, God, Guinness and peas\n\n\n\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "materials/slides/draft-slides_w01.html",
     "href": "materials/slides/draft-slides_w01.html",
     "title": "Week 1  Gamblers, God, Guinness and peas",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/slides/draft-slides_w02.html",
     "href": "materials/slides/draft-slides_w02.html",
     "title": "Week 2  Revisiting Flatland",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/slides/draft-slides_w03.html",
     "href": "materials/slides/draft-slides_w03.html",
     "title": "Week 3  Dear Prudence, Help! I may be cheating with my X",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/slides/draft-slides_w04.html",
     "href": "materials/slides/draft-slides_w04.html",
     "title": "Week 4  The Y question",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/slides/draft-slides_w05.html",
     "href": "materials/slides/draft-slides_w05.html",
     "title": "Week 5  Do we live in a simulation?",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/slides/draft-slides_w06.html",
     "href": "materials/slides/draft-slides_w06.html",
     "title": "Week 6  Challenging hierarchies",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/slides/draft-slides_w07.html",
     "href": "materials/slides/draft-slides_w07.html",
     "title": "Week 7  The unobserved",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/slides/draft-slides_w08.html",
     "href": "materials/slides/draft-slides_w08.html",
     "title": "Week 8  Words! Mere words!",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/slides/index.html",
@@ -137,35 +116,14 @@
     "href": "materials/slides/slides_w01.html",
     "title": "Week 1  Gamblers, God, Guinness and peas",
     "section": "",
-    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University institutional login)"
+    "text": "View the slides full-screen in a standalone browser window here. The lecture recording is available on ReCap (requires Newcastle University login)"
   },
   {
     "objectID": "materials/worksheets/index.html",
     "href": "materials/worksheets/index.html",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nWeek 1 Computer Lab Worksheet\n\n\nA brief history of statistics\n\n\n0 min\n\n\n\n\nWeek 2 Computer Lab Worksheet\n\n\nA review of linear regression models\n\n\n0 min\n\n\n\n\nWeek 3 Computer Lab Worksheet\n\n\nInteractions and the logic of causal inference\n\n\n0 min\n\n\n\n\nWeek 4 Computer Lab Worksheet\n\n\nGeneralised linear regression models\n\n\n0 min\n\n\n\n\nWeek 5 Computer Lab Worksheet\n\n\nBasic data simulation for statistical inference and power analysis\n\n\n0 min\n\n\n\n\nWeek 6 Computer Lab Worksheet\n\n\nMultilevel models\n\n\n0 min\n\n\n\n\nWeek 7 Computer Lab Worksheet\n\n\nStructural equation models\n\n\n0 min\n\n\n\n\nWeek 8 Computer Lab Worksheet\n\n\nText as data\n\n\n0 min\n\n\n\n\nWeek 1 Computer Lab Worksheet\n\n\n\n\n13 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "materials/worksheets/worksheets_w01.html",
-    "href": "materials/worksheets/worksheets_w01.html",
-    "title": "Week 1 Computer Lab Worksheet",
-    "section": "",
-    "text": "2023-02-02"
-  },
-  {
-    "objectID": "materials/worksheets/worksheets_w01.html#heading-2",
-    "href": "materials/worksheets/worksheets_w01.html#heading-2",
-    "title": "Week 1 Computer Lab Worksheet",
-    "section": "Heading 2",
-    "text": "Heading 2\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
-  },
-  {
-    "objectID": "materials/worksheets/worksheets_w01.html#gg-1",
-    "href": "materials/worksheets/worksheets_w01.html#gg-1",
-    "title": "Week 1 Computer Lab Worksheet",
-    "section": "gg",
-    "text": "gg\nnadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n.nadvjo lafnbodn vn iohjfoiasdh vunfuivnsuion zj nuinvodn do n on ojcn ijfb j c bdu nk ijd jk kjn msj nkxc jhbakn xn adjk badfjk vjkx jhdfbvjkn sdkibvkja adasdvsv. vjklnadfl; njklscv.adjksvpbaui nd n."
+    "text": "Title\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nWeek 1 Computer Lab Worksheet\n\n\nIntroduction to R, RStudio and Quarto\n\n\n0 min\n\n\n\n\nWeek 2 Computer Lab Worksheet\n\n\n\n\n\n0 min\n\n\n\n\nWeek 3 Computer Lab Worksheet\n\n\n\n\n\n0 min\n\n\n\n\nWeek 4 Computer Lab Worksheet\n\n\n\n\n\n0 min\n\n\n\n\nWeek 5 Computer Lab Worksheet\n\n\n\n\n\n0 min\n\n\n\n\nWeek 6 Computer Lab Worksheet\n\n\n\n\n\n0 min\n\n\n\n\nWeek 7 Computer Lab Worksheet\n\n\n\n\n\n0 min\n\n\n\n\nWeek 8 Computer Lab Worksheet\n\n\n\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "plan10.html",

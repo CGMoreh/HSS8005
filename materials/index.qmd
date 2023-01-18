@@ -5,5 +5,3 @@ title: "Materials"
 Materials for each week are available from the side menu.
 
 Weekly topics list can found here:  [link to page](/materials/info/index.qmd)
-
-Notes list can found here:  [link to page](/materials/notes/index.qmd)

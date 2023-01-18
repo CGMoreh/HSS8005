@@ -145,11 +145,11 @@ for (j in 1:8) {
 
 ## Materials pages
 
-for (d in c("slides", "handouts", "", "notes", "worksheets")) {
+for (d in c("slides", "handouts", "notes", "worksheets")) {
   for (j in 1:8) {
     file.copy(from = paste0("materials/templates/", d, "_template.qmd"), 
               to = paste0("materials/", d, "/draft-", d, "_w0", j, ".qmd"), 
-              overwrite = FALSE)
+              overwrite = TRUE)
     readLines(paste0("materials/", d, "/draft-", d, "_w0", j, ".qmd")) |> 
       stringr::str_replace_all(
         pattern = "REPLACE", 

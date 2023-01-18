@@ -1,5 +1,6 @@
 ---
 title: "Week 3 Computer Lab Worksheet"
+subtitle: "{{< var lab.w3 >}}"
 author: "{{< var author >}}"
 abstract: "{{< var worksheet-abstract.w3 >}}"
 abstract-title: "Description"

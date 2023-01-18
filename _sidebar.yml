@@ -14,11 +14,11 @@ website:
           href: materials/info/info_w01.qmd
           contents:
             - text: "Notes"
-              file: materials/notes/notes_w01.qmd
+              #file: materials/notes/notes_w01.qmd
             - text: "Presentation"
               file: materials/slides/slides_w01.qmd
             - text: "Worksheet"
-              file: materials/worksheets/worksheets_w01.qmd
+              #file: materials/worksheets/worksheets_w01.qmd
             - text: "Handout"
               file: materials/handouts/handouts-frame_w01.qmd
         - section: "Week 2"
