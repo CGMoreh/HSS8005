@@ -1,0 +1,13 @@
+---
+title: "Week 1 handout sheet"
+author: "{{< var author >}}"
+format:   
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+---
+
+## DRAFT
+
+Handouts will include a list of functions and code examples covered in the week's IT lab, and can serve as a quick cheat-sheet.

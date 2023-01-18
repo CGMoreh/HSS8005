@@ -34,20 +34,10 @@ code-line-numbers: true
 # code-block-bg: lightgray
 # license: CC BY-NC"
 
-handouts_meta <-
-  "format:
-  html: default
-#  pdf: default
+handouts_meta <- "
 bibliography: ../../hss8005.bib
-page-layout: full
-toc-location: left
-abstract-title: Description
-code-link: true
-code-line-numbers: true
-# code-tools: true
-# code-block-border-left: $ncl-blue
-# code-block-bg: lightgray
-# license: CC BY-NC"
+code-line-numbers: true"
+
 
 info_meta <-
   "bibliography: ../../hss8005.bib
@@ -117,7 +107,7 @@ sort-ui: false
 filter-ui: false
 ---"
 
-for (j in c("notes", "slides", "worksheets", "handouts", "info")){
+for (j in c("notes", "slides", "worksheets", "handouts", "info")) {
   writeLines(listings, paste0("materials/", j, "/index.qmd"))
 }
 
@@ -126,9 +116,9 @@ for (j in c("notes", "slides", "worksheets", "handouts", "info")){
 
 dir.create("materials/templates")
 
-sapply(paste0("materials/templates/", c("notes_template", "slides_template", "worksheets_template", "handouts_template"), ".qmd"), file.create)
+# sapply(paste0("materials/templates/", c("notes_template", "slides_template", "worksheets_template", "handouts_template"), ".qmd"), file.create) # careful, overwrites
 
-
+file.create("materials/templates/handouts-frame_template.qmd")
 
 
 ## ---------------------- Template YAML ---------------------------------
@@ -141,18 +131,46 @@ sapply(paste0("materials/templates/", c("notes_template", "slides_template", "wo
 ## -------------- Create files -----------------------------------------
 
 
+## Info pages
 
 for (j in 1:8) {
-  file.copy(from = "materials/templates/slides_template.qmd", to = paste0("materials/slides/draft-slides_w0", j, ".qmd"), overwrite = TRUE)
-  readLines(paste0("materials/slides/draft-slides_w0", j, ".qmd")) |> 
-  stringr::str_replace_all(
-    pattern = "REPLACE", 
-    replace = paste0(j)) |> 
-  writeLines(con = paste0("materials/slides/draft-slides_w0", j, ".qmd"))
+  file.copy(from = "materials/templates/info_template.qmd", to = paste0("materials/info/info_w0", j, ".qmd"), overwrite = TRUE)
+  readLines(paste0("materials/info/info_w0", j, ".qmd")) |> 
+    stringr::str_replace_all(
+      pattern = "REPLACE", 
+      replace = paste0(j)) |> 
+    writeLines(con = paste0("materials/info/info_w0", j, ".qmd"))
 }
 
 
+## Materials pages
 
+for (d in c("slides", "handouts", "", "notes", "worksheets")) {
+  for (j in 1:8) {
+    file.copy(from = paste0("materials/templates/", d, "_template.qmd"), 
+              to = paste0("materials/", d, "/draft-", d, "_w0", j, ".qmd"), 
+              overwrite = FALSE)
+    readLines(paste0("materials/", d, "/draft-", d, "_w0", j, ".qmd")) |> 
+      stringr::str_replace_all(
+        pattern = "REPLACE", 
+        replace = paste0(j)) |> 
+      writeLines(paste0("materials/", d, "/draft-", d, "_w0", j, ".qmd"))
+  }
+}
+
+
+## Handouts frame pages
+
+for (j in 1:8) {
+  file.copy(from = "materials/templates/handouts-frame_template.qmd", 
+            to = paste0("materials/handouts/handouts-frame_w0", j, ".qmd"), 
+            overwrite = TRUE)
+  readLines(paste0("materials/handouts/handouts-frame_w0", j, ".qmd")) |> 
+    stringr::str_replace_all(
+      pattern = "REPLACE", 
+      replace = paste0(j)) |> 
+    writeLines(paste0("materials/handouts/handouts-frame_w0", j, ".qmd"))
+}
 
 
 

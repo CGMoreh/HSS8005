@@ -1,8 +1,6 @@
 ---
 title: "Week 2 {{< fa minus >}} {{< var topic.w2 >}}"
-subtitle: "{{< var topic.w2 >}}"
+subtitle: "{{< var subtitle.w2 >}}"
+abstract: "{{< var topic-abstract.w2 >}}"
+abstract-title: "Description"
 ---
-
-A broad review of simple linear regression modelling.
-
-

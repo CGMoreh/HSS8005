@@ -1,13 +1,2 @@
-format:
-  html: default
-#  pdf: default
 bibliography: ../../hss8005.bib
-page-layout: full
-toc-location: left
-abstract-title: Description
-code-link: true
 code-line-numbers: true
-# code-tools: true
-# code-block-border-left: $ncl-blue
-# code-block-bg: lightgray
-# license: CC BY-NC

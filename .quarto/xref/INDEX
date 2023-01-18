@@ -209,5 +209,118 @@
   },
   "materials/slides/draft-slides_w08.qmd": {
     "draft-slides_w08.html": "5719ea05"
+  },
+  "materials/handouts/draft-handouts_w01.qmd": {
+    "draft-handouts_w01.tex": "9726c78a"
+  },
+  "materials/handouts/draft-handouts_w02.qmd": {
+    "draft-handouts_w02.tex": "a54f6d8b"
+  },
+  "materials/handouts/draft-handouts_w03.qmd": {
+    "draft-handouts_w03.tex": "59c1bd99"
+  },
+  "materials/handouts/draft-handouts_w04.qmd": {
+    "draft-handouts_w04.tex": "26066316"
+  },
+  "materials/handouts/draft-handouts_w05.qmd": {
+    "draft-handouts_w05.tex": "195ca0a7"
+  },
+  "materials/handouts/draft-handouts_w06.qmd": {
+    "draft-handouts_w06.tex": "89faba48"
+  },
+  "materials/handouts/draft-handouts_w07.qmd": {
+    "draft-handouts_w07.tex": "6154d482"
+  },
+  "materials/handouts/draft-handouts_w08.qmd": {
+    "draft-handouts_w08.tex": "ac58b55d"
+  },
+  "materials/notes/draft-notes_w01.qmd": {
+    "draft-notes_w01.html": "19ee2e6d"
+  },
+  "materials/notes/draft-notes_w02.qmd": {
+    "draft-notes_w02.html": "b6a02b5e"
+  },
+  "materials/notes/draft-notes_w03.qmd": {
+    "draft-notes_w03.html": "b54d3662"
+  },
+  "materials/notes/draft-notes_w04.qmd": {
+    "draft-notes_w04.html": "9a619b99"
+  },
+  "materials/notes/draft-notes_w05.qmd": {
+    "draft-notes_w05.html": "b53c1efc"
+  },
+  "materials/notes/draft-notes_w06.qmd": {
+    "draft-notes_w06.html": "82500307"
+  },
+  "materials/notes/draft-notes_w07.qmd": {
+    "draft-notes_w07.html": "39f802b2"
+  },
+  "materials/notes/draft-notes_w08.qmd": {
+    "draft-notes_w08.html": "dfdc3097"
+  },
+  "materials/worksheets/draft-worksheets_w01.qmd": {
+    "draft-worksheets_w01.html": "96c9902f"
+  },
+  "materials/worksheets/draft-worksheets_w02.qmd": {
+    "draft-worksheets_w02.html": "c8e35104"
+  },
+  "materials/worksheets/draft-worksheets_w03.qmd": {
+    "draft-worksheets_w03.html": "f2b21bf6"
+  },
+  "materials/worksheets/draft-worksheets_w04.qmd": {
+    "draft-worksheets_w04.html": "1ce67f60"
+  },
+  "materials/worksheets/draft-worksheets_w05.qmd": {
+    "draft-worksheets_w05.html": "4bae4aae"
+  },
+  "materials/worksheets/draft-worksheets_w06.qmd": {
+    "draft-worksheets_w06.html": "47d45085"
+  },
+  "materials/worksheets/draft-worksheets_w07.qmd": {
+    "draft-worksheets_w07.html": "64044f86"
+  },
+  "materials/worksheets/draft-worksheets_w08.qmd": {
+    "draft-worksheets_w08.html": "fa22723a"
+  },
+  "materials/handouts/handouts_w06.qmd": {
+    "handouts_w06.tex": "1d7f41ea",
+    "handouts_w06.html": "483210f6"
+  },
+  "materials/slides/slides_w04.qmd": {
+    "slides_w04.html": "3ba98226"
+  },
+  "materials/worksheets/worksheets_w01.qmd": {
+    "worksheets_w01.html": "6c12fdd8"
+  },
+  "materials/handouts/handouts_w01.qmd": {
+    "handouts_w01.tex": "c6ece317",
+    "handouts_w01.html": "259a5fc0"
+  },
+  "materials/handouts/handouts-frame_w01.qmd": {
+    "handouts-frame_w01.html": "dee87f87"
+  },
+  "materials/handouts/handouts-frame_w02.qmd": {
+    "handouts-frame_w02.html": "1785caba"
+  },
+  "materials/handouts/handouts-frame_w04.qmd": {
+    "handouts-frame_w04.html": "4b64a284"
+  },
+  "requirements/index.qmd": {
+    "index.html": "4de77f52"
+  },
+  "materials/handouts/handouts-frame_w03.qmd": {
+    "handouts-frame_w03.html": "f574b13b"
+  },
+  "materials/handouts/handouts-frame_w05.qmd": {
+    "handouts-frame_w05.html": "b65bd71a"
+  },
+  "materials/handouts/handouts-frame_w06.qmd": {
+    "handouts-frame_w06.html": "79210dca"
+  },
+  "materials/handouts/handouts-frame_w07.qmd": {
+    "handouts-frame_w07.html": "f1427fa9"
+  },
+  "materials/handouts/handouts-frame_w08.qmd": {
+    "handouts-frame_w08.html": "36b361af"
   }
 }

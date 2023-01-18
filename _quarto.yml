@@ -35,12 +35,16 @@ website:
     pinned: true
     background: $ncl-blue
     right:
-      - text: "Plan"
+      - text: "Module plan"
         href: plan8.qmd
+      - text: "Requirements"
+        href: requirements/index.qmd
       - text: "Materials"
         href: materials/index.qmd
       - text: "Data"
         href: data/index.qmd
+      - text: "Assessment"
+        href: assessment/index.qmd
       - text: "{{< iconify arcticons canvasstudent size=l >}} Canvas"
         href: https://canvas.ncl.ac.uk/login/
 

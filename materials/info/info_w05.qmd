@@ -1,8 +1,6 @@
 ---
-title: "Week 5"
-subtitle: "{{< var topic.w5 >}}"
+title: "Week 5 {{< fa minus >}} {{< var topic.w5 >}}"
+subtitle: "{{< var subtitle.w5 >}}"
+abstract: "{{< var topic-abstract.w5 >}}"
+abstract-title: "Description"
 ---
-
-An introduction to the idea and elementary practice of statistical simulation.
-
-

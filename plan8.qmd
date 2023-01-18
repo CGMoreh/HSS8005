@@ -13,7 +13,7 @@ page-layout: custom
 }
 
 .table {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 ```
           
@@ -42,9 +42,11 @@ contents <- tibble(
   Info = c(NA, paste0("./materials/info/info_w0", 1:8), NA),
   Notes = c(NA, paste0("./materials/notes/notes_w0", 1:8), NA),
   Lecture = c(NA, paste0("./materials/slides/slides_w0", 1:8), NA),
-  Labs = c(NA, paste0("./materials/worksheets/lab_w0", 1:8), NA),
-  Handouts = c(NA, paste0("./materials/handouts/sheet_w0", 1:8), NA),
+  Labs = c(NA, paste0("./materials/worksheets/worksheets_w0", 1:8), NA),
+  Handouts = c(NA, paste0("./materials/handouts/handouts_w0", 1:8), NA),
   )
+
+Handouts_frame = c(NA, paste0("./materials/handouts/handouts-frame_w0", 1:8), NA)
 
 # write_csv(contents, "files/plan8.csv") 
 
@@ -68,18 +70,18 @@ contents <- contents |>
                               "<font color=#F0E2DF> {{< fa solid laptop-code >}} </font>")),
          Handouts = ifelse(is.na(Handouts), "",
                        ifelse(file.exists(glue('{Handouts}.qmd')),
-                              paste0("[{{< fa solid sheet-plastic >}}]", glue('({Handouts}.qmd)')),
+                              paste0("[{{< fa solid sheet-plastic >}}]", glue('({Handouts_frame}.qmd)')),
                               "<font color=#F0E2DF> {{< fa solid sheet-plastic >}} </font>")))
 
 
 tbl <- contents |>
   kbl(escap = FALSE, align = "lcllccccc", table.attr = 'class="schedule-table"') |>
   kable_styling() |>
-  column_spec(1, width = "7%") |>  
+  column_spec(1, width = "9%") |>  
   column_spec(2, width = "5%") |>  
-  column_spec(3, width = "12%") |>  
-  column_spec(4, width = "45%") |>  
-  column_spec(c(5:9), width = "5%") 
+  column_spec(3, width = "16%") |>  
+  column_spec(4, width = "50%") |>  
+  column_spec(c(5:9), width = "2%") 
 
 ```
 

@@ -4,9 +4,3 @@ subtitle: "{{< var subtitle.w1 >}}"
 abstract: "{{< var topic-abstract.w1 >}}"
 abstract-title: "Description"
 ---
-
-
-
-The labs will be an introduction to the {{< iconify simple-icons tidyverse size="1x">}}`{tidyverse}` dialect of the {{< fa brands r-project size="1x">}} statistical programming language via the {{< iconify simple-icons rstudio size="1x">}} API.
-
-

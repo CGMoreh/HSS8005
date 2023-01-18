@@ -1,8 +1,6 @@
 ---
-title: "Week 6"
-subtitle: "{{< var topic.w6 >}}"
+title: "Week 6 {{< fa minus >}} {{< var topic.w6 >}}"
+subtitle: "{{< var subtitle.w6 >}}"
+abstract: "{{< var topic-abstract.w6 >}}"
+abstract-title: "Description"
 ---
-
-Introduction to *time-series*, maybe some *spatial correlation* and *multilevel* data amd models.
-
-

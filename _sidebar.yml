@@ -14,90 +14,90 @@ website:
           href: materials/info/info_w01.qmd
           contents:
             - text: "Notes"
-              href: materials/notes/notes_w01.qmd
+              file: materials/notes/notes_w01.qmd
             - text: "Presentation"
-              href: materials/slides/slides_w01.qmd
+              file: materials/slides/slides_w01.qmd
             - text: "Worksheet"
-              href: materials/worksheets/lab_w01.qmd
+              file: materials/worksheets/worksheets_w01.qmd
             - text: "Handout"
-              href: materials/handouts/handout_w01.qmd
+              file: materials/handouts/handouts-frame_w01.qmd
         - section: "Week 2"
           href: materials/info/info_w02.qmd
           contents:
             - text: "Notes"
-              href: materials/notes/week_
+              #file: materials/notes/notes_w02.qmd
             - text: "Presentation"
-              href: materials/slides/week_
+              #file: materials/slides/slides_w02.qmd
             - text: "Worksheet"
-              href: materials/worksheets/week_
+              #file: materials/worksheets/worksheets_w02.qmd
             - text: "Handout"
-              href: materials/handouts/week_
+              file: materials/handouts/handouts-frame_w02.qmd
         - section: "Week 3"
           href: materials/info/info_w03.qmd
           contents:
             - text: "Notes"
-              href: materials/notes/week_
+              #file: materials/notes/notes_w03.qmd
             - text: "Presentation"
-              href: materials/slides/week_
+              #file: materials/slides/slides_w03.qmd
             - text: "Worksheet"
-              href: materials/worksheets/week_
+              #file: materials/worksheets/worksheets_w03.qmd
             - text: "Handout"
-              href: materials/handouts/week_
+              file: materials/handouts/handouts-frame_w03.qmd
         - section: "Week 4"
           href: materials/info/info_w04.qmd
           contents:
             - text: "Notes"
-              href: materials/notes/week_
+              #file: materials/notes/notes_w04.qmd
             - text: "Presentation"
-              href: materials/slides/week_
+              #file: materials/slides/slides_w04.qmd
             - text: "Worksheet"
-              href: materials/worksheets/week_
+              #file: materials/worksheets/worksheets_w04.qmd
             - text: "Handout"
-              href: materials/handouts/week_
+              file: materials/handouts/handouts-frame_w04.qmd
         - section: "Week 5"
           href: materials/info/info_w05.qmd
           contents:
             - text: "Notes"
-              href: materials/notes/week_
+              #file: materials/notes/week_
             - text: "Presentation"
-              href: materials/slides/week_
+              #file: materials/slides/week_
             - text: "Worksheet"
-              href: materials/worksheets/week_
+              #file: materials/worksheets/week_
             - text: "Handout"
-              href: materials/handouts/week_
+              #file: materials/handouts/week_
         - section: "Week 6"
           href: materials/info/info_w06.qmd
           contents:
             - text: "Notes"
-              href: materials/notes/week_
+              #file: materials/notes/week_
             - text: "Presentation"
-              href: materials/slides/week_
+              #file: materials/slides/week_
             - text: "Worksheet"
-              href: materials/worksheets/week_
+              #file: materials/worksheets/week_
             - text: "Handout"
-              href: materials/handouts/week_
+              #file: materials/handouts/week_
         - section: "Week 7"
           href: materials/info/info_w07.qmd
           contents:
             - text: "Notes"
-              href: materials/notes/week_
+              #file: materials/notes/week_
             - text: "Presentation"
-              href: materials/slides/week_
+              #file: materials/slides/week_
             - text: "Worksheet"
-              href: materials/worksheets/week_
+              #file: materials/worksheets/week_
             - text: "Handout"
-              href: materials/handouts/week_
+              #file: materials/handouts/week_
         - section: "Week 8"
           href: materials/info/info_w08.qmd
           contents:
             - text: "Notes"
-              href: materials/notes/week_
+              #file: materials/notes/week_
             - text: "Presentation"
-              href: materials/slides/week_
+              #file: materials/slides/week_
             - text: "Worksheet"
-              href: materials/worksheets/week_
+              #file: materials/worksheets/week_
             - text: "Handout"
-              href: materials/handouts/week_
+              #file: materials/handouts/week_
     
     - title: "Data"
       contents:

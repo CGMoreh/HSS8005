@@ -1,8 +1,6 @@
 ---
-title: "Week 3"
-subtitle: "{{< var topic.w3 >}}"
+title: "Week 3 {{< fa minus >}} {{< var topic.w3 >}}"
+subtitle: "{{< var subtitle.w3 >}}"
+abstract: "{{< var topic-abstract.w3 >}}"
+abstract-title: "Description"
 ---
-
-Introduction/review of *linear regression* models with more than one predictor, with a focus on the concept of *causation* in a regression context and the use of  directed acyclic graphs (DAG) as heuristic devices.
-
-

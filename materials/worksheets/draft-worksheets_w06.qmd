@@ -1,0 +1,8 @@
+---
+title: "Week 6 Computer Lab Worksheet"
+author: "{{< var author >}}"
+abstract: "{{< var worksheet-abstract.w6 >}}"
+abstract-title: "Description"
+---
+
+## Session aims

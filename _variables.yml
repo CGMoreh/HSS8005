@@ -61,15 +61,16 @@ subtitle:
 
 topic-abstract:
   w1: >
-    This lecture is a broad introduction to the aims of statistical modeling and the history of probability theory. 
+    **This lecture** is a broad introduction to the aims of statistical modeling and the history of probability theory. 
     We will look back on the development of some core statistical concepts and learn about the ideas and preoccupations that influenced them 
     over three centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn about later. 
     The outcome will be a much clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.  
     
-    The IT labs, on the other hand, will provide a very hands-on practical introduction to the `R` statistical programming language, 
-    its currently most popular dialect, the `{tidyverse}`, and its usage in the *RStudio* application programming interface. 
-    The session will also introduce some other tools of literate programming, project management and plain-text social science (such as *markdown* and 
-    *Quarto*), all essential skills in contemporary quantitative research in the social sciences and humanities.
+    **The IT lab**, on the other hand, will provide a very hands-on practical introduction to the {{< fa brands r-project size="1x">}} 
+    statistical programming language and its currently most popular dialect -- the {{< iconify simple-icons tidyverse size="1x">}}`{tidyverse}` -- via 
+    the <!-- {{< iconify simple-icons rstudio size="1x">}} !! Changed to HTML code to add colour --> <iconify-icon inline icon="file-icons:rstudio" style="color: #7dbefc;"></iconify-icon>**Studio** application programming interface. 
+    The session will also introduce some other tools of literate programming and [plain-text social science](https://plain-text.co/) (such as {{< iconify ri markdown-fill size="large">}} / {{< iconify file-icons rmarkdown size="1x" >}} / 
+    **Quarto**&reg; markup languages), all essential skills in contemporary computational social science and humanities research.
   w2: "A review of linear regression models"
   w3: "Dear Philippa, how should I deal with my `X`s?"
   w4: "The `Y` question"

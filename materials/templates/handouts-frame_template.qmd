@@ -1,0 +1,8 @@
+---
+title: "Week REPLACE handout"
+#subtitle: "{{< var subtitle.wREPLACE >}}"
+---
+
+```{=html}
+<iframe width="500" height="780" src="/materials/handouts/handouts_w0REPLACE.pdf" ></iframe>
+```

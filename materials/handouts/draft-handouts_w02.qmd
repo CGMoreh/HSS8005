@@ -1,0 +1,9 @@
+---
+title: "Week 2 handout sheet"
+author: "{{< var author >}}"
+format:   
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+---
