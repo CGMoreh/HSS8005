@@ -1,0 +1,22 @@
+---
+title: "Resources"
+---
+
+::: {.panel-tabset}
+
+## Prerequisites
+
+
+
+## Readings
+
+
+
+## Software
+
+
+
+
+## Additional training and resources
+
+:::

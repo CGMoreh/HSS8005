@@ -5,6 +5,7 @@ toc: false
 sidebar: false
 page-layout: full
 bibliography: hss8005.bib
+editor: visual
 ---
 
 # Main
@@ -38,17 +39,23 @@ bibliography: hss8005.bib
 
 -   History of games of chance and their relationship to divinity: https://www.britannica.com/topic/gambling/History; https://www.pokcas.com/the-origins-of-games-of-chance-how-gambling-has-evolved-over-5000-years/
 
+-   Image of Fisher's crop fields: <https://www.adelaide.edu.au/library/special/exhibitions/significant-life-fisher/rothamsted/Latin-squares_Beddgelert.png>
+
+-   Image of Messi's face in Argentine corn field: <https://s2.reutersmedia.net/resources/r/?m=02&d=20230118&t=2&i=1620494870&w=&fh=545&fw=810&ll=&pl=&sq=&r=LYNXMPEJ0H0MG>
+
+-   
+
 ## General and Generalised Linear models
 
 -   I found this page on [The General Linear Model (GLM)](https://www.brainvoyager.com/bv/doc/UsersGuide/StatisticalAnalysis/TheGeneralLinearModel.html) quite easy to read.
 
--   And this one on [General**ised** Linear Models](https://www.mygreatlearning.com/blog/generalized-linear-models/#:~:text=Generalized%20Linear%20Model%20(GLiM%2C%20or,other%20than%20a%20normal%20distribution.):
+-   And this one on \[General**ised** Linear Models\](https://www.mygreatlearning.com/blog/generalized-linear-models/#:\~:text=Generalized%20Linear%20Model%20(GLiM%2C%20or,other%20than%20a%20normal%20distribution.):
 
     > **What is a Generalized Linear Model?**
     >
     > Generalized Linear Model (GLiM, or GLM) is an advanced statistical modelling technique formulated by John Nelder and Robert Wedderburn in 1972. It is an umbrella term that encompasses many other models, which allows the response variable y to have an error distribution other than a normal distribution. The models include Linear Regression, Logistic Regression, and Poisson Regression.
     >
-    > In a Linear Regression Model, the response (aka dependent/target) variable \'y\' is expressed as a linear function/linear combination of all the predictors \'X\' (aka independent/regression/explanatory/observed variables). The underlying relationship between the response and the predictors is linear (i.e. we can simply visualize the relationship in the form of a straight line). Also, the error distribution of the response variable should be normally distributed. Therefore we are building a linear model.
+    > In a Linear Regression Model, the response (aka dependent/target) variable 'y' is expressed as a linear function/linear combination of all the predictors 'X' (aka independent/regression/explanatory/observed variables). The underlying relationship between the response and the predictors is linear (i.e. we can simply visualize the relationship in the form of a straight line). Also, the error distribution of the response variable should be normally distributed. Therefore we are building a linear model.
     >
     > GLM models allow us to build a linear relationship between the response and predictors, even though their underlying relationship is not linear. This is made possible by using a link function, which links the response variable to a linear model. Unlike Linear Regression models, the error distribution of the response variable need not be normally distributed. The errors in the response variable are assumed to follow an exponential family of distribution (i.e. normal, binomial, Poisson, or gamma distributions). Since we are trying to generalize a linear regression model that can also be applied in these cases, the name Generalized Linear Models.
 
@@ -199,3 +206,5 @@ bibliography: hss8005.bib
     -   Peterson, Anna D., and Laura Ziegler. 2021. 'Building a Multiple Linear Regression Model With LEGO Brick Data'. *Journal of Statistics and Data Science Education* 29(3):297--303. doi: [10.1080/26939169.2021.1946450](https://doi.org/10.1080/26939169.2021.1946450).
 
     -   Data and code: C:\\Users\\moreh\\OneDrive - Newcastle University\\DATA\\Peterson, Ziegler (2021) LEGO data
+
+"In Edwin \[Abbott's 1884 novella\](https://www.gutenberg.org/ebooks/97), the inhabitants of Flatland \*Flatland: a romance of many dimensions\*"

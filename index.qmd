@@ -4,7 +4,7 @@ subtitle: |
    | HSS8005 • Advanced stream • 2023
    | Newcastle University (UK)
 details: |
-  A second course in applied statistics and probability for the understanding of society and culture.
+   | A second course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary audience through real-life research examples from various fields in the social sciences and humanities. The course emphasizes the [scientific application]() of statistical methods, developing [reproducible workflows](), and [computation]().
 sidebar: false
 toc: false
 page-layout: full
@@ -27,10 +27,6 @@ course-logo: /files/img/ncl_coa_hss8005.png
 - {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
 - {{< fa calendar-check >}} &nbsp; tutorial booker
 
-:::
-
-::: {.g-col-4 .g-col-sm-4}
-
 ### Teaching Assistants
 - {{< fa user >}} &nbsp; tbc
 - {{< fa user >}} &nbsp; tbc
@@ -39,7 +35,7 @@ course-logo: /files/img/ncl_coa_hss8005.png
 
 ::: {.g-col-4 .g-col-sm-4}
 
-### Session details
+### Session dates
 
 - {{< fa calendar-alt >}} &nbsp; {{< var session.days >}}
 <!-- - &thinsp;{{< fa location-dot >}} &nbsp; {{< var session.location >}} -->
@@ -48,7 +44,30 @@ course-logo: /files/img/ncl_coa_hss8005.png
 <!-- - {{< fa clock >}} &nbsp; {{< var session.lecture >}} -->
 <!-- {{< iconify arcticons canvasstudent >}} &nbsp; [Module Canvas page]({{< var course.canvas >}}) -->
 
-:::
+### Assessment
+
+- {{< fa calendar >}} &nbsp;
+- {{< fa file >}} &nbsp; 
+- {{< fa solid share >}} Submit to Turnitin via [Canvas]()
 
 :::
 
+::: {.g-col-4 .g-col-sm-4}
+
+- {{< iconify mdi mastodon size="large">}} **Chris's *mastodon* feed** where he posts stuff of interest to *#HSS8005*
+
+<iframe title="Powered by Fedifeed" allowfullscreen sandbox="allow-top-navigation allow-scripts" width="400" height="300" src="https://fedifeed.com/api/v1/feed?user=cgmoreh&instance=https%3A%2F%2Fsciences.social&instance_type=&theme=auto-light&size=100&header=false&replies=true&boosts=true"></iframe>
+
+:::
+
+:::
+
+::: {.grid }
+
+::: {.g-col-5 .g-col-sm-5}
+
+{{< include resources/_prerequisites.qmd >}}
+
+:::
+
+:::

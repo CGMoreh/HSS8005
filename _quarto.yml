@@ -38,8 +38,8 @@ website:
     right:
       - text: "Module plan"
         href: plan8.qmd
-      - text: "Requirements"
-        href: requirements/index.qmd
+      - text: "Resources"
+        href: resources/index.qmd
       - text: "Materials"
         href: materials/index.qmd
       - text: "Data"
