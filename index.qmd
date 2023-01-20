@@ -1,7 +1,7 @@
 ---
 title: "Quantitative analysis {{< iconify bi plus-square-dotted >}}"
 subtitle: |
-   | HSS8005 • Advanced stream • 2023
+   | HSS8005 • Intermediate stream • 2023
    | Newcastle University (UK)
 details: |
    | A second course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary audience through real-life research examples from various fields in the social sciences and humanities. The course emphasizes the [scientific application]() of statistical methods, developing [reproducible workflows](), and [computation]().
