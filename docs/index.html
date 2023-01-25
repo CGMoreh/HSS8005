@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 Newcastle University (UK)</p><p></p>
         </div>
         <div class="course-meta">
-            <p></p><p>A second course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary audience through real-life research examples from various fields in the social sciences and humanities. The course emphasizes the <a href="">scientific application</a> of statistical methods, developing <a href="">reproducible workflows</a>, and <a href="">computation</a>.</p><p></p>
+            <p></p><p>A second course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary audience through real-life research examples from various fields in the social sciences and humanities. The course emphasizes the <a href="">scientific application</a> of statistical methods, developing a <a href="">reproducible research workflow</a>, and <a href="">computation</a>.</p><p></p>
         </div>
     </div>
 </div>
@@ -163,17 +163,16 @@ Newcastle University (UK)</p><p></p>
 <ul>
 <li><i class="fa-solid fa-calendar" aria-label="calendar"></i> &nbsp;</li>
 <li><i class="fa-solid fa-file" aria-label="file"></i> &nbsp;</li>
-<li><i class="fa-solid fa-share" aria-label="share"></i> Submit to Turnitin via <a href="">Canvas</a></li>
+<li><i class="fa-solid fa-share" aria-label="share"></i> &nbsp; Submit to Turnitin via <a href="add Canvas link!">Canvas</a></li>
 </ul>
 </section>
 </div>
-<div class="g-col-4 g-col-sm-4">
-<ul>
-<li><iconify-icon inline="" icon="mdi:mastodon" style="font-size: 1.2em;"></iconify-icon> <strong>Chris’s <em>mastodon</em> feed</strong> where he posts stuff of interest to <em>#HSS8005</em></li>
-</ul>
-<iframe title="Powered by Fedifeed" allowfullscreen="" sandbox="allow-top-navigation allow-scripts" width="400" height="300" src="https://fedifeed.com/api/v1/feed?user=cgmoreh&amp;instance=https%3A%2F%2Fsciences.social&amp;instance_type=&amp;theme=auto-light&amp;size=100&amp;header=false&amp;replies=true&amp;boosts=true">
+<section id="iconify-mdi-mastodon-sizemedium-large-chriss-mastodon-feed" class="level3 g-col-4 g-col-sm-4">
+<h3 class="anchored" data-anchor-id="iconify-mdi-mastodon-sizemedium-large-chriss-mastodon-feed"><iconify-icon inline="" icon="mdi:mastodon" style="font-size: medium-large;"></iconify-icon> Chris’s <em>mastodon</em> feed</h3>
+<p>where he posts stuff of interest to <em>#HSS8005</em></p>
+<iframe title="Powered by Fedifeed" allowfullscreen="" sandbox="allow-top-navigation allow-scripts" width="360" height="300" src="https://fedifeed.com/api/v1/feed?user=cgmoreh&amp;instance=https%3A%2F%2Fsciences.social&amp;instance_type=&amp;theme=auto-light&amp;size=100&amp;header=false&amp;replies=true&amp;boosts=true">
 </iframe>
-</div>
+</section>
 </div>
 <div class="grid">
 <section id="prerequisites" class="level3 g-col-5 g-col-sm-5">
@@ -319,6 +318,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

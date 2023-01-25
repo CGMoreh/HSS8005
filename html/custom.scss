@@ -80,6 +80,13 @@ h2 {
   border-bottom: none;
 }
 
+
+h4 {
+  color: $ncl-blue;
+}
+
+
+
 ul,
 ol {
   font-family: $font-family-serif;
@@ -352,4 +359,39 @@ pre.text {
 
 #prerequisites p {
   font-size: medium;
+  text-align: justify; 
+  text-justify: inter-word;
+}
+
+// tabset font-style
+
+.nav, .breadcrumb, .pagination {
+    font-size: 2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    background: none;
+    border: none;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: $ncl-blue;
+    background-color: #fff;
+    border-bottom: none;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.tab-content {
+    margin-top: 0px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-left: 0;
+    padding: 1em;
+    margin-bottom: 1em;
 }

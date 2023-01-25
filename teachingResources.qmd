@@ -37,6 +37,10 @@ editor: visual
 
 -   [@gelman2021]
 
+-   Laplace's Demon: <https://www.stsci.edu/~lbradley/seminar/laplace.html>
+
+-   
+
 -   History of games of chance and their relationship to divinity: https://www.britannica.com/topic/gambling/History; https://www.pokcas.com/the-origins-of-games-of-chance-how-gambling-has-evolved-over-5000-years/
 
 -   Image of Fisher's crop fields: <https://www.adelaide.edu.au/library/special/exhibitions/significant-life-fisher/rothamsted/Latin-squares_Beddgelert.png>
@@ -91,8 +95,6 @@ editor: visual
 
 -   https://bookdown.org/jdholster1/idsr/network-analysis.html
 
--   
-
 ## Hierarchies
 
 -   Sadler, Michael E., and Christopher J. Miller. 2010. 'Performance Anxiety: A Longitudinal Study of the Roles of Personality and Experience in Musicians'. *Social Psychological and Personality Science* 1(3):280--87. doi: [10.1177/1948550610370492](https://doi.org/10.1177/1948550610370492).
@@ -126,6 +128,12 @@ editor: visual
 -   
 
 ## Text as data
+
+-   Mere words - Dorain Gray: https://www.gutenberg.org/files/174/174-h/174-h.htm#chap02
+
+-   Mere words - Troilus: http://shakespeare.mit.edu/troilus_cressida/troilus_cressida.5.3.html
+
+-   
 
 -   [Text Mining with R: A Tidy Approach](https://www.tidytextmining.com/index.html "A Tidy Approach") (Dissferent Austen data used: <https://www.tidytextmining.com/tfidf.html>)
 
@@ -219,7 +227,7 @@ w1: \>
 
 \*\*This lecture\*\* is a broad introduction to the aims of statistical modeling and the history of probability theory. We will look back on the development of some core statistical concepts and learn about the ideas and preoccupations that influenced them over three centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn about later. The outcome will be a much clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.
 
-\*\*The IT lab\*\*, on the other hand, will provide a very hands-on practical introduction to the {{< fa brands r-project size="1x">}} statistical programming language and its currently most popular dialect -- the {{< iconify simple-icons tidyverse size="1x">}}\`{tidyverse}\` -- via the <!-- {{< iconify simple-icons rstudio size="1x">}} !! Changed to HTML code to add colour --> \<iconify-icon inline icon="file-icons:rstudio" style="color: #7dbefc;"\>\</iconify-icon\>\*\*Studio\*\* application programming interface. The session will also introduce some other tools of literate programming and \[plain-text social science\](https://plain-text.co/) (such as {{< iconify ri markdown-fill size="large">}} / {{< iconify file-icons rmarkdown size="1x" >}} / \*\*Quarto\*\*&reg; markup languages), all essential skills in contemporary computational social science and humanities research.
+\*\*The IT lab\*\*, on the other hand, will provide a very hands-on practical introduction to the {{< fa brands r-project size="1x">}} statistical programming language and its currently most popular dialect -- the {{< iconify simple-icons tidyverse size="1x">}}\`{tidyverse}\` -- via the <!-- {{< iconify simple-icons rstudio size="1x">}} !! Changed to HTML code to add colour --> \<iconify-icon inline icon="file-icons:rstudio" style="color: #7dbefc;"\>\</iconify-icon\>\*\*Studio\*\* application programming interface. The session will also introduce some other tools of literate programming and \[plain-text social science\](https://plain-text.co/) (such as {{< iconify ri markdown-fill size="large">}} / {{< iconify file-icons rmarkdown size="1x" >}} / \*\*Quarto\*\*® markup languages), all essential skills in contemporary computational social science and humanities research.
 
 w2: \>
 
@@ -227,7 +235,7 @@ In Edwin \[Abbott's 1884 novella\](https://www.gutenberg.org/ebooks/97), the inh
 
 w3: \>
 
-Much of what we do in quantitative data analysis is about examining \*relationships\*. We are often interested in proposing and testing a model of a relationship between two or more variables. Sometimes our variables cry out to us begging for help, and we turn into agony aunts and uncles to our data. Other times we must psychoanalyze our data to uncover hidden associations and interactions. This is not an easy task. Do it carelessly, and you may unwittingly cheat yourself and the readers of your research. This week we'll build some intuition for detecting complex and uneasy relationships within the design matrix `X`  - that promiscuous commune on the right-hand-side of our regression equations. We'll expand on the additive models that we looked at in the previous week by considering interactions among our predictor variables, we'll explore the possibilities and challenges of asking causal questions of observational data, and we'll think about ways to avoid what evolutionary anthropologist Richard McElreath calls \['causal salad'\](https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/). We may get an uncomfortable feeling that we may have cheated with our `X`s in the past, but we'll look towards the future. By the way, [*Dear Prudence*](https://slate.com/human-interest/dear-prudence)is Slate magazine's advice column; I like the name because being prudent really is essential in data analysis and interpretation. If you're done with the readings for this week, you may indulge in some Prudie advice on some more serious matters.
+Much of what we do in quantitative data analysis is about examining \*relationships\*. We are often interested in proposing and testing a model of a relationship between two or more variables. Sometimes our variables cry out to us begging for help, and we turn into agony aunts and uncles to our data. Other times we must psychoanalyze our data to uncover hidden associations and interactions. This is not an easy task. Do it carelessly, and you may unwittingly cheat yourself and the readers of your research. This week we'll build some intuition for detecting complex and uneasy relationships within the design matrix `X` - that promiscuous commune on the right-hand-side of our regression equations. We'll expand on the additive models that we looked at in the previous week by considering interactions among our predictor variables, we'll explore the possibilities and challenges of asking causal questions of observational data, and we'll think about ways to avoid what evolutionary anthropologist Richard McElreath calls \['causal salad'\](https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/). We may get an uncomfortable feeling that we may have cheated with our `X`s in the past, but we'll look towards the future. By the way, [*Dear Prudence*](https://slate.com/human-interest/dear-prudence)is Slate magazine's advice column; I like the name because being prudent really is essential in data analysis and interpretation. If you're done with the readings for this week, you may indulge in some Prudie advice on some more serious matters.
 
 w3: "Dear Prudence, Help! I may be cheating with my \`X\`"
 

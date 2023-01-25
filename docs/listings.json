@@ -65,5 +65,18 @@
       "/materials/worksheets/draft-worksheets_w07.html",
       "/materials/worksheets/draft-worksheets_w08.html"
     ]
+  },
+  {
+    "listing": "/plan8.html",
+    "items": [
+      "/materials/info/info_w01.html",
+      "/materials/info/info_w02.html",
+      "/materials/info/info_w03.html",
+      "/materials/info/info_w04.html",
+      "/materials/info/info_w05.html",
+      "/materials/info/info_w06.html",
+      "/materials/info/info_w07.html",
+      "/materials/info/info_w08.html"
+    ]
   }
 ]

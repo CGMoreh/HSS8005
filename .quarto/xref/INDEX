@@ -328,5 +328,8 @@
   },
   "resources/prerequisites.qmd": {
     "prerequisites.html": "fb2baa36"
+  },
+  "references.qmd": {
+    "references.html": "12ad71e9"
   }
 }

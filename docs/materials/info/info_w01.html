@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -54,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../../html/nobiblio.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -335,8 +355,8 @@ ul.task-list li input[type="checkbox"] {
 <div>
   <div class="abstract">
     <div class="abstract-title">Description</div>
-    <strong>This lecture</strong> is a broad introduction to the aims of statistical modeling and the history of probability theory. We will look back on the development of some core statistical concepts and learn about the ideas and preoccupations that influenced them over three centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn about later. The outcome will be a much clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.<br>
-    <strong>The IT lab</strong>, on the other hand, will provide a very hands-on practical introduction to the <i class="fa-brands fa-r-project fa-1x" aria-label="r-project"></i> statistical programming language and its currently most popular dialect – the <iconify-icon inline="" icon="simple-icons:tidyverse" style="font-size: 1em;"></iconify-icon><code>{tidyverse}</code> – via the <!-- {{< iconify simple-icons rstudio size="1x">}} !! Changed to HTML code to add colour --> <iconify-icon inline="" icon="file-icons:rstudio" style="color: #7dbefc;"></iconify-icon><strong>Studio</strong> application programming interface. The session will also introduce some other tools of literate programming and <a href="https://plain-text.co/">plain-text social science</a> (such as <iconify-icon inline="" icon="ri:markdown-fill" style="font-size: 1.2em;"></iconify-icon> / <iconify-icon inline="" icon="file-icons:rmarkdown" style="font-size: 1em;"></iconify-icon> / <strong>Quarto</strong>® markup languages), all essential skills in contemporary computational social science and humanities research.
+    <strong>This lecture</strong> In the first contribution to a series of articles on the history of probability and statistics in the journal <em>Biometrika</em>, F. N. David <span class="citation" data-cites="david1955">(<a href="#ref-david1955" role="doc-biblioref">1955</a>)</span> paraphrased a contemporary archaeologist who quipped that “a symptom of decadence in a civilization is when men become interested in their own history”, giving the interest in his own discipline as proof of the validity of his statement. David, however, thought that this does not stand true also for scientists’ and statisticians’ own emerging interest in their disciplines. He was right, in that the critical examination of the intellectual development of statistics and probability theory that followed has improved the discipline by excavating ideas that had been buried by mainstream statistics, but he was also mistaken, in that this activity threw light on the decadence of mainstream statistical practice. In this lecture we will look back on the development of some basic statistical concepts and learn about the ideas and preoccupations that influenced them over the centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn later. Brains-on activities will include <a href="https://www.mq.edu.au/research/research-centres-groups-and-facilities/resilient-societies/centres/australian-centre-for-ancient-numismatic-studies/exhibitions/the-coinage-of-ephesus/coins/coin_32?width=600&amp;height=450">casting astragali</a>, fighting Laplace’s Demon, tasting tea, and comparing peas in a pod. By the end, we will gain a clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.<br>
+    <strong>The IT lab</strong> will provide a very hands-on practical introduction to the <i class="fa-brands fa-r-project fa-1x" aria-label="r-project"></i> statistical programming language and its currently most popular dialect – the <iconify-icon inline="" icon="simple-icons:tidyverse" style="font-size: 1em;"></iconify-icon><code>{tidyverse}</code> – via the <!-- {{< iconify simple-icons rstudio size="1x">}} !! Changed to HTML code to add colour --> <iconify-icon inline="" icon="file-icons:rstudio" style="color: #7dbefc;"></iconify-icon><strong>Studio</strong> application programming interface. The session will also introduce some other tools of literate programming and <a href="https://plain-text.co/">plain-text social science</a> (such as <iconify-icon inline="" icon="ri:markdown-fill" style="font-size: 1.2em;"></iconify-icon> / <iconify-icon inline="" icon="file-icons:rmarkdown" style="font-size: 1em;"></iconify-icon> / <strong>Quarto</strong>® markup languages), all essential skills in contemporary computational social science and humanities research.
   </div>
 </div>
 
@@ -345,7 +365,30 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-david1955" class="csl-entry" role="doc-biblioentry">
+David, F. N. 1955. <span>“Studies in the History of Probability and Statistics i. Dicing and Gaming (a Note on the History of Probability).”</span> <em>Biometrika</em> 42 (1/2): 1–15. <a href="https://doi.org/10.2307/2333419">https://doi.org/10.2307/2333419</a>.
+</div>
+<div id="ref-el-shagi2015" class="csl-entry" role="doc-biblioentry">
+El-Shagi, Makram, and Alexander Jung. 2015. <span>“Have Minutes Helped Markets to Predict the MPC’s Monetary Policy Decisions?”</span> <em>European Journal of Political Economy</em> 39 (September): 222–34. <a href="https://doi.org/10.1016/j.ejpoleco.2015.05.004">https://doi.org/10.1016/j.ejpoleco.2015.05.004</a>.
+</div>
+<div id="ref-gelman2020" class="csl-entry" role="doc-biblioentry">
+Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. <em>Regression and other stories</em>. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1017/9781139161879">https://doi.org/10.1017/9781139161879</a>.
+</div>
+<div id="ref-lord1958" class="csl-entry" role="doc-biblioentry">
+Lord, R. D. 1958. <span>“Studies in the History of Probability and Statistics.: VIII. De Morgan and the Statistical Study of Literary Style.”</span> <em>Biometrika</em> 45 (1/2): 282–82. <a href="https://doi.org/10.2307/2333072">https://doi.org/10.2307/2333072</a>.
+</div>
+<div id="ref-McElreath2020StatisticalRethinkingBayesianCourseExamples" class="csl-entry" role="doc-biblioentry">
+McElreath, Richard. 2020. <em>Statistical Rethinking: A <span>Bayesian</span> Course with Examples in <span>R</span> and <span>Stan</span></em>. Second. <span>CRC</span> Texts in Statistical Science. <span>Boca Raton</span>: <span>Taylor and Francis, CRC Press</span>.
+</div>
+<div id="ref-mulvin2021" class="csl-entry" role="doc-biblioentry">
+Mulvin, Dylan. 2021. <em>Proxies: The Cultural Work of Standing in</em>. Infrastructures Series. Cambridge, Massachusetts: The MIT Press.
+</div>
+<div id="ref-senn2003" class="csl-entry" role="doc-biblioentry">
+Senn, Stephen. 2003. <span>“A Conversation with John Nelder.”</span> <em>Statistical Science</em> 18 (1): 118–31. <a href="https://doi.org/10.1214/ss/1056397489">https://doi.org/10.1214/ss/1056397489</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -477,6 +520,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 <nav class="page-navigation">

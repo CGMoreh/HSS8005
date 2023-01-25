@@ -4,7 +4,11 @@ slug: plan
 summary: "Module topic plan with session timetable and link to materials"
 toc: false
 sidebar: false
-page-layout: custom
+page-layout: full
+bibliography: hss8005.bib
+csl: american-sociological-association.csl
+#suppress-bibliography: true
+css: html/nobiblio.css
 ---
 
 ```{css echo=FALSE}
@@ -15,9 +19,10 @@ page-layout: custom
 .table {
   font-size: 1rem;
 }
+
 ```
-          
-```{r packages-data, include=FALSE} 
+
+```{r packages-data, include=FALSE}
 
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
@@ -28,7 +33,6 @@ pacman::p_load(
     glue
     )
 ```
-
 
 ```{r build-table, echo=FALSE, results="asis"}
 
@@ -85,7 +89,7 @@ tbl <- contents |>
 
 ```
 
-::: {.content-block}
+#### Topic plan and materials
 
 ```{r print-table, echo=FALSE, results="asis"}
 
@@ -93,9 +97,42 @@ cat(tbl)
 
 ```
 
+```{=html}
 <!--
 **Please note** that this plan and the content are still work in progress. The **info sheets** under {{< fa solid circle-info >}} are available in a very rudimentary form, just to give some more boring details about how these planned topics map on to statistical methods that will be covered. The topics marked with an **\*** have a very borderline-significant *p-value* when tested on the null-hypothesis that they have 0 probability of actually being covered *in practice*. It will depend somewhat on our interests and the pace of our progress through the previous topics.
--->
+
 
 Click on the icons to navigate to a specific section of the materials. <font color=#F0E2DF> Light-coloured</font> icons do not (yet) contain material.
+-->
+```
+<br>
+
+#### Topic details
+
+```{r echo=FALSE, results="asis"}
+
+Info = c(paste0("./materials/info/info_w0", 1:8))
+
+details <- tibble(
+  # Week = c(paste0("Week", 1:8)),
+  Topic = c(paste0("[{{< ", paste0("var topic.w", 1:8), " >}}]", glue('({Info}.qmd)'))),
+  Detail = c(paste("{{< ", paste0("var subtitle.w", 1:8), " >}}")),
+  Description = c(paste("{{< ", paste0("var topic-abstract.w", 1:8), " >}}")))
+
+tbl2 <- details |>
+  kbl(escap = FALSE) |>
+  kable_styling() |>
+ # column_spec(1, width = "7%") |>  
+  column_spec(1, width = "20%", bold=F) |>  
+  column_spec(2, width = "20%", bold=T) |>  
+  column_spec(3, width = "60%", extra_css = "font-size: 16px; text-align: justify; text-justify: inter-word")
+
+cat(tbl2)
+
+```
+
+
+
+::: {#refs}
 :::
+
