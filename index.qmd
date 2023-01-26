@@ -68,6 +68,12 @@ where he posts stuff of interest to *#HSS8005*
 
 ::: {.g-col-5 .g-col-sm-5}
 
+{{< include resources/_overview.qmd >}}
+
+:::
+
+::: {.g-col-5 .g-col-sm-5}
+
 {{< include resources/_prerequisites.qmd >}}
 
 :::

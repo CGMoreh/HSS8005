@@ -3,19 +3,9 @@ title: ""
 page-layout: full
 ---
 
-```{r packages-data, include=FALSE}
-
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load(
-    tidyverse,
-    knitr,
-    kableExtra,
-    lubridate,
-    glue
-    )
-```
 
 ::: panel-tabset
+
 ## Readings
 
 {{< include _readings.qmd >}}
@@ -31,4 +21,5 @@ pacman::p_load(
 ## Other resources
 
 Any further study resources will be listed here.
+
 :::

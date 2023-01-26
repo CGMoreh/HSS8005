@@ -179,56 +179,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Readings</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Software</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Training</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Other resources</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>We will use a number of open-source software for data analysis and scientific writing. You need to install these on your personal computers to be able to work away from campus:</p>
+<section id="compulsory-readings" class="level4">
+<h4 class="anchored" data-anchor-id="compulsory-readings">Compulsory readings</h4>
+</section>
+<section id="textbooks" class="level3">
+<h3 class="anchored" data-anchor-id="textbooks">Textbooks</h3>
+<p>The course does not strictly follow the content of a textbook, but the expectation is that students will read as much as possible of the assigned chapters from the following two books, both freely available to download or read online:</p>
 <table class="table">
 <tbody>
 <tr class="odd">
-<td><a href="https://www.r-project.org/about.html"><img src="..\files/img/R_logo.png" width="90" height="69"></a></td>
-<td><strong>R</strong><br>
-(programming language)</td>
-<td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
-<td><strong>R</strong> needs to be installed even if we will only use it via the <strong>RStudio</strong> interface.</td>
-<td><a href="https://cloud.r-project.org/" style="color:MediumSeaGreen">Install the latest version from here</a></td>
+<td><img src="..\files/img/ROS.png" class="img-fluid"></td>
+<td>Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. <em>Regression and other stories</em>. Cambridge: Cambridge University Press.<br>
+<br>
+<strong>ROS</strong></td>
+<td>Free to download PDF version from the book’s website: <a href="https://avehtari.github.io/ROS-Examples/" class="uri">https://avehtari.github.io/ROS-Examples/</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://posit.co/download/rstudio-desktop/"><img src="..\files/img/RStudio_logo.png" class="img-fluid" width="100"></a></td>
-<td><strong>RStudio</strong><br>
-(integrated development environment)</td>
-<td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
-<td>You will need the free desktop version appropriate for your operating system. <strong>RStudio</strong> combines the R Console - the direct interface to <strong>R</strong> - with a number of other panels.</td>
-<td><a href="https://posit.co/download/rstudio-desktop/" style="color:MediumSeaGreen">Install the latest version from here</a></td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.tidyverse.org/"><img src="..\files/img/tidyverse_logo.png" class="img-fluid" width="80"></a></td>
-<td><strong>Tidyverse</strong><br>
-(collection of R packages)</td>
-<td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
-<td>The <strong>tidyverse</strong> is a collection of packages that make the <strong>R</strong> language easier to use by introducing a more consistent grammar. It provides functions that are particularly useful for data manipulation and visualisation. It is the most common ‘dialect’ used among social scientists.</td>
-<td><p>Install from within RStudio using the command</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>in the <u>Console</u></p></td>
-</tr>
-<tr class="even">
-<td><a href="https://quarto.org/"><img src="..\files/img/quartologo.png" class="img-fluid" width="80"></a></td>
-<td><strong>Quarto</strong><br>
-(scientific publishing system)</td>
-<td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
-<td>We will be using Quarto markdown documents (<code>.qmd</code>) throughout the course to document our data analysis. <code>.qmd</code> files extend the plain-text Markdown mark-up language (<code>.md</code>) to allow for data analysis code to be executed and results presented alongside the main text. This is an essential requirement for analytical transparency, reliability and reproducibility.The assignment will also be completed in <code>.qmd</code>.</td>
-<td><p>Included by default in the latest RStudio release; no need to install separately.<br>
-You can check your installation by running the command</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>quarto check</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>in the <u>Terminal</u> in Rstudio</p></td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.zotero.org/"><img src="..\files/img/zotero_logo.png" class="img-fluid" width="90"></a></td>
-<td><strong>Zotero</strong><br>
-(reference manager)</td>
-<td><p style="color:Orange; font-weight:bold; text-align: center;">Recommended</p></td>
-<td>If you are not yet using a reference manager, I recommend giving Zotero a try. It will make your work much more efficient and it integrates (relatively well) with RMarkdown and Quarto using the the <a href="https://retorque.re/zotero-better-bibtex/installation/">Better BibTeX</a> add-on.</td>
-<td><a href="https://www.zotero.org/download/" style="color: Orange">Install the latest version and add-ons from here</a></td>
+<td><img src="..\files/img/TSD.png" class="img-fluid" width="180"></td>
+<td>Alexander, Rohan. 2023. <em>Telling Stories with Data</em>. Chapman and Hall/CRC<br>
+<br>
+<strong>TSD</strong></td>
+<td>Free online book: <a href="https://tellingstorieswithdata.com" class="uri">https://tellingstorieswithdata.com</a></td>
 </tr>
 </tbody>
 </table>
+<p>These books provide relatively introductory material to statistical modelling, but from a fresh perspective. Relatively large portions of text will be assigned for reading in each week, referring to them by their acronyms. <u>Don’t worry if you cannot read all the textbook content assigned in any given week!</u> Those for whom the method covered by the assigned readings is new, will be able to refer back to them throughout the semester and beyond, reading thoroughly and completing the applied exercises. Those already familiar to some extent with the methods, should nonetheless read the text as a narrative and will discover hidden gems that will spectacularly improve their understanding and ability to interpret their statistical results.</p>
+</section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>We will use a number of open-source software for data analysis and scientific writing. You need to install these on your personal computers to be able to work away from campus:</p>
@@ -256,9 +232,8 @@ You can check your installation by running the command</p>
 (collection of R packages)</td>
 <td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
 <td>The <strong>tidyverse</strong> is a collection of packages that make the <strong>R</strong> language easier to use by introducing a more consistent grammar. It provides functions that are particularly useful for data manipulation and visualisation. It is the most common ‘dialect’ used among social scientists.</td>
-<td><p>Install from within RStudio using the command</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>in the <u>Console</u></p></td>
+<td><p>Install from within RStudio by executing in the <u>Console</u>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="even">
 <td><a href="https://quarto.org/"><img src="..\files/img/quartologo.png" class="img-fluid" width="80"></a></td>
@@ -267,9 +242,8 @@ You can check your installation by running the command</p>
 <td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
 <td>We will be using Quarto markdown documents (<code>.qmd</code>) throughout the course to document our data analysis. <code>.qmd</code> files extend the plain-text Markdown mark-up language (<code>.md</code>) to allow for data analysis code to be executed and results presented alongside the main text. This is an essential requirement for analytical transparency, reliability and reproducibility.The assignment will also be completed in <code>.qmd</code>.</td>
 <td><p>Included by default in the latest RStudio release; no need to install separately.<br>
-You can check your installation by running the command</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>quarto check</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>in the <u>Terminal</u> in Rstudio</p></td>
+You can check your installation by executing in the RStudio <u>Terminal</u> :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>quarto check</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></td>
 </tr>
 <tr class="odd">
 <td><a href="https://www.zotero.org/"><img src="..\files/img/zotero_logo.png" class="img-fluid" width="90"></a></td>
@@ -283,56 +257,7 @@ You can check your installation by running the command</p>
 </table>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>We will use a number of open-source software for data analysis and scientific writing. You need to install these on your personal computers to be able to work away from campus:</p>
-<table class="table">
-<tbody>
-<tr class="odd">
-<td><a href="https://www.r-project.org/about.html"><img src="..\files/img/R_logo.png" width="90" height="69"></a></td>
-<td><strong>R</strong><br>
-(programming language)</td>
-<td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
-<td><strong>R</strong> needs to be installed even if we will only use it via the <strong>RStudio</strong> interface.</td>
-<td><a href="https://cloud.r-project.org/" style="color:MediumSeaGreen">Install the latest version from here</a></td>
-</tr>
-<tr class="even">
-<td><a href="https://posit.co/download/rstudio-desktop/"><img src="..\files/img/RStudio_logo.png" class="img-fluid" width="100"></a></td>
-<td><strong>RStudio</strong><br>
-(integrated development environment)</td>
-<td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
-<td>You will need the free desktop version appropriate for your operating system. <strong>RStudio</strong> combines the R Console - the direct interface to <strong>R</strong> - with a number of other panels.</td>
-<td><a href="https://posit.co/download/rstudio-desktop/" style="color:MediumSeaGreen">Install the latest version from here</a></td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.tidyverse.org/"><img src="..\files/img/tidyverse_logo.png" class="img-fluid" width="80"></a></td>
-<td><strong>Tidyverse</strong><br>
-(collection of R packages)</td>
-<td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
-<td>The <strong>tidyverse</strong> is a collection of packages that make the <strong>R</strong> language easier to use by introducing a more consistent grammar. It provides functions that are particularly useful for data manipulation and visualisation. It is the most common ‘dialect’ used among social scientists.</td>
-<td><p>Install from within RStudio using the command</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>in the <u>Console</u></p></td>
-</tr>
-<tr class="even">
-<td><a href="https://quarto.org/"><img src="..\files/img/quartologo.png" class="img-fluid" width="80"></a></td>
-<td><strong>Quarto</strong><br>
-(scientific publishing system)</td>
-<td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
-<td>We will be using Quarto markdown documents (<code>.qmd</code>) throughout the course to document our data analysis. <code>.qmd</code> files extend the plain-text Markdown mark-up language (<code>.md</code>) to allow for data analysis code to be executed and results presented alongside the main text. This is an essential requirement for analytical transparency, reliability and reproducibility.The assignment will also be completed in <code>.qmd</code>.</td>
-<td><p>Included by default in the latest RStudio release; no need to install separately.<br>
-You can check your installation by running the command</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>quarto check</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>in the <u>Terminal</u> in Rstudio</p></td>
-</tr>
-<tr class="odd">
-<td><a href="https://www.zotero.org/"><img src="..\files/img/zotero_logo.png" class="img-fluid" width="90"></a></td>
-<td><strong>Zotero</strong><br>
-(reference manager)</td>
-<td><p style="color:Orange; font-weight:bold; text-align: center;">Recommended</p></td>
-<td>If you are not yet using a reference manager, I recommend giving Zotero a try. It will make your work much more efficient and it integrates (relatively well) with RMarkdown and Quarto using the the <a href="https://retorque.re/zotero-better-bibtex/installation/">Better BibTeX</a> add-on.</td>
-<td><a href="https://www.zotero.org/download/" style="color: Orange">Install the latest version and add-ons from here</a></td>
-</tr>
-</tbody>
-</table>
+
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <p>Any further study resources will be listed here.</p>

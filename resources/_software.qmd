@@ -1,5 +1,6 @@
 ---
 title: ""
+editor: visual
 ---
 
 We will use a number of open-source software for data analysis and scientific writing. You need to install these on your personal computers to be able to work away from campus:
