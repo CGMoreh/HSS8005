@@ -1,7 +1,78 @@
 ---
 title: "Materials"
+listing:
+  - id: info
+    contents: "info/info*.qmd"
+    type: table
+    sort: "filename"
+    fields: [title, subtitle]
+    field-display-names:
+      title: "Weekly topics"
+      subtitle: " "
+    sort-ui: false
+    filter-ui: false
+  - id: slides
+    contents: "slides/slides*.qmd"
+    type: table
+    sort: "filename"
+    fields: [title, subtitle, image]
+    field-display-names:
+      title: "Lecture slides"
+      subtitle: " "
+    sort-ui: false
+    filter-ui: false
+  - id: worksheets
+    contents: "worksheets/*.qmd"
+    type: table
+    sort: "filename"
+    fields: [title, subtitle, categories, reading-time]
+    field-display-names:
+      title: "Worksheets"
+      subtitle: " "
+    sort-ui: false
+    filter-ui: false
+  - id: notes
+    contents: "notes/notes*.qmd"
+    type: table
+    sort: "filename"
+    fields: [title, subtitle, reading-time]
+    field-display-names:
+      title: "Notes"
+      subtitle: " "
+    sort-ui: false
+    filter-ui: false
+  - id: handouts
+    contents: "handouts/handouts_w*.qmd"
+    type: table
+    sort: "filename"
+    fields: [title, subtitle]
+    field-display-names:
+      title: "Handouts"
+      subtitle: " "
+    sort-ui: false
+    filter-ui: false
 ---
 
-Materials for each week are available from the side menu.
+#### Materials for each week are available from the side menu. 
 
-Weekly topics list can found here:  [link to page](/materials/info/index.qmd)
+
+::: {#info}
+:::
+
+
+::: {#slides}
+:::
+
+
+::: {#worksheets}
+:::
+
+::: {#notes}
+:::
+
+::: {#handouts}
+:::
+
+
+
+

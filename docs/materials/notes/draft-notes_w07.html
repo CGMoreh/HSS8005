@@ -8,7 +8,7 @@
 
 <meta name="author" content="Chris Moreh">
 
-<title>HSS8005  - Gamblers, God, Guinness and peas</title>
+<title>HSS8005  - The unobserved</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -37,8 +56,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -113,8 +130,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gamblers, God, Guinness and peas</h1>
-<p class="subtitle lead">Structural equation models</p>
+<h1 class="title">The unobserved</h1>
+<p class="subtitle lead">Latent variables and structural models</p>
 </div>
 
 
@@ -132,13 +149,42 @@ ul.task-list li input[type="checkbox"] {
     
   </div>
   
+<div>
+  <div class="abstract">
+    <div class="abstract-title">Abstract</div>
+    <em>The unobserved</em> sounds like the title of a promising horror film; if we have achieved our aims in the module so far, our horror should be ‘merely’ metaphysical by now (Kołakowski anyone? No? Okay, never mind). We have already had to deal with various aspects of latency in our analyses. At the most fundamental level, we speak about population parameters, but we never actually observe them; even a sample statistic can be a purely imaginary case that doesn’t occur in real life. We have discussed the effects of omitted variables, which are thus <em>unobserved</em> by our model, but which we may have access to in our data. And, of course, our most interesting measurements are likely to be <em>proxies</em> of some <em>unobservable</em> theoretical construct (<span class="citation" data-cites="mulvin2021">Mulvin (<a href="#ref-mulvin2021" role="doc-biblioref">2021</a>)</span> has recently published a wonderfully rich book about proxies in general). This week we pick up an earlier thread from week 4, where we thought about binary and ordered multinomial variables as discretised manifestations of some continuous ‘latent variable’. We expand on this idea by exploring simple and then more complex latent variable models (<em>factor analysis</em>, <em>structural equation modelling</em>), as a further generalisation of the hierarchical perspective introduced earlier. This gives us a few more tools to deal with our radical uncertainty. (n.b.&nbsp;missing data points are another challenge that could fall under this heading, and learning how to deal with them is extremely important; but “The missing” is too good a title not to deserve a high-budget, weak-storyline, full-on special effects sequel somewhere else)
+  </div>
+</div>
 
 </header>
 
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-david1955" class="csl-entry" role="doc-biblioentry">
+David, F. N. 1955. <span>“Studies in the History of Probability and Statistics i. Dicing and Gaming (a Note on the History of Probability).”</span> <em>Biometrika</em> 42 (1/2): 1–15. <a href="https://doi.org/10.2307/2333419">https://doi.org/10.2307/2333419</a>.
+</div>
+<div id="ref-el-shagi2015" class="csl-entry" role="doc-biblioentry">
+El-Shagi, Makram, and Alexander Jung. 2015. <span>“Have Minutes Helped Markets to Predict the MPC’s Monetary Policy Decisions?”</span> <em>European Journal of Political Economy</em> 39 (September): 222–34. <a href="https://doi.org/10.1016/j.ejpoleco.2015.05.004">https://doi.org/10.1016/j.ejpoleco.2015.05.004</a>.
+</div>
+<div id="ref-gelman2020" class="csl-entry" role="doc-biblioentry">
+Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. <em>Regression and other stories</em>. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1017/9781139161879">https://doi.org/10.1017/9781139161879</a>.
+</div>
+<div id="ref-lord1958" class="csl-entry" role="doc-biblioentry">
+Lord, R. D. 1958. <span>“Studies in the History of Probability and Statistics.: VIII. De Morgan and the Statistical Study of Literary Style.”</span> <em>Biometrika</em> 45 (1/2): 282–82. <a href="https://doi.org/10.2307/2333072">https://doi.org/10.2307/2333072</a>.
+</div>
+<div id="ref-McElreath2020StatisticalRethinkingBayesianCourseExamples" class="csl-entry" role="doc-biblioentry">
+McElreath, Richard. 2020. <em>Statistical Rethinking: A <span>Bayesian</span> Course with Examples in <span>R</span> and <span>Stan</span></em>. Second. <span>CRC</span> Texts in Statistical Science. <span>Boca Raton</span>: <span>Taylor and Francis, CRC Press</span>.
+</div>
+<div id="ref-mulvin2021" class="csl-entry" role="doc-biblioentry">
+Mulvin, Dylan. 2021. <em>Proxies: The Cultural Work of Standing in</em>. Infrastructures Series. Cambridge, Massachusetts: The MIT Press.
+</div>
+<div id="ref-senn2003" class="csl-entry" role="doc-biblioentry">
+Senn, Stephen. 2003. <span>“A Conversation with John Nelder.”</span> <em>Statistical Science</em> 18 (1): 118–31. <a href="https://doi.org/10.1214/ss/1056397489">https://doi.org/10.1214/ss/1056397489</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -270,6 +316,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

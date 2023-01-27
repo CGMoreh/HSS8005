@@ -5,7 +5,7 @@ page-layout: full
 listing:
   type: table
   sort: "filename"
-  fields: [title, subtitle, abstract]
+  fields: [title, subtitle]
   field-display-names:
     abstract: "Description"
   sort-ui: false

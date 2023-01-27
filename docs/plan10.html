@@ -373,7 +373,7 @@ Week 8
 23 March
 </td>
 <td style="text-align:left;width: 45%; ">
-<p>Words! Mere words!</p>
+<p>Words, words, mere words…</p>
 </td>
 <td style="text-align:center;width: 5%; ">
 <a href="./materials/notes/info_w8.qmd"><i class="fa-solid fa-circle-info" aria-label="circle-info"></i></a>
@@ -588,6 +588,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

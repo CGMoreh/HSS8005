@@ -33,6 +33,11 @@ website:
   search: false
   site-path: "/HSS8005/"
   page-navigation: true
+  # page-footer:
+  #   border: false
+  #  # background: "blue"
+  #   center:
+  #     - text: "© Chris Moreh, 2023"
   # reader-mode: true
   
   navbar:

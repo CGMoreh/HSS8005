@@ -20,6 +20,12 @@ css: html/nobiblio.css
   font-size: 1rem;
 }
 
+.table2 {
+  font-size: 1rem;
+  line-height: 0.9;
+}
+
+
 ```
 
 ```{r packages-data, include=FALSE}
@@ -42,7 +48,12 @@ contents <- tibble(
   Week = c("", paste("Week", 1:8), ""),
   TW = c(22, 22:29, 29),
   Date = c(week1 - 3, week1 + 7*0:7, week1 + 7*7 + 1),
-  Topic = c(paste("{{< ", paste0("var topic.w", 0:8), " >}}"), "{{< var topic.w8+ >}}"),
+#  Topic = c(paste("{{< ", paste0("var topic.w", 0:8), " >}}"), "{{< var topic.w8+ >}}"),
+ Topic = c("{{< var topic.w0 >}}", 
+           paste(paste0("<b>{{< ", paste0("var topic.w", 1:8), " >}}</b>"),
+                "<br>",
+                paste("<sub><em>{{< ", paste0("var subtitle.w", 1:8), " >}}</em></sub>")),
+          "{{< var topic.w8+ >}}"),
   Info = c(NA, paste0("./materials/info/info_w0", 1:8), NA),
   Notes = c(NA, paste0("./materials/notes/notes_w0", 1:8), NA),
   Lecture = c(NA, paste0("./materials/slides/slides_w0", 1:8), NA),
@@ -78,12 +89,12 @@ contents <- contents |>
                               "<font color=#F0E2DF> {{< fa solid sheet-plastic >}} </font>")))
 
 
-tbl <- contents |>
+tbl_contents <- contents |>
   kbl(escap = FALSE, align = "lcllccccc", table.attr = 'class="schedule-table"') |>
   kable_styling() |>
-  column_spec(1, width = "9%") |>  
+  column_spec(1, width = "8%") |>  
   column_spec(2, width = "5%") |>  
-  column_spec(3, width = "16%") |>  
+  column_spec(3, width = "12%") |>  
   column_spec(4, width = "50%") |>  
   column_spec(c(5:9), width = "2%") 
 
@@ -91,11 +102,15 @@ tbl <- contents |>
 
 #### Topic plan and materials
 
+:::{.table2}
+
 ```{r print-table, echo=FALSE, results="asis"}
 
-cat(tbl)
+cat(tbl_contents)
 
 ```
+
+:::
 
 ```{=html}
 <!--
@@ -114,25 +129,20 @@ Click on the icons to navigate to a specific section of the materials. <font col
 Info = c(paste0("./materials/info/info_w0", 1:8))
 
 details <- tibble(
-  # Week = c(paste0("Week", 1:8)),
-  Topic = c(paste0("[{{< ", paste0("var topic.w", 1:8), " >}}]", glue('({Info}.qmd)'))),
-  Detail = c(paste("{{< ", paste0("var subtitle.w", 1:8), " >}}")),
+  Topic = c(paste(paste0("<b>[Week ", 1:8, "</b>]", glue('({Info}.qmd)')), 
+                  "<br>", 
+                  paste0("<b>{{< ", paste0("var topic.w", 1:8), " >}}</b>"),
+                  "<br>",
+                  paste("<em>{{< ", paste0("var subtitle.w", 1:8), " >}}</em>"))
+            ),
   Description = c(paste("{{< ", paste0("var topic-abstract.w", 1:8), " >}}")))
 
-tbl2 <- details |>
+tbl_details <- details |>
   kbl(escap = FALSE) |>
   kable_styling() |>
- # column_spec(1, width = "7%") |>  
-  column_spec(1, width = "20%", bold=F) |>  
-  column_spec(2, width = "20%", bold=T) |>  
-  column_spec(3, width = "60%", extra_css = "font-size: 16px; text-align: justify; text-justify: inter-word")
+  column_spec(1, width = "30%", bold=F, extra_css = "vertical-align:top;") |>  
+  column_spec(2, width = "70%", extra_css = "font-size: 16px; text-align: justify; text-justify: inter-word") 
 
-cat(tbl2)
-
+cat(tbl_details)
 ```
-
-
-
-::: {#refs}
-:::
 

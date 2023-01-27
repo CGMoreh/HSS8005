@@ -82,7 +82,7 @@ div.csl-indent {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-abstract',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-title","listing-author"],
     };
@@ -104,6 +104,7 @@ div.csl-indent {
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<link rel="stylesheet" href="../../html/nobiblio.css">
 </head>
 
 <body class="nav-fixed">
@@ -178,9 +179,6 @@ Title
 <th>
 Subtitle
 </th>
-<th>
-Description
-</th>
 </tr>
 </thead>
 <tbody class="list">
@@ -191,10 +189,6 @@ Description
 <td class="listing-subtitle">
 <p>A brief history of statistics</p>
 </td>
-<td class="listing-abstract">
-<p><strong>This lecture</strong> In the first contribution to a series of articles on the history of probability and statistics in the journal <em>Biometrika</em>, F. N. David <span class="citation" data-cites="david1955">(<a href="#ref-david1955" role="doc-biblioref">1955</a>)</span> paraphrased a contemporary archaeologist who quipped that “a symptom of decadence in a civilization is when men become interested in their own history”, giving the interest in his own discipline as proof of the validity of his statement. David, however, thought that this does not stand true also for scientists’ and statisticians’ own emerging interest in their disciplines. He was right, in that the critical examination of the intellectual development of statistics and probability theory that followed has improved the discipline by excavating ideas that had been buried by mainstream statistics, but he was also mistaken, in that this activity threw light on the decadence of mainstream statistical practice. In this lecture we will look back on the development of some basic statistical concepts and learn about the ideas and preoccupations that influenced them over the centuries. The aim of this overview is to build up essential intuition about the concepts and methods that we will learn later. Brains-on activities will include <a href="https://www.mq.edu.au/research/research-centres-groups-and-facilities/resilient-societies/centres/australian-centre-for-ancient-numismatic-studies/exhibitions/the-coinage-of-ephesus/coins/coin_32?width=600&amp;height=450">casting astragali</a>, fighting Laplace’s Demon, tasting tea, and comparing peas in a pod. By the end, we will gain a clearer understanding of the limits of statistical analysis and the dangers of not acknowledging those limits.<br>
-<strong>The IT lab</strong> will provide a very hands-on practical introduction to the <i class="fa-brands fa-r-project fa-1x" aria-label="r-project"></i> statistical programming language and its currently most popular dialect – the <iconify-icon inline="" icon="simple-icons:tidyverse" style="font-size: 1em;"></iconify-icon><code>{tidyverse}</code> – via the <!--  !! Changed to HTML code to add colour --> <iconify-icon inline="" icon="file-icons:rstudio" style="color: #7dbefc;"></iconify-icon><strong>Studio</strong> application programming interface. The session will also introduce some other tools of literate programming and <a href="https://plain-text.co/">plain-text social science</a> (such as <iconify-icon inline="" icon="ri:markdown-fill" style="font-size: 1.2em;"></iconify-icon> / <iconify-icon inline="" icon="file-icons:rmarkdown" style="font-size: 1em;"></iconify-icon> / <strong>Quarto</strong>® markup languages), all essential skills in contemporary computational social science and humanities research.</p>
-</td>
 </tr>
 <tr data-index="1" data-listing-file-modified-sort="1674226615305" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 2 {{< fa minus >}} {{< var topic.w2 >}}" data-listing-filename-sort="info_w02.qmd">
 <td class="listing-title">
@@ -202,9 +196,6 @@ Description
 </td>
 <td class="listing-subtitle">
 <p>A review of general linear models</p>
-</td>
-<td class="listing-abstract">
-<p>In Edwin <a href="https://www.gutenberg.org/ebooks/97">Abbott’s 1884 novella</a>, the inhabitants of Flatland are geometric shapes living in a two-dimensional world, incapable of imagining the existence of higher dimensions. A sphere passing through the plain of their world is a fascinating but incomprehensible event: Flatlanders can only see a dot becoming a circle, increasing in circumference, then shrinking back in size and disappearing. There are, in this universe, worlds with even more limited views, like the one-dimensional Lineland and the zero-dimensional Pointland. Any attempt to expand the perspective of their inhabitant(s) is doomed to failure. But as in any good adventure story, a chosen Flatland native embarks on a journey of discovery and revelation - and ostracism and imprisonment. The story is interpreted as an allegorical criticism of Victorian-age social structure, but can equally describe the limitations of inhabiting uncritically a methodological world in which all data are ‘normal’ and all relationships are linear. Moving beyond linearity and acquiring the statistical intuition needed to think in higher dimensions and perceive more complex relationships is indeed a matter of practice-induced revelation. It’s unlikely that we will reach statistical nirvana in this short course, but we’ll attempt to build some more substantial structures upon the arid plains of linear regression. We start by looking around in the Flat-, Line- and Point-lands of quantitative analysis. Incorrigible procrastinators may want to check out <a href="https://www.youtube.com/watch?v=Mfglluny8Z0&amp;t=3602s">a full-length computer animated film version of Flatland on YouTube</a>. Others may be better served by this brief <a href="https://www.youtube.com/watch?v=MGv8MMi8QO0">TED-Ed animation</a>.</p>
 </td>
 </tr>
 <tr data-index="2" data-listing-file-modified-sort="1674226615306" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 3 {{< fa minus >}} {{< var topic.w3 >}}" data-listing-filename-sort="info_w03.qmd">
@@ -214,9 +205,6 @@ Description
 <td class="listing-subtitle">
 <p>Interactions and the logic of causal inference</p>
 </td>
-<td class="listing-abstract">
-<p>Much of what we do in quantitative data analysis is about examining <em>relationships</em>. We are often interested in proposing and testing models of relationships between two or more variables. Sometimes our variables cry out to us begging for help, and we turn into agony aunts and uncles to our data. Other times we must psychoanalyse our data to uncover hidden associations and interactions. This is not an easy task. Do it carelessly, and you may unwittingly cheat yourself and the readers of your research. This week we’ll build some intuition for detecting complex and uneasy relationships within the design matrix <code>X</code> - that promiscuous commune on the right-hand-side of our regression equations. We’ll expand on the linear additive models that we looked at in the previous week by considering interactions among our predictor variables, we’ll explore the possibilities and challenges of asking causal questions of observational data, and we’ll think about ways to avoid what evolutionary anthropologist Richard McElreath calls <a href="https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/">‘causal salad’</a>. We may get an uncomfortable feeling that we may have cheated with our <code>X</code>s in the past, but we’ll look towards the future. By the way, <a href="https://slate.com/human-interest/dear-prudence">Dear Prudence</a> is Slate magazine’s advice column; I like the name because being <em>prudent</em> really is essential in data analysis and interpretation. If you’re done with the readings for this week, you may indulge in some Prudie advice on matters more serious than statistics.</p>
-</td>
 </tr>
 <tr data-index="3" data-listing-file-modified-sort="1674226615307" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 4 {{< fa minus >}} {{< var topic.w4 >}}" data-listing-filename-sort="info_w04.qmd">
 <td class="listing-title">
@@ -224,9 +212,6 @@ Description
 </td>
 <td class="listing-subtitle">
 <p>Generalised linear models</p>
-</td>
-<td class="listing-abstract">
-<p>It wasn’t until the last quarter of the 20th century that a unified vision of statistical modelling emerged, allowing practitioners to see how the <em>general</em> linear model we have explored so far is only a specific case of a <em>more general</em> class of models. We could have had a fancy, memorable name for this class of models - as John Nelder, one of its inventors, acknowledged later in life <span class="citation" data-cites="senn2003">(<a href="#ref-senn2003" role="doc-biblioref">Senn 2003, 127</a>)</span> - but back then academics were not required to undertake marketing training on the tweetabilty-factor of the chosen names for their theories; so we ended up with “<em>generalised</em> linear models”. These models can be applied to explananda (“explained”, “response”, “outcome”, “dependent” etc. variables, our <code>y</code>s) whose possible values have certain constraints (such as being limited by a lower bound or constrained to discreet choices) that makes the parameters of the Gaussian (‘normal’) distribution inefficient in describing them. Instead, they follow some of the other “exponential distributions” (and not only the exponential: cf. <span class="citation" data-cites="gelman2020">Gelman, Hill, and Vehtari (<a href="#ref-gelman2020" role="doc-biblioref">2020, 264</a>)</span>), of which the Poisson, gamma, beta, binomial and multinomial are probably the most common in human and social sciences research. Their “generalised linear modelling” involves mapping them unto a linear model using a so-called “link function”. We will explore what all of this means in practice and how it can be applied to data that we are interested in most in our respective fields of study.</p>
 </td>
 </tr>
 <tr data-index="4" data-listing-file-modified-sort="1674226615308" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 5 {{< fa minus >}} {{< var topic.w5 >}}" data-listing-filename-sort="info_w05.qmd">
@@ -236,9 +221,6 @@ Description
 <td class="listing-subtitle">
 <p>Basic data simulation for statistical inference and power analysis</p>
 </td>
-<td class="listing-abstract">
-<p>We have <em>known</em> ever since science-fiction author Philip K. Dick’s memorable “Metz address” of 1977 that our world is a computer simulation. Of course, like some common-currency theories in the social sciences, this knowledge will never be truly verified. We won’t even attempt to get to the bottom of it in class; instead, we’ll practice some basic methods of computer simulation for statistical inference and for generating data that has some idealised characteristics. Such methods play an increasingly important role in computational statistics and are extremely useful for designing robust data collection and analysis plans. If you make a mistake in the code and end up in an infinite loop, but you’re afraid that stopping the process may cause the known universe to implode, you can watch <a href="https://www.youtube.com/watch?v=DQbYiXyRZjM">Dick on YouTube</a> while you wait. If something like this can happen to our data, who says it couldn’t happen to us?</p>
-</td>
 </tr>
 <tr data-index="5" data-listing-file-modified-sort="1674226615309" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 6 {{< fa minus >}} {{< var topic.w6 >}}" data-listing-filename-sort="info_w06.qmd">
 <td class="listing-title">
@@ -246,9 +228,6 @@ Description
 </td>
 <td class="listing-subtitle">
 <p>Multilevel models</p>
-</td>
-<td class="listing-abstract">
-<p>By now we got a sense that every new thing we learn about turns out to be merely a specific case of a larger class of things. So, all the models we covered so far are specific, <em>single-level</em>, versions of <em>multilevel</em> models, in which our cases can be seen as clustered within larger entities. Sometimes they are part of several cross-cutting clusters and/or the clusters are themselves clustered. In general terms, we must acknowledge that there are dependencies in our data that may influence their behaviour. It turns out that data about humans living in societies look somewhat like humans living in societies. The importance of including information about hierarchical dependencies in our models is probably emphasised by no one else more than McElreath <span class="citation" data-cites="McElreath2020StatisticalRethinkingBayesianCourseExamples">(<a href="#ref-McElreath2020StatisticalRethinkingBayesianCourseExamples" role="doc-biblioref">2020, 15</a>)</span>, who wants “to convince the reader of something that appears unreasonable: <em>multilevel regression deserves to be the default form of regression</em>. Papers that do not use multilevel models should have to justify not using a multilevel approach.” We will encounter some of the uses and challenges of multilevel modelling.</p>
 </td>
 </tr>
 <tr data-index="6" data-listing-file-modified-sort="1674226615310" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 7 {{< fa minus >}} {{< var topic.w7 >}}" data-listing-filename-sort="info_w07.qmd">
@@ -258,9 +237,6 @@ Description
 <td class="listing-subtitle">
 <p>Latent variables and structural models</p>
 </td>
-<td class="listing-abstract">
-<p><em>The unobserved</em> sounds like the title of a promising horror film; if we have achieved our aims in the module so far, our horror should be ‘merely’ metaphysical by now (haha, Kołakowski anyone? No? Okay, never mind). We have already had to deal with various aspects of latency in our analyses. At the most fundamental level, we speak about population parameters, but we never actually observe them; even a sample statistic can be a purely imaginary case that doesn’t occur in real life. We have discussed the effects of omitted variables, which are thus <em>unobserved</em> by our model, but which we may have access to in our data. And, of course, our most interesting measurements are likely to be <em>proxies</em> of some <em>unobservable</em> theoretical construct (<span class="citation" data-cites="mulvin2021">Mulvin (<a href="#ref-mulvin2021" role="doc-biblioref">2021</a>)</span> has recently published a wonderfully rich book about proxies in general). This week we pick up an earlier thread from week 4, where we thought about binary and ordered multinomial variables as discretised manifestations of some continuous ‘latent variable’. We expand on this idea by exploring simple and then more complex latent variable models (think <em>factor analysis</em>, <em>structural equation modelling</em>), as a further generalisation of the hierarchical perspective introduced earlier. This gives us a few more tools to deal with our radical uncertainty.</p>
-</td>
 </tr>
 <tr data-index="7" data-listing-file-modified-sort="1674226615311" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 8 {{< fa minus >}} {{< var topic.w8 >}}" data-listing-filename-sort="info_w08.qmd">
 <td class="listing-title">
@@ -268,9 +244,6 @@ Description
 </td>
 <td class="listing-subtitle">
 <p>Text as data</p>
-</td>
-<td class="listing-abstract">
-<p>As researchers in humanities and the social sciences, we use <em>words</em> both as tools of analysis and as sources of data. Words, and more broadly, <em>texts</em>, are also increasingly important for quantitative research in an age of so-called ‘big data’, when the digital world is saturated with unstructured textual information. But the statistical inspection of text is neither new, nor restricted to the humanistic tail of the social sciences. For example, a documented interest in the statistical study of literary style for the purposes of attributing authorship dates back to the mid-1850s <span class="citation" data-cites="el-shagi2015">(see <a href="#ref-el-shagi2015" role="doc-biblioref">El-Shagi and Jung 2015</a>)</span>; and investors can use textual data such as minutes from the Bank of England’s Monetary Policy Committee’s deliberations to estimate future monetary policy decisions before they are actually taken <span class="citation" data-cites="lord1958">(cf. <a href="#ref-lord1958" role="doc-biblioref">Lord 1958</a>)</span>. Methods for the collection and quantitative analysis of large-scale textual data are increasingly available, but their technical implementation is complex and requires efficient combination of humanistic subject knowledge and statistical expertise. Faced with <em>words</em>, one is understandably caught between Shakespeare’s Troilus and Wilde’s Dorian Gray. “Words, words, mere words, no matter from the heart; Th’ effect doth operate another way” - <a href="https://www.gutenberg.org/cache/epub/1790/pg1790.html">believes the former</a>; “Words! Mere words! How terrible they were! How clear, and vivid, and cruel! One could not escape from them. And yet what a subtle magic there was in them! They seemed to be able to give a plastic form to formless things, and to have a music of their own as sweet as that of viol or of lute. Mere words! Was there anything so real as words?” - <a href="https://www.gutenberg.org/files/174/174-h/174-h.htm#chap02">ponders the latter</a>.</p>
 </td>
 </tr>
 </tbody>
@@ -433,6 +406,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

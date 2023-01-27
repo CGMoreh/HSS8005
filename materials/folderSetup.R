@@ -121,7 +121,7 @@ dir.create("materials/templates")
 file.create("materials/templates/handouts-frame_template.qmd")
 
 
-## ---------------------- Template YAML ---------------------------------
+## ---------------------- Template YAML 
 
 
 

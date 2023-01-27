@@ -4,6 +4,7 @@ subtitle: "{{< var lab.w1 >}}"
 author: "{{< var author >}}"
 abstract: "{{< var worksheet-abstract.w1 >}}"
 abstract-title: "Description"
+categories: R, dplyr::combine
 ---
 
 ## Session aims

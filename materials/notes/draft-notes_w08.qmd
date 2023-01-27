@@ -1,5 +1,5 @@
 ---
-title: "{{< var topic.w1 >}}"
+title: "{{< var topic.w8 >}}"
 subtitle: "{{< var subtitle.w8 >}}"
 author: "{{< var author >}}"
 abstract: "{{< var topic-abstract.w8 >}}"

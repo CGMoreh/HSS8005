@@ -1,10 +1,10 @@
 ---
 title: "Quantitative analysis {{< iconify bi plus-square-dotted >}}"
 subtitle: |
-   | HSS8005 • Intermediate stream • 2023
+   | HSS8005 • Intermediate/Advanced stream • 2023
    | Newcastle University (UK)
 details: |
-   | A second course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary audience through real-life research examples from various fields in the social sciences and humanities. The course emphasizes the [scientific application]() of statistical methods, developing a [reproducible research workflow](), and [computation]().
+   | A second course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary audience through real-life research examples from various fields in the social sciences and humanities. The course emphasizes the scientific application of statistical methods, developing a reproducible research workflow, and computational techniques.
 sidebar: false
 toc: false
 page-layout: full
@@ -26,11 +26,14 @@ suppress-bibliography: true
 - {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
 - {{< fa university >}} &nbsp; {{< var instructor.office >}}
 - {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
-- {{< fa calendar-check >}} &nbsp; tutorial booker
+- {{< fa calendar-check >}} &nbsp; [Tutorial booker](https://outlook.office365.com/owa/calendar/ChrisMorehofficehours@newcastle.onmicrosoft.com/bookings/s/0y_fi00C_0qn2vhlfjnw_A2)
+- &nbsp;
+
+
 
 ### Teaching Assistants
-- {{< fa user >}} &nbsp; tbc
-- {{< fa user >}} &nbsp; tbc
+- {{< fa user >}} &nbsp; Bilal Alsharif
+- {{< fa user >}} &nbsp; Fengting Du
 
 :::
 
@@ -39,16 +42,17 @@ suppress-bibliography: true
 ### Session dates
 
 - {{< fa calendar-alt >}} &nbsp; {{< var session.days >}}
-<!-- - &thinsp;{{< fa location-dot >}} &nbsp; {{< var session.location >}} -->
+- &thinsp;{{< fa location-dot >}} &nbsp; {{< var session.location >}}
 - {{< fa solid display >}} &nbsp; {{< var session.lecture >}}
 - {{< fa solid laptop-code >}} &nbsp; {{< var session.labs >}}
 <!-- - {{< fa clock >}} &nbsp; {{< var session.lecture >}} -->
 <!-- {{< iconify arcticons canvasstudent >}} &nbsp; [Module Canvas page]({{< var course.canvas >}}) -->
 
+
 ### Assessment
 
-- {{< fa calendar >}} &nbsp;
-- {{< fa file >}} &nbsp; 
+- {{< fa calendar >}} &nbsp; TBC
+- {{< fa file >}} &nbsp; {{< var assessment >}}
 - {{< fa solid share >}} &nbsp; Submit to Turnitin via [Canvas](add Canvas link!)
 
 :::
@@ -77,5 +81,4 @@ where he posts stuff of interest to *#HSS8005*
 {{< include resources/_prerequisites.qmd >}}
 
 :::
-
 :::

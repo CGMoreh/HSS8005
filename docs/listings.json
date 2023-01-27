@@ -14,6 +14,30 @@
     ]
   },
   {
+    "listing": "/materials/index.html",
+    "items": [
+      "/materials/info/info_w01.html",
+      "/materials/info/info_w02.html",
+      "/materials/info/info_w03.html",
+      "/materials/info/info_w04.html",
+      "/materials/info/info_w05.html",
+      "/materials/info/info_w06.html",
+      "/materials/info/info_w07.html",
+      "/materials/info/info_w08.html",
+      "/materials/slides/slides_w01.html",
+      "/materials/worksheets/draft-worksheets_w01.html",
+      "/materials/worksheets/draft-worksheets_w02.html",
+      "/materials/worksheets/draft-worksheets_w03.html",
+      "/materials/worksheets/draft-worksheets_w04.html",
+      "/materials/worksheets/draft-worksheets_w05.html",
+      "/materials/worksheets/draft-worksheets_w06.html",
+      "/materials/worksheets/draft-worksheets_w07.html",
+      "/materials/worksheets/draft-worksheets_w08.html",
+      "/materials/worksheets/index.html",
+      "/materials/handouts/handouts_w01.pdf"
+    ]
+  },
+  {
     "listing": "/materials/info/index.html",
     "items": [
       "/materials/info/info_w01.html",
@@ -64,19 +88,6 @@
       "/materials/worksheets/draft-worksheets_w06.html",
       "/materials/worksheets/draft-worksheets_w07.html",
       "/materials/worksheets/draft-worksheets_w08.html"
-    ]
-  },
-  {
-    "listing": "/plan8.html",
-    "items": [
-      "/materials/info/info_w01.html",
-      "/materials/info/info_w02.html",
-      "/materials/info/info_w03.html",
-      "/materials/info/info_w04.html",
-      "/materials/info/info_w05.html",
-      "/materials/info/info_w06.html",
-      "/materials/info/info_w07.html",
-      "/materials/info/info_w08.html"
     ]
   }
 ]
