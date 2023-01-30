@@ -7,11 +7,11 @@ abstract-title: "Description"
 
 ### Readings
 
-#### Textbook
+#### Textbook readings
 
-- **ROS**:    Chapters 1 and 2
-- **TSD**:    Chapters 1, 2 and 3 ("Foundations")
-- **R4DS**:   Chapters 1-10 ("Whole game")
+- **{{< var ROS >}}**:    Chapters 1 and 2
+- **{{< var TSD >}}**:    Chapters 1, 2 and 3 ("Foundations")
+- **{{< var R4DS >}}**:   Chapters 1-10 ("Whole game")
 
 #### Intuition building
 
