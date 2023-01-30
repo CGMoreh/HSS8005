@@ -4,3 +4,20 @@ subtitle: "{{< var subtitle.w1 >}}"
 abstract: "{{< var topic-abstract.w1 >}}"
 abstract-title: "Description"
 ---
+
+### Readings
+
+#### Textbook
+
+- **ROS**:    Chapters 1 and 2
+- **TSD**:    Chapters 1, 2 and 3 ("Foundations")
+- **R4DS**:   Chapters 1-10 ("Whole game")
+
+#### Intuition
+
+- Jaynes, E. T. (2003). Probability theory: The logic of science. Cambridge University Press:
+  - Preface: pp. xix-xxvii
+  - Chapter 16 ("Orthodoxmethods:historicalbackground"): pp. 490-506
+  
+- McElreath, R. (2020). Statistical rethinking: A Bayesian course with examples in R and Stan (2nd ed.). Taylor and Francis, CRC Press.
+  - Chapter 1: pp. 1-18 ([available here](http://xcelab.net/rmpubs/sr2/statisticalrethinking2_chapters1and2.pdf))

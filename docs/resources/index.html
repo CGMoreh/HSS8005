@@ -145,11 +145,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">Materials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../data/index.html">
+    <a class="nav-link" href="../data/index.qmd">
  <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../assessment/index.qmd">
+    <a class="nav-link" href="../assessment/index.html">
  <span class="menu-text">Assessment</span></a>
   </li>  
   <li class="nav-item">
@@ -174,56 +174,90 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Readings</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Software</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Training</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Other resources</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Readings</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Software</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Training</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Help</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Other</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<section id="compulsory-readings" class="level4">
-<h4 class="anchored" data-anchor-id="compulsory-readings">Compulsory readings</h4>
-<p><strong>Textbooks</strong></p>
-<p>The course does not strictly follow the content of a textbook, but the expectation is that students will read as much as possible of the assigned chapters from the following two books, both freely available to download or read online:</p>
-<table class="table">
+<section id="textbooks" class="level3">
+<h3 class="anchored" data-anchor-id="textbooks">Textbooks</h3>
+<p>The course does not strictly follow the content of a textbook, but the expectation is that students will read as much as possible of the assigned chapters from the following books:</p>
+<div class="cell" data-knitr.table.vline="">
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <tbody>
-<tr class="odd">
-<td><img src="../files/img/ROS.png" class="img-fluid" width="150"></td>
-<td>Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. <em>Regression and other stories</em>. Cambridge: Cambridge University Press.<br>
-<br>
-<strong>ROS</strong></td>
-<td>Free to download PDF version from the book’s website: <a href="https://avehtari.github.io/ROS-Examples/" class="uri">https://avehtari.github.io/ROS-Examples/</a></td>
+<tr>
+<td style="text-align:left;width: 15%; ">
+<img src="../files/img/ROS.png" class="img-fluid" width="90">
+</td>
+<td style="text-align:left;width: 40%; vertical-align:top;">
+Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. <em>Regression and other stories</em>. Cambridge: Cambridge University Press. <br><br> <strong>ROS</strong>
+</td>
+<td style="text-align:left;width: 40%; vertical-align:top;">
+Free to download PDF version from the book’s website: <a href="https://avehtari.github.io/ROS-Examples">https://avehtari.github.io/ROS-Examples</a>
+</td>
 </tr>
-<tr class="even">
-<td><img src="../files/img/TSD.png" class="img-fluid" width="150"></td>
-<td>Alexander, Rohan. 2023. <em>Telling Stories with Data</em>. Chapman and Hall/CRC<br>
-<br>
-<strong>TSD</strong></td>
-<td>Free online book: <a href="https://tellingstorieswithdata.com" class="uri">https://tellingstorieswithdata.com</a></td>
+<tr>
+<td style="text-align:left;width: 15%; ">
+<img src="../files/img/TSD.png" class="img-fluid" width="90">
+</td>
+<td style="text-align:left;width: 40%; vertical-align:top;">
+Alexander, Rohan. 2023. <em>Telling Stories with Data</em>. Chapman and Hall/CRC <br><br> <strong>TSD</strong>
+</td>
+<td style="text-align:left;width: 40%; vertical-align:top;">
+Free online book: <a href="https://tellingstorieswithdata.com">https://tellingstorieswithdata.com</a>
+</td>
 </tr>
-<tr class="odd">
-<td><img src="images/ARM-01.jpg" class="img-fluid" width="150"></td>
-<td>Gelman, A., and Hill, J. (2007). <em>Data Analysis Using Regression and Multilevel/Hierarchical Models</em>. Cambridge: Cambridge University Press.<br>
-<br>
-<strong>ARM</strong></td>
-<td><p>Note: <strong>ROS</strong> is the expanded and updated version of Part 1 (and some of Part 3) of this book. While everyone in the free world eagerly awaits the publication of <strong>ROS</strong>’s multilevel counterpart, we’ll use <strong>ARM</strong> as a reference work for the theory underpinning multilevel modelling.<br>
-</p>
-<p>Available in print and online via the <a href="https://libsearch.ncl.ac.uk/permalink/f/1jraif3/NCL_ALMA51207467300002411">NU library</a></p></td>
+<tr>
+<td style="text-align:left;width: 15%; ">
+<img src="../files/img/ARM.jpg" class="img-fluid" width="90">
+</td>
+<td style="text-align:left;width: 40%; vertical-align:top;">
+Gelman, A., and Hill, J. 2007. <em>Data Analysis Using Regression and Multilevel/Hierarchical Models</em>. Cambridge: Cambridge University Press. <br><br> <strong>ARM</strong>
+</td>
+<td style="text-align:left;width: 40%; vertical-align:top;">
+Note: <strong>ROS</strong> is the expanded and updated version of Part 1 (and some of Part 3) of this book. While everyone in the free world eagerly awaits the publication of <strong>ROS</strong>’s multilevel counterpart, we’ll use <strong>ARM</strong> as a reference work for the theory underpinning multilevel modelling. <br><br> Not freely available. Access it in print or online via the <a href="https://libsearch.ncl.ac.uk/permalink/f/1jraif3/NCL_ALMA51207467300002411">NU library</a>
+</td>
 </tr>
 </tbody>
+
 </table>
-<p>These books provide relatively introductory material to statistical modelling, but from a fresh perspective. Relatively large portions of text will be assigned for reading in each week, referring to them by their acronyms. <u>Don’t worry if you cannot read all the textbook content assigned in any given week!</u> Those for whom the method covered by the assigned readings is new, will be able to refer back to them throughout the semester and beyond, reading thoroughly and completing the applied exercises. Those already familiar to some extent with the methods, should nonetheless read the text as a narrative and will discover hidden gems that will spectacularly improve their understanding and ability to interpret their statistical results.</p>
-<p><strong>Applied methods</strong></p>
+</div>
+<p>Relatively large portions of text will be assigned for reading in each week from these books, referring to them by their acronyms. <u>Don’t worry if you cannot read all the textbook content assigned in any given week!</u> Those for whom the method covered by the assigned readings is new, will be able to refer back to them throughout the semester and beyond, reading thoroughly and completing the applied exercises. Those already familiar to some extent with the methods, should nonetheless read the text as a narrative and will discover hidden gems that will spectacularly improve their understanding and ability to interpret their statistical results.</p>
+</section>
+<section id="application" class="level3">
+<h3 class="anchored" data-anchor-id="application">Application</h3>
 <p>In the IT labs we will practice applying methods by reproducing small bits of published research, using the data and (critically) the modelling approaches used by the authors. To fully understand the context of these data and the methods used, you must read the original journal articles and the available supplementary materials provided alongside. These readings will be listed under each week’s outline (still work in progress!).</p>
 <p>The articles come from a variety of different fields, so expect them to push you outside your disciplinary comfort zone. The point is to see how methods have been used in practice and learn how to reproduce (and potentially improve) those analyses. This will then enable you to apply this knowledge to your own research questions.</p>
 <p>When selecting the articles, the aim was to strike a fine balance between (a) the simplicity of the methods employed, (b) data and analytical transparency, and (c) the strength of the analysis. So don’t take them as examples of all-rounds best practice, but examples of research that gets published while being self-confident enough to open itself up for public scrutiny. Aim for this in your own research!</p>
 </section>
-<section id="further-readings" class="level4">
-<h4 class="anchored" data-anchor-id="further-readings">Further readings</h4>
-<p><strong>Textbooks</strong></p>
-<p><strong>Methodological</strong></p>
-<p><strong>Technical</strong></p>
+<section id="technique" class="level3">
+<h3 class="anchored" data-anchor-id="technique">Technique</h3>
+<p>There will also be various readings relating more closely to the technicalities of coding in <code>R</code> and scientific writing, collaboration and communication in general. These readings will also be listed under each week’s outline as the semester progresses. The generic reading that students are advised to go through on their own is:</p>
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;width: 15%; ">
+<img src="../files/img/r4ds.png" class="img-fluid" width="90">
+</td>
+<td style="text-align:left;width: 40%; vertical-align:top;">
+Wickham, Çetinkaya-Rundel and Grolemund. 2022. <em>R for Data Science</em> (2nd ed.) <br><br> <strong>R4DS</strong>
+</td>
+<td style="text-align:left;width: 40%; vertical-align:top; text-align: justify; text-justify: inter-word">
+Free online book: <a href="https://r4ds.hadley.nz/">https://r4ds.hadley.nz/</a>
+</td>
+</tr>
+</tbody>
+
+</table>
+</section>
+<section id="intuition" class="level3">
+<h3 class="anchored" data-anchor-id="intuition">Intuition</h3>
+<p>Finally, there will also be recommended readings listed under certain weeks that help place methods, statistics and probability theory in a broader frame. These are useful readings for everyone, regardless of whether you will be applying quantitative analysis in your research or future work.</p>
 </section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<section id="required-software" class="level4">
-<h4 class="anchored" data-anchor-id="required-software">Required software</h4>
+<section id="required-software" class="level3">
+<h3 class="anchored" data-anchor-id="required-software">Required software</h3>
 <p>We will use a number of open-source software for data analysis and scientific writing. You need to install these on your personal computers to be able to work away from campus:</p>
 <table class="table">
 <tbody>
@@ -236,7 +270,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td><a href="https://cloud.r-project.org/" style="color:MediumSeaGreen">Install the latest version from here</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://posit.co/download/rstudio-desktop/"><img src="..\files/img/RStudio_logo.png" class="img-fluid" width="150"></a></td>
+<td><a href="https://posit.co/download/rstudio-desktop/"><img src="..\files/img/RStudio_logo.png" class="img-fluid" width="120"></a></td>
 <td><strong>RStudio</strong><br>
 (integrated development environment)</td>
 <td><p style="color:MediumSeaGreen; font-weight:bold; text-align: center;">Essential</p></td>
@@ -275,9 +309,14 @@ You can check your installation by executing in the RStudio <u>Terminal</u> :</p
 </section>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-
+<p>Students with no previous experience using <strong>R</strong> and/or <strong>RStudio</strong> are advised to complete the self-paced free online training course <em>R for Social Scientists</em> provided by Data Carpentry at <a href="https://datacarpentry.org/r-socialsci/"><strong>https://datacarpentry.org/r-socialsci/</strong></a></p>
+<iframe width="1080" height="2500" src="https://datacarpentry.org/r-socialsci/" title="Data Carpentry: R4SS" base="" target="_blank"></iframe>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>There are several ways to get help with <code>R</code> outside class. If you encounter an error message or are looking for a function to perform a specific task that we have not covered in class, you can do a Google search; for best results, use the <a href="https://rseek.org/">https://rseek.org/</a> search engine, which limits the results to those relating to the <code>R</code> language.</p>
+<p>You can also search for answers on <a href="https://stackoverflow.com/questions/tagged/r">Stack Overflow</a>, which is a popular help and discussion website for programmers. You can also post a question there, but make sure to follow community standards and advice on <a href="https://stackoverflow.com/help/how-to-ask">how to ask a good question</a> and how to <a href="https://stackoverflow.com/a/5963610/16962987">provide a minimal reproducible example</a>. You will need some experience using the site before being able to ask a good question, but it’s more than certain that any quesiton you have at this stage will have an answer already somewhere.</p>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <p>Any further study resources will be listed here.</p>
 </div>
 </div>

@@ -334,5 +334,14 @@
   },
   "assessment/assignment.qmd": {
     "assignment.html": "9fe0823f"
+  },
+  "resources/testtab.qmd": {
+    "testtab.html": "4bd64c33"
+  },
+  "assessment/index.qmd": {
+    "index.html": "80dd4368"
+  },
+  "data/draft_index.qmd": {
+    "draft_index.html": "1c9f2997"
   }
 }

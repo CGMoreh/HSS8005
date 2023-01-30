@@ -51,7 +51,7 @@ suppress-bibliography: true
 
 ### Assessment
 
-- {{< fa calendar >}} &nbsp; TBC
+- {{< fa calendar >}} &nbsp; **26th April 2023**
 - {{< fa file >}} &nbsp; {{< var assessment >}}
 - {{< fa solid share >}} &nbsp; Submit to Turnitin via [Canvas](add Canvas link!)
 
@@ -70,7 +70,7 @@ where he posts stuff of interest to *#HSS8005*
 
 ::: {.grid }
 
-::: {.g-col-5 .g-col-sm-5}
+::: {.g-col-7 .g-col-sm-7}
 
 {{< include resources/_overview.qmd >}}
 
