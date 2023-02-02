@@ -18,7 +18,7 @@ website:
             - text: "Presentation"
               file: materials/slides/slides_w01.qmd
             - text: "Worksheet"
-              #file: materials/worksheets/worksheets_w01.qmd
+              file: materials/worksheets/worksheets_w01.qmd
             - text: "Handout"
               file: materials/handouts/handouts-frame_w01.qmd
         - section: "Week 2"
