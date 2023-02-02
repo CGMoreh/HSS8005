@@ -408,4 +408,70 @@ p.tight {
   line-height: 0.7;
 }
 
-// Footer stuff
+// callouts
+
+.callout.callout-style-default div.callout-body {
+    font-size: 0.8rem;
+}
+
+// Defined textbox styles
+
+.task {
+  padding: 1em 1em 1em 8em;
+  margin-bottom: 10px;
+  border: 2px solid #97dcfd;
+  border-radius: 10px;
+  background: #97dcfd 5px center/5em no-repeat;
+  position: relative;
+}
+
+.task::before {
+    background-image: url(./files/img/task.png);
+    content: "";
+    background-size: 120px 130px;
+    width: 120px;
+    height: 130px;
+    top: 50px;
+    left: 10px;
+    position: absolute;
+}
+
+.code {
+  padding: 1em 1em 1em 8em;
+  margin-bottom: 10px;
+  border: 2px solid #f9d873;
+  border-radius: 10px;
+  background: #f9d873 5px center/5em no-repeat;
+  position: relative;
+}
+
+.code::before {
+    background-image: url("./files/img/coding.png");
+    content: "";
+    background-size: 120px 130px;
+    width: 120px;
+    height: 130px;
+    top: 50px;
+    left: 10px;
+    position: absolute;
+}
+
+.discuss {
+  padding: 1em 1em 1em 8em;
+  margin-bottom: 10px;
+  border: 2px solid #99ff99;
+  border-radius: 10px;
+  background: #99ff99 5px center/5em no-repeat;
+  position: relative;
+}
+
+.discuss::before {
+    background-image: url("./files/img/group_discuss.png");
+    content: "";
+    background-size: 120px 130px;
+    width: 120px;
+    height: 130px;
+    top: 50px;
+    left: 10px;
+    position: absolute;
+}

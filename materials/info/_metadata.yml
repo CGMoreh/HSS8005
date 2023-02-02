@@ -1,5 +1,5 @@
 bibliography: ../../hss8005.bib
-page-layout: article
+page-layout: full
 toc-location: left
 abstract-title: Description
 css: ../../html/nobiblio.css

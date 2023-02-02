@@ -15,9 +15,9 @@ abstract-title: "Description"
 
 #### Intuition building
 
-- Jaynes, E. T. (2003). *Probability theory: The logic of science*. Cambridge University Press:
+- Jaynes, E. T. (2003). *Probability theory: The logic of science*. Cambridge University Press ([available via the NU library](https://libsearch.ncl.ac.uk/permalink/f/1jraif3/NCL_ALMA21127570270002411))
   - Preface: pp. xix-xxvii
-  - Chapter 16 ("Orthodox methods: historical background"): pp. 490-506 (available via the NU library [here](https://libsearch.ncl.ac.uk/permalink/f/1jraif3/NCL_ALMA21127570270002411))
+  - Chapter 16 ("Orthodox methods: historical background"): pp. 490-506
   
-- McElreath, R. (2020). *Statistical rethinking: A Bayesian course with examples in R and Stan* (2nd ed.). Taylor and Francis, CRC Press.
-  - Chapter 1: pp. 1-18 ([available here](http://xcelab.net/rmpubs/sr2/statisticalrethinking2_chapters1and2.pdf))
+- McElreath, R. (2020). *Statistical rethinking: A Bayesian course with examples in R and Stan* (2nd ed.). Taylor and Francis, CRC Press ([available online](http://xcelab.net/rmpubs/sr2/statisticalrethinking2_chapters1and2.pdf))
+  - Chapter 1: pp. 1-18
