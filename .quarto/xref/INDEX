@@ -397,5 +397,8 @@
   },
   "materials/slides/draft_w1.qmd": {
     "draft_w1.html": "29d07766"
+  },
+  "data/data-documentation.qmd": {
+    "data-documentation.html": "79c8c13c"
   }
 }

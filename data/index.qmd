@@ -1,0 +1,60 @@
+---
+title: "Data documentation"
+page-layout: full
+execute:
+  echo: false
+bibliography: references.bib
+css: ../html/nobiblio.css
+---
+
+The datasets listed in the table below can be read into `R` from `"https://cgmoreh.github.io/HSS8005/data/___"` (replacing ___ with "File name").
+
+```{r}
+# Table contents
+
+library("tibble")
+library("kableExtra")
+# library("reactable")
+
+headings <- c("File name", "Original name", "Type", "Version", "Description", "Access")
+
+osterman_1 <- "osterman"
+
+
+content <- tribble(
+  ~"File name", ~"Original name", ~"Type", ~"Version", ~"Origin", ~"Access",
+  # datasets
+  "osterman", "Replication_data_ESS1-9_20201113", ".dta", NA, 
+      "Replication data for @Osterman2021CanWeTrustEducationFostering, based on European Social Survey Rounds 1-9 data",
+      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA)",
+            "<br>",
+            "Questionnaire",
+            "<br>",
+            "[Codebook]()"),
+  "LaddLenz", "LaddLenz", ".dta", NA,
+      "Replication data for @LaddLenz2009ExploitingRareCommunicationShiftDocument, based on British Election Panel Study data. Included in @Hainmueller2012EntropyBalancingCausalEffectsMultivariate",
+      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/16077)",
+            "<br>",
+            "Questionnaire",
+            "<br>",
+            "[Codebook]()")
+)
+
+content2 <- content |> 
+  kbl(escap = FALSE) |> 
+  kable_styling() |>
+  column_spec(1, width = "10%") |>  
+  column_spec(2, width = "18%") |>  
+  column_spec(3, width = "5%") |>  
+  column_spec(4, width = "5%") |>  
+  column_spec(5, width = "45%")
+
+```
+
+::: text-xm
+```{r results="asis"}
+
+cat(content2)
+
+```
+:::
