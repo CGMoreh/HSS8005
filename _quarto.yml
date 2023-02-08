@@ -11,6 +11,8 @@ project:
     - "!materials/templates/"
     - "!materials/handouts/draft*"
     - "data/"
+    - ".dta"
+    - ".csv"
 format:
   html:
     theme: 
