@@ -1,12 +1,35 @@
-bibliography: ../../hss8005.bib
-css: ../../html/nobiblio.css
-page-layout: article
-toc-location: left
-abstract-title: Description
-
-code-link: true
-code-line-numbers: true
-# code-tools: true
-# code-block-border-left: $ncl-blue
-# code-block-bg: lightgray
-# license: CC BY-NC
+title: "Quantitative analysis {{< iconify bi plus-square-dotted size=sm >}}"
+author: "Chris Moreh"
+year: "2023"
+format: 
+  revealjs:
+    template-partials:
+     - ./../../html/title-slide.html
+    history: false
+    # revealjs-plugins:
+    #  - ../my_plugins/attribution
+     # - ../my_plugins/countdown
+     # - ../my_plugins/fullscreen
+     # - ../my_plugins/elapsed
+    title-slide-attributes:
+      data-background-color: "white"
+      data-background-iframe: "https://cgmoreh.github.io/webslides/particles-bkg/particles.html"
+      data-background-interactive: true
+      data-background-opacity: "0.2"
+      data-background-size: 100vh
+      data-transition: "slide-out"
+      data-background-transition: "slide-out"
+      data-transition-speed: "default"
+    controls: true
+     #controls-layout: edges
+    controls-back-arrows: faded
+    slide-number: false
+    preview-links: true
+    theme: ./../../html/slides.scss
+    incremental: false
+    self-contained: true
+    navigation-mode: vertical
+#footer: "[https://cgmoreh.github.io/HSS8005/](https://cgmoreh.github.io/HSS8005/)"
+# bibliography: references.bib
+course-logo: ./../../files/img/ncl_coa_hss8005.png
+#csl: ../../american-sociological-association.csl

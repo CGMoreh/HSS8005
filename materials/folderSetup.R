@@ -158,6 +158,20 @@ for (d in c("slides", "handouts", "notes", "worksheets")) {
   }
 }
 
+## Slides frames
+
+for (d in c("slides-frame")) {
+  for (j in 1:8) {
+    file.copy(from = paste0("materials/templates/", d, "_template.qmd"), 
+              to = paste0("materials/", d, "/", d, "_w0", j, ".qmd"), 
+              overwrite = TRUE)
+    readLines(paste0("materials/", d, "/", d, "_w0", j, ".qmd")) |> 
+      stringr::str_replace_all(
+        pattern = "REPLACE", 
+        replace = paste0(j)) |> 
+      writeLines(paste0("materials/", d, "/", d, "_w0", j, ".qmd"))
+  }
+}
 
 ## Handouts frame pages
 
@@ -192,7 +206,7 @@ write_lines(c("date:", paste0("  w", c("Intro", 1:8, "Conclusion"), ": ", "\"", 
 write_lines("slides:", append = TRUE, file = "_variables.yml")
 
 for (j in 1:8) {
-write_lines(paste0("  w", j, ": ", "\"", "https://cgmoreh.github.io/webslides/HSS8005/w", j, "\""), 
+write_lines(paste0("  w", j, ": ", "\"", "/docs/materials/slides/w", j, ".html\""), 
             append = TRUE, file = "_variables.yml")
 }
 

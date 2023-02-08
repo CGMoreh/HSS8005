@@ -1,0 +1,15 @@
+<section id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
+  <div class="g-col-3 g-col-sm-5"><img src="$course-logo$" class="img-fluid" width="200"></div>
+  <div class="course-title">$title$</div>
+  <p class="course-details">$author$, $year$</p>
+</section>
+
+<section id="$idprefix$title-slide"$for(title-slide-attributes/pairs)$ $it.key$="$it.value$"$endfor$>
+  <p class="week">Week $week$</p>
+$if(week-title)$
+  <p class="week-title">$week-title$</p>
+$endif$
+$if(week-subtitle)$
+  <p class="week-subtitle">$week-subtitle$</p>
+$endif$
+</section>

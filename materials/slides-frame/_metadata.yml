@@ -1,0 +1,12 @@
+bibliography: ../../hss8005.bib
+css: ../../html/nobiblio.css
+page-layout: article
+toc-location: left
+abstract-title: Description
+
+code-link: true
+code-line-numbers: true
+# code-tools: true
+# code-block-border-left: $ncl-blue
+# code-block-bg: lightgray
+# license: CC BY-NC

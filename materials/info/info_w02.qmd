@@ -4,3 +4,20 @@ subtitle: "{{< var subtitle.w2 >}}"
 abstract: "{{< var topic-abstract.w2 >}}"
 abstract-title: "Description"
 ---
+
+#### Readings
+
+**Statistics**
+
+- **{{< var ROS >}}**:    Chapters 3, 4, 6-12
+- **{{< var TSD >}}**:    Chapter 12 ("Linear models")
+
+**Coding**
+
+- **{{< var TSD >}}**:    Chapters 9 and 11
+- **{{< var R4DS >}}**:   Chapters 11, 12
+
+**Application**
+
+- Österman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. Social Indicators Research 154(1):211–33 - ([online](https://link.springer.com/article/10.1007/s11205-020-02529-y))
+

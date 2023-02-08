@@ -56,12 +56,14 @@ contents <- tibble(
           "{{< var topic.w8+ >}}"),
   Info = c(NA, paste0("./materials/info/info_w0", 1:8), NA),
   Notes = c(NA, paste0("./materials/notes/notes_w0", 1:8), NA),
-  Lecture = c(NA, paste0("./materials/slides/slides_w0", 1:8), NA),
+  Lecture = c(NA, paste0("./materials/slides-frame/slides-frame_w0", 1:8), NA),
   Labs = c(NA, paste0("./materials/worksheets/worksheets_w0", 1:8), NA),
   Handouts = c(NA, paste0("./materials/handouts/handouts_w0", 1:8), NA),
   )
 
 Handouts_frame = c(NA, paste0("./materials/handouts/handouts-frame_w0", 1:8), NA)
+
+Slides = c(NA, paste0("./docs/materials/slides/w", 1:8), NA)
 
 # write_csv(contents, "files/plan8.csv") 
 
@@ -76,7 +78,7 @@ contents <- contents |>
                               paste0("[{{< fa solid book-open >}}]", glue('({Notes}.qmd)')),
                               "<font color=#F0E2DF> {{< fa solid book-open >}} </font>")),
          Lecture = ifelse(is.na(Lecture), "",
-                       ifelse(file.exists(glue('{Lecture}.qmd')),
+                       ifelse(file.exists(glue('{Slides}.html')),
                               paste0("[{{< fa solid person-chalkboard >}}]", glue('({Lecture}.qmd)')),
                               "<font color=#F0E2DF> {{< fa solid person-chalkboard >}} </font>")),
          Labs = ifelse(is.na(Labs), "",

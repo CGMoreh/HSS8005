@@ -343,5 +343,59 @@
   },
   "data/draft_index.qmd": {
     "draft_index.html": "1c9f2997"
+  },
+  "materials/slides/w1.qmd": {
+    "w1.html": "1100e9eb"
+  },
+  "materials/pres/w1.qmd": {
+    "w1.html": "386c4c7f"
+  },
+  "materials/pres/my_themes/myplanet-revealjs-master/CONTRIBUTING.md": {
+    "CONTRIBUTING.html": "44a40d56"
+  },
+  "materials/pres/my_themes/myplanet-revealjs-master/plugin/markdown/example.md": {
+    "example.html": "7d2601c2"
+  },
+  "materials/pres/my_themes/myplanet-revealjs-master/test/simple.md": {
+    "simple.html": "25d9a01b"
+  },
+  "materials/slides/my_themes/myplanet-revealjs-master/CONTRIBUTING.md": {
+    "CONTRIBUTING.html": "eb433844"
+  },
+  "materials/slides/my_themes/myplanet-revealjs-master/plugin/markdown/example.md": {
+    "example.html": "2eed344f"
+  },
+  "materials/slides/my_themes/myplanet-revealjs-master/test/simple.md": {
+    "simple.html": "07f39cde"
+  },
+  "materials/slides-frame/index.qmd": {
+    "index.html": "22832285"
+  },
+  "materials/slides-frame/slides-frame_w01.qmd": {
+    "slides-frame_w01.html": "ea85b8a4"
+  },
+  "materials/slides-frame/slides-frame_w02.qmd": {
+    "slides-frame_w02.html": "6117729f"
+  },
+  "materials/slides-frame/slides-frame_w03.qmd": {
+    "slides-frame_w03.html": "9510b7ab"
+  },
+  "materials/slides-frame/slides-frame_w04.qmd": {
+    "slides-frame_w04.html": "8ebfe7e3"
+  },
+  "materials/slides-frame/slides-frame_w05.qmd": {
+    "slides-frame_w05.html": "bd67bcaa"
+  },
+  "materials/slides-frame/slides-frame_w06.qmd": {
+    "slides-frame_w06.html": "71d29357"
+  },
+  "materials/slides-frame/slides-frame_w07.qmd": {
+    "slides-frame_w07.html": "f138253d"
+  },
+  "materials/slides-frame/slides-frame_w08.qmd": {
+    "slides-frame_w08.html": "cd228fb0"
+  },
+  "materials/slides/draft_w1.qmd": {
+    "draft_w1.html": "29d07766"
   }
 }

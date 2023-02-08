@@ -5,15 +5,15 @@ abstract: "{{< var topic-abstract.w1 >}}"
 abstract-title: "Description"
 ---
 
-### Readings
+#### Readings
 
-#### Textbook readings
+**Textbook readings**
 
 - **{{< var ROS >}}**:    Chapters 1 and 2
 - **{{< var TSD >}}**:    Chapters 1, 2 and 3 ("Foundations")
 - **{{< var R4DS >}}**:   Chapters 1-10 ("Whole game")
 
-#### Intuition building
+**Intuition building**
 
 - Jaynes, E. T. (2003). *Probability theory: The logic of science*. Cambridge University Press ([available via the NU library](https://libsearch.ncl.ac.uk/permalink/f/1jraif3/NCL_ALMA21127570270002411))
   - Preface: pp. xix-xxvii
