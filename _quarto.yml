@@ -20,8 +20,8 @@ format:
 #    toc-location: left
 #    citation-location: margin
 
-execute:
-  freeze: auto
+# execute:
+#   freeze: auto
 
 #bibliography: hss8005.bib
 #suppress-bibliography: true

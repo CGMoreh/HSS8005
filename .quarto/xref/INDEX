@@ -403,5 +403,8 @@
   },
   "materials/worksheets/worksheets_w02.qmd": {
     "worksheets_w02.html": "5bcc0e0f"
+  },
+  "materials/slides/w2.qmd": {
+    "w2.html": "caa5c054"
   }
 }
