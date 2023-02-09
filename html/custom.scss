@@ -429,10 +429,10 @@ p.tight {
 .task::before {
     background-image: url(./files/img/task.png);
     content: "";
-    background-size: 120px 130px;
-    width: 120px;
-    height: 130px;
-    top: 50px;
+    background-size: 90px 100px;
+    width: 90px;
+    height: 100px;
+    top: 2%;
     left: 10px;
     position: absolute;
 }
@@ -469,10 +469,10 @@ p.tight {
 .discuss::before {
     background-image: url("./files/img/group_discuss.png");
     content: "";
-    background-size: 120px 130px;
-    width: 120px;
-    height: 130px;
-    top: 50px;
+    background-size: 90px 110px;
+    width: 90px;
+    height: 110px;
+    top: 2%;
     left: 10px;
     position: absolute;
 }

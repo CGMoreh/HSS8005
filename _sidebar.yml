@@ -98,14 +98,4 @@ website:
               #file: materials/worksheets/worksheets_w08.qmd
             - text: "Handout"
               file: materials/handouts/handouts-frame_w08.qmd
-    
-    - title: "Data"
-      contents:
-        - text: "Data dictionaries"
-          file: data/index.qmd
-        - "---"
-        - text: "Data 1"
-          file: data/data1.qmd
-        - text: "Data 2"
-          file: data/data2.qmd
 

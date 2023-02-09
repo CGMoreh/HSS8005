@@ -400,5 +400,8 @@
   },
   "data/data-documentation.qmd": {
     "data-documentation.html": "79c8c13c"
+  },
+  "materials/worksheets/worksheets_w02.qmd": {
+    "worksheets_w02.html": "5bcc0e0f"
   }
 }

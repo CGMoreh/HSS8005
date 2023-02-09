@@ -1,0 +1,160 @@
+---
+title: "Week 2 Computer Lab Worksheet"
+subtitle: "{{< var lab.w2 >}}"
+author: "{{< var author >}}"
+---
+
+## Aims
+
+This session introduces simple and multiple linear regression models. You will be working with data from @Osterman2021CanWeTrustEducationFostering to replicate parts their analysis. We will be covering only basic regression methods in this session, so the article will serve mainly as a broad background to the data here. We will be returning to this article in future weeks too, expanding our modelling strategy as we discover new methods. We will also practice some data management tasks and the basics of data visualisation using principles from 'the **g**rammar of **g**raphics' as implemented in the [`ggplot2()`](https://ggplot2.tidyverse.org/) package (see Kieran Healy's [*Data Visualization: A practical introduction*](https://socviz.co/) for an introduction with many practical examples).
+
+By the end of the session, you will:
+
+- learn how to import data from foreign formats (e.g. SPSS, Stata, CSV)
+- know how to perform basic descriptive statistics on a dataset
+- understand the basics of data visualisation
+- know how to fit linear regression models in `R` using different functions
+- learn a few options for presenting findings from regression models
+
+## Setup
+
+In Week 1 you set up `R` and `RStudio`, and an **RProject** folder (we called it "HSS8005_labs") with an `.R` script and a `.qmd` or `.Rmd` document in it (we called these "Lab_1"). Ideally, you saved this on a cloud drive so you can access it from any computer (e.g. OneDrive). You will be working in this folder. If it's missing, complete [Task 2 from the Week 1 Lab](https://cgmoreh.github.io/HSS8005/materials/worksheets/worksheets_w01.html#task-2-set-up-a-new-r-project-with-an-.r-script-and-a-.qmd-document-included).
+
+You can create a new `.R` script and `.qmd`/`.Rmd` for this week's work (e.g. "Lab_2"). Start working in the `.R` script initially, then switch to `.qmd`/`.Rmd` later in the session to report on your final analysis.
+
+## Importing data
+
+As we have seen in Week 1, small datasets that are included in R packages (including base R) for demonstration purposes can be used by simply invoking the name of the dataset. For example, the command `head(mtcars)` would print out the first 5 rows (cases) in the "mtcars" dataset included in base R (more specifically, in its "datasets" package):
+
+```{r}
+head(mtcars)
+```
+
+::: {.callout-tip}
+
+The `data()` function lists all the built-in packages. You can further specify `package =` to list datasets included in a given package; e.g.:
+
+```{r}
+#| eval=FALSE
+data(package = "dplyr")
+
+# Note that {dplyr} is one of the data management packages included in the core {tidyverse}. Make sure the {tidyverse} is installed.
+```
+
+:::
+
+We can also import built-in datasets to our Environment in order to inspect them manually:
+
+```{r}
+mtcars_data <- mtcars
+```
+
+If we want to access a dataset from a non-base-R package, we need to ensure that the package is installed on our system and that we specify the name of the package; e.g.:
+
+```{r}
+#| error: true
+
+head(starwars) # gives an Error
+
+head(dplyr::starwars)
+  # works, as long as {dplyr} or the whole {tidyverse} are installed
+```
+
+Real-life datasets, however, need to be imported into R. Datasets come in various formats. R's native data format has the extension `.rds` and can be imported with the `readRDS()` function. The counterpart function `saveRDS()` exports a dataset to the `.rds` format. The core-tidyverse [{readr}](https://readr.tidyverse.org/index.html) package has similar functions (`read_rds()` / `write_rds()`).
+
+The `.rds` format is useful because it can be compressed to various sizes to take up less space, but can only be directly opened in `R`. It is much more common to encounter data saved in a "delimited" text format, which can be easily opened in a spreadsheet viewer/editor such as Excel. This makes it very interchangeable and therefore very common. The most common is probably the "comma separated values" (`.csv`) format, which can be imported with the base-R function `read.csv()` or the tidyverse `readr::read_csv()` equivalent. Read Chapter 11 in [R4DS](https://r4ds.had.co.nz/data-import.html) for more on these functions.
+
+Very often, you will need to import data saved in the format of another proprietary statistical analysis package such as SPSS or Stata. Large survey projects usually make data available in these formats. The great advantage of these formats is that they can incorporate additional information about variables and the levels of categorical variables (e.g. value labels, specific values for different types of missing values). These additional information can be extremely valuable, but they are not handled straight-forwardly in text-based format, spreadsheets and R's native data format. To make them operational in R, we need a few specially designed functions.
+
+The [{haven}](https://haven.tidyverse.org/index.html) package --- part of the extended {tidyverse}, meaning that it is installed on your system as part of {tidyverse}, but the `library("tidyverse")` command does not load it by default; it needs to be loaded explicitly --- is one of the most commonly used for this purpose. Functions such as `read_sas()`, `read_sav()` and `read_dta()` import datasets specific to the SAS, SPSS and Stata programs, respectively.
+
+It is highly recommended to read the documentation available for the [{haven}](https://haven.tidyverse.org/index.html) package to understand how it operates. Fundamentally, it is designed to import data to a intermediary format which stores the additional labeling information in a special format that allows users to access them, but not making them easy to use directly. A [suite of packages developed by Daniel Lüdecke](https://strengejacke.r-universe.dev/builds) from the University of Hamburg offer some additional functionality to work with labels directly when summarising and plotting data. These packages integrate well with the {tidyverse} and are actively maintained, and we will use them in this course to make our lives a bit easier. To install them, run:
+```{r}
+#| eval: false
+#| results: hold
+
+# We can install several packages at once by first creating a vector of their names
+
+sj_packages <- c("sjlabelled", "sjPlot", "sjstats", "ggeffects", "sjmisc")
+
+install.packages(sj_packages)
+```
+
+The functions `sjlabelled::read_sas()`, `sjlabelled::read_spss()` and `sjlabelled::read_stata()` are the {sjlabelled} equivalents of the {haven} functions mentioned above. [This vignette article](https://strengejacke.github.io/sjlabelled/articles/intro_sjlabelled.html) included with the package explains the main differences between the two.
+
+As a first step, let's import the **osterman** dataset that underpins the @Osterman2021CanWeTrustEducationFostering article (see the [Data page](https://cgmoreh.github.io/HSS8005/data/) on the course website for information about the datasets available in this course):
+
+```{r}
+#| output: false
+osterman <- sjlabelled::read_stata("https://cgmoreh.github.io/HSS8005/data/osterman.dta")
+```
+
+:::{.task}
+
+Using functions learnt in Week 1, do the following:
+
+1. check the dimensions of the dataset; what does it tell you?
+2. print a summary of the entire dataset; what have you learnt about the data?
+:::
+
+A very convenient way to create a codeplan for a dataset -- especially if it has value-labelled categorical variables -- is offered by the `sjPlot::view_df()` function, which produces a tables in HTML format that can be saved and consulted to get more information about the variables. With the default settings, we get the following:
+
+```{r}
+#| eval: false
+
+sjPlot::view_df(osterman)
+
+```
+
+The output opens up in the Viewer pane.
+
+There are several additional options that can add useful complexity to the codeplan, as well as the option to restrict it to selected variables. It also works in a "piper" workflow, so it can be combined with {dplyr} verbs such as select to restrict variables beforehand in a more flexible way. Below we request a codeplan with extended options:
+
+```{r}
+#| eval: false
+
+sjPlot::view_df(osterman,
+                show.na = TRUE, 
+                show.type = TRUE, 
+                show.frq = TRUE, 
+                show.prc = TRUE, 
+                show.string.values = TRUE)
+```
+
+The output can also be opened in an external web browser window by clicking on the third (last) icon at the top of the Viewer toolbar. From the browser window, with a `Ctrl + Right-click > Save as...` we can save the table as an HTML document locally and use it as a reference.
+
+:::{.task}
+
+Before moving forward, spend some time examining the codeplan that you have produced and if you haven't yet had a chance to skim through the @Osterman2021CanWeTrustEducationFostering article, have a quick read through their description of the dataset.
+:::
+
+
+## Exercise 1: Create some basic descriptive graphs using the `ggplot()` command from the {ggplot2} tidyverse package for the associaton between the following variables:
+1. ‘trustindex3’ and ‘eduyrs25’
+2. ‘trustindex3’ and ‘agea’
+3. ‘trustindex3’ and ‘female’
+
+
+## Exercise 2: What factors affect trust?
+
+Fit three simple bivariate OLS regressions using the `lm()` function:
+
+1. Regress ‘trustindex3’ on ‘eduyrs25’ and interpret the results
+2. Regress ‘trustindex3’ on ‘agea’ and interpret the results
+3. Regress ‘trustindex3’ on ‘female’ and interpret the results
+4. Regress ‘trustindex3’ on all three predictors listed above and interpret the results
+
+## (Advanced) Exercise 3: Apply the model to a new dataset
+
+The **ostermann** data originates from Waves 1-9 of the European Social Survey. The ESS data are accessible freely upon registration. As part of this exercise, access data from Wave 10 of the survey (from this site: https://www.europeansocialsurvey.org/data/) and perform the following tasks:
+
+- download the dataset to the Rproject folder
+- select the variables required to recreate the data to fit the multiple regression model from the previous exercise
+- create your version of the ‘trustindex3’ variable
+- fit the models from Exercise 2 and copare the results.
+
+You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. You will likely need to continue the task outside class. If you succeed in complating the Task, in Week 3 we can compare results.
+
+
+
+

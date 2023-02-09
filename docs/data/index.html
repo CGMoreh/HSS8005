@@ -73,7 +73,7 @@ div.csl-indent {
 <link rel="stylesheet" href="../html/nobiblio.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,50 +117,18 @@ div.csl-indent {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Data documentation</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../data/index.html" class="sidebar-item-text sidebar-link active">Data dictionaries</a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../data/data1.qmd" class="sidebar-item-text sidebar-link">Data 1</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../data/data2.qmd" class="sidebar-item-text sidebar-link">Data 2</a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Data documentation</h1>
+<h1 class="title">Data documentation</h1>
 </div>
 
 
@@ -175,13 +143,13 @@ div.csl-indent {
 
 </header>
 
-<p>The datasets listed in the table below can be read into <code>R</code> from <code>"https://cgmoreh.github.io/HSS8005/data/___"</code> (replacing ___ with “File name”).</p>
+<p>The datasets listed in the table below can be read into <code>R</code> from <code>"https://cgmoreh.github.io/HSS8005/data/___"</code> (using a type-appropriate read function and replacing ___ with “File name” and “Type” extension; e.g.&nbsp;<code>dataset &lt;- haven::read_dta("https://cgmoreh.github.io/HSS8005/data/dataset.dta")</code>).</p>
 <div class="cell">
 
 </div>
 <div class="text-xm">
 
-<table class="table" style="margin-left: auto; margin-right: auto;">
+<table class="table table-condensed table-hover" style="font-size: 14px; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -206,43 +174,43 @@ Access
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;width: 10%; ">
+<td style="text-align:left;width: 10%; vertical-align:top;">
 osterman
 </td>
-<td style="text-align:left;width: 18%; ">
+<td style="text-align:left;width: 18%; vertical-align:top;">
 Replication_data_ESS1-9_20201113
 </td>
-<td style="text-align:left;width: 5%; ">
+<td style="text-align:left;width: 5%; vertical-align:top;">
 .dta
 </td>
-<td style="text-align:left;width: 5%; ">
+<td style="text-align:left;width: 5%; vertical-align:top;">
 NA
 </td>
-<td style="text-align:left;width: 45%; ">
+<td style="text-align:left;width: 45%; vertical-align:top;">
 Replication data for <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#ref-Osterman2021CanWeTrustEducationFostering" role="doc-biblioref">2021</a>)</span>, based on European Social Survey Rounds 1-9 data
 </td>
 <td style="text-align:left;">
-<a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA">Source</a> <br> Questionnaire <br> <a href="">Codebook</a>
+<a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA">Source</a>
 </td>
 </tr>
 <tr>
-<td style="text-align:left;width: 10%; ">
+<td style="text-align:left;width: 10%; vertical-align:top;">
 LaddLenz
 </td>
-<td style="text-align:left;width: 18%; ">
+<td style="text-align:left;width: 18%; vertical-align:top;">
 LaddLenz
 </td>
-<td style="text-align:left;width: 5%; ">
+<td style="text-align:left;width: 5%; vertical-align:top;">
 .dta
 </td>
-<td style="text-align:left;width: 5%; ">
+<td style="text-align:left;width: 5%; vertical-align:top;">
 NA
 </td>
-<td style="text-align:left;width: 45%; ">
+<td style="text-align:left;width: 45%; vertical-align:top;">
 Replication data for <span class="citation" data-cites="LaddLenz2009ExploitingRareCommunicationShiftDocument">Ladd and Lenz (<a href="#ref-LaddLenz2009ExploitingRareCommunicationShiftDocument" role="doc-biblioref">2009</a>)</span>, based on British Election Panel Study data. Included in <span class="citation" data-cites="Hainmueller2012EntropyBalancingCausalEffectsMultivariate">Hainmueller (<a href="#ref-Hainmueller2012EntropyBalancingCausalEffectsMultivariate" role="doc-biblioref">2012</a>)</span>
 </td>
 <td style="text-align:left;">
-<a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/16077">Source</a> <br> Questionnaire <br> <a href="">Codebook</a>
+<a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/16077">Source</a>
 </td>
 </tr>
 </tbody>

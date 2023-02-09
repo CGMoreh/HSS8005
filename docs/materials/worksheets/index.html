@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -83,9 +102,10 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<link rel="stylesheet" href="../../html/nobiblio.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../materials/index.html">
+    <a class="nav-link active" href="../../materials/index.html" aria-current="page">
  <span class="menu-text">Materials</span></a>
   </li>  
   <li class="nav-item">
@@ -129,15 +149,234 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/index.html" class="sidebar-item-text sidebar-link">Weekly materials</a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../materials/info/info_w01.html" class="sidebar-item-text sidebar-link">Week 1</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  Notes
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/slides-frame/slides-frame_w01.html" class="sidebar-item-text sidebar-link">Presentation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/worksheets/worksheets_w01.html" class="sidebar-item-text sidebar-link">Worksheet</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/handouts/handouts-frame_w01.html" class="sidebar-item-text sidebar-link">Handout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../materials/info/info_w02.html" class="sidebar-item-text sidebar-link">Week 2</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  Notes
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/slides-frame/slides-frame_w02.html" class="sidebar-item-text sidebar-link">Presentation</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  Worksheet
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/handouts/handouts-frame_w02.html" class="sidebar-item-text sidebar-link">Handout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../materials/info/info_w03.html" class="sidebar-item-text sidebar-link">Week 3</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  Notes
+  </li>
+          <li class="sidebar-item">
+  Presentation
+  </li>
+          <li class="sidebar-item">
+  Worksheet
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/handouts/handouts-frame_w03.html" class="sidebar-item-text sidebar-link">Handout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../materials/info/info_w04.html" class="sidebar-item-text sidebar-link">Week 4</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  Notes
+  </li>
+          <li class="sidebar-item">
+  Presentation
+  </li>
+          <li class="sidebar-item">
+  Worksheet
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/handouts/handouts-frame_w04.html" class="sidebar-item-text sidebar-link">Handout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../materials/info/info_w05.html" class="sidebar-item-text sidebar-link">Week 5</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  Notes
+  </li>
+          <li class="sidebar-item">
+  Presentation
+  </li>
+          <li class="sidebar-item">
+  Worksheet
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/handouts/handouts-frame_w05.html" class="sidebar-item-text sidebar-link">Handout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../materials/info/info_w06.html" class="sidebar-item-text sidebar-link">Week 6</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  Notes
+  </li>
+          <li class="sidebar-item">
+  Presentation
+  </li>
+          <li class="sidebar-item">
+  Worksheet
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/handouts/handouts-frame_w06.html" class="sidebar-item-text sidebar-link">Handout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../materials/info/info_w07.html" class="sidebar-item-text sidebar-link">Week 7</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  Notes
+  </li>
+          <li class="sidebar-item">
+  Presentation
+  </li>
+          <li class="sidebar-item">
+  Worksheet
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/handouts/handouts-frame_w07.html" class="sidebar-item-text sidebar-link">Handout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../materials/info/info_w08.html" class="sidebar-item-text sidebar-link">Week 8</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  Notes
+  </li>
+          <li class="sidebar-item">
+  Presentation
+  </li>
+          <li class="sidebar-item">
+  Worksheet
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/handouts/handouts-frame_w08.html" class="sidebar-item-text sidebar-link">Handout</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
+
 
 
 
@@ -162,18 +401,7 @@ Reading Time
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-listing-file-modified-sort="1674057857133" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 2 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w02.qmd">
-<td class="listing-title">
-<a href="../../materials/worksheets/draft-worksheets_w02.html" class="title">Week 2 Computer Lab Worksheet</a>
-</td>
-<td class="listing-abstract">
-<p></p>
-</td>
-<td class="listing-reading-time">
-0 min
-</td>
-</tr>
-<tr data-index="1" data-listing-file-modified-sort="1674057857136" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 3 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w03.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1674057857136" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 3 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w03.qmd">
 <td class="listing-title">
 <a href="../../materials/worksheets/draft-worksheets_w03.html" class="title">Week 3 Computer Lab Worksheet</a>
 </td>
@@ -184,7 +412,7 @@ Reading Time
 0 min
 </td>
 </tr>
-<tr data-index="2" data-listing-file-modified-sort="1674057857139" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 4 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w04.qmd">
+<tr data-index="1" data-listing-file-modified-sort="1674057857139" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 4 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w04.qmd">
 <td class="listing-title">
 <a href="../../materials/worksheets/draft-worksheets_w04.html" class="title">Week 4 Computer Lab Worksheet</a>
 </td>
@@ -195,7 +423,7 @@ Reading Time
 0 min
 </td>
 </tr>
-<tr data-index="3" data-listing-file-modified-sort="1674057857142" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 5 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w05.qmd">
+<tr data-index="2" data-listing-file-modified-sort="1674057857142" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 5 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w05.qmd">
 <td class="listing-title">
 <a href="../../materials/worksheets/draft-worksheets_w05.html" class="title">Week 5 Computer Lab Worksheet</a>
 </td>
@@ -206,7 +434,7 @@ Reading Time
 0 min
 </td>
 </tr>
-<tr data-index="4" data-listing-file-modified-sort="1674057857145" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 6 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w06.qmd">
+<tr data-index="3" data-listing-file-modified-sort="1674057857145" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 6 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w06.qmd">
 <td class="listing-title">
 <a href="../../materials/worksheets/draft-worksheets_w06.html" class="title">Week 6 Computer Lab Worksheet</a>
 </td>
@@ -217,7 +445,7 @@ Reading Time
 0 min
 </td>
 </tr>
-<tr data-index="5" data-listing-file-modified-sort="1674057857148" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 7 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w07.qmd">
+<tr data-index="4" data-listing-file-modified-sort="1674057857148" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 7 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w07.qmd">
 <td class="listing-title">
 <a href="../../materials/worksheets/draft-worksheets_w07.html" class="title">Week 7 Computer Lab Worksheet</a>
 </td>
@@ -228,7 +456,7 @@ Reading Time
 0 min
 </td>
 </tr>
-<tr data-index="6" data-listing-file-modified-sort="1674057857151" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 8 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w08.qmd">
+<tr data-index="5" data-listing-file-modified-sort="1674057857151" data-listing-reading-time-sort="0.005" data-listing-title-sort="Week 8 Computer Lab Worksheet" data-listing-filename-sort="draft-worksheets_w08.qmd">
 <td class="listing-title">
 <a href="../../materials/worksheets/draft-worksheets_w08.html" class="title">Week 8 Computer Lab Worksheet</a>
 </td>
@@ -239,7 +467,7 @@ Reading Time
 0 min
 </td>
 </tr>
-<tr data-index="7" data-listing-file-modified-sort="1675309505890" data-listing-reading-time-sort="27.51" data-listing-title-sort="Week 1 Computer Lab Worksheet" data-listing-filename-sort="worksheets_w01.qmd">
+<tr data-index="6" data-listing-file-modified-sort="1675916426353" data-listing-reading-time-sort="27.51" data-listing-title-sort="Week 1 Computer Lab Worksheet" data-listing-filename-sort="worksheets_w01.qmd">
 <td class="listing-title">
 <a href="../../materials/worksheets/worksheets_w01.html" class="title">Week 1 Computer Lab Worksheet</a>
 </td>
@@ -249,13 +477,45 @@ Reading Time
 27 min
 </td>
 </tr>
+<tr data-index="7" data-listing-file-modified-sort="1675934189411" data-listing-reading-time-sort="7.54" data-listing-title-sort="Week 2 Computer Lab Worksheet" data-listing-filename-sort="worksheets_w02.qmd">
+<td class="listing-title">
+<a href="../../materials/worksheets/worksheets_w02.html" class="title">Week 2 Computer Lab Worksheet</a>
+</td>
+<td class="listing-abstract">
+</td>
+<td class="listing-reading-time">
+7 min
+</td>
+</tr>
 </tbody>
 
 </table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-david1955" class="csl-entry" role="doc-biblioentry">
+David, F. N. 1955. <span>“Studies in the History of Probability and Statistics i. Dicing and Gaming (a Note on the History of Probability).”</span> <em>Biometrika</em> 42 (1/2): 1–15. <a href="https://doi.org/10.2307/2333419">https://doi.org/10.2307/2333419</a>.
+</div>
+<div id="ref-el-shagi2015" class="csl-entry" role="doc-biblioentry">
+El-Shagi, Makram, and Alexander Jung. 2015. <span>“Have Minutes Helped Markets to Predict the MPC’s Monetary Policy Decisions?”</span> <em>European Journal of Political Economy</em> 39 (September): 222–34. <a href="https://doi.org/10.1016/j.ejpoleco.2015.05.004">https://doi.org/10.1016/j.ejpoleco.2015.05.004</a>.
+</div>
+<div id="ref-gelman2020" class="csl-entry" role="doc-biblioentry">
+Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. <em>Regression and other stories</em>. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1017/9781139161879">https://doi.org/10.1017/9781139161879</a>.
+</div>
+<div id="ref-lord1958" class="csl-entry" role="doc-biblioentry">
+Lord, R. D. 1958. <span>“Studies in the History of Probability and Statistics.: VIII. De Morgan and the Statistical Study of Literary Style.”</span> <em>Biometrika</em> 45 (1/2): 282–82. <a href="https://doi.org/10.2307/2333072">https://doi.org/10.2307/2333072</a>.
+</div>
+<div id="ref-McElreath2020StatisticalRethinkingBayesianCourseExamples" class="csl-entry" role="doc-biblioentry">
+McElreath, Richard. 2020. <em>Statistical Rethinking: A <span>Bayesian</span> Course with Examples in <span>R</span> and <span>Stan</span></em>. Second. <span>CRC</span> Texts in Statistical Science. <span>Boca Raton</span>: <span>Taylor and Francis, CRC Press</span>.
+</div>
+<div id="ref-mulvin2021" class="csl-entry" role="doc-biblioentry">
+Mulvin, Dylan. 2021. <em>Proxies: The Cultural Work of Standing in</em>. Infrastructures Series. Cambridge, Massachusetts: The MIT Press.
+</div>
+<div id="ref-senn2003" class="csl-entry" role="doc-biblioentry">
+Senn, Stephen. 2003. <span>“A Conversation with John Nelder.”</span> <em>Statistical Science</em> 18 (1): 118–31. <a href="https://doi.org/10.1214/ss/1056397489">https://doi.org/10.1214/ss/1056397489</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

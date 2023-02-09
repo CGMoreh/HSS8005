@@ -1,60 +1,48 @@
 ---
 title: "Data documentation"
 page-layout: full
+toc: false
+sidebar: false
 execute:
   echo: false
 bibliography: references.bib
 css: ../html/nobiblio.css
 ---
 
-The datasets listed in the table below can be read into `R` from `"https://cgmoreh.github.io/HSS8005/data/___"` (replacing ___ with "File name").
+The datasets listed in the table below can be read into `R` from `"https://cgmoreh.github.io/HSS8005/data/___"` (using a type-appropriate read function and replacing ___ with "File name" and "Type" extension; e.g. `dataset <- haven::read_dta("https://cgmoreh.github.io/HSS8005/data/dataset.dta")`).
 
 ```{r}
 # Table contents
 
 library("tibble")
 library("kableExtra")
-# library("reactable")
-
-headings <- c("File name", "Original name", "Type", "Version", "Description", "Access")
-
-osterman_1 <- "osterman"
-
+# library("reactable") # maybe add searchability to the table
 
 content <- tribble(
   ~"File name", ~"Original name", ~"Type", ~"Version", ~"Origin", ~"Access",
   # datasets
   "osterman", "Replication_data_ESS1-9_20201113", ".dta", NA, 
       "Replication data for @Osterman2021CanWeTrustEducationFostering, based on European Social Survey Rounds 1-9 data",
-      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA)",
-            "<br>",
-            "Questionnaire",
-            "<br>",
-            "[Codebook]()"),
+      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA)" ), # add <br> and more link lines where available
   "LaddLenz", "LaddLenz", ".dta", NA,
       "Replication data for @LaddLenz2009ExploitingRareCommunicationShiftDocument, based on British Election Panel Study data. Included in @Hainmueller2012EntropyBalancingCausalEffectsMultivariate",
-      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/16077)",
-            "<br>",
-            "Questionnaire",
-            "<br>",
-            "[Codebook]()")
+      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/16077)")
 )
 
 content2 <- content |> 
   kbl(escap = FALSE) |> 
-  kable_styling() |>
-  column_spec(1, width = "10%") |>  
-  column_spec(2, width = "18%") |>  
-  column_spec(3, width = "5%") |>  
-  column_spec(4, width = "5%") |>  
-  column_spec(5, width = "45%")
+  kable_styling(bootstrap_options = c("condensed","hover"),
+                font_size = 14) |>
+  column_spec(1, width = "10%", extra_css = "vertical-align:top;") |>  
+  column_spec(2, width = "18%", extra_css = "vertical-align:top;") |>  
+  column_spec(3, width = "5%", extra_css = "vertical-align:top;") |>  
+  column_spec(4, width = "5%", extra_css = "vertical-align:top;") |>  
+  column_spec(5, width = "45%", extra_css = "vertical-align:top;")
 
 ```
 
 ::: text-xm
 ```{r results="asis"}
-
 cat(content2)
-
 ```
 :::
