@@ -86,7 +86,7 @@ As a first step, let's import the **osterman** dataset that underpins the @Oster
 
 ```{r}
 #| output: false
-osterman <- sjlabelled::read_stata("https://cgmoreh.github.io/HSS8005/data/osterman.dta")
+osterman <- sjlabelled::read_stata("https://cgmoreh.github.io/HSS8005-data/osterman.dta")
 ```
 
 :::{.task}

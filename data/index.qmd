@@ -9,7 +9,7 @@ bibliography: references.bib
 css: ../html/nobiblio.css
 ---
 
-The datasets listed in the table below can be read into `R` from `"https://cgmoreh.github.io/HSS8005/data/___"` (using a type-appropriate read function and replacing ___ with "File name" and "Type" extension; e.g. `dataset <- haven::read_dta("https://cgmoreh.github.io/HSS8005/data/dataset.dta")`).
+The datasets listed in the table below can be read into `R` from `"https://cgmoreh.github.io/HSS8005-data/___"` (using a type-appropriate read function and replacing ___ with "File name" and "Type" extension; e.g. `dataset <- haven::read_dta("https://cgmoreh.github.io/HSS8005-data/dataset.dta")`).
 
 ```{r}
 # Table contents

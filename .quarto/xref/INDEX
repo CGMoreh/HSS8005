@@ -406,5 +406,8 @@
   },
   "materials/slides/w2.qmd": {
     "w2.html": "caa5c054"
+  },
+  "materials/slides/draft_w2.qmd": {
+    "draft_w2.html": "a11315fb"
   }
 }
