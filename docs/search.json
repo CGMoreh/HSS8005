@@ -61,5 +61,145 @@
     "title": "Week 2 Computer Lab Worksheet",
     "section": "(Advanced) Exercise 3: Apply the model to a new dataset",
     "text": "(Advanced) Exercise 3: Apply the model to a new dataset\nThe ostermann data originates from Waves 1-9 of the European Social Survey. The ESS data are accessible freely upon registration. As part of this exercise, access data from Wave 10 of the survey (from this site: https://www.europeansocialsurvey.org/data/) and perform the following tasks:\n\ndownload the dataset to the Rproject folder\nselect the variables required to recreate the data to fit the multiple regression model from the previous exercise\ncreate your version of the ‘trustindex3’ variable\nfit the models from Exercise 2 and copare the results.\n\nYou should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. You will likely need to continue the task outside class. If you succeed in complating the Task, in Week 3 we can compare results."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "Quantitative analysis \n        \n        \n            HSS8005 • Intermediate/Advanced stream • 2023\nNewcastle University (UK)\n        \n        \n            A second course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary audience through real-life research examples from various fields in the social sciences and humanities. The course emphasizes the scientific application of statistical methods, developing a reproducible research workflow, and computational techniques.\n        \n    \n\n\n\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh@newcastle.ac.uk\n   Tutorial booker\n \n\n\n\nTeaching Assistants\n\n   Bilal Alsharif\n   Fengting Du\n\n\n\n\n\nSession dates\n\n   Thursdays\n    Check on your Timetable app\n   Lecture: 10:00-11:30\n   Labs:   13:00-14:30 (Group 03)        14:30-16:00 (Group 04)  \n\n\n\nAssessment\n\n   26th April 2023\n   3,500-word long research report\n   Submit to Turnitin via Canvas\n\n\n\n\n Chris’s mastodon feed\nwhere he posts stuff of interest to #HSS8005\n\n\n\n\n\n\nModule overview\nThis module is offered by School X - Researcher Education and Development to postgraduate students within the Faculty of Humanities and Social Sciences at Newcastle University. The module aims to provide a broad applied introduction to more advanced methods in quantitative analysis for students from various disciplinary backgrounds. See the module plan page for details about the methods covered. The course content consists of eight lectures (1.5 hours each) and eight IT labs (1.5 hours) . The course stands on three pillars: application, reproducibility and computation.\nApplication: we will work with real data originating from large-scale representative surveys or published research, with the aim of applying methods to concrete research scenarios. IT lab exercises will involve reproducing small bits of published research, using the data and (critically) the modelling approaches used by the authors. The aim is to see how methods have been used in practice in various disciplines and learn how to reproduce (and potentially improve) those analyses. This will then enable students to apply this knowledge to their own research questions. The data used in IT labs may be cleansed to allow focusing more on modelling tasks than on data wrangling, but exercises will address some of the more common data manipulation challenges and will cover essential functions. Data cleansing scripts will also be provided so that interested students can use them in their own work.\nReproducibility: developing a reproducible workflow that allows your future self or a reviewer of your work to understand your process of analysis and reproduce your results is essential for reliable and collaborative scientific research. We enforce the ideas and procedures of reproducible research both through replicating published research (see above) and in our practice (in the IT labs and the assignment). For an overview of why it’s important to develop a reproducible workflow early on in your research career and how to do it using (some) of the tools used in this module, read Chapter 3 of TSD (see Resources>Readings). It’s also worth reading through Kieran Healy’s The Plain Person’s Guide to Plain Text Social Science, although there are now better software options than those discussed there. In this course, we will be using a suite of well-integrated free and open-source software to aid our reproducible workflow: the  statistical programming language and its currently most popular dialect – the {tidyverse} – via the  IDE for data analysis, and  for scientific writing and publishing (see Resources>Software).\nComputation: the development of computational methods underpins the application of the most important statistical ideas of the past 50 years (see Andrew Gelman’s article on these developments here or an online workshop talk here; Richard McElreath’s great talk on Science as Amateur Software Development is well worth watching too). This module aims to develop basic computational skills that allow the application of complex statistical models to practical scientific problems without advanced mathematical knowledge, and which lay the foundation on which students can then pursue further learning and research in computational humanities and social sciences.\n\nThe course and the website were written and are maintained by Chris Moreh. The source-code is available on  GitHub\n\n\nPrerequisites\nTo benefit the most from this module, students are expected to have a foundational level of knowledge in quantitative methods: a good understanding of data types and distributions, familiarity with inferential statistics, and some exposure to linear regression. This is roughly equivalent to the content covered in the Introductory stream of the module or a textbook such as OpenIntro Statistics (which you can download for free in PDF).\nThose who don’t feel completely up to date with linear regression but are determined to advance more quickly and read/practice beyond the compulsory material during weeks 1-3 are also encouraged to sign up.\nThose with a stronger background in multiple linear regression (e.g. students with undergraduate-level training in econometrics) will still benefit from weeks 1-3 as the approach we are taking is probably different from the one they are familiar with.\nNo previous knowledge of  or command-based statistical analysis software is needed. Gaining experience with using statistical software is part of the skills development aims of the module. However, it is not a general data science module, and the IT labs will cover a very limited number of functions (from both base R, the tidyverse and other reliable user-written packages) that are most useful for tackling specific analysis tasks. Students are advised to complete some additional self-paced free online training in the use of the software, such as Data Carpentry’s R for Social Scientists, and to consult Wickham, Çetinkaya-Rundel and Grolemund’s R for Data Science (2nd ed.) online book."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "References"
+  },
+  {
+    "objectID": "teachingResources.html",
+    "href": "teachingResources.html",
+    "title": "Readings",
+    "section": "",
+    "text": "Regression and Other Stories\nTelling Stories with Data\nMaximum Likelihood for Social Science\nBeyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R"
+  },
+  {
+    "objectID": "teachingResources.html#history-of-statistics",
+    "href": "teachingResources.html#history-of-statistics",
+    "title": "Readings",
+    "section": "History of statistics",
+    "text": "History of statistics\n\nGelman and Vehtari: What are the most important statistical ideas of the past 50 years?\n(Gelman and Vehtari 2021)\nLaplace’s Demon: https://www.stsci.edu/~lbradley/seminar/laplace.html\n\nHistory of games of chance and their relationship to divinity: https://www.britannica.com/topic/gambling/History; https://www.pokcas.com/the-origins-of-games-of-chance-how-gambling-has-evolved-over-5000-years/\nImage of Fisher’s crop fields: https://www.adelaide.edu.au/library/special/exhibitions/significant-life-fisher/rothamsted/Latin-squares_Beddgelert.png\nImage of Messi’s face in Argentine corn field: https://s2.reutersmedia.net/resources/r/?m=02&d=20230118&t=2&i=1620494870&w=&fh=545&fw=810&ll=&pl=&sq=&r=LYNXMPEJ0H0MG"
+  },
+  {
+    "objectID": "teachingResources.html#general-and-generalised-linear-models",
+    "href": "teachingResources.html#general-and-generalised-linear-models",
+    "title": "Readings",
+    "section": "General and Generalised Linear models",
+    "text": "General and Generalised Linear models\n\nI found this page on The General Linear Model (GLM) quite easy to read.\nAnd this one on [Generalised Linear Models](https://www.mygreatlearning.com/blog/generalized-linear-models/#:~:text=Generalized%20Linear%20Model%20(GLiM%2C%20or,other%20than%20a%20normal%20distribution.):\n\nWhat is a Generalized Linear Model?\nGeneralized Linear Model (GLiM, or GLM) is an advanced statistical modelling technique formulated by John Nelder and Robert Wedderburn in 1972. It is an umbrella term that encompasses many other models, which allows the response variable y to have an error distribution other than a normal distribution. The models include Linear Regression, Logistic Regression, and Poisson Regression.\nIn a Linear Regression Model, the response (aka dependent/target) variable ‘y’ is expressed as a linear function/linear combination of all the predictors ‘X’ (aka independent/regression/explanatory/observed variables). The underlying relationship between the response and the predictors is linear (i.e. we can simply visualize the relationship in the form of a straight line). Also, the error distribution of the response variable should be normally distributed. Therefore we are building a linear model.\nGLM models allow us to build a linear relationship between the response and predictors, even though their underlying relationship is not linear. This is made possible by using a link function, which links the response variable to a linear model. Unlike Linear Regression models, the error distribution of the response variable need not be normally distributed. The errors in the response variable are assumed to follow an exponential family of distribution (i.e. normal, binomial, Poisson, or gamma distributions). Since we are trying to generalize a linear regression model that can also be applied in these cases, the name Generalized Linear Models."
+  },
+  {
+    "objectID": "teachingResources.html#simulation-and-study-design",
+    "href": "teachingResources.html#simulation-and-study-design",
+    "title": "Readings",
+    "section": "Simulation and study design",
+    "text": "Simulation and study design\n\nhttps://iqss.github.io/prefresher/simulation.html#fnref27\nReinhart: RegressinatorR package\nData simulation in the context of multilevel regression and post-stratification: https://tellingstorieswithdata.com/15-mrp.html#simulation\nDesign and Analysis of Experiments and Observational Studies using R\nhttps://julianquandt.com/post/power-analysis-by-data-simulation-in-r-part-i/\nThe Survey Quality Predictor (SQP)"
+  },
+  {
+    "objectID": "teachingResources.html#causality",
+    "href": "teachingResources.html#causality",
+    "title": "Readings",
+    "section": "Causality",
+    "text": "Causality\n\nDAGs: Deffner, Dominik, Julia M. Rohrer, and Richard McElreath. 2022. ‘A Causal Framework for Cross-Cultural Generalizability’. Advances in Methods and Practices in Psychological Science 5(3):25152459221106370. doi: 10.1177/25152459221106366."
+  },
+  {
+    "objectID": "teachingResources.html#network-analysis",
+    "href": "teachingResources.html#network-analysis",
+    "title": "Readings",
+    "section": "Network analysis",
+    "text": "Network analysis\n\nhttps://ladal.edu.au/net.html\nhttps://bookdown.org/jdholster1/idsr/network-analysis.html"
+  },
+  {
+    "objectID": "teachingResources.html#hierarchies",
+    "href": "teachingResources.html#hierarchies",
+    "title": "Readings",
+    "section": "Hierarchies",
+    "text": "Hierarchies\n\nSadler, Michael E., and Christopher J. Miller. 2010. ‘Performance Anxiety: A Longitudinal Study of the Roles of Personality and Experience in Musicians’. Social Psychological and Personality Science 1(3):280–87. doi: 10.1177/1948550610370492.\n\ndata: musicdata.csv\nsource: https://github.com/proback/BeyondMLR/tree/master/data\nusage: https://bookdown.org/roback/bookdown-BeyondMLR/ch-multilevelintro.html#cs:music\n\nShakespeare, Austen, Bronte, Dickens data used in the context of multilevel modelling: https://tellingstorieswithdata.com/15-mrp.html#austen-bront%C3%AB-dickens-and-shakespeare\nDeffner, Dominik, Julia M. Rohrer, and Richard McElreath. 2022. ‘A Causal Framework for Cross-Cultural Generalizability’. Advances in Methods and Practices in Psychological Science 5(3):25152459221106370. doi: 10.1177/25152459221106366. - also use multilevel regression with post-stratification"
+  },
+  {
+    "objectID": "teachingResources.html#timelines",
+    "href": "teachingResources.html#timelines",
+    "title": "Readings",
+    "section": "Timelines",
+    "text": "Timelines\n\nBernal, James Lopez, Steven Cummins, and Antonio Gasparrini. 2017. ‘Interrupted Time Series Regression for the Evaluation of Public Health Interventions: A Tutorial’. International Journal of Epidemiology 46(1):348–55. doi: 10.1093/ije/dyw098.\n\ndata: sicily.rda\nsource: https://hbiostat.org/data/\nusage scripts: http://hbiostat.org/rmsc/genreg.html#complex-curve-fitting-example"
+  },
+  {
+    "objectID": "teachingResources.html#spacecraft",
+    "href": "teachingResources.html#spacecraft",
+    "title": "Readings",
+    "section": "Spacecraft",
+    "text": "Spacecraft\n\nSpatial regression models\nSpatial Data Science"
+  },
+  {
+    "objectID": "teachingResources.html#text-as-data",
+    "href": "teachingResources.html#text-as-data",
+    "title": "Readings",
+    "section": "Text as data",
+    "text": "Text as data\n\nMere words - Dorain Gray: https://www.gutenberg.org/files/174/174-h/174-h.htm#chap02\nMere words - Troilus: http://shakespeare.mit.edu/troilus_cressida/troilus_cressida.5.3.html\n\nText Mining with R: A Tidy Approach (Dissferent Austen data used: https://www.tidytextmining.com/tfidf.html)\nhttps://tellingstorieswithdata.com/16-text.html\nChris Bail: https://cbail.github.io/textasdata/"
+  },
+  {
+    "objectID": "teachingResources.html#classification-ml",
+    "href": "teachingResources.html#classification-ml",
+    "title": "Readings",
+    "section": "Classification, ML",
+    "text": "Classification, ML\n\nhttps://towardsdatascience.com/machine-learning-techniques-for-investigative-reporting-344d74f69f84 - a very interesting data analysis on Brexit voting prediction; unfortunately the dataset cannot be located, but may be reproducible from other sources."
+  },
+  {
+    "objectID": "teachingResources.html#intuition-building",
+    "href": "teachingResources.html#intuition-building",
+    "title": "Readings",
+    "section": "Intuition building",
+    "text": "Intuition building\n\nHamming, Richard W. 1997. The Art of Doing Science and Engineering: Learning to Learn. Amsterdam: Gordon and Breach.\nhttps://data-feminism.mitpress.mit.edu/\nMcElreath, Richard. 2020. Statistical Rethinking: A Bayesian Course with Examples in R and Stan. 2nd ed. Boca Raton: Taylor and Francis, CRC Press. - First two chapters freely available\nSmoking debate:\n\nSee “The book of Why” for the story of how Fisher in particular was involved in the sceptical resistance to linking tobacco with cancer\nAlex Reinhart: The history of “How to Lie with Smoking Statistics” - Daryll Huff’s involvement.\nSee also: Gelman, Andrew. 2012. ‘Ethics and Statistics: Statistics for Cigarette Sellers’. CHANCE 25(3):43–46. doi: 10.1080/09332480.2012.726563\n\nReinhart: Statistics done wrong"
+  },
+  {
+    "objectID": "teachingResources.html#r-style-guides",
+    "href": "teachingResources.html#r-style-guides",
+    "title": "Readings",
+    "section": "R style guides",
+    "text": "R style guides\n\nhttps://style.tidyverse.org/\nhttps://google.github.io/styleguide/Rguide.html"
+  },
+  {
+    "objectID": "teachingResources.html#project-management",
+    "href": "teachingResources.html#project-management",
+    "title": "Readings",
+    "section": "Project management",
+    "text": "Project management\n\nhttps://web.stanford.edu/~gentzkow/research/CodeAndData.pdf\nhttps://learningds.org/ch/01/lifecycle_intro.html\nReproducible, transparent, credible research: https://worldbank.github.io/dime-data-handbook/\nQuarto for Scientists"
+  },
+  {
+    "objectID": "teachingResources.html#data-sources",
+    "href": "teachingResources.html#data-sources",
+    "title": "Readings",
+    "section": "Data sources",
+    "text": "Data sources\n\nhttps://data.london.gov.uk/\nhttps://i4replication.org/reports.html\nAlgorithmic Bias - full data and code\nhttps://economics.mit.edu/people/faculty/josh-angrist/angrist-data-archive\nhttps://economics.mit.edu/people/faculty/josh-angrist/mhe-data-archive\nNorris, Pippa, 2020, “Global Party Survey, 2019”\nLarge-scale cross-cultural prosocial behaviour study:\n\nHouse, Bailey R., Patricia Kanngiesser, H. Clark Barrett, Tanya Broesch, Senay Cebioglu, Alyssa N. Crittenden, Alejandro Erut, Sheina Lew-Levy, Carla Sebastian-Enesco, Andrew Marcus Smith, Süheyla Yilmaz, and Joan B. Silk. 2020. ‘Universal Norm Psychology Leads to Societal Diversity in Prosocial Behaviour and Development’. Nature Human Behaviour 4(1):36–44. doi: 10.1038/s41562-019-0734-z.\nData analyised by (Deffner, Rohrer, and McElreath 2022)\n\nSimpson’s paradox:\n\nBickel, P. J., E. A. Hammel, and J. W. O’Connell. 1975. ‘Sex Bias in Graduate Admissions: Data from Berkeley’. Science 187(4175):398–404. doi: 10.1126/science.187.4175.398.\n\nhere - here\n\n\nLEGO bricksets:\n\nPeterson, Anna D., and Laura Ziegler. 2021. ‘Building a Multiple Linear Regression Model With LEGO Brick Data’. Journal of Statistics and Data Science Education 29(3):297–303. doi: 10.1080/26939169.2021.1946450.\nData and code: C:\\Users\\moreh\\OneDrive - Newcastle University\\DATA\\Peterson, Ziegler (2021) LEGO data"
+  },
+  {
+    "objectID": "resources/index.html",
+    "href": "resources/index.html",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "ReadingsSoftwareTrainingHelpOther\n\n\n\nTextbooks\nThe course does not strictly follow the content of a textbook, but the expectation is that students will read as much as possible of the assigned chapters from the following books:\n\n\n\n\n\n\n\n\n\nGelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. Regression and other stories. Cambridge: Cambridge University Press.  ROS\n\n\nFree to download PDF version from the book’s website: https://avehtari.github.io/ROS-Examples\n\n\n\n\n\n\n\nAlexander, Rohan. 2023. Telling Stories with Data. Chapman and Hall/CRC  TSD\n\n\nFree online book: https://tellingstorieswithdata.com\n\n\n\n\n\n\n\nGelman, A., and Hill, J. 2007. Data Analysis Using Regression and Multilevel/Hierarchical Models. Cambridge: Cambridge University Press.  ARM\n\n\nNote: ROS is the expanded and updated version of Part 1 (and some of Part 3) of this book. While everyone in the free world eagerly awaits the publication of ROS’s multilevel counterpart, we’ll use ARM as a reference work for the theory underpinning multilevel modelling.  Not freely available. Access it in print or online via the NU library\n\n\n\n\n\n\nRelatively large portions of text will be assigned for reading in each week from these books, referring to them by their acronyms. Don’t worry if you cannot read all the textbook content assigned in any given week! Those for whom the method covered by the assigned readings is new, will be able to refer back to them throughout the semester and beyond, reading thoroughly and completing the applied exercises. Those already familiar to some extent with the methods, should nonetheless read the text as a narrative and will discover hidden gems that will spectacularly improve their understanding and ability to interpret their statistical results.\n\n\nApplication\nIn the IT labs we will practice applying methods by reproducing small bits of published research, using the data and (critically) the modelling approaches used by the authors. To fully understand the context of these data and the methods used, you must read the original journal articles and the available supplementary materials provided alongside. These readings will be listed under each week’s outline (still work in progress!).\nThe articles come from a variety of different fields, so expect them to push you outside your disciplinary comfort zone. The point is to see how methods have been used in practice and learn how to reproduce (and potentially improve) those analyses. This will then enable you to apply this knowledge to your own research questions.\nWhen selecting the articles, the aim was to strike a fine balance between (a) the simplicity of the methods employed, (b) data and analytical transparency, and (c) the strength of the analysis. So don’t take them as examples of all-rounds best practice, but examples of research that gets published while being self-confident enough to open itself up for public scrutiny. Aim for this in your own research!\n\n\nTechnique\nThere will also be various readings relating more closely to the technicalities of coding in R and scientific writing, collaboration and communication in general. These readings will also be listed under each week’s outline as the semester progresses. The generic reading that students are advised to go through on their own is:\n\n\n\n\n\n\n\n\nWickham, Çetinkaya-Rundel and Grolemund. 2022. R for Data Science (2nd ed.)  R4DS\n\n\nFree online book: https://r4ds.hadley.nz/\n\n\n\n\n\n\n\nIntuition\nFinally, there will also be recommended readings listed under certain weeks that help place methods, statistics and probability theory in a broader frame. These are useful readings for everyone, regardless of whether you will be applying quantitative analysis in your research or future work.\n\n\n\n\nRequired software\nWe will use a number of open-source software for data analysis and scientific writing. You need to install these on your personal computers to be able to work away from campus:\n\n\n\n\nR\n(programming language)\nEssential\nR needs to be installed even if we will only use it via the RStudio interface.\nInstall the latest version from here\n\n\n\nRStudio\n(integrated development environment)\nEssential\nYou will need the free desktop version appropriate for your operating system. RStudio combines the R Console - the direct interface to R - with a number of other panels.\nInstall the latest version from here\n\n\n\nTidyverse\n(collection of R packages)\nEssential\nThe tidyverse is a collection of packages that make the R language easier to use by introducing a more consistent grammar. It provides functions that are particularly useful for data manipulation and visualisation. It is the most common ‘dialect’ used among social scientists.\nInstall from within RStudio by executing in the Console:\ninstall.packages(\"tidyverse\")\n\n\n\nQuarto\n(scientific publishing system)\nEssential\nWe will be using Quarto markdown documents (.qmd) throughout the course to document our data analysis. .qmd files extend the plain-text Markdown mark-up language (.md) to allow for data analysis code to be executed and results presented alongside the main text. This is an essential requirement for analytical transparency, reliability and reproducibility.The assignment will also be completed in .qmd.\nIncluded by default in the latest RStudio release; no need to install separately.\nYou can check your installation by executing in the RStudio Terminal :\nquarto check\n\n\n\nZotero\n(reference manager)\nRecommended\nIf you are not yet using a reference manager, I recommend giving Zotero a try. It will make your work much more efficient and it integrates (relatively well) with RMarkdown and Quarto using the the Better BibTeX add-on.\nInstall the latest version and add-ons from here\n\n\n\n\n\n\nStudents with no previous experience using R and/or RStudio are advised to complete the self-paced free online training course R for Social Scientists provided by Data Carpentry at https://datacarpentry.org/r-socialsci/\n\n\n\nThere are several ways to get help with R outside class. If you encounter an error message or are looking for a function to perform a specific task that we have not covered in class, you can do a Google search; for best results, use the https://rseek.org/ search engine, which limits the results to those relating to the R language.\nYou can also search for answers on Stack Overflow, which is a popular help and discussion website for programmers. You can also post a question there, but make sure to follow community standards and advice on how to ask a good question and how to provide a minimal reproducible example. You will need some experience using the site before being able to ask a good question, but it’s more than certain that any quesiton you have at this stage will have an answer already somewhere.\n\n\nAny further study resources will be listed here."
+  },
+  {
+    "objectID": "materials/index.html",
+    "href": "materials/index.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Materials for each week are available from the side menu. The table below outlines the weekly topics.\n\n\n\n\n\n\nWeekly topics\n\n\n\n\n\n\n\n\nWeek 1  Gamblers, God, Guinness and peas\n\n\nA brief history of statistics\n\n\n\n\nWeek 2  Revisiting Flatland\n\n\nA review of general linear models\n\n\n\n\nWeek 3  Dear Prudence, Help! I may be cheating with my X\n\n\nInteractions and the logic of causal inference\n\n\n\n\nWeek 4  The Y question\n\n\nGeneralised linear models\n\n\n\n\nWeek 5  Do we live in a simulation?\n\n\nBasic data simulation for statistical inference and power analysis\n\n\n\n\nWeek 6  Challenging hierarchies\n\n\nMultilevel models\n\n\n\n\nWeek 7  The unobserved\n\n\nLatent variables and structural models\n\n\n\n\nWeek 8  Words, words, mere words…\n\n\nText as data\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "assessment/index.html",
+    "href": "assessment/index.html",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "The final assignment is a 3,500-word long research report."
   }
 ]
