@@ -1,6 +1,7 @@
 ## ggplot slides theme
 
-library("tidyverse");
+library("tidyverse")
+library(ggExtra)
 
 theme_set(theme_light())
 
@@ -36,3 +37,5 @@ plot <- function(...) ggplot(...)  +
 
 
 #theme_set(t)
+
+

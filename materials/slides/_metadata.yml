@@ -33,3 +33,9 @@ format:
 # bibliography: references.bib
 course-logo: ./../../files/img/ncl_coa_hss8005.png
 #csl: ../../american-sociological-association.csl
+
+execute: 
+  warning: false
+  error: false
+  echo: true
+  

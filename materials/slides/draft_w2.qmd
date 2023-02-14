@@ -5,6 +5,7 @@ week-subtitle: "{{< var subtitle.w2 >}}"
 ---
 
 ```{r}
+#| include: false
 source("theme_slides.R")
 ```
 
@@ -49,18 +50,43 @@ What is the **Mean** of this dataset? What is its **standard deviation**?
 ## 
 
 ```{r}
-#| echo = TRUE
-y <- tibble(y)
+#| echo: false
+#| eval: false
+library(patchwork)
+
+ggplot(y, aes(x = y)) + scale_x_continuous(n.breaks = 20, limits = c(50, 200)) +
+  geom_boxplot() + theme_void() +
 ggplot(y, aes(x = y)) + 
-  geom_histogram() + scale_x_continuous(n.breaks = 20) + scale_y_continuous(n.breaks = 10)
+  geom_histogram() + scale_x_continuous(n.breaks = 20, limits = c(50, 200)) + scale_y_continuous(n.breaks = 10) +
+  geom_vline(aes(xintercept = median(y))) +
+#box + hist + 
+  plot_layout(nrow = 2, heights = c(0.2, 4))
 ```
+
+
+```{r}
+ggplot(y, aes(x = y)) + 
+  geom_histogram() + scale_x_continuous(n.breaks = 20) + scale_y_continuous(n.breaks = 10) +
+  geom_vline(aes(xintercept = median(y)))
+```
+
+
+```{r}
+y <- y |> mutate(height = y, age = howell$age, male = as_factor(howell$male))
+
+ggplot(y, aes(x = height, fill=factor(round(age)))) + guides(fill = FALSE) +
+  geom_histogram() + scale_x_continuous(n.breaks = 20) + scale_y_continuous(n.breaks = 10) + 
+  scale_fill_grey(start = 0.9, end = 0.1)
+```
+
+
 
 ##
 
 ```{r}
 y <- y |> mutate(x = howell$age, z = as_factor(howell$male))
 
-theme_set(theme_bw())
+#theme_set(theme_bw())
 
 plot(y, aes(x = x, y = y, colour = z)) + 
   geom_point(alpha = 0.7) + scale_x_continuous(n.breaks = 10) + scale_y_continuous(n.breaks = 10) + 
