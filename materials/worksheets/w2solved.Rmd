@@ -1,0 +1,214 @@
+# Week 2 lab exercises
+
+```{r}
+# Packages needed
+library(tidyverse)
+library(sjPlot)
+library(sjlabelled)
+```
+
+
+We will be working with the **osterman** dataset that underpins the Osterman (2021) article (see the [Data page](https://cgmoreh.github.io/HSS8005/data/) on the course website for information about the datasets available in this course).
+
+The first step is to import the dataset:
+
+```{r}
+osterman <- sjlabelled::read_stata("https://cgmoreh.github.io/HSS8005-data/osterman.dta")
+```
+
+## Task
+
+Using functions learnt in Week 1, do the following:
+
+1. check the dimensions of the dataset; what does it tell you?
+
+```{r}
+dim(osterman)
+```
+We have 68796 observations (rows) and 30 variables (columns) in the dataset.
+
+2. print a summary of the entire dataset; what have you learnt about the data
+
+```{r}
+summary(osterman)
+```
+
+This gives us a lot of output: summary statistics for all the 30 variables. We can have a quick glance over them to get a general impression of the type of data we have and the statistical shape of the variables. Generally, we wouldn't do this (particularly not with larger datasets) and there are better ways to tabulate essential information about a large number of variables for comparison across them.
+
+A very convenient way to create a codeplan for a dataset – especially if it has value-labelled categorical variables – is offered by the sjPlot::view_df() function, which produces a tables in HTML format that can be saved and consulted to get more information about the variables:
+
+```{r}
+# Assuming that {sjPlot} is installed
+
+sjPlot::view_df(osterman,
+                show.na = TRUE, 
+                show.type = TRUE, 
+                show.frq = TRUE, 
+                show.prc = TRUE, 
+                show.string.values = TRUE)
+```
+
+## Task
+
+Before moving forward, spend some time examining the codeplan that you have produced and if you haven’t yet had a chance to skim through the Österman (2021) article, have a quick read through their description of the dataset.
+
+```{r}
+print("There is no code that can solve this exercise for us, unfortunately...")
+```
+
+
+## Exercise 1: Create some basic descriptive graphs using the `ggplot()` command from the {ggplot2} tidyverse package for the associaton between the following variables:
+
+1. ‘trustindex3’ and ‘eduyrs25’
+
+The best way to approach this problem is by working through the first examples in Kieran Healy's [*Data Visualization: A practical introduction*](https://socviz.co/), starting at Chapter 3, and applying them to your data. Outside class, you can develop these basic graphs into better looking ones by adding various extra layers. The `ggplot()` function is part of the `{ggplot2}` package, which is included in the core `{tidyverse}`, so we don't need to load it separately if we have already loaded the tidyverse. 
+
+The `ggplot` approach to graphs is to build them up step-by-step using various layers. The basic template code for a `ggplot()` graph is the following:
+
+```
+ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) +  <GEOM_FUNCTION>()
+```
+
+For example, the code below sets up a totally blank canvas:
+
+```{r}
+ggplot()
+```
+
+To start populating the canvas we need to add a first layer containing our dataset and the variables we want to 'map' using the `aes()` argument (for "aesthetic mapping"). This adds coordinates to the canvas based on the variables we want to graph (in our case, ‘trustindex3’ and ‘eduyrs25’). We are treating 'trustindex3' as the outcome variables in these exercises, so we will want to position it on the `y` axis:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25))
+```
+
+We now have a basic layer, but no actual data. The final crucial move is to add another layer using the `+` operator the type of graph (called a "geom" in ggplot, short for "geometric object", such as a bar, a line, a boxplot, histogram, etc.) that we want to use to represent the relationship between the two variables. In this case, given that both variables are measured on a *numeric* scale (or at least on an *ordinal* scale with seven or more categories), the best option is a **scatterplot**. In `ggplot()`, a scatterplot "geom" are called with the  `geom_point()` function:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point()
+```
+We now have a scatterplot of the relationship between ‘trustindex3’ and ‘eduyrs25’. Because our scales are rather short and the data is spread out, this scatterplot is not very informative.
+
+We can choose to add another "geom" that is better able to summarise the relationship. The function `geom_jitter()` (a shortcut to the specification `geom_point(position = "jitter")`) is helpful in such cases because it adds a small amount of random variation to the location of each point, making areas of overlapping points more visible. The commands below do the same thing:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point(position = "jitter")
+```
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point() + 
+  geom_jitter()
+```
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter()
+```
+
+Another option is the `geom_smooth()` function, which provides a set of options, basically returning "smooth lines" representing various types of regression lines. The function fits a regression in the background and graphs the results. The default setting is to fit a *generalized additive model* that captures non-linearities in the data with a *smoothing spline* (the Wikipedia article on [GAMs](https://en.wikipedia.org/wiki/Generalized_additive_model) gives a maths-heavy outline of these models, but they are beyond our interests here). The smooth line produced is probably more informative about the general idea:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter() +
+  geom_smooth()
+```
+But we can also specify other regression methods, and because we are here aiming to model the relationship between *trust* and *education* as a linear model, we can specify the method as "lm":
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter() +
+  geom_smooth(method = "lm")
+```
+Now we get a straight regression line, which is basically the visual representation of the bivariate linear regression model that we will fit in Exercise 2 below. There are numerous further specifications that can be added to improve the graph, and Healy's book is a good resource for ideas that you can play around with. We won't go into much more detail about these additional options here, but as a taster, let's say that we want to make the regression line more pronounced by changing its colour to *red* and make the scatter dots slightly transparent by adjusting the colour's "alpha" level:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+
+2. ‘trustindex3’ and ‘agea’
+
+We can now do something similar for the relationship between *trust* and *age* (the ‘trustindex3’ and ‘agea’ variables in the dataset). Again, both variables are measured on a *numeric* scale, so a scatterplot should work best. Because we don't know what to expect and therefore what additional settings would improve each individual graph, we start from the most basic informative layer and build up from there. To practice some alternative approaches to working with plots, here we will first save the basic plot as a **ggplot object**, to which we can later add further layers and specifications:
+
+```{r}
+age_plot <- ggplot(osterman, aes(y = trustindex3, x = agea)) +
+  geom_point()
+```
+
+If no output was generated from the command above, that's as expected. The graph was produced, but we didn't ask for it to be printed, we only asked for it to be saved as an object called "age_plot". To see it, we can simply call "age_plot". We can then make various additions to this plot.
+
+```{r}
+age_plot
+```
+This looks very similar to the previous graph, so we could add the same additional specificaitons as in the previous exercise, this time to the plot object that we saved:
+
+```{r}
+age_plot +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+The association between age and trust appears very weak, something that we will explore further in Exercise 2.
+
+3. ‘trustindex3’ and ‘female’
+
+We can try a similar scatterplot here too, but there may be better options:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_point() +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+This graph can be confusing, are we are better off using another "geom" because the *female* variable is a dichotomous/binary factor (categorical) variable. A good visualisation tool in the this case is a boxplot, which can be called with the `geom_boxplot()` function. There will be a challenge, though:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_boxplot()
+```
+
+The issue with this graph is that the **female** variable is recognised as numeric by `R`. What we need to do first - or, as part of the `ggplot()` function itself - is to tell `R` to treat ***female** as a factor. We could do the following:
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = factor(female))) +
+  geom_boxplot()
+```
+Or as part of a piped workflow:
+
+```{r}
+osterman |> mutate(female = as_factor(female)) |> 
+  ggplot(aes(y = trustindex3, x = female)) +
+  geom_boxplot()
+```
+But it may be useful to change the variable type in the dataset altogether by saving the mutation and then using the changed **female** variable:
+
+```{r}
+# We are overwriting the original dataset here, so we better not make a mistake:
+osterman <- osterman |> mutate(female = as_factor(female))
+
+# And from now on the 'female' variable will be treated as a factor:
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_boxplot()
+```
+
+
+## Exercise 2: What factors affect trust?
+
+Fit three simple bivariate OLS regressions using the `lm()` function:
+
+1. Regress ‘trustindex3’ on ‘eduyrs25’ and interpret the results
+2. Regress ‘trustindex3’ on ‘agea’ and interpret the results
+3. Regress ‘trustindex3’ on ‘female’ and interpret the results
+4. Regress ‘trustindex3’ on all three predictors listed above and interpret the results
+
+## (Advanced) Exercise 3: Apply the model to a new dataset
+
+The **ostermann** data originates from Waves 1-9 of the European Social Survey. The ESS data are accessible freely upon registration. As part of this exercise, access data from Wave 10 of the survey (from this site: https://www.europeansocialsurvey.org/data/) and perform the following tasks:
+
+- download the dataset to the Rproject folder
+- select the variables required to recreate the data to fit the multiple regression model from the previous exercise
+- create your version of the ‘trustindex3’ variable
+- fit the models from Exercise 2 and copare the results.
+
+You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. You will likely need to continue the task outside class. If you succeed in complating the Task, in Week 3 we can compare results.

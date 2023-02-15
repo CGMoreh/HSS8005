@@ -2,11 +2,14 @@
 title: "Week 2 Computer Lab Worksheet"
 subtitle: "{{< var lab.w2 >}}"
 author: "{{< var author >}}"
+# code-tools:
+#   source: 'r download.file("https://raw.githubusercontent.com/CGMoreh/HSS8005/main/materials/worksheets/index.qmd", destfile = "w3.R")'
+#   caption: "R script of completed exercises"
 ---
 
 ## Aims
 
-This session introduces simple and multiple linear regression models. You will be working with data from @Osterman2021CanWeTrustEducationFostering to replicate parts their analysis. We will be covering only basic regression methods in this session, so the article will serve mainly as a broad background to the data here. We will be returning to this article in future weeks too, expanding our modelling strategy as we discover new methods. We will also practice some data management tasks and the basics of data visualisation using principles from 'the **g**rammar of **g**raphics' as implemented in the [`ggplot2()`](https://ggplot2.tidyverse.org/) package (see Kieran Healy's [*Data Visualization: A practical introduction*](https://socviz.co/) for an introduction with many practical examples).
+This session introduces simple and multiple linear regression models. You will be working with data from @Osterman2021CanWeTrustEducationFostering to replicate parts their analysis. We will be covering only basic regression methods in this session, so the article will serve mainly as a broad background to the data here. We will be returning to this article in future weeks too, expanding our modelling strategy as we discover new methods. We will also practice some data management tasks and the basics of data visualisation using principles from 'the **g**rammar of **g**raphics' as implemented in the [`{ggplot2}`](https://ggplot2.tidyverse.org/) package (see Kieran Healy's [*Data Visualization: A practical introduction*](https://socviz.co/) for an introduction with many practical examples).
 
 By the end of the session, you will:
 
@@ -108,7 +111,7 @@ sjPlot::view_df(osterman)
 
 The output opens up in the Viewer pane.
 
-There are several additional options that can add useful complexity to the codeplan, as well as the option to restrict it to selected variables. It also works in a "piper" workflow, so it can be combined with {dplyr} verbs such as select to restrict variables beforehand in a more flexible way. Below we request a codeplan with extended options:
+There are several additional options that can add useful complexity to the codeplan, as well as the option to restrict it to selected variables. It also works in a "piped" workflow, so it can be combined with {dplyr} verbs such as select to restrict variables beforehand in a more flexible way. Below we request a codeplan with extended options:
 
 ```{r}
 #| eval: false
@@ -155,6 +158,11 @@ The **ostermann** data originates from Waves 1-9 of the European Social Survey. 
 
 You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. You will likely need to continue the task outside class. If you succeed in complating the Task, in Week 3 we can compare results.
 
+```{r}
+#| echo: false
+xfun::embed_file('w2solved.Rmd', text = "Download an .Rmd script with the solutions")
+```
 
+<br><br>
 
 
