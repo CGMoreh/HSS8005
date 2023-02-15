@@ -65,6 +65,7 @@ ggplot(y, aes(x = y)) +
 
 
 ```{r}
+#| eval: false
 ggplot(y, aes(x = y)) + 
   geom_histogram() + scale_x_continuous(n.breaks = 20) + scale_y_continuous(n.breaks = 10) +
   geom_vline(aes(xintercept = median(y)))
@@ -72,9 +73,10 @@ ggplot(y, aes(x = y)) +
 
 
 ```{r}
+#| eval: false
 y <- y |> mutate(height = y, age = howell$age, male = as_factor(howell$male))
 
-ggplot(y, aes(x = height, fill=factor(round(age)))) + guides(fill = FALSE) +
+ggplot(y, aes(x = height, fill = factor(round(age)))) + guides(fill = FALSE) +
   geom_histogram() + scale_x_continuous(n.breaks = 20) + scale_y_continuous(n.breaks = 10) + 
   scale_fill_grey(start = 0.9, end = 0.1)
 ```
@@ -84,6 +86,7 @@ ggplot(y, aes(x = height, fill=factor(round(age)))) + guides(fill = FALSE) +
 ##
 
 ```{r}
+#| eval: false
 y <- y |> mutate(x = howell$age, z = as_factor(howell$male))
 
 #theme_set(theme_bw())

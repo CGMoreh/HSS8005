@@ -1,7 +1,6 @@
 ## ggplot slides theme
 
 library("tidyverse")
-library(ggExtra)
 
 theme_set(theme_light())
 

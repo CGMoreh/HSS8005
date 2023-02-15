@@ -1,0 +1,21 @@
+digraph statshistory {
+    node [shape=record];
+    botero [label="{Giovanni Botero \n (c. 1544–1617)|'Della ragion di Stato' ~ 'Reason of State'}}"]
+    ghilini [label="{Girolamo Ghilini \n (1589–1668)|'Ristretto della civile, politica, statistica e militare scienza'}}"]
+    sittewald [label="{Philander Von Sittewald \n (1601–1669)|{'statista' ~ 'someone versed in the knowledge of the state'}}"]
+    1660 [label="{Hermann Conring \n (1606–1681)|{1660|'statisticum'; political science lectures on European states, \n quantifying and comparing their finances, population, agriculture, etc.}}"]
+    1672 [label="{Helenus Politanus (pse.)|{1672|'Microscopium Statisticum'}}"]
+    1725 [label="{Martin Schmeitzel \n (1679–1747)|{1725|'collegium statisticum' ~ 'council of state'}}"]
+    graunt [label="{John Graunt \n (1620–1674)|{1663|'Natural and Political Observations \n Made upon the Bills of Mortality'}}"]
+    petty [label="{William Petty \n (1623-1687)|{1672|'political arithmetic'; 'Essays in Political Arithmetick \n and Political Survey or Anatomy of Ireland'}}"]
+    1748 [label="{Gottfried Achenwall \n (1719–1772)|{1748|'Vorbereitung zur Staatswissenschaft'; 'Statistik'}}"]
+    suss [label="{Johann Peter Süssmilch \n (1707-1767)|{1761-1762|'The Divine order in the changes in the human sex from birth, \n death and reproduction of the same'}}"]
+
+    botero -> sittewald -> 1660 [style=invis]
+    ghilini -> sittewald -> 1660 [style=invis]
+    1660 -> 1672 
+    1660 -> 1725 -> 1748
+    1660 -> graunt -> petty -> suss [style=invis]
+    petty -> 1725 [style=invis]
+    1725 -> suss [style=invis]
+}
