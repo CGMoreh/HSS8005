@@ -7,6 +7,19 @@ author: "{{< var author >}}"
 #   caption: "R script of completed exercises"
 ---
 
+```{r}
+#| echo: false
+options(timeout = max(1000, getOption("timeout")))
+```
+
+```{r}
+#| include: false
+# Packages needed
+library(tidyverse)
+library(sjPlot)
+library(sjlabelled)
+```
+
 ## Aims
 
 This session introduces simple and multiple linear regression models. You will be working with data from @Osterman2021CanWeTrustEducationFostering to replicate parts their analysis. We will be covering only basic regression methods in this session, so the article will serve mainly as a broad background to the data here. We will be returning to this article in future weeks too, expanding our modelling strategy as we discover new methods. We will also practice some data management tasks and the basics of data visualisation using principles from 'the **g**rammar of **g**raphics' as implemented in the [`{ggplot2}`](https://ggplot2.tidyverse.org/) package (see Kieran Healy's [*Data Visualization: A practical introduction*](https://socviz.co/) for an introduction with many practical examples).
@@ -154,15 +167,278 @@ The **ostermann** data originates from Waves 1-9 of the European Social Survey. 
 - download the dataset to the Rproject folder
 - select the variables required to recreate the data to fit the multiple regression model from the previous exercise
 - create your version of the ‘trustindex3’ variable
-- fit the models from Exercise 2 and copare the results.
+- fit the models from Exercise 2 and compare the results.
 
-You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. You will likely need to continue the task outside class. If you succeed in complating the Task, in Week 3 we can compare results.
+You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. You will likely need to continue the task outside class. If you succeed in completing the Task, in Week 3 we can compare results.
 
-```{r}
-#| echo: false
-xfun::embed_file('w2solved.Rmd', text = "Download an .Rmd script with the solutions")
+::: {.callout-note appearance="minimal"}
+
+<i class="bi bi-download"></i> [Download solutions](w2solved.Rmd){download="w2solved.Rmd"}
+
+:::
+
+## SOLUTIONS
+
+### Exercise 1: Create some basic descriptive graphs using the `ggplot()` command from the {ggplot2} tidyverse package for the associaton between the following variables:
+
+1. ‘trustindex3’ and ‘eduyrs25’
+
+The best way to approach this problem is by working through the first examples in Kieran Healy's [*Data Visualization: A practical introduction*](https://socviz.co/), starting at Chapter 3, and applying them to your data. Outside class, you can develop these basic graphs into better looking ones by adding various extra layers. The `ggplot()` function is part of the `{ggplot2}` package, which is included in the core `{tidyverse}`, so we don't need to load it separately if we have already loaded the tidyverse. 
+
+The `ggplot` approach to graphs is to build them up step-by-step using various layers. The basic template code for a `ggplot()` graph is the following:
+
+```
+ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) +  <GEOM_FUNCTION>()
 ```
 
-<br><br>
+For example, the code below sets up a totally blank canvas:
+
+```{r}
+ggplot()
+```
+
+To start populating the canvas we need to add a first layer containing our dataset and the variables we want to 'map' using the `aes()` argument (for "aesthetic mapping"). This adds coordinates to the canvas based on the variables we want to graph (in our case, ‘trustindex3’ and ‘eduyrs25’). We are treating 'trustindex3' as the outcome variables in these exercises, so we will want to position it on the `y` axis:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25))
+```
+
+We now have a basic layer, but no actual data. The final crucial move is to add another layer using the `+` operator the type of graph (called a "geom" in ggplot, short for "geometric object", such as a bar, a line, a boxplot, histogram, etc.) that we want to use to represent the relationship between the two variables. In this case, given that both variables are measured on a *numeric* scale (or at least on an *ordinal* scale with seven or more categories), the best option is a **scatterplot**. In `ggplot()`, a scatterplot "geom" are called with the  `geom_point()` function:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point()
+```
+
+We now have a scatterplot of the relationship between ‘trustindex3’ and ‘eduyrs25’. Because our scales are rather short and the data is spread out, this scatterplot is not very informative.
+
+We can choose to add another "geom" that is better able to summarise the relationship. The function `geom_jitter()` (a shortcut to the specification `geom_point(position = "jitter")`) is helpful in such cases because it adds a small amount of random variation to the location of each point, making areas of overlapping points more visible. The commands below do the same thing:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point(position = "jitter")
+```
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point() + 
+  geom_jitter()
+```
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter()
+```
+
+Another option is the `geom_smooth()` function, which provides a set of options, basically returning "smooth lines" representing various types of regression lines. The function fits a regression in the background and graphs the results. The default setting is to fit a *generalized additive model* that captures non-linearities in the data with a *smoothing spline* (the Wikipedia article on [GAMs](https://en.wikipedia.org/wiki/Generalized_additive_model) gives a maths-heavy outline of these models, but they are beyond our interests here). The smooth line produced is probably more informative about the general idea:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter() +
+  geom_smooth()
+```
+
+But we can also specify other regression methods, and because we are here aiming to model the relationship between *trust* and *education* as a linear model, we can specify the method as "lm":
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter() +
+  geom_smooth(method = "lm")
+```
+
+Now we get a straight regression line, which is basically the visual representation of the bivariate linear regression model that we will fit in Exercise 2 below. There are numerous further specifications that can be added to improve the graph, and Healy's book is a good resource for ideas that you can play around with. We won't go into much more detail about these additional options here, but as a taster, let's say that we want to make the regression line more pronounced by changing its colour to *red* and make the scatter dots slightly transparent by adjusting the colour's "alpha" level:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+
+2. ‘trustindex3’ and ‘agea’
+
+We can now do something similar for the relationship between *trust* and *age* (the ‘trustindex3’ and ‘agea’ variables in the dataset). Again, both variables are measured on a *numeric* scale, so a scatterplot should work best. Because we don't know what to expect and therefore what additional settings would improve each individual graph, we start from the most basic informative layer and build up from there. To practice some alternative approaches to working with plots, here we will first save the basic plot as a **ggplot object**, to which we can later add further layers and specifications:
+
+```{r}
+age_plot <- ggplot(osterman, aes(y = trustindex3, x = agea)) +
+  geom_point()
+```
+
+If no output was generated from the command above, that's as expected. The graph was produced, but we didn't ask for it to be printed, we only asked for it to be saved as an object called "age_plot". To see it, we can simply call "age_plot". We can then make various additions to this plot.
+
+```{r}
+age_plot
+```
+
+This looks very similar to the previous graph, so we could add the same additional specificaitons as in the previous exercise, this time to the plot object that we saved:
+
+```{r}
+age_plot +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+
+The association between age and trust appears very weak, something that we will explore further in Exercise 2.
+
+3. ‘trustindex3’ and ‘female’
+
+We can try a similar scatterplot here too, but there may be better options:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_point() +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+
+This graph can be confusing, are we are better off using another "geom" because the *female* variable is a dichotomous/binary factor (categorical) variable. A good visualisation tool in the this case is a boxplot, which can be called with the `geom_boxplot()` function. There will be a challenge, though:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_boxplot()
+```
+
+The issue with this graph is that the **female** variable is recognised as numeric by `R`. What we need to do first - or, as part of the `ggplot()` function itself - is to tell `R` to treat ***female** as a factor. We could do the following:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = factor(female))) +
+  geom_boxplot()
+```
+
+Or as part of a piped workflow:
+
+```{r}
+osterman |> mutate(female = as_factor(female)) |> 
+  ggplot(aes(y = trustindex3, x = female)) +
+  geom_boxplot()
+```
+
+But it may be useful to change the variable type in the dataset altogether by saving the mutation and then using the changed **female** variable:
+
+```{r}
+# We are overwriting the original dataset here, so we better not make a mistake:
+osterman <- osterman |> mutate(female = as_factor(female))
+
+# And from now on the 'female' variable will be treated as a factor:
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_boxplot()
+```
+
+
+### Exercise 2: What factors affect trust?
+
+Fit three simple bivariate OLS regressions using the `lm()` function:
+
+1. Regress ‘trustindex3’ on ‘eduyrs25’ and interpret the results
+
+We will do just that, saving the regression as an object called "m1" (for *model 1*):
+
+```{r}
+m1 <- lm(trustindex3 ~ eduyrs25, data = osterman)
+```
+
+The model object has now been saved in the Environment, and we can inspect it manually if we want by opening it in the Source window. The object is a large list, with various components that we can call and print separately. The most basic information that we can obtain from the model is the coefficients:
+
+```{r}
+coefficients(m1)
+```
+This basic information is enough to solve the linear equation underpinning the model:
+
+$$ y_i=b_0+b_1x_i $$
+The coefficients correspond to the $b$'s in this simple model, and we can plug the values in to obtain
+
+$$ trust_i=3.91 + 0.11 \times education_i $$
+
+We find, thus, that the number of years spent in education has a positive outcome on social trust, with each additional year of education associated with a 0.11-points higher score on the trust index, above the baseline of 3.91 points in the case when education is equal to 0. With this formula we can calculate predictions of the *trust* score for any individual $i$ from their years of education.
+
+We can also get more information about the model with the `summary()` function. When applied to a linear model object, it provides the following output:
+
+```{r}
+summary(m1)
+```
+This output tells us a lot more about the fitted model, for example a summary table of the residuals and an analysis of variance (ANOVA) summary of the residuals, as well as estimates of variation for our coefficients (the standard errors and the p-values associated with t-tests - displayed as *Pr(>|t|)*).
+
+While these are informative, the format is not ideal for further manipulation and presentation. Several user-written functions exist to improve on this output. For example, the [`{broom}`](https://broom.tidymodels.org/) package - part of the [`{tidymodels}`](https://www.tidymodels.org/) suite of packages - has functions to extract model information into "tidy" tibbles (data sets), which can then be further manipulated and plotted. This is especially useful when working with results from many models that would benefit from comparing in a standardised format.
+
+The [`{sjPlot}`](https://strengejacke.github.io/sjPlot/articles/tab_model_estimates.html) package that we used before also has functions to export a publishable-quality table in HTML format:
+
+```{r}
+sjPlot::tab_model(m1)
+```
+
+By default the output table shows 95% confidence intervals (CI) instead of standard errors (SE), which can be easier to interpret (CI are calculated as *Estimate +/- (1.96 x Std. Error)*; you can try it out in the Console, replacing in the numeric values).
+
+The best approach is to graph the model results and present them in a figure, but that's not very informative in the case of a simple model with only one predictor, so we can leave it for later.
+
+2. Regress ‘trustindex3’ on ‘agea’ and interpret the results
+
+We can do as above:
+
+```{r}
+m2 <- lm(trustindex3 ~ agea, data = osterman)
+
+summary(m2)
+```
+
+3. Regress ‘trustindex3’ on ‘female’ and interpret the results
+
+```{r}
+m3 <- lm(trustindex3 ~ female, data = osterman)
+
+summary(m3)
+```
+
+
+4. Regress ‘trustindex3’ on all three predictors listed above and interpret the results
+
+Finally we can fit a multiple linear model with several predictors:
+
+```{r}
+m4 <- lm(trustindex3 ~ eduyrs25 + agea + female, data = osterman)
+
+summary(m4)
+```
+One interesting finding from Model 4 is to notice how radically the statistical significance of the *female* variable changes compared to Model 3. The impact of gender is still very weak in real terms: compared to men of similar age and education level, women score 0.04 points higher on the trust scale; but this is still a stronger effect than in the simple bivariate model (where $b_1$ was 0.008), and our confidence intervals are much narrower.
+
+We could tabulate these two models in a comparative table to better see the contrast:
+
+```{r}
+sjPlot::tab_model(m3, m4)
+```
+
+It's worth noticing that the number of observations used in the two models is not the same, due to missing values in some variables. We could make the samples comparable by selecting out the sample of 68,211 included in Model 4, then refitting Model 3 on that sample only:
+
+
+```{r}
+sample <- m4$model
+
+m3_new <- lm(trustindex3 ~ female, data = sample)
+
+sjPlot::tab_model(m3_new, m4)
+```
+
+We see that this does not affect the overall picture.
+
+### (Advanced) Exercise 3: Apply the model to a new dataset
+
+The **ostermann** data originates from Waves 1-9 of the European Social Survey. The ESS data are accessible freely upon registration. As part of this exercise, access data from Wave 10 of the survey (from this site: https://www.europeansocialsurvey.org/data/) and perform the following tasks:
+
+- download the dataset to the Rproject folder
+- select the variables required to recreate the data to fit the multiple regression model from the previous exercise
+- create your version of the ‘trustindex3’ variable
+- fit the models from Exercise 2 and compare the results.
+
+You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. The most important missing information required to compete this task is to be found in the description on how the **trustindex3** scale was computed provided by Osterman:
+
+>To study generalized social trust, I am following the established approach of using a validated three-item scale (Reeskens and Hooghe 2008; Zmerli and Newton 2008). This scale consists of the classic trust question, an item on whether people try to be fair, and an item on whether people are helpful: <br>
+- ‘Generally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people?’ <br>
+- ‘Do you think that most people would try to take advantage of you if they got the chance, or would they try to be fair?’ <br>
+- ‘Would you say that most of the time people try to be helpful or that they are mostly looking out for themselves?’ <br>
+All of the items may be answered on a scale from 0 to 10 (where 10 represents the highest level of trust) and the scale is calculated as the mean of the three items. The three-item scale clearly improves measurement reliability and cross-country validity compared to using a single item, such as the classic trust question. Internal consistency for the three items is reasonably high (Cronbach’s alpha: 0.77). The scale ranges between 0 and 10 with a mean of 5.24 for my sample. See the Supplementary material for additional information on the construction of the social trust scale (Section A.1), as well as for models using the classic single-item measure of trust (Section A.9).
+
+<br>
+
+<< the end >>
+
+<br>
 
 

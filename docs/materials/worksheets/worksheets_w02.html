@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
+<meta name="generator" content="quarto-1.2.269">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Chris Moreh">
 <title>HSS8005  - Week 2 Computer Lab Worksheet</title>
@@ -128,7 +128,7 @@ div.csl-indent {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script><link rel="stylesheet" href="../../html/nobiblio.css">
+}</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="../../html/nobiblio.css">
 </head>
 <body class="nav-sidebar docked nav-fixed">
 
@@ -145,27 +145,27 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item">
-    <a class="nav-link" href="../../plan8.html" rel="">
+    <a class="nav-link" href="../../plan8.html">
  <span class="menu-text">Module plan</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resources/index.html" rel="">
+    <a class="nav-link" href="../../resources/index.html">
  <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../materials/index.html" rel="" aria-current="page">
+    <a class="nav-link active" href="../../materials/index.html" aria-current="page">
  <span class="menu-text">Materials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../data/index.html" rel="">
+    <a class="nav-link" href="../../data/index.html">
  <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../assessment/index.html" rel="">
+    <a class="nav-link" href="../../assessment/index.html">
  <span class="menu-text">Assessment</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://canvas.ncl.ac.uk/login/" rel="">
+    <a class="nav-link" href="https://canvas.ncl.ac.uk/login/">
  <span class="menu-text"><iconify-icon inline="" icon="arcticons:canvasstudent" style="font-size: l;"></iconify-icon> Canvas</span></a>
   </li>  
 </ul>
@@ -398,6 +398,14 @@ div.csl-indent {
   <li><a href="#exercise-1-create-some-basic-descriptive-graphs-using-the-ggplot-command-from-the-ggplot2-tidyverse-package-for-the-associaton-between-the-following-variables" id="toc-exercise-1-create-some-basic-descriptive-graphs-using-the-ggplot-command-from-the-ggplot2-tidyverse-package-for-the-associaton-between-the-following-variables" class="nav-link" data-scroll-target="#exercise-1-create-some-basic-descriptive-graphs-using-the-ggplot-command-from-the-ggplot2-tidyverse-package-for-the-associaton-between-the-following-variables">Exercise 1: Create some basic descriptive graphs using the <code>ggplot()</code> command from the {ggplot2} tidyverse package for the associaton between the following variables:</a></li>
   <li><a href="#exercise-2-what-factors-affect-trust" id="toc-exercise-2-what-factors-affect-trust" class="nav-link" data-scroll-target="#exercise-2-what-factors-affect-trust">Exercise 2: What factors affect trust?</a></li>
   <li><a href="#advanced-exercise-3-apply-the-model-to-a-new-dataset" id="toc-advanced-exercise-3-apply-the-model-to-a-new-dataset" class="nav-link" data-scroll-target="#advanced-exercise-3-apply-the-model-to-a-new-dataset">(Advanced) Exercise 3: Apply the model to a new dataset</a></li>
+  <li>
+<a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">SOLUTIONS</a>
+  <ul class="collapse">
+<li><a href="#exercise-1-create-some-basic-descriptive-graphs-using-the-ggplot-command-from-the-ggplot2-tidyverse-package-for-the-associaton-between-the-following-variables-1" id="toc-exercise-1-create-some-basic-descriptive-graphs-using-the-ggplot-command-from-the-ggplot2-tidyverse-package-for-the-associaton-between-the-following-variables-1" class="nav-link" data-scroll-target="#exercise-1-create-some-basic-descriptive-graphs-using-the-ggplot-command-from-the-ggplot2-tidyverse-package-for-the-associaton-between-the-following-variables-1">Exercise 1: Create some basic descriptive graphs using the <code>ggplot()</code> command from the {ggplot2} tidyverse package for the associaton between the following variables:</a></li>
+  <li><a href="#exercise-2-what-factors-affect-trust-1" id="toc-exercise-2-what-factors-affect-trust-1" class="nav-link" data-scroll-target="#exercise-2-what-factors-affect-trust-1">Exercise 2: What factors affect trust?</a></li>
+  <li><a href="#advanced-exercise-3-apply-the-model-to-a-new-dataset-1" id="toc-advanced-exercise-3-apply-the-model-to-a-new-dataset-1" class="nav-link" data-scroll-target="#advanced-exercise-3-apply-the-model-to-a-new-dataset-1">(Advanced) Exercise 3: Apply the model to a new dataset</a></li>
+  </ul>
+</li>
   </ul></nav>
 </nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
@@ -423,8 +431,11 @@ div.csl-indent {
   </div>
   
 
-</header><section id="aims" class="level2"><h2 class="anchored" data-anchor-id="aims">Aims</h2>
-<p>This session introduces simple and multiple linear regression models. You will be working with data from <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#ref-Osterman2021CanWeTrustEducationFostering" role="doc-biblioref">2021</a>)</span> to replicate parts their analysis. We will be covering only basic regression methods in this session, so the article will serve mainly as a broad background to the data here. We will be returning to this article in future weeks too, expanding our modelling strategy as we discover new methods. We will also practice some data management tasks and the basics of data visualisation using principles from ‘the <strong>g</strong>rammar of <strong>g</strong>raphics’ as implemented in the <a href="https://ggplot2.tidyverse.org/"><code>ggplot2()</code></a> package (see Kieran Healy’s <a href="https://socviz.co/"><em>Data Visualization: A practical introduction</em></a> for an introduction with many practical examples).</p>
+</header><div class="cell">
+
+</div>
+<section id="aims" class="level2"><h2 class="anchored" data-anchor-id="aims">Aims</h2>
+<p>This session introduces simple and multiple linear regression models. You will be working with data from <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#ref-Osterman2021CanWeTrustEducationFostering" role="doc-biblioref">2021</a>)</span> to replicate parts their analysis. We will be covering only basic regression methods in this session, so the article will serve mainly as a broad background to the data here. We will be returning to this article in future weeks too, expanding our modelling strategy as we discover new methods. We will also practice some data management tasks and the basics of data visualisation using principles from ‘the <strong>g</strong>rammar of <strong>g</strong>raphics’ as implemented in the <a href="https://ggplot2.tidyverse.org/"><code>{ggplot2}</code></a> package (see Kieran Healy’s <a href="https://socviz.co/"><em>Data Visualization: A practical introduction</em></a> for an introduction with many practical examples).</p>
 <p>By the end of the session, you will:</p>
 <ul>
 <li>learn how to import data from foreign formats (e.g.&nbsp;SPSS, Stata, CSV)</li>
@@ -474,8 +485,19 @@ Tip
 <p>If we want to access a dataset from a non-base-R package, we need to ensure that the package is installed on our system and that we specify the name of the package; e.g.:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">head</span>(starwars) <span class="co"># gives an Error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in head(starwars): object 'starwars' not found</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 14
+  name         height  mass hair_…¹ skin_…² eye_c…³ birth…⁴ sex   gender homew…⁵
+  &lt;chr&gt;         &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  
+1 Luke Skywal…    172    77 blond   fair    blue       19   male  mascu… Tatooi…
+2 C-3PO           167    75 &lt;NA&gt;    gold    yellow    112   none  mascu… Tatooi…
+3 R2-D2            96    32 &lt;NA&gt;    white,… red        33   none  mascu… Naboo  
+4 Darth Vader     202   136 none    white   yellow     41.9 male  mascu… Tatooi…
+5 Leia Organa     150    49 brown   light   brown      19   fema… femin… Aldera…
+6 Owen Lars       178   120 brown,… light   blue       52   male  mascu… Tatooi…
+# … with 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+#   starships &lt;list&gt;, and abbreviated variable names ¹​hair_color, ²​skin_color,
+#   ³​eye_color, ⁴​birth_year, ⁵​homeworld</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">head</span>(dplyr<span class="sc">::</span>starwars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -554,19 +576,516 @@ Tip
 <li>download the dataset to the Rproject folder</li>
 <li>select the variables required to recreate the data to fit the multiple regression model from the previous exercise</li>
 <li>create your version of the ‘trustindex3’ variable</li>
-<li>fit the models from Exercise 2 and copare the results.</li>
+<li>fit the models from Exercise 2 and compare the results.</li>
 </ul>
-<p>You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. You will likely need to continue the task outside class. If you succeed in complating the Task, in Week 3 we can compare results.</p>
+<p>You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. You will likely need to continue the task outside class. If you succeed in completing the Task, in Week 3 we can compare results.</p>
+<div class="callout-note callout callout-style-simple no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><i class="bi bi-download"></i> <a href="w2solved.Rmd" download="w2solved.Rmd">Download solutions</a></p>
+</div>
+</div>
+</div>
+</section><section id="solutions" class="level2"><h2 class="anchored" data-anchor-id="solutions">SOLUTIONS</h2>
+<section id="exercise-1-create-some-basic-descriptive-graphs-using-the-ggplot-command-from-the-ggplot2-tidyverse-package-for-the-associaton-between-the-following-variables-1" class="level3"><h3 class="anchored" data-anchor-id="exercise-1-create-some-basic-descriptive-graphs-using-the-ggplot-command-from-the-ggplot2-tidyverse-package-for-the-associaton-between-the-following-variables-1">Exercise 1: Create some basic descriptive graphs using the <code>ggplot()</code> command from the {ggplot2} tidyverse package for the associaton between the following variables:</h3>
+<ol type="1">
+<li>‘trustindex3’ and ‘eduyrs25’</li>
+</ol>
+<p>The best way to approach this problem is by working through the first examples in Kieran Healy’s <a href="https://socviz.co/"><em>Data Visualization: A practical introduction</em></a>, starting at Chapter 3, and applying them to your data. Outside class, you can develop these basic graphs into better looking ones by adding various extra layers. The <code>ggplot()</code> function is part of the <a href="https://ggplot2.tidyverse.org">ggplot2</a> package, which is included in the core <a href="https://tidyverse.tidyverse.org">tidyverse</a>, so we don’t need to load it separately if we have already loaded the tidyverse.</p>
+<p>The <code>ggplot</code> approach to graphs is to build them up step-by-step using various layers. The basic template code for a <code>ggplot()</code> graph is the following:</p>
+<pre><code>ggplot(data = &lt;DATA&gt;, mapping = aes(&lt;MAPPINGS&gt;)) +  &lt;GEOM_FUNCTION&gt;()</code></pre>
+<p>For example, the code below sets up a totally blank canvas:</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<a href="data:text/x-markdown;base64," download="w2solved.Rmd">Download an .Rmd script with the solutions</a>
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p><br><br></p>
+<p>To start populating the canvas we need to add a first layer containing our dataset and the variables we want to ‘map’ using the <code>aes()</code> argument (for “aesthetic mapping”). This adds coordinates to the canvas based on the variables we want to graph (in our case, ‘trustindex3’ and ‘eduyrs25’). We are treating ‘trustindex3’ as the outcome variables in these exercises, so we will want to position it on the <code>y</code> axis:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> eduyrs25))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We now have a basic layer, but no actual data. The final crucial move is to add another layer using the <code>+</code> operator the type of graph (called a “geom” in ggplot, short for “geometric object”, such as a bar, a line, a boxplot, histogram, etc.) that we want to use to represent the relationship between the two variables. In this case, given that both variables are measured on a <em>numeric</em> scale (or at least on an <em>ordinal</em> scale with seven or more categories), the best option is a <strong>scatterplot</strong>. In <code>ggplot()</code>, a scatterplot “geom” are called with the <code>geom_point()</code> function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> eduyrs25)) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We now have a scatterplot of the relationship between ‘trustindex3’ and ‘eduyrs25’. Because our scales are rather short and the data is spread out, this scatterplot is not very informative.</p>
+<p>We can choose to add another “geom” that is better able to summarise the relationship. The function <code>geom_jitter()</code> (a shortcut to the specification <code>geom_point(position = "jitter")</code>) is helpful in such cases because it adds a small amount of random variation to the location of each point, making areas of overlapping points more visible. The commands below do the same thing:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> eduyrs25)) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="st">"jitter"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> eduyrs25)) <span class="sc">+</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> eduyrs25)) <span class="sc">+</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Another option is the <code>geom_smooth()</code> function, which provides a set of options, basically returning “smooth lines” representing various types of regression lines. The function fits a regression in the background and graphs the results. The default setting is to fit a <em>generalized additive model</em> that captures non-linearities in the data with a <em>smoothing spline</em> (the Wikipedia article on <a href="https://en.wikipedia.org/wiki/Generalized_additive_model">GAMs</a> gives a maths-heavy outline of these models, but they are beyond our interests here). The smooth line produced is probably more informative about the general idea:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> eduyrs25)) <span class="sc">+</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>But we can also specify other regression methods, and because we are here aiming to model the relationship between <em>trust</em> and <em>education</em> as a linear model, we can specify the method as “lm”:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> eduyrs25)) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Now we get a straight regression line, which is basically the visual representation of the bivariate linear regression model that we will fit in Exercise 2 below. There are numerous further specifications that can be added to improve the graph, and Healy’s book is a good resource for ideas that you can play around with. We won’t go into much more detail about these additional options here, but as a taster, let’s say that we want to make the regression line more pronounced by changing its colour to <em>red</em> and make the scatter dots slightly transparent by adjusting the colour’s “alpha” level:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> eduyrs25)) <span class="sc">+</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">colour =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>‘trustindex3’ and ‘agea’</li>
+</ol>
+<p>We can now do something similar for the relationship between <em>trust</em> and <em>age</em> (the ‘trustindex3’ and ‘agea’ variables in the dataset). Again, both variables are measured on a <em>numeric</em> scale, so a scatterplot should work best. Because we don’t know what to expect and therefore what additional settings would improve each individual graph, we start from the most basic informative layer and build up from there. To practice some alternative approaches to working with plots, here we will first save the basic plot as a <strong>ggplot object</strong>, to which we can later add further layers and specifications:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>age_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> agea)) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If no output was generated from the command above, that’s as expected. The graph was produced, but we didn’t ask for it to be printed, we only asked for it to be saved as an object called “age_plot”. To see it, we can simply call “age_plot”. We can then make various additions to this plot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>age_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This looks very similar to the previous graph, so we could add the same additional specificaitons as in the previous exercise, this time to the plot object that we saved:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>age_plot <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">colour =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The association between age and trust appears very weak, something that we will explore further in Exercise 2.</p>
+<ol start="3" type="1">
+<li>‘trustindex3’ and ‘female’</li>
+</ol>
+<p>We can try a similar scatterplot here too, but there may be better options:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> female)) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">colour =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This graph can be confusing, are we are better off using another “geom” because the <em>female</em> variable is a dichotomous/binary factor (categorical) variable. A good visualisation tool in the this case is a boxplot, which can be called with the <code>geom_boxplot()</code> function. There will be a challenge, though:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> female)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The issue with this graph is that the <strong>female</strong> variable is recognised as numeric by <code>R</code>. What we need to do first - or, as part of the <code>ggplot()</code> function itself - is to tell <code>R</code> to treat *<strong>female</strong> as a factor. We could do the following:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> <span class="fu">factor</span>(female))) <span class="sc">+</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Or as part of a piped workflow:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>osterman <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">female =</span> <span class="fu">as_factor</span>(female)) <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> female)) <span class="sc">+</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>But it may be useful to change the variable type in the dataset altogether by saving the mutation and then using the changed <strong>female</strong> variable:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># We are overwriting the original dataset here, so we better not make a mistake:</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>osterman <span class="ot">&lt;-</span> osterman <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">female =</span> <span class="fu">as_factor</span>(female))</span>
+<span id="cb31-3"><a href="#cb31-3"></a></span>
+<span id="cb31-4"><a href="#cb31-4"></a><span class="co"># And from now on the 'female' variable will be treated as a factor:</span></span>
+<span id="cb31-5"><a href="#cb31-5"></a><span class="fu">ggplot</span>(osterman, <span class="fu">aes</span>(<span class="at">y =</span> trustindex3, <span class="at">x =</span> female)) <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="worksheets_w02_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="exercise-2-what-factors-affect-trust-1" class="level3"><h3 class="anchored" data-anchor-id="exercise-2-what-factors-affect-trust-1">Exercise 2: What factors affect trust?</h3>
+<p>Fit three simple bivariate OLS regressions using the <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> function:</p>
+<ol type="1">
+<li>Regress ‘trustindex3’ on ‘eduyrs25’ and interpret the results</li>
+</ol>
+<p>We will do just that, saving the regression as an object called “m1” (for <em>model 1</em>):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> eduyrs25, <span class="at">data =</span> osterman)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The model object has now been saved in the Environment, and we can inspect it manually if we want by opening it in the Source window. The object is a large list, with various components that we can call and print separately. The most basic information that we can obtain from the model is the coefficients:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">coefficients</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)    eduyrs25 
+  3.9085904   0.1054227 </code></pre>
+</div>
+</div>
+<p>This basic information is enough to solve the linear equation underpinning the model:</p>
+<p><span class="math display">\[ y_i=b_0+b_1x_i \]</span> The coefficients correspond to the <span class="math inline">\(b\)</span>’s in this simple model, and we can plug the values in to obtain</p>
+<p><span class="math display">\[ trust_i=3.91 + 0.11 \times education_i \]</span></p>
+<p>We find, thus, that the number of years spent in education has a positive outcome on social trust, with each additional year of education associated with a 0.11-points higher score on the trust index, above the baseline of 3.91 points in the case when education is equal to 0. With this formula we can calculate predictions of the <em>trust</em> score for any individual <span class="math inline">\(i\)</span> from their years of education.</p>
+<p>We can also get more information about the model with the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function. When applied to a linear model object, it provides the following output:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">summary</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = trustindex3 ~ eduyrs25, data = osterman)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.5442 -1.1737  0.1426  1.2992  6.0914 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 3.908590   0.022630   172.7   &lt;2e-16 ***
+eduyrs25    0.105423   0.001692    62.3   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.853 on 68209 degrees of freedom
+  (585 observations deleted due to missingness)
+Multiple R-squared:  0.05384,   Adjusted R-squared:  0.05383 
+F-statistic:  3882 on 1 and 68209 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>This output tells us a lot more about the fitted model, for example a summary table of the residuals and an analysis of variance (ANOVA) summary of the residuals, as well as estimates of variation for our coefficients (the standard errors and the p-values associated with t-tests - displayed as <em>Pr(&gt;|t|)</em>).</p>
+<p>While these are informative, the format is not ideal for further manipulation and presentation. Several user-written functions exist to improve on this output. For example, the <a href="https://broom.tidymodels.org/"><code>{broom}</code></a> package - part of the <a href="https://www.tidymodels.org/"><code>{tidymodels}</code></a> suite of packages - has functions to extract model information into “tidy” tibbles (data sets), which can then be further manipulated and plotted. This is especially useful when working with results from many models that would benefit from comparing in a standardised format.</p>
+<p>The <a href="https://strengejacke.github.io/sjPlot/articles/tab_model_estimates.html"><code>{sjPlot}</code></a> package that we used before also has functions to export a publishable-quality table in HTML format:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>sjPlot<span class="sc">::</span><span class="fu">tab_model</span>(m1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table style="border-collapse:collapse; border:none;">
+<tbody><tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">&nbsp;</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">trustindex3</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">Predictors</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">CI</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">p</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">(Intercept)</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">3.91</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">3.86&nbsp;–&nbsp;3.95</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">eduyrs25</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.11</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.10&nbsp;–&nbsp;0.11</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">Observations</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">68211</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">R<sup>2</sup> / R<sup>2</sup> adjusted</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.054 / 0.054</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<p>By default the output table shows 95% confidence intervals (CI) instead of standard errors (SE), which can be easier to interpret (CI are calculated as <em>Estimate +/- (1.96 x Std. Error)</em>; you can try it out in the Console, replacing in the numeric values).</p>
+<p>The best approach is to graph the model results and present them in a figure, but that’s not very informative in the case of a simple model with only one predictor, so we can leave it for later.</p>
+<ol start="2" type="1">
+<li>Regress ‘trustindex3’ on ‘agea’ and interpret the results</li>
+</ol>
+<p>We can do as above:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> agea, <span class="at">data =</span> osterman)</span>
+<span id="cb38-2"><a href="#cb38-2"></a></span>
+<span id="cb38-3"><a href="#cb38-3"></a><span class="fu">summary</span>(m2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = trustindex3 ~ agea, data = osterman)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.4185 -1.2439  0.1195  1.4047  4.9126 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 4.9369533  0.0310778  158.86   &lt;2e-16 ***
+agea        0.0060192  0.0005931   10.15   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.905 on 68794 degrees of freedom
+Multiple R-squared:  0.001495,  Adjusted R-squared:  0.00148 
+F-statistic:   103 on 1 and 68794 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Regress ‘trustindex3’ on ‘female’ and interpret the results</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> female, <span class="at">data =</span> osterman)</span>
+<span id="cb40-2"><a href="#cb40-2"></a></span>
+<span id="cb40-3"><a href="#cb40-3"></a><span class="fu">summary</span>(m3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = trustindex3 ~ female, data = osterman)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-5.247 -1.247  0.094  1.419  4.761 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 5.239336   0.010595 494.509   &lt;2e-16 ***
+female1     0.008097   0.014560   0.556    0.578    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.906 on 68794 degrees of freedom
+Multiple R-squared:  4.495e-06, Adjusted R-squared:  -1.004e-05 
+F-statistic: 0.3093 on 1 and 68794 DF,  p-value: 0.5781</code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Regress ‘trustindex3’ on all three predictors listed above and interpret the results</li>
+</ol>
+<p>Finally we can fit a multiple linear model with several predictors:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> eduyrs25 <span class="sc">+</span> agea <span class="sc">+</span> female, <span class="at">data =</span> osterman)</span>
+<span id="cb42-2"><a href="#cb42-2"></a></span>
+<span id="cb42-3"><a href="#cb42-3"></a><span class="fu">summary</span>(m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = trustindex3 ~ eduyrs25 + agea + female, data = osterman)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.7460 -1.1756  0.1325  1.3123  6.0706 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 2.9547287  0.0428943  68.884  &lt; 2e-16 ***
+eduyrs25    0.1163995  0.0017345  67.108  &lt; 2e-16 ***
+agea        0.0155578  0.0005939  26.196  &lt; 2e-16 ***
+female1     0.0411570  0.0141507   2.908  0.00363 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.844 on 68207 degrees of freedom
+  (585 observations deleted due to missingness)
+Multiple R-squared:  0.06336,   Adjusted R-squared:  0.06332 
+F-statistic:  1538 on 3 and 68207 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>One interesting finding from Model 4 is to notice how radically the statistical significance of the <em>female</em> variable changes compared to Model 3. The impact of gender is still very weak in real terms: compared to men of similar age and education level, women score 0.04 points higher on the trust scale; but this is still a stronger effect than in the simple bivariate model (where <span class="math inline">\(b_1\)</span> was 0.008), and our confidence intervals are much narrower.</p>
+<p>We could tabulate these two models in a comparative table to better see the contrast:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>sjPlot<span class="sc">::</span><span class="fu">tab_model</span>(m3, m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table style="border-collapse:collapse; border:none;">
+<tbody><tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">&nbsp;</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">trustindex3</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">trustindex3</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">Predictors</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">CI</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">p</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">CI</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  col7">p</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">(Intercept)</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">5.24</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">5.22&nbsp;–&nbsp;5.26</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>&lt;0.001</strong></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">2.95</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">2.87&nbsp;–&nbsp;3.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">female: female1</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">-0.02&nbsp;–&nbsp;0.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.578</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01&nbsp;–&nbsp;0.07</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>0.004</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">eduyrs25</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.12</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.11&nbsp;–&nbsp;0.12</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">Age of respondent,<br>calculated</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.02</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01&nbsp;–&nbsp;0.02</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">Observations</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">68796</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">68211</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">R<sup>2</sup> / R<sup>2</sup> adjusted</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.000 / -0.000</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.063 / 0.063</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<p>It’s worth noticing that the number of observations used in the two models is not the same, due to missing values in some variables. We could make the samples comparable by selecting out the sample of 68,211 included in Model 4, then refitting Model 3 on that sample only:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>sample <span class="ot">&lt;-</span> m4<span class="sc">$</span>model</span>
+<span id="cb45-2"><a href="#cb45-2"></a></span>
+<span id="cb45-3"><a href="#cb45-3"></a>m3_new <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> female, <span class="at">data =</span> sample)</span>
+<span id="cb45-4"><a href="#cb45-4"></a></span>
+<span id="cb45-5"><a href="#cb45-5"></a>sjPlot<span class="sc">::</span><span class="fu">tab_model</span>(m3_new, m4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table style="border-collapse:collapse; border:none;">
+<tbody><tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">&nbsp;</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">trustindex3</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">trustindex3</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">Predictors</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">CI</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">p</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">CI</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  col7">p</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">(Intercept)</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">5.24</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">5.22&nbsp;–&nbsp;5.26</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>&lt;0.001</strong></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">2.95</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">2.87&nbsp;–&nbsp;3.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">female: female1</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">-0.02&nbsp;–&nbsp;0.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.582</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01&nbsp;–&nbsp;0.07</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>0.004</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">eduyrs25</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.12</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.11&nbsp;–&nbsp;0.12</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">Age of respondent,<br>calculated</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.02</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01&nbsp;–&nbsp;0.02</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">Observations</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">68211</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">68211</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">R<sup>2</sup> / R<sup>2</sup> adjusted</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.000 / -0.000</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.063 / 0.063</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<p>We see that this does not affect the overall picture.</p>
+</section><section id="advanced-exercise-3-apply-the-model-to-a-new-dataset-1" class="level3"><h3 class="anchored" data-anchor-id="advanced-exercise-3-apply-the-model-to-a-new-dataset-1">(Advanced) Exercise 3: Apply the model to a new dataset</h3>
+<p>The <strong>ostermann</strong> data originates from Waves 1-9 of the European Social Survey. The ESS data are accessible freely upon registration. As part of this exercise, access data from Wave 10 of the survey (from this site: https://www.europeansocialsurvey.org/data/) and perform the following tasks:</p>
+<ul>
+<li>download the dataset to the Rproject folder</li>
+<li>select the variables required to recreate the data to fit the multiple regression model from the previous exercise</li>
+<li>create your version of the ‘trustindex3’ variable</li>
+<li>fit the models from Exercise 2 and compare the results.</li>
+</ul>
+<p>You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. The most important missing information required to compete this task is to be found in the description on how the <strong>trustindex3</strong> scale was computed provided by Osterman:</p>
+<blockquote class="blockquote">
+<p>To study generalized social trust, I am following the established approach of using a validated three-item scale (Reeskens and Hooghe 2008; Zmerli and Newton 2008). This scale consists of the classic trust question, an item on whether people try to be fair, and an item on whether people are helpful: <br> - ‘Generally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people?’ <br> - ‘Do you think that most people would try to take advantage of you if they got the chance, or would they try to be fair?’ <br> - ‘Would you say that most of the time people try to be helpful or that they are mostly looking out for themselves?’ <br> All of the items may be answered on a scale from 0 to 10 (where 10 represents the highest level of trust) and the scale is calculated as the mean of the three items. The three-item scale clearly improves measurement reliability and cross-country validity compared to using a single item, such as the classic trust question. Internal consistency for the three items is reasonably high (Cronbach’s alpha: 0.77). The scale ranges between 0 and 10 with a mean of 5.24 for my sample. See the Supplementary material for additional information on the construction of the social trust scale (Section A.1), as well as for models using the classic single-item measure of trust (Section A.9).</p>
+</blockquote>
+<p><br></p>
+<p>&lt;&lt; the end &gt;&gt;</p>
+<p><br></p>
 
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+</section></section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-david1955" class="csl-entry" role="doc-biblioentry">
 David, F. N. 1955. <span>“Studies in the History of Probability and Statistics i. Dicing and Gaming (a Note on the History of Probability).”</span> <em>Biometrika</em> 42 (1/2): 1–15. <a href="https://doi.org/10.2307/2333419">https://doi.org/10.2307/2333419</a>.
 </div>
