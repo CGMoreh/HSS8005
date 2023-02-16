@@ -412,5 +412,8 @@
   },
   "materials/worksheets/worksheets_w03.qmd": {
     "worksheets_w03.html": "91c86963"
+  },
+  "materials/slides/draft_w3.qmd": {
+    "draft_w3.html": "078a5fe8"
   }
 }

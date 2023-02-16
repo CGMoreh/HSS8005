@@ -642,5 +642,33 @@
     "title": "Week 3 Computer Lab Worksheet",
     "section": "Exercise 2",
     "text": "Exercise 2\nRead through the Osterman article and check your understanding of how the author interprets these results. Particularly, how does the interaction model help us elucidate causal factors in the regression model?"
+  },
+  {
+    "objectID": "materials/slides/draft_w3.html#what-is-simple-bivariate-linear-regression",
+    "href": "materials/slides/draft_w3.html#what-is-simple-bivariate-linear-regression",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "What is simple (bivariate) linear regression?",
+    "text": "What is simple (bivariate) linear regression?\n\nSimple: it involves one response (dependent; outcome) variable and only one explanatory (independent; predictor) variable\nLinear: we assume that a one-unit change in the independent variable leads to a certain amount of increase or decrease in the dependent variable\nRegression: the term originated in Francis Galton’s studies of biological inheritance, specifically his 1886 article “Regression towards mediocrity in hereditary stature”, published in the Journal of the Anthropological Institute of Great Britain and Ireland (vol. 15, pp. 246–263)\nAt its simplest, it helps us evaluate whether there is a linear relationship between a numerical variable on a horizontal axis and the average of a numerical variable on the vertical axis. It provides a mathematical solution to the question: what is the best fitting straight line to capture the relationship of two variables in a scatter plot?"
+  },
+  {
+    "objectID": "materials/slides/draft_w3.html#what-is-simple-bivariate-linear-regression-1",
+    "href": "materials/slides/draft_w3.html#what-is-simple-bivariate-linear-regression-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "What is simple (bivariate) linear regression?",
+    "text": "What is simple (bivariate) linear regression?\n\nA statistical method for fitting a line to data where the relationship between two variables, \\(x\\) and \\(y,\\) can be modeled by a straight line with some error:\n\n\\[  \\overbrace{\\color{green}{\\textbf{y}}}^{outcome} = b_0 + b_1 * \\overbrace{\\color{green}{\\textbf{x}}}^{predictor} + e\\]\n\nA dataset normally contains a collection of values for \\(y\\) and \\(x\\) from a number \\((N)\\) of cases (e.g. survey respondents, or another unit of analysis)\nFor example, each row \\(i\\) in a dataset containing \\(N=1\\dots{n}\\) cases/units/rows would store values for \\(y_i\\) and \\(x_i\\)\nso that:\n\n\\[ y_i=b_0+b_1x_i + e_i \\]"
+  },
+  {
+    "objectID": "materials/slides/draft_w3.html#what-is-simple-bivariate-linear-regression-2",
+    "href": "materials/slides/draft_w3.html#what-is-simple-bivariate-linear-regression-2",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "What is simple (bivariate) linear regression?",
+    "text": "What is simple (bivariate) linear regression?\n\\[  \\overbrace{\\color{green}{\\textbf{y}}}^{outcome} = \\overbrace{\\color{red}{b_0}}^{intercept} + \\overbrace{\\color{red}{b_1}}^{slope} * \\overbrace{\\color{green}{\\textbf{x}}}^{predictor} + \\overbrace{e}^{error;\\ residual} \\]\n\nour aim is to calculate values for the \\(b_0\\) and \\(b_1\\) based on our data\nthe intercept \\(b_0\\) (or \\(\\alpha\\), as it is also sometimes notated) represents the average value of \\(y\\) when \\(x\\) is zero\nthe slope \\(b_1\\) measures the average increase in \\(y\\) when \\(x\\) increases by one unit\ntogether, \\(b_0\\) and \\(b_1\\) together are called coefficients\nthe error term \\(e\\) allows an observation to deviate from a perfect linear relationship\nMore generally, our aim is to generalise from our sample data to a hypothetical population. The mathematical notation to describe this general case is:\n\n\\[ Y=\\beta_0 + \\beta_1*X+\\epsilon \\]"
+  },
+  {
+    "objectID": "materials/slides/draft_w3.html#what-is-simple-bivariate-linear-regression-3",
+    "href": "materials/slides/draft_w3.html#what-is-simple-bivariate-linear-regression-3",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "What is simple (bivariate) linear regression?",
+    "text": "What is simple (bivariate) linear regression?\nFor example, say we have data on two variables, \\(X\\) and \\(Y\\); both are continuous measures with means of 0.48 and 0.006, respectively, and some standard deviation (i.e. they have variation among values):\n.center[ ]"
   }
 ]

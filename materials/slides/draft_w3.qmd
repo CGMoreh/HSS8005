@@ -1,0 +1,226 @@
+---
+week: 3
+week-title: "{{< var topic.w3 >}}"
+week-subtitle: "{{< var subtitle.w3 >}}"
+---
+
+```{r}
+#| include: false
+source("theme_slides.R")
+```
+
+## What is simple (bivariate) linear regression?
+
+- **Simple**: it involves one *response* (dependent; outcome) variable and only one *explanatory* (independent; predictor) variable
+
+- **Linear**: we assume that a one-unit change in the independent variable leads to a certain amount of increase or decrease in the dependent variable
+
+- **Regression**: the term originated in Francis Galton's studies of biological inheritance, specifically his 1886 article “Regression towards mediocrity in hereditary stature", published in the *Journal of the Anthropological Institute of Great Britain and Ireland* (vol. 15, pp. 246–263)
+
+- At its simplest, it helps us evaluate whether there is a linear relationship between a *numerical* variable on a horizontal axis and the average of a *numerical* variable on the vertical axis. It provides a mathematical solution to the question: what is the *best fitting* straight line to capture the relationship of two variables in a *scatter plot*?
+
+
+## What is simple (bivariate) linear regression?
+
+- A statistical method for fitting a line to data where the relationship between two variables, $x$ and $y,$ can be modeled by a straight line with some error:
+
+### $$  \overbrace{\color{green}{\textbf{y}}}^{outcome} = b_0 + b_1 * \overbrace{\color{green}{\textbf{x}}}^{predictor} + e$$
+
+- A dataset normally contains a collection of values for $y$ and $x$ from a number $(N)$ of cases (e.g. survey respondents, or another unit of analysis)
+- For example, each row $i$ in a dataset containing $N=1\dots{n}$ cases/units/rows would store values for $y_i$ and $x_i$
+- so that: 
+
+### $$ y_i=b_0+b_1x_i + e_i $$
+
+
+
+## What is simple (bivariate) linear regression?
+
+### $$  \overbrace{\color{green}{\textbf{y}}}^{outcome} = \overbrace{\color{red}{b_0}}^{intercept} + \overbrace{\color{red}{b_1}}^{slope} * \overbrace{\color{green}{\textbf{x}}}^{predictor} + \overbrace{e}^{error;\ residual} $$
+
+- our aim is to calculate values for the $b_0$ and $b_1$ based on our data
+- the intercept $b_0$ (or $\alpha$, as it is also sometimes notated) represents the average value of $y$ when $x$ is zero
+- the slope $b_1$ measures the average increase in $y$ when $x$ increases by one unit
+- together, $b_0$ and $b_1$ together are called *coefficients*
+- the error term $e$ allows an observation to deviate from a perfect linear relationship
+- More generally, our aim is to generalise from our *sample* data to a hypothetical *population*. The mathematical notation to describe this general case is:
+
+$$ Y=\beta_0 + \beta_1*X+\epsilon $$
+
+
+
+## What is simple (bivariate) linear regression?
+
+
+For example, say we have data on two variables, $X$ and $Y$; both are continuous measures with means of 0.48 and 0.006, respectively, and some standard deviation (i.e. they have variation among values):
+
+.center[
+<img src="images/03_reg2.2.png" width="75%" align="center">
+]
+
+## What are the aims of regression analysis?
+
+- ** Prediction**: we can use regression to predict an outcome variable, or more precisely the distribution of the outcome, given some set of inputs (i.e. predictors)
+
+- ** Comparison**: we can also compare these predictions for different values
+of the inputs, to make simple comparisons between groups, or to estimate causal effects (ROS, p. 81)
+
+
+## Applied regression
+
+```{r, include=FALSE}
+library(tidyverse)
+library(mosaic)
+library(ggformula)
+library(kableExtra)
+```
+
+Data from Österman (2021) "Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust"
+
+```{r}
+#| eval: false
+osterman <- sjlabelled::read_stata("https://cgmoreh.github.io/HSS8005-data/osterman.dta")
+```
+
+```{r}
+#| echo: false
+osterman <- sjlabelled::read_stata("../../data/osterman.dta")
+```
+
+
+
+
+- cumulative European Social Survey (ESS) data, consisting
+of the nine rounds from 2002 to 2018
+
+- data are weighted using ESS design weights (we will disregard this, sowe can expect our results to always differ somewhat!)
+
+- follows 'the established approach of using a validated three-item scale' to study generalised social trust
+
+- data also includes twenty-seven educational reforms implemented in sixteen European countries over six decades, where for each reform we can compare earlier reform-unaffected cohorts with later reform-affected cohorts
+
+
+## Applied regression
+
+Data from Österman (2021) "Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust"
+
+- The scale consists of the classic trust question, an item on whether people try to be fair, and an
+item on whether people are helpful:
+  - ‘Generally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people?’
+  - ‘Do you think that most people would try to take advantage of you if they got the chance, or would they try to be fair?’
+    - ‘Would you say that most of the time people try to be helpful or that they are mostly looking out for themselves?’
+    
+- All of the items may be answered on a scale from 0 to 10 (where 10 represents the highest level of trust) and the scale is calculated as the mean of the three items
+
+- The three-item scale improves measurement reliability and cross-country validity compared to using a single item, such as the classic trust question.
+
+
+
+## Descriptive statistics
+
+
+.center[
+<img src="images/osterman_t2.png" width="85%" align="center">
+]
+
+
+
+## Does education predict trust?
+
+- A scatter-plot of 'trustindex3' by 'eduyrs25'
+
+```{r, echo=FALSE}
+gf_point(trustindex3 ~ eduyrs25, data = osterman) %>%
+  gf_lm() + theme_light()
+```
+
+
+## Does education predict trust?
+```{r}
+m_edu <- lm(trustindex3 ~ eduyrs25, data = osterman)
+summary(m_edu)
+```
+
+
+## Does age predict trust?
+```{r echo=FALSE}
+gf_point(trustindex3 ~ agea, data = osterman) %>%
+  gf_lm() + theme_light()
+```
+
+
+## Does age predict trust?
+
+```{r}
+m_age <- lm(trustindex3 ~ agea, data = osterman)
+summary(m_age)
+```
+
+
+## Does gender predict trust?
+```{r echo=FALSE}
+gf_point(trustindex3 ~ female, data = osterman) %>%
+  gf_lm() + theme_light()
+```
+
+
+## Does gender predict trust?
+
+```{r}
+m_gender <- lm(trustindex3 ~ female, data = osterman)
+summary(m_gender)
+```
+
+
+## Multiple linear regression
+
+- it allows us to test the joint effects of more than one predictor
+
+- usually, we are interested in one primary predictor, but *while taking into account*, or *holding constant* the values of other predictors
+- it allows us to account for the possible effect of other factors (variables) that may influence our regression results
+
+- the multiple regression model for $p$ number of predictors can be written as:
+#### $$  Y = \beta_0 + \beta_1 \ X_1 + \beta_2 \ X_2 + \beta_3 \ X_3 + \dots + \beta_p \ X_p + e $$
+
+- but visualising it is a bit more difficult...
+
+
+## Multiple linear regression
+
+.center[
+<img src="images/03_reg3.png" width="85%" align="center">
+]
+
+---
+# Applied multiple regression
+
+## Does education predict trust, while accounting for age and gender?
+
+```{r, eval=FALSE, include=TRUE}
+## Load the Osterman data:
+osterman <- haven::read_dta("https://cgmoreh.github.io/SSC7001M/data/osterman.dta")
+```
+
+```{r, eval=FALSE, include=TRUE}
+m_multiple <- lm(trustindex3 ~ eduyrs25 + agea + female, data = osterman)
+summary(m_multiple)
+```
+
+---
+# Applied multiple regression
+
+### Does education predict trust, while accounting for age and gender?
+
+```{r}
+m_multiple <- lm(trustindex3 ~ eduyrs25 + agea + female, data = osterman)
+summary(m_multiple)
+```
+
+---
+class: inverse, center, middle
+
+<br><br>
+# Coffee break!
+.center[
+<img src="images/coffee.gif" width="50%" align="center">
+]
