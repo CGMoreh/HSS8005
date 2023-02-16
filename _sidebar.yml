@@ -40,7 +40,7 @@ website:
             - text: "Presentation"
               #file: materials/slides-frame/slides-frame_w03.qmd
             - text: "Worksheet"
-              #file: materials/worksheets/worksheets_w03.qmd
+              file: materials/worksheets/worksheets_w03.qmd
             - text: "Handout"
               file: materials/handouts/handouts-frame_w03.qmd
         - section: "Week 4"
