@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
-
+<meta name="generator" content="quarto-1.2.269">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Chris Moreh">
-
 <title>HSS8005  - Week 3 Computer Lab Worksheet</title>
 <style>
 code{white-space: pre-wrap;}
@@ -21,6 +18,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -42,7 +102,6 @@ div.csl-indent {
 }
 </style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <link href="../../files/img/ncl_coa_hss8005.png" rel="icon" type="image/png">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -55,8 +114,7 @@ div.csl-indent {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
-<script id="quarto-search-options" type="application/json">{
+<script src="../../site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script><script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -68,18 +126,12 @@ div.csl-indent {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-
-
-<link rel="stylesheet" href="../../html/nobiblio.css">
+}</script><link rel="stylesheet" href="../../html/nobiblio.css">
 </head>
-
 <body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HSS8005 <iconify-icon inline="" icon="line-md:plus"></iconify-icon></span>
@@ -90,50 +142,44 @@ div.csl-indent {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../plan8.html" rel="">
+<li class="nav-item">
+    <a class="nav-link" href="../../plan8.html">
  <span class="menu-text">Module plan</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resources/index.html" rel="">
+    <a class="nav-link" href="../../resources/index.html">
  <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../materials/index.html" rel="" aria-current="page">
+    <a class="nav-link active" href="../../materials/index.html" aria-current="page">
  <span class="menu-text">Materials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../data/index.html" rel="">
+    <a class="nav-link" href="../../data/index.html">
  <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../assessment/index.html" rel="">
+    <a class="nav-link" href="../../assessment/index.html">
  <span class="menu-text">Assessment</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://canvas.ncl.ac.uk/login/" rel="">
+    <a class="nav-link" href="https://canvas.ncl.ac.uk/login/">
  <span class="menu-text"><iconify-icon inline="" icon="arcticons:canvasstudent" style="font-size: l;"></iconify-icon> Canvas</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
+    </nav><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
       <h1 class="quarto-secondary-nav-title">Week 3 Computer Lab Worksheet</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../materials/index.html" class="sidebar-item-text sidebar-link">Weekly materials</a>
   </div>
@@ -146,8 +192,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   Notes
   </li>
           <li class="sidebar-item">
@@ -166,7 +212,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../materials/info/info_w02.html" class="sidebar-item-text sidebar-link">Week 2</a>
@@ -174,8 +220,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   Notes
   </li>
           <li class="sidebar-item">
@@ -194,7 +240,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../materials/info/info_w03.html" class="sidebar-item-text sidebar-link">Week 3</a>
@@ -202,8 +248,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   Notes
   </li>
           <li class="sidebar-item">
@@ -218,7 +264,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../materials/info/info_w04.html" class="sidebar-item-text sidebar-link">Week 4</a>
@@ -226,8 +272,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   Notes
   </li>
           <li class="sidebar-item">
@@ -242,7 +288,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../materials/info/info_w05.html" class="sidebar-item-text sidebar-link">Week 5</a>
@@ -250,8 +296,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   Notes
   </li>
           <li class="sidebar-item">
@@ -266,7 +312,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../materials/info/info_w06.html" class="sidebar-item-text sidebar-link">Week 6</a>
@@ -274,8 +320,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   Notes
   </li>
           <li class="sidebar-item">
@@ -290,7 +336,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../materials/info/info_w07.html" class="sidebar-item-text sidebar-link">Week 7</a>
@@ -298,8 +344,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   Notes
   </li>
           <li class="sidebar-item">
@@ -314,7 +360,7 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../materials/info/info_w08.html" class="sidebar-item-text sidebar-link">Week 8</a>
@@ -322,8 +368,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   Notes
   </li>
           <li class="sidebar-item">
@@ -338,25 +384,21 @@ div.csl-indent {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+</div>
+    <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#session-aims" id="toc-session-aims" class="nav-link active" data-scroll-target="#session-aims">Session aims</a></li>
-  </ul>
-</nav>
-</nav>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+<li><a href="#aims" id="toc-aims" class="nav-link active" data-scroll-target="#aims">Aims</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#import-data" id="toc-import-data" class="nav-link" data-scroll-target="#import-data">Import data</a></li>
+  <li><a href="#modelling-challenges" id="toc-modelling-challenges" class="nav-link" data-scroll-target="#modelling-challenges">Modelling challenges</a></li>
+  </ul></nav>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title d-none d-lg-block">Week 3 Computer Lab Worksheet</h1>
 <p class="subtitle lead">Interactions and causal inference</p>
 </div>
@@ -377,16 +419,176 @@ div.csl-indent {
   </div>
   
 
-</header>
+</header><div class="cell">
 
-<section id="session-aims" class="level2">
+</div>
+<section id="aims" class="level2"><h2 class="anchored" data-anchor-id="aims">Aims</h2>
+<p>In this session we continue working with data from <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#ref-Osterman2021CanWeTrustEducationFostering" role="doc-biblioref">2021</a>)</span> to replicate parts their analysis. In Week 2 we practised building very basic bivariate and multiple linear regression models. In this session, we will expand on those models and attempt to replicate (some of) the models reported in <a href="https://link.springer.com/article/10.1007/s11205-020-02529-y/tables/3"><strong>Table 3</strong></a> of <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#ref-Osterman2021CanWeTrustEducationFostering" role="doc-biblioref">2021</a>)</span>:</p>
+<p><img src="../../files/img/osterman_t3.png" class="img-fluid"></p>
+</section><section id="setup" class="level2"><h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<p>In Week 1 you set up <code>R</code> and <code>RStudio</code>, and an <strong>RProject</strong> folder (we called it “HSS8005_labs”) with an <code>.R</code> script and a <code>.qmd</code> or <code>.Rmd</code> document in it (we called these “Lab_1”). Ideally, you saved this on a cloud drive so you can access it from any computer (e.g.&nbsp;OneDrive). You will be working in this folder. If it’s missing, complete <a href="https://cgmoreh.github.io/HSS8005/materials/worksheets/worksheets_w01.html#task-2-set-up-a-new-r-project-with-an-.r-script-and-a-.qmd-document-included">Task 2 from the Week 1 Lab</a>.</p>
+<p>You can create a new <code>.R</code> script and <code>.qmd</code>/<code>.Rmd</code> for this week’s work (e.g.&nbsp;“Lab_3”). It may be useful to document more of your coding process and interpretations, so you want to work in a <code>.qmd</code>/<code>.Rmd</code> document rather than an <code>.R</code> script.</p>
+</section><section id="import-data" class="level2"><h2 class="anchored" data-anchor-id="import-data">Import data</h2>
+<p>As a first step, let’s import the <strong>osterman</strong> dataset that underpins the <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#ref-Osterman2021CanWeTrustEducationFostering" role="doc-biblioref">2021</a>)</span> article (see the <a href="https://cgmoreh.github.io/HSS8005/data/">Data page</a> on the course website for information about the datasets available in this course):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>osterman <span class="ot">&lt;-</span> sjlabelled<span class="sc">::</span><span class="fu">read_stata</span>(<span class="st">"https://cgmoreh.github.io/HSS8005-data/osterman.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+
+</div>
+</section><section id="modelling-challenges" class="level2"><h2 class="anchored" data-anchor-id="modelling-challenges">Modelling challenges</h2>
+<p>To continue on from the toy models that we fitted in Week 2, we may remember that we observed a change in the size of the effect and statistical significance of the gender variable (<em>female</em>) when also accounting for years of education and age. The two models compared as so:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>mm <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> eduyrs25 <span class="sc">+</span> agea <span class="sc">+</span> female, <span class="at">data =</span> osterman)</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>mb <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> female, <span class="at">data =</span> mm<span class="sc">$</span>model)</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>sjPlot<span class="sc">::</span><span class="fu">tab_model</span>(mb, mm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table style="border-collapse:collapse; border:none;">
+<tbody><tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">&nbsp;</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">trustindex3</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">trustindex3</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">Predictors</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">CI</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">p</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">CI</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  col7">p</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">(Intercept)</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">5.24</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">5.22&nbsp;–&nbsp;5.26</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>&lt;0.001</strong></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">2.95</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">2.87&nbsp;–&nbsp;3.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">female</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">-0.02&nbsp;–&nbsp;0.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.582</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.04</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01&nbsp;–&nbsp;0.07</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>0.004</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">eduyrs25</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.12</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.11&nbsp;–&nbsp;0.12</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">Age of respondent,<br>calculated</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.02</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.01&nbsp;–&nbsp;0.02</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  col7"><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">Observations</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">68211</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">68211</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">R<sup>2</sup> / R<sup>2</sup> adjusted</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.000 / -0.000</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.063 / 0.063</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<p>The question arises whether the gender variable <em>interacts</em> with the other predictors, particularly with <em>education</em> as that is the main focus of the research. In other words, we may have reasons to assume that the linear effect of education may be different for males and females. We can include interactions in several ways:</p>
+<ul>
+<li>with the <code>:</code> operator we</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> eduyrs25 <span class="sc">+</span> agea <span class="sc">+</span> female <span class="sc">+</span> eduyrs25<span class="sc">:</span>female, <span class="at">data =</span> osterman)</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">summary</span>(m0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = trustindex3 ~ eduyrs25 + agea + female + eduyrs25:female, 
+    data = osterman)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.8899 -1.1775  0.1327  1.3158  6.2142 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      3.1116898  0.0480764  64.724  &lt; 2e-16 ***
+eduyrs25         0.1035628  0.0024837  41.698  &lt; 2e-16 ***
+agea             0.0157145  0.0005941  26.452  &lt; 2e-16 ***
+female          -0.2687812  0.0452060  -5.946 2.77e-09 ***
+eduyrs25:female  0.0243750  0.0033767   7.219 5.31e-13 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.843 on 68206 degrees of freedom
+  (585 observations deleted due to missingness)
+Multiple R-squared:  0.06408,   Adjusted R-squared:  0.06402 
+F-statistic:  1167 on 4 and 68206 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">plot_model</span>(m0, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"eduyrs25"</span>, <span class="st">"female"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="draft-worksheets_w03_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>m0b <span class="ot">&lt;-</span> <span class="fu">lm</span>(trustindex3 <span class="sc">~</span> female<span class="sc">*</span>(eduyrs25 <span class="sc">+</span> agea), <span class="at">data =</span> osterman)</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">summary</span>(m0b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = trustindex3 ~ female * (eduyrs25 + agea), data = osterman)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.9169 -1.1760  0.1311  1.3156  6.2161 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      3.2450290  0.0602352  53.873  &lt; 2e-16 ***
+female          -0.5293431  0.0841053  -6.294 3.12e-10 ***
+eduyrs25         0.1022278  0.0025099  40.730  &lt; 2e-16 ***
+agea             0.0134344  0.0008591  15.638  &lt; 2e-16 ***
+female:eduyrs25  0.0273666  0.0034732   7.879 3.34e-15 ***
+female:agea      0.0043688  0.0011892   3.674 0.000239 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.843 on 68205 degrees of freedom
+  (585 observations deleted due to missingness)
+Multiple R-squared:  0.06426,   Adjusted R-squared:  0.0642 
+F-statistic: 936.8 on 5 and 68205 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">plot_model</span>(m0b, <span class="at">type =</span> <span class="st">"pred"</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"eduyrs25"</span>, <span class="st">"female"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="draft-worksheets_w03_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># interactions::interact_plot(m0, pred = eduyrs25, modx = female)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Session aims</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-david1955" class="csl-entry" role="doc-biblioentry">
 David, F. N. 1955. <span>“Studies in the History of Probability and Statistics i. Dicing and Gaming (a Note on the History of Probability).”</span> <em>Biometrika</em> 42 (1/2): 1–15. <a href="https://doi.org/10.2307/2333419">https://doi.org/10.2307/2333419</a>.
 </div>
@@ -405,11 +607,13 @@ McElreath, Richard. 2020. <em>Statistical Rethinking: A <span>Bayesian</span> Co
 <div id="ref-mulvin2021" class="csl-entry" role="doc-biblioentry">
 Mulvin, Dylan. 2021. <em>Proxies: The Cultural Work of Standing in</em>. Infrastructures Series. Cambridge, Massachusetts: The MIT Press.
 </div>
+<div id="ref-Osterman2021CanWeTrustEducationFostering" class="csl-entry" role="doc-biblioentry">
+Österman, Marcus. 2021. <span>“Can <span>We Trust Education</span> for <span>Fostering Trust</span>? <span class="nocase">Quasi-experimental Evidence</span> on the <span>Effect</span> of <span>Education</span> and <span>Tracking</span> on <span>Social Trust</span>.”</span> <em>Social Indicators Research</em> 154 (1): 211–33. <a href="https://doi.org/10.1007/s11205-020-02529-y">https://doi.org/10.1007/s11205-020-02529-y</a>.
+</div>
 <div id="ref-senn2003" class="csl-entry" role="doc-biblioentry">
 Senn, Stephen. 2003. <span>“A Conversation with John Nelder.”</span> <em>Statistical Science</em> 18 (1): 118–31. <a href="https://doi.org/10.1214/ss/1056397489">https://doi.org/10.1214/ss/1056397489</a>.
 </div>
-</div></section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

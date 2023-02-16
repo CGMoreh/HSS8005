@@ -101,9 +101,16 @@ The functions `sjlabelled::read_sas()`, `sjlabelled::read_spss()` and `sjlabelle
 As a first step, let's import the **osterman** dataset that underpins the @Osterman2021CanWeTrustEducationFostering article (see the [Data page](https://cgmoreh.github.io/HSS8005/data/) on the course website for information about the datasets available in this course):
 
 ```{r}
-#| output: false
+#| eval: false
 osterman <- sjlabelled::read_stata("https://cgmoreh.github.io/HSS8005-data/osterman.dta")
 ```
+
+```{r}
+#| echo: false
+osterman <- sjlabelled::read_stata("../../data/osterman.dta")
+```
+
+
 
 :::{.task}
 
