@@ -1,5 +1,19 @@
 [
   {
+    "listing": "/materials/handouts/index.html",
+    "items": [
+      "/materials/handouts/handouts-frame_w01.html",
+      "/materials/handouts/handouts-frame_w02.html",
+      "/materials/handouts/handouts-frame_w03.html",
+      "/materials/handouts/handouts-frame_w04.html",
+      "/materials/handouts/handouts-frame_w05.html",
+      "/materials/handouts/handouts-frame_w06.html",
+      "/materials/handouts/handouts-frame_w07.html",
+      "/materials/handouts/handouts-frame_w08.html",
+      "/materials/handouts/handouts_w01.pdf"
+    ]
+  },
+  {
     "listing": "/materials/index.html",
     "items": [
       "/materials/info/info_w01.html",
@@ -10,6 +24,45 @@
       "/materials/info/info_w06.html",
       "/materials/info/info_w07.html",
       "/materials/info/info_w08.html"
+    ]
+  },
+  {
+    "listing": "/materials/info/index.html",
+    "items": [
+      "/materials/info/info_w01.html",
+      "/materials/info/info_w02.html",
+      "/materials/info/info_w03.html",
+      "/materials/info/info_w04.html",
+      "/materials/info/info_w05.html",
+      "/materials/info/info_w06.html",
+      "/materials/info/info_w07.html",
+      "/materials/info/info_w08.html"
+    ]
+  },
+  {
+    "listing": "/materials/notes/index.html",
+    "items": [
+      "/materials/notes/draft-notes_w01.html",
+      "/materials/notes/draft-notes_w02.html",
+      "/materials/notes/draft-notes_w03.html",
+      "/materials/notes/draft-notes_w04.html",
+      "/materials/notes/draft-notes_w05.html",
+      "/materials/notes/draft-notes_w06.html",
+      "/materials/notes/draft-notes_w07.html",
+      "/materials/notes/draft-notes_w08.html"
+    ]
+  },
+  {
+    "listing": "/materials/slides-frame/index.html",
+    "items": [
+      "/materials/slides-frame/slides-frame_w01.html",
+      "/materials/slides-frame/slides-frame_w02.html",
+      "/materials/slides-frame/slides-frame_w03.html",
+      "/materials/slides-frame/slides-frame_w04.html",
+      "/materials/slides-frame/slides-frame_w05.html",
+      "/materials/slides-frame/slides-frame_w06.html",
+      "/materials/slides-frame/slides-frame_w07.html",
+      "/materials/slides-frame/slides-frame_w08.html"
     ]
   }
 ]

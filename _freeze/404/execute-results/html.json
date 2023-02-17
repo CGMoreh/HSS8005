@@ -1,0 +1,14 @@
+{
+  "hash": "d55aa59f94a5dacd207ee4c1995ad0e6",
+  "result": {
+    "markdown": "---\ntitle: \" \"\npage-layout: full\ncode-link: true\n---\n\n\n::: {.content-block}\n\n<p style=\"text-align:center;  font-size:230px; font-weight: bold; color:#900C3F\">404</p>\n\n\n::: {.cell}\n\n```{.r .cell-code}\nWhat_Is_This <- function(error_message){\n  error_message = \"404\"\n  print(\"The page you are looking for cannot be found\") \n  warning(\"There may still be content here in the future, so visit back!\")\n}\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nWhat_Is_This(\"404\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"The page you are looking for cannot be found\"\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nWarning in What_Is_This(\"404\"): There may still be content here in the future,\nso visit back!\n```\n:::\n:::\n\n\n\n<style>\n.backbutton {\n  background-color: #900C3F;\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n  margin: 4px 2px;\n  cursor: pointer;\n}\n\n\n</style>\n\n\n\n<script>\nfunction goBack()\n  {\n  window.history.back()\n  }\n</script>\n\n<body>\n<button class=\"backbutton\" style=\"margin: 10px; position: absolute; left: 50%; -ms-transform: translate(-50%); transform: translate(-50%)\" onclick=\"goBack()\">Go Back</button>\n</body>\n\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

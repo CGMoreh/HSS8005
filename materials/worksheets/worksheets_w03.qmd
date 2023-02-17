@@ -4,7 +4,6 @@ subtitle: "{{< var lab.w3 >}}"
 author: "{{< var author >}}"
 ---
 
-
 ```{r}
 #| echo: false
 options(timeout = max(1000, getOption("timeout")))
@@ -22,18 +21,13 @@ library(sjlabelled)
 
 In this session we continue working with data from @Osterman2021CanWeTrustEducationFostering to replicate parts their analysis. In Week 2 we practised building very basic bivariate and multiple linear regression models. In this session, we will expand on those models and attempt to replicate (some of) the models reported in [**Table 3**](https://link.springer.com/article/10.1007/s11205-020-02529-y/tables/3) of @Osterman2021CanWeTrustEducationFostering:
 
-
-![](../../files/img/osterman_t3.png)
-
+![](./../../files/img/osterman_t3.png)
 
 ## Setup
 
 In Week 1 you set up `R` and `RStudio`, and an **RProject** folder (we called it "HSS8005_labs") with an `.R` script and a `.qmd` or `.Rmd` document in it (we called these "Lab_1"). Ideally, you saved this on a cloud drive so you can access it from any computer (e.g. OneDrive). You will be working in this folder. If it's missing, complete [Task 2 from the Week 1 Lab](https://cgmoreh.github.io/HSS8005/materials/worksheets/worksheets_w01.html#task-2-set-up-a-new-r-project-with-an-.r-script-and-a-.qmd-document-included).
 
 You can create a new `.R` script and `.qmd`/`.Rmd` for this week's work (e.g. "Lab_3"). It may be useful to document more of your coding process and interpretations, so you want to work in a `.qmd`/`.Rmd` document rather than an `.R` script.
-
-
-
 
 ## Import data
 
@@ -49,9 +43,6 @@ osterman <- sjlabelled::read_stata("https://cgmoreh.github.io/HSS8005-data/oster
 osterman <- sjlabelled::read_stata("../../data/osterman.dta")
 ```
 
-
-
-
 ## Basic interactions
 
 To continue on from the toy models that we fitted in Week 2, we may remember that we observed a change in the size of the effect and statistical significance of the gender variable (*female*) when also accounting for years of education and age. The two models compared as so:
@@ -64,12 +55,9 @@ m_b <- lm(trustindex3 ~ female, data = m_m$model)
 sjPlot::tab_model(m_b, m_m)
 ```
 
-The question arises whether the gender variable *interacts* with the other predictors, particularly with *education* as that is the main focus of the research. In other words, we may have reasons to assume that the linear effect of education may be different for males and females. We can interact predictor variables in regression models using the `:` and `*` operators. 
-With `:`, we include in the regression model only the interaction term, but not the component variables (i.e. their main effects); to include the component variables as well, we need to add them in as usual with the `+` operator. **To note that we should normally want to include both main effects *and* and the interaction effects** in a regression model.
-With `*`, we include both the main effects and the interaction effects, so it provides a shortcut to using `:`, but it is often useful to combine the two in more complex interaction scenarios.
+The question arises whether the gender variable *interacts* with the other predictors, particularly with *education* as that is the main focus of the research. In other words, we may have reasons to assume that the linear effect of education may be different for males and females. We can interact predictor variables in regression models using the `:` and `*` operators. With `:`, we include in the regression model only the interaction term, but not the component variables (i.e. their main effects); to include the component variables as well, we need to add them in as usual with the `+` operator. **To note that we should normally want to include both main effects *and* and the interaction effects** in a regression model. With `*`, we include both the main effects and the interaction effects, so it provides a shortcut to using `:`, but it is often useful to combine the two in more complex interaction scenarios.
 
 In the code below, we interact *gender* with both *education* and *age*, and the two commands have the same result:
-
 
 ```{r}
 mxa <- lm(trustindex3 ~ eduyrs25 + agea +female + female*eduyrs25 + female*agea, data = osterman)
@@ -85,7 +73,6 @@ We find that both interaction terms (`eduyrs25:female` and `agea:female`) are st
 
 First, we can check the interaction between *education* and *gender*:
 
-
 ```{r}
 
 sjPlot::plot_model(mxa, type = "pred", terms = c("eduyrs25", "female"))
@@ -96,19 +83,17 @@ This visualization in now easier to interpret than the numerical output. We see 
 
 We can check the same for the interaction of *gender* and *age*:
 
-
 ```{r}
 
 sjPlot::plot_model(mxa, type = "pred", terms = c("agea", "female"))
 
 ```
 
-The general pattern is the same, however, the overlapping confidence intervals up until about the age of 53 tell us that the observed difference between the two genders may be due to random variation in our sample. The effect of this interaction is weaker and less reliable than the one with *education*, and unless we have a strong theoretically motivated reason to include it in our model, we may want to keep a simpler model without this interaction effect. 
+The general pattern is the same, however, the overlapping confidence intervals up until about the age of 53 tell us that the observed difference between the two genders may be due to random variation in our sample. The effect of this interaction is weaker and less reliable than the one with *education*, and unless we have a strong theoretically motivated reason to include it in our model, we may want to keep a simpler model without this interaction effect.
 
 ## Replicating Model 1
 
-With this basic understanding of interaction terms, we can now attempt to replicate Model 1 from the Osterman article. Based on the description provided in the article and the appended materials we can reconstruct the main components of their model as shown below. As a first step, run the command and compare our results to those presented in Model 1. Bear in mind that the effects most coefficients are not presented in the main table (see also the table's footnotes and Appendix 4 in the Supplementary Materials). We also did not include any survey weights in our model and did not include any error corrections, which the author does; so the results will not be exactly the same. 
-
+With this basic understanding of interaction terms, we can now attempt to replicate Model 1 from the Osterman article. Based on the description provided in the article and the appended materials we can reconstruct the main components of their model as shown below. As a first step, run the command and compare our results to those presented in Model 1. Bear in mind that the effects most coefficients are not presented in the main table (see also the table's footnotes and Appendix 4 in the Supplementary Materials). We also did not include any survey weights in our model and did not include any error corrections, which the author does; so the results will not be exactly the same.
 
 ```{r}
 m1 <- lm(trustindex3 ~ reform1_7 + female + blgetmg_d + fbrneur + mbrneur + fnotbrneur + mnotbrneur + agea  + agea + factor(essround) + yrbrn + yrbrn:yrbrn + yrbrn:factor(reform_id_num) + agea:factor(reform_id_num) + agea:agea + agea:agea:factor(reform_id_num) +  factor(reform_id_num), data = osterman)
@@ -123,8 +108,4 @@ This models provides a lot to play around with. For this exercise, start from th
 
 ## Exercise 2
 
-Read through the Osterman article and check your understanding of how the author interprets these results. Particularly, how does the interaction model help us elucidate causal factors in the regression model? 
-
-
-
-
+Read through the Osterman article and check your understanding of how the author interprets these results. Particularly, how does the interaction model help us elucidate causal factors in the regression model?

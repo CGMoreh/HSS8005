@@ -12,6 +12,8 @@ code-line-numbers: true
 # code-block-bg: lightgray
 # license: CC BY-NC
 
+self-contained: true
+
 execute:
   warning: FALSE
   
