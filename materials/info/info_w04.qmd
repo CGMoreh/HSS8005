@@ -17,8 +17,6 @@ abstract-title: "Description"
 
 **Application**
 
-1. Ladd, Jonathan McDonald, and Gabriel S. Lenz. 2009. ‘Exploiting a Rare Communication Shift to Document the Persuasive Power of the News Media’. American Journal of Political Science 53(2):394–410. [doi: 10.1111/j.1540-5907.2009.00377.x.](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-5907.2009.00377.x) 
-  - (published version should be accessible with university login; additional [Appendix available here](https://cgmoreh.github.io/HSS8005-data/LaddLenz_appendix.pdf))
+1. Ladd, Jonathan McDonald, and Gabriel S. Lenz. 2009. ‘Exploiting a Rare Communication Shift to Document the Persuasive Power of the News Media’. American Journal of Political Science 53(2):394–410. [doi: 10.1111/j.1540-5907.2009.00377.x.](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-5907.2009.00377.x)(published version should be accessible with university login; additional [Appendix available here](https://cgmoreh.github.io/HSS8005-data/LaddLenz_appendix.pdf))
 
-2. Weiss, Alexa, Corinna Michels, Pascal Burgmer, Thomas Mussweiler, Axel Ockenfels, and Wilhelm Hofmann. 2021. ‘Trust in Everyday Life’. Journal of Personality and Social Psychology 121:95–114. doi: 10.1037/pspi0000334. 
-  - ([access preprint here](https://osf.io/vz2cw))
+2. Weiss, Alexa, Corinna Michels, Pascal Burgmer, Thomas Mussweiler, Axel Ockenfels, and Wilhelm Hofmann. 2021. ‘Trust in Everyday Life’. Journal of Personality and Social Psychology 121:95–114. doi: 10.1037/pspi0000334 ([access preprint version here](https://osf.io/vz2cw))

@@ -11,6 +11,13 @@ project:
     - "!materials/templates/"
     - "!materials/handouts/draft*"
     - "!materials/worksheets/*solved.Rmd"
+    - "*.csv"
+    - "*.sav"
+    - "*.Rds"
+    - "*.txt"
+    - "*.dta"
+    - "*.bib"
+    - "*.pdf"
 
 format:
   html:
