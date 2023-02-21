@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Advanced Research Methods 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Chris Moreh  York St. John University" />
+    <meta name="date" content="2021-01-01" />
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <script src="libs/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link rel="stylesheet" href="css/rutgers-rmarkdown.css" type="text/css" />
+    <link rel="stylesheet" href="css/rutgers-fonts_og.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Advanced Research Methods 1
+## SSC7001M
+### Dr. Chris Moreh<br> York St. John University
+### 2021
+
+---
+
+
+class: inverse, center, middle
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  bottom:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #0051BA;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+  
+
+
+
+# .blue[Week 4]
+
+--
+
+## Multiple linear regression 
+
+--
+### a.k.a. Linear regression with multiple predictors
+
+---
+
+# A brief review of simple regression
+
+### What is simple (bivariate) linear regression?
+
+- **Simple**: it involves one *response* (dependent; outcome) variable and only one *explanatory* (independent; predictor) variable
+
+- **Linear**: we assume that a one-unit change in the independent variable leads to a certain amount of increase or decrease in the dependent variable
+
+- **Regression**: the term originated in Francis Galton's studies of biological inheritance, specifically his 1886 article “Regression towards mediocrity in hereditary stature", published in the *Journal of the Anthropological Institute of Great Britain and Ireland* (vol. 15, pp. 246–263)
+
+- At its simplest, it helps us evaluate whether there is a linear relationship between a *numerical* variable on a horizontal axis and the average of a *numerical* variable on the vertical axis. It provides a mathematical solution to the question: what is the *best fitting* straight line to capture the relationship of two variables in a *scatter plot*?
+
+---
+# A brief review of simple regression
+
+### What is simple (bivariate) linear regression?
+
+- A statistical method for fitting a line to data where the relationship between two variables, `\(x\)` and `\(y,\)` can be modeled by a straight line with some error:
+
+### $$  \overbrace{\color{green}{\textbf{y}}}^{outcome} = b_0 + b_1 * \overbrace{\color{green}{\textbf{x}}}^{predictor} + e$$
+
+- A dataset normally contains a collection of values for `\(y\)` and `\(x\)` from a number `\((N)\)` of cases (e.g. survey respondents, or another unit of analysis)
+- For example, each row `\(i\)` in a dataset containing `\(N=1\dots{n}\)` cases/units/rows would store values for `\(y_i\)` and `\(x_i\)`
+- so that: 
+$$ y_i=b_0+b_1x_i + e_i $$
+
+---
+# A brief review of simple regression
+
+### What is simple (bivariate) linear regression?
+
+### $$  \overbrace{\color{green}{\textbf{y}}}^{outcome} = \overbrace{\color{red}{b_0}}^{intercept} + \overbrace{\color{red}{b_1}}^{slope} * \overbrace{\color{green}{\textbf{x}}}^{predictor} + \overbrace{e}^{error;\ residual} $$
+
+- our aim is to calculate values for the `\(b_0\)` and `\(b_1\)` based on our data
+- the intercept `\(b_0\)` (or `\(\alpha\)`, as it is also sometimes notated) represents the average value of `\(y\)` when `\(x\)` is zero
+- the slope `\(b_1\)` measures the average increase in `\(y\)` when `\(x\)` increases by one unit
+- together, `\(b_0\)` and `\(b_1\)` together are called *coefficients*
+- the error term `\(e\)` allows an observation to deviate from a perfect linear relationship
+- More generally, our aim is to generalise from our *sample* data to a hypothetical *population*. The mathematical notation to describe this general case is:
+
+$$ Y=\beta_0 + \beta_1*X+\epsilon $$
+---
+# A brief review of simple regression
+
+For example, say we have data on two variables, `\(X\)` and `\(Y\)`; both are continuous measures with means of 0.48 and 0.006, respectively, and some standard deviation (i.e. they have variation among values):
+.center[
+&lt;img src="../pics/03_reg2.2.png" width="80%" align="center"&gt;
+]
+---
+
+# A brief review of simple regression
+&lt;br&gt;
+### What are the aims of regression analysis?
+- ** Prediction**: we can use regression to predict an outcome variable, or more precisely the distribution of the outcome, given some set of inputs (i.e. predictors)
+
+- ** Comparison**: we can also compare these predictions for different values
+of the inputs, to make simple comparisons between groups, or to estimate causal effects (ROS, p. 81)
+
+---
+# Applied regression
+
+
+
+--
+Data from Österman (2021) "Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust"
+
+
+```r
+## Load the Osterman data:
+osterman &lt;- haven::read_dta("https://cgmoreh.github.io/SSC7001M/data/osterman.dta")
+```
+
+- cumulative European Social Survey (ESS) data, consisting
+of the nine rounds from 2002 to 2018
+
+- data are weighted using ESS design weights (we will disregard this, sowe can expect our results to always differ somewhat!)
+
+- follows 'the established approach of using a validated three-item scale' to study generalised social trust
+
+- data also includes twenty-seven educational reforms implemented in sixteen European countries over six decades, where for each reform we can compare earlier reform-unaffected cohorts with later reform-affected cohorts
+
+---
+# Applied regression
+
+Data from Österman (2021) "Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust"
+
+- The scale consists of the classic trust question, an item on whether people try to be fair, and an
+item on whether people are helpful:
+  - ‘Generally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people?’
+  - ‘Do you think that most people would try to take advantage of you if they got the chance, or would they try to be fair?’
+    - ‘Would you say that most of the time people try to be helpful or that they are mostly looking out for themselves?’
+    
+- All of the items may be answered on a scale from 0 to 10 (where 10 represents the highest level of trust) and the scale is calculated as the mean of the three items
+
+- The three-item scale improves measurement reliability and cross-country validity compared to using a single item, such as the classic trust question.
+
+---
+
+&lt;style type="text/css"&gt;
+table {
+  font-size: 13px;     
+}
+&lt;/style&gt;
+## Descriptive statistics
+
+
+&lt;table&gt;
+&lt;caption&gt;Table 2 in Österman (2021)&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; N &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Mean &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; SD &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Min &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Max &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ppltrst &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68733 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5.097 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2.395 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; pplfair &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68548 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5.729 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2.212 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; pplhlp &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68665 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4.91 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2.285 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; dscrgrp &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68565 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1.942 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.233 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; brncntr &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; facntr &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.961 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.194 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; mocntr &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.964 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.185 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; yrbrn &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1959.058 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 11.914 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1926 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1993 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; agea &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 50.949 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12.244 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 25 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 80 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; female &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.53 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.499 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; eduyrs25 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68211 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12.7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4.193 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 25 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; blgetmg_d &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.015 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.122 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; ipudrst_rev &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 66903 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 7.317 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2.063 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; fnotbrneur &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.011 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.102 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; mnotbrneur &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.009 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.096 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; trustindex3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 5.244 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1.906 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; inst_trustindex5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 59255 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4.496 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1.998 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 10 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; reform_id_num &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13.598 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 7.633 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 27 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; reform_years &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -0.174 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 4.305 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; -7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 7 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; reform1_eonly_7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 40632 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; reform1_d_7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 29931 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.444 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.497 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; reform1_donly_7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 8258 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.424 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.494 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; reform1_7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.482 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; paredu_a_high &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 64960 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.348 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.476 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; cntry_cohort &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1135.899 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 534.978 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 32 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2003 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; fbrneur &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.029 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.166 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; mbrneur &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 68796 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.026 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0.16 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+## Does education predict trust?
+
+- A scatter-plot of 'trustindex3' by 'eduyrs25'
+
+&lt;img src="04-regression-2_files/figure-html/unnamed-chunk-4-1.png" width="720" /&gt;
+
+---
+## Does education predict trust?
+
+```r
+m_edu &lt;- lm(trustindex3 ~ eduyrs25, data = osterman)
+summary(m_edu)
+```
+
+```
+## 
+## Call:
+## lm(formula = trustindex3 ~ eduyrs25, data = osterman)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -6.544 -1.174  0.143  1.299  6.091 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  3.90859    0.02263   172.7   &lt;2e-16 ***
+## eduyrs25     0.10542    0.00169    62.3   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.85 on 68209 degrees of freedom
+##   (585 observations deleted due to missingness)
+## Multiple R-squared:  0.0538,	Adjusted R-squared:  0.0538 
+## F-statistic: 3.88e+03 on 1 and 68209 DF,  p-value: &lt;2e-16
+```
+
+---
+## Does age predict trust?
+&lt;img src="04-regression-2_files/figure-html/unnamed-chunk-6-1.png" width="720" /&gt;
+
+---
+## Does age predict trust?
+
+
+```r
+m_age &lt;- lm(trustindex3 ~ agea, data = osterman)
+summary(m_age)
+```
+
+```
+## 
+## Call:
+## lm(formula = trustindex3 ~ agea, data = osterman)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -5.418 -1.244  0.119  1.405  4.913 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 4.936953   0.031078   158.9   &lt;2e-16 ***
+## agea        0.006019   0.000593    10.2   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.9 on 68794 degrees of freedom
+## Multiple R-squared:  0.00149,	Adjusted R-squared:  0.00148 
+## F-statistic:  103 on 1 and 68794 DF,  p-value: &lt;2e-16
+```
+
+---
+## Does gender predict trust?
+&lt;img src="04-regression-2_files/figure-html/unnamed-chunk-8-1.png" width="720" /&gt;
+
+---
+## Does gender predict trust?
+
+
+```r
+m_gender &lt;- lm(trustindex3 ~ female, data = osterman)
+summary(m_gender)
+```
+
+```
+## 
+## Call:
+## lm(formula = trustindex3 ~ female, data = osterman)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -5.247 -1.247  0.094  1.419  4.761 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   5.2393     0.0106  494.51   &lt;2e-16 ***
+## female        0.0081     0.0146    0.56     0.58    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.91 on 68794 degrees of freedom
+## Multiple R-squared:  4.5e-06,	Adjusted R-squared:  -1e-05 
+## F-statistic: 0.309 on 1 and 68794 DF,  p-value: 0.578
+```
+
+---
+# Multiple linear regression
+
+- it allows us to test the joint effects of more than one predictor
+
+- usually, we are interested in one primary predictor, but *while taking into account*, or *holding constant* the values of other predictors
+- it allows us to account for the possible effect of other factors (variables) that may influence our regression results
+
+- the multiple regression model for `\(p\)` number of predictors can be written as:
+#### $$  Y = \beta_0 + \beta_1 \ X_1 + \beta_2 \ X_2 + \beta_3 \ X_3 + \dots + \beta_p \ X_p + e $$
+
+- but visualising it is a bit more difficult...
+
+---
+# Multiple linear regression
+
+.center[
+&lt;img src="../pics/03_reg3.png" width="85%" align="center"&gt;
+]
+
+---
+# Applied multiple regression
+
+## Does education predict trust, while accounting for age and gender?
+
+
+```r
+## Load the Osterman data:
+osterman &lt;- haven::read_dta("https://cgmoreh.github.io/SSC7001M/data/osterman.dta")
+```
+
+
+```r
+m_multiple &lt;- lm(trustindex3 ~ eduyrs25 + agea + female, data = osterman)
+summary(m_multiple)
+```
+
+---
+# Applied multiple regression
+
+### Does education predict trust, while accounting for age and gender?
+
+
+```r
+m_multiple &lt;- lm(trustindex3 ~ eduyrs25 + agea + female, data = osterman)
+summary(m_multiple)
+```
+
+```
+## 
+## Call:
+## lm(formula = trustindex3 ~ eduyrs25 + agea + female, data = osterman)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -6.746 -1.176  0.133  1.312  6.071 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 2.954729   0.042894   68.88   &lt;2e-16 ***
+## eduyrs25    0.116400   0.001735   67.11   &lt;2e-16 ***
+## agea        0.015558   0.000594   26.20   &lt;2e-16 ***
+## female      0.041157   0.014151    2.91   0.0036 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.84 on 68207 degrees of freedom
+##   (585 observations deleted due to missingness)
+## Multiple R-squared:  0.0634,	Adjusted R-squared:  0.0633 
+## F-statistic: 1.54e+03 on 3 and 68207 DF,  p-value: &lt;2e-16
+```
+
+---
+class: inverse, center, middle
+
+&lt;br&gt;&lt;br&gt;
+# Coffee break!
+.center[
+&lt;img src="figures/coffee.gif" width="50%" align="center"&gt;
+]
+
+---
+# Exercises
+
+## 1. In a new Rmd file, reproduce the multiple regression of trust on education, age and gender
+
+## 2. Build a new regression which **also** includes 'paternal education' and 'belonging to an ethnic minority group'
+
+## 3. Using the Osterman data, does 'institutional trust' predict generalised social trust if we account for age, gender and whether parents were born outside Europe?
+
+## 4. Free exercise using **your own** data!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Advanced social research methods 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Chris Moreh  York St. John University" />
+    <meta name="date" content="2021-01-01" />
+    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+    <script src="libs/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link rel="stylesheet" href="css/rutgers-rmarkdown.css" type="text/css" />
+    <link rel="stylesheet" href="css/rutgers-fonts_og.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Advanced social research methods 1
+## SSC7001M
+### Dr. Chris Moreh<br> York St. John University
+### 2021
+
+---
+
+class: inverse, center, middle
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  bottom:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #0051BA;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+  
+
+
+# .blue[Week 1]
+
+--
+
+## Welcome to the module!
+
+--
+
+### ... and an introduction to statistical modelling for social researchers
+
+---
+class: top, left
+
+# Session outline
+
+--
+
+## In the first half, I'll speak a lot:
+
+--
+
+### - Why quantitative sociology?
+--
+ .lightgrey[(have you looked at the motivational chart on Moodle and the associated reading?)]
+ 
+--
+### - Why **R** and **RStudio**?
+--
+ .lightgrey[(spoiler: something to do with what Freese an colleagues say in the two assigned readings?)]
+ 
+--
+### - Why statistical modelling?
+--
+ .lightgrey[(turning to hardcore ROS here)]
+
+--
+### - So what is this module about?
+--
+ .lightgrey[(Moodle page and all that)]
+
+--
+### - And how to do well on this module?
+--
+ .lightgrey[(looked at the Assessment Brief?)]
+
+---
+# Session outline
+## In the second half, I'll relax with my .orange[coffee], read the news, check my Facebook, like some cat photos...
+--
+ while you:
+
+--
+#### - Fire up **RStudio**
+--
+ .lightgrey[and make a list of error messages that we need to report to the IT team]
+
+--
+#### - Practice some basic **R** coding
+--
+ .lightgrey[from the R4DS book]
+
+--
+#### - Create an **Rmarkdown** document 
+--
+ .lightgrey[(tip: the automatic template created is actually a mini-tutorial)]
+
+--
+#### - Locate and download the replication documentation associated with the article by Schwemmer and Wieczorek (2020)
+--
+ .lightgrey[ and check out the two documents titled *soc_journals_replication.Rmd* and *soc_journals_replication.nd.html*]
+
+--
+#### - You get all excited about **R** and stay here all night practicing
+--
+ .lightgrey[???]
+
+---
+layout: true
+# Why quantitative sociology?
+
+---
+--
+### Evans and Foster (2019):
+- C. Wright Mills argued that sociologists should cultivate an imagination that connects individual experiences with large-scale social currents and places them in historical perspective. 
+--
+ Recent computational advances in the collection, analysis, and simulation of social data have cultivated an **expanded sociological imagination**.
+ 
+--
+
+- Sociology is the science of societies, concerned with their structure and culture, at large scales. 
+--
+ Sociologists are interested in **prediction**, **explanation**, and **interpretation**: three complementary modes of engaging with social data.
+
+--
+
+- Embracing our special vocation will require key changes in
+the sociological curriculum. Graduate students should master
+languages like Python, R, or Julia; these are **the common tongues** of machine learning and data science.
+
+--
+
+- Computation allows us to model, measure, and modify both social structures and the texture of individual experience ... on bigger and smaller scales than ever before. 
+--
+ **The sociological imagination has been blown wide open**.
+
+---
+### Schwemmer and Wieczorek (2020):
+- Sociology is still divided methodologically
+--
+ along the artificial qualitative/ quantitative divide.
+ 
+--
+
+&lt;img src="figures/kingbook.png" width="17%" align="right"&gt;
+- Other disciplines (e.g. political science) have made better &lt;br&gt;progress over the past two decades.
+
+
+--
+- There is an overall trend towards more quantitative work
+--
+ employing both statistical and more broadly 'computational' methods
+
+--
+
+- This divide is reflected in academic journals and national professional associations
+
+--
+
+- Sociology might increasingly give way to an archipelago of sub-disciplines with their own domains of knowledge but a limited ability to produce new insights
+
+---
+&lt;br&gt;
+.center[
+&lt;img src="figures/ab.gif" width="120%" align="center"&gt;
+]
+
+---
+layout: false
+# Why R and RStudio?
+- "Graduate students should master languages like Python, R, or Julia; these are **the common tongues** of machine learning and data science"
+
+--
+
+- Free, open source!
+--
+ You can use it without any institutional affiliation in the future.
+--
+ And in most workplaces, as it's becoming the most popular statistical software in both the public and private sector.
+ 
+--
+
+- Amazing power and versatility.
+--
+ You can start with the very basics (this course).
+--
+ But can develop your skills endlessly.
+ 
+--
+
+- You can follow best practice in publication and applied research work by implementing a **reproducible workflow**.
+--
+ With ease!
+ 
+--
+
+- &lt;b&gt;Freese (2007):&lt;/b&gt;&lt;br&gt;
+A larger movement is afoot, and it will continue regardless of whether or when sociology chooses to take part. Sociologists feel the discipline’s valuable research contributions do not receive the outside attention they deserve. If quantitative sociologists are not willing to act to make their research practices as transparent and public as possible, then we will have no one to blame but ourselves if our work has less visibility and credibility.
+ 
+---
+# Why statistical modelling?
+--
+
+### What is a 'model'?
+
+--
+&lt;img src="figures/trainsmall.jpg" width="30%" align="left"&gt;
+--
+ &lt;img src="figures/trainlarge.jpg" width="65%" align="right" vertical-align="middle"&gt;
+
+---
+# Why statistical modelling?
+
+
+### What is a 'model'?
+
+&lt;img src="figures/trainmuseum2.png" width="90%" align="middle"&gt;
+
+---
+# Why statistical modelling?
+
+
+### What is a 'model'?
+
+&lt;img src="https://jeroen.github.io/images/earth.gif" width="50%" align="center"&gt;
+
+---
+# Why statistical modelling?
+
+### A group thought experiment:
+
+--
+
+#### Could I build a model to predict student satisfaction on this module?
+--
+ What would be the 'ingredients' of such a model?
+ 
+--
+- Some measure of the outcome: "satisfaction"
+
+--
+
+- Some measure(s) of predictor(s): ?
+
+--
+&lt;br&gt;
+##### Satisfaction 
+--
+ ~ InstructorEffort 
+--
+ + StudentEffort
+--
+ + Resources
+--
+ + anything else?
+ 
+--
+$$
+Y = \alpha + \beta X + \epsilon
+$$
+--
+
+- Some immediate questions that emerge:
+
+--
+  * How should 'satisfaction' be measured?
+--
+ And does that affect my model?
+--
+ And if so, what to do?
+ 
+--
+
+ * How should the predictors be measured?
+--
+ And does that affect my model?
+--
+ And if so, what to do?
+
+---
+# What is this module about?
+
+--
+
+### About answering those immediate questions!
+
+---
+
+&lt;iframe width="1500" height="500" src="https://moodle.yorksj.ac.uk/course/view.php?id=25703" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+# Coffe break!
+--
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Advanced Research Methods 1</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Chris Moreh  York St. John University" />
+    <meta name="date" content="2022-01-01" />
+    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+    <script src="libs/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link rel="stylesheet" href="css/rutgers-rmarkdown.css" type="text/css" />
+    <link rel="stylesheet" href="css/rutgers-fonts_og.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Advanced Research Methods 1
+## SSC7001M
+### Dr. Chris Moreh<br> York St. John University
+### 2022
+
+---
+
+class: inverse, center, middle
+
+
+
+
+
+
+
+<style>.xe__progress-bar__container {
+  bottom:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: #0051BA;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+# .blue[Week 12]
+
+--
+
+## Multilevel/longitudinal models
+
+---
+
+# A brief review of single-level regression
+
+--
+
+- We aim to model an **outcome** measurement, our ['estimand'](https://journals.sagepub.com/doi/10.1177/00031224211004187): `\(\color{green}{Y}\)`
+
+--
+
+- We have data on a number `\((n)\)` of **observations** `\((\color{red}{i})\)` (e.g. survey respondents; pupils; students; factory workers; etc.): `\(\color{red}{i}_{1\dots{n}}\)`
+
+--
+
+- We assume that observations are **independent** of each other (e.g. different respondents randomly sampled from a population)
+
+--
+
+.center[
+&lt;img src="../pics/11-single1.2.png" width="75%" align="center"&gt;
+]
+
+--
+
+- The outcome measurement has a mean `\((\mu)\)`, and each observation has some deviation ("error") from this grand mean `\((e_i)\)`
+
+--
+
+&lt;img src="../pics/11-single2.png" width="70%" align="left"&gt;
+&lt;br&gt;
+
+### $$ y_i = \mu + \color{red}{e_i} $$ 
+
+???
+- Independence of observation is usually assumed if the data collection was done properly using random sampling techniques; in practice, it also means that individual observations should not be strongly clustered into larger groups that may have a strong group-effect that shapes individual characteristics; for example, if data is collected cross-nationally, respondents from different countries can share characteristics specific to that country, shaped by historical, cultural, social, ethical etc. influences that affect everyone in that national context; or, a classicla example of hierarchical/multilevel data, when pupitls/students belong to different shools/universities; or people living in different regions of a country; or workers belonging to different factories; etc, etc.
+
+---
+# A brief review of single-level regression
+
+.center[&lt;img src="../pics/11-single3.png" width="60%"&gt;]
+
+--
+
+- **Observed** part: our observation, outcome, estimate, etc.; the left-hand-side of the model 
+
+--
+
+- **Fixed** part: this can be a simple sample mean `\((\mu)\)` of a single measurement (e.g. an election exit poll), but it can also be a regression equation also containing predictor variables (e.g. `\(b_0 + b_{1i}x_{1i} + b_{2i}x_{2i} \cdots b_{pi}x_{pi}\)` for a model with `\(p\)` number of predictors/independent variables)
+
+--
+
+- **Random** part: the deviations of the observations from the model mean
+
+---
+# A brief review of single-level regression
+
+- We also assume that the error term `\((e)\)` is Normally distributed around a mean of 0 and has some variance `\((\sigma^2)\)` that we are estimating
+
+&lt;br&gt;
+.center[&lt;img src="../pics/11-single4.png" width="80%"&gt;]
+
+???
+- in regression we also make some assumptions regarding the distribution of errors:
+- that they are Normally distributed, with a mean of 0 and some variance (the square of the standard deviation)
+- we are estimating this variance about that sample mean
+
+---
+
+# Applied example from Weeks 4 and 6 
+
+
+
+Let's use some selected variables and observations from the Österman (2021) dataset underpinning the article ["Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust"](http://www.diva-portal.org/smash/get/diva2:1503902/FULLTEXT01.pdf), which we have explored in previous weeks.
+
+
+
+The 'Country' variable - and our data - looks like this:
+
+
+```
+## Frequencies  
+## ost$cntry  
+## Label: Country  
+## Type: Factor  
+## 
+##               Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+## ----------- ------ --------- -------------- --------- --------------
+##          DE     50     12.50          12.50     12.50          12.50
+##          ES     50     12.50          25.00     12.50          25.00
+##          FR     50     12.50          37.50     12.50          37.50
+##          GB     50     12.50          50.00     12.50          50.00
+##          HU     50     12.50          62.50     12.50          62.50
+##          IE     50     12.50          75.00     12.50          75.00
+##          PL     50     12.50          87.50     12.50          87.50
+##          PT     50     12.50         100.00     12.50         100.00
+##        &lt;NA&gt;      0                               0.00         100.00
+##       Total    400    100.00         100.00    100.00         100.00
+```
+
+
+---
+# Applied example from Weeks 4 and 6 
+
+A summary of the variables kept:
+
+```
+## ### Descriptive Statistics  
+## #### ost  
+## **N:** 400  
+## 
+## |            &amp;nbsp; |  Mean | Std.Dev | Median |   Min |   Max | N.Valid |
+## |------------------:|------:|--------:|-------:|------:|------:|--------:|
+## |          **agea** | 52.49 |   12.89 |  54.00 | 25.00 | 80.00 |  400.00 |
+## |      **eduyrs25** | 12.63 |    4.20 |  12.00 |  0.00 | 24.00 |  395.00 |
+## |        **facntr** |  0.96 |    0.19 |   1.00 |  0.00 |  1.00 |  400.00 |
+## |        **female** |  0.54 |    0.50 |   1.00 |  0.00 |  1.00 |  400.00 |
+## |     **fmnoncntr** |  0.05 |    0.21 |   0.00 |  0.00 |  1.00 |  400.00 |
+## |        **mocntr** |  0.97 |    0.17 |   1.00 |  0.00 |  1.00 |  400.00 |
+## | **paredu_a_high** |  0.32 |    0.47 |   0.00 |  0.00 |  1.00 |  379.00 |
+## |   **trustindex3** |  4.89 |    1.79 |   5.00 |  0.00 |  9.00 |  400.00 |
+```
+
+---
+# Applied example from Weeks 4 and 6
+
+A single-level linear model:
+
+&lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Observations &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 376 (24 missing obs. deleted) &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Dependent variable &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; trustindex3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Type &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; OLS linear regression &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt; &lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; F(5,370) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 7.59 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; R² &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.09 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Adj. R² &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.08 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt; &lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Est. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; S.E. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; t val. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; p &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; (Intercept) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.55 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.56 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.57 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; eduyrs25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.11 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 4.54 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; agea &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.02 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2.66 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; female &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.20 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.18 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -1.13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.26 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; paredu_a_high &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.21 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.09 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.28 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; fmnoncntr &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.95 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.45 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -2.13 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.03 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;&lt;tr&gt;&lt;td style="padding: 0; " colspan="100%"&gt;
+&lt;sup&gt;&lt;/sup&gt; Standard errors: OLS&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;
+
+---
+# Multilevel models
+
+.center[&lt;img src="../pics/11-multi.png" width="80%"&gt;]
+
+--
+
+.center[&lt;img src="../pics/11-multi2.png" width="70%"&gt;]
+
+---
+# Multilevel models
+
+.center[&lt;img src="../pics/11-multi3.png" width="80%"&gt;]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
