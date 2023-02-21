@@ -17,7 +17,7 @@ course:
   github: ""
   url: ""
   copyright_year: "2023"
-  canvas: "https://canvas.ncl.ac.uk/login/"
+  canvas: "https://ncl.instructure.com/courses/45661"
 
 session:
   lecture: "Lecture: 10:00-11:30"
@@ -25,7 +25,10 @@ session:
   days: "Thursdays"
   location: "Check on your Timetable app"
 
-assessment: 3,500-word long research report
+assessment: 
+  task: "3,500-word long research report"
+  date: "26th April 2023"
+  submit: "https://ncl.instructure.com/courses/45661/assignments"
 
 institution:
   name: "Newcastle University"

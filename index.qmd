@@ -51,9 +51,9 @@ suppress-bibliography: true
 
 ### Assessment
 
-- {{< fa calendar >}} &nbsp; **26th April 2023**
-- {{< fa file >}} &nbsp; {{< var assessment >}}
-- {{< fa solid share >}} &nbsp; Submit to Turnitin via [Canvas](add Canvas link!)
+- {{< fa calendar >}} &nbsp; **{{< var assessment.date >}}**
+- {{< fa file >}} &nbsp; {{< var assessment.task >}}
+- {{< fa solid share >}} &nbsp; Submit to Turnitin via [Canvas]({{< var assessment.submit >}})
 
 :::
 

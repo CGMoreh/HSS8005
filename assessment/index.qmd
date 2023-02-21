@@ -1,1 +1,10 @@
-The final assignment is a 3,500-word long research report.
+---
+title: "Assessment"
+page-layout: full
+toc: false
+sidebar: false
+---
+
+- {{< fa file >}} &nbsp; {{< var assessment.task >}}
+- {{< fa calendar >}} &nbsp; **{{< var assessment.date >}}**
+- {{< fa solid share >}} &nbsp; Submit to Turnitin via [Canvas]({{< var assessment.submit >}})

@@ -1,0 +1,90 @@
+---
+title: "Data documentation"
+page-layout: full
+execute:
+  echo: false
+bibliography: references.bib
+css: ../html/nobiblio.css
+---
+
+The datasets used in this course and available for download from the course website are the following:
+
++------------+----------------------------------+-------+---------+---------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| File name  | Original name                    | Type  | Version | Survey                                                                                | Links                                                                                                             |
++============+==================================+=======+=========+=======================================================================================+===================================================================================================================+
+| eb89.1     | ZA6963_v1-0-0                    | .dta\ | 1.0.0   | Eurobarometer; 89.1 (March 2018)                                                      | [Source](https://search.gesis.org/research_data/ZA6963 "GESIS")\                                                  |
+|            |                                  | .sav  |         |                                                                                       | [Questionnaire](https://cgmoreh.github.io/SSC7001M/data/ZA6963_q_gb.pdf "Download PDF")\                          |
+|            |                                  |       |         |                                                                                       | Codebook                                                                                                          |
++------------+----------------------------------+-------+---------+---------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| ess9       | ESS9e03_1                        | .dta\ | 3.1     | European Social Survey; Integrated file, Round 9 (2018)                               | [Source](https://www.europeansocialsurvey.org/download.html?file=ESS9e03_1&y=2018 "ESS website")\                 |
+|            |                                  | .sav  |         |                                                                                       | [Questionnaire](https://cgmoreh.github.io/SSC7001M/data/ESS9_source_questionnaires.pdf "Download PDF")\           |
+|            |                                  |       |         |                                                                                       | Codebook                                                                                                          |
++------------+----------------------------------+-------+---------+---------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| evs5       | ZA7500_v4-0-0                    | .dta\ | 4.0.0   | European Values Study; Wave 5 (2017-2020)                                             | [Source](https://search.gesis.org/research_data/ZA7500 "GESIS")\                                                  |
+|            |                                  | .sav  |         |                                                                                       | [Questionnaire](https://cgmoreh.github.io/SSC7001M/data/ZA7500_q_gb.pdf "Download PDF")\                          |
+|            |                                  |       |         |                                                                                       | Codebook                                                                                                          |
++------------+----------------------------------+-------+---------+---------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| EUinUK2018 | EUinUK2018_Polish                | .dta  | \-      | Survey data collected by McGhee and Moreh (2018), ESRC Centre for Population Change   | Source\                                                                                                           |
+|            |                                  |       |         |                                                                                       | [Questionnaire](https://cgmoreh.github.io/SSC7001M/data/EUinUK%202018%20Questionnaire.pdf "Download PDF")\        |
+|            |                                  |       |         |                                                                                       | Codebook                                                                                                          |
++------------+----------------------------------+-------+---------+---------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| LaddLenz   | LaddLenz                         | .dta  | \-      | Replication data for Ladd and Lenz (2009), based on British Election Panel Study data | [Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/16077 "Hainmueller 2011 Dataverse")\ |
+|            |                                  |       |         |                                                                                       | Questionnaire\                                                                                                    |
+|            |                                  |       |         |                                                                                       | Codebook                                                                                                          |
++------------+----------------------------------+-------+---------+---------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+| osterman   | Replication_data_ESS1-9_20201113 | .dta  | \-      | Replication data for Österman (2020), based on European Social Survey Rounds 1-9 data | [Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA "Osterman Dataverse")\   |
+|            |                                  |       |         |                                                                                       | Questionnaire\                                                                                                    |
+|            |                                  |       |         |                                                                                       | Codebook                                                                                                          |
++------------+----------------------------------+-------+---------+---------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
+
+The datasets can be read into `R` from `"https://cgmoreh.github.io/SSC7001M/data/FILE_NAME"` using an appropriate command from the `haven` package or other importing function.
+
+```{r}
+# Table contents
+
+library("tibble")
+library("kableExtra")
+# library("reactable")
+
+headings <- c("File name", "Original name", "Type", "Version", "Description", "Access")
+
+osterman_1 <- "osterman"
+
+
+content <- tribble(
+  ~"File", ~"Original name", ~"Type", ~"Version", ~"Origin", ~"Access",
+  # datasets
+  "osterman", "Replication_data_ESS1-9_20201113", ".dta", NA, 
+      "Replication data for @Osterman2021CanWeTrustEducationFostering, based on European Social Survey Rounds 1-9 data",
+      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA)",
+            "<br>",
+            "Questionnaire",
+            "<br>",
+            "[Codebook]()"),
+  "LaddLenz", "LaddLenz", ".dta", NA,
+      "Replication data for @LaddLenz2009ExploitingRareCommunicationShiftDocument, based on British Election Panel Study data. Included in @Hainmueller2012EntropyBalancingCausalEffectsMultivariate",
+      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/16077)",
+            "<br>",
+            "Questionnaire",
+            "<br>",
+            "[Codebook]()")
+)
+
+content2 <- content |> 
+  kbl(escap = FALSE) |> 
+  kable_styling() |>
+  column_spec(1, width = "10%") |>  
+  column_spec(2, width = "18%") |>  
+  column_spec(3, width = "5%") |>  
+  column_spec(4, width = "5%") |>  
+  column_spec(5, width = "45%")
+
+```
+
+::: text-xm
+```{r results="asis"}
+
+cat(content2)
+
+```
+:::
