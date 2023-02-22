@@ -1,9 +1,0 @@
----
-title: "Week 4 Computer Lab Worksheet"
-subtitle: "{{< var lab.w4 >}}"
-author: "{{< var author >}}"
-abstract: "{{< var worksheet-abstract.w4 >}}"
-abstract-title: "Description"
----
-
-## Session aims

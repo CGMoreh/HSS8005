@@ -1,7 +1,0 @@
-
-format:
-  html: default
-#  pdf: default
-bibliography: ../../hss8005.bib
-page-layout: full
-toc-location: left

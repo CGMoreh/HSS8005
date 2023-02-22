@@ -1,6 +1,0 @@
----
-title: "Week 5 {{< fa minus >}} {{< var topic.w5 >}}"
-subtitle: "{{< var subtitle.w5 >}}"
-abstract: "{{< var topic-abstract.w5 >}}"
-abstract-title: "Description"
----

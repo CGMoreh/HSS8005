@@ -1,8 +1,0 @@
----
-title: "Week 1 handout"
-#subtitle: "{{< var subtitle.w1 >}}"
----
-
-```{=html}
-<iframe width="500" height="780" src="/materials/handouts/handouts_w01.pdf" ></iframe>
-```

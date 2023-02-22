@@ -1,6 +1,0 @@
----
-title: "Week REPLACE {{< fa minus >}} {{< var topic.wREPLACE >}}"
-subtitle: "{{< var subtitle.wREPLACE >}}"
-abstract: "{{< var topic-abstract.wREPLACE >}}"
-abstract-title: "Description"
----
