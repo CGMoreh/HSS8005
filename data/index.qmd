@@ -27,7 +27,7 @@ content <- tribble(
   ## osterman
   paste("[osterman](https://cgmoreh.github.io/HSS8005-data/osterman.dta)"), ".dta",
       "Replication data for @Osterman2021CanWeTrustEducationFostering, based on European Social Survey Rounds 1-9 data",
-      paste("[Source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA)" ),
+      paste("[Data source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/RCSCDA)", "<br>", "[Open access article](https://link.springer.com/article/10.1007/s11205-020-02529-y)", "<br>", "[Supplementary materials](https://static-content.springer.com/esm/art%3A10.1007%2Fs11205-020-02529-y/MediaObjects/11205_2020_2529_MOESM1_ESM.pdf)"),
   ## LaddLenz
   paste("[LaddLenz](https://cgmoreh.github.io/HSS8005-data/LaddLenz.dta)"), ".dta",
       "Replication data for @LaddLenz2009ExploitingRareCommunicationShiftDocument, based on British Election Panel Study data. Included in @Hainmueller2012EntropyBalancingCausalEffectsMultivariate",
@@ -49,7 +49,10 @@ content <- tribble(
       paste("[Data source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/R5MEKK)", "<br>", "[Open access article](https://ora.ox.ac.uk/objects/uuid:33db61d3-a72c-4dc1-8ad5-53fc37728650)", "<br>", "[Supplementary materials](https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S000712341700031X/resource/name/S000712341700031Xsup001.pdf)"),
   ## Ejrnæs
   paste("[Ejrnaes21](https://cgmoreh.github.io/HSS8005/data/Ejrnaes21.dta)"), ".dta", "Replication data for @EjrnaesJensen2021GoYourOwnWayPathways, based on data from the European Social Survey Round 8. The original dataset provided by the authors is called ***G&O_Final.tab*** and the original analysis was performed in Stata.",
-      paste("[Data source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VAFIIO)", "<br>", "[Open access article](https://research.cbs.dk/en/publications/go-your-own-way-the-pathways-to-exiting-the-european-union)", "<br>", "[Supplementary materials](https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0017257X20000378/resource/name/S0017257X20000378sup001.docx)")
+      paste("[Data source](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VAFIIO)", "<br>", "[Open access article](https://research.cbs.dk/en/publications/go-your-own-way-the-pathways-to-exiting-the-european-union)", "<br>", "[Supplementary materials](https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S0017257X20000378/resource/name/S0017257X20000378sup001.docx)"),
+  ## workout
+  paste("[workout](https://cgmoreh.github.io/HSS8005/data/workout.Rds)"), ".Rds", "Example dataset from @MehmetogluMittner2021AppliedStatisticsUsingGuideSocial; a combined version of the original `workout2` and `workout3` datasets included in the {astatur} package",
+      paste("[Data source](https://github.com/ihrke/astatur/tree/master/data)")  
 )
 
 content2 <- content |> 
