@@ -14,3 +14,5 @@ Rproj.user\*
 /.luarc.json
 .Rproj.user/shared/notebooks/paths
 nul
+
+/materials/slides/
