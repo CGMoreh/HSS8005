@@ -1,1 +1,1 @@
-This repository stores the website for the module **[HSS8005 - Quantitative analysis (Intermediate stream)]()** offered to postgraduate students within the *Faculty of Humanities and Social Sciences* at Newcastle University (UK).
+This repository stores the website for the module **[HSS8005 - Quantitative analysis (Intermediate stream)](https://cgmoreh.github.io/HSS8005/)** offered to postgraduate students within the *Faculty of Humanities and Social Sciences* at Newcastle University (UK).
