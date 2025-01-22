@@ -9,8 +9,12 @@ bibliography: ../hss8005.bib
 css: ../html/nobiblio.css
 ---
 
+Datasets used throughout the course will be available for download from this page soon.
+
 
 ```{r}
+#| eval: false
+#| include: false
 # Table contents
 
 library("tibble")
@@ -102,6 +106,8 @@ content2 <- content |>
 
 ::: text-sm
 ```{r results="asis"}
+#| eval: false
+#| include: false
 cat(content2)
 ```
 :::
