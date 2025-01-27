@@ -11,14 +11,161 @@
     "href": "plan.html",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
-    "text": "Week\nTW\nDate\nTopic\nInfo\nNotes\nLecture\nLabs\nHandouts\n\n\n\n\n\n22\n27 January\nIntroduction  Module overview\n\n\n  \n\n\n\n\nWeek 1\n22\n28 January\nTools  R, RStudio, Markdown, Quarto, Git and other tools of the trade\n\n  \n  \n  \n  \n\n\nWeek 2\n23\n04 February\nLines  Linear models and their limitations\n\n  \n  \n  \n  \n\n\nWeek 3\n24\n11 February\nCurves  Logistic regression and other generalised linear models\n\n  \n  \n  \n  \n\n\nWeek 4\n25\n18 February\nPaths  Graphical models and considerations for causal analysis\n\n  \n  \n  \n  \n\n\nWeek 5\n26\n25 February\nInteractions  Estimating, graphing and interpreting interaction effects\n\n  \n  \n  \n  \n\n\nWeek 6\n27\n03 March\nTemporalities  Panel, longitudinal and time-series analysis\n\n  \n  \n  \n  \n\n\nWeek 7\n28\n10 March\nHierarchies  Hierarchical data structures and multilevel modelling\n\n  \n  \n  \n  \n\n\nWeek 8\n29\n17 March\nDesigns  Simulation-based power analysis for study design\n\n  \n  \n  \n  \n\n\n\n29\n20 March\nConclusions  Sum up, divide, and conquer"
+    "text": "Week\nTW\nDate\nTopic\nInfo\nNotes\nLecture\nLabs\nHandouts\n\n\n\n\n\n22\n27 January\nIntroduction  Module overview\n\n\n  \n\n\n\n\nWeek 1\n22\n28 January\nTools  R, RStudio, Markdown, Quarto and other tools of the trade\n\n  \n  \n  \n  \n\n\nWeek 2\n23\n04 February\nLines  Linear models and their limitations\n\n  \n  \n  \n  \n\n\nWeek 3\n24\n11 February\nCurves  Logistic regression and other generalised linear models\n\n  \n  \n  \n  \n\n\nWeek 4\n25\n18 February\nPaths  Graphical models and considerations for causal analysis\n\n  \n  \n  \n  \n\n\nWeek 5\n26\n25 February\nInteractions  Estimating, plotting and interpreting interaction effects\n\n  \n  \n  \n  \n\n\nWeek 6\n27\n03 March\nTemporalities  Panel, longitudinal and time-series analysis\n\n  \n  \n  \n  \n\n\nWeek 7\n28\n10 March\nHierarchies  Hierarchical data structures and multilevel modelling\n\n  \n  \n  \n  \n\n\nWeek 8\n29\n17 March\nDesigns  Simulation-based power analysis for study design\n\n  \n  \n  \n  \n\n\n\n29\n20 March\nConclusions  Sum up, divide, and conquer"
+  },
+  {
+    "objectID": "materials/slides/test.html#not-outline-just-simple-dice",
+    "href": "materials/slides/test.html#not-outline-just-simple-dice",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Not outline, just simple dice",
+    "text": "Not outline, just simple dice\n\n\none\ntwo\nthree"
+  },
+  {
+    "objectID": "materials/slides/test.html#numbered",
+    "href": "materials/slides/test.html#numbered",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Numbered",
+    "text": "Numbered\n\n\nGaming chance\nsecond topic\nThird topic\nForth topic"
+  },
+  {
+    "objectID": "materials/slides/test.html#not-numbered",
+    "href": "materials/slides/test.html#not-numbered",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Not numbered",
+    "text": "Not numbered\n\n\nGaming chance\nsecond topic\nThird topic\nForth topic"
+  },
+  {
+    "objectID": "materials/slides/test.html#numbered-small",
+    "href": "materials/slides/test.html#numbered-small",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Numbered small",
+    "text": "Numbered small\n\n\nGaming chance\nsecond topic\nThird topic\nForth topic"
+  },
+  {
+    "objectID": "materials/slides/test.html#not-numbered-small",
+    "href": "materials/slides/test.html#not-numbered-small",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Not numbered small",
+    "text": "Not numbered small\n\n\nGaming chance\nsecond topic\nThird topic\nForth topic"
+  },
+  {
+    "objectID": "materials/slides/test.html#just-text",
+    "href": "materials/slides/test.html#just-text",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Just text",
+    "text": "Just text\n\nSomething like a text here\n\nThis is my first line and it’s a very long line so that I can check how it looks like when it is printed on the slide and there are other lines below too\nThis is the second line\nAnd a third line here\n\nMore here\n\nFifth line\nSixth line"
+  },
+  {
+    "objectID": "materials/slides/test.html#code",
+    "href": "materials/slides/test.html#code",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Code",
+    "text": "Code\n\n\na &lt;- rnorm(100, 4, 2)\nsummary(a)\n\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n -1.207   2.331   3.900   4.016   5.601   7.920 \n\n\n\n\n\nhist(a)"
+  },
+  {
+    "objectID": "materials/slides/test.html#testing",
+    "href": "materials/slides/test.html#testing",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Testing",
+    "text": "Testing\n\n\nTesting\n\n\nhow\n\n\nfragments work in\n\n\nreality"
+  },
+  {
+    "objectID": "materials/slides/test.html#testing-2",
+    "href": "materials/slides/test.html#testing-2",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Testing 2",
+    "text": "Testing 2\n\nTesting\n. . .\nHow\n. . .\nfragments work\n. . .\nreally"
+  },
+  {
+    "objectID": "materials/slides/test.html#statistics",
+    "href": "materials/slides/test.html#statistics",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Statistics",
+    "text": "Statistics\n\nand the state\n\n\n\n\nstatshistory\n\n\n\n1660\n\nHermann Conring \n (1606–1681)\n\n1660\n\n'statisticum'; political science lectures on European states, \n quantifying and comparing their finances, population, agriculture, etc.\n\nbotero\n\nGiovanni Botero \n (c. 1544–1617)\n\n'Della ragion di Stato' ~ 'Reason of State'\n\n\n\n\n\n\n1672\n\nHelenus Politanus (pse.)\n\n1672\n\n'Microscopium Statisticum'\n\nghilini\n\nGirolamo Ghilini \n (1589–1668)\n\n'Ristretto della civile, politica, statistica e militare scienza'\n\n\n\n\n1748\n\nGottfried Achenwall \n (1719–1772)\n\n1748\n\n'Vorbereitung zur Staatswissenschaft'; 'Statistik'\n\n\n\n1660-&gt;1672\n\n\n\n\nsittewald\n\nPhilander Von Sittewald \n (1601–1669)\n\n'statista' ~ 'someone versed in the knowledge of the state'\n\n\n1725\n\nMartin Schmeitzel \n (1679–1747)\n\n1725\n\n'collegium statisticum' ~ 'council of state'\n\n\n1660-&gt;1725\n\n\n\n\n\n\n\n\n\n\n1725-&gt;1748\n\n\n\n\n\n\n\npetty\n\nWilliam Petty \n (1623-1687)\n\n1672\n\n'political arithmetic'; 'Essays in Political Arithmetick \n and Political Survey or Anatomy of Ireland'\n\n\n\nsuss\n\nJohann Peter Süssmilch \n (1707-1767)\n\n1761-1762\n\n'The Divine order in the changes in the human sex from birth, \n death and reproduction of the same'\n\n\n\n\n\n\ngraunt\n\nJohn Graunt \n (1620–1674)\n\n1663\n\n'Natural and Political Observations \n Made upon the Bills of Mortality'"
+  },
+  {
+    "objectID": "materials/slides/test.html#statistics-1",
+    "href": "materials/slides/test.html#statistics-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Statistics",
+    "text": "Statistics\nand probability\n\n\n\nStatistics as the mathematical science of using probability to describe uncertainty"
+  },
+  {
+    "objectID": "materials/slides/test.html#gaming-chance",
+    "href": "materials/slides/test.html#gaming-chance",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Gaming chance",
+    "text": "Gaming chance\n\n\n\nWe may never know when humans started playing games of chance, but archaeological findings suggest it was a rather long time ago\nDuring the the First Dynasty in Egypt (c. 3500 B.C.) variants of a game involving astragali (small bones in the ankle of an animal) were already documented\nOne of the chief games may have been the simple one of throwing four astragali together and noting which sides fell uppermost"
+  },
+  {
+    "objectID": "materials/slides/test.html#ālea-iacta-est",
+    "href": "materials/slides/test.html#ālea-iacta-est",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Ālea iacta est",
+    "text": "Ālea iacta est\n\n\n\nThe six-sided die we know today may have been obtained from the astragalus by grinding it down until it formed a rough cube\nDice became common in the Ptolemaic dynasty (300 to 30 B.C.)\nThere is evidence that dice were used for divination rites in this period - one carried the sacred symbols of Osiris, Horus, Isis, Nebhat, Hathor and Horhudet engraved on its six sides\nIn Roman times, rule by divination attained great proportions; Emperors Septimius Severus (Emperor A.D. 193-211) and Diocletian (Emperor AD. 284-305) were notorious for their reliance on the whims of the gods"
+  },
+  {
+    "objectID": "materials/slides/test.html#fat-chance",
+    "href": "materials/slides/test.html#fat-chance",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Fat chance",
+    "text": "Fat chance\n\n\n\nHe threw four knucklebones on to the table and committed his hopes to the throw. If he threw well, particularly if he obtained the image of the goddess herself, no two showing the same number, he adored the goddess, and was in high hopes of gratifying his passion; if he threw badly, as usually happens, and got an unlucky combination, he called down imprecations on all Cnidos, and was as much overcome by grief as if he had suffered some personal loss.\n— Lucian of Samosata (c. 125 – 180), writing in his trademark satirical style about a young man who fell in love with Praxiteles’s Aphrodite of Knidos; cited in F. N. David (1955:8)"
+  },
+  {
+    "objectID": "materials/slides/test.html#chance-with-limitations",
+    "href": "materials/slides/test.html#chance-with-limitations",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Chance with limitations",
+    "text": "Chance with limitations\n\n\n\nDice were sometimes faked. Sometimes numbers were left off or duplicated; hollow dice have been found dating from Roman time\nDice were also imperfect; a fair die was the exception rather than the rule\nExperiment by F. N. David using three dice from the British Museum:"
+  },
+  {
+    "objectID": "materials/slides/test.html#exercise",
+    "href": "materials/slides/test.html#exercise",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Exercise",
+    "text": "Exercise\n\n\nWhich of the three dice (if any) would you call fair?\nWhat distribution of outcomes would you expect 204 fair dice rolls to produce prior to seeing any results?\nHow would you expect that distribution to change as the number of rolls progresses towards \\(\\infty\\)?\nWhat name would you give to that distribution?\nverv\nrever"
+  },
+  {
+    "objectID": "materials/slides/test.html#from-chance-to-probability",
+    "href": "materials/slides/test.html#from-chance-to-probability",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "From chance to probability\n",
+    "text": "From chance to probability\n\n\n\n\nUntil 18th century people had mostly used probability to solve problems about dice throwing and other games of chance\nJacob (Jacques/James) Bernoulli (1654/1655-1705), a Swiss mathematician trained as a theologian and ordained as a minister of the Reformed church in Basel, began asking questions about probabilistic inference instead\nHis work focused on the mathematics of uncertainty - what he came to call stochastics (from the Greek word \\(στόχος\\) [stókhos] meaning to aim or “guess’)\n\nArs Conjectandi (The Art of Conjecturing) - published posthumously in 1713"
+  },
+  {
+    "objectID": "materials/slides/test.html#inferential-questions",
+    "href": "materials/slides/test.html#inferential-questions",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Inferential questions",
+    "text": "Inferential questions\n\n\n\nSuppose you are presented with a large urn full of tiny white and black pebbles, in a ratio that’s unknown to you. You begin selecting pebbles from the urn and recording their colors, black or white. How do you use these results to make a guess about the ratio of pebble colors in the urn as a whole?\n\n\nBernoulli’s solution: if you take a large enough sample, you can be very sure, to within a small margin of absolute certainty, that the proportion of white pebbles you observe in the sample is close to the proportion of white pebbles in the urn.\nA first version of the Law of Large Numbers"
+  },
+  {
+    "objectID": "materials/slides/test.html#large-numbers",
+    "href": "materials/slides/test.html#large-numbers",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Large numbers",
+    "text": "Large numbers\n\n\nBernoulli’s solution, more technically:  For any given \\(\\epsilon\\) &gt; 0 and any \\(s\\) &gt; 0, there is a sample size \\(n\\) such that, with \\(w\\) being the number of white pebbles counted in the sample and \\(f\\) being the true fraction of white pebbles in the urn, the probability of \\(w/n\\) falling between \\(f − \\epsilon\\) and \\(f + \\epsilon\\) is greater than \\(1 − s\\).\nthe fraction \\(w/n\\) is the ratio of white to total pebbles we observe in our sample\n\\(\\epsilon\\) (epsilon) captures the fact that we may not see the true urn ratio exactly thanks to random variation in the sample; larger samples help assure that we get closer to the true value, but uncertainty alwa ys remains\n\\(s\\) reflects just how sure we want to be; for example, set \\(s\\) = 0.01 and be 99% percent sure.\nmoral certainty as distinct from absolute certainty of the kind logical deduction provides"
+  },
+  {
+    "objectID": "materials/slides/test.html#final-slides",
+    "href": "materials/slides/test.html#final-slides",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Final slides",
+    "text": "Final slides"
+  },
+  {
+    "objectID": "materials/slides/test.html#references",
+    "href": "materials/slides/test.html#references",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "References",
+    "text": "References"
   },
   {
     "objectID": "materials/slides-frame/index.html",
     "href": "materials/slides-frame/index.html",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Title\n\n\nDescription\n\n\n\n\n\n\n \n\n\n \n\n\n\n\nWeek 1  Introduction\n\n\n \n\n\n\n\nWeek 1  Tools\n\n\n \n\n\n\n\nWeek 2  Lines\n\n\n \n\n\n\n\nWeek 3  Curves\n\n\n \n\n\n\n\nWeek 4  Paths\n\n\n \n\n\n\n\nWeek 5  Interactions\n\n\n \n\n\n\n\nWeek 6  Temporalities\n\n\n \n\n\n\n\nWeek 7  Hierarchies\n\n\n \n\n\n\n\nWeek 8  Designs\n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "materials/info/info_w08.html",
@@ -104,7 +251,7 @@
     "href": "materials/index.html",
     "title": "Materials",
     "section": "",
-    "text": "Materials for each week are available from the side menu. The table below outlines the weekly topics.\n\n\n\n\n\nWeekly topics\n\n\n\n\n\n\n\n\nWeek 1  Tools\n\n\nR, RStudio, Markdown, Quarto, Git and other tools of the trade\n\n\n\n\nWeek 2  Lines\n\n\nLinear models and their limitations\n\n\n\n\nWeek 3  Curves\n\n\nLogistic regression and other generalised linear models\n\n\n\n\nWeek 4  Paths\n\n\nGraphical models and considerations for causal analysis\n\n\n\n\nWeek 5  Interactions\n\n\nEstimating, graphing and interpreting interaction effects\n\n\n\n\nWeek 6  Temporalities\n\n\nPanel, longitudinal and time-series analysis\n\n\n\n\nWeek 7  Hierarchies\n\n\nHierarchical data structures and multilevel modelling\n\n\n\n\nWeek 8  Designs\n\n\nSimulation-based power analysis for study design\n\n\n\n\n\nNo matching items",
+    "text": "Materials for each week are available from the side menu. The table below outlines the weekly topics.\n\n\n\n\n\nWeekly topics\n\n\n\n\n\n\n\n\nWeek 1  Tools\n\n\nR, RStudio, Markdown, Quarto and other tools of the trade\n\n\n\n\nWeek 2  Lines\n\n\nLinear models and their limitations\n\n\n\n\nWeek 3  Curves\n\n\nLogistic regression and other generalised linear models\n\n\n\n\nWeek 4  Paths\n\n\nGraphical models and considerations for causal analysis\n\n\n\n\nWeek 5  Interactions\n\n\nEstimating, plotting and interpreting interaction effects\n\n\n\n\nWeek 6  Temporalities\n\n\nPanel, longitudinal and time-series analysis\n\n\n\n\nWeek 7  Hierarchies\n\n\nHierarchical data structures and multilevel modelling\n\n\n\n\nWeek 8  Designs\n\n\nSimulation-based power analysis for study design\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Materials",
       "Weekly materials"
@@ -153,6 +300,27 @@
       "Materials",
       "Week 7"
     ]
+  },
+  {
+    "objectID": "materials/slides/intro.html#meet-larry",
+    "href": "materials/slides/intro.html#meet-larry",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Meet Larry…",
+    "text": "Meet Larry…"
+  },
+  {
+    "objectID": "materials/slides/intro.html#meet-larry-1",
+    "href": "materials/slides/intro.html#meet-larry-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Meet Larry",
+    "text": "Meet Larry"
+  },
+  {
+    "objectID": "materials/slides/intro.html#deconstructing-larry",
+    "href": "materials/slides/intro.html#deconstructing-larry",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Deconstructing Larry",
+    "text": "Deconstructing Larry"
   },
   {
     "objectID": "references.html",
