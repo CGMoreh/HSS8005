@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*-- scss:defaults --*/
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #ddd !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+// Inferno colors
+// viridisLite::viridis(8, option = "inferno", begin = 0.1, end = 0.9)
+$blue:    #42159D !default;
+$indigo:  #771C6D !default;
+$purple:  #480B6A !default;
+$pink:    #A52C60 !default;
+$red:     #CF4446 !default;
+$orange:  #EE6A24 !default;
+$yellow:  #FB9E07 !default;
+$green:   #02b875 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$ncl-blue:  #0e3b6a;
+
+$primary:       $blue !default;
+$secondary:     $gray-500 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$font-family-sans-serif:      Fira Sans Condensed, sans-serif !default;
+$font-family-serif:           Barlow, serif !default;  /* Not actually a serif font but whatever */
+
+$font-size-base:              1rem !default;
+$headings-font-weight:        700 !default;
+
+$h1-font-size: $font-size-base * 2.2;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.3;
+$h4-font-size: $font-size-base * 1.2;
+$h5-font-size: $font-size-base * 1.1;
+$h6-font-size: $font-size-base * 1;
+
+$toc-font-size: 1rem;
+$sidebar-font-size: 1rem;
+$sidebar-font-size-section: 0.9rem;
+
+$link-color: $red;
+$link-hover-color: $yellow;
+
+$monokai-bg: #2e3440;
+
+
+/*-- scss:rules --*/
+
+/* Larger module title on the navbar */
+.navbar-brand {
+    font-size: 1.8rem;
+}
+
+.navbar {
+    font-size: 1.1rem;
+    border: none;
+}
+
+.navbar-dark {
+    background-color: #0e3b6a;
+}
+
+h2 {
+  border-bottom: none;
+}
+
+
+h4 {
+  color: $ncl-blue;
+}
+
+
+
+ul,
+ol {
+  font-family: $font-family-serif;
+}
+
+// Home page stuff
+.title-block {
+  margin: 1em 0;
+  border-bottom: 3px solid $gray-200;
+  padding-bottom: 4em;
+}
+
+.course-title {
+  font-size: 3.6rem;
+  margin-top: 0;
+}
+
+.course-subtitle {
+  font-size: 1.7rem;
+}
+
+.course-details {
+  margin: 0 0 1em;
+  border-bottom: 3px solid $gray-200;
+  padding-bottom: 0;
+}
+
+.course-details h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.course-details ul {
+  list-style: none;
+  text-indent: -0.7rem;
+  padding-left: 1.4rem;
+  font-size: 1.1rem;
+}
+
+.course-details-smaller li {
+  font-size: 1rem;
+}
+
+.course-details-smaller h3 {
+  font-size: 1.2rem;
+}
+
+.contact-policy p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.course-meta {
+  font-size: 1.2rem;
+  color: $gray-600;
+}
+
+
+// Footer stuff
+.nav-footer-left {
+  text-align: left;
+}
+
+.nav-footer-right {
+  text-align: right;
+}
+
+
+// Schedule stuff
+.content-title {
+  font-weight: 700;
+}
+
+.content-note {
+  font-size: 0.8rem;
+  display: block;
+}
+
+.schedule-page h3 {
+  text-align: center;
+  margin-top: 3rem;
+  border-bottom: 3px solid $orange;
+  padding-bottom: 0.5rem;
+}
+
+.download-btn {
+  padding-top: 0.25rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+
+// News stuff
+.back-nav {
+  margin-bottom: 1.5rem;
+}
+
+.news .quarto-title-meta {
+  font-size: 1.1rem;
+  border-left: 5px solid $orange;
+  padding: 0 0.5rem 1rem;
+  margin: 1rem 0 2.5rem;
+  background-color: lighten($orange, 40%);
+}
+
+.news .quarto-categories {
+  padding-top: 0.5em;
+}
+
+
+// Content page stuff
+// Date bar
+.date-block {
+  font-size: 1.3rem;
+}
+
+.bg-content {
+  background-color: $pink;
+}
+
+.bg-assignment {
+  background-color: $red;
+}
+
+// Slightly larger buttons
+p a.btn, .buttons span.btn {
+  font-size: 1.2rem;
+}
+
+main {
+  // No space after lists-within-lists
+  ol ol,
+  ul ul,
+  ol ul,
+  ul ol {
+    margin-bottom: 0em;
+  }
+
+  // But yes space after lists-within-lists when paragraphs are involved
+  ol p + ol,
+  ul p + ul,
+  ol p + ul,
+  ul p + ol {
+    margin-bottom: 1em;
+  }
+}
+
+
+// Make callout text and icon bigger
+.callout.callout-style-default {
+  > div.callout-header,
+  > .callout-body {
+    font-size: 1.2rem;
+  }
+
+  .callout-icon::before {
+    height: 1.2rem;
+    width: 1.2rem;
+    background-size: 1.2rem 1.2rem;
+  }
+}
+
+// Increase font size in sidebar
+.sidebar-navigation .sidebar-section .sidebar-item,
+.sidebar-navigation .sidebar-item{
+  line-height: 1;
+  padding-bottom: 0rem;
+}
+
+.sidebar-item .sidebar-item-toggle .bi {
+  // The dongle for opening and closing sections
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+// Font size and spacing in TOC
+#TOC {
+  padding-bottom: 0.1em;
+}
+
+#toc-title {
+  font-weight: 700;
+}
+
+.sidebar nav[role="doc-toc"] > ul li a {
+  padding-top: 0.3rem;
+  padding-bottom: 0.1rem;
+  line-height: 0.75rem;
+  font-size: 0.8rem;
+}
+
+
+#quarto-sidebar {
+    width: 100%;
+    padding-right: 1em;
+    color: #FFFFFF;
+}
+
+#quarto-content>* {
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+
+
+
+// Code stuff
+// Shrink blocks of code
+pre.text, pre.sourceCode, .cell-output pre {
+  font-size: 0.775em;
+}
+
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+    background-color: #f7f7f700;
+    padding: 0.2em;
+}
+
+
+p pre code:not(.sourceCode), li pre code:not(.sourceCode), pre code:not(.sourceCode) {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+// Slight bottom margin to output
+.cell-output {
+  margin: 0 0 1em;
+}
+
+// Remove margin on pre in output
+.cell-output pre {
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+// Format output and plain text blocks like code
+.cell-output, pre.text {
+    border: none;
+    padding-left: 1.4em;
+    background-color: $white;
+    border-left: 2px solid #2e3440;
+    border-radius: 0;
+}
+
+
+pre.text {
+  color: #ffffff;
+}
+
+// Content page width
+
+.content-block {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+}
+
+/*
+#quarto-document-content {
+  width: 130%;
+}
+
+
+#quarto-margin-sidebar {
+  padding-left: 600px;
+}
+
+*/
+
+// Table 
+
+.table td, th {
+  padding: 0.4rem;
+  vertical-align: middle;
+}
+
+.table p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// Slide decks
+
+.slide-deck {
+  border: 6px solid $ncl-blue !important;
+  width: 100% !important;
+  height: 40% !important;
+}
+
+@media only screen and (max-width: 600px) {
+ .slide-deck {
+    height: 400px;
+  }
+}
+
+
+// Smaller font on prereq
+
+#prerequisites p {
+  font-size: medium;
+  text-align: justify; 
+  text-justify: inter-word;
+}
+
+#module-overview p {
+  font-size: medium;
+  text-align: justify; 
+  text-justify: inter-word;
+}
+
+// tabset font-style
+
+.nav, .breadcrumb, .pagination {
+    font-size: 2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    background: none;
+    border: none;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: $ncl-blue;
+    background-color: #fff;
+    border-bottom: none;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.tab-content {
+    margin-top: 0px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-left: 0;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+// smaller line height
+
+p.tight {
+  line-height: 0.7;
+}
+
+// callouts
+
+.callout.callout-style-default div.callout-body {
+    font-size: 0.8rem;
+}
+
+// Defined textbox styles
+
+.task {
+  padding: 1em 1em 1em 8em;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #9dc3fc 5px center/5em no-repeat;
+  position: relative;
+}
+
+.task::before {
+    background-image: url(./pics/task.png);
+    content: "";
+    background-size: 90px 100px;
+    width: 90px;
+    height: 100px;
+    top: 2%;
+    left: 10px;
+    position: absolute;
+}
+
+.code {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 3px;
+  border: 2px solid #f9d873;
+  border-radius: 2px;
+  background: #f9d873 5px center/5em no-repeat;
+  position: relative;
+}
+
+.code::before {
+    background-image: url("./pics/coding.png");
+    content: "";
+    background-size: 40px 50px;
+    width: 40px;
+    height: 50px;
+    top: 2%;
+    left: 5px;
+    position: absolute;
+}
+
+.discuss {
+  padding: 1em 1em 1em 8em;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #cfffcf 5px center/5em no-repeat;
+  position: relative;
+}
+
+.discuss::before {
+    background-image: url("./pics/group_discuss.png");
+    content: "";
+    background-size: 90px 110px;
+    width: 90px;
+    height: 110px;
+    top: 2%;
+    left: 10px;
+    position: absolute;
+}
+
+.text-xs {
+  font-size: 0.7rem;
+  line-height: 0.9;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+}
+
+#quarto-appendix.default {
+  border-top: 0;
+}
+
+.error-notice {
+  color: #700001 !important;
+  font-size: 30px !important;
+  font-weight: bolder !important;
+  text-align: center !important;
+}
+
+
+iframe {
+	aspect-ratio: 9 / 12;
+	height: 90%;
+	width: 100%;
+}
+
+
