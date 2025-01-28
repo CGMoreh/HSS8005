@@ -1,15 +1,17 @@
 [
   {
-    "listing": "/materials/index.html",
+    "listing": "/materials/slides-frame/index.html",
     "items": [
-      "/materials/info/info_w01.html",
-      "/materials/info/info_w02.html",
-      "/materials/info/info_w03.html",
-      "/materials/info/info_w04.html",
-      "/materials/info/info_w05.html",
-      "/materials/info/info_w06.html",
-      "/materials/info/info_w07.html",
-      "/materials/info/info_w08.html"
+      "/materials/slides-frame/slides-frame_conclusion.html",
+      "/materials/slides-frame/slides-frame_intro.html",
+      "/materials/slides-frame/slides-frame_w01.html",
+      "/materials/slides-frame/slides-frame_w02.html",
+      "/materials/slides-frame/slides-frame_w03.html",
+      "/materials/slides-frame/slides-frame_w04.html",
+      "/materials/slides-frame/slides-frame_w05.html",
+      "/materials/slides-frame/slides-frame_w06.html",
+      "/materials/slides-frame/slides-frame_w07.html",
+      "/materials/slides-frame/slides-frame_w08.html"
     ]
   },
   {
@@ -26,18 +28,16 @@
     ]
   },
   {
-    "listing": "/materials/slides-frame/index.html",
+    "listing": "/materials/index.html",
     "items": [
-      "/materials/slides-frame/slides-frame_conclusion.html",
-      "/materials/slides-frame/slides-frame_intro.html",
-      "/materials/slides-frame/slides-frame_w01.html",
-      "/materials/slides-frame/slides-frame_w02.html",
-      "/materials/slides-frame/slides-frame_w03.html",
-      "/materials/slides-frame/slides-frame_w04.html",
-      "/materials/slides-frame/slides-frame_w05.html",
-      "/materials/slides-frame/slides-frame_w06.html",
-      "/materials/slides-frame/slides-frame_w07.html",
-      "/materials/slides-frame/slides-frame_w08.html"
+      "/materials/info/info_w01.html",
+      "/materials/info/info_w02.html",
+      "/materials/info/info_w03.html",
+      "/materials/info/info_w04.html",
+      "/materials/info/info_w05.html",
+      "/materials/info/info_w06.html",
+      "/materials/info/info_w07.html",
+      "/materials/info/info_w08.html"
     ]
   }
 ]
