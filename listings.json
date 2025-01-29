@@ -1,17 +1,30 @@
 [
   {
-    "listing": "/materials/slides-frame/index.html",
+    "listing": "/materials/index.html",
     "items": [
-      "/materials/slides-frame/slides-frame_conclusion.html",
-      "/materials/slides-frame/slides-frame_intro.html",
-      "/materials/slides-frame/slides-frame_w01.html",
-      "/materials/slides-frame/slides-frame_w02.html",
-      "/materials/slides-frame/slides-frame_w03.html",
-      "/materials/slides-frame/slides-frame_w04.html",
-      "/materials/slides-frame/slides-frame_w05.html",
-      "/materials/slides-frame/slides-frame_w06.html",
-      "/materials/slides-frame/slides-frame_w07.html",
-      "/materials/slides-frame/slides-frame_w08.html"
+      "/info/week1.html",
+      "/info/week2.html",
+      "/info/week3.html",
+      "/info/week4.html",
+      "/info/week5.html",
+      "/info/week6.html",
+      "/info/week7.html",
+      "/info/week8.html"
+    ]
+  },
+  {
+    "listing": "/lectures/index.html",
+    "items": [
+      "/lectures/conclusions.html",
+      "/lectures/intro.html",
+      "/lectures/week1.html",
+      "/lectures/week2.html",
+      "/lectures/week3.html",
+      "/lectures/week4.html",
+      "/lectures/week5.html",
+      "/lectures/week6.html",
+      "/lectures/week7.html",
+      "/lectures/week8.html"
     ]
   },
   {
@@ -25,19 +38,6 @@
       "/materials/handouts/handouts-frame_w06.html",
       "/materials/handouts/handouts-frame_w07.html",
       "/materials/handouts/handouts-frame_w08.html"
-    ]
-  },
-  {
-    "listing": "/materials/index.html",
-    "items": [
-      "/materials/info/info_w01.html",
-      "/materials/info/info_w02.html",
-      "/materials/info/info_w03.html",
-      "/materials/info/info_w04.html",
-      "/materials/info/info_w05.html",
-      "/materials/info/info_w06.html",
-      "/materials/info/info_w07.html",
-      "/materials/info/info_w08.html"
     ]
   }
 ]

@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 1 Worksheet Notes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<link href="../../materials/worksheets/worksheets_w01.html" rel="next">
+<link href="../../lectures/week1.html" rel="prev">
+<link href="../../pics/ncl_coa_hss8005.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">HSS8005 <iconify-icon role="img" inline="" icon="line-md:plus" aria-label="Icon plus from line-md Iconify.design set." title="Icon plus from line-md Iconify.design set."></iconify-icon></span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../plan.html"> 
+<span class="menu-text">Module plan</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../materials/index.html" aria-current="page"> 
+<span class="menu-text">Materials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../data/index.html"> 
+<span class="menu-text">Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../assessment/index.html"> 
+<span class="menu-text">Assessment</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://ncl.instructure.com/courses/55949"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="arcticons:canvasstudent" style="font-size: l;" aria-label="Icon canvasstudent from arcticons Iconify.design set." title="Icon canvasstudent from arcticons Iconify.design set."></iconify-icon> Canvas</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../info/week1.html">Week 1</a></li><li class="breadcrumb-item"><a href="../../materials/notes/notes_w01.html">Notes</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weekly materials</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../info/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../lectures/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/notes/notes_w01.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/worksheets/worksheets_w01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Handout</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../info/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">Slides</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Notes</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Exercises</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Handout</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../info/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">Slides</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Notes</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Exercises</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Handout</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../info/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">Slides</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Notes</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Exercises</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Handout</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../info/week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">Slides</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Notes</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Exercises</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Handout</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../info/week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">Slides</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Notes</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Exercises</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Handout</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../info/week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">Slides</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Notes</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Exercises</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Handout</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../info/week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">Slides</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Notes</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Exercises</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Handout</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#aims" id="toc-aims" class="nav-link active" data-scroll-target="#aims">Aims</a></li>
+  <li><a href="#r-and-rstudio" id="toc-r-and-rstudio" class="nav-link" data-scroll-target="#r-and-rstudio">R and RStudio</a>
+  <ul class="collapse">
+  <li><a href="#the-rstudio-interface" id="toc-the-rstudio-interface" class="nav-link" data-scroll-target="#the-rstudio-interface">The <strong>RStudio</strong> interface</a></li>
+  <li><a href="#general-settings" id="toc-general-settings" class="nav-link" data-scroll-target="#general-settings">General settings</a></li>
+  <li><a href="#scripts-markdown-documents-and-projects" id="toc-scripts-markdown-documents-and-projects" class="nav-link" data-scroll-target="#scripts-markdown-documents-and-projects">Scripts, markdown documents and projects</a></li>
+  </ul></li>
+  <li><a href="#r-data-types-and-structures" id="toc-r-data-types-and-structures" class="nav-link" data-scroll-target="#r-data-types-and-structures"><strong>R</strong> data types and structures</a></li>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames">Data frames</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a>
+  <ul class="collapse">
+  <li><a href="#installing-and-attaching-packages" id="toc-installing-and-attaching-packages" class="nav-link" data-scroll-target="#installing-and-attaching-packages">Installing and attaching packages</a></li>
+  </ul></li>
+  <li><a href="#about-the-tidyverse" id="toc-about-the-tidyverse" class="nav-link" data-scroll-target="#about-the-tidyverse">About the <code>Tidyverse</code></a>
+  <ul class="collapse">
+  <li><a href="#data-frames-and-tibbles" id="toc-data-frames-and-tibbles" class="nav-link" data-scroll-target="#data-frames-and-tibbles">Data frames and ‘tibbles’</a></li>
+  <li><a href="#selected-dplyr-functions" id="toc-selected-dplyr-functions" class="nav-link" data-scroll-target="#selected-dplyr-functions">Selected <code>dplyr</code> functions</a></li>
+  <li><a href="#the-forward-pipe-workflow" id="toc-the-forward-pipe-workflow" class="nav-link" data-scroll-target="#the-forward-pipe-workflow">The forward-pipe (<code>%&gt;%</code>/<code>|&gt;</code>) workflow</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../info/week1.html">Week 1</a></li><li class="breadcrumb-item"><a href="../../materials/notes/notes_w01.html">Notes</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 1 Worksheet Notes</h1>
+<p class="subtitle lead">Tools: <strong>R</strong>, <strong>RStudio</strong>, <strong>Markdown</strong>, <strong>Quarto</strong> and other tools of the trade</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="aims" class="level2">
+<h2 class="anchored" data-anchor-id="aims">Aims</h2>
+<p>By the end of the session, you will:</p>
+<ul>
+<li>understand how to use the most important panels in the <strong>RStudio</strong> interface</li>
+<li>create an RStudio Project to store your work throughout the course</li>
+<li>begin using <strong>R</strong> scripts (.R) and <strong>Quarto</strong> notebooks (.qmd) to record and document your coding progress</li>
+<li>understand data types and basic operations in the <code>R</code> language</li>
+<li>understand the principles behind <em>functions</em></li>
+<li>know how to install, load and use functions from user-written packages</li>
+<li>gain familiarity with some useful functions from packages included in the <code>{tidyverse}</code> ecosystem.</li>
+</ul>
+<p>This lab is an introduction to <strong>R</strong> and <strong>RStudio</strong> for the purposes of this module. Those new to <strong>R</strong> should also complete the <a href="https://datacarpentry.org/r-socialsci/"><strong>R for Social Scientists</strong></a> online training course on their own (estimated to take around 5-6 hours), as well as read through the assigned chapters from the <a href="https://r4ds.hadley.nz/"><strong>R4DS</strong></a> textbook.</p>
+</section>
+<section id="r-and-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="r-and-rstudio">R and RStudio</h2>
+<p>To install <strong>R</strong> and <strong>RStudio</strong> on your personal computers, <a href="https://posit.co/download/rstudio-desktop/">follow the steps outlined here</a> based on your operating system.</p>
+<p>Although you will only interact directly with <strong>RStudio</strong> in this module, <strong>R</strong> needs to be installed first.</p>
+<p>Think of the relationship between the two as that between the <em>engine</em> of a car (<strong>R</strong>) and the <em>dashboard</em> of a car (<strong>RStudio</strong>):</p>
+<p><img src="../pics/R_vs_RStudio.png" class="img-fluid" style="width:50.0%"></p>
+<p>Or perhaps imagine driving the car on the left vs.&nbsp;the one on the right:</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img src="../pics/car_chassis.jpg" class="img-fluid" style="width:40.0%" alt="R"> <img src="../pics/car_modern_dashboard.jpg" class="img-fluid" style="width:40.0%" alt="RStudio"></p>
+</div>
+</div>
+</div>
+<section id="the-rstudio-interface" class="level3">
+<h3 class="anchored" data-anchor-id="the-rstudio-interface">The <strong>RStudio</strong> interface</h3>
+<p>The <strong>RStudio</strong> interface consists of four main panes (which can be customised to some degree):</p>
+<p><img src="../pics/console_etc.png" class="img-fluid" style="width:70.0%"></p>
+<p><strong>The R Console Pane</strong></p>
+<p>The R Console, by default the left or lower-left pane in R Studio, is the home of the R “engine”. This is where the commands are actually run and non-graphic outputs and error/warning messages appear. The <strong>Console</strong> is the direct interface to the <code>R</code> software itself; it’s what we get if instead of <code>RStudio</code> we open the <code>R</code> software: a direct interface to the <code>R</code> programming language, where we can type commands and <strong>where results/messages are printed</strong>.</p>
+<p>You can directly enter and run commands in the R Console, but realize that these commands are not saved as they are when running commands from a script. For this reason, we should not use the <strong>Console</strong> pane directly too much, ad reserve it only for quick and dirty calculations and checks. For typing commands that we want <code>R</code> to execute, we should instead use an <code>R</code> script file, where everything we type can be saved for later and complex analyses can be built up.</p>
+<p><strong>The Source Pane</strong></p>
+<p>This pane, by default in the upper-left, is a space to work with scripts and other text files. This pane is also where datasets (data frames) open up for viewing.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If your RStudio displays only one pane on the left, it is because you have no scripts open yet. We can open an existing one or create a new one. We’ll do that a bit later.</p>
+</div>
+</div>
+<p><strong>The Environment Pane</strong></p>
+<p>This pane, by default in the upper-right, is most often used to see brief summaries of “objects” that are available in an active session. Datasets loaded for analysis would appear here.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If your Environment is empty, it means that you don’t have any “objects” loaded or created yet. We will be creating some objects later and we will also import an example dataset.</p>
+</div>
+</div>
+<p><strong>Files, Plots, Packages, Help, etc.</strong> The lower-right pane includes several tabs including plots (display of graphics including maps), help, a file library, and available R packages (including installation/update options).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can arrange the panes in various ways, depending on your preferences, using <em>Tools</em> &gt; <em>Global Options</em> in the top menu. So the arrangement of panes may look different on different computers.</p>
+</div>
+</div>
+</section>
+<section id="general-settings" class="level3">
+<h3 class="anchored" data-anchor-id="general-settings">General settings</h3>
+<p>You can personalise the look and feel of your RStudio setup in various ways using <em>Tools</em> &gt; <em>Global Options</em> from the top menu, but setting some options as default from the very start is highly recommended. You can see these in the pictures below:</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="../pics/glob_opts1.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="../pics/glob_opts2.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<ul>
+<li>The most important setting in the picture on the left is the one to restore .RData at startup and saving the workspace as .RData on exit. Make sure these are un-ticked and set to ‘Never’, respectively, as shown in the picture. It’s always safer to start each RStudio session in a clean state, without anything automatically pre-loaded from a previous session. That could lead to serious and hard to trace complications.</li>
+<li>In the picture on the right, you have the option to select that the new native pipe operator (|&gt;) (we’ll talk about it later!) be inserted using the <code>Ctrl</code>+<code>Shift</code>+<code>M</code> keyboard shortcut instead of the older version of the pipe (%&gt;%).</li>
+</ul>
+<p>These settings will make more sense later, but it’s a good idea to have them sorted at the very beginning.</p>
+</section>
+<section id="scripts-markdown-documents-and-projects" class="level3">
+<h3 class="anchored" data-anchor-id="scripts-markdown-documents-and-projects">Scripts, markdown documents and projects</h3>
+<p>Writing brief commands that you want to test out in the Console is okay, but what you really want is to save your commands as part of a workflow in a dedicated file that you can reuse, extend and share with others.</p>
+<p>In every quantitative analysis, we need to ensure that each step in our analysis is traceable and reproducible. This is increasingly a professional standard expected of all data analysts in the social sciences. This means that we need to have an efficient way in which to share our <em>analysis code</em>, as well as our <strong>outputs</strong> and <strong>interpretations</strong> of our findings. <code>RStudio</code> has an efficient way of handling this requirement with the use of R <em>script</em> files and versions of the <em>Markdown</em> markup language that allow the efficient combining of plain text (as in the main body of an article) with analysis code and outputs produced in <code>R</code>. The table below lists the main characteristics of these file types:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Format</th>
+<th>Extension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R Script</td>
+<td><strong>.R</strong></td>
+<td>Use an <em>R script</em> if you want to document a large amount of code used for a particular analysis project. Scripts should contain working R commands and human-readable comments explaining the code. Commands can be run line-by-line, or the whole R script can be run at once. For example, one can write an R script containing a few hundred or thousands of lines of code that gathers and prepares raw, unruly data for analysis; if this script can run without any errors, then it can be saved and sourced from within another script that contains code that undertakes the analysis using the cleansed dataset. Comments can be added by appending them with a hashtag (#).</td>
+</tr>
+<tr class="even">
+<td><a href="https://rmarkdown.rstudio.com/">R Markdown</a></td>
+<td><strong>.Rmd</strong></td>
+<td><a href="https://www.markdownguide.org/">Markdown</a> is a simple markup language that allows the formatting of plain text documents. <a href="https://rmarkdown.rstudio.com/">R Markdown</a> is a version of this language written by the <strong>R Studio</strong> team, which also allows for <code>R</code> code to be included. Plain text documents having the <strong>.Rmd</strong> extension and containing <strong>R Markdown</strong>-specific code can be “knitted” (exported) directly into published output document formats such as HTML, PDF or Microsoft Word, which contain both normal text as well as tables and charts produced with the embedded <code>R</code> code. The code itself can also be printed to the output documents.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://quarto.org/">Quarto document</a></td>
+<td><strong>.qmd</strong></td>
+<td>Quarto is a newer version of <strong>R Markdown</strong> which allows better compatibility with other programming languages. It is a broader ecosystem design for academic publishing and communication (for example, the course website was built using quarto), but you will be using only Quarto documents in this module. There isn’t much difference between <strong>.Rmd</strong> and <strong>.qmd</strong> documents for their uses-cases on this module, so one could easily change and <strong>.Rmd</strong> extension to <strong>.qmd</strong> and still produce the same output. <strong>.qmd</strong> documents are “rendered” instead of “knitted”, but for RStudio users the underlying engine doing the conversion from Quarto/R Markdown to standard Markdown to output file (HTML, PDF, Word, etc.) is the same. Read more about Quarto document in the <a href="https://tellingstorieswithdata.com/22-rmarkdown.html"><strong>TSD</strong> textbook</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Creating new files can be done easily via the options <em>File &gt; New File &gt;</em> from the top RStudio menu.</p>
+<p>The best way to use these files are as part of <strong>R project</strong> folders, which allow for cross-references to documents and datasets to be made relative to the path of the project folder root. This makes sure that no absolute paths to files (i.e.&nbsp;things like “C:/Documents/Chris/my_article/data_files/my_dataset.rds”) need to be used (instead, you would write something like “~/data_files/my_dataset.rds” if the “my_article” folder was set up as an R Project). This allows for the same code file to be run on another computer too without an error, ensuring a minimal expected level of reproducibility in your workflow.</p>
+<p>Setting up an existing or a new folder as an R Project involves having a file with the extension <strong>.RProj</strong> saved in it. This can be done easily via the options <em>File &gt; New Project</em> from the top RStudio menu.</p>
+<p><img src="../pics/new_files.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="r-data-types-and-structures" class="level2">
+<h2 class="anchored" data-anchor-id="r-data-types-and-structures"><strong>R</strong> data types and structures</h2>
+<p>The basic elements of data in <code>R</code> are called <em>vectors</em>. R has 6 basic data types that you should be aware of:</p>
+<ul>
+<li>character: a text string, e.g.&nbsp;“name”</li>
+<li>numeric: a real or decimal number</li>
+<li>integer: non-decimal number; often represented by a number followed by the letter “L”, e.g.&nbsp;5L</li>
+<li>logical: TRUE or FALSE</li>
+<li>complex: complex numbers with real and imaginary parts</li>
+</ul>
+<p>R provides several functions to examine features of vectors and other objects, for example:</p>
+<ul>
+<li>class() - what kind of object is it (high-level)?</li>
+<li>typeof() - what is the object’s data type (low-level)?</li>
+<li>length() - how long is it? What about two dimensional objects?</li>
+<li>attributes() - does it have any metadata?</li>
+</ul>
+<p>You can explore some basic vector operations in <em>Exercise 4</em> of the lab worksheet.</p>
+</section>
+<section id="data-frames" class="level2">
+<h2 class="anchored" data-anchor-id="data-frames">Data frames</h2>
+<p>It is useful to know about vectors, but we will use them primarily as part of larger <em>data frames</em>. Data frames are objects that contain several vectors of similar length. In a data frame each column is a <em>variable</em> and each row is a <em>case</em>. They look like spreadsheets containing data.</p>
+<p>There are several toy data frames built into R, and we can have a look at one to see how it looks like. You can get a list of the available built-in datasets and their brief descriptions with the <code>data()</code> command.</p>
+<p>For example, the <code>mtcars</code> data frame is built into R and so you can access it without loading any files. To get the dimensions, you can use <code>dim()</code>, <code>nrow()</code>, and <code>ncol()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32 11</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11</code></pre>
+</div>
+</div>
+<p>We can also load the dataset into our Environment and look at it manually:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="ot">&lt;-</span> mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The new object has appeared in the Environment under a new section called Data. We can click on it and the dataset will open up in the Source pane. What do you think this dataset is about?</p>
+<p>You can select each column/variable from the data frame use the <code>$</code>, turning it into a vector:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mtcars<span class="sc">$</span>wt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 2.620 2.875 2.320 3.215 3.440 3.460 3.570 3.190 3.150 3.440 3.440 4.070
+[13] 3.730 3.780 5.250 5.424 5.345 2.200 1.615 1.835 2.465 3.520 3.435 3.840
+[25] 3.845 1.935 2.140 1.513 3.170 2.770 3.570 2.780</code></pre>
+</div>
+</div>
+<p>You can now treat this just like a vector, with the subsets and all.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mtcars<span class="sc">$</span>wt[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.62</code></pre>
+</div>
+</div>
+<p>We can subset to the first/last k rows of a data frame</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                mpg cyl  disp  hp drat    wt qsec vs am gear carb
+Porsche 914-2  26.0   4 120.3  91 4.43 2.140 16.7  0  1    5    2
+Lotus Europa   30.4   4  95.1 113 3.77 1.513 16.9  1  1    5    2
+Ford Pantera L 15.8   8 351.0 264 4.22 3.170 14.5  0  1    5    4
+Ferrari Dino   19.7   6 145.0 175 3.62 2.770 15.5  0  1    5    6
+Maserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8
+Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
+</div>
+</div>
+<p>There are various ways in which one can further subset and wrangle vectors and data frames using base R functions, but the <code>{tidyverse}</code> and other user-written packages provide more functionality and ease of use. In this course, we will rely mostly on these.</p>
+</section>
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
+<p>Most of the work in <code>R</code> is done using functions. It’s possible to <strong>create your own functions</strong>. This makes R extremely powerful and extendible. We’re not going to cover making your own functions in this course, but it’s important to be aware of this capability. There are plenty of good resources online for learning how to do this, including <a href="https://www.statmethods.net/management/userfunctions.html">this one</a>.</p>
+</section>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>Instead of programming your own functions in the <strong>R</strong> language, you can rely on functions written by other people and bundled within a package that performs some set task.</p>
+<p>When you install <code>R</code>, a set of “packages” containing various functions are also installed by default. These packages make up what is colloquially referred to as <em>base R</em>. Functions from these packages can be used straight away and they cannot be deleted or installed separately. The functionality of these <em>base R</em> packages is updated with each new edition of <code>R</code>, but not in between new releases of the software. The code below lists the names of all the packages in <em>base R</em>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">which</span>(<span class="fu">installed.packages</span>()[ ,<span class="st">"Priority"</span>] <span class="sc">==</span> <span class="st">"base"</span>, ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "base"      "compiler"  "datasets"  "graphics"  "grDevices" "grid"     
+ [7] "methods"   "parallel"  "splines"   "stats"     "stats4"    "tcltk"    
+[13] "tools"     "utils"    </code></pre>
+</div>
+</div>
+<p>We see in the list that there is also a package called “base”, which contains 1283 elementary functions. However, when we refer to <em>base R</em>, we usually mean the functions from all the 14 packages listed above.</p>
+<p>Apart from these packages that come pre-installed and pre-loaded with our <code>R</code> installation, there are also a number of “recommended” packages, which can be thought of as an <em>extended base R</em>. These packages also come pre-installed in binary distributions of <code>R</code>, but they need to be loaded in order to make their functions available for use. These “recommended” packages are:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(<span class="fu">which</span>(<span class="fu">installed.packages</span>()[ ,<span class="st">"Priority"</span>] <span class="sc">==</span> <span class="st">"recommended"</span>, ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "lattice"    "MASS"       "Matrix"     "mgcv"       "nlme"      
+ [6] "boot"       "class"      "cluster"    "codetools"  "foreign"   
+[11] "KernSmooth" "lattice"    "MASS"       "Matrix"     "mgcv"      
+[16] "nlme"       "nnet"       "rpart"      "spatial"    "survival"  </code></pre>
+</div>
+</div>
+<p>Apart from these “recommended” packages, there is a great - and ever increasing - number of user-written packages that satisfy various programming needs. Some packages contain functions that are particularly useful for social scientists. Sometimes a number of packages that contain complementary functionality and are designed to work well together are brought under one <em>meta-package</em>, which allows for all those packages to be installed and loaded at once. The most popular such meta-package is the <code>{tidyverse}</code>, which includes such packages as <code>{dplyr}</code> (for data manipulation), <code>{readr}</code> (for reading in rectangular data like <code>.csv</code> files), <code>{tidyr}</code> (for cleaning datasets), <code>{stringr}</code> (for working with “strings”, that is, textual data), <code>{forcats}</code> (for managing “factors”, that is, categorical variables) or <code>{ggplot2}</code> (for data visualisation), among [several others](https://www.tidyverse.org/packages/.</p>
+<p>The <code>{tidyverse}</code> packages have been developed around a coding philosophy that is very different from that of “base R”. It is sometimes referred to as a special “dialect” of the <code>R</code> language and has greatly contributed to popularising <code>R</code> and making it more easily available to practising social scientists who do not have a programming background, by designing code whose “grammar” is somewhat closer to that of “human” languages such as English. This is generally thought to lower the entry barriers to <code>R</code> for new users, although <a href="https://github.com/matloff/TidyverseSkeptic">there isn’t a clear consensus on that</a>.</p>
+<p>Another recently developed meta-package, which was specifically designed with non-programmer social scientists in mind, is the <code>{easystats}</code> bundle. We will be relying on <code>{easystats}</code> packages quite a lot in this module, as they provide a very coherent set of functions that improve on the <code>{tidyverse}</code>.</p>
+<p>Both of these meta-packages and thousands of other packages are available from the <em>Comprehensive R Archive Network</em> (CRAN). Many more packages are distributed as repositories on code-sharing platforms such as <em><a href="https://github.com/">GitHub</a></em> or <em><a href="https://r-universe.dev/search/">R Universe</a></em>.</p>
+<p>Packages made available on CRAN can be installed using the command <code>install.packages("packagename")</code>. Once the package/library is installed (i.e.&nbsp;it is sitting somewhere on your computer), we can then <em>load</em> functions from that package using the <code>::</code> operator (e.g.&nbsp;<code>package::function()</code>), or we can make all the functions from a package available by <em>attaching</em> that package with the <code>library()</code> function (e.g.&nbsp;<code>library(package)</code>).</p>
+<p>So using a package/library is a two-stage process. We:</p>
+<ol type="1">
+<li><pre><code> **Install** the package/library onto your computer (from CRAN or another repository)</code></pre>
+2.a. <strong>Load</strong> functions from the package as you use them, or: 2.b. <strong>Attach</strong> the whole package to R’s search path, making all functions available to use by name</li>
+</ol>
+<p>Let’s start by installing the <code>tidyverse</code> meta-package, and then attach it:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)  <span class="do">## this command installs packages from CRAN; note the quotation marks around the package name</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can check the suite of packages that are available when you attach the <code>tidyverse</code> library using a command from the <code>tidyverse</code> itself:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidyverse_packages</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="discuss">
+<p><strong>Question</strong></p>
+<p>Why do you think we got an error message when we tried to run the above command?</p>
+</div>
+<p>Because <code>tidyverse_packages()</code> is itself a function from the <code>tidyverse</code>, in order to use that function we need not only to install the <code>tidyverse</code> but also to make its functions available. In other words, we did not yet <em>attach</em> the <code>tidyverse</code> for use in our R session, we only just installed it on our computers.</p>
+<p>If we don’t want to attach a package that we have downloaded - because maybe we only want to use a single function once and we don’t want to burden our computer’s memory, we can load explicitly given functions from a package in the following way:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>tidyverse<span class="sc">::</span><span class="fu">tidyverse_packages</span>()  <span class="co"># Here we state the package followed by two colons, then followed by the function we want</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>But in many cases we do want to use several functions at various points in an analysis session, so it is often useful to <em>attach</em> the entire package or set of packages:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now we can use functions from that package without having to explicitly state the name of the package. We can still state the name explicitly, and that may be useful for readers of our code to understand what package a function come from. Also, it may happen that different packages have similarly named functions, and if all those packages are attached, then the functions from a package attached later will override that in the package attached earlier. <code>R</code> will note in a comment whether any functions from a package are <strong>masked</strong> by another, so it’s worth paying attention to the comments and warnings printed by <code>R</code> when we attach packages.</p>
+<section id="installing-and-attaching-packages" class="level3">
+<h3 class="anchored" data-anchor-id="installing-and-attaching-packages">Installing and attaching packages</h3>
+<p>Both <code>install.packages()</code> and <code>library()</code> are <em>base R</em> functions, but there are several other user-written packages that provide additional functionality to make it easier and more efficient to install, attach and manage packages. For example, the <code>pacman</code> package contains a function <code>p_load()</code> that allows us to attach several packages at once and install them from CRAN on the fly if they are not yet installed. The sister function <code>p_load_gh()</code> does the same for packages not published on CRAN but stored on personal repositories on GitHub. The <code>{librarian}</code> package does the same with the <code>shelf()</code> function, which installs missing packages from CRAN as well as GitHub.</p>
+<p>For example, we can download and attach a number of packages in one go with the command below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, install {librarian} itself if not yet installed:</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"librarian"</span>)) <span class="fu">install.packages</span>(<span class="st">"librarian"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: librarian</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Then attach/install other packages using `librarian::shelf()`:</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>librarian<span class="sc">::</span><span class="fu">shelf</span>(</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  tidyverse,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  easystats,</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  sjlabelled,</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  gtsummary,</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  ggformula</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>These are some useful packages that we will be using in this module. You can read more about the (meta)packages we have just installed here:</p>
+<ul>
+<li><a href="https://www.tidyverse.org/"><code>tidyverse</code></a></li>
+<li><a href="https://easystats.github.io/easystats/"><code>easystats</code></a></li>
+<li><a href="https://strengejacke.github.io/sjlabelled/articles/labelleddata.html"><code>sjlabelled</code></a></li>
+<li><a href="https://www.danieldsjoberg.com/gtsummary/index.html"><code>gtsummary</code></a></li>
+<li><a href="https://www.mosaic-web.org/ggformula/index.html"><code>ggformula</code></a></li>
+</ul>
+</section>
+</section>
+<section id="about-the-tidyverse" class="level2">
+<h2 class="anchored" data-anchor-id="about-the-tidyverse">About the <code>Tidyverse</code></h2>
+<section id="data-frames-and-tibbles" class="level3">
+<h3 class="anchored" data-anchor-id="data-frames-and-tibbles">Data frames and ‘tibbles’</h3>
+<p>The <code>Tidyverse</code> is built around the basic concept that data in a table should have one observation per row, one variable per column, and only one value per cell. Once data is in this ‘tidy’ format, it can be transformed, visualized and modelled for an analysis.</p>
+<p>When using functions in the <code>Tidyverse</code> ecosystem, most data is returned as a <code>tibble</code> object. <code>Tibbles</code> are very similar to the <code>data.frames</code> (which are the basic types of object storing datasets in base <strong><em>R</em></strong>) and it is perfectly fine to use <code>Tidyverse</code> functions on a <code>data.frame</code> object. Just be aware that in most cases, the <code>Tidyverse</code> function will transform your data into a <code>tibble.</code> If you are unobservant, you won’t even notice a difference. However, there are a few differences between the two data types, most of which are just designed to make your life easier. For more info, check <strong>R4DS</strong>.</p>
+</section>
+<section id="selected-dplyr-functions" class="level3">
+<h3 class="anchored" data-anchor-id="selected-dplyr-functions">Selected <code>dplyr</code> functions</h3>
+<p>The <code>dplyr</code> package is designed to make it easier to manipulate flat (2-D) data (i.e.&nbsp;the type of datasets we are most likely to use, which are laid out as in a standard spreadsheet, with rows referring to cases (observations; respondents) and columns referring to variables. <code>dplyr</code> provides simple “verbs”, functions that correspond to the most common data manipulation tasks, to help you translate your thoughts into code. Here are some of the most common functions in <code>dplyr</code>:</p>
+<ul>
+<li><code>filter()</code> chooses rows based on column values.</li>
+<li><code>arrange()</code> changes the order of the rows.</li>
+<li><code>select()</code> changes whether or not a column is included.</li>
+<li><code>rename()</code> changes the name of columns.</li>
+<li><code>mutate()</code>/<code>transmute()</code> changes the values of columns and creates new columns (variables)</li>
+<li><code>summarise()</code> compute statistical summaries (e.g., computing the mean or the sum)</li>
+<li><code>group_by()</code> group data into rows with the same values</li>
+<li><code>ungroup()</code> remove grouping information from data frame.</li>
+<li><code>distinct()</code> remove duplicate rows.</li>
+</ul>
+<p>All these functions work similarly as follows:</p>
+<ul>
+<li>The first argument is a data frame/tibble</li>
+<li>The subsequent arguments are comma separated list of unquoted variable names and the specification of what you want to do</li>
+<li>The result is a new data frame</li>
+</ul>
+<p>For more info, check <a href="https://datacarpentry.org/r-socialsci/03-dplyr-tidyr/index.html">R for Social Scientists</a></p>
+<p>Most of the <code>{dplyr}</code> verbs perform tasks that can also be done in <em>base R</em>, but they provide more convenience. The table below lists a rough equivalence between <code>dplyr</code> and <em>base R</em> functionality:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>dplyr</th>
+<th>base</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>arrange(df, x)</code></td>
+<td><code>df[order(x), , drop = FALSE]</code></td>
+</tr>
+<tr class="even">
+<td><code>distinct(df, x)</code></td>
+<td><code>df[!duplicated(x), , drop = FALSE]</code>, <code>unique()</code></td>
+</tr>
+<tr class="odd">
+<td><code>filter(df, x)</code></td>
+<td><code>df[which(x), , drop = FALSE]</code>, <code>subset()</code></td>
+</tr>
+<tr class="even">
+<td><code>mutate(df, z = x + y)</code></td>
+<td><code>df$z &lt;- df$x + df$y</code>, <code>transform()</code></td>
+</tr>
+<tr class="odd">
+<td><code>pull(df, 1)</code></td>
+<td><code>df[[1]]</code></td>
+</tr>
+<tr class="even">
+<td><code>pull(df, x)</code></td>
+<td><code>df$x</code></td>
+</tr>
+<tr class="odd">
+<td><code>rename(df, y = x)</code></td>
+<td><code>names(df)[names(df) == "x"] &lt;- "y"</code></td>
+</tr>
+<tr class="even">
+<td><code>relocate(df, y)</code></td>
+<td><code>df[union("y", names(df))]</code></td>
+</tr>
+<tr class="odd">
+<td><code>select(df, x, y)</code></td>
+<td><code>df[c("x", "y")]</code>, <code>subset()</code></td>
+</tr>
+<tr class="even">
+<td><code>select(df, starts_with("x"))</code></td>
+<td><code>df[grepl("^x", names(df))]</code></td>
+</tr>
+<tr class="odd">
+<td><code>summarise(df, mean(x))</code></td>
+<td><code>mean(df$x)</code>, <code>tapply()</code>, <code>aggregate()</code>, <code>by()</code></td>
+</tr>
+<tr class="even">
+<td><code>slice(df, c(1, 2, 5))</code></td>
+<td><code>df[c(1, 2, 5), , drop = FALSE]</code></td>
+</tr>
+</tbody>
+</table>
+<p>The above functions allow us to manage single data-frames. A set of other functions (sometimes called “two-table verbs”) make it possible to combine columns, rows, or both, from two or more data-frames. In <em>base-R</em>, much of this can be achieved with the <code>merge()</code> function, while in <code>dplyr</code> the <code>join()</code> function makes this possible, extending some further functionality that is not easily available in <em>base-R</em>. The table below lists these <code>dplyr</code> functions and their <em>base-R</em> equivalents:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>dplyr</th>
+<th>base</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>inner_join(df1, df2)</code></td>
+<td><code>merge(df1, df2)</code></td>
+</tr>
+<tr class="even">
+<td><code>left_join(df1, df2)</code></td>
+<td><code>merge(df1, df2, all.x = TRUE)</code></td>
+</tr>
+<tr class="odd">
+<td><code>right_join(df1, df2)</code></td>
+<td><code>merge(df1, df2, all.y = TRUE)</code></td>
+</tr>
+<tr class="even">
+<td><code>full_join(df1, df2)</code></td>
+<td><code>merge(df1, df2, all = TRUE)</code></td>
+</tr>
+<tr class="odd">
+<td><code>semi_join(df1, df2)</code></td>
+<td><code>df1[df1$x %in% df2$x, , drop = FALSE]</code></td>
+</tr>
+<tr class="even">
+<td><code>anti_join(df1, df2)</code></td>
+<td><code>df1[!df1$x %in% df2$x, , drop = FALSE]</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-forward-pipe-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="the-forward-pipe-workflow">The forward-pipe (<code>%&gt;%</code>/<code>|&gt;</code>) workflow</h3>
+<p>All of the <code>dplyr</code> functions take a data frame or tibble as the first argument. Rather than forcing the user to either save intermediate objects or nest functions, <code>dplyr</code> provides the forward-pipe operator <code>%&gt;%</code> from the <code>magrittr</code> package. This operator allows us to combine multiple operations into a single sequential chain of actions. As of <code>R 4.1.0</code> there is also a <a href="https://www.r-bloggers.com/2021/05/the-new-r-pipe/">native pipe operator</a> in <strong><em>R</em></strong> (|&gt;), and in RStudio one can set the shortcut to paste the new pipe operator instead (as we have done at the beginning of the lab). Going forward, we’ll use this version of the pipe operator for simplicity, but it’s likely that you will encounter the older version of the operator too in various scripts.</p>
+<p>Let’s start with a hypothetical example. Say you would like to perform a sequence of operations on data frame <code>x</code> using hypothetical functions <code>f()</code>, <code>g()</code>, and <code>h()</code>:</p>
+<ol type="1">
+<li>Take x <em>then</em></li>
+<li>Use x as an input to a function f() <em>then</em></li>
+<li>Use the output of f(x) as an input to a function g() <em>then</em></li>
+<li>Use the output of g(f(x)) as an input to a function h()</li>
+</ol>
+<p>One way to achieve this sequence of operations is by using nesting parentheses as follows:</p>
+<pre><code>h(g(f(x)))</code></pre>
+<p>This code isn’t so hard to read since we are applying only three functions: <code>f()</code>, then <code>g()</code>, then <code>h()</code> and each of the functions is short in its name. Further, each of these functions also only has one argument. However, you can imagine that this will get progressively harder to read as the number of functions applied in your sequence increases and the arguments in each function increase as well. This is where the pipe operator <code>|&gt;</code> comes in handy. <code>|&gt;</code> takes the output of one function and then “pipes” it to be the input of the next function. Furthermore, a helpful trick is to read <code>|&gt;</code> as “then” or “and then.” For example, you can obtain the same output as the hypothetical sequence of functions as follows:</p>
+<pre><code>x |&gt; 
+  f() |&gt; 
+  g() |&gt; 
+  h()</code></pre>
+<p>You would read this sequence as:</p>
+<ol type="1">
+<li>Take x <em>then</em></li>
+<li>Use this output as the input to the next function f() <em>then</em></li>
+<li>Use this output as the input to the next function g() <em>then</em></li>
+<li>Use this output as the input to the next function h()</li>
+</ol>
+<p>So while both approaches achieve the same goal, the latter is much more human-readable because you can clearly read the sequence of operations line-by-line. Instead of typing out the three strange characters of the operator, one can use the keyboard shortcut <em>Ctrl + Shift + M</em> (Windows) or <em>Cmd + Shift + M</em> (MacOS) to paste the operator.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation column-page-right">
+  <div class="nav-page nav-page-previous">
+      <a href="../../lectures/week1.html" class="pagination-link" aria-label="Slides">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Slides</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../materials/worksheets/worksheets_w01.html" class="pagination-link" aria-label="Exercises">
+        <span class="nav-page-text">Exercises</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
