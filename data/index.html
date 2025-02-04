@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -35,6 +54,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "language": {
@@ -53,6 +74,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../html/custom.scss">
 <link rel="stylesheet" href="../html/nobiblio.css">
 </head>
 
@@ -130,7 +152,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Datasets used throughout the course will be available for download from this page soon.</p>
+<p>Datasets used for lab exercises.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-database" aria-label="database"></i> <strong>Trust &amp; Inequality</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This dataset combines data on “generalised/social trust” from the latest waves of the <em>World Values Survey</em> and the <em>European Values Study</em> with macro(country)-level data on <a href="https://data.worldbank.org/indicator"><em>World Development Indicators (WDI)</em></a> provided by the World Bank. The main variables of interest taken from the WDI refer to measurements of economic inequality within countries. The dataset allows the <a href="https://doi.org/10.1177/17456916211041116">conceptual replication</a> of the analysis presented in Chapter 4 (“Community life and social relations”, pp.&nbsp;49-62) of <span class="citation" data-cites="WilkinsonPickett2010SpiritLevelWhy">Wilkinson and Pickett (<a href="#ref-WilkinsonPickett2010SpiritLevelWhy" role="doc-biblioref">2010</a>)</span> concerning the relationship between <em>inequality</em> and <em>trust</em></p>
+<p><a href="..\data/trust_inequality.rds" class="btn btn-ncl"><i class="fa-solid fa-download fa-sm" aria-label="download"></i> Download .rds</a> <a href="..\data/trust_inequality.dta" class="btn btn-ncl"><i class="fa-solid fa-download fa-sm" aria-label="download"></i> Download .dta</a> <a href="..\data/trust_inequality.csv" class="btn btn-ncl"><i class="fa-solid fa-download fa-sm" aria-label="download"></i> Download .csv</a> <a href="..\data/trust_inequality_prep.R" class="btn link-secondary"><i class="fa-solid fa-code" aria-label="code"></i> Data wrangling code (<code>.R</code>)</a></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-database" aria-label="database"></i> <strong>Österman, Table 3</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This dataset is the one used by <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#ref-Osterman2021CanWeTrustEducationFostering" role="doc-biblioref">2021</a>)</span> for the analysis underpinning the results reported in his <a href="https://link.springer.com/article/10.1007/s11205-020-02529-y/tables/3"><em>Table 3</em></a> and related tables in the <a href="https://static-content.springer.com/esm/art%3A10.1007%2Fs11205-020-02529-y/MediaObjects/11205_2020_2529_MOESM1_ESM.pdf"><em>Online Supplementary Material</em></a>. The aim of the article is to use information on educational reforms across European countries as a way to set up a quasi-experimental design testing the effect of <em>education</em> on <em>social trust</em>. With this approach, it aims to overcome the limitations of cross-sectional observational survey data from the European Social Survey by attempting a <em>causal</em> - rather than just correlational - explanation.</p>
+<p><a href="..\data/osterman_t3.dta" class="btn btn-ncl"><i class="fa-solid fa-download fa-sm" aria-label="download"></i> Download</a></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<i class="fa-solid fa-database" aria-label="database"></i> <strong>Delhey &amp; Newton, 2003</strong>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This dataset contains data from the <a href="https://search.gesis.org/research_data/ZA4063">EUROMODULE (1999-2002) surveys</a> conducted in nine countries: Germany (DE) | Austria (AT) | Switzerland (CH) | Sweden (SE) | Spain (ES) | Slovenia (SI) | Korea, Republic of (KR) | Turkey (TR) | Hungary (HU). Out of the total of 366 variables measured, only those 100 were kept in this dataset that were used by <span class="citation" data-cites="DelheyNewton2003WhoTrustsOrigins">Delhey and Newton (<a href="#ref-DelheyNewton2003WhoTrustsOrigins" role="doc-biblioref">2003</a>)</span> in their analysis of the various correlates of “social trust”. The value of the EUROMODULE survey data compared to other comparative surveys that measure social trust is that it offers a much greater variety of explanatory variables that allow <span class="citation" data-cites="DelheyNewton2003WhoTrustsOrigins">Delhey and Newton (<a href="#ref-DelheyNewton2003WhoTrustsOrigins" role="doc-biblioref">2003</a>)</span> to test the relative explanatory power of several complex social theories explaining differences in levels of social trust both at the individual level and at the macro-social level.</p>
+<p><a href="..\data/delhey&amp;newton2003.sav" class="btn btn-ncl"><i class="fa-solid fa-download fa-sm" aria-label="download"></i> Download</a> <!-- <button type="button" class="btn btn-outline-orange"> [ Original questionnaire](/data/delhey&newton2003_ZA4063_q.pdf){style="text-decoration:none" target="_blank"} </button> <button type="button" class="btn btn-outline-orange"> [ Original Codebook](/data/delhey&newton2003_ZA4063_cod.pdf){style="text-decoration:none" target="_blank"}  --></p>
+</div>
+</div>
+</div>
 <div class="text-sm">
 
 </div>
@@ -138,7 +211,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-DelheyNewton2003WhoTrustsOrigins" class="csl-entry" role="listitem">
+Delhey, Jan, and Kenneth Newton. 2003. <span>“Who Trusts?: The Origins of Social Trust in Seven Societies.”</span> <em>European Societies</em> 5(2):93–137. doi: <a href="https://doi.org/10.1080/1461669032000072256">10.1080/1461669032000072256</a>.
+</div>
+<div id="ref-Osterman2021CanWeTrustEducationFostering" class="csl-entry" role="listitem">
+Österman, Marcus. 2021. <span>“Can <span>We Trust Education</span> for <span>Fostering Trust</span>? <span class="nocase">Quasi-experimental Evidence</span> on the <span>Effect</span> of <span>Education</span> and <span>Tracking</span> on <span>Social Trust</span>.”</span> <em>Social Indicators Research</em> 154(1):211–33. doi: <a href="https://doi.org/10.1007/s11205-020-02529-y">10.1007/s11205-020-02529-y</a>.
+</div>
+<div id="ref-WilkinsonPickett2010SpiritLevelWhy" class="csl-entry" role="listitem">
+Wilkinson, Richard G., and Kate Pickett. 2010. <em>The Spirit Level: Why Greater Equality Makes Societies Stronger</em>. <span>New York</span>: <span>Bloomsbury Press</span>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

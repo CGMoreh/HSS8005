@@ -6,10 +6,70 @@ sidebar: false
 execute:
   echo: false
 bibliography: ../hss8005.bib
-css: ../html/nobiblio.css
+csl: ../american-sociological-association.csl
+css: 
+  - ../html/custom.scss
+  - ../html/nobiblio.css
 ---
 
-Datasets used throughout the course will be available for download from this page soon.
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+library(tidyverse)
+library(easystats)
+library(sjlabelled)
+library(DT)
+
+DT:::DT2BSClass(c('compact', 'cell-border'))
+
+```
+
+Datasets used for lab exercises.
+
+
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa solid database >}} **Trust & Inequality**
+
+This dataset combines data on "generalised/social trust" from the latest waves of the *World Values Survey* and the *European Values Study* with macro(country)-level data on [*World Development Indicators (WDI)*](https://data.worldbank.org/indicator) provided by the World Bank.
+The main variables of interest taken from the WDI refer to measurements of economic inequality within countries.
+The dataset allows the [conceptual replication](https://doi.org/10.1177/17456916211041116) of the analysis presented in Chapter 4 (“Community life and social relations”, pp. 49-62) of @WilkinsonPickett2010SpiritLevelWhy concerning the relationship between *inequality* and *trust* 
+
+[{{< fa download size=sm >}} Download .rds](/data/trust_inequality.rds){.btn .btn-ncl} 
+[{{< fa download size=sm >}} Download .dta](/data/trust_inequality.dta){.btn .btn-ncl} 
+[{{< fa download size=sm >}} Download .csv](/data/trust_inequality.csv){.btn .btn-ncl} 
+[{{< fa code >}} Data wrangling code (`.R`)](/data/trust_inequality_prep.R){.btn .link-secondary} 
+:::
+
+
+
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa solid database >}} **Österman, Table 3**
+
+This dataset is the one used by @Osterman2021CanWeTrustEducationFostering for the analysis underpinning the results reported in his [*Table 3*](https://link.springer.com/article/10.1007/s11205-020-02529-y/tables/3) and related tables in the [*Online Supplementary Material*](https://static-content.springer.com/esm/art%3A10.1007%2Fs11205-020-02529-y/MediaObjects/11205_2020_2529_MOESM1_ESM.pdf).
+The aim of the article is to use information on educational reforms across European countries as a way to set up a quasi-experimental design testing the effect of *education* on *social trust*.
+With this approach, it aims to overcome the limitations of cross-sectional observational survey data from the European Social Survey by attempting a *causal* - rather than just correlational - explanation.
+
+[{{< fa download size=sm >}} Download](/data/osterman_t3.dta){.btn .btn-ncl}
+:::
+
+
+
+
+
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa solid database >}} **Delhey & Newton, 2003**
+
+This dataset contains data from the [EUROMODULE (1999-2002) surveys](https://search.gesis.org/research_data/ZA4063) conducted in nine countries: Germany (DE) \| Austria (AT) \| Switzerland (CH) \| Sweden (SE) \| Spain (ES) \| Slovenia (SI) \| Korea, Republic of (KR) \| Turkey (TR) \| Hungary (HU).
+Out of the total of 366 variables measured, only those 100 were kept in this dataset that were used by @DelheyNewton2003WhoTrustsOrigins in their analysis of the various correlates of "social trust".
+The value of the EUROMODULE survey data compared to other comparative surveys that measure social trust is that it offers a much greater variety of explanatory variables that allow @DelheyNewton2003WhoTrustsOrigins to test the relative explanatory power of several complex social theories explaining differences in levels of social trust both at the individual level and at the macro-social level.
+
+[{{< fa download size=sm >}} Download](/data/delhey&newton2003.sav){.btn .btn-ncl} 
+<!-- <button type="button" class="btn btn-outline-orange"> [{{< fa file-pdf >}} Original questionnaire](/data/delhey&newton2003_ZA4063_q.pdf){style="text-decoration:none" target="_blank"} </button> <button type="button" class="btn btn-outline-orange"> [{{< fa file-pdf >}} Original Codebook](/data/delhey&newton2003_ZA4063_cod.pdf){style="text-decoration:none" target="_blank"}  -->
+:::
+
+
+
+
+
+
 
 
 ```{r}
