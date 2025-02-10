@@ -187,6 +187,11 @@ ol {
   text-align: center;
 }
 
+.btn {
+  --bs-btn-padding-x: 0.8rem;
+  --bs-btn-padding-y: 0.2rem;
+}
+
 .btn-ncl {
     --bs-btn-color: #fff;
     --bs-btn-bg: #0e3b6a;
@@ -343,10 +348,10 @@ ol {
   background-color: $red;
 }
 
-// Slightly larger buttons
+/* Slightly larger buttons
 p a.btn, .buttons span.btn {
   font-size: 1.2rem;
-}
+} */
 
 main {
   // No space after lists-within-lists
@@ -371,13 +376,13 @@ main {
 .callout.callout-style-default {
   > div.callout-header,
   > .callout-body {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .callout-icon::before {
-    height: 1.2rem;
-    width: 1.2rem;
-    background-size: 1.2rem 1.2rem;
+    height: 1.1rem;
+    width: 1.1rem;
+    background-size: 1.1rem 1.1rem;
   }
 }
 

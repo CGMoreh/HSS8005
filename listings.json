@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/materials/index.html",
+    "listing": "/materials.html",
     "items": [
       "/info/week1.html",
       "/info/week2.html",
@@ -10,34 +10,6 @@
       "/info/week6.html",
       "/info/week7.html",
       "/info/week8.html"
-    ]
-  },
-  {
-    "listing": "/lectures/index.html",
-    "items": [
-      "/lectures/conclusions.html",
-      "/lectures/intro.html",
-      "/lectures/week1.html",
-      "/lectures/week2.html",
-      "/lectures/week3.html",
-      "/lectures/week4.html",
-      "/lectures/week5.html",
-      "/lectures/week6.html",
-      "/lectures/week7.html",
-      "/lectures/week8.html"
-    ]
-  },
-  {
-    "listing": "/materials/handouts/index.html",
-    "items": [
-      "/materials/handouts/handouts-frame_w01.html",
-      "/materials/handouts/handouts-frame_w02.html",
-      "/materials/handouts/handouts-frame_w03.html",
-      "/materials/handouts/handouts-frame_w04.html",
-      "/materials/handouts/handouts-frame_w05.html",
-      "/materials/handouts/handouts-frame_w06.html",
-      "/materials/handouts/handouts-frame_w07.html",
-      "/materials/handouts/handouts-frame_w08.html"
     ]
   }
 ]

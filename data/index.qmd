@@ -32,9 +32,9 @@ This dataset combines data on "generalised/social trust" from the latest waves o
 The main variables of interest taken from the WDI refer to measurements of economic inequality within countries.
 The dataset allows the [conceptual replication](https://doi.org/10.1177/17456916211041116) of the analysis presented in Chapter 4 (“Community life and social relations”, pp. 49-62) of @WilkinsonPickett2010SpiritLevelWhy concerning the relationship between *inequality* and *trust* 
 
-[{{< fa download size=sm >}} Download .rds](/data/trust_inequality.rds){.btn .btn-ncl} 
-[{{< fa download size=sm >}} Download .dta](/data/trust_inequality.dta){.btn .btn-ncl} 
-[{{< fa download size=sm >}} Download .csv](/data/trust_inequality.csv){.btn .btn-ncl} 
+[{{< fa download size=sm >}} Download .rds](/data/trust_inequality.rds){.btn .btn-ncl data-toggle="tooltip" title="Download the dataset in R's native data format (.rds). Datasets provided in this format will likely be missing some metadata such as variable and value labels"} 
+[{{< fa download size=sm >}} Download .dta](/data/trust_inequality.dta){.btn .btn-ncl data-toggle="tooltip" title="Download the dataset in Stata's native data format (.dta). This format can store a variety of metadata that are not native to R"} 
+[{{< fa download size=sm >}} Download .csv](/data/trust_inequality.csv){.btn .btn-ncl data-toggle="tooltip" title="Download the dataset in Comma Separated Values format (.csv). This basic format can be read by any text or spreadsheet editor (such as Microsoft Excel). However, it cannot store potentially useful metadata such as variable or value labels"} 
 [{{< fa code >}} Data wrangling code (`.R`)](/data/trust_inequality_prep.R){.btn .link-secondary} 
 :::
 
