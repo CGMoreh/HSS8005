@@ -82,7 +82,7 @@ h2 {
 
 
 h4 {
-  color: $ncl-blue;
+  color: #0e3b6a;
 }
 
 
@@ -447,6 +447,12 @@ p pre code:not(.sourceCode), li pre code:not(.sourceCode), pre code:not(.sourceC
 }
 
 
+// for styling packages::function in text/tables
+
+.pack {
+  color: $gray-600;
+}
+
 
 
 // Slight bottom margin to output
@@ -511,8 +517,8 @@ pre.text {
 // Slide decks
 
 .slide-deck {
-  border: 6px solid $ncl-blue !important;
-  width: 100% !important;
+  border: 6px solid #0e3b6a !important;
+  width: 80% !important;
   height: 40% !important;
 }
 
@@ -554,7 +560,7 @@ pre.text {
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    color: $ncl-blue;
+    color: #0e3b6a;
     background-color: #fff;
     border-bottom: none;
     border-color: #dee2e6 #dee2e6 #fff;
@@ -592,35 +598,33 @@ p.tight {
   background: #9dc3fc 5px center/5em no-repeat;
   position: relative;
 }
-
 .taskbox::before {
     background-image: url(./pics/task.png);
     content: "";
     background-size: 90px 100px;
     width: 90px;
     height: 100px;
-    top: 2%;
+    top: 22px;
     left: 10px;
     position: absolute;
 }
 
 .codebox {
-  padding: 1em 1em 1em 4em;
+  padding: 1em 1em 1em 90px;
   margin-bottom: 3px;
   border: 2px solid #f9d873;
   border-radius: 2px;
   background: #f9d873 5px center/5em no-repeat;
   position: relative;
 }
-
 .codebox::before {
     background-image: url("./pics/coding.png");
     content: "";
-    background-size: 40px 50px;
-    width: 40px;
-    height: 50px;
-    top: 2%;
-    left: 5px;
+    background-size: 50px 60px;
+    width: 50px;
+    height: 60px;
+    top: 20px;
+    left: 15px;
     position: absolute;
 }
 
@@ -632,14 +636,13 @@ p.tight {
   background: #cfffcf 5px center/5em no-repeat;
   position: relative;
 }
-
 .discuss::before {
     background-image: url("./pics/group_discuss.png");
     content: "";
     background-size: 90px 110px;
     width: 90px;
     height: 110px;
-    top: 2%;
+    top: 22px;
     left: 10px;
     position: absolute;
 }
@@ -673,7 +676,38 @@ iframe {
 }
 
 
+///// WEBR-R stuff
+
+// hide the top-right margin menu bar
 .zindex-over-content {
   display: none;
 }
+
+// When using webr-r the sidebar overlays the end of code-cells and prevents clicking on code copy buttons
+#quarto-content.page-columns #quarto-margin-sidebar, #quarto-content.page-columns #quarto-sidebar {
+    z-index: 0;
+}
+
+// Shorten the code area to make it easier to scroll up and down on the margin next to long code blocks on smaller screens
+// normal code field
+.cell {
+  @media (max-width: 1550px) {
+    width: 80% !important;
+  }
+}
+// webr-r toolbar width
+.qwebr-editor-toolbar {
+  @media (max-width: 1550px) {
+    width: 80% !important;
+  }
+}
+// webr-r code-field width
+.qwebr-editor {
+  @media (max-width: 1550px) {
+    width: 80% !important;
+  }
+}
+
+
+
 

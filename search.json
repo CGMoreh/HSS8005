@@ -120,6 +120,520 @@
     ]
   },
   {
+    "objectID": "theory/week1.html#aims",
+    "href": "theory/week1.html#aims",
+    "title": "Slides - Tools",
+    "section": "Aims",
+    "text": "Aims\nBy the end of the session, you will:\n\nunderstand how to use the most important panels in the RStudio interface\ncreate an RStudio Project to store your work throughout the course\nbegin using R scripts (.R) and Quarto notebooks (.qmd) to record and document your coding progress\nunderstand data types and basic operations in the R language\nunderstand the principles behind functions\n\nknow how to install, load and use functions from user-written packages\ngain familiarity with some useful functions from packages included in the tidyverse ecosystem.\n\nThis lab is an introduction to R and RStudio for the purposes of this module. Those new to R should also complete the R for Social Scientists online training course on their own (estimated to take around 5-6 hours), as well as read through the assigned chapters from the R4DS textbook.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#r-and-rstudio",
+    "href": "theory/week1.html#r-and-rstudio",
+    "title": "Slides - Tools",
+    "section": "R and RStudio",
+    "text": "R and RStudio\nTo install R and RStudio on your personal computers, follow the steps outlined here based on your operating system.\nAlthough you will only interact directly with RStudio in this module, R needs to be installed first.\nThink of the relationship between the two as that between the engine of a car (R) and the dashboard of a car (RStudio):\n\nOr perhaps imagine driving the car on the left vs. the one on the right:",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#the-rstudio-interface",
+    "href": "theory/week1.html#the-rstudio-interface",
+    "title": "Slides - Tools",
+    "section": "The RStudio interface",
+    "text": "The RStudio interface\nThe RStudio interface consists of four main panes (which can be customised to some degree):\n\nThe R Console Pane\nThe R Console, by default the left or lower-left pane in R Studio, is the home of the R “engine”. This is where the commands are actually run and non-graphic outputs and error/warning messages appear. The Console is the direct interface to the R software itself; it’s what we get if instead of RStudio we open the R software: a direct interface to the R programming language, where we can type commands and where results/messages are printed.\nYou can directly enter and run commands in the R Console, but realize that these commands are not saved as they are when running commands from a script. For this reason, we should not use the Console pane directly too much, ad reserve it only for quick and dirty calculations and checks. For typing commands that we want R to execute, we should instead use an R script file, where everything we type can be saved for later and complex analyses can be built up.\nThe Source Pane\nThis pane, by default in the upper-left, is a space to work with scripts and other text files. This pane is also where datasets (data frames) open up for viewing.\n\n\n\n\n\n\nNote\n\n\n\nIf your RStudio displays only one pane on the left, it is because you have no scripts open yet. We can open an existing one or create a new one. We’ll do that a bit later.\n\n\nThe Environment Pane\nThis pane, by default in the upper-right, is most often used to see brief summaries of “objects” that are available in an active session. Datasets loaded for analysis would appear here.\n\n\n\n\n\n\nNote\n\n\n\nIf your Environment is empty, it means that you don’t have any “objects” loaded or created yet. We will be creating some objects later and we will also import an example dataset.\n\n\nFiles, Plots, Packages, Help, etc. The lower-right pane includes several tabs including plots (display of graphics including maps), help, a file library, and available R packages (including installation/update options).\n\n\n\n\n\n\nTip\n\n\n\nYou can arrange the panes in various ways, depending on your preferences, using Tools &gt; Global Options in the top menu. So the arrangement of panes may look different on different computers.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#general-settings",
+    "href": "theory/week1.html#general-settings",
+    "title": "Slides - Tools",
+    "section": "General settings",
+    "text": "General settings\nYou can personalise the look and feel of your RStudio setup in various ways using Tools &gt; Global Options from the top menu, but setting some options as default from the very start is highly recommended. You can see these in the pictures below:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe most important setting in the picture on the left is the one to restore .RData at startup and saving the workspace as .RData on exit. Make sure these are un-ticked and set to ‘Never’, respectively, as shown in the picture. It’s always safer to start each RStudio session in a clean state, without anything automatically pre-loaded from a previous session. That could lead to serious and hard to trace complications.\nIn the picture on the right, you have the option to select that the new native pipe operator (|&gt;) (we’ll talk about it later!) be inserted using the Ctrl+Shift+M keyboard shortcut instead of the older version of the pipe (%&gt;%).\n\nThese settings will make more sense later, but it’s a good idea to have them sorted at the very beginning.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#scripts-markdown-documents-and-projects",
+    "href": "theory/week1.html#scripts-markdown-documents-and-projects",
+    "title": "Slides - Tools",
+    "section": "Scripts, markdown documents and projects",
+    "text": "Scripts, markdown documents and projects\nWriting brief commands that you want to test out in the Console is okay, but what you really want is to save your commands as part of a workflow in a dedicated file that you can reuse, extend and share with others.\nIn every quantitative analysis, we need to ensure that each step in our analysis is traceable and reproducible. This is increasingly a professional standard expected of all data analysts in the social sciences. This means that we need to have an efficient way in which to share our analysis code, as well as our outputs and interpretations of our findings. RStudio has an efficient way of handling this requirement with the use of R script files and versions of the Markdown markup language that allow the efficient combining of plain text (as in the main body of an article) with analysis code and outputs produced in R. The table below lists the main characteristics of these file types:\n\n\nFormat\nExtension\nDescription\n\n\n\nR Script\n.R\nUse an R script if you want to document a large amount of code used for a particular analysis project. Scripts should contain working R commands and human-readable comments explaining the code. Commands can be run line-by-line, or the whole R script can be run at once. For example, one can write an R script containing a few hundred or thousands of lines of code that gathers and prepares raw, unruly data for analysis; if this script can run without any errors, then it can be saved and sourced from within another script that contains code that undertakes the analysis using the cleansed dataset. Comments can be added by appending them with a hashtag (#).\n\n\nR Markdown\n.Rmd\n\nMarkdown is a simple markup language that allows the formatting of plain text documents. R Markdown is a version of this language written by the R Studio team, which also allows for R code to be included. Plain text documents having the .Rmd extension and containing R Markdown-specific code can be “knitted” (exported) directly into published output document formats such as HTML, PDF or Microsoft Word, which contain both normal text as well as tables and charts produced with the embedded R code. The code itself can also be printed to the output documents.\n\n\nQuarto document\n.qmd\nQuarto is a newer version of R Markdown which allows better compatibility with other programming languages. It is a broader ecosystem design for academic publishing and communication (for example, the course website was built using quarto), but you will be using only Quarto documents in this module. There isn’t much difference between .Rmd and .qmd documents for their uses-cases on this module, so one could easily change and .Rmd extension to .qmd and still produce the same output. .qmd documents are “rendered” instead of “knitted”, but for RStudio users the underlying engine doing the conversion from Quarto/R Markdown to standard Markdown to output file (HTML, PDF, Word, etc.) is the same. Read more about Quarto document in the TSD textbook.\n\n\n\nCreating new files can be done easily via the options File &gt; New File &gt; from the top RStudio menu.\nThe best way to use these files are as part of R project folders, which allow for cross-references to documents and datasets to be made relative to the path of the project folder root. This makes sure that no absolute paths to files (i.e. things like “C:/Documents/Chris/my_article/data_files/my_dataset.rds”) need to be used (instead, you would write something like “~/data_files/my_dataset.rds” if the “my_article” folder was set up as an R Project). This allows for the same code file to be run on another computer too without an error, ensuring a minimal expected level of reproducibility in your workflow.\nSetting up an existing or a new folder as an R Project involves having a file with the extension .RProj saved in it. This can be done easily via the options File &gt; New Project from the top RStudio menu.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#data-frames",
+    "href": "theory/week1.html#data-frames",
+    "title": "Slides - Tools",
+    "section": "Data frames",
+    "text": "Data frames\nIt is useful to know about vectors, but we will use them primarily as part of larger data frames. Data frames are objects that contain several vectors of similar length. In a data frame each column is a variable and each row is a case. They look like spreadsheets containing data.\nThere are several toy data frames built into R, and we can have a look at one to see how it looks like. You can get a list of the available built-in datasets and their brief descriptions with the data() command.\nFor example, the mtcars data frame is built into R and so you can access it without loading any files. To get the dimensions, you can use dim(), nrow(), and ncol().\n\nCodedim(mtcars)\n\n[1] 32 11\n\nCodenrow(mtcars)\n\n[1] 32\n\nCodencol(mtcars)\n\n[1] 11\n\n\nWe can also load the dataset into our Environment and look at it manually:\n\nCodemtcars &lt;- mtcars\n\n\nThe new object has appeared in the Environment under a new section called Data. We can click on it and the dataset will open up in the Source pane. What do you think this dataset is about?\nYou can select each column/variable from the data frame use the $, turning it into a vector:\n\nCodemtcars$wt\n\n [1] 2.620 2.875 2.320 3.215 3.440 3.460 3.570 3.190 3.150 3.440 3.440 4.070\n[13] 3.730 3.780 5.250 5.424 5.345 2.200 1.615 1.835 2.465 3.520 3.435 3.840\n[25] 3.845 1.935 2.140 1.513 3.170 2.770 3.570 2.780\n\n\nYou can now treat this just like a vector, with the subsets and all.\n\nCodemtcars$wt[1]\n\n[1] 2.62\n\n\nWe can subset to the first/last k rows of a data frame\n\nCodehead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\nCodetail(mtcars)\n\n                mpg cyl  disp  hp drat    wt qsec vs am gear carb\nPorsche 914-2  26.0   4 120.3  91 4.43 2.140 16.7  0  1    5    2\nLotus Europa   30.4   4  95.1 113 3.77 1.513 16.9  1  1    5    2\nFord Pantera L 15.8   8 351.0 264 4.22 3.170 14.5  0  1    5    4\nFerrari Dino   19.7   6 145.0 175 3.62 2.770 15.5  0  1    5    6\nMaserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8\nVolvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2\n\n\nThere are various ways in which one can further subset and wrangle vectors and data frames using base R functions, but the tidyverse and other user-written packages provide more functionality and ease of use. In this course, we will rely mostly on these.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#user-written-packages",
+    "href": "theory/week1.html#user-written-packages",
+    "title": "Slides - Tools",
+    "section": "User-written packages",
+    "text": "User-written packages\nApart from these “recommended” packages, there is a great - and ever increasing - number of user-written packages that satisfy various programming needs. Some packages contain functions that are particularly useful for social scientists. Sometimes a number of packages that contain complementary functionality and are designed to work well together are brought under one meta-package, which allows for all those packages to be installed and loaded at once. The most popular such meta-package is the tidyverse, which includes such packages as dplyr (for data manipulation), readr (for reading in rectangular data like .csv files), tidyr (for cleaning datasets), stringr (for working with “strings”, that is, textual data), forcats (for managing “factors”, that is, categorical variables) or ggplot2 (for data visualisation), among [several others](https://www.tidyverse.org/packages/.\nThe tidyverse packages have been developed around a coding philosophy that is very different from that of “base R”. It is sometimes referred to as a special “dialect” of the R language and has greatly contributed to popularising R and making it more easily available to practising social scientists who do not have a programming background, by designing code whose “grammar” is somewhat closer to that of “human” languages such as English. This is generally thought to lower the entry barriers to R for new users, although there isn’t a clear consensus on that.\nAnother recently developed meta-package, which was specifically designed with non-programmer social scientists in mind, is the easystats bundle. We will be relying on easystats packages quite a lot in this module, as they provide a very coherent set of functions that improve on the tidyverse.\nBoth of these meta-packages and thousands of other packages are available from the Comprehensive R Archive Network (CRAN). Many more packages are distributed as repositories on code-sharing platforms such as GitHub or R Universe.\nPackages made available on CRAN can be installed using the command install.packages(\"packagename\"). Once the package/library is installed (i.e. it is sitting somewhere on your computer), we can then load functions from that package using the :: operator (e.g. package::function()), or we can make all the functions from a package available by attaching that package with the library() function (e.g. library(package)).\nSo using a package/library is a two-stage process. We:\n\n\n **Install** the package/library onto your computer (from CRAN or another repository)\n2.a. Load functions from the package as you use them, or: 2.b. Attach the whole package to R’s search path, making all functions available to use by name\n\nLet’s start by installing the tidyverse meta-package, and then attach it:\n\nCodeinstall.packages(\"tidyverse\")  ## this command installs packages from CRAN; note the quotation marks around the package name\n\n\nYou can check the suite of packages that are available when you attach the tidyverse library using a command from the tidyverse itself:\n\nCodetidyverse_packages()\n\n\n\nQuestion\nWhy do you think we got an error message when we tried to run the above command?\n\nBecause tidyverse_packages() is itself a function from the tidyverse, in order to use that function we need not only to install the tidyverse but also to make its functions available. In other words, we did not yet attach the tidyverse for use in our R session, we only just installed it on our computers.\nIf we don’t want to attach a package that we have downloaded - because maybe we only want to use a single function once and we don’t want to burden our computer’s memory, we can load explicitly given functions from a package in the following way:\n\nCodetidyverse::tidyverse_packages()  # Here we state the package followed by two colons, then followed by the function we want\n\n\nBut in many cases we do want to use several functions at various points in an analysis session, so it is often useful to attach the entire package or set of packages:\n\nCodelibrary(tidyverse)\n\n\nNow we can use functions from that package without having to explicitly state the name of the package. We can still state the name explicitly, and that may be useful for readers of our code to understand what package a function come from. Also, it may happen that different packages have similarly named functions, and if all those packages are attached, then the functions from a package attached later will override that in the package attached earlier. R will note in a comment whether any functions from a package are masked by another, so it’s worth paying attention to the comments and warnings printed by R when we attach packages.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#installing-and-attaching-packages",
+    "href": "theory/week1.html#installing-and-attaching-packages",
+    "title": "Slides - Tools",
+    "section": "Installing and attaching packages",
+    "text": "Installing and attaching packages\nBoth install.packages() and library() are base R functions, but there are several other user-written packages that provide additional functionality to make it easier and more efficient to install, attach and manage packages. For example, the pacman package contains a function p_load() that allows us to attach several packages at once and install them from CRAN on the fly if they are not yet installed. The sister function p_load_gh() does the same for packages not published on CRAN but stored on personal repositories on GitHub. The librarian package does the same with the shelf() function, which installs missing packages from CRAN as well as GitHub.\nFor example, we can download and attach a number of packages in one go with the command below:\n\nCode# First, install {librarian} itself if not yet installed:\n\nif (!require(\"librarian\")) install.packages(\"librarian\") \n\n# Then attach/install other packages using `librarian::shelf()`:\n\nlibrarian::shelf(\n  tidyverse,\n  easystats,\n  sjlabelled,\n  gtsummary,\n  ggformula\n  )\n\n\nThese are some useful packages that we will be using in this module. You can read more about the (meta)packages we have just installed here:\n\ntidyverse\neasystats\nsjlabelled\ngtsummary\nggformula",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#about-the-tidyverse",
+    "href": "theory/week1.html#about-the-tidyverse",
+    "title": "Slides - Tools",
+    "section": "About the Tidyverse\n",
+    "text": "About the Tidyverse",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#data-frames-and-tibbles",
+    "href": "theory/week1.html#data-frames-and-tibbles",
+    "title": "Slides - Tools",
+    "section": "Data frames and ‘tibbles’",
+    "text": "Data frames and ‘tibbles’\nThe Tidyverse is built around the basic concept that data in a table should have one observation per row, one variable per column, and only one value per cell. Once data is in this ‘tidy’ format, it can be transformed, visualized and modelled for an analysis.\nWhen using functions in the Tidyverse ecosystem, most data is returned as a tibble object. Tibbles are very similar to the data.frames (which are the basic types of object storing datasets in base R) and it is perfectly fine to use Tidyverse functions on a data.frame object. Just be aware that in most cases, the Tidyverse function will transform your data into a tibble. If you are unobservant, you won’t even notice a difference. However, there are a few differences between the two data types, most of which are just designed to make your life easier. For more info, check R4DS.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#selected-dplyr-functions",
+    "href": "theory/week1.html#selected-dplyr-functions",
+    "title": "Slides - Tools",
+    "section": "Selected dplyr functions",
+    "text": "Selected dplyr functions\nThe dplyr package is designed to make it easier to manipulate flat (2-D) data (i.e. the type of datasets we are most likely to use, which are laid out as in a standard spreadsheet, with rows referring to cases (observations; respondents) and columns referring to variables. dplyr provides simple “verbs”, functions that correspond to the most common data manipulation tasks, to help you translate your thoughts into code. Here are some of the most common functions in dplyr:\n\n\nfilter() chooses rows based on column values.\n\narrange() changes the order of the rows.\n\nselect() changes whether or not a column is included.\n\nrename() changes the name of columns.\n\nmutate()/transmute() changes the values of columns and creates new columns (variables)\n\nsummarise() compute statistical summaries (e.g., computing the mean or the sum)\n\ngroup_by() group data into rows with the same values\n\nungroup() remove grouping information from data frame.\n\ndistinct() remove duplicate rows.\n\nAll these functions work similarly as follows:\n\nThe first argument is a data frame/tibble\nThe subsequent arguments are comma separated list of unquoted variable names and the specification of what you want to do\nThe result is a new data frame\n\nFor more info, check R for Social Scientists\nMost of the dplyr verbs perform tasks that can also be done in base R, but they provide more convenience. The table below lists a rough equivalence between dplyr and base R functionality:\n\n\n\n\n\n\ndplyr\nbase\n\n\n\narrange(df, x)\ndf[order(x), , drop = FALSE]\n\n\ndistinct(df, x)\n\ndf[!duplicated(x), , drop = FALSE], unique()\n\n\n\nfilter(df, x)\n\ndf[which(x), , drop = FALSE], subset()\n\n\n\nmutate(df, z = x + y)\n\ndf$z &lt;- df$x + df$y, transform()\n\n\n\npull(df, 1)\ndf[[1]]\n\n\npull(df, x)\ndf$x\n\n\nrename(df, y = x)\nnames(df)[names(df) == \"x\"] &lt;- \"y\"\n\n\nrelocate(df, y)\ndf[union(\"y\", names(df))]\n\n\nselect(df, x, y)\n\ndf[c(\"x\", \"y\")], subset()\n\n\n\nselect(df, starts_with(\"x\"))\ndf[grepl(\"^x\", names(df))]\n\n\nsummarise(df, mean(x))\n\nmean(df$x), tapply(), aggregate(), by()\n\n\n\nslice(df, c(1, 2, 5))\ndf[c(1, 2, 5), , drop = FALSE]\n\n\n\nThe above functions allow us to manage single data-frames. A set of other functions (sometimes called “two-table verbs”) make it possible to combine columns, rows, or both, from two or more data-frames. In base-R, much of this can be achieved with the merge() function, while in dplyr the join() function makes this possible, extending some further functionality that is not easily available in base-R. The table below lists these dplyr functions and their base-R equivalents:\n\n\ndplyr\nbase\n\n\n\ninner_join(df1, df2)\nmerge(df1, df2)\n\n\nleft_join(df1, df2)\nmerge(df1, df2, all.x = TRUE)\n\n\nright_join(df1, df2)\nmerge(df1, df2, all.y = TRUE)\n\n\nfull_join(df1, df2)\nmerge(df1, df2, all = TRUE)\n\n\nsemi_join(df1, df2)\ndf1[df1$x %in% df2$x, , drop = FALSE]\n\n\nanti_join(df1, df2)\ndf1[!df1$x %in% df2$x, , drop = FALSE]",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "theory/week1.html#the-forward-pipe-workflow",
+    "href": "theory/week1.html#the-forward-pipe-workflow",
+    "title": "Slides - Tools",
+    "section": "The forward-pipe (%>%/|>) workflow",
+    "text": "The forward-pipe (%&gt;%/|&gt;) workflow\nAll of the dplyr functions take a data frame or tibble as the first argument. Rather than forcing the user to either save intermediate objects or nest functions, dplyr provides the forward-pipe operator %&gt;% from the magrittr package. This operator allows us to combine multiple operations into a single sequential chain of actions. As of R 4.1.0 there is also a native pipe operator in R (|&gt;), and in RStudio one can set the shortcut to paste the new pipe operator instead (as we have done at the beginning of the lab). Going forward, we’ll use this version of the pipe operator for simplicity, but it’s likely that you will encounter the older version of the operator too in various scripts.\nLet’s start with a hypothetical example. Say you would like to perform a sequence of operations on data frame x using hypothetical functions f(), g(), and h():\n\nTake x then\n\nUse x as an input to a function f() then\n\nUse the output of f(x) as an input to a function g() then\n\nUse the output of g(f(x)) as an input to a function h()\n\nOne way to achieve this sequence of operations is by using nesting parentheses as follows:\nh(g(f(x)))\nThis code isn’t so hard to read since we are applying only three functions: f(), then g(), then h() and each of the functions is short in its name. Further, each of these functions also only has one argument. However, you can imagine that this will get progressively harder to read as the number of functions applied in your sequence increases and the arguments in each function increase as well. This is where the pipe operator |&gt; comes in handy. |&gt; takes the output of one function and then “pipes” it to be the input of the next function. Furthermore, a helpful trick is to read |&gt; as “then” or “and then.” For example, you can obtain the same output as the hypothetical sequence of functions as follows:\nx |&gt; \n  f() |&gt; \n  g() |&gt; \n  h()\nYou would read this sequence as:\n\nTake x then\n\nUse this output as the input to the next function f() then\n\nUse this output as the input to the next function g() then\n\nUse this output as the input to the next function h()\n\nSo while both approaches achieve the same goal, the latter is much more human-readable because you can clearly read the sequence of operations line-by-line. Instead of typing out the three strange characters of the operator, one can use the keyboard shortcut Ctrl + Shift + M (Windows) or Cmd + Shift + M (MacOS) to paste the operator.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Theory"
+    ]
+  },
+  {
+    "objectID": "data/index.html",
+    "href": "data/index.html",
+    "title": "Data documentation",
+    "section": "",
+    "text": "Datasets used for lab exercises.\n\n\n\n\n\n\n Trust & Inequality\n\n\n\n\n\nThis dataset combines data on “generalised/social trust” from the latest waves of the World Values Survey and the European Values Study with macro(country)-level data on World Development Indicators (WDI) provided by the World Bank. The main variables of interest taken from the WDI refer to measurements of economic inequality within countries. The dataset allows the conceptual replication of the analysis presented in Chapter 4 (“Community life and social relations”, pp. 49-62) of Wilkinson and Pickett (2010) concerning the relationship between inequality and trust\n Download .rds  Download .dta  Download .csv  Data wrangling code (.R)\n\n\n\n\n\n\n\n\n\n Österman, Table 3\n\n\n\n\n\nThis dataset is the one used by Österman (2021) for the analysis underpinning the results reported in his Table 3 and related tables in the Online Supplementary Material. The aim of the article is to use information on educational reforms across European countries as a way to set up a quasi-experimental design testing the effect of education on social trust. With this approach, it aims to overcome the limitations of cross-sectional observational survey data from the European Social Survey by attempting a causal - rather than just correlational - explanation.\n Download\n\n\n\n\n\n\n\n\n\n Delhey & Newton, 2003\n\n\n\n\n\nThis dataset contains data from the EUROMODULE (1999-2002) surveys conducted in nine countries: Germany (DE) | Austria (AT) | Switzerland (CH) | Sweden (SE) | Spain (ES) | Slovenia (SI) | Korea, Republic of (KR) | Turkey (TR) | Hungary (HU). Out of the total of 366 variables measured, only those 100 were kept in this dataset that were used by Delhey and Newton (2003) in their analysis of the various correlates of “social trust”. The value of the EUROMODULE survey data compared to other comparative surveys that measure social trust is that it offers a much greater variety of explanatory variables that allow Delhey and Newton (2003) to test the relative explanatory power of several complex social theories explaining differences in levels of social trust both at the individual level and at the macro-social level.\n Download \n\n\n\n\n\n\n\n\n\n\n\nReferences\n\nDelhey, Jan, and Kenneth Newton. 2003. “Who Trusts?: The Origins of Social Trust in Seven Societies.” European Societies 5(2):93–137. doi: 10.1080/1461669032000072256.\n\n\nÖsterman, Marcus. 2021. “Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust.” Social Indicators Research 154(1):211–33. doi: 10.1007/s11205-020-02529-y.\n\n\nWilkinson, Richard G., and Kate Pickett. 2010. The Spirit Level: Why Greater Equality Makes Societies Stronger. New York: Bloomsbury Press."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "ReadingsSoftwareTrainingHelp\n\n\n\nStatistics\nThe course does not strictly follow the content of a textbook, but the expectation is that students will read as much as possible of the assigned chapters from the following books:\n\n\n\n\n\n\n\n\nGelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. Regression and other stories. Cambridge: Cambridge University Press.  ROS\n\n\nFree to download PDF version from the book’s website: https://avehtari.github.io/ROS-Examples\n\n\n\n\n\n\n\nAlexander, Rohan. 2023. Telling Stories with Data. Chapman and Hall/CRC  TSD\n\n\nFree online book: https://tellingstorieswithdata.com\n\n\n\n\n\n\n\nGelman, A., and Hill, J. 2007. Data Analysis Using Regression and Multilevel/Hierarchical Models. Cambridge: Cambridge University Press.  ARM\n\n\nNote: ROS is the expanded and updated version of Part 1 (and some of Part 3) of this book. While everyone in the free world eagerly awaits the publication of ROS’s multilevel counterpart, we’ll use ARM as a reference work for the theory underpinning multilevel modelling.  Not freely available. Access it in print or online via the NU library\n\n\n\n\n\nRelatively large portions of text will be assigned for reading in each week from these books, referring to them by their acronyms. Don’t worry if you cannot read all the textbook content assigned in any given week! Those for whom the method covered by the assigned readings is new, will be able to refer back to them throughout the semester and beyond, reading thoroughly and completing the applied exercises. Those already familiar to some extent with the methods, should nonetheless read the text as a narrative and will discover hidden gems that will spectacularly improve their understanding and ability to interpret their statistical results.\n\n\nCoding\nThere will also be various readings relating more closely to the technicalities of coding in R and scientific writing, collaboration and communication in general. These readings will also be listed under each week’s outline as the semester progresses. The generic reading that students are advised to go through on their own is:\n\n\n\n\n\n\n\nWickham, Çetinkaya-Rundel and Grolemund. 2022. R for Data Science (2nd ed.)  R4DS\n\n\nFree online book: https://r4ds.hadley.nz/\n\n\n\n\n\n\nApplication articles\nIn the IT labs we will practice applying methods by reproducing small bits of published research, using the data and (critically) the modelling approaches used by the authors. To fully understand the context of these data and the methods used, you must read the original journal articles and the available supplementary materials provided alongside. These readings will be listed under each week’s outline (still work in progress!).\nThe articles come from a variety of different fields, so expect them to push you outside your disciplinary comfort zone. The point is to see how methods have been used in practice and learn how to reproduce (and potentially improve) those analyses. This will then enable you to apply this knowledge to your own research questions.\nWhen selecting the articles, the aim was to strike a fine balance between (a) the simplicity of the methods employed, (b) data and analytical transparency, and (c) the strength of the analysis. So don’t take them as examples of all-rounds best practice, but examples of research that gets published while being self-confident enough to open itself up for public scrutiny. Aim for this in your own research!\n\n\nOther readings\nFinally, there will also be recommended readings listed under certain weeks that help place methods, statistics and probability theory in a broader frame. These are useful readings for everyone, regardless of whether you will be applying quantitative analysis in your research or future work.\n\n\n\n\nRequired software\nWe will use a number of open-source software for data analysis and scientific writing. You need to install these on your personal computers to be able to work away from campus:\n\n\n\n\nR\n(programming language)\nEssential\nR needs to be installed even if we will only use it via the RStudio interface.\nInstall the latest version from here\n\n\n\nRStudio\n(integrated development environment)\nEssential\nYou will need the free desktop version appropriate for your operating system. RStudio combines the R Console - the direct interface to R - with a number of other panels.\nInstall the latest version from here\n\n\n\nTidyverse\n(collection of R packages)\nEssential\nThe tidyverse is a collection of packages that make the R language easier to use by introducing a more consistent grammar. It provides functions that are particularly useful for data manipulation and visualisation. It is the most common ‘dialect’ used among social scientists.\nInstall from within RStudio by executing in the Console:\ninstall.packages(\"tidyverse\")\n\n\n\nQuarto\n(scientific publishing system)\nEssential\nWe will be using Quarto markdown documents (.qmd) throughout the course to document our data analysis. .qmd files extend the plain-text Markdown mark-up language (.md) to allow for data analysis code to be executed and results presented alongside the main text. This is an essential requirement for analytical transparency, reliability and reproducibility.The assignment will also be completed in .qmd.\nIncluded by default in the latest RStudio release; no need to install separately.\nYou can check your installation by executing in the RStudio Terminal :\nquarto check\n\n\n\nZotero\n(reference manager)\nRecommended\nIf you are not yet using a reference manager, I recommend giving Zotero a try. It will make your work much more efficient and it integrates (relatively well) with RMarkdown and Quarto using the the Better BibTeX add-on.\nInstall the latest version and add-ons from here\n\n\n\n\n\n\nStudents with no previous experience using R and/or RStudio are advised to complete the self-paced free online training course R for Social Scientists provided by Data Carpentry at https://datacarpentry.org/r-socialsci/:\n\n\nThere are several Data Carpentry workshops run physically at Newcastle and these sessions can be booked at https://nclrse-training.github.io/Workshop-Webpage-Under-Construction/:\n\n\n\nThere are several ways to get help with  outside class. If you encounter an error message or are looking for a function to perform a specific task that we have not covered in class, you can do a Google search; for best results, use the https://rseek.org/ search engine, which limits the results to those relating to the  language.\nYou can also search for answers on Stack Overflow, which is a popular help and discussion website for programmers. You can also post a question there, but make sure to follow community standards and advice on how to ask a good question and how to provide a minimal reproducible example. You will need some experience using the site before being able to ask a good question, but it’s more than certain that any question you have at this stage has already been asked and answered somewhere. Make sure you do a comprehensive search with various prompts before thinking about asking your question.\nIncreasingly, large language model-based chatbots such as the (in)famous ChatGPT can also provide good answers. You can use them efficiently, but make sure to always test out the responses, in the overwhelming majority of the cases the advice they give is unreliable, at least at first try."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\n            Quantitative analysis \n        ",
+    "section": "",
+    "text": "Quantitative analysis \n        \n        \n            HSS8005 • Intermediate stream • 2024/2025 Winter/Spring\nNewcastle University (UK)\n        \n        \n            A continuation course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary postgraduate audience in the social sciences and humanities. Focusing on real-life examples from published research, the course emphasizes the scientific application of regression models, the practice of reproducible research workflows, and the communication of statistical results to diverse audiences. It prioritises understanding through modern computational techniques over mathematical abstraction.\n            Join the mailing list\n        \n    \n\n\n\n\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh at newcastle dot ac dot uk\n   Tutorial booker\n \n\n\n\nTeaching Assistants\n\n   Minki Sung\n\n\n\n\n\nTimetable\n\n   Tuesdays, Timetable Weeks 22-29\n    HDB.6.19 PGR Learning Lab\n   Lectures: 11:00-12:30\n   Labs: 13:00-14:30 \n\n\n\nAssessment\n\n   4,000-word data analysis portfolio/report (details on Canvas)\n   Submit by 16:00 on 30th April 2025\n   Submit to Turnitin via Canvas\n\n\n\n\n\n\nModule overview\nThis module is offered by School X - Researcher Education and Development to postgraduate students within the Faculty of Humanities and Social Sciences at Newcastle University. The module aims to provide a broad applied introduction to more advanced methods in quantitative analysis for students from various disciplinary backgrounds. See the module plan page for details about the methods covered. The course content consists of eight 1.5-hour lectures and eight 1.5-hour IT labs.\nThe course stands on three pillars:\n\n\nApplication\n\n\nComputation\n\n\nReproducibility\n\n\n\n\nApplication: we will work with real data originating from large-scale representative surveys or published research, with the aim of applying methods to concrete research scenarios. IT lab exercises will involve reproducing small bits of published research, using the data and (critically) the modelling approaches used by the authors. The aim is to see how methods have been used in practice in various disciplines and learn how to reproduce (and potentially improve) those analyses. This will then enable students to apply this knowledge to their own research questions. The data used in IT labs may be cleansed to allow focusing more on modelling tasks than on data wrangling, but exercises will address some of the more common data manipulation challenges and will cover essential functions. Data cleansing scripts will also be provided so that interested students can use them in their own work.\n\n\n\n\nComputation: the development of computational methods underpins the application of the most important statistical ideas of the past 50 years (see Andrew Gelman’s article on these developments here or an online workshop talk here; Richard McElreath’s great talk on Science as Amateur Software Development is well worth watching too). This module aims to develop basic computational skills that allow the application of complex statistical models to practical scientific problems without advanced mathematical knowledge, and which lay the foundation on which students can then pursue further learning and research in computational humanities and social sciences.\n\n\n\n\nReproducibility: developing a reproducible workflow that allows your future self or a reviewer of your work to understand your process of analysis and reproduce your results is essential for reliable and transparent scientific research. For an overview of why it’s important to develop a reproducible workflow early on in your research career and how to do it using (some) of the tools employed in this module, read Chapter 3 of TSD (see Resources &gt; Readings). In this course, we will be using a suite of well-integrated free and open-source software to aid our reproducible workflow (see Resources &gt; Software).\n\n\n\n\nPrerequisites\nTo benefit the most from this module, students are expected to have a foundational level of knowledge in quantitative methods: a good understanding of data types and distributions, familiarity with inferential statistics, and some exposure to linear regression. This is roughly equivalent to the content covered in a textbook such as OpenIntro Statistics (which you can download for free).\n\n\nNo previous knowledge of  or other command-based statistical analysis software is needed, but if starting from scratch, students are advised to complete the self-paced R for Social Scientists Data Carpentry course outside class and to consult Wickham, Çetinkaya-Rundel and Grolemund’s ebook R for Data Science.\n\n\n\nCopyright  Chris Moreh, 2025."
+  },
+  {
+    "objectID": "application/week3.html",
+    "href": "application/week3.html",
+    "title": "Week 3 Application Lab",
+    "section": "",
+    "text": "This session introduces binary logistic regression models. These models are the simplest form of a broader class of models called generalised linear models, which are applicable when the outcome (“dependent”, “response”, “explained”, etc.) variable cannot be assumed to follow a Gaussian (i.e. “normal”) distribution, but it instead a bounded or discrete measurement (e.g. think of variables whose values cannot be negative - i.e. have a lower limit of 0 - or fall into discrete categories such as “yes”/“no”, “disagree”/“neither agree nor disagree”/“agree”, or “blue”/“green”/“black”/“brown”/“other”). Binary logistic regression is the simplest case, where the outcome can take only two values (therefore “binary”). However, the logic that underpins it is similar to that of other generalised linear models.\nBy the end of the session you will learn how to:\n\nFit and summarise logistic regression models in R\n\nInterpret results from logistic regression models\nManipulate the regression output to ease interpretation\nPlot and visualise results from logistic regression models to aid interpretation"
+  },
+  {
+    "objectID": "application/week3.html#aims",
+    "href": "application/week3.html#aims",
+    "title": "Week 3 Application Lab",
+    "section": "",
+    "text": "This session introduces binary logistic regression models. These models are the simplest form of a broader class of models called generalised linear models, which are applicable when the outcome (“dependent”, “response”, “explained”, etc.) variable cannot be assumed to follow a Gaussian (i.e. “normal”) distribution, but it instead a bounded or discrete measurement (e.g. think of variables whose values cannot be negative - i.e. have a lower limit of 0 - or fall into discrete categories such as “yes”/“no”, “disagree”/“neither agree nor disagree”/“agree”, or “blue”/“green”/“black”/“brown”/“other”). Binary logistic regression is the simplest case, where the outcome can take only two values (therefore “binary”). However, the logic that underpins it is similar to that of other generalised linear models.\nBy the end of the session you will learn how to:\n\nFit and summarise logistic regression models in R\n\nInterpret results from logistic regression models\nManipulate the regression output to ease interpretation\nPlot and visualise results from logistic regression models to aid interpretation"
+  },
+  {
+    "objectID": "application/week3.html#setup",
+    "href": "application/week3.html#setup",
+    "title": "Week 3 Application Lab",
+    "section": "Setup",
+    "text": "Setup\nIn Week 1 you set up R and RStudio, and an RProject folder (we called it “HSS8005_labs”) with an .R script and a .qmd or .Rmd document in it (we called these “Lab_1”). Ideally, you saved this on a cloud drive so you can access it from any computer (e.g. OneDrive). You will be working in this folder. If it’s missing, complete Exercise 3 from the Week 1 Worksheet.\nCreate a new Quarto markdown file (.qmd) for this session (e.g. “Lab_3.qmd”) and work in it to complete the exercises and report on your final analysis."
+  },
+  {
+    "objectID": "application/week3.html#exercise-0-load-and-install-r-packages-needed-for-this-lab",
+    "href": "application/week3.html#exercise-0-load-and-install-r-packages-needed-for-this-lab",
+    "title": "Week 3 Application Lab",
+    "section": "Exercise 0: Load (and install) R packages needed for this lab",
+    "text": "Exercise 0: Load (and install) R packages needed for this lab\nUsing functions learnt in Week 1, load (and install, if needed) the following R packages:\n\ntidyverse\neasystats\ngtsummary\nggformula\nsjlabelled\nggeffects\nmarginaleffects"
+  },
+  {
+    "objectID": "application/week3.html#exercise-1-modelling-social-trust-and-education",
+    "href": "application/week3.html#exercise-1-modelling-social-trust-and-education",
+    "title": "Week 3 Application Lab",
+    "section": "Exercise 1: Modelling social trust and education",
+    "text": "Exercise 1: Modelling social trust and education\nIn this first exercise, follow the steps in the analysis carried out in the Notes to replicate the results presented in Model 1 in Appendix A. Table 2 in Wu (2021).\n\n\n\n\n\n\nTip\n\n\n\nYou can download the raw World Values Survey dataset and prepare it with the code used in the Notes, but you can also download the prepared wvs56 dataset from the Data page and from here"
+  },
+  {
+    "objectID": "application/week3.html#exercise-2-refit-the-model-for-two-single-countries",
+    "href": "application/week3.html#exercise-2-refit-the-model-for-two-single-countries",
+    "title": "Week 3 Application Lab",
+    "section": "Exercise 2: Refit the model for two single countries",
+    "text": "Exercise 2: Refit the model for two single countries\nYou will carry out this exercise on your own, and you’ll make two adjustments compared to the previous exercise. Instead of treating the entire dataset as undifferentiated, originating from one single population, we will acknowledge the fact that the data originate from various countries and that the local socio-cultural context has an impact on social behaviours and attitudes. To account for this, re-fit the logistic regression model from the previous exercise in two different ways:\n1.  fit the same model as before, but add the *country* variable to the model as a covariate;\n2.  select *two* countries of your choice, reduce the dataset to that country and fit the model on that data;\nIn order to select countries from the data, you will need to use another function, filter(), which lets us select rows (cases) given some criteria."
+  },
+  {
+    "objectID": "application/week3.html#exercise-3-advanced-religiosity-and-social-trust",
+    "href": "application/week3.html#exercise-3-advanced-religiosity-and-social-trust",
+    "title": "Week 3 Application Lab",
+    "section": "Exercise 3 (Advanced): Religiosity and social trust",
+    "text": "Exercise 3 (Advanced): Religiosity and social trust\nRead through the article by (Dingemans and Van Ingen 2015) and replicate their Model 1 in Table 1. They use data from the European Values Study, which is also freely available to download from the EVS website. Rely on the code and steps undertaken in the analysis presented in the Notes."
+  },
+  {
+    "objectID": "theory/index.html",
+    "href": "theory/index.html",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nSlides - Tools\n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Materials for each week are available from the side menu. The table below outlines the weekly topics.\n\n\n\n\n\nWeekly topics\n\n\n\n\n\n\n\n\nWeek 1  Tools\n\n\nR, RStudio, Markdown, Quarto and other tools of the trade\n\n\n\n\nWeek 2  Lines\n\n\nLinear models and their limitations\n\n\n\n\nWeek 3  Curves\n\n\nLogistic regression and other generalised linear models\n\n\n\n\nWeek 4  Paths\n\n\nGraphical models and considerations for causal analysis\n\n\n\n\nWeek 5  Interactions\n\n\nEstimating, plotting and interpreting interaction effects\n\n\n\n\nWeek 6  Temporalities\n\n\nPanel, longitudinal and time-series analysis\n\n\n\n\nWeek 7  Hierarchies\n\n\nHierarchical data structures and multilevel modelling\n\n\n\n\nWeek 8  Designs\n\n\nSimulation-based power analysis for study design\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Materials",
+      "Weekly materials"
+    ]
+  },
+  {
+    "objectID": "info/week7.html",
+    "href": "info/week7.html",
+    "title": "Week 7  Hierarchies",
+    "section": "",
+    "text": "Hierarchical data are ubiquitous in the social and human sciences (and beyond). In fact, almost all the application articles we have engaged with so far in previous labs modelled hierarchical data., and almost all modelled them explicitly as such, applying some multilevel modelling technique. In some cases the hierarchies themselves were of central theoretical importance and played a crucial role in the stated estimand (i.e. “the object of inquiry—(…) the precise quantity about which we marshal data to draw an inference” (see Lundberg, Johnson, and Stewart 2021:532). In others, taking into account the hierarchical nature of the data was meant to improve the precision of the main effect estimates. The importance of accounting for hierarchical dependencies in our models is emphasised by no one else more than Richard McElreath, who, in his important introductory-level book to Bayesian statistics, wants “to convince the reader of something that appears unreasonable: multilevel regression deserves to be the default form of regression” (McElreath 2020:15). According to him, “papers that do not use multilevel models should have to justify not using a multilevel approach”. In this session, we will learn how to think about and fit hierarchical models in R, and we’ll discuss some of the challenges of multilevel modelling and the possible justifications not to use them in certain contexts.\n\nReadings\nTextbook\n\nARM: Chapters 11 (pp. 237-249) and 12 (pp. 251-278)\nTSD: Chapter section 15.2\n\nApplication\n\nÖsterman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. Social Indicators Research 154(1):211–33 - (online)\nMitchell, Jeffrey. 2021. “Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.” Frontiers in Sociology 6 (April): 604884 - (online)\nAkaeda, Naoki. 2023. “Trust and the Educational Gap in the Demand for Redistribution: Evidence from the World Values Survey and the European Value Study.” International Sociology 38(3): 290–310 Library access\nWu, Cary. 2021. ‘Education and Social Trust in Global Perspective’. Sociological Perspectives 64(6):1166–86. Available here: Library access\nDingemans, Ellen, and Erik Van Ingen. 2015. ‘Does Religion Breed Trust? A Cross-National Study of the Effects of Religious Involvement, Religious Faith, and Religious Context on Social Trust’. Journal for the Scientific Study of Religion 54(4):739–55. Library access\n\n\n\nFurther readings\n\nARM: Chapters 13 (pp. 279-299), 14 (pp. 301-323) and 15 (pp. 325-342)\n\n\n\n\n\n\nReferences\n\nLundberg, Ian, Rebecca Johnson, and Brandon M. Stewart. 2021. “What Is Your Estimand? Defining the Target Quantity Connects Statistical Evidence to Theory.” American Sociological Review 86(3):532–65. doi: 10.1177/00031224211004187.\n\n\nMcElreath, Richard. 2020. Statistical Rethinking: A Bayesian Course with Examples in R and Stan. Second. Boca Raton: Taylor and Francis, CRC Press.",
+    "crumbs": [
+      "Materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "info/week5.html",
+    "href": "info/week5.html",
+    "title": "Week 5  Interactions",
+    "section": "",
+    "text": "Description\nThis week we will return to some of the models we fit over the past two weeks and turn our attention to the right-hand side of the regression equations. We will explore interaction effects, which allow for the association between a predictor and an outcome to depend upon the value of another predictor. Understanding interaction effects - and the concept of conditioning more broadly - can help avoid serious misrepresentations and misunderstandings of our data. Some famous statistical “paradoxes” can highlight these dangers, and the lecture will build on these conceptual examples before moving on to questions of model-building. It is technically very simple to fit models with complex interactions, however, their interpretation can be very difficult. As with the logistic regression model we covered in Week 3, we will explore ways to present and visualise results from interaction models, which make their interpretation easier. Exploring interactions also allows us to begin thinking about causality and causal modelling, a topic that we will expand upon in Week 5.\n\n\nReadings\nStatistics\n\nROS: Chapters 10-12\n\nAdvanced statistics readings\n\nBrambor, T., W. R. Clark, and M. Golder. 2006. “Understanding Interaction Models: Improving Empirical Analyses.” Political Analysis 14(1): 63–82. https://doi.org/10.1093/pan/mpi014\nHainmueller, J., J. Mummolo, and Y. Q. Xu. 2019. “How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice.” Political Analysis 27(2): 163–92 Library access here\nRohrer, Julia M., and Ruben C. Arslan. 2021. “Precise Answers to Vague Questions: Issues With Interactions.” Advances in Methods and Practices in Psychological Science 4(2): 25152459211007368 Library access here\n\nCoding\n\nTSD: Chapter 15\n\nApplication\n\nAkaeda, Naoki. 2023. “Trust and the Educational Gap in the Demand for Redistribution: Evidence from the World Values Survey and the European Value Study.” International Sociology 38(3): 290–310 Library access\nÖsterman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. Social Indicators Research 154(1):211–33 - (online)\nLadd, Jonathan McDonald, and Gabriel S. Lenz. 2009. ‘Exploiting a Rare Communication Shift to Document the Persuasive Power of the News Media’. American Journal of Political Science 53(2):394–410. doi: 10.1111/j.1540-5907.2009.00377.x.(published version should be accessible with university login; additional Appendix available here)",
+    "crumbs": [
+      "Materials",
+      "Week 5"
+    ]
+  },
+  {
+    "objectID": "info/week3.html",
+    "href": "info/week3.html",
+    "title": "Week 3  Curves",
+    "section": "",
+    "text": "Description\nIt wasn’t until the last quarter of the 20th century that a unified vision of statistical modelling emerged, allowing practitioners to see how the general linear model we have explored so far is only a specific case of a more general class of models. We could have had a fancy, memorable name for this class of models - as John Nelder, one of its inventors, acknowledged later in life (Senn 2003, 127) - but back then academics were not required to undertake marketing training on the tweetabilty-factor of the chosen names for their theories; so we ended up with “generalised linear models”. These models can be applied to explananda (“explained”, “response”, “outcome”, “dependent” etc. variables, our ys) whose possible values have certain constraints (such as being limited by a lower bound or constrained to discreet choices) that makes the parameters of the Gaussian (‘normal’) distribution inefficient in describing them. Instead, they follow some of the other “exponential distributions” (and not only the exponential: cf. (gelman2020?)), of which the Poisson, gamma, beta, binomial and multinomial are probably the most common in human and social sciences research. Their “generalised linear modelling” involves mapping them unto a linear model using a so-called “link function”. We will explore what all of this means in practice and how it can be applied to data that we are interested in most in our respective fields of study.\n\n\nReadings\nStatistics\n\nROS: Chapters 13-15\nConnelly, Roxanne, Vernon Gayle, and Paul S. Lambert. 2016. ‘Statistical Modelling of Key Variables in Social Survey Data Analysis’. Methodological Innovations 9:205979911663800. Library access\n\nCoding\n\nTSD: Chapter 13\n\nApplication\n\nWu, Cary. 2021. ‘Education and Social Trust in Global Perspective’. Sociological Perspectives 64(6):1166–86. Available here: Library access\nDingemans, Ellen, and Erik Van Ingen. 2015. ‘Does Religion Breed Trust? A Cross-National Study of the Effects of Religious Involvement, Religious Faith, and Religious Context on Social Trust’. Journal for the Scientific Study of Religion 54(4):739–55. Library access\n\n\n\n\n\n\n\n\n\n\n\nReferences\n\nSenn, Stephen. 2003. “A Conversation with John Nelder.” Statistical Science 18 (1): 118–31. https://doi.org/10.1214/ss/1056397489.",
+    "crumbs": [
+      "Materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "info/week1.html",
+    "href": "info/week1.html",
+    "title": "Week 1  Tools",
+    "section": "",
+    "text": "Description\nWe start the module with an applied introduction to the programming language R and the various tools that we will use to enhance its application to empirical research work in the social sciences. You will only gain a very basic and generic understanding of these software in this first week, but you will learn more throughout the semester, in the form of coding tasks associated with specific data analysis exercises.\n\n\nReadings\nTextbook readings\n\nR4DS: Chapters 1-10 (“Whole game”)\n\nFurther training\nFor further structured training in the use of R, RStudio and RMarkdown/Quarto, see the R for Social Scientists online course provided by Data Carpentry at https://datacarpentry.org/r-socialsci/\nJenny Bryan’s (RStudio/Posit) university-course-originated online book Stat545 is also a great resource for learning R and RStudio in more depth.\nFor a very different approach emphasising the value of learning ‘base’ R over the RStudio + {tidyverse} utility combo, see Norm Matloff’s course fasteR: Fast Lane to Learning R!.",
+    "crumbs": [
+      "Materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "assessment.html",
+    "href": "assessment.html",
+    "title": "Formative assessment",
+    "section": "",
+    "text": "Formative assessment\nStudents can submit their weekly Quarto worksheets with completed exercises by the end of each week for some brief formative feedback that they can build on. The worksheets should contain all the code and a maximum of 500 words of textual interpretation (not including any annotations added in code blocks to explain the code). The submission method and format is TBC; but we’ll take a light approach to things.\n\n\nSummative assessment\nStudents have the option to submit a collection of their (revised) worksheet exercises as a portfolio of work, with an added introduction, conclusion and framing.\nAlternatively, one/several of the covered data analysis methods can be applied to another dataset chosen by the student and developed into a comprehensive research report.\n\n   4,000-word data analysis portfolio/report (details on Canvas)\n   16:00 on 30th April 2025\n   Submit to Turnitin via Canvas\n\nMore detailed information is available on Canvas"
+  },
+  {
+    "objectID": "info/week2.html",
+    "href": "info/week2.html",
+    "title": "Week 2  Lines",
+    "section": "",
+    "text": "Description\nIn Edwin Abbott’s 1884 novella, the inhabitants of Flatland are geometric shapes living in a two-dimensional world, incapable of imagining the existence of higher dimensions. A sphere passing through the plain of their world is a fascinating but incomprehensible event: Flatlanders can only see a dot becoming a circle, increasing in circumference, then shrinking back in size and disappearing. There are, in this universe, worlds with even more limited views, like the one-dimensional Lineland and the zero-dimensional Pointland. Any attempt to expand the perspective of their inhabitant(s) is doomed to failure. But as in any good adventure story, a chosen Flatland native embarks on a journey of discovery and revelation - and ostracism and imprisonment. The story is interpreted as an allegorical criticism of Victorian-age social structure, but can equally describe the limitations of inhabiting uncritically a methodological world in which all data are ‘normal’ and all relationships are linear. Moving beyond linearity and acquiring the statistical intuition needed to think in higher dimensions and perceive more complex relationships is indeed a matter of practice-induced revelation. It’s unlikely that we will reach statistical nirvana in this short course, but we’ll attempt to build some more substantial structures upon the arid plains of linear regression. We start by looking around in the Flat-, Line- and Point-lands of quantitative analysis. Incorrigible procrastinators may want to check out a full-length computer animated film version of Flatland on YouTube. Others may be better served by this brief TED-Ed animation.\n\n\nReadings\nStatistics\n\nROS: Chapters 3, 4, 6-12\nTSD: Chapter 12 (“Linear models”)\n\nCoding\n\nTSD: Chapters 9 and 11\nR4DS: Chapters 11, 12\n\nApplication\n\nChapter 4 in Wilkinson, Richard G., and Kate Pickett. 2010. The Spirit Level: Why Greater Equality Makes Societies Stronger. New York: Bloomsbury Press.\nÖsterman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. Social Indicators Research 154(1):211–33 - (online)\nMitchell, Jeffrey. 2021. “Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.” Frontiers in Sociology 6 (April): 604884 - (online)",
+    "crumbs": [
+      "Materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "info/week4.html",
+    "href": "info/week4.html",
+    "title": "Week 4  Paths",
+    "section": "",
+    "text": "This week we ask some essential conceptual questions that can clarify various stated and unstated assumptions about our empirical data, theoretical questions and the models we aim to fit to them. We’ll explore the possibilities and challenges of asking causal questions of observational data, and we’ll think about ways to avoid what evolutionary anthropologist Richard McElreath calls ‘causal salad’. More generally, we explore ways of thinking about and dealing with the various biases that affect quantitative analyses.\n\nReadings\nStatistics\n\nCinelli, Carlos, Andrew Forney, and Judea Pearl. 2022. “A Crash Course in Good and Bad Controls.” Sociological Methods & Research https://journals.sagepub.com/doi/full/10.1177/00491241221099552\nLundberg, Ian, Rebecca Johnson, and Brandon M. Stewart. 2021. “What Is Your Estimand? Defining the Target Quantity Connects Statistical Evidence to Theory.” American Sociological Review 86(3): 532–65. https://doi.org/10.1177/00031224211004187\nROS: Chapters 18-20\n\nApplication\n\nGriffith, Gareth J., Tim T. Morris, Matthew J. Tudball, Annie Herbert, Giulia Mancano, Lindsey Pike, Gemma C. Sharp, Jonathan Sterne, Tom M. Palmer, George Davey Smith, Kate Tilling, Luisa Zuccolo, Neil M. Davies, and Gibran Hemani. 2020. “Collider Bias Undermines Our Understanding of COVID-19 Disease Risk and Severity.” Nature Communications 11(1): 5749. https://www.nature.com/articles/s41467-020-19478-2\nBreen, Richard. 2018. “Some Methodological Problems in the Study of Multigenerational Mobility.” European Sociological Review 34(6): 603–11. https://doi.org/10.1093/esr/jcy037",
+    "crumbs": [
+      "Materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "info/week6.html",
+    "href": "info/week6.html",
+    "title": "Week 6  Temporalities",
+    "section": "",
+    "text": "We consider the “temporal” aspects of data and the opportunities (and challenges) they pose. The special kind of multilevel data structure we consider here involves repeated measurements on persons (or other units); measurements are therefore clustered within persons (or other units), and predictors can be available at the measurement or person level. Such datasets are often called panel or longitudinal. In settings where overall time trends are important, repeated measurement data are sometimes called time-series cross-sectional. Time-series cross-sectional data typically contain observations at regular time interval, and they commonly exhibit overall time patterns. In many such contexts one must consider how measurements cluster not only in the “temporal” variable but also in the “spatial” variable (e.g. country-year-level observations clustered within countries as well as years), with the potential for predictors at three levels (individual, temporal and spatial). We will consider such three (and higher)-level hierarchical analyses.\n\nReadings\nTextbook\n\nARM: Chapters 11 (pp. 237-249) and 12 (pp. 251-278)\n\nApplication\n\nMitchell, Jeffrey. 2021. “Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.” Frontiers in Sociology 6 (April): 604884 - (online)\nKumove, Michael. 2024. “Take Five? Testing the Cultural and Experiential Theories of Generalised Trust Against Five Criteria.” Political Studies (online)\nDawson, Chris. 2019. “How Persistent Is Generalised Trust?” Sociology 53(3): 590–99. (online)\nBotzen, Katrin. 2015. “Are Joiners Trusters? A Panel Analysis of Participation and Generalized Trust.” Zeitschrift für Soziologie 44(5): 314–29. (online)\nSturgis, Patrick, Roger Patulny, Nick Allum, and Franz Buscha. 2012. Social Connectedness and Generalized Trust: A Longitudinal Perspective. Working Paper. ISER Working Paper Series. (online)",
+    "crumbs": [
+      "Materials",
+      "Week 6"
+    ]
+  },
+  {
+    "objectID": "info/week8.html",
+    "href": "info/week8.html",
+    "title": "Week 8  Designs",
+    "section": "",
+    "text": "We’ll practice some basic methods of computer simulation in R for statistical inference and for generating data that has some idealised characteristics. Such methods play an increasingly important role in computational statistics and are extremely useful for designing robust data collection and analysis plans. Of course, this topic also raises some much deeper existential issues. We have known ever since science-fiction author Philip K. Dick’s memorable “Metz address” of 1977 that our world is nothing but a complex computer simulation. We won’t be actively searching for empirical proof of this in class, but should we make a mistake in our code and end up in an infinite loop, we may be tempted to ponder whether if something like this can happen to our data, who says it couldn’t happen to us? If it happens and you’re afraid that stopping the process may cause the known universe to implode, you can watch Dick on YouTube while you wait.\n\nReadings\n\nROS: Chapters 5 (pp. 69-76) and 16 (pp. 291-310)\nTSD: TDS makes extensive use of simulation methods for various purposes at different stages of a research project (e.g. from data preparation through statistical inference to sharing results and data openly). A search on a keyword stub “simulat” can point you various sections of interest that are all worth reading.",
+    "crumbs": [
+      "Materials",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "code/week1.html",
+    "href": "code/week1.html",
+    "title": "Introduction to  for HSS8005+",
+    "section": "",
+    "text": "Package  : :  Function\n                Purpose\n              \n\n\nhelp()\n                  The primary interface to R’s built-in help system. It’s main mandatory attribute is topic, usually a name or character string specifying the topic for which help is sought. See, for example, below, where we use the function to get information on built-in arithmetic and logical operators.\n                \n\nutils::help(Arithmetic)\n                  R’s built-in arithmetic operators\n                \n\nutils::help(Comparison)\n                  R’s built-in relational operators\n                \n\ndplyr::select()\n                  Select stuff\n                \n\n\n\n\n\n\n\nIf you have more advanced knowledge of  and you find the exercises below too easy, here’s an  programming challenge for you.\nSuppose you want to write a function that lists all the leap years between two specified years. How would you go about writing it? What are the information that you need first? What are the steps that you would take to build up the function? There are several ways of achieving such a function, and you can find three options at the bottom of this worksheet. Work individually or in a small group.\nTip:\n\nYou first need to check the definition of a leap year and how it is calculated; you can Google this.\nYou then need to find out how the arithmetic operations involved in the calculation are implemented in ; try help(Arithmetic) or ?Arithmetic.\nWhen you are done, you can check your results against the example solutions given at the bottom of this page",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Coding"
+    ]
+  },
+  {
+    "objectID": "code/week1.html#expressions",
+    "href": "code/week1.html#expressions",
+    "title": "Introduction to  for HSS8005+",
+    "section": "Expressions",
+    "text": "Expressions\nExpressions or statements are the fundamental units of work in R. The R computing environment evaluates expressions/statements written in the R programming language. Expressions/statements are made up of functions, operators (special characters) and data objects.\nThe code block below contains an example of each. Clicking  Run Code will run all lines of code in the block; to run the expressions one-by-one, click on the desired code line and execute Ctrl + ENTER / Command + RETURN.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Coding"
+    ]
+  },
+  {
+    "objectID": "code/week1.html#operators-and-other-special-characters",
+    "href": "code/week1.html#operators-and-other-special-characters",
+    "title": "Introduction to  for HSS8005+",
+    "section": "Operators and other special characters",
+    "text": "Operators and other special characters\nWe have encountered the + operator above. We have also found out from the R Documentation that + is one of several *arithmetic operators.R` organises its various operators into the following groups:\n\nArithmetic operators (see help(Arithmetic))\nAssignment operators (see help(assignOps))\nComparison/Relational operators (see help(Comparison))\nLogical operators (&, &&, |, ||, !, isTRUE, isFALSE)\nMiscellaneous operators (:, %in%, %*%)\n\n\nFind out more about each by searching the R Documentation using the help() function:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nThere are also a number of other special characters used in R. For example, it’s worth being aware of the role of different types of quotes (check help(Quotes)). Single (') and double quotes (\") delimit character constants. They can be used interchangeably but double quotes are preferred (and character constants are printed using double quotes), so single quotes are normally only used to delimit character constants containing double quotes (e.g. 'here are \"double quotes\" in single quotes'. Backslash (```) is used to start an escape sequence inside character constants.\nTo check how this works, let’s get back into Nineteen Eighty-Four territory:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Coding"
+    ]
+  },
+  {
+    "objectID": "code/week1.html#functions",
+    "href": "code/week1.html#functions",
+    "title": "Introduction to  for HSS8005+",
+    "section": "Functions",
+    "text": "Functions\nMost of the work in R is done using functions. It’s possible to create your own functions. This makes R extremely powerful and extendible. We’re not going to cover making your own functions in this course, but it’s important to be aware of this capability. There are plenty of good resources online for learning how to do this, including this one.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Coding"
+    ]
+  },
+  {
+    "objectID": "code/week1.html#r-as-a-simple-calculator",
+    "href": "code/week1.html#r-as-a-simple-calculator",
+    "title": "Introduction to  for HSS8005+",
+    "section": "R as a simple calculator",
+    "text": "R as a simple calculator\nThe most elementary yet still handy task you can use  for is to perform basic arithmetic operations. This is useful for getting a first experience doing things in the  language. This is aided by R’s arithmetic operators, which we can find out more about if we type and execute the command help(Arithmetic). Generally, the help() function allows us to access R’s internal helper pages.\nLet’s say we want to know the result of adding up three numbers: 1, 3 and 5:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThis will print out the result (9).\nThe [1] in the result is just the line number; in this case, our result only consists of a single line.\nWe can also save the result of this operation as an object, so we can use it in further operations. We create objects by using the so-called assignment operator consisting of the characters &lt;- (resembling a left-arrow).\nA command involving &lt;- can be read as “assign the value of the result from the operation on the right hand side (some expression) to the object on the left hand side (short name of object, single word, with no spaces)”.\nFor example, let’s save our result in an object called “nine”:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNotice that there is no output printed this time. But there are also no error messages, so the operation must have run without problems. Instead, if you are working in the Console within RStudio, the newly created objects will be listed in the Environment pane; you should have an object called “nine” there that stores the single value “9” in it. We can now use this object for other operations, such as:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also check results of so-called relational operations. There are several relational operators that allow us to compare objects in R. The most useful of these are the following:\n\n\n&gt; greater than, &gt;= greater than or equal to\n\n&lt; less than, &lt;= less than or equal to\n\n== equal to\n\n!= not equal to\n\nWhen we use these to compare two objects in R, we end up with a logical object.\nFor example, let’s check whether 9 is greater than 5, and whether it is lower than 8:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n treats our inputs as statements that we are asking it to evaluate, and we get the answers “TRUE” and “FALSE”, respectively, as we would expect. Let’s now check whether our object “nine” is equal to the number 9. We may assume that we can achieve this by typing “nine = 9”, but let’s see what that results in:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDid we get the result we expected? Nothing was printed in the output, so seemingly nothing happened… That’s because the “=” sign is also used as an assignment operator in , just like “&lt;-”. So we basically assigned the value “9” to the object “nine” again. To use the equal sign as a logical operator we must type it twice (==). Let’s see:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow we get the answer “TRUE”, as expected.\nThis distinction between “=” and “==” is important to keep in mind. What would have happened if we had tried to test whether our object “nine” equals value “5” or not, and instead of the logical operator (==) we used the assignment operator (=)? Let’s see:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn the Console we again see no results printed, but if we check our Environment, we see that the value of the object “nine” was changed to 5. So it can be a dangerous business. We’ll be using the “&lt;-” as assignment operator instead of “=” to avoid any confusion in this respect. The distinction between == and = will also emerge in other contexts later.\nSo, try out the following commands in turn now and check if the results are what you’d expect:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe text following the hashtag (#) in the last line is a comment. If you’d like to comment on any code you write just add a hash (#) or series of hashes in front of it so that  knows it should not evaluate it as a command. This will be useful when writing your commands in an R script that you can save for later, rather than interacting with  live in the Console.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Coding"
+    ]
+  },
+  {
+    "objectID": "code/week1.html#base-r-packages",
+    "href": "code/week1.html#base-r-packages",
+    "title": "Introduction to  for HSS8005+",
+    "section": "“Base R” Packages",
+    "text": "“Base R” Packages\nInstead of programming your own functions in the R language, you can rely on functions written by other people and bundled within a package that performs some set task.\nWhen you install R, a set of “packages” containing various functions are also installed by default. These packages make up what is colloquially referred to as base R. Functions from these packages can be used straight away and they cannot be deleted or installed separately. The functionality of these base R packages is updated with each new edition of R, but not in between new releases of the software. The code below lists the names of all the packages in base R:\n\nnames(which(installed.packages()[ ,\"Priority\"] == \"base\", ))\n\nWe see in the list that there is also a package called “base”, which contains 1283 elementary functions. However, when we refer to base R, we usually mean the functions from all the 14 packages listed above.\nApart from these packages that come pre-installed and pre-loaded with our R installation, there are also a number of “recommended” packages, which can be thought of as an extended base R. These packages also come pre-installed in binary distributions of R, but they need to be loaded in order to make their functions available for use. These “recommended” packages are:\n\nnames(which(installed.packages()[ ,\"Priority\"] == \"recommended\", ))",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Coding"
+    ]
+  },
+  {
+    "objectID": "code/week1.html#vectors-data-types-and-structures",
+    "href": "code/week1.html#vectors-data-types-and-structures",
+    "title": "Introduction to  for HSS8005+",
+    "section": "Vectors, data types and structures",
+    "text": "Vectors, data types and structures\nThe basic elements of data in R are called vectors. R has 6 basic data types that you should be aware of:\n\n\ncharacter: a text string, e.g. “name”\n\nnumeric: a real or decimal number\n\ninteger: non-decimal number; often represented by a number followed by the letter “L”, e.g. 5L\n\nlogical: TRUE or FALSE\n\ncomplex: complex numbers with real and imaginary parts\n\nR provides several functions to examine features of vectors and other objects, for example:\n\n\nclass() - what kind of object is it (high-level)?\n\ntypeof() - what is the object’s data type (low-level)?\n\nlength() - how long is it? What about two dimensional objects?\n\nattributes() - does it have any metadata?",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Coding"
+    ]
+  },
+  {
+    "objectID": "code/week1.html#vector-operations",
+    "href": "code/week1.html#vector-operations",
+    "title": "Introduction to  for HSS8005+",
+    "section": "Vector operations",
+    "text": "Vector operations\nLet’s learn a few vector operations.\nFirst, let’s use the c() function to concatenate vector elements:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTo run this line of code in an R script, place the cursor on the line you want to execute and either click on the small “Run” tab in the upper-right corner of the script’s task bar, or click Ctrl+Enter (on Windows PCs).\nThe vector called x that we just created appears in the Environment. We can examine some of its features:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThese tell us something about the characteristics of the object, but not much about its content (apart from the fact that it has a length of 5). Functions such as min, max, range, mean, median, sum or summary give us some summary statistics about the object:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe seq() function lets us create a sequence from a starting point to an ending point. If you specify the by argument, you can skip values. For instance, if we wanted a vector of every 5th number between 0 and 100, we could write:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTo print out the result in the console, we can simply type the name of the object:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nA shorthand version to get a sequence between two numbers counting by 1s is to use the : sign. For example, print out all the numbers between 200 and 250:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTo access a single element of a vector by position in the vector, use the square brackets []:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf you want to access more than one element of a vector, put a vector of the positions you want to access in the brackets:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf you try to access an element past the length of the vector, it will return a missing value NA:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf you accidentally subset a vector by NA (the missing value), you get the vector back with all its entries replaced by NA:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s say you want to modify one value in your vector. You can combine the square bracket subset [] with the assignment operator &lt;- to replace a particular value:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can replace multiple values at the same time by using a vector for subsetting:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIf the replacement vector (the right-hand side) is shorter than what you are assigning to (the left-hand side), the values will “recycle” or repeat as necessary:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can also create a vector of characters (words, letters, punctuation, etc):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote for vectors, you cannot mix characters and numbers in the same vector. If you add a single character element, the whole vector gets converted.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLogical vectors are just vectors that only contain the special values TRUE or FALSE.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTRUE and FALSE can be shortened to T and F, respectively. However, it is stylistically recommended to spell them out. Also, note that  is case-sensitive, so typing something like true, True or fALSE would give an error.\n\n\n\n\n\n\nSolutions to the advanced exercise: leap year functions\n\n\n\n\n\nFirst, we need to make sure that we have a definition of a leap year. We can go for this one, from the Royal Museums of Greenwich:\n\nTo be a leap year, the year number must be divisible by four – except for end-of-century years, which must be divisible by 400. This means that the year 2000 was a leap year, although 1900 was not.\n\nSo, we need to write a function that calculates whether a given number is divisible by another or not. We still need to simplify this further conceptually. If a number is divisible by another, that means that there is no ‘remainder’, or in other words, that the ‘remainder’ is 0. Is there a mathematical operation that could come in handy here? We may remember that the modulo operation gives the remainder when dividing. For example, “5 modulo 3 = 2” because \\({5\\over3}=1\\) with a remainder of \\(2\\).\nKnowing this will be extremely helpful, but we also need to know how the modulo operation is implemented in . We could do a search in  for ?Arithmetic to find a list of arithmetic operators, and we’d find that the operator %% stands for the modulo operation.\nWe now have all the knowledge elements we need to get down to programming a leap-year function in :\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Coding"
+    ]
+  },
+  {
+    "objectID": "application/week1.html",
+    "href": "application/week1.html",
+    "title": "Week 1 — Application",
+    "section": "",
+    "text": "By the end of the session, you will:\n\nunderstand how to use the most important panels in the RStudio interface\ncreate an RStudio Project to store your work throughout the course\nbegin using R scripts (.R) and Quarto notebooks (.qmd) to record and document your coding progress\nunderstand data types and basic operations in the R language\nunderstand the principles behind functions\n\nknow how to install, load and use functions from user-written packages\ngain familiarity with some useful functions from packages included in the tidyverse ecosystem",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Application"
+    ]
+  },
+  {
+    "objectID": "application/week1.html#aims",
+    "href": "application/week1.html#aims",
+    "title": "Week 1 — Application",
+    "section": "",
+    "text": "By the end of the session, you will:\n\nunderstand how to use the most important panels in the RStudio interface\ncreate an RStudio Project to store your work throughout the course\nbegin using R scripts (.R) and Quarto notebooks (.qmd) to record and document your coding progress\nunderstand data types and basic operations in the R language\nunderstand the principles behind functions\n\nknow how to install, load and use functions from user-written packages\ngain familiarity with some useful functions from packages included in the tidyverse ecosystem",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Application"
+    ]
+  },
+  {
+    "objectID": "application/week1.html#exercise-1-install-r-and-rstudio-and-perform-basic-settings",
+    "href": "application/week1.html#exercise-1-install-r-and-rstudio-and-perform-basic-settings",
+    "title": "Week 1 — Application",
+    "section": "Exercise 1: Install R and RStudio, and perform basic settings",
+    "text": "Exercise 1: Install R and RStudio, and perform basic settings\nTo install R and RStudio on your personal computers, follow the steps outlined here based on your operating system.\nAlthough you will only interact directly with RStudio in this module, R needs to be installed first so that RStudio can detect it and connect to it.\nOnce installed, open RStudio and explore its panes.\nMake the following changes to the RStudio settings in the Global options:\n\nset RStudio to never save your workspace as .RData upon exiting;\nset RStudio to insert the native “pipe operator” when typing the Ctrl+Shift+M keyboard shortcut.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Application"
+    ]
+  },
+  {
+    "objectID": "application/week1.html#exercise-2-create-an-rstudio-project-containing-a-.r-and-a-.qmd-file",
+    "href": "application/week1.html#exercise-2-create-an-rstudio-project-containing-a-.r-and-a-.qmd-file",
+    "title": "Week 1 — Application",
+    "section": "Exercise 2: Create an RStudio Project containing a .R and a .qmd file",
+    "text": "Exercise 2: Create an RStudio Project containing a .R and a .qmd file\n\nCreate a new folder set up as an R project; call the folder “HSS8005_labs”; when done, you should have an empty folder with a file called “HSS8005_labs.Rproj” in it\nCreate a new R script (.R); once created, save it as “Lab_1.R” within the “HSS8005_labs” folder\nCreate a new Quarto document (.qmd); once created, save it as “Lab_1.qmd” within the “HSS8005_labs” folder\n\nYou will work in each of these new documents in this lab to gain experience with them.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Application"
+    ]
+  },
+  {
+    "objectID": "application/week1.html#exercise-3-data-frame-operations-on-built-in-datasets",
+    "href": "application/week1.html#exercise-3-data-frame-operations-on-built-in-datasets",
+    "title": "Week 1 — Application",
+    "section": "Exercise 3: Data-frame operations on built-in datasets",
+    "text": "Exercise 3: Data-frame operations on built-in datasets\nType/copy the code below to the R script file your created earlier (“Lab_1.R”), and save it at the end for your records.\nThere are several toy data frames built into R, and we can have a look at one to see how it looks like.\n\nUse the data() command to get a list of available built-in datasets;\nChoose one of the available datasets and import it into the Rstudio Environment\nOpen the dataset in the Viewer to quickly inspect it visually\nCheck the following using the appropriate R functions:\n\nHow many cases (rows) are in the dataset?\nHow many variables (columns) are in the dataset?\nWhat is the type of the first variables in the dataset?\nPrint the first few and last few entries in the dataset.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Application"
+    ]
+  },
+  {
+    "objectID": "application/week1.html#exercise-4-data-frame-operations-in-a-quarto-document",
+    "href": "application/week1.html#exercise-4-data-frame-operations-in-a-quarto-document",
+    "title": "Week 1 — Application",
+    "section": "Exercise 4: Data frame operations in a Quarto document",
+    "text": "Exercise 4: Data frame operations in a Quarto document\nIn this task, let’s start using the other document we created, the .qmd file. This file format allows you to combine both longer written text (such as detailed descriptions of your data analysis process or the main body of a report or journal article) with code chunks. To get you started using this file format, read Chapter 3.2. in TSD. Below we will focus only on the code chunks.\nCompared to what you have done in the R script, in the main Quarto document a # refers to a heading level rather than a comment. If you want to include a code chunk, you can click on the +C tab in the upper-right corner of the .qmd document’s toolbar, or use the keyboard shortcut Ctrl+Alt+i. In the code chunk you would write in the same way as you did in the R script (they are basically mini-scripts). Within a code-chunk, therefore, the # still refers to a comment.\nTo execute a command withing a code chunk, you can either run each line/selection separately using Ctrl+Enter as in the R script, or you can run the entire content of the chunk with the green right-pointing triangle-arrow in the upper-right corner of the chunk.\nLet’s continue doing some operations on the mtcars dataset we looked at earlier, this time using some useful tidyverse functions.\nLet’s subset the data frame by selecting certain rows or columns. In tidyverse, you can do this with the filter() function for selecting rows and the select() function for selecting columns. Here we pipe the selections into head() to show the first few rows. You could also use the dplyr::slice_head function\n\nmtcars |&gt;\n  select(mpg, wt) |&gt;\n  head()\n\nTo select the cars with eight cylinders:\n\nmtcars |&gt;\n  filter(cyl == 8)\n\nWe can use the slice() function. For example, to get the 5th through 10th rows:\n\nmtcars |&gt;\n  slice(5:10)\n\nIf we pass a vector of integers to the select function, we will get the variables corresponding to those column positions. So to get the first through third columns:\n\nmtcars |&gt;\n  select(1:3) |&gt;\n  head()\n\nIf you call summary() a data frame, it produces applies the vector version of the summary command to each column:\n\nsummary(mtcars)\n\nThese few tasks should be enough to get you started with R and RStudio.\nIf this was your first encounter with R, you can complete the R for Social Scientists online training too sometime during the week.\nFrom next week we will begin working actively with real data and address specific data management challenges that arise from there.\nThose of you who have worked on the advanced user exercise can check some optional solutions below.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Application"
+    ]
+  },
+  {
+    "objectID": "application/week1.html#exercise-5-install-and-load-r-packages",
+    "href": "application/week1.html#exercise-5-install-and-load-r-packages",
+    "title": "Week 1 — Application",
+    "section": "Exercise 5: Install and load R packages",
+    "text": "Exercise 5: Install and load R packages\nInstall and load the following R packages:\n\ntidyverse\neasystats\ngtsummary\nggformula\n\nSpend a bit of time reading about these packages on their website documentation.",
+    "crumbs": [
+      "Materials",
+      "Week 1",
+      "Application"
+    ]
+  },
+  {
+    "objectID": "plan.html",
+    "href": "plan.html",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "Week\nTW\nDate\nTopic\nInfo\n Theory\n Coding\nApplication\n\n\n\n\n\n22\n27 January\nIntroduction  Module overview\n\n\n\n\n\n\nWeek 1\n22\n28 January\nTools  R, RStudio, Markdown, Quarto and other tools of the trade\n\n  \n  \n\n\n\nWeek 2\n23\n04 February\nLines  Linear models and their limitations\n\n  \n  \n\n\n\nWeek 3\n24\n11 February\nCurves  Logistic regression and other generalised linear models\n\n    \n  \n  \n\n\nWeek 4\n25\n18 February\nPaths  Graphical models and considerations for causal analysis\n\n    \n    \n  \n\n\nWeek 5\n26\n25 February\nInteractions  Estimating, plotting and interpreting interaction effects\n\n    \n    \n  \n\n\nWeek 6\n27\n03 March\nTemporalities  Panel, longitudinal and time-series analysis\n\n    \n    \n  \n\n\nWeek 7\n28\n10 March\nHierarchies  Hierarchical data structures and multilevel modelling\n\n    \n    \n  \n\n\nWeek 8\n29\n17 March\nDesigns  Simulation-based power analysis for study design\n\n    \n    \n  \n\n\n\n29\n20 March\nConclusions  Sum up, divide, and conquer"
+  },
+  {
     "objectID": "slides/hss8005_w1.html#aims",
     "href": "slides/hss8005_w1.html#aims",
     "title": "HSS8005 {{< iconify line-md plus >}}",
@@ -216,285 +730,5 @@
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "The forward-pipe (%>%/|>) workflow",
     "text": "The forward-pipe (%&gt;%/|&gt;) workflow\nAll of the dplyr functions take a data frame or tibble as the first argument. Rather than forcing the user to either save intermediate objects or nest functions, dplyr provides the forward-pipe operator %&gt;% from the magrittr package. This operator allows us to combine multiple operations into a single sequential chain of actions. As of R 4.1.0 there is also a native pipe operator in R (|&gt;), and in RStudio one can set the shortcut to paste the new pipe operator instead (as we have done at the beginning of the lab). Going forward, we’ll use this version of the pipe operator for simplicity, but it’s likely that you will encounter the older version of the operator too in various scripts.\nLet’s start with a hypothetical example. Say you would like to perform a sequence of operations on data frame x using hypothetical functions f(), g(), and h():\n\nTake x then\n\nUse x as an input to a function f() then\n\nUse the output of f(x) as an input to a function g() then\n\nUse the output of g(f(x)) as an input to a function h()\n\nOne way to achieve this sequence of operations is by using nesting parentheses as follows:\nh(g(f(x)))\nThis code isn’t so hard to read since we are applying only three functions: f(), then g(), then h() and each of the functions is short in its name. Further, each of these functions also only has one argument. However, you can imagine that this will get progressively harder to read as the number of functions applied in your sequence increases and the arguments in each function increase as well. This is where the pipe operator |&gt; comes in handy. |&gt; takes the output of one function and then pipes it to be the input of the next function. Furthermore, a helpful trick is to read |&gt; as then or and then. For example, you can obtain the same output as the hypothetical sequence of functions as follows:\nx |&gt; \n  f() |&gt; \n  g() |&gt; \n  h()\nYou would read this sequence as:\n\nTake x then\n\nUse this output as the input to the next function f() then\n\nUse this output as the input to the next function g() then\n\nUse this output as the input to the next function h()\n\nSo while both approaches achieve the same goal, the latter is much more human-readable because you can clearly read the sequence of operations line-by-line. Instead of typing out the three strange characters of the operator, one can use the keyboard shortcut Ctrl + Shift + M (Windows) or Cmd + Shift + M (MacOS) to paste the operator."
-  },
-  {
-    "objectID": "data/index.html",
-    "href": "data/index.html",
-    "title": "Data documentation",
-    "section": "",
-    "text": "Datasets used for lab exercises.\n\n\n\n\n\n\n Trust & Inequality\n\n\n\n\n\nThis dataset combines data on “generalised/social trust” from the latest waves of the World Values Survey and the European Values Study with macro(country)-level data on World Development Indicators (WDI) provided by the World Bank. The main variables of interest taken from the WDI refer to measurements of economic inequality within countries. The dataset allows the conceptual replication of the analysis presented in Chapter 4 (“Community life and social relations”, pp. 49-62) of Wilkinson and Pickett (2010) concerning the relationship between inequality and trust\n Download .rds  Download .dta  Download .csv  Data wrangling code (.R)\n\n\n\n\n\n\n\n\n\n Österman, Table 3\n\n\n\n\n\nThis dataset is the one used by Österman (2021) for the analysis underpinning the results reported in his Table 3 and related tables in the Online Supplementary Material. The aim of the article is to use information on educational reforms across European countries as a way to set up a quasi-experimental design testing the effect of education on social trust. With this approach, it aims to overcome the limitations of cross-sectional observational survey data from the European Social Survey by attempting a causal - rather than just correlational - explanation.\n Download\n\n\n\n\n\n\n\n\n\n Delhey & Newton, 2003\n\n\n\n\n\nThis dataset contains data from the EUROMODULE (1999-2002) surveys conducted in nine countries: Germany (DE) | Austria (AT) | Switzerland (CH) | Sweden (SE) | Spain (ES) | Slovenia (SI) | Korea, Republic of (KR) | Turkey (TR) | Hungary (HU). Out of the total of 366 variables measured, only those 100 were kept in this dataset that were used by Delhey and Newton (2003) in their analysis of the various correlates of “social trust”. The value of the EUROMODULE survey data compared to other comparative surveys that measure social trust is that it offers a much greater variety of explanatory variables that allow Delhey and Newton (2003) to test the relative explanatory power of several complex social theories explaining differences in levels of social trust both at the individual level and at the macro-social level.\n Download \n\n\n\n\n\n\n\n\n\n\n\nReferences\n\nDelhey, Jan, and Kenneth Newton. 2003. “Who Trusts?: The Origins of Social Trust in Seven Societies.” European Societies 5(2):93–137. doi: 10.1080/1461669032000072256.\n\n\nÖsterman, Marcus. 2021. “Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust.” Social Indicators Research 154(1):211–33. doi: 10.1007/s11205-020-02529-y.\n\n\nWilkinson, Richard G., and Kate Pickett. 2010. The Spirit Level: Why Greater Equality Makes Societies Stronger. New York: Bloomsbury Press."
-  },
-  {
-    "objectID": "theory/index.html",
-    "href": "theory/index.html",
-    "title": "HSS8005 {{< iconify line-md plus >}}",
-    "section": "",
-    "text": "Title\n\n\nDescription\n\n\n\n\n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "materials.html",
-    "href": "materials.html",
-    "title": "Materials",
-    "section": "",
-    "text": "Materials for each week are available from the side menu. The table below outlines the weekly topics.\n\n\n\n\n\nWeekly topics\n\n\n\n\n\n\n\n\nWeek 1  Tools\n\n\nR, RStudio, Markdown, Quarto and other tools of the trade\n\n\n\n\nWeek 2  Lines\n\n\nLinear models and their limitations\n\n\n\n\nWeek 3  Curves\n\n\nLogistic regression and other generalised linear models\n\n\n\n\nWeek 4  Paths\n\n\nGraphical models and considerations for causal analysis\n\n\n\n\nWeek 5  Interactions\n\n\nEstimating, plotting and interpreting interaction effects\n\n\n\n\nWeek 6  Temporalities\n\n\nPanel, longitudinal and time-series analysis\n\n\n\n\nWeek 7  Hierarchies\n\n\nHierarchical data structures and multilevel modelling\n\n\n\n\nWeek 8  Designs\n\n\nSimulation-based power analysis for study design\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Materials",
-      "Weekly materials"
-    ]
-  },
-  {
-    "objectID": "info/week7.html",
-    "href": "info/week7.html",
-    "title": "Week 7  Hierarchies",
-    "section": "",
-    "text": "Hierarchical data are ubiquitous in the social and human sciences (and beyond). In fact, almost all the application articles we have engaged with so far in previous labs modelled hierarchical data., and almost all modelled them explicitly as such, applying some multilevel modelling technique. In some cases the hierarchies themselves were of central theoretical importance and played a crucial role in the stated estimand (i.e. “the object of inquiry—(…) the precise quantity about which we marshal data to draw an inference” (see Lundberg, Johnson, and Stewart 2021:532). In others, taking into account the hierarchical nature of the data was meant to improve the precision of the main effect estimates. The importance of accounting for hierarchical dependencies in our models is emphasised by no one else more than Richard McElreath, who, in his important introductory-level book to Bayesian statistics, wants “to convince the reader of something that appears unreasonable: multilevel regression deserves to be the default form of regression” (McElreath 2020:15). According to him, “papers that do not use multilevel models should have to justify not using a multilevel approach”. In this session, we will learn how to think about and fit hierarchical models in R, and we’ll discuss some of the challenges of multilevel modelling and the possible justifications not to use them in certain contexts.\n\nReadings\nTextbook\n\nARM: Chapters 11 (pp. 237-249) and 12 (pp. 251-278)\nTSD: Chapter section 15.2\n\nApplication\n\nÖsterman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. Social Indicators Research 154(1):211–33 - (online)\nMitchell, Jeffrey. 2021. “Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.” Frontiers in Sociology 6 (April): 604884 - (online)\nAkaeda, Naoki. 2023. “Trust and the Educational Gap in the Demand for Redistribution: Evidence from the World Values Survey and the European Value Study.” International Sociology 38(3): 290–310 Library access\nWu, Cary. 2021. ‘Education and Social Trust in Global Perspective’. Sociological Perspectives 64(6):1166–86. Available here: Library access\nDingemans, Ellen, and Erik Van Ingen. 2015. ‘Does Religion Breed Trust? A Cross-National Study of the Effects of Religious Involvement, Religious Faith, and Religious Context on Social Trust’. Journal for the Scientific Study of Religion 54(4):739–55. Library access\n\n\n\nFurther readings\n\nARM: Chapters 13 (pp. 279-299), 14 (pp. 301-323) and 15 (pp. 325-342)\n\n\n\n\n\n\nReferences\n\nLundberg, Ian, Rebecca Johnson, and Brandon M. Stewart. 2021. “What Is Your Estimand? Defining the Target Quantity Connects Statistical Evidence to Theory.” American Sociological Review 86(3):532–65. doi: 10.1177/00031224211004187.\n\n\nMcElreath, Richard. 2020. Statistical Rethinking: A Bayesian Course with Examples in R and Stan. Second. Boca Raton: Taylor and Francis, CRC Press.",
-    "crumbs": [
-      "Materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "info/week5.html",
-    "href": "info/week5.html",
-    "title": "Week 5  Interactions",
-    "section": "",
-    "text": "Description\nThis week we will return to some of the models we fit over the past two weeks and turn our attention to the right-hand side of the regression equations. We will explore interaction effects, which allow for the association between a predictor and an outcome to depend upon the value of another predictor. Understanding interaction effects - and the concept of conditioning more broadly - can help avoid serious misrepresentations and misunderstandings of our data. Some famous statistical “paradoxes” can highlight these dangers, and the lecture will build on these conceptual examples before moving on to questions of model-building. It is technically very simple to fit models with complex interactions, however, their interpretation can be very difficult. As with the logistic regression model we covered in Week 3, we will explore ways to present and visualise results from interaction models, which make their interpretation easier. Exploring interactions also allows us to begin thinking about causality and causal modelling, a topic that we will expand upon in Week 5.\n\n\nReadings\nStatistics\n\nROS: Chapters 10-12\n\nAdvanced statistics readings\n\nBrambor, T., W. R. Clark, and M. Golder. 2006. “Understanding Interaction Models: Improving Empirical Analyses.” Political Analysis 14(1): 63–82. https://doi.org/10.1093/pan/mpi014\nHainmueller, J., J. Mummolo, and Y. Q. Xu. 2019. “How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice.” Political Analysis 27(2): 163–92 Library access here\nRohrer, Julia M., and Ruben C. Arslan. 2021. “Precise Answers to Vague Questions: Issues With Interactions.” Advances in Methods and Practices in Psychological Science 4(2): 25152459211007368 Library access here\n\nCoding\n\nTSD: Chapter 15\n\nApplication\n\nAkaeda, Naoki. 2023. “Trust and the Educational Gap in the Demand for Redistribution: Evidence from the World Values Survey and the European Value Study.” International Sociology 38(3): 290–310 Library access\nÖsterman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. Social Indicators Research 154(1):211–33 - (online)\nLadd, Jonathan McDonald, and Gabriel S. Lenz. 2009. ‘Exploiting a Rare Communication Shift to Document the Persuasive Power of the News Media’. American Journal of Political Science 53(2):394–410. doi: 10.1111/j.1540-5907.2009.00377.x.(published version should be accessible with university login; additional Appendix available here)",
-    "crumbs": [
-      "Materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "info/week3.html",
-    "href": "info/week3.html",
-    "title": "Week 3  Curves",
-    "section": "",
-    "text": "Description\nIt wasn’t until the last quarter of the 20th century that a unified vision of statistical modelling emerged, allowing practitioners to see how the general linear model we have explored so far is only a specific case of a more general class of models. We could have had a fancy, memorable name for this class of models - as John Nelder, one of its inventors, acknowledged later in life (Senn 2003, 127) - but back then academics were not required to undertake marketing training on the tweetabilty-factor of the chosen names for their theories; so we ended up with “generalised linear models”. These models can be applied to explananda (“explained”, “response”, “outcome”, “dependent” etc. variables, our ys) whose possible values have certain constraints (such as being limited by a lower bound or constrained to discreet choices) that makes the parameters of the Gaussian (‘normal’) distribution inefficient in describing them. Instead, they follow some of the other “exponential distributions” (and not only the exponential: cf. (gelman2020?)), of which the Poisson, gamma, beta, binomial and multinomial are probably the most common in human and social sciences research. Their “generalised linear modelling” involves mapping them unto a linear model using a so-called “link function”. We will explore what all of this means in practice and how it can be applied to data that we are interested in most in our respective fields of study.\n\n\nReadings\nStatistics\n\nROS: Chapters 13-15\nConnelly, Roxanne, Vernon Gayle, and Paul S. Lambert. 2016. ‘Statistical Modelling of Key Variables in Social Survey Data Analysis’. Methodological Innovations 9:205979911663800. Library access\n\nCoding\n\nTSD: Chapter 13\n\nApplication\n\nWu, Cary. 2021. ‘Education and Social Trust in Global Perspective’. Sociological Perspectives 64(6):1166–86. Available here: Library access\nDingemans, Ellen, and Erik Van Ingen. 2015. ‘Does Religion Breed Trust? A Cross-National Study of the Effects of Religious Involvement, Religious Faith, and Religious Context on Social Trust’. Journal for the Scientific Study of Religion 54(4):739–55. Library access\n\n\n\n\n\n\n\n\n\n\n\nReferences\n\nSenn, Stephen. 2003. “A Conversation with John Nelder.” Statistical Science 18 (1): 118–31. https://doi.org/10.1214/ss/1056397489.",
-    "crumbs": [
-      "Materials",
-      "Week 3"
-    ]
-  },
-  {
-    "objectID": "info/week1.html",
-    "href": "info/week1.html",
-    "title": "Week 1  Tools",
-    "section": "",
-    "text": "Description\nWe start the module with an applied introduction to the programming language R and the various tools that we will use to enhance its application to empirical research work in the social sciences. You will only gain a very basic and generic understanding of these software in this first week, but you will learn more throughout the semester, in the form of coding tasks associated with specific data analysis exercises.\n\n\nReadings\nTextbook readings\n\nR4DS: Chapters 1-10 (“Whole game”)\n\nFurther training\nFor further structured training in the use of R, RStudio and RMarkdown/Quarto, see the R for Social Scientists online course provided by Data Carpentry at https://datacarpentry.org/r-socialsci/\nJenny Bryan’s (RStudio/Posit) university-course-originated online book Stat545 is also a great resource for learning R and RStudio in more depth.\nFor a very different approach emphasising the value of learning ‘base’ R over the RStudio + {tidyverse} utility combo, see Norm Matloff’s course fasteR: Fast Lane to Learning R!.",
-    "crumbs": [
-      "Materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "code/index.html",
-    "href": "code/index.html",
-    "title": "HSS8005 {{< iconify line-md plus >}}",
-    "section": "",
-    "text": "Title\n\n\nDescription\n\n\nReading Time\n\n\n\n\n\n\nWeek 1 — Coding\n\n\n \n\n\n1 min\n\n\n\n\nWeek 2 — Coding\n\n\n \n\n\n1 min\n\n\n\n\nWeek 3 — Coding\n\n\n \n\n\n1 min\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "assessment.html",
-    "href": "assessment.html",
-    "title": "Formative assessment",
-    "section": "",
-    "text": "Formative assessment\nStudents can submit their weekly Quarto worksheets with completed exercises by the end of each week for some brief formative feedback that they can build on. The worksheets should contain all the code and a maximum of 500 words of textual interpretation (not including any annotations added in code blocks to explain the code). The submission method and format is TBC; but we’ll take a light approach to things.\n\n\nSummative assessment\nStudents have the option to submit a collection of their (revised) worksheet exercises as a portfolio of work, with an added introduction, conclusion and framing.\nAlternatively, one/several of the covered data analysis methods can be applied to another dataset chosen by the student and developed into a comprehensive research report.\n\n   4,000-word data analysis portfolio/report (details on Canvas)\n   16:00 on 30th April 2025\n   Submit to Turnitin via Canvas\n\nMore detailed information is available on Canvas"
-  },
-  {
-    "objectID": "info/week2.html",
-    "href": "info/week2.html",
-    "title": "Week 2  Lines",
-    "section": "",
-    "text": "Description\nIn Edwin Abbott’s 1884 novella, the inhabitants of Flatland are geometric shapes living in a two-dimensional world, incapable of imagining the existence of higher dimensions. A sphere passing through the plain of their world is a fascinating but incomprehensible event: Flatlanders can only see a dot becoming a circle, increasing in circumference, then shrinking back in size and disappearing. There are, in this universe, worlds with even more limited views, like the one-dimensional Lineland and the zero-dimensional Pointland. Any attempt to expand the perspective of their inhabitant(s) is doomed to failure. But as in any good adventure story, a chosen Flatland native embarks on a journey of discovery and revelation - and ostracism and imprisonment. The story is interpreted as an allegorical criticism of Victorian-age social structure, but can equally describe the limitations of inhabiting uncritically a methodological world in which all data are ‘normal’ and all relationships are linear. Moving beyond linearity and acquiring the statistical intuition needed to think in higher dimensions and perceive more complex relationships is indeed a matter of practice-induced revelation. It’s unlikely that we will reach statistical nirvana in this short course, but we’ll attempt to build some more substantial structures upon the arid plains of linear regression. We start by looking around in the Flat-, Line- and Point-lands of quantitative analysis. Incorrigible procrastinators may want to check out a full-length computer animated film version of Flatland on YouTube. Others may be better served by this brief TED-Ed animation.\n\n\nReadings\nStatistics\n\nROS: Chapters 3, 4, 6-12\nTSD: Chapter 12 (“Linear models”)\n\nCoding\n\nTSD: Chapters 9 and 11\nR4DS: Chapters 11, 12\n\nApplication\n\nChapter 4 in Wilkinson, Richard G., and Kate Pickett. 2010. The Spirit Level: Why Greater Equality Makes Societies Stronger. New York: Bloomsbury Press.\nÖsterman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. Social Indicators Research 154(1):211–33 - (online)\nMitchell, Jeffrey. 2021. “Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.” Frontiers in Sociology 6 (April): 604884 - (online)",
-    "crumbs": [
-      "Materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "info/week4.html",
-    "href": "info/week4.html",
-    "title": "Week 4  Paths",
-    "section": "",
-    "text": "This week we ask some essential conceptual questions that can clarify various stated and unstated assumptions about our empirical data, theoretical questions and the models we aim to fit to them. We’ll explore the possibilities and challenges of asking causal questions of observational data, and we’ll think about ways to avoid what evolutionary anthropologist Richard McElreath calls ‘causal salad’. More generally, we explore ways of thinking about and dealing with the various biases that affect quantitative analyses.\n\nReadings\nStatistics\n\nCinelli, Carlos, Andrew Forney, and Judea Pearl. 2022. “A Crash Course in Good and Bad Controls.” Sociological Methods & Research https://journals.sagepub.com/doi/full/10.1177/00491241221099552\nLundberg, Ian, Rebecca Johnson, and Brandon M. Stewart. 2021. “What Is Your Estimand? Defining the Target Quantity Connects Statistical Evidence to Theory.” American Sociological Review 86(3): 532–65. https://doi.org/10.1177/00031224211004187\nROS: Chapters 18-20\n\nApplication\n\nGriffith, Gareth J., Tim T. Morris, Matthew J. Tudball, Annie Herbert, Giulia Mancano, Lindsey Pike, Gemma C. Sharp, Jonathan Sterne, Tom M. Palmer, George Davey Smith, Kate Tilling, Luisa Zuccolo, Neil M. Davies, and Gibran Hemani. 2020. “Collider Bias Undermines Our Understanding of COVID-19 Disease Risk and Severity.” Nature Communications 11(1): 5749. https://www.nature.com/articles/s41467-020-19478-2\nBreen, Richard. 2018. “Some Methodological Problems in the Study of Multigenerational Mobility.” European Sociological Review 34(6): 603–11. https://doi.org/10.1093/esr/jcy037",
-    "crumbs": [
-      "Materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "info/week6.html",
-    "href": "info/week6.html",
-    "title": "Week 6  Temporalities",
-    "section": "",
-    "text": "We consider the “temporal” aspects of data and the opportunities (and challenges) they pose. The special kind of multilevel data structure we consider here involves repeated measurements on persons (or other units); measurements are therefore clustered within persons (or other units), and predictors can be available at the measurement or person level. Such datasets are often called panel or longitudinal. In settings where overall time trends are important, repeated measurement data are sometimes called time-series cross-sectional. Time-series cross-sectional data typically contain observations at regular time interval, and they commonly exhibit overall time patterns. In many such contexts one must consider how measurements cluster not only in the “temporal” variable but also in the “spatial” variable (e.g. country-year-level observations clustered within countries as well as years), with the potential for predictors at three levels (individual, temporal and spatial). We will consider such three (and higher)-level hierarchical analyses.\n\nReadings\nTextbook\n\nARM: Chapters 11 (pp. 237-249) and 12 (pp. 251-278)\n\nApplication\n\nMitchell, Jeffrey. 2021. “Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.” Frontiers in Sociology 6 (April): 604884 - (online)\nKumove, Michael. 2024. “Take Five? Testing the Cultural and Experiential Theories of Generalised Trust Against Five Criteria.” Political Studies (online)\nDawson, Chris. 2019. “How Persistent Is Generalised Trust?” Sociology 53(3): 590–99. (online)\nBotzen, Katrin. 2015. “Are Joiners Trusters? A Panel Analysis of Participation and Generalized Trust.” Zeitschrift für Soziologie 44(5): 314–29. (online)\nSturgis, Patrick, Roger Patulny, Nick Allum, and Franz Buscha. 2012. Social Connectedness and Generalized Trust: A Longitudinal Perspective. Working Paper. ISER Working Paper Series. (online)",
-    "crumbs": [
-      "Materials",
-      "Week 6"
-    ]
-  },
-  {
-    "objectID": "info/week8.html",
-    "href": "info/week8.html",
-    "title": "Week 8  Designs",
-    "section": "",
-    "text": "We’ll practice some basic methods of computer simulation in R for statistical inference and for generating data that has some idealised characteristics. Such methods play an increasingly important role in computational statistics and are extremely useful for designing robust data collection and analysis plans. Of course, this topic also raises some much deeper existential issues. We have known ever since science-fiction author Philip K. Dick’s memorable “Metz address” of 1977 that our world is nothing but a complex computer simulation. We won’t be actively searching for empirical proof of this in class, but should we make a mistake in our code and end up in an infinite loop, we may be tempted to ponder whether if something like this can happen to our data, who says it couldn’t happen to us? If it happens and you’re afraid that stopping the process may cause the known universe to implode, you can watch Dick on YouTube while you wait.\n\nReadings\n\nROS: Chapters 5 (pp. 69-76) and 16 (pp. 291-310)\nTSD: TDS makes extensive use of simulation methods for various purposes at different stages of a research project (e.g. from data preparation through statistical inference to sharing results and data openly). A search on a keyword stub “simulat” can point you various sections of interest that are all worth reading.",
-    "crumbs": [
-      "Materials",
-      "Week 8"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "\n            Quantitative analysis \n        ",
-    "section": "",
-    "text": "Quantitative analysis \n        \n        \n            HSS8005 • Intermediate stream • 2024/2025 Winter/Spring\nNewcastle University (UK)\n        \n        \n            A continuation course in applied statistics and probability for the understanding of society and culture. It is aimed at an interdisciplinary postgraduate audience in the social sciences and humanities. Focusing on real-life examples from published research, the course emphasizes the scientific application of regression models, the practice of reproducible research workflows, and the communication of statistical results to diverse audiences. It prioritises understanding through modern computational techniques over mathematical abstraction.\n            Join the mailing list\n        \n    \n\n\n\n\n\n\nModule leader\n\n   Dr. Chris Moreh\n   HDB.4.106\n   chris.moreh at newcastle dot ac dot uk\n   Tutorial booker\n \n\n\n\nTeaching Assistants\n\n   Minki Sung\n\n\n\n\n\nTimetable\n\n   Tuesdays, Timetable Weeks 22-29\n    HDB.6.19 PGR Learning Lab\n   Lectures: 11:00-12:30\n   Labs: 13:00-14:30 \n\n\n\nAssessment\n\n   4,000-word data analysis portfolio/report (details on Canvas)\n   Submit by 16:00 on 30th April 2025\n   Submit to Turnitin via Canvas\n\n\n\n\n\n\nModule overview\nThis module is offered by School X - Researcher Education and Development to postgraduate students within the Faculty of Humanities and Social Sciences at Newcastle University. The module aims to provide a broad applied introduction to more advanced methods in quantitative analysis for students from various disciplinary backgrounds. See the module plan page for details about the methods covered. The course content consists of eight 1.5-hour lectures and eight 1.5-hour IT labs.\nThe course stands on three pillars:\n\n\nApplication\n\n\nComputation\n\n\nReproducibility\n\n\n\n\nApplication: we will work with real data originating from large-scale representative surveys or published research, with the aim of applying methods to concrete research scenarios. IT lab exercises will involve reproducing small bits of published research, using the data and (critically) the modelling approaches used by the authors. The aim is to see how methods have been used in practice in various disciplines and learn how to reproduce (and potentially improve) those analyses. This will then enable students to apply this knowledge to their own research questions. The data used in IT labs may be cleansed to allow focusing more on modelling tasks than on data wrangling, but exercises will address some of the more common data manipulation challenges and will cover essential functions. Data cleansing scripts will also be provided so that interested students can use them in their own work.\n\n\n\n\nComputation: the development of computational methods underpins the application of the most important statistical ideas of the past 50 years (see Andrew Gelman’s article on these developments here or an online workshop talk here; Richard McElreath’s great talk on Science as Amateur Software Development is well worth watching too). This module aims to develop basic computational skills that allow the application of complex statistical models to practical scientific problems without advanced mathematical knowledge, and which lay the foundation on which students can then pursue further learning and research in computational humanities and social sciences.\n\n\n\n\nReproducibility: developing a reproducible workflow that allows your future self or a reviewer of your work to understand your process of analysis and reproduce your results is essential for reliable and transparent scientific research. For an overview of why it’s important to develop a reproducible workflow early on in your research career and how to do it using (some) of the tools employed in this module, read Chapter 3 of TSD (see Resources &gt; Readings). In this course, we will be using a suite of well-integrated free and open-source software to aid our reproducible workflow (see Resources &gt; Software).\n\n\n\n\nPrerequisites\nTo benefit the most from this module, students are expected to have a foundational level of knowledge in quantitative methods: a good understanding of data types and distributions, familiarity with inferential statistics, and some exposure to linear regression. This is roughly equivalent to the content covered in a textbook such as OpenIntro Statistics (which you can download for free).\n\n\nNo previous knowledge of  or other command-based statistical analysis software is needed, but if starting from scratch, students are advised to complete the self-paced R for Social Scientists Data Carpentry course outside class and to consult Wickham, Çetinkaya-Rundel and Grolemund’s ebook R for Data Science.\n\n\n\nCopyright  Chris Moreh, 2025."
-  },
-  {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "HSS8005 {{< iconify line-md plus >}}",
-    "section": "",
-    "text": "ReadingsSoftwareTrainingHelp\n\n\n\nStatistics\nThe course does not strictly follow the content of a textbook, but the expectation is that students will read as much as possible of the assigned chapters from the following books:\n\n\n\n\n\n\n\n\nGelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. Regression and other stories. Cambridge: Cambridge University Press.  ROS\n\n\nFree to download PDF version from the book’s website: https://avehtari.github.io/ROS-Examples\n\n\n\n\n\n\n\nAlexander, Rohan. 2023. Telling Stories with Data. Chapman and Hall/CRC  TSD\n\n\nFree online book: https://tellingstorieswithdata.com\n\n\n\n\n\n\n\nGelman, A., and Hill, J. 2007. Data Analysis Using Regression and Multilevel/Hierarchical Models. Cambridge: Cambridge University Press.  ARM\n\n\nNote: ROS is the expanded and updated version of Part 1 (and some of Part 3) of this book. While everyone in the free world eagerly awaits the publication of ROS’s multilevel counterpart, we’ll use ARM as a reference work for the theory underpinning multilevel modelling.  Not freely available. Access it in print or online via the NU library\n\n\n\n\n\nRelatively large portions of text will be assigned for reading in each week from these books, referring to them by their acronyms. Don’t worry if you cannot read all the textbook content assigned in any given week! Those for whom the method covered by the assigned readings is new, will be able to refer back to them throughout the semester and beyond, reading thoroughly and completing the applied exercises. Those already familiar to some extent with the methods, should nonetheless read the text as a narrative and will discover hidden gems that will spectacularly improve their understanding and ability to interpret their statistical results.\n\n\nCoding\nThere will also be various readings relating more closely to the technicalities of coding in R and scientific writing, collaboration and communication in general. These readings will also be listed under each week’s outline as the semester progresses. The generic reading that students are advised to go through on their own is:\n\n\n\n\n\n\n\nWickham, Çetinkaya-Rundel and Grolemund. 2022. R for Data Science (2nd ed.)  R4DS\n\n\nFree online book: https://r4ds.hadley.nz/\n\n\n\n\n\n\nApplication articles\nIn the IT labs we will practice applying methods by reproducing small bits of published research, using the data and (critically) the modelling approaches used by the authors. To fully understand the context of these data and the methods used, you must read the original journal articles and the available supplementary materials provided alongside. These readings will be listed under each week’s outline (still work in progress!).\nThe articles come from a variety of different fields, so expect them to push you outside your disciplinary comfort zone. The point is to see how methods have been used in practice and learn how to reproduce (and potentially improve) those analyses. This will then enable you to apply this knowledge to your own research questions.\nWhen selecting the articles, the aim was to strike a fine balance between (a) the simplicity of the methods employed, (b) data and analytical transparency, and (c) the strength of the analysis. So don’t take them as examples of all-rounds best practice, but examples of research that gets published while being self-confident enough to open itself up for public scrutiny. Aim for this in your own research!\n\n\nOther readings\nFinally, there will also be recommended readings listed under certain weeks that help place methods, statistics and probability theory in a broader frame. These are useful readings for everyone, regardless of whether you will be applying quantitative analysis in your research or future work.\n\n\n\n\nRequired software\nWe will use a number of open-source software for data analysis and scientific writing. You need to install these on your personal computers to be able to work away from campus:\n\n\n\n\nR\n(programming language)\nEssential\nR needs to be installed even if we will only use it via the RStudio interface.\nInstall the latest version from here\n\n\n\nRStudio\n(integrated development environment)\nEssential\nYou will need the free desktop version appropriate for your operating system. RStudio combines the R Console - the direct interface to R - with a number of other panels.\nInstall the latest version from here\n\n\n\nTidyverse\n(collection of R packages)\nEssential\nThe tidyverse is a collection of packages that make the R language easier to use by introducing a more consistent grammar. It provides functions that are particularly useful for data manipulation and visualisation. It is the most common ‘dialect’ used among social scientists.\nInstall from within RStudio by executing in the Console:\ninstall.packages(\"tidyverse\")\n\n\n\nQuarto\n(scientific publishing system)\nEssential\nWe will be using Quarto markdown documents (.qmd) throughout the course to document our data analysis. .qmd files extend the plain-text Markdown mark-up language (.md) to allow for data analysis code to be executed and results presented alongside the main text. This is an essential requirement for analytical transparency, reliability and reproducibility.The assignment will also be completed in .qmd.\nIncluded by default in the latest RStudio release; no need to install separately.\nYou can check your installation by executing in the RStudio Terminal :\nquarto check\n\n\n\nZotero\n(reference manager)\nRecommended\nIf you are not yet using a reference manager, I recommend giving Zotero a try. It will make your work much more efficient and it integrates (relatively well) with RMarkdown and Quarto using the the Better BibTeX add-on.\nInstall the latest version and add-ons from here\n\n\n\n\n\n\nStudents with no previous experience using R and/or RStudio are advised to complete the self-paced free online training course R for Social Scientists provided by Data Carpentry at https://datacarpentry.org/r-socialsci/:\n\n\nThere are several Data Carpentry workshops run physically at Newcastle and these sessions can be booked at https://nclrse-training.github.io/Workshop-Webpage-Under-Construction/:\n\n\n\nThere are several ways to get help with  outside class. If you encounter an error message or are looking for a function to perform a specific task that we have not covered in class, you can do a Google search; for best results, use the https://rseek.org/ search engine, which limits the results to those relating to the  language.\nYou can also search for answers on Stack Overflow, which is a popular help and discussion website for programmers. You can also post a question there, but make sure to follow community standards and advice on how to ask a good question and how to provide a minimal reproducible example. You will need some experience using the site before being able to ask a good question, but it’s more than certain that any question you have at this stage has already been asked and answered somewhere. Make sure you do a comprehensive search with various prompts before thinking about asking your question.\nIncreasingly, large language model-based chatbots such as the (in)famous ChatGPT can also provide good answers. You can use them efficiently, but make sure to always test out the responses, in the overwhelming majority of the cases the advice they give is unreliable, at least at first try."
-  },
-  {
-    "objectID": "plan.html",
-    "href": "plan.html",
-    "title": "HSS8005 {{< iconify line-md plus >}}",
-    "section": "",
-    "text": "Week\nTW\nDate\nTopic\nInfo\n Theory\n Coding\nApplication\n\n\n\n\n\n22\n27 January\nIntroduction  Module overview\n\n\n\n\n\n\nWeek 1\n22\n28 January\nTools  R, RStudio, Markdown, Quarto and other tools of the trade\n\n  \n  \n\n\n\nWeek 2\n23\n04 February\nLines  Linear models and their limitations\n\n  \n  \n\n\n\nWeek 3\n24\n11 February\nCurves  Logistic regression and other generalised linear models\n\n    \n  \n  \n\n\nWeek 4\n25\n18 February\nPaths  Graphical models and considerations for causal analysis\n\n    \n    \n  \n\n\nWeek 5\n26\n25 February\nInteractions  Estimating, plotting and interpreting interaction effects\n\n    \n    \n  \n\n\nWeek 6\n27\n03 March\nTemporalities  Panel, longitudinal and time-series analysis\n\n    \n    \n  \n\n\nWeek 7\n28\n10 March\nHierarchies  Hierarchical data structures and multilevel modelling\n\n    \n    \n  \n\n\nWeek 8\n29\n17 March\nDesigns  Simulation-based power analysis for study design\n\n    \n    \n  \n\n\n\n29\n20 March\nConclusions  Sum up, divide, and conquer"
-  },
-  {
-    "objectID": "application/week1.html",
-    "href": "application/week1.html",
-    "title": "Week 1 Lab Exercises",
-    "section": "",
-    "text": "By the end of the session, you will:\n\nunderstand how to use the most important panels in the RStudio interface\ncreate an RStudio Project to store your work throughout the course\nbegin using R scripts (.R) and Quarto notebooks (.qmd) to record and document your coding progress\nunderstand data types and basic operations in the R language\nunderstand the principles behind functions\n\nknow how to install, load and use functions from user-written packages\ngain familiarity with some useful functions from packages included in the tidyverse ecosystem",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#aims",
-    "href": "application/week1.html#aims",
-    "title": "Week 1 Lab Exercises",
-    "section": "",
-    "text": "By the end of the session, you will:\n\nunderstand how to use the most important panels in the RStudio interface\ncreate an RStudio Project to store your work throughout the course\nbegin using R scripts (.R) and Quarto notebooks (.qmd) to record and document your coding progress\nunderstand data types and basic operations in the R language\nunderstand the principles behind functions\n\nknow how to install, load and use functions from user-written packages\ngain familiarity with some useful functions from packages included in the tidyverse ecosystem",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#exercise-1-install-r-and-rstudio-and-perform-basic-settings",
-    "href": "application/week1.html#exercise-1-install-r-and-rstudio-and-perform-basic-settings",
-    "title": "Week 1 Lab Exercises",
-    "section": "Exercise 1: Install R and RStudio, and perform basic settings",
-    "text": "Exercise 1: Install R and RStudio, and perform basic settings\nTo install R and RStudio on your personal computers, follow the steps outlined here based on your operating system.\nAlthough you will only interact directly with RStudio in this module, R needs to be installed first so that RStudio can detect it and connect to it.\nOnce installed, open RStudio and explore its panes.\nMake the following changes to the RStudio settings in the Global options:\n\nset RStudio to never save your workspace as .RData upon exiting;\nset RStudio to insert the native “pipe operator” when typing the Ctrl+Shift+M keyboard shortcut.",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#advanced-user-exercise-leap-year-functions",
-    "href": "application/week1.html#advanced-user-exercise-leap-year-functions",
-    "title": "Week 1 Lab Exercises",
-    "section": "Advanced user exercise: leap year functions",
-    "text": "Advanced user exercise: leap year functions\n\nIf you have more advanced knowledge of R, here’s and exercise for you.\nSuppose you want to write a function that lists all the leap years between two specified years. How would you go about writing it? What are the information that you need first? What are the steps that you would take to build up the function? There are several ways of achieving such a function, and you can find three options at the bottom of this worksheet. Work individually or in a small group.\n\n\n\n\n\n\nTip\n\n\n\n\n\n\nYou first need to check the definition of a leap year and how it is calculated (Google?)\nAsk R to tell you what the “%%” operator does. You can ask R for help using the help() function or ?....\nWhen you are done, you can check your results against the example solutions given at the bottom of this worksheet.",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#exercise-2-use-r-as-a-simple-calculator",
-    "href": "application/week1.html#exercise-2-use-r-as-a-simple-calculator",
-    "title": "Week 1 Lab Exercises",
-    "section": "Exercise 2: Use R as a simple calculator",
-    "text": "Exercise 2: Use R as a simple calculator\nThe most elementary yet still handy task you can use R for is to perform basic arithmetic operations. This is useful for getting a first experience doing things in the R language.\nLet’s have a look at a few operations using the Console directly. Let’s say we want to know the result of adding up three numbers: 1, 3 and 5. In the Console pane, type the command below and then click Enter:\n\n1 + 3 + 5\n\nThis will print out the result (9) in the Console:\n\n\n[1] 9\n\n\nThe [1] in the result is just the line number; in this case, our result only consists of a single line.\nWe can also save the result of this operation as an object, so we can use it for further operations. We create objects by using the so-called assignment operator consisting of the characters &lt;-.\nA command involving &lt;- can be read as “assign the value of the result from the operation on the right hand side (some expression) to the object on the left hand side (short name of object, single word, with no spaces)”.\nFor example, let’s save our result in an object called “nine”:\n\nnine &lt;- 1 + 3 + 5\n\nNotice that there is no output printed in the Console this time. But there are also no error messages, so the operation must have run without problems. Instead, if we look at the Environment pane, we notice that it is no longer empty, but contains an object called “nine” that stores the value “9” in it. We can now use this object for other operations, such as:\n\nnine - 3\nnine + 15\nnine / 3\nnine * 9\n\nWe see the results of these operations printed out in the Console.\nWe can also check results of so-called relational operations. There are several relational operators that allow us to compare objects in R. The most useful of these are the following:\n\n\n&gt; greater than, &gt;= greater than or equal to\n\n&lt; less than, &lt;= less than or equal to\n\n== equal to\n\n!= not equal to\n\nWhen we use these to compare two objects in R, we end up with a logical object.\nFor example, let’s check whether 9 is greater than 5, and whether it is lower than 8:\n\n9 &gt; 5\n9 &lt; 8\n\nR treats our inputs as statements that we are asking it to evaluate, and we get the answers “TRUE” and “FALSE”, respectively, as we would expect. Let’s now check whether our object “nine” is equal to the number 9. We may assume that we can achieve this by typing “nine = 9”, but let’s see what that results in:\n\nnine = 9\n\nDid we get the result we expected? Nothing was printed in the output, so seemingly nothing happened… That’s because the “=” sign is also used as an assignment operator in R, just like “&lt;-”. So we basically assigned the value “9” to the object “nine” again. To use the equal sign as a logical operator we must type it twice (==). Let’s see:\n\nnine == 9\n\nNow we get the answer “TRUE”, as expected.\nThis distinction between “=” and “==” is important to keep in mind. What would have happened if we had tried to test whether our object “nine” equals value “5” or not, and instead of the logical operator (==) we used the assignment operator (=)? Let’s see:\n\nnine = 5\n\nIn the Console we again see no results printed, but if we check our Environment, we see that the value of the object “nine” was changed to 5. So it can be a dangerous business. We’ll be using the “&lt;-” as assignment operator instead of “=” to avoid any confusion in this respect. The distinction between == and = will also emerge in other contexts later.\nSo, try out the following commands in turn now and check if the results are what you’d expect:\n\nnine == 9\nnine == 5\nfive &lt;- 9\nnine == five\nfive = nine\nnine == five\nnine + five &lt;= 10 # lower than or equal to ...\n\nThe text following the hashtag (#) in the last line is a comment. If you’d like to comment on any code you write just add a hash (#) or series of hashes in front of it so that R knows it should not evaluate it as a command. This will be useful when writing your commands in an R script that you can save for later, rather than interacting with R live in the Console.",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#exercise-3-create-an-rstudio-project-containing-a-.r-and-a-.qmd-file",
-    "href": "application/week1.html#exercise-3-create-an-rstudio-project-containing-a-.r-and-a-.qmd-file",
-    "title": "Week 1 Lab Exercises",
-    "section": "Exercise 3: Create an RStudio Project containing a .R and a .qmd file",
-    "text": "Exercise 3: Create an RStudio Project containing a .R and a .qmd file\n\nCreate a new folder set up as an R project; call the folder “HSS8005_labs”; when done, you should have an empty folder with a file called “HSS8005_labs.Rproj” in it\nCreate a new R script (.R); once created, save it as “Lab_1.R” within the “HSS8005_labs” folder\nCreate a new Quarto document (.qmd); once created, save it as “Lab_1.qmd” within the “HSS8005_labs” folder\n\nYou will work in each of these new documents in this lab to gain experience with them.",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#exercise-4-vector-operations",
-    "href": "application/week1.html#exercise-4-vector-operations",
-    "title": "Week 1 Lab Exercises",
-    "section": "Exercise 4: Vector operations",
-    "text": "Exercise 4: Vector operations\nLet’s learn a few vector operations. Type/copy the code below to the R script file your created earlier (“Lab_1.R”), and save it at the end for your records.\nFirst, let’s use the c() function to concatenate vector elements:\n\nx &lt;- c(2.2, 6.2, 1.2, 5.5, 20.1)\n\nTo run this line of code in an R script, place the cursor on the line you want to execute and either click on the small “Run” tab in the upper-right corner of the script’s task bar, or click Ctrl+Enter (on Windows PCs).\nThe vector called x that we just created appears in the Environment. We can examine some of its features:\n\nclass(x)\ntypeof(x)\nlength(x)\nattributes(x)\n\nThese tell us something about the characteristics of the object, but not much about its content (apart from the fact that it has a length of 5). Functions such as min, max, range, mean, median, sum or summary give us some summary statistics about the object:\n\nmin(x)\nmax(x)\nrange(x)\nmean(x)\nmedian(x)\nsum(x)\nsummary(x)\n\nThe seq() function lets us create a sequence from a starting point to an ending point. If you specify the by argument, you can skip values. For instance, if we wanted a vector of every 5th number between 0 and 100, we could write:\n\nnumbers &lt;- seq(from = 0, to = 100, by = 5)\n\nTo print out the result in the console, we can simply type the name of the object:\n\nnumbers\n\nA shorthand version to get a sequence between two numbers counting by 1s is to use the : sign. For example, print out all the numbers between 200 and 250:\n\n200:250\n\nTo access a single element of a vector by position in the vector, use the square brackets []:\n\nx[2]\n\nIf you want to access more than one element of a vector, put a vector of the positions you want to access in the brackets:\n\nx[c(2, 5)]\n\nIf you try to access an element past the length of the vector, it will return a missing value NA:\n\nx[10]\n\nIf you accidentally subset a vector by NA (the missing value), you get the vector back with all its entries replaced by NA:\n\nx[NA]\n\nLet’s say you want to modify one value in your vector. You can combine the square bracket subset [] with the assignment operator &lt;- to replace a particular value:\n\nx\nx[3] &lt;- 50.3\nx\n\nYou can replace multiple values at the same time by using a vector for subsetting:\n\nx\nx[1:2] &lt;- c(-1.3, 42)\nx\n\nIf the replacement vector (the right-hand side) is shorter than what you are assigning to (the left-hand side), the values will “recycle” or repeat as necessary:\n\nx[1:2] &lt;- 3.2\nx\n\nx[1:4] &lt;- c(1.2, 2.4)\nx\n\nYou can also create a vector of characters (words, letters, punctuation, etc):\n\njedi &lt;- c(\"Yoda\", \"Obi-Wan\", \"Luke\", \"Leia\", \"Rey\")\n\nNote for vectors, you cannot mix characters and numbers in the same vector. If you add a single character element, the whole vector gets converted.\n\n### output is numeric\nx\n\n### output is now character\nc(x, \"hey\")\n\nLogical vectors are just vectors that only contain the special R values TRUE or FALSE.\n\nlogical &lt;- c(TRUE, FALSE, TRUE, TRUE, FALSE)\nlogical\n\nYou could but never should shorten TRUE to T and FALSE to F. It’s easy for this shortening to go wrong so better just to spell out the full word. Also not that this is case-sensitive, and this will produce an error:\n\ntrue\nTrue\nfalse",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#exercise-5-data-frame-operations-on-built-in-datasets",
-    "href": "application/week1.html#exercise-5-data-frame-operations-on-built-in-datasets",
-    "title": "Week 1 Lab Exercises",
-    "section": "Exercise 5: Data-frame operations on built-in datasets",
-    "text": "Exercise 5: Data-frame operations on built-in datasets\nThere are several toy data frames built into R, and we can have a look at one to see how it looks like.\n\nUse the data() command to get a list of available built-in datasets;\nChoose one of the available datasets and import it into the Rstudio Environment\nOpen the dataset in the Viewer to quickly inspect it visually\nCheck the following using the appropriate R functions:\n\nHow many cases (rows) are in the dataset?\nHow many variables (columns) are in the dataset?\nWhat is the type of the first variables in the dataset?\nPrint the first few and last few entries in the dataset.",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#exercise-6-install-and-load-r-packages",
-    "href": "application/week1.html#exercise-6-install-and-load-r-packages",
-    "title": "Week 1 Lab Exercises",
-    "section": "Exercise 6: Install and load R packages",
-    "text": "Exercise 6: Install and load R packages\nInstall and load the following R packages:\n\ntidyverse\neasystats\ngtsummary\nggformula\n\nSpend a bit of time reading about these packages on their website documentation.",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "application/week1.html#exercise-6-data-frame-operations-in-a-quarto-document",
-    "href": "application/week1.html#exercise-6-data-frame-operations-in-a-quarto-document",
-    "title": "Week 1 Lab Exercises",
-    "section": "Exercise 6: Data frame operations in a Quarto document",
-    "text": "Exercise 6: Data frame operations in a Quarto document\nIn this task, let’s start using the other document we created, the .qmd file. This file format allows you to combine both longer written text (such as detailed descriptions of your data analysis process or the main body of a report or journal article) with code chunks. To get you started using this file format, read Chapter 3.2. in TSD. Below we will focus only on the code chunks.\nCompared to what you have done in the R script, in the main Quarto document a # refers to a heading level rather than a comment. If you want to include a code chunk, you can click on the +C tab in the upper-right corner of the .qmd document’s toolbar, or use the keyboard shortcut Ctrl+Alt+i. In the code chunk you would write in the same way as you did in the R script (they are basically mini-scripts). Within a code-chunk, therefore, the # still refers to a comment.\nTo execute a command withing a code chunk, you can either run each line/selection separately using Ctrl+Enter as in the R script, or you can run the entire content of the chunk with the green right-pointing triangle-arrow in the upper-right corner of the chunk.\nLet’s continue doing some operations on the mtcars dataset we looked at earlier, this time using some useful tidyverse functions.\nLet’s subset the data frame by selecting certain rows or columns. In tidyverse, you can do this with the filter() function for selecting rows and the select() function for selecting columns. Here we pipe the selections into head() to show the first few rows. You could also use the dplyr::slice_head function\n\nmtcars |&gt;\n  select(mpg, wt) |&gt;\n  head()\n\nTo select the cars with eight cylinders:\n\nmtcars |&gt;\n  filter(cyl == 8)\n\nWe can use the slice() function. For example, to get the 5th through 10th rows:\n\nmtcars |&gt;\n  slice(5:10)\n\nIf we pass a vector of integers to the select function, we will get the variables corresponding to those column positions. So to get the first through third columns:\n\nmtcars |&gt;\n  select(1:3) |&gt;\n  head()\n\nIf you call summary() a data frame, it produces applies the vector version of the summary command to each column:\n\nsummary(mtcars)\n\nThese few tasks should be enough to get you started with R and RStudio.\nIf this was your first encounter with R, you can complete the R for Social Scientists online training too sometime during the week.\nFrom next week we will begin working actively with real data and address specific data management challenges that arise from there.\nThose of you who have worked on the advanced user exercise can check some optional solutions below.\n\n\n\n\n\n\nSolutions to the advanced exercise: leap year functions\n\n\n\n\n\nFirst, we need to make sure that we have a definition of a leap year. We can go for this one, from the Royal Museums of Greenwich:\n\nTo be a leap year, the year number must be divisible by four – except for end-of-century years, which must be divisible by 400. This means that the year 2000 was a leap year, although 1900 was not.\n\nSo, we need to write a function that calculates whether a given number is divisible by another or not. We still need to simplify this further conceptually. If a number is divisible by another, that means that there is no ‘remainder’, or in other words, that the ‘remainder’ is 0. Is there a mathematical operation that could come in handy here? We may remember that the modulo operation gives the remainder when dividing. For example, “5 modulo 3 = 2” because \\({5\\over3}=1\\) with a remainder of \\(2\\).\nKnowing this will be extremely helpful, but we also need to know how the modulo operation is implemented in the R programming language. We could do a search in R for ?Arithmetic to find a list of arithmetic operators, and we’d find that the operator %% stands for the modulo operation.\nWe now have all the knowledge elements we need to get down to programming a leap-year function in R:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Materials",
-      "Week 1",
-      "Application"
-    ]
-  },
-  {
-    "objectID": "theory/week2.html",
-    "href": "theory/week2.html",
-    "title": "HSS8005 {{< iconify line-md plus >}}",
-    "section": "",
-    "text": "format: revealjs",
-    "crumbs": [
-      "Materials",
-      "Week 2",
-      "Theory"
-    ]
   }
 ]

@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="/HSS8005/site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="/HSS8005/site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="/HSS8005/site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="/HSS8005/site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="/HSS8005/site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="/HSS8005/site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -346,7 +344,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"Interpret <- function(x = 404) {\n  if (x %in% c(404, Error, Re(Error)))\n    cat(\"The page you were looking for was not found.\\n There may still be content here in the future, so do check back!\\n\")\n  # note: \"\\n\" needed at the end of the \"cat()\" command; see https://stackoverflow.com/a/9137858/16962987\n  else\n    c(\"I don't know that error message.\", \"Check its meaning here: https://datatracker.ietf.org/doc/html/rfc7231#section-6\")\n}","options":{"fig-cap":"","context":"output","editor-max-height":"","out-width":"700px","out-height":"","dpi":72,"message":"true","fig-width":7,"editor-font-scale":"1","classes":"","comment":"","fig-height":5,"editor-word-wrap":"true","warning":"true","label":"unnamed-chunk-1","read-only":"false","output":"true","results":"markup","editor-quick-suggestions":"false","autorun":"true"},"id":1},{"code":"# Translate the equation to R code:\n  Error = (-7 * exp(pi * 1i))^3 + ((prod(1:3))^2 + (-25 * exp(pi * 1i)))\n# Display the (real part of the) solution:\n  message(Re(Error))\n# Interpret the meaning of the solution:\n  Interpret(Error)","options":{"fig-cap":"","context":"interactive","editor-max-height":"","out-width":"700px","out-height":"","dpi":72,"message":"true","fig-width":7,"editor-font-scale":"1","classes":"","comment":"","fig-height":5,"editor-word-wrap":"true","warning":"true","label":"unnamed-chunk-2","read-only":"false","output":"true","results":"markup","editor-quick-suggestions":"false","autorun":"false"},"id":2}];
+globalThis.qwebrCellDetails = [{"code":"Interpret <- function(x = 404) {\n  if (x %in% c(404, Error, Re(Error)))\n    cat(\"The page you were looking for was not found.\\n There may still be content here in the future, so do check back!\\n\")\n  # note: \"\\n\" needed at the end of the \"cat()\" command; see https://stackoverflow.com/a/9137858/16962987\n  else\n    c(\"I don't know that error message.\", \"Check its meaning here: https://datatracker.ietf.org/doc/html/rfc7231#section-6\")\n}","id":1,"options":{"message":"true","fig-width":7,"editor-font-scale":"1","out-width":"700px","dpi":72,"autorun":"true","fig-cap":"","out-height":"","editor-max-height":"","output":"true","fig-height":5,"warning":"true","read-only":"false","editor-word-wrap":"true","results":"markup","label":"unnamed-chunk-1","classes":"","editor-quick-suggestions":"false","comment":"","context":"output"}},{"code":"# Translate the equation to R code:\n  Error = (-7 * exp(pi * 1i))^3 + ((prod(1:3))^2 + (-25 * exp(pi * 1i)))\n# Display the (real part of the) solution:\n  message(Re(Error))\n# Interpret the meaning of the solution:\n  Interpret(Error)","id":2,"options":{"message":"true","fig-width":7,"editor-font-scale":"1","out-width":"700px","dpi":72,"autorun":"false","fig-cap":"","out-height":"","editor-max-height":"","output":"true","fig-height":5,"warning":"true","read-only":"false","editor-word-wrap":"true","results":"markup","label":"unnamed-chunk-2","classes":"","editor-quick-suggestions":"false","comment":"","context":"interactive"}}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -1973,6 +1971,7 @@ Not sure what this means? Why not ask <img src="/HSS8005/.\pics/R_logo.png" data
     font-weight: bolder;
     line-height: normal;
     }
+    
   .qwebr-output-code-stdout {
     color: #700001;
     font-size: 20px;
@@ -1985,19 +1984,8 @@ Not sure what this means? Why not ask <img src="/HSS8005/.\pics/R_logo.png" data
     align-items: baseline;
     justify-content: space-evenly;
     line-height: normal;
-      }
-  .btn {
-      border-radius: 0px;
-      margin: 0px;
-      padding: 0rem;
-      line-height: 1;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      }
-  .fa-play:before {
-    content: ";
     }
-    
+
   .view-lines monaco-mouse-cursor-text {
     position: absolute;
     font-family: Consolas, "Courier New", monospace;
