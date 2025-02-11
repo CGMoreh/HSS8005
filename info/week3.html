@@ -44,7 +44,7 @@ div.csl-indent {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<link href="../theory/week3.qmd" rel="next">
+<link href="../theory/week3.html" rel="next">
 <link href="../application/week2.html" rel="prev">
 <link href="../pics/ncl_coa_hss8005.png" rel="icon" type="image/png">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -225,16 +225,22 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/week3.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../theory/week3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Coding</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../code/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Application</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../application/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -360,7 +366,13 @@ div.csl-indent {
 </li>
     </ul>
     </div>
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#aims" id="toc-aims" class="nav-link active" data-scroll-target="#aims">Aims</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -414,6 +426,17 @@ div.csl-indent {
 <!-- 3.  Weiss, Alexa, Corinna Michels, Pascal Burgmer, Thomas Mussweiler, Axel Ockenfels, and Wilhelm Hofmann. 2021. ‘Trust in Everyday Life’. Journal of Personality and Social Psychology 121:95–114. doi: 10.1037/pspi0000334 ([access preprint version here](https://osf.io/vz2cw)) [Library access](https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_proquest_miscellaneous_2436396810) -->
 <!-- **Causal effects** -->
 <!-- Ladd, Jonathan McDonald, and Gabriel S. Lenz. 2009. ‘Exploiting a Rare Communication Shift to Document the Persuasive Power of the News Media’. American Journal of Political Science 53(2):394–410. [doi: 10.1111/j.1540-5907.2009.00377.x.](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-5907.2009.00377.x) (published version should be accessible with university login; additional [Appendix available here](https://cgmoreh.github.io/HSS8005-data/LaddLenz_appendix.pdf)) -->
+</section>
+<section id="aims" class="level2">
+<h2 class="anchored" data-anchor-id="aims">Aims</h2>
+<p>This session introduces binary logistic regression models. These models are the simplest form of a broader class of models called <em>generalised linear models</em>, which are applicable when the <em>outcome</em> (“dependent”, “response”, “explained”, etc.) variable cannot be assumed to follow a Gaussian (i.e.&nbsp;“normal”) distribution, but it instead a bounded or discrete measurement (e.g.&nbsp;think of variables whose values cannot be negative - i.e.&nbsp;have a lower limit of 0 - or fall into discrete categories such as “yes”/“no”, “disagree”/“neither agree nor disagree”/“agree”, or “blue”/“green”/“black”/“brown”/“other”). Binary logistic regression is the simplest case, where the outcome can take only two values (therefore “binary”). However, the logic that underpins it is similar to that of other generalised linear models.</p>
+<p>By the end of the session you will learn how to:</p>
+<ul>
+<li>Fit and summarise logistic regression models in <code>R</code></li>
+<li>Interpret results from logistic regression models</li>
+<li>Manipulate the regression output to ease interpretation</li>
+<li>Plot and visualise results from logistic regression models to aid interpretation</li>
+</ul>
 
 
 
@@ -856,7 +879,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../theory/week3.qmd" class="pagination-link" aria-label="Theory">
+      <a href="../theory/week3.html" class="pagination-link" aria-label="Theory">
         <span class="nav-page-text">Theory</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Week 3 — Coding playground</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,10 +17,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<link href="../application/week3.html" rel="next">
+<link href="../theory/week3.html" rel="prev">
 <link href="../pics/ncl_coa_hss8005.png" rel="icon" type="image/png">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -37,8 +69,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
-<script id="quarto-search-options" type="application/json">{
+<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -52,18 +83,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="../html/nobiblio.css">
+}</script><link rel="stylesheet" href="../html/nobiblio.css">
 </head>
-
-<body class="docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">HSS8005 <iconify-icon role="img" inline="" icon="line-md:plus" aria-label="Icon plus from line-md Iconify.design set." title="Icon plus from line-md Iconify.design set."></iconify-icon></span>
@@ -74,12 +99,12 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../plan.html"> 
 <span class="menu-text">Module plan</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../materials.html"> 
+    <a class="nav-link active" href="../materials.html" aria-current="page"> 
 <span class="menu-text">Materials</span></a>
   </li>  
   <li class="nav-item">
@@ -95,36 +120,269 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Assessment</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://ncl.instructure.com/courses/55949"> 
+    <a class="nav-link" href="{{< var canvas >}}"> 
 <span class="menu-text"><iconify-icon role="img" inline="" icon="arcticons:canvasstudent" style="font-size: l;" aria-label="Icon canvasstudent from arcticons Iconify.design set." title="Icon canvasstudent from arcticons Iconify.design set."></iconify-icon> Canvas</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../info/week3.html">Week 3</a></li><li class="breadcrumb-item"><a href="../code/week3.html">Coding</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weekly materials</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../info/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week4.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Coding</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Application</span>
+  </li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week5.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Coding</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Application</span>
+  </li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week6.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Coding</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Application</span>
+  </li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week7.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Coding</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Application</span>
+  </li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week8.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">Coding</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">Application</span>
+  </li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../info/conclusions.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusions</span></a>
+  </div>
+</li>
+    </ul>
+</div>
+    <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#r-packages" id="toc-r-packages" class="nav-link active" data-scroll-target="#r-packages">R packages</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#data-management" id="toc-data-management" class="nav-link" data-scroll-target="#data-management">Data management</a></li>
+  </ul></nav>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../info/week3.html">Week 3</a></li><li class="breadcrumb-item"><a href="../code/week3.html">Coding</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Week 3 — Coding playground</h1>
 <p class="subtitle lead">Curves: Logistic regression and other generalised linear models</p>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta column-page-right">
 
     
   
@@ -139,14 +397,104 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</header>
+</header><section id="r-packages" class="level2"><h2 class="anchored" data-anchor-id="r-packages">R packages</h2>
+<p>Using functions learnt in Week 1, load (and install, if needed) the following R packages:</p>
+<ul>
+<li><a href="https://www.tidyverse.org/"><code>tidyverse</code></a></li>
+<li><a href="https://easystats.github.io/easystats/"><code>easystats</code></a></li>
+<li><a href="https://www.danieldsjoberg.com/gtsummary/index.html"><code>gtsummary</code></a></li>
+<li><a href="https://www.mosaic-web.org/ggformula/index.html"><code>ggformula</code></a></li>
+<li><a href="https://strengejacke.github.io/sjlabelled/index.html"><code>sjlabelled</code></a></li>
+<li><a href="https://strengejacke.github.io/ggeffects/index.html"><code>ggeffects</code></a></li>
+<li><a href="https://marginaleffects.com"><code>marginaleffects</code></a></li>
+</ul></section><section id="data" class="level2"><h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>The data required for the analysis in the application lab can be downloaded freely from the <a href="https://www.worldvaluessurvey.org/WVSContents.jsp">World Values Survey website</a>.</p>
+<p>Download <a href="https://www.worldvaluessurvey.org/WVSDocumentationWV5.jsp">Wave 5 (2005-2009)</a> and <a href="https://www.worldvaluessurvey.org/WVSDocumentationWV6.jsp">Wave 6 (2010-2014)</a> data from there.</p>
+<p>We can also find the questionnaires and the codebooks on the survey website, which will help identify the relevant variables.</p>
+</section><section id="data-management" class="level2"><h2 class="anchored" data-anchor-id="data-management">Data management</h2>
+<p>The code below imports and selects the data from the original WVS dataset and creates a data-frame called <code>wvs56</code> that contains all the variables needed:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Paths to files --------------------------------------------------------------------------------------------------------------</span></span>
+<span></span>
+<span><span class="co">### Data was downloaded in SPSS (.sav) format from the WVS website (https://www.worldvaluessurvey.org/WVSContents.jsp)</span></span>
+<span><span class="co">### Downloaded data files were extracted and saved in the folder "raw" within the folder "data"</span></span>
+<span><span class="co">### Create paths to the data files are created from the RProject root folder; cross-check the created path string variable:</span></span>
+<span></span>
+<span><span class="va">wvs5_path</span> <span class="op">&lt;-</span> <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"WV5_Data_Spss_v20180912.sav"</span><span class="op">)</span></span>
+<span><span class="va">wvs6_path</span> <span class="op">&lt;-</span> <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org//reference/here.html">here</a></span><span class="op">(</span><span class="st">"data"</span>, <span class="st">"raw"</span>, <span class="st">"WV6_Data_sav_v20201117.sav"</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">## Select variables ------------------------------------------------------------------------------------------------------------</span></span>
+<span></span>
+<span><span class="co">### Create a vector storing names for the variables that will be used, based on Wu (2021: 1170-1172):</span></span>
+<span></span>
+<span><span class="va">wu_vars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"country"</span>, <span class="st">"year"</span>, <span class="st">"trust"</span>, <span class="st">"risktaker"</span>, <span class="st">"education"</span>, <span class="st">"sex"</span>, <span class="st">"age"</span>, <span class="st">"income"</span>, <span class="st">"marstat"</span>, <span class="st">"employment"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">### Create vectors storing the original names of the relevant variables in the WVS5 and WVS6 datasets:</span></span>
+<span></span>
+<span><span class="va">wvs5_vars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"V2"</span>, <span class="st">"V260"</span>, <span class="st">"V23"</span>, <span class="st">"V86"</span>, <span class="st">"V238"</span>, <span class="st">"V235"</span>, <span class="st">"V237"</span>, <span class="st">"V253"</span>, <span class="st">"V55"</span>, <span class="st">"V241"</span><span class="op">)</span></span>
+<span><span class="va">wvs6_vars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"V2"</span>, <span class="st">"V262"</span>, <span class="st">"V24"</span>, <span class="st">"V76"</span>, <span class="st">"V248"</span>, <span class="st">"V240"</span>, <span class="st">"V242"</span>, <span class="st">"V239"</span>, <span class="st">"V57"</span>, <span class="st">"V229"</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">## Read in the data files -----------------------------------------------------------------------------------------------------</span></span>
+<span></span>
+<span><span class="va">wvs5</span> <span class="op">&lt;-</span> <span class="fu">read_spss</span><span class="op">(</span><span class="va">wvs5_path</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">data_select</span><span class="op">(</span>select <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">wvs5_vars</span><span class="op">)</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="va">wvs6</span> <span class="op">&lt;-</span> <span class="fu">read_spss</span><span class="op">(</span><span class="va">wvs6_path</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">data_select</span><span class="op">(</span>select <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">wvs6_vars</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co">## Read in the data files -----------------------------------------------------------------------------------------------------</span></span>
+<span></span>
+<span><span class="co">### Create codebooks to check variables</span></span>
+<span><span class="co">### Comparing the codebooks we see that the coding of all the variables is similar</span></span>
+<span><span class="co">### WVS6 has shorter value labels on some variables</span></span>
+<span></span>
+<span><span class="va">wvs5_codebook</span> <span class="op">&lt;-</span> <span class="va">wvs5</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">data_codebook</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">wvs6_codebook</span> <span class="op">&lt;-</span> <span class="va">wvs6</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">data_codebook</span><span class="op">(</span><span class="op">)</span> </span>
+<span></span>
+<span> </span>
+<span><span class="co">## Rename variables -----------------------------------------------------------------------------------------------------------</span></span>
+<span></span>
+<span><span class="co">### It's safe to replace the original var names with more human-readable names; we use `datawizard::data_rename()`</span></span>
+<span><span class="co">### Replace the value codes of `country` and `year` with the labels; will make merging datasets less error-prone</span></span>
+<span></span>
+<span><span class="va">wvs5</span> <span class="op">&lt;-</span> <span class="va">wvs5</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">data_rename</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">wvs5_vars</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">wu_vars</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">labels_to_levels</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"country"</span>, <span class="st">"year"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">wvs6</span> <span class="op">&lt;-</span> <span class="va">wvs6</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">data_rename</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">wvs6_vars</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">wu_vars</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">labels_to_levels</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"country"</span>, <span class="st">"year"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Merge data files ------------------------------------------------------------------------</span></span>
+<span></span>
+<span><span class="co">### Now variable names are the same in both datasets, the two can be joined</span></span>
+<span><span class="co">### `datawizard::data_merge(..., join = "bind")` is similar to `dplyr::bind_rows()` but also copies value labels from the first-mentioned dataset</span></span>
+<span><span class="co">### We mention the `wvs6` dataset first to keep its (shorter) version of value labels</span></span>
+<span></span>
+<span><span class="va">wvs56</span> <span class="op">&lt;-</span> <span class="fu">data_merge</span><span class="op">(</span><span class="va">wvs6</span>, <span class="va">wvs5</span>, join <span class="op">=</span> <span class="st">"bind"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Create new `country_year` variable -----------------------------------------------------------------------------------------</span></span>
+<span></span>
+<span><span class="va">wvs56</span> <span class="op">&lt;-</span> <span class="fu">data_unite</span><span class="op">(</span><span class="va">wvs56</span>, new_column <span class="op">=</span> <span class="st">"country_year"</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"country"</span>, <span class="st">"year"</span><span class="op">)</span>, append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>It’s a good idea to save the created dataset to a local folder so you have access to it later:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Save the dataset as an .rds file -------------------------------------------------------</span></span>
+<span><span class="co">## Check out the {here} package, which makes it easier to specify folders regardless of the operating system</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/readRDS.html">saveRDS</a></span><span class="op">(</span><span class="va">wvs56</span>, <span class="st">"enter/path/to/the/desired/folder/and/give/the/file/a/name/and/extension"</span>, compress <span class="op">=</span> <span class="st">"bzip2"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># e.g. saveRDS(wvs56, "data/wvs56.rds", compress = "bzip2")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -570,9 +918,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><nav class="page-navigation column-page-right"><div class="nav-page nav-page-previous">
+      <a href="../theory/week3.html" class="pagination-link" aria-label="Theory">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Theory</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../application/week3.html" class="pagination-link" aria-label="Application">
+        <span class="nav-page-text">Application</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-
 
 
 
