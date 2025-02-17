@@ -254,16 +254,22 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/week4.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../theory/week4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Coding</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../code/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Application</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../application/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -403,7 +409,7 @@ div.csl-indent {
 
 <section id="description" class="level4">
 <h4 class="anchored" data-anchor-id="description">Description</h4>
-<p>It wasn’t until the last quarter of the 20th century that a unified vision of statistical modelling emerged, allowing practitioners to see how the <em>general</em> linear model we have explored so far is only a specific case of a <em>more general</em> class of models. We could have had a fancy, memorable name for this class of models - as John Nelder, one of its inventors, acknowledged later in life <span class="citation" data-cites="senn2003">(<a href="#ref-senn2003" role="doc-biblioref">Senn 2003, 127</a>)</span> - but back then academics were not required to undertake marketing training on the tweetabilty-factor of the chosen names for their theories; so we ended up with “<em>generalised</em> linear models”. These models can be applied to explananda (“explained”, “response”, “outcome”, “dependent” etc. variables, our <code>y</code>s) whose possible values have certain constraints (such as being limited by a lower bound or constrained to discreet choices) that makes the parameters of the Gaussian (‘normal’) distribution inefficient in describing them. Instead, they follow some of the other “exponential distributions” (and not only the exponential: cf. <span class="citation" data-cites="gelman2020">(<a href="#ref-gelman2020" role="doc-biblioref"><strong>gelman2020?</strong></a>)</span>), of which the Poisson, gamma, beta, binomial and multinomial are probably the most common in human and social sciences research. Their “generalised linear modelling” involves mapping them unto a linear model using a so-called “link function”. We will explore what all of this means in practice and how it can be applied to data that we are interested in most in our respective fields of study.</p>
+<p>It wasn’t until the last quarter of the 20th century that a unified vision of statistical modelling emerged, allowing practitioners to see how the <em>general</em> linear model we have explored so far is only a specific case of a <em>more general</em> class of models. We could have had a fancy, memorable name for this class of models - as John Nelder, one of its inventors, acknowledged later in life <span class="citation" data-cites="senn2003">(<a href="#ref-senn2003" role="doc-biblioref">Senn 2003, 127</a>)</span> - but back then academics were not required to undertake marketing training on the tweetabilty-factor of the chosen names for their theories; so we ended up with “<em>generalised</em> linear models”. These models can be applied to explananda (“explained”, “response”, “outcome”, “dependent” etc. variables, our <code>y</code>s) whose possible values have certain constraints (such as being limited by a lower bound or constrained to discreet choices) that makes the parameters of the Gaussian (‘normal’) distribution inefficient in describing them. Instead, they follow some of the other “exponential distributions” (and not only the exponential: cf. <span class="citation" data-cites="GelmanEtAl2020RegressionOtherStories">Gelman, Hill, and Vehtari (<a href="#ref-GelmanEtAl2020RegressionOtherStories" role="doc-biblioref">2020, 264</a>)</span>), of which the Poisson, gamma, beta, binomial and multinomial are probably the most common in human and social sciences research. Their “generalised linear modelling” involves mapping them unto a linear model using a so-called “link function”. We will explore what all of this means in practice and how it can be applied to data that we are interested in most in our respective fields of study.</p>
 </section>
 <section id="readings" class="level4">
 <h4 class="anchored" data-anchor-id="readings">Readings</h4>
@@ -443,6 +449,9 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-GelmanEtAl2020RegressionOtherStories" class="csl-entry" role="listitem">
+Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. <em><span>Regression and other stories</span></em>. <span>Cambridge</span>: <span>Cambridge University Press</span>.
+</div>
 <div id="ref-senn2003" class="csl-entry" role="listitem">
 Senn, Stephen. 2003. <span>“A Conversation with John Nelder.”</span> <em>Statistical Science</em> 18 (1): 118–31. <a href="https://doi.org/10.1214/ss/1056397489">https://doi.org/10.1214/ss/1056397489</a>.
 </div>

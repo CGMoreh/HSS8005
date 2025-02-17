@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 7  Hierarchies</title>
+<title>Week 7  Paths</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -253,16 +234,22 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/week4.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../theory/week4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Coding</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../code/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Application</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../application/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -376,8 +363,8 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 7 <i class="fa-solid fa-minus" aria-label="minus"></i> Hierarchies</h1>
-<p class="subtitle lead">Hierarchical data structures and multilevel modelling</p>
+<h1 class="title">Week 7 <i class="fa-solid fa-minus" aria-label="minus"></i> Paths</h1>
+<p class="subtitle lead">Graphical models and considerations for causal analysis</p>
 </div>
 
 
@@ -394,41 +381,25 @@ div.csl-indent {
 </header>
 
 
-<p>Hierarchical data are ubiquitous in the social and human sciences (and beyond). In fact, almost all the <em>application</em> articles we have engaged with so far in previous labs modelled hierarchical data., and almost all modelled them explicitly as such, applying some multilevel modelling technique. In some cases the hierarchies themselves were of central theoretical importance and played a crucial role in the stated <em>estimand</em> (i.e.&nbsp;“the object of inquiry—(…) the precise quantity about which we marshal data to draw an inference” <span class="citation" data-cites="LundbergEtAl2021WhatYourEstimand">(see <a href="#ref-LundbergEtAl2021WhatYourEstimand" role="doc-biblioref">Lundberg, Johnson, and Stewart 2021:532</a>)</span>. In others, taking into account the hierarchical nature of the data was meant to improve the precision of the main effect estimates. The importance of accounting for hierarchical dependencies in our models is emphasised by no one else more than Richard McElreath, who, in his important introductory-level book to Bayesian statistics, wants “to convince the reader of something that appears unreasonable: multilevel regression deserves to be the default form of regression” <span class="citation" data-cites="McElreath2020StatisticalRethinkingBayesianCourseExamples">(<a href="#ref-McElreath2020StatisticalRethinkingBayesianCourseExamples" role="doc-biblioref">McElreath 2020:15</a>)</span>. According to him, “papers that do not use multilevel models should have to justify not using a multilevel approach”. In this session, we will learn how to think about and fit hierarchical models in <code>R</code>, and we’ll discuss some of the challenges of multilevel modelling and the possible justifications not to use them in certain contexts.</p>
+<p>This week we ask some essential conceptual questions that can clarify various stated and unstated assumptions about our empirical data, theoretical questions and the models we aim to fit to them. We’ll explore the possibilities and challenges of asking causal questions of observational data, and we’ll think about ways to avoid what evolutionary anthropologist Richard McElreath calls <a href="https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/">‘causal salad’</a>. More generally, we explore ways of thinking about and dealing with the various <em>biases</em> that affect quantitative analyses.</p>
 <section id="readings" class="level4">
 <h4 class="anchored" data-anchor-id="readings">Readings</h4>
-<p><strong>Textbook</strong></p>
+<p><strong>Statistics</strong></p>
 <ul>
-<li><p><strong><a href="https://libsearch.ncl.ac.uk/permalink/f/1jraif3/NCL_ALMA51207467300002411">ARM</a></strong>: Chapters 11 (pp.&nbsp;237-249) and 12 (pp.&nbsp;251-278)</p></li>
-<li><p><strong><a href="https://rohanalexander.github.io/telling_stories-published/">TSD</a></strong>: Chapter section 15.2</p></li>
+<li><p>Cinelli, Carlos, Andrew Forney, and Judea Pearl. 2022. “A Crash Course in Good and Bad Controls.” Sociological Methods &amp; Research <a href="https://journals.sagepub.com/doi/full/10.1177/00491241221099552">https://journals.sagepub.com/doi/full/10.1177/00491241221099552</a></p></li>
+<li><p>Lundberg, Ian, Rebecca Johnson, and Brandon M. Stewart. 2021. “What Is Your Estimand? Defining the Target Quantity Connects Statistical Evidence to Theory.” American Sociological Review 86(3): 532–65. <a href="https://doi.org/10.1177/00031224211004187">https://doi.org/10.1177/00031224211004187</a></p></li>
+<li><p><strong><a href="https://avehtari.github.io/ROS-Examples">ROS</a></strong>: Chapters 18-20</p></li>
 </ul>
 <p><strong>Application</strong></p>
 <ul>
-<li><p>Österman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. <em>Social Indicators Research</em> 154(1):211–33 - (<a href="https://link.springer.com/article/10.1007/s11205-020-02529-y">online</a>)</p></li>
-<li><p>Mitchell, Jeffrey. 2021. “Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.” <em>Frontiers in Sociology</em> 6 (April): 604884 - (<a href="https://doi.org/10.3389/fsoc.2021.604884">online</a>)</p></li>
-<li><p>Akaeda, Naoki. 2023. “Trust and the Educational Gap in the Demand for Redistribution: Evidence from the World Values Survey and the European Value Study.” <em>International Sociology</em> 38(3): 290–310 <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_openaire_primary_doi_79eac40142aab41ece14cf7b0bcc42c3">Library access</a></p></li>
-<li><p>Wu, Cary. 2021. ‘Education and Social Trust in Global Perspective’. <em>Sociological Perspectives</em> 64(6):1166–86. Available here: <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_proquest_journals_2597748144Links">Library access</a></p></li>
-<li><p>Dingemans, Ellen, and Erik Van Ingen. 2015. ‘Does Religion Breed Trust? A Cross-National Study of the Effects of Religious Involvement, Religious Faith, and Religious Context on Social Trust’. <em>Journal for the Scientific Study of Religion</em> 54(4):739–55. <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_proquest_journals_1783257402Links">Library access</a></p></li>
+<li><p>Griffith, Gareth J., Tim T. Morris, Matthew J. Tudball, Annie Herbert, Giulia Mancano, Lindsey Pike, Gemma C. Sharp, Jonathan Sterne, Tom M. Palmer, George Davey Smith, Kate Tilling, Luisa Zuccolo, Neil M. Davies, and Gibran Hemani. 2020. “Collider Bias Undermines Our Understanding of COVID-19 Disease Risk and Severity.” Nature Communications 11(1): 5749. <a href="https://www.nature.com/articles/s41467-020-19478-2">https://www.nature.com/articles/s41467-020-19478-2</a></p></li>
+<li><p>Breen, Richard. 2018. “Some Methodological Problems in the Study of Multigenerational Mobility.” European Sociological Review 34(6): 603–11. <a href="https://doi.org/10.1093/esr/jcy037">https://doi.org/10.1093/esr/jcy037</a></p></li>
 </ul>
-</section>
-<section id="further-readings" class="level4">
-<h4 class="anchored" data-anchor-id="further-readings">Further readings</h4>
-<ul>
-<li><strong><a href="https://libsearch.ncl.ac.uk/permalink/f/1jraif3/NCL_ALMA51207467300002411">ARM</a></strong>: Chapters 13 (pp.&nbsp;279-299), 14 (pp.&nbsp;301-323) and 15 (pp.&nbsp;325-342)</li>
-</ul>
-
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-LundbergEtAl2021WhatYourEstimand" class="csl-entry" role="listitem">
-Lundberg, Ian, Rebecca Johnson, and Brandon M. Stewart. 2021. <span>“What Is Your Estimand? Defining the Target Quantity Connects Statistical Evidence to Theory.”</span> <em>American Sociological Review</em> 86(3):532–65. doi: <a href="https://doi.org/10.1177/00031224211004187">10.1177/00031224211004187</a>.
-</div>
-<div id="ref-McElreath2020StatisticalRethinkingBayesianCourseExamples" class="csl-entry" role="listitem">
-McElreath, Richard. 2020. <em>Statistical Rethinking: A <span>Bayesian</span> Course with Examples in <span>R</span> and <span>Stan</span></em>. Second. <span>Boca Raton</span>: <span>Taylor and Francis, CRC Press</span>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 4  Paths</title>
+<title>Week 4  Interactions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<link href="../theory/week4.qmd" rel="next">
+<link href="../theory/week4.html" rel="next">
 <link href="../application/week3.html" rel="prev">
 <link href="../pics/ncl_coa_hss8005.png" rel="icon" type="image/png">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -234,16 +234,22 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/week4.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../theory/week4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Coding</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../code/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">Application</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../application/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -357,8 +363,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 4 <i class="fa-solid fa-minus" aria-label="minus"></i> Paths</h1>
-<p class="subtitle lead">Graphical models and considerations for causal analysis</p>
+<h1 class="title">Week 4 <i class="fa-solid fa-minus" aria-label="minus"></i> Interactions</h1>
+<p class="subtitle lead">Estimating, plotting and interpreting interaction effects</p>
 </div>
 
 
@@ -375,19 +381,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This week we ask some essential conceptual questions that can clarify various stated and unstated assumptions about our empirical data, theoretical questions and the models we aim to fit to them. We’ll explore the possibilities and challenges of asking causal questions of observational data, and we’ll think about ways to avoid what evolutionary anthropologist Richard McElreath calls <a href="https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/">‘causal salad’</a>. More generally, we explore ways of thinking about and dealing with the various <em>biases</em> that affect quantitative analyses.</p>
+<section id="description" class="level4">
+<h4 class="anchored" data-anchor-id="description">Description</h4>
+<p>This week we will return to some of the models we fit over the past two weeks and turn our attention to the right-hand side of the regression equations. We will explore <em>interaction</em> effects, which allow for the association between a predictor and an outcome to depend upon the value of another predictor. Understanding interaction effects - and the concept of <em>conditioning</em> more broadly - can help avoid serious misrepresentations and misunderstandings of our data. Some famous statistical “paradoxes” can highlight these dangers, and the lecture will build on these conceptual examples before moving on to questions of model-building. It is technically very simple to fit models with complex interactions, however, their interpretation can be very difficult. As with the logistic regression model we covered in Week 3, we will explore ways to present and visualise results from interaction models, which make their interpretation easier. Exploring <em>interactions</em> also allows us to begin thinking about causality and causal modelling, a topic that we will expand upon in Week 5.</p>
+</section>
 <section id="readings" class="level4">
 <h4 class="anchored" data-anchor-id="readings">Readings</h4>
 <p><strong>Statistics</strong></p>
 <ul>
-<li><p>Cinelli, Carlos, Andrew Forney, and Judea Pearl. 2022. “A Crash Course in Good and Bad Controls.” Sociological Methods &amp; Research <a href="https://journals.sagepub.com/doi/full/10.1177/00491241221099552">https://journals.sagepub.com/doi/full/10.1177/00491241221099552</a></p></li>
-<li><p>Lundberg, Ian, Rebecca Johnson, and Brandon M. Stewart. 2021. “What Is Your Estimand? Defining the Target Quantity Connects Statistical Evidence to Theory.” American Sociological Review 86(3): 532–65. <a href="https://doi.org/10.1177/00031224211004187">https://doi.org/10.1177/00031224211004187</a></p></li>
-<li><p><strong><a href="https://avehtari.github.io/ROS-Examples">ROS</a></strong>: Chapters 18-20</p></li>
+<li><strong><a href="https://avehtari.github.io/ROS-Examples">ROS</a></strong>: Chapters 10-12</li>
+</ul>
+<p><strong>Advanced statistics readings</strong></p>
+<ul>
+<li><p>Brambor, T., W. R. Clark, and M. Golder. 2006. “Understanding Interaction Models: Improving Empirical Analyses.” <em>Political Analysis</em> 14(1): 63–82. <a href="https://doi.org/10.1093/pan/mpi014">https://doi.org/10.1093/pan/mpi014</a></p></li>
+<li><p>Hainmueller, J., J. Mummolo, and Y. Q. Xu. 2019. “How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice.” <em>Political Analysis</em> 27(2): 163–92 <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_openaire_primary_doi_dedup_a6b1df08b1255e7c2583c420c81bd042">Library access here</a></p></li>
+<li><p>Rohrer, Julia M., and Ruben C. Arslan. 2021. “Precise Answers to Vague Questions: Issues With Interactions.” <em>Advances in Methods and Practices in Psychological Science</em> 4(2): 25152459211007368 <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_unpaywall_primary_10_1177_25152459211007368">Library access here</a></p></li>
+</ul>
+<p><strong>Coding</strong></p>
+<ul>
+<li><strong><a href="https://rohanalexander.github.io/telling_stories-published/">TSD</a></strong>: Chapter 15</li>
 </ul>
 <p><strong>Application</strong></p>
 <ul>
-<li><p>Griffith, Gareth J., Tim T. Morris, Matthew J. Tudball, Annie Herbert, Giulia Mancano, Lindsey Pike, Gemma C. Sharp, Jonathan Sterne, Tom M. Palmer, George Davey Smith, Kate Tilling, Luisa Zuccolo, Neil M. Davies, and Gibran Hemani. 2020. “Collider Bias Undermines Our Understanding of COVID-19 Disease Risk and Severity.” Nature Communications 11(1): 5749. <a href="https://www.nature.com/articles/s41467-020-19478-2">https://www.nature.com/articles/s41467-020-19478-2</a></p></li>
-<li><p>Breen, Richard. 2018. “Some Methodological Problems in the Study of Multigenerational Mobility.” European Sociological Review 34(6): 603–11. <a href="https://doi.org/10.1093/esr/jcy037">https://doi.org/10.1093/esr/jcy037</a></p></li>
+<li><p>Akaeda, Naoki. 2023. “Trust and the Educational Gap in the Demand for Redistribution: Evidence from the World Values Survey and the European Value Study.” <em>International Sociology</em> 38(3): 290–310 <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_openaire_primary_doi_79eac40142aab41ece14cf7b0bcc42c3">Library access</a></p></li>
+<li><p>Österman, Marcus. 2021. ‘Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust’. <em>Social Indicators Research</em> 154(1):211–33 - (<a href="https://link.springer.com/article/10.1007/s11205-020-02529-y">online</a>)</p></li>
+<li><p>Ladd, Jonathan McDonald, and Gabriel S. Lenz. 2009. ‘Exploiting a Rare Communication Shift to Document the Persuasive Power of the News Media’. <em>American Journal of Political Science</em> 53(2):394–410. <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1540-5907.2009.00377.x">doi: 10.1111/j.1540-5907.2009.00377.x.</a>(published version should be accessible with university login; additional <a href="https://cgmoreh.github.io/HSS8005-data/LaddLenz_appendix.pdf">Appendix available here</a>)</p></li>
 </ul>
 
 
@@ -826,7 +844,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../theory/week4.qmd" class="pagination-link" aria-label="Theory">
+      <a href="../theory/week4.html" class="pagination-link" aria-label="Theory">
         <span class="nav-page-text">Theory</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
