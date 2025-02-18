@@ -1,14 +1,5 @@
 [
   {
-    "listing": "/theory/index.html",
-    "items": [
-      "/theory/week1.html",
-      "/theory/week2.html",
-      "/theory/week3.html",
-      "/theory/week4.html"
-    ]
-  },
-  {
     "listing": "/materials.html",
     "items": [
       "/info/week1.html",
@@ -19,6 +10,15 @@
       "/info/week6.html",
       "/info/week7.html",
       "/info/week8.html"
+    ]
+  },
+  {
+    "listing": "/theory/index.html",
+    "items": [
+      "/theory/week1.html",
+      "/theory/week2.html",
+      "/theory/week3.html",
+      "/theory/week4.html"
     ]
   }
 ]
