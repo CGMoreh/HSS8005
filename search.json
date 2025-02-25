@@ -1152,7 +1152,7 @@
     "href": "slides/hss8005_w5.html#multilevel-models-1",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "Multilevel models",
-    "text": "Multilevel models\nThe terminology surrounding multilevel models can be confusing. Different disciplines use various names for them, for example:\n\nVariance components\nRandom intercepts and slopes\nRandom effects\nRandom coefficients\nVarying coefficients\nIntercepts- and/or slopes-as-outcomes\nHierarchical linear models\nMultilevel models (implies multiple levels of hierarchically clustered data)\nGrowth curve models (possibly Latent GCM)\nMixed effects models"
+    "text": "Multilevel models\nIn our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations."
   },
   {
     "objectID": "slides/hss8005_w5.html#multilevel-models-2",
@@ -1180,14 +1180,14 @@
     "href": "slides/hss8005_w5.html#multilevel-models-5",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "Multilevel models",
-    "text": "Multilevel models\nIn our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations."
+    "text": "Multilevel models"
   },
   {
     "objectID": "slides/hss8005_w5.html#multilevel-models-6",
     "href": "slides/hss8005_w5.html#multilevel-models-6",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "Multilevel models",
-    "text": "Multilevel models"
+    "text": "Multilevel models\nIn our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.\nWith such data, it makes sense to allow regression coefficients to vary by group.\nSuch variation can already be achieved by simply including group indicators in a least squares regression framework.\nIn other words, we could extend our previous model like such:\n\\[trustindex3=\\beta_0+\\beta_1*eduyears25+\\beta_2*agea+\\beta_3*female+\\\\ +\\beta_4*{paredu}+\\beta_5*{fmnoncntr}+\\color{red}{\\beta_6*{cntry}}+error\\]"
   },
   {
     "objectID": "slides/hss8005_w5.html#multilevel-models-7",
@@ -1208,7 +1208,7 @@
     "href": "slides/hss8005_w5.html#fitting-multilevel-models",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "Fitting multilevel models",
-    "text": "Fitting multilevel models\nIn R we can fit multilevel models using the lmer function from the lme4 package.\nInitially, it is advisable to first fit some simple, preliminary models, in part to establish a baseline for evaluating larger models. Then, we can build toward a final model for description and inference by attempting to add important covariates, centering certain variables, and checking model assumptions.\nThe standard first step is to model only the outcome measurement, without any predictors, to get a sense for the effect of the clusters; this is often called a random intercepts model or null model:\n\nmod_null &lt;- lmer(trustindex3 ~ 1 + (1 | cntry), data = osterman)\n\nThe second step is then to fit the full covariate model:\n\nmod_mixed = lmer(trustindex3 ~ eduyrs25 + agea + female + paredu_a_high + fmnoncntr + (1 | cntry), data = osterman)"
+    "text": "Fitting multilevel models\nIn R we can fit multilevel models using the lmer function from the lme4 package.\nInitially, it is advisable to first fit some simple, preliminary models, in part to establish a baseline for evaluating larger models. Then, we can build toward a final model for description and inference by attempting to add important covariates, centring certain variables, and checking model assumptions.\nThe standard first step is to model only the outcome measurement, without any predictors, to get a sense for the effect of the clusters; this is often called a random intercepts model or null model:\n\nmod_null &lt;- lmer(trustindex3 ~ 1 + \n                   (1 | cntry), \n                 data = osterman)\n\nThe second step is then to fit the full covariate model:\n\nmod_mixed = lmer(trustindex3 ~ reform1_7 + female + blgetmg_d + \n                   fbrneur + mbrneur + fnotbrneur + mnotbrneur + \n                   (1 | cntry), \n                 data = osterman)"
   },
   {
     "objectID": "slides/hss8005_w5.html#fitting-multilevel-models-1",
@@ -1222,7 +1222,7 @@
     "href": "slides/hss8005_w5.html#fitting-multilevel-models-2",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "Fitting multilevel models",
-    "text": "Fitting multilevel models\nResults: Covariate model:\n\n\n\n\n\nObservations\n376\n\n\nDependent variable\ntrustindex3\n\n\nType\nMixed effects linear regression\n\n\n\n \n\n\n\nAIC\n1500.20\n\n\nBIC\n1531.64\n\n\nPseudo-R² (fixed effects)\n0.08\n\n\nPseudo-R² (total)\n0.15\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nFixed Effects\n\n\n\n\nEst.\nS.E.\nt val.\nd.f.\np\n\n\n\n\n(Intercept)\n2.52\n0.63\n3.97\n182.82\n0.00\n\n\neduyrs25\n0.10\n0.03\n3.82\n364.26\n0.00\n\n\nagea\n0.02\n0.01\n2.76\n323.74\n0.01\n\n\nfemale\n-0.14\n0.18\n-0.77\n368.16\n0.44\n\n\nparedu_a_high\n0.23\n0.21\n1.08\n369.33\n0.28\n\n\nfmnoncntr\n-0.81\n0.44\n-1.85\n368.28\n0.07\n\n\n\n\n p values calculated using Kenward-Roger standard errors and d.f.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\nRandom Effects\n\n\n\nGroup\nParameter\nStd. Dev.\n\n\n\n\ncntry\n(Intercept)\n0.49\n\n\nResidual\n\n1.69\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\nGrouping Variables\n\n\n\nGroup\n# groups\nICC\n\n\n\ncntry\n8\n0.08\n\n\n\n\n\n\n\n\n\n\n\n\n\nÖsterman, Marcus. 2021. “Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust.” Social Indicators Research 154(1):211–33. doi: 10.1007/s11205-020-02529-y."
+    "text": "Fitting multilevel models\nResults: Covariate model:\n\n\n\n\n\nObservations\n400\n\n\nDependent variable\ntrustindex3\n\n\nType\nMixed effects linear regression\n\n\n\n \n\n\n\nAIC\n1596.38\n\n\nBIC\n1636.29\n\n\nPseudo-R² (fixed effects)\n0.01\n\n\nPseudo-R² (total)\n0.09\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nFixed Effects\n\n\n\n\nEst.\nS.E.\nt val.\nd.f.\np\n\n\n\n\n(Intercept)\n4.99\n0.24\n20.78\n12.55\n0.00\n\n\nreform1_7\n-0.08\n0.18\n-0.44\n389.72\n0.66\n\n\nfemaleFemale\n-0.06\n0.18\n-0.33\n388.44\n0.75\n\n\nblgetmg_dYes\n-0.31\n0.78\n-0.40\n386.02\n0.69\n\n\nfbrneurYes\n-0.86\n0.65\n-1.32\n388.17\n0.19\n\n\nmbrneurYes\n-0.09\n0.67\n-0.14\n386.60\n0.89\n\n\nfnotbrneurYes\n0.13\n1.24\n0.11\n387.14\n0.91\n\n\nmnotbrneurYes\n0.26\n1.76\n0.15\n388.70\n0.88\n\n\n\n\n p values calculated using Kenward-Roger standard errors and d.f.\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\nRandom Effects\n\n\n\nGroup\nParameter\nStd. Dev.\n\n\n\n\ncntry\n(Intercept)\n0.53\n\n\nResidual\n\n1.73\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\nGrouping Variables\n\n\n\nGroup\n# groups\nICC\n\n\n\ncntry\n8\n0.09\n\n\n\n\n\n\n\n\n\n\n\n\n\nÖsterman, Marcus. 2021. “Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust.” Social Indicators Research 154(1):211–33. doi: 10.1007/s11205-020-02529-y."
   },
   {
     "objectID": "application/week4.html",
@@ -1415,5 +1415,117 @@
       "Week 3",
       "Application"
     ]
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#multilevel-models-terminology",
+    "href": "slides/hss8005_w5.html#multilevel-models-terminology",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Multilevel models: terminology",
+    "text": "Multilevel models: terminology\nThe terminology surrounding multilevel models can be confusing. Different disciplines use various names for them, for example:\n\nVariance components\nRandom intercepts and slopes\nRandom effects\nRandom coefficients\nVarying coefficients\nIntercepts- and/or slopes-as-outcomes\nHierarchical linear models\nMultilevel models (implies multiple levels of hierarchically clustered data)\nGrowth curve models (possibly Latent GCM)\nMixed effects models"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#multilevel-models-terminology-1",
+    "href": "slides/hss8005_w5.html#multilevel-models-terminology-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Multilevel models: terminology",
+    "text": "Multilevel models: terminology\nThe terminology surrounding multilevel models can be confusing. Different disciplines use various names for them, for example:\n\n\nVariance components\nRandom intercepts and slopes\nRandom effects\nRandom coefficients\nVarying coefficients\nIntercepts- and/or slopes-as-outcomes\nHierarchical linear models\nMultilevel models (implies multiple levels of hierarchically clustered data)\nGrowth curve models (possibly Latent GCM)\nMixed effects models"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#multilevel-models-terminology-2",
+    "href": "slides/hss8005_w5.html#multilevel-models-terminology-2",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Multilevel models: terminology",
+    "text": "Multilevel models: terminology\nSome of these terms might be more historical, others are more often seen in a specific discipline, others might refer to a certain data structure, and still others are special cases (e.g. null models with no explanatory variables).\nRandom effects are simply those specific to an observational unit, however defined. In our examples We will mostly encounter the case where the observational unit is the level of some grouping factor, but this is only one possibility.\nMixed effects - or simply mixed - models generally refer to a mixture of fixed and random effects. This is probably the most general term, with no specific data structure implied."
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-1",
+    "href": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Application: Österman (2021)\n",
+    "text": "Application: Österman (2021)\n\nData from the Österman (2021) article Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust:\n\ncumulative European Social Survey (ESS) data: nine survey rounds (2002 to 2018)\ndata are weighted using ESS design weights (we will disregard this, so we can expect our results to differ somewhat)\nfollows the established approach of using a validated three-item scale to study generalised social trust"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-2",
+    "href": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-2",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Application: Österman (2021)\n",
+    "text": "Application: Österman (2021)\n\nThe outcome variable of interest is an eleven-point scale measure of social trust:\n\n\nThe scale consists of the classic trust question, an item on whether people try to be fair, and an item on whether people are helpful:\n\nGenerally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people?\n\nDo you think that most people would try to take advantage of you if they got the chance, or would they try to be fair?\n\nWould you say that most of the time people try to be helpful or that they are mostly looking out for themselves?\n\n\n\n\nAll of the items may be answered on a scale from 0 to 10 (where 10 represents the highest level of trust) and the scale is calculated as the mean of the three items\nThe three-item scale improves measurement reliability and cross-country validity compared to using a single item, such as the classic trust question."
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-3",
+    "href": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-3",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Application: Österman (2021)\n",
+    "text": "Application: Österman (2021)\n\nLet’s reduce the dataset for the purpose of our demonstrations to make it run faster:\n\n## Import the dataset\n\nosterman &lt;- data_read(\"https://cgmoreh.github.io/HSS8005/data/osterman_t3.dta\")\n\n## Set a seed for being able to reproduce the random sampling in the next step\nset.seed(1234)\n\n## Select countries and keep 50 respondents per country at random\nosterman &lt;- osterman %&gt;%\n  filter(cntry %in% c(\"GB\", \"IE\", \"DE\", \"FR\", \"HU\", \"PL\", \"PT\", \"ES\")) %&gt;%  \n  group_by(cntry) %&gt;% slice_sample(n=50) %&gt;% ungroup()"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-4",
+    "href": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-4",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Application: Österman (2021)\n",
+    "text": "Application: Österman (2021)\n\nOur dataset looks like this:\n\n\n\n\n\n\nVariable\nMean\nSD\nIQR\nMin\nMax\nSkewness\nKurtosis\nn\nn_Missing\n\n\n\ncntry\n4.50\n2.29\n4.50\n1.00\n8.00\n0.00\n-1.24\n400\n0\n\n\ndweight\n0.99\n0.41\n0.39\n0.03\n4.34\n1.77\n12.12\n400\n0\n\n\nppltrst\n4.72\n2.25\n3.00\n0.00\n10.00\n-0.24\n-0.40\n400\n0\n\n\npplfair\n5.31\n2.14\n3.00\n0.00\n10.00\n-0.51\n-0.06\n398\n2\n\n\npplhlp\n4.63\n2.29\n3.00\n0.00\n10.00\n-0.16\n-0.60\n399\n1\n\n\neduyrs25\n12.63\n4.20\n6.00\n0.00\n24.00\n-7.62e-03\n-0.08\n395\n5\n\n\nparedu_a_high\n1.32\n0.47\n1.00\n1.00\n2.00\n0.75\n-1.44\n379\n21\n\n\ntrustindex3\n4.89\n1.79\n2.33\n0.00\n9.00\n-0.49\n-0.03\n400\n0\n\n\nreform1_7\n0.46\n0.50\n1.00\n0.00\n1.00\n0.15\n-1.99\n400\n0\n\n\nreform_id_num\n14.16\n6.63\n12.25\n4.00\n26.00\n0.18\n-0.98\n400\n0\n\n\nfemale\n1.54\n0.50\n1.00\n1.00\n2.00\n-0.15\n-1.99\n400\n0\n\n\nagea\n52.49\n12.89\n18.00\n25.00\n80.00\n-0.37\n-0.51\n400\n0\n\n\nfbrneur\n1.03\n0.16\n0.00\n1.00\n2.00\n5.80\n31.80\n400\n0\n\n\nmbrneur\n1.02\n0.16\n0.00\n1.00\n2.00\n6.11\n35.48\n400\n0\n\n\nfnotbrneur\n1.01\n0.10\n0.00\n1.00\n2.00\n9.89\n96.22\n400\n0\n\n\nmnotbrneur\n1.00\n0.07\n0.00\n1.00\n2.00\n14.09\n197.48\n400\n0\n\n\nblgetmg_d\n1.01\n0.11\n0.00\n1.00\n2.00\n8.81\n75.97\n400\n0\n\n\nyrbrn\n1957.84\n12.66\n13.00\n1927.00\n1992.00\n0.60\n0.04\n400\n0\n\n\nessround\n4.94\n2.42\n4.00\n1.00\n9.00\n0.02\n-1.12\n400\n0"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-5",
+    "href": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-5",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Application: Österman (2021)\n",
+    "text": "Application: Österman (2021)\n\nThe country variable\n\n\n\n\n\n\n\nCountry (osterman$cntry) (character)\n\n\nValue\nN\nRaw %\nValid %\nCumulative %\n\n\n\n\nDE\n50\n12.50\n12.50\n12.50\n\n\nES\n50\n12.50\n12.50\n25.00\n\n\nFR\n50\n12.50\n12.50\n37.50\n\n\nGB\n50\n12.50\n12.50\n50.00\n\n\nHU\n50\n12.50\n12.50\n62.50\n\n\nIE\n50\n12.50\n12.50\n75.00\n\n\nPL\n50\n12.50\n12.50\n87.50\n\n\nPT\n50\n12.50\n12.50\n100.00\n\n\n(NA)\n0\n0.00\n(NA)\n(NA)\n\n\n\ntotal N=400 valid N=400"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-6",
+    "href": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-6",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Application: Österman (2021)\n",
+    "text": "Application: Österman (2021)\n\nIn our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.\nWith such data, it makes sense to allow regression coefficients to vary by group.\nSuch variation can already be achieved by simply including group indicators in a least squares regression framework.\nIn other words, we could extend our previous model like such:\n\\[trustindex3=\\beta_0+\\beta_1*eduyears25+\\beta_2*agea+\\beta_3*female+\\\\ +\\beta_4*{paredu}+\\beta_5*{fmnoncntr}+\\color{red}{\\beta_6*{cntry}}+error\\]"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-7",
+    "href": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-7",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Application: Österman (2021)\n",
+    "text": "Application: Österman (2021)\n\nLet’s start by fitting a single-level model of social trust as a function of education, age, gender, parental education and whether either of the parents were born abroad (i.e. the variable we computed earlier).\nMathematically, we fit the following model:\n\\[trustindex3=\\beta_0+\\beta_1*eduyears25+\\beta_2*agea+\\beta_3*female+\\\\ +\\beta_4*{paredu}+\\beta_5*{fmnoncntr}+error\\]"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#multilevel-data",
+    "href": "slides/hss8005_w5.html#multilevel-data",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Multilevel data",
+    "text": "Multilevel data\nIn our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations."
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#multilevel-data-1",
+    "href": "slides/hss8005_w5.html#multilevel-data-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Multilevel data",
+    "text": "Multilevel data\nIn our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations."
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#multilevel-data-2",
+    "href": "slides/hss8005_w5.html#multilevel-data-2",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Multilevel data",
+    "text": "Multilevel data\nIn our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations."
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#multilevel-data-3",
+    "href": "slides/hss8005_w5.html#multilevel-data-3",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Multilevel data",
+    "text": "Multilevel data\nIn our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations."
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#random-intercepts-and-random-effects",
+    "href": "slides/hss8005_w5.html#random-intercepts-and-random-effects",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Random intercepts and random effects",
+    "text": "Random intercepts and random effects"
+  },
+  {
+    "objectID": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-8",
+    "href": "slides/hss8005_w5.html#application-osterman2021canwetrusteducationfostering-8",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Application: Österman (2021)\n",
+    "text": "Application: Österman (2021)\n\nModel summary:\n\n\n\n\n\nObservations\n400\n\n\nDependent variable\ntrustindex3\n\n\nType\nOLS linear regression\n\n\n\n \n\n\n\nF(75,324)\n1.540\n\n\nR²\n0.263\n\n\nAdj. R²\n0.092\n\n\n\n \n\n\n\n\nEst.\n2.5%\n97.5%\nt val.\np\n\n\n\n(Intercept)\n29469.846\n-12688.876\n71628.568\n1.375\n0.170\n\n\nreform1_7\n0.025\n-0.757\n0.807\n0.063\n0.950\n\n\nfemaleFemale\n-0.024\n-0.406\n0.358\n-0.124\n0.901\n\n\nblgetmg_dYes\n-0.899\n-2.605\n0.806\n-1.037\n0.300\n\n\nfbrneurYes\n-1.060\n-2.403\n0.283\n-1.552\n0.122\n\n\nmbrneurYes\n0.169\n-1.204\n1.542\n0.242\n0.809\n\n\nfnotbrneurYes\n0.225\n-2.459\n2.910\n0.165\n0.869\n\n\nmnotbrneurYes\n0.347\n-3.405\n4.100\n0.182\n0.856\n\n\nfactor(essround)2\n0.971\n-0.307\n2.250\n1.495\n0.136\n\n\nfactor(essround)3\n2.076\n0.116\n4.035\n2.084\n0.038\n\n\nfactor(essround)4\n3.129\n0.294\n5.964\n2.171\n0.031\n\n\nfactor(essround)5\n4.097\n0.395\n7.799\n2.177\n0.030\n\n\nfactor(essround)6\n5.022\n0.417\n9.627\n2.145\n0.033\n\n\nfactor(essround)7\n6.382\n0.897\n11.868\n2.289\n0.023\n\n\nfactor(essround)8\n7.511\n1.205\n13.817\n2.343\n0.020\n\n\nfactor(essround)9\n7.815\n0.485\n15.146\n2.097\n0.037\n\n\nagea\n0.539\n-0.705\n1.784\n0.853\n0.395\n\n\nyrbrn\n-29.589\n-72.854\n13.677\n-1.345\n0.179\n\n\nI(agea^2)\n-0.010\n-0.020\n0.000\n-1.931\n0.054\n\n\nI(yrbrn^2)\n0.007\n-0.004\n0.019\n1.316\n0.189\n\n\nfactor(reform_id_num)7\n662.225\n-595.549\n1919.999\n1.036\n0.301\n\n\nfactor(reform_id_num)8\n-203.414\n-781.354\n374.526\n-0.692\n0.489\n\n\nfactor(reform_id_num)10\n61.107\n-845.801\n968.016\n0.133\n0.895\n\n\nfactor(reform_id_num)11\n-609.828\n-1232.251\n12.595\n-1.928\n0.055\n\n\nfactor(reform_id_num)12\n-772.168\n-2067.215\n522.879\n-1.173\n0.242\n\n\nfactor(reform_id_num)13\n-92.291\n-665.155\n480.574\n-0.317\n0.751\n\n\nfactor(reform_id_num)15\n-396.977\n-875.659\n81.705\n-1.632\n0.104\n\n\nfactor(reform_id_num)16\n143.466\n-451.642\n738.574\n0.474\n0.636\n\n\nfactor(reform_id_num)17\n1131.943\n-433.067\n2696.954\n1.423\n0.156\n\n\nfactor(reform_id_num)22\n-523.281\n-1013.983\n-32.579\n-2.098\n0.037\n\n\nfactor(reform_id_num)23\n-80.618\n-1716.372\n1555.136\n-0.097\n0.923\n\n\nfactor(reform_id_num)24\n-414.652\n-1069.579\n240.275\n-1.246\n0.214\n\n\nfactor(reform_id_num)25\n-69.812\n-783.036\n643.413\n-0.193\n0.847\n\n\nfactor(reform_id_num)26\n978.626\n-439.588\n2396.841\n1.358\n0.176\n\n\nyrbrn:factor(reform_id_num)7\n-0.338\n-0.971\n0.295\n-1.051\n0.294\n\n\nyrbrn:factor(reform_id_num)8\n0.127\n-0.161\n0.415\n0.866\n0.387\n\n\nyrbrn:factor(reform_id_num)10\n-0.008\n-0.465\n0.449\n-0.033\n0.973\n\n\nyrbrn:factor(reform_id_num)11\n0.330\n0.019\n0.640\n2.090\n0.037\n\n\nyrbrn:factor(reform_id_num)12\n0.465\n-0.188\n1.119\n1.401\n0.162\n\n\nyrbrn:factor(reform_id_num)13\n0.055\n-0.234\n0.345\n0.375\n0.708\n\n\nyrbrn:factor(reform_id_num)15\n0.211\n-0.036\n0.457\n1.679\n0.094\n\n\nyrbrn:factor(reform_id_num)16\n-0.066\n-0.368\n0.236\n-0.430\n0.667\n\n\nyrbrn:factor(reform_id_num)17\n-0.558\n-1.348\n0.233\n-1.388\n0.166\n\n\nyrbrn:factor(reform_id_num)22\n0.270\n0.021\n0.520\n2.129\n0.034\n\n\nyrbrn:factor(reform_id_num)23\n0.060\n-0.766\n0.887\n0.143\n0.886\n\n\nyrbrn:factor(reform_id_num)24\n0.219\n-0.130\n0.567\n1.235\n0.218\n\n\nyrbrn:factor(reform_id_num)25\n0.065\n-0.300\n0.430\n0.350\n0.726\n\n\nyrbrn:factor(reform_id_num)26\n-0.471\n-1.186\n0.243\n-1.297\n0.196\n\n\nagea:factor(reform_id_num)7\n0.915\n-1.245\n3.074\n0.833\n0.405\n\n\nagea:factor(reform_id_num)8\n-1.804\n-3.534\n-0.074\n-2.052\n0.041\n\n\nagea:factor(reform_id_num)10\n-2.040\n-3.952\n-0.127\n-2.098\n0.037\n\n\nagea:factor(reform_id_num)11\n-1.427\n-3.651\n0.798\n-1.262\n0.208\n\n\nagea:factor(reform_id_num)12\n-4.062\n-11.167\n3.044\n-1.125\n0.262\n\n\nagea:factor(reform_id_num)13\n-0.652\n-2.368\n1.065\n-0.747\n0.456\n\n\nagea:factor(reform_id_num)15\n-0.723\n-2.247\n0.800\n-0.934\n0.351\n\n\nagea:factor(reform_id_num)16\n-0.502\n-1.936\n0.932\n-0.689\n0.492\n\n\nagea:factor(reform_id_num)17\n-1.352\n-5.243\n2.539\n-0.684\n0.495\n\n\nagea:factor(reform_id_num)22\n-0.475\n-1.904\n0.955\n-0.654\n0.514\n\n\nagea:factor(reform_id_num)23\n-2.400\n-5.442\n0.643\n-1.551\n0.122\n\n\nagea:factor(reform_id_num)24\n-0.660\n-8.127\n6.807\n-0.174\n0.862\n\n\nagea:factor(reform_id_num)25\n-2.230\n-5.582\n1.121\n-1.309\n0.191\n\n\nagea:factor(reform_id_num)26\n-2.386\n-5.812\n1.040\n-1.370\n0.172\n\n\nI(agea^2):factor(reform_id_num)7\n-0.021\n-0.049\n0.007\n-1.453\n0.147\n\n\nI(agea^2):factor(reform_id_num)8\n0.018\n0.002\n0.034\n2.204\n0.028\n\n\nI(agea^2):factor(reform_id_num)10\n0.022\n0.002\n0.042\n2.162\n0.031\n\n\nI(agea^2):factor(reform_id_num)11\n0.014\n-0.005\n0.034\n1.443\n0.150\n\n\nI(agea^2):factor(reform_id_num)12\n0.032\n-0.018\n0.081\n1.255\n0.210\n\n\nI(agea^2):factor(reform_id_num)13\n0.007\n-0.009\n0.022\n0.834\n0.405\n\n\nI(agea^2):factor(reform_id_num)15\n0.008\n-0.005\n0.021\n1.223\n0.222\n\n\nI(agea^2):factor(reform_id_num)16\n0.005\n-0.009\n0.018\n0.680\n0.497\n\n\nI(agea^2):factor(reform_id_num)17\n0.017\n-0.044\n0.077\n0.536\n0.592\n\n\nI(agea^2):factor(reform_id_num)22\n0.006\n-0.006\n0.019\n0.992\n0.322\n\n\nI(agea^2):factor(reform_id_num)23\n0.035\n-0.011\n0.081\n1.509\n0.132\n\n\nI(agea^2):factor(reform_id_num)24\n0.008\n-0.053\n0.068\n0.244\n0.808\n\n\nI(agea^2):factor(reform_id_num)25\n0.021\n-0.010\n0.053\n1.331\n0.184\n\n\nI(agea^2):factor(reform_id_num)26\n0.029\n-0.022\n0.080\n1.127\n0.261\n\n\n\n\n Standard errors: OLS\n\n\n\n\n\n\n\n\n\n\nWe have interpreted this model in earlier weeks. Our interest now is in extending it to account for the nesting of cases within different countries."
   }
 ]

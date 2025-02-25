@@ -602,7 +602,7 @@ p.course-button a:hover {
 </ul>
 <p><img data-src="../pics/hierarchies/11-single2.png" class="fragment" style="width:40.0%"></p>
 </section><section id="a-brief-review-of-single-level-regression-2" class="slide level2"><h2>A brief review of single-level regression</h2>
-<p><img data-src="../pics/hierarchies/11-single3.png" width="547"></p>
+<p><img data-src="../pics/hierarchies/11-single3.png" width="550"></p>
 <ul>
 <li class="fragment"><p><strong>Observed</strong> part: our observation, outcome, estimate, etc.; the left-hand-side of the model</p></li>
 <li class="fragment"><p><strong>Fixed</strong> part: this can be a simple sample mean <span class="math inline">\((\mu)\)</span> of a single measurement as in our basic example (e.g.&nbsp;a social trust scale), but it can also be a regression equation containing several predictor variables, as we have seen in previous weeks (e.g.&nbsp;<span class="math inline">\(b_0 + b_{1i}x_{1i} + b_{2i}x_{2i} \cdots b_{pi}x_{pi}\)</span> for a model with <span class="math inline">\(p\)</span> number of predictors/independent variables)</p></li>
@@ -611,16 +611,69 @@ p.course-button a:hover {
 <ul>
 <li class="fragment">We also assume that the error term <span class="math inline">\((e)\)</span> is Normally distributed around a mean of 0 and has some variance <span class="math inline">\((\sigma^2)\)</span> that we are estimating</li>
 </ul>
-<p><img data-src="../pics/hierarchies/11-single4.png" width="546"></p>
-</section><section id="a-brief-review-of-single-level-regression-4" class="slide level2"><h2>A brief review of single-level regression</h2>
-<h4 id="an-applied-example">An applied example</h4>
+<p><img data-src="../pics/hierarchies/11-single4.png" width="550"></p>
+</section></section><section><section id="multilevel-models" class="title-slide slide level1 center" data-background-image="../pics/logo_anim.gif"><h1>Multilevel models</h1>
+
+</section><section id="multilevel-models-terminology" class="slide level2"><h2>Multilevel models: terminology</h2>
+<p>The terminology surrounding multilevel models can be confusing. Different disciplines use various names for them, for example:</p>
+<ul>
+<li class="fragment">Variance components</li>
+<li class="fragment">Random intercepts and slopes</li>
+<li class="fragment">Random effects</li>
+<li class="fragment">Random coefficients</li>
+<li class="fragment">Varying coefficients</li>
+<li class="fragment">Intercepts- and/or slopes-as-outcomes</li>
+<li class="fragment">Hierarchical linear models</li>
+<li class="fragment">Multilevel models (implies multiple levels of hierarchically clustered data)</li>
+<li class="fragment">Growth curve models (possibly Latent GCM)</li>
+<li class="fragment">Mixed effects models</li>
+</ul></section><section id="multilevel-models-terminology-1" class="slide level2"><h2>Multilevel models: terminology</h2>
+<p>The terminology surrounding multilevel models can be confusing. Different disciplines use various names for them, for example:</p>
+<div>
+<ul>
+<li>Variance components</li>
+<li>Random intercepts and slopes</li>
+<li><strong>Random effects</strong></li>
+<li>Random coefficients</li>
+<li>Varying coefficients</li>
+<li>Intercepts- and/or slopes-as-outcomes</li>
+<li>Hierarchical linear models</li>
+<li>Multilevel models (implies multiple levels of hierarchically clustered data)</li>
+<li>Growth curve models (possibly Latent GCM)</li>
+<li><strong>Mixed effects models</strong></li>
+</ul>
+</div>
+</section><section id="multilevel-models-terminology-2" class="slide level2"><h2>Multilevel models: terminology</h2>
+<p>Some of these terms might be more historical, others are more often seen in a specific discipline, others might refer to a certain data structure, and still others are special cases (e.g.&nbsp;<q>null</q> models with no explanatory variables).</p>
+<p><strong><em>Random effects</em></strong> are simply those specific to an observational unit, however defined. In our examples We will mostly encounter the case where the observational unit is the level of some grouping factor, but this is only one possibility.</p>
+<p><strong><em>Mixed effects</em></strong> - or simply <q>mixed</q> - models generally refer to a mixture of fixed and random effects. This is probably the most general term, with no specific data structure implied.</p>
+</section><section id="multilevel-data" class="slide level2"><h2>Multilevel data</h2>
+<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
+<p><img data-src="../pics/hierarchies/11-multi.png" width="631"></p>
+</section><section id="multilevel-data-1" class="slide level2"><h2>Multilevel data</h2>
+<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
+<p><img data-src="../pics/hierarchies/11-multi2a.png" width="631"></p>
+</section><section id="multilevel-data-2" class="slide level2"><h2>Multilevel data</h2>
+<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
+<p><img data-src="../pics/hierarchies/11-multi2.png" width="635"></p>
+</section><section id="multilevel-data-3" class="slide level2"><h2>Multilevel data</h2>
+<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
+<p><img data-src="../pics/hierarchies/11-multi3.png" width="632"></p>
+</section><section id="random-intercepts-and-random-effects" class="slide level2"><h2>Random intercepts and random effects</h2>
+<iframe src="http://mfviz.com/hierarchical-models/" height="90%" width="100%">
+</iframe>
+</section></section><section><section id="application-osterman2021canwetrusteducationfostering" class="title-slide slide level1 center" data-background-image="../pics/logo_anim.gif"><h1>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h1>
+
+</section><section id="application-osterman2021canwetrusteducationfostering-1" class="slide level2"><h2>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h2>
 <p>Data from the <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span> article <a href="http://www.diva-portal.org/smash/get/diva2:1503902/FULLTEXT01.pdf"><q>Can We Trust Education for Fostering Trust? Quasi-experimental Evidence on the Effect of Education and Tracking on Social Trust</q></a>:</p>
 <ul>
-<li class="fragment"><p>cumulative European Social Survey (ESS) data, consisting of nine rounds from 2002 to 2018</p></li>
+<li class="fragment"><p>cumulative European Social Survey (ESS) data: nine survey rounds (2002 to 2018)</p></li>
 <li class="fragment"><p>data are weighted using ESS design weights (we will disregard this, so we can expect our results to differ somewhat)</p></li>
 <li class="fragment"><p>follows <q>the established approach of using a validated three-item scale</q> to study generalised social trust</p></li>
-</ul></section><section id="a-brief-review-of-single-level-regression-5" class="slide level2"><h2>A brief review of single-level regression</h2>
-<h4 id="an-applied-example-1">An applied example</h4>
+</ul></section><section id="application-osterman2021canwetrusteducationfostering-2" class="slide level2"><h2>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h2>
 <p>The outcome variable of interest is an eleven-point scale measure of <q>social trust</q>:</p>
 <ul>
 <li class="fragment">
@@ -637,245 +690,1279 @@ p.course-button a:hover {
 </li>
 <li class="fragment"><p>All of the items may be answered on a scale from 0 to 10 (where 10 represents the highest level of trust) and the scale is calculated as the mean of the three items</p></li>
 <li class="fragment"><p>The three-item scale improves measurement reliability and cross-country validity compared to using a single item, such as the classic trust question.</p></li>
-</ul></section><section id="a-brief-review-of-single-level-regression-6" class="slide level2"><h2>A brief review of single-level regression</h2>
-<h4 id="an-applied-example-2">An applied example</h4>
-<p>We’ll select a few variables of interest to keep:</p>
+</ul></section><section id="application-osterman2021canwetrusteducationfostering-3" class="slide level2"><h2>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h2>
+<p>Let’s reduce the dataset for the purpose of our demonstrations to make it run faster:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>osterman <span class="ot">&lt;-</span> osterman <span class="sc">%&gt;%</span></span>
-<span id="cb1-2"><a></a>  <span class="fu">select</span>(<span class="st">"trustindex3"</span>, <span class="st">"cntry"</span>, <span class="st">"facntr"</span>, <span class="st">"mocntr"</span>, <span class="st">"female"</span>, <span class="st">"agea"</span>, <span class="st">"eduyrs25"</span>, <span class="st">"paredu_a_high"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="do">## Import the dataset</span></span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>osterman <span class="ot">&lt;-</span> <span class="fu">data_read</span>(<span class="st">"https://cgmoreh.github.io/HSS8005/data/osterman_t3.dta"</span>)</span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a><span class="do">## Set a seed for being able to reproduce the random sampling in the next step</span></span>
+<span id="cb1-6"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a><span class="do">## Select countries and keep 50 respondents per country at random</span></span>
+<span id="cb1-9"><a></a>osterman <span class="ot">&lt;-</span> osterman <span class="sc">%&gt;%</span></span>
+<span id="cb1-10"><a></a>  <span class="fu">filter</span>(cntry <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"GB"</span>, <span class="st">"IE"</span>, <span class="st">"DE"</span>, <span class="st">"FR"</span>, <span class="st">"HU"</span>, <span class="st">"PL"</span>, <span class="st">"PT"</span>, <span class="st">"ES"</span>)) <span class="sc">%&gt;%</span>  </span>
+<span id="cb1-11"><a></a>  <span class="fu">group_by</span>(cntry) <span class="sc">%&gt;%</span> <span class="fu">slice_sample</span>(<span class="at">n=</span><span class="dv">50</span>) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>And we’ll do some data wrangling; we’ll also reduce the dataset for the purpose of our demonstrations to make it run faster.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>osterman <span class="ot">&lt;-</span> osterman <span class="sc">%&gt;%</span></span>
-<span id="cb2-4"><a></a>  labelled<span class="sc">::</span><span class="fu">unlabelled</span>() <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-5"><a></a>  <span class="fu">filter</span>(cntry <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"GB"</span>, <span class="st">"IE"</span>, <span class="st">"DE"</span>, <span class="st">"FR"</span>, <span class="st">"HU"</span>, <span class="st">"PL"</span>, <span class="st">"PT"</span>, <span class="st">"ES"</span>)) <span class="sc">%&gt;%</span>  </span>
-<span id="cb2-6"><a></a>  <span class="fu">group_by</span>(cntry) <span class="sc">%&gt;%</span> <span class="fu">slice_sample</span>(<span class="at">n=</span><span class="dv">50</span>) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-7"><a></a>  <span class="fu">mutate</span>(<span class="at">cntry =</span> <span class="fu">as_factor</span>(cntry),</span>
-<span id="cb2-8"><a></a>         <span class="at">fmnoncntr =</span> <span class="fu">ifelse</span>(facntr<span class="sc">==</span><span class="dv">0</span> <span class="sc">|</span> mocntr<span class="sc">==</span><span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb2-9"><a></a>  sjlabelled<span class="sc">::</span><span class="fu">var_labels</span>( <span class="at">trustindex3 =</span> <span class="st">"Social trust scale"</span>,</span>
-<span id="cb2-10"><a></a>                          <span class="at">eduyrs25 =</span> <span class="st">"Years of full-time education"</span>,</span>
-<span id="cb2-11"><a></a>                          <span class="at">paredu_a_high =</span> <span class="st">"High parental education"</span>,</span>
-<span id="cb2-12"><a></a>                          <span class="at">fmnoncntr =</span> <span class="st">"Least one parent born abroad"</span></span>
-<span id="cb2-13"><a></a>                        )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="a-brief-review-of-single-level-regression-7" class="slide level2"><h2>A brief review of single-level regression</h2>
-<h4 id="an-applied-example-3">An applied example</h4>
-<p>Our variables of interest look like this:</p>
+</section><section id="application-osterman2021canwetrusteducationfostering-4" class="slide level2"><h2>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h2>
+<p>Our dataset looks like this:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="container st-container">
-<table class="table table-bordered table-striped st-table st-table-bordered st-table-striped st-descr-table caption-top" data-quarto-postprocess="true">
-<thead><tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">Mean</th>
-<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">Std.Dev</th>
-<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">Median</th>
-<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">Min</th>
-<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">Max</th>
-<th class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">N.Valid</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td><strong>agea</strong></td>
-<td><span>52.49</span></td>
-<td><span>12.89</span></td>
-<td><span>54.00</span></td>
-<td><span>25.00</span></td>
-<td><span>80.00</span></td>
-<td><span>400</span></td>
-</tr>
-<tr class="even">
-<td><strong>eduyrs25</strong></td>
-<td><span>12.63</span></td>
-<td><span>4.20</span></td>
-<td><span>12.00</span></td>
-<td><span>0.00</span></td>
-<td><span>24.00</span></td>
-<td><span>395</span></td>
-</tr>
-<tr class="odd">
-<td><strong>facntr</strong></td>
-<td><span>0.96</span></td>
-<td><span>0.19</span></td>
-<td><span>1.00</span></td>
-<td><span>0.00</span></td>
-<td><span>1.00</span></td>
-<td><span>400</span></td>
-</tr>
-<tr class="even">
-<td><strong>female</strong></td>
-<td><span>0.54</span></td>
-<td><span>0.50</span></td>
-<td><span>1.00</span></td>
-<td><span>0.00</span></td>
-<td><span>1.00</span></td>
-<td><span>400</span></td>
-</tr>
-<tr class="odd">
-<td><strong>fmnoncntr</strong></td>
-<td><span>0.05</span></td>
-<td><span>0.21</span></td>
-<td><span>0.00</span></td>
-<td><span>0.00</span></td>
-<td><span>1.00</span></td>
-<td><span>400</span></td>
-</tr>
-<tr class="even">
-<td><strong>mocntr</strong></td>
-<td><span>0.97</span></td>
-<td><span>0.17</span></td>
-<td><span>1.00</span></td>
-<td><span>0.00</span></td>
-<td><span>1.00</span></td>
-<td><span>400</span></td>
-</tr>
-<tr class="odd">
-<td><strong>paredu_a_high</strong></td>
-<td><span>0.32</span></td>
-<td><span>0.47</span></td>
-<td><span>0.00</span></td>
-<td><span>0.00</span></td>
-<td><span>1.00</span></td>
-<td><span>379</span></td>
-</tr>
-<tr class="even">
-<td><strong>trustindex3</strong></td>
-<td><span>4.89</span></td>
-<td><span>1.79</span></td>
-<td><span>5.00</span></td>
-<td><span>0.00</span></td>
-<td><span>9.00</span></td>
-<td><span>400</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section><section id="a-brief-review-of-single-level-regression-8" class="slide level2"><h2>A brief review of single-level regression</h2>
-<h4 id="an-applied-example-4">An applied example</h4>
-<p>The <q>country</q> variable</p>
-<div class="cell">
-<style type="text/css">
-table {
-  font-size: 14px;     
+<div id="orgbevsozi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#orgbevsozi table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#orgbevsozi thead, #orgbevsozi tbody, #orgbevsozi tfoot, #orgbevsozi tr, #orgbevsozi td, #orgbevsozi th {
+  border-style: none;
+}
+
+#orgbevsozi p {
+  margin: 0;
+  padding: 0;
+}
+
+#orgbevsozi .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#orgbevsozi .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#orgbevsozi .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#orgbevsozi .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#orgbevsozi .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#orgbevsozi .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#orgbevsozi .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#orgbevsozi .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#orgbevsozi .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#orgbevsozi .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#orgbevsozi .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#orgbevsozi .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#orgbevsozi .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#orgbevsozi .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#orgbevsozi .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#orgbevsozi .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#orgbevsozi .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#orgbevsozi .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#orgbevsozi .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#orgbevsozi .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#orgbevsozi .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#orgbevsozi .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#orgbevsozi .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#orgbevsozi .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#orgbevsozi .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#orgbevsozi .gt_left {
+  text-align: left;
+}
+
+#orgbevsozi .gt_center {
+  text-align: center;
+}
+
+#orgbevsozi .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#orgbevsozi .gt_font_normal {
+  font-weight: normal;
+}
+
+#orgbevsozi .gt_font_bold {
+  font-weight: bold;
+}
+
+#orgbevsozi .gt_font_italic {
+  font-style: italic;
+}
+
+#orgbevsozi .gt_super {
+  font-size: 65%;
+}
+
+#orgbevsozi .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#orgbevsozi .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#orgbevsozi .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#orgbevsozi .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#orgbevsozi .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#orgbevsozi .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#orgbevsozi .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#orgbevsozi .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#orgbevsozi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
 }
 </style>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="container st-container">
-<table class="table table-striped table-bordered st-table st-table-striped st-table-bordered st-freq-table caption-top" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th colspan="2" style="text-align: center;" data-quarto-table-cell-role="th"></th>
-<th colspan="2" class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">Valid</th>
-<th colspan="2" class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">Total</th>
-</tr>
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Variable</th>
+<th id="Mean" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Mean</th>
+<th id="SD" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">SD</th>
+<th id="IQR" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">IQR</th>
+<th id="Min" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Min</th>
+<th id="Max" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Max</th>
+<th id="Skewness" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Skewness</th>
+<th id="Kurtosis" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Kurtosis</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">n</th>
+<th id="n_Missing" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">n_Missing</th>
+</tr></thead>
+<tbody class="gt_table_body">
 <tr class="odd">
-<th style="text-align: center;" data-quarto-table-cell-role="th">cntry</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">Freq</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">%</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">% Cum.</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">%</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">% Cum.</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">DE</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">12.50</td>
+<td class="gt_row gt_left" headers="Variable">cntry</td>
+<td class="gt_row gt_center" headers="Mean">4.50</td>
+<td class="gt_row gt_center" headers="SD">2.29</td>
+<td class="gt_row gt_center" headers="IQR">4.50</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">8.00</td>
+<td class="gt_row gt_center" headers="Skewness">0.00</td>
+<td class="gt_row gt_center" headers="Kurtosis">-1.24</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
 </tr>
 <tr class="even">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">ES</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">25.00</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">25.00</td>
+<td class="gt_row gt_left" headers="Variable">dweight</td>
+<td class="gt_row gt_center" headers="Mean">0.99</td>
+<td class="gt_row gt_center" headers="SD">0.41</td>
+<td class="gt_row gt_center" headers="IQR">0.39</td>
+<td class="gt_row gt_center" headers="Min">0.03</td>
+<td class="gt_row gt_center" headers="Max">4.34</td>
+<td class="gt_row gt_center" headers="Skewness">1.77</td>
+<td class="gt_row gt_center" headers="Kurtosis">12.12</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
 </tr>
 <tr class="odd">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">FR</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">37.50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">37.50</td>
+<td class="gt_row gt_left" headers="Variable">ppltrst</td>
+<td class="gt_row gt_center" headers="Mean">4.72</td>
+<td class="gt_row gt_center" headers="SD">2.25</td>
+<td class="gt_row gt_center" headers="IQR">3.00</td>
+<td class="gt_row gt_center" headers="Min">0.00</td>
+<td class="gt_row gt_center" headers="Max">10.00</td>
+<td class="gt_row gt_center" headers="Skewness">-0.24</td>
+<td class="gt_row gt_center" headers="Kurtosis">-0.40</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
 </tr>
 <tr class="even">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">GB</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">50.00</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">50.00</td>
+<td class="gt_row gt_left" headers="Variable">pplfair</td>
+<td class="gt_row gt_center" headers="Mean">5.31</td>
+<td class="gt_row gt_center" headers="SD">2.14</td>
+<td class="gt_row gt_center" headers="IQR">3.00</td>
+<td class="gt_row gt_center" headers="Min">0.00</td>
+<td class="gt_row gt_center" headers="Max">10.00</td>
+<td class="gt_row gt_center" headers="Skewness">-0.51</td>
+<td class="gt_row gt_center" headers="Kurtosis">-0.06</td>
+<td class="gt_row gt_center" headers="n">398</td>
+<td class="gt_row gt_center" headers="n_Missing">2</td>
 </tr>
 <tr class="odd">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">HU</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">62.50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">62.50</td>
+<td class="gt_row gt_left" headers="Variable">pplhlp</td>
+<td class="gt_row gt_center" headers="Mean">4.63</td>
+<td class="gt_row gt_center" headers="SD">2.29</td>
+<td class="gt_row gt_center" headers="IQR">3.00</td>
+<td class="gt_row gt_center" headers="Min">0.00</td>
+<td class="gt_row gt_center" headers="Max">10.00</td>
+<td class="gt_row gt_center" headers="Skewness">-0.16</td>
+<td class="gt_row gt_center" headers="Kurtosis">-0.60</td>
+<td class="gt_row gt_center" headers="n">399</td>
+<td class="gt_row gt_center" headers="n_Missing">1</td>
 </tr>
 <tr class="even">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">IE</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">75.00</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">75.00</td>
+<td class="gt_row gt_left" headers="Variable">eduyrs25</td>
+<td class="gt_row gt_center" headers="Mean">12.63</td>
+<td class="gt_row gt_center" headers="SD">4.20</td>
+<td class="gt_row gt_center" headers="IQR">6.00</td>
+<td class="gt_row gt_center" headers="Min">0.00</td>
+<td class="gt_row gt_center" headers="Max">24.00</td>
+<td class="gt_row gt_center" headers="Skewness">-7.62e-03</td>
+<td class="gt_row gt_center" headers="Kurtosis">-0.08</td>
+<td class="gt_row gt_center" headers="n">395</td>
+<td class="gt_row gt_center" headers="n_Missing">5</td>
 </tr>
 <tr class="odd">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">PL</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">87.50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">87.50</td>
+<td class="gt_row gt_left" headers="Variable">paredu_a_high</td>
+<td class="gt_row gt_center" headers="Mean">1.32</td>
+<td class="gt_row gt_center" headers="SD">0.47</td>
+<td class="gt_row gt_center" headers="IQR">1.00</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">2.00</td>
+<td class="gt_row gt_center" headers="Skewness">0.75</td>
+<td class="gt_row gt_center" headers="Kurtosis">-1.44</td>
+<td class="gt_row gt_center" headers="n">379</td>
+<td class="gt_row gt_center" headers="n_Missing">21</td>
 </tr>
 <tr class="even">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">PT</td>
-<td style="text-align: center;">50</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">100.00</td>
-<td style="text-align: center;">12.50</td>
-<td style="text-align: center;">100.00</td>
+<td class="gt_row gt_left" headers="Variable">trustindex3</td>
+<td class="gt_row gt_center" headers="Mean">4.89</td>
+<td class="gt_row gt_center" headers="SD">1.79</td>
+<td class="gt_row gt_center" headers="IQR">2.33</td>
+<td class="gt_row gt_center" headers="Min">0.00</td>
+<td class="gt_row gt_center" headers="Max">9.00</td>
+<td class="gt_row gt_center" headers="Skewness">-0.49</td>
+<td class="gt_row gt_center" headers="Kurtosis">-0.03</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
 </tr>
 <tr class="odd">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">&lt;NA&gt;</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">0.00</td>
-<td style="text-align: center;">100.00</td>
+<td class="gt_row gt_left" headers="Variable">reform1_7</td>
+<td class="gt_row gt_center" headers="Mean">0.46</td>
+<td class="gt_row gt_center" headers="SD">0.50</td>
+<td class="gt_row gt_center" headers="IQR">1.00</td>
+<td class="gt_row gt_center" headers="Min">0.00</td>
+<td class="gt_row gt_center" headers="Max">1.00</td>
+<td class="gt_row gt_center" headers="Skewness">0.15</td>
+<td class="gt_row gt_center" headers="Kurtosis">-1.99</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
 </tr>
 <tr class="even">
-<td class="st-protect-top-border" style="text-align: center;" data-quarto-table-cell-role="th">Total</td>
-<td style="text-align: center;">400</td>
-<td style="text-align: center;">100.00</td>
-<td style="text-align: center;">100.00</td>
-<td style="text-align: center;">100.00</td>
-<td style="text-align: center;">100.00</td>
+<td class="gt_row gt_left" headers="Variable">reform_id_num</td>
+<td class="gt_row gt_center" headers="Mean">14.16</td>
+<td class="gt_row gt_center" headers="SD">6.63</td>
+<td class="gt_row gt_center" headers="IQR">12.25</td>
+<td class="gt_row gt_center" headers="Min">4.00</td>
+<td class="gt_row gt_center" headers="Max">26.00</td>
+<td class="gt_row gt_center" headers="Skewness">0.18</td>
+<td class="gt_row gt_center" headers="Kurtosis">-0.98</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">female</td>
+<td class="gt_row gt_center" headers="Mean">1.54</td>
+<td class="gt_row gt_center" headers="SD">0.50</td>
+<td class="gt_row gt_center" headers="IQR">1.00</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">2.00</td>
+<td class="gt_row gt_center" headers="Skewness">-0.15</td>
+<td class="gt_row gt_center" headers="Kurtosis">-1.99</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">agea</td>
+<td class="gt_row gt_center" headers="Mean">52.49</td>
+<td class="gt_row gt_center" headers="SD">12.89</td>
+<td class="gt_row gt_center" headers="IQR">18.00</td>
+<td class="gt_row gt_center" headers="Min">25.00</td>
+<td class="gt_row gt_center" headers="Max">80.00</td>
+<td class="gt_row gt_center" headers="Skewness">-0.37</td>
+<td class="gt_row gt_center" headers="Kurtosis">-0.51</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">fbrneur</td>
+<td class="gt_row gt_center" headers="Mean">1.03</td>
+<td class="gt_row gt_center" headers="SD">0.16</td>
+<td class="gt_row gt_center" headers="IQR">0.00</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">2.00</td>
+<td class="gt_row gt_center" headers="Skewness">5.80</td>
+<td class="gt_row gt_center" headers="Kurtosis">31.80</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">mbrneur</td>
+<td class="gt_row gt_center" headers="Mean">1.02</td>
+<td class="gt_row gt_center" headers="SD">0.16</td>
+<td class="gt_row gt_center" headers="IQR">0.00</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">2.00</td>
+<td class="gt_row gt_center" headers="Skewness">6.11</td>
+<td class="gt_row gt_center" headers="Kurtosis">35.48</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">fnotbrneur</td>
+<td class="gt_row gt_center" headers="Mean">1.01</td>
+<td class="gt_row gt_center" headers="SD">0.10</td>
+<td class="gt_row gt_center" headers="IQR">0.00</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">2.00</td>
+<td class="gt_row gt_center" headers="Skewness">9.89</td>
+<td class="gt_row gt_center" headers="Kurtosis">96.22</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">mnotbrneur</td>
+<td class="gt_row gt_center" headers="Mean">1.00</td>
+<td class="gt_row gt_center" headers="SD">0.07</td>
+<td class="gt_row gt_center" headers="IQR">0.00</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">2.00</td>
+<td class="gt_row gt_center" headers="Skewness">14.09</td>
+<td class="gt_row gt_center" headers="Kurtosis">197.48</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">blgetmg_d</td>
+<td class="gt_row gt_center" headers="Mean">1.01</td>
+<td class="gt_row gt_center" headers="SD">0.11</td>
+<td class="gt_row gt_center" headers="IQR">0.00</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">2.00</td>
+<td class="gt_row gt_center" headers="Skewness">8.81</td>
+<td class="gt_row gt_center" headers="Kurtosis">75.97</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">yrbrn</td>
+<td class="gt_row gt_center" headers="Mean">1957.84</td>
+<td class="gt_row gt_center" headers="SD">12.66</td>
+<td class="gt_row gt_center" headers="IQR">13.00</td>
+<td class="gt_row gt_center" headers="Min">1927.00</td>
+<td class="gt_row gt_center" headers="Max">1992.00</td>
+<td class="gt_row gt_center" headers="Skewness">0.60</td>
+<td class="gt_row gt_center" headers="Kurtosis">0.04</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">essround</td>
+<td class="gt_row gt_center" headers="Mean">4.94</td>
+<td class="gt_row gt_center" headers="SD">2.42</td>
+<td class="gt_row gt_center" headers="IQR">4.00</td>
+<td class="gt_row gt_center" headers="Min">1.00</td>
+<td class="gt_row gt_center" headers="Max">9.00</td>
+<td class="gt_row gt_center" headers="Skewness">0.02</td>
+<td class="gt_row gt_center" headers="Kurtosis">-1.12</td>
+<td class="gt_row gt_center" headers="n">400</td>
+<td class="gt_row gt_center" headers="n_Missing">0</td>
 </tr>
 </tbody>
+<tfoot class="gt_sourcenotes"><tr class="even">
+<td colspan="10" class="gt_sourcenote"></td>
+</tr></tfoot>
 </table>
 </div>
 </div>
 </div>
-</section><section id="a-brief-review-of-single-level-regression-9" class="slide level2"><h2>A brief review of single-level regression</h2>
-<h4 id="an-applied-example-5">An applied example</h4>
+</section><section id="application-osterman2021canwetrusteducationfostering-5" class="slide level2"><h2>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h2>
+<p>The <q>country</q> variable</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="gplxukzyyg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gplxukzyyg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gplxukzyyg thead, #gplxukzyyg tbody, #gplxukzyyg tfoot, #gplxukzyyg tr, #gplxukzyyg td, #gplxukzyyg th {
+  border-style: none;
+}
+
+#gplxukzyyg p {
+  margin: 0;
+  padding: 0;
+}
+
+#gplxukzyyg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gplxukzyyg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gplxukzyyg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gplxukzyyg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gplxukzyyg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gplxukzyyg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gplxukzyyg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gplxukzyyg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gplxukzyyg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gplxukzyyg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gplxukzyyg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gplxukzyyg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gplxukzyyg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gplxukzyyg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gplxukzyyg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gplxukzyyg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gplxukzyyg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gplxukzyyg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gplxukzyyg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gplxukzyyg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gplxukzyyg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gplxukzyyg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gplxukzyyg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gplxukzyyg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gplxukzyyg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gplxukzyyg .gt_left {
+  text-align: left;
+}
+
+#gplxukzyyg .gt_center {
+  text-align: center;
+}
+
+#gplxukzyyg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gplxukzyyg .gt_font_normal {
+  font-weight: normal;
+}
+
+#gplxukzyyg .gt_font_bold {
+  font-weight: bold;
+}
+
+#gplxukzyyg .gt_font_italic {
+  font-style: italic;
+}
+
+#gplxukzyyg .gt_super {
+  font-size: 65%;
+}
+
+#gplxukzyyg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gplxukzyyg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gplxukzyyg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gplxukzyyg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gplxukzyyg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gplxukzyyg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gplxukzyyg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#gplxukzyyg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#gplxukzyyg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="5" class="gt_heading gt_title gt_font_normal gt_bottom_border">Country (osterman$cntry) (character)</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="Value" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Value</th>
+<th id="N" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">N</th>
+<th id="Raw-%" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Raw %</th>
+<th id="Valid-%" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Valid %</th>
+<th id="Cumulative-%" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Cumulative %</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Value">DE</td>
+<td class="gt_row gt_center" headers="N">50</td>
+<td class="gt_row gt_center" headers="Raw %">12.50</td>
+<td class="gt_row gt_center" headers="Valid %">12.50</td>
+<td class="gt_row gt_center" headers="Cumulative %">12.50</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Value">ES</td>
+<td class="gt_row gt_center" headers="N">50</td>
+<td class="gt_row gt_center" headers="Raw %">12.50</td>
+<td class="gt_row gt_center" headers="Valid %">12.50</td>
+<td class="gt_row gt_center" headers="Cumulative %">25.00</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Value">FR</td>
+<td class="gt_row gt_center" headers="N">50</td>
+<td class="gt_row gt_center" headers="Raw %">12.50</td>
+<td class="gt_row gt_center" headers="Valid %">12.50</td>
+<td class="gt_row gt_center" headers="Cumulative %">37.50</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Value">GB</td>
+<td class="gt_row gt_center" headers="N">50</td>
+<td class="gt_row gt_center" headers="Raw %">12.50</td>
+<td class="gt_row gt_center" headers="Valid %">12.50</td>
+<td class="gt_row gt_center" headers="Cumulative %">50.00</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Value">HU</td>
+<td class="gt_row gt_center" headers="N">50</td>
+<td class="gt_row gt_center" headers="Raw %">12.50</td>
+<td class="gt_row gt_center" headers="Valid %">12.50</td>
+<td class="gt_row gt_center" headers="Cumulative %">62.50</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Value">IE</td>
+<td class="gt_row gt_center" headers="N">50</td>
+<td class="gt_row gt_center" headers="Raw %">12.50</td>
+<td class="gt_row gt_center" headers="Valid %">12.50</td>
+<td class="gt_row gt_center" headers="Cumulative %">75.00</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Value">PL</td>
+<td class="gt_row gt_center" headers="N">50</td>
+<td class="gt_row gt_center" headers="Raw %">12.50</td>
+<td class="gt_row gt_center" headers="Valid %">12.50</td>
+<td class="gt_row gt_center" headers="Cumulative %">87.50</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Value">PT</td>
+<td class="gt_row gt_center" headers="N">50</td>
+<td class="gt_row gt_center" headers="Raw %">12.50</td>
+<td class="gt_row gt_center" headers="Valid %">12.50</td>
+<td class="gt_row gt_center" headers="Cumulative %">100.00</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Value">(NA)</td>
+<td class="gt_row gt_center" headers="N">0</td>
+<td class="gt_row gt_center" headers="Raw %">0.00</td>
+<td class="gt_row gt_center" headers="Valid %">(NA)</td>
+<td class="gt_row gt_center" headers="Cumulative %">(NA)</td>
+</tr>
+</tbody>
+<tfoot class="gt_sourcenotes"><tr class="odd">
+<td colspan="5" class="gt_sourcenote">total N=400 valid N=400</td>
+</tr></tfoot>
+</table>
+</div>
+</div>
+</div>
+</section><section id="application-osterman2021canwetrusteducationfostering-6" class="slide level2"><h2>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h2>
+<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
+<p>With such data, it makes sense to allow regression coefficients to vary by group.</p>
+<p>Such variation can already be achieved by simply including group indicators in a least squares regression framework.</p>
+<p>In other words, we could extend our previous model like such:</p>
+<p><span class="math display">\[trustindex3=\beta_0+\beta_1*eduyears25+\beta_2*agea+\beta_3*female+\\ +\beta_4*{paredu}+\beta_5*{fmnoncntr}+\color{red}{\beta_6*{cntry}}+error\]</span></p>
+</section><section id="application-osterman2021canwetrusteducationfostering-7" class="slide level2"><h2>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h2>
 <p>Let’s start by fitting a single-level model of social trust as a function of education, age, gender, parental education and whether either of the parents were born abroad (i.e.&nbsp;the variable we computed earlier).</p>
 <p>Mathematically, we fit the following model:</p>
 <p><span class="math display">\[trustindex3=\beta_0+\beta_1*eduyears25+\beta_2*agea+\beta_3*female+\\ +\beta_4*{paredu}+\beta_5*{fmnoncntr}+error\]</span></p>
-</section><section id="a-brief-review-of-single-level-regression-10" class="slide level2"><h2>A brief review of single-level regression</h2>
-<h4 id="an-applied-example-6">An applied example</h4>
+</section><section id="application-osterman2021canwetrusteducationfostering-8" class="slide level2"><h2>Application: <span class="citation" data-cites="Osterman2021CanWeTrustEducationFostering">Österman (<a href="#/fitting-multilevel-models-2" role="doc-biblioref" onclick="">2021</a>)</span>
+</h2>
 <p>Model summary:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -883,7 +1970,7 @@ table {
 <table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;"><tbody>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">Observations</td>
-<td style="text-align: right;">376 (24 missing obs. deleted)</td>
+<td style="text-align: right;">400</td>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold;">Dependent variable</td>
@@ -899,16 +1986,16 @@ table {
 <div class="table-responsive">
 <table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;"><tbody>
 <tr class="odd">
-<td style="text-align: left; font-weight: bold;">F(5,370)</td>
-<td style="text-align: right;">7.593</td>
+<td style="text-align: left; font-weight: bold;">F(75,324)</td>
+<td style="text-align: right;">1.540</td>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold;">R²</td>
-<td style="text-align: right;">0.093</td>
+<td style="text-align: right;">0.263</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">Adj. R²</td>
-<td style="text-align: right;">0.081</td>
+<td style="text-align: right;">0.092</td>
 </tr>
 </tbody></table>
 </div>
@@ -926,51 +2013,611 @@ table {
 <tbody>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">(Intercept)</td>
-<td style="text-align: right;">2.551</td>
-<td style="text-align: right;">1.454</td>
-<td style="text-align: right;">3.648</td>
-<td style="text-align: right;">4.572</td>
-<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">29469.846</td>
+<td style="text-align: right;">-12688.876</td>
+<td style="text-align: right;">71628.568</td>
+<td style="text-align: right;">1.375</td>
+<td style="text-align: right;">0.170</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; font-weight: bold;">eduyrs25</td>
-<td style="text-align: right;">0.110</td>
-<td style="text-align: right;">0.062</td>
-<td style="text-align: right;">0.157</td>
-<td style="text-align: right;">4.537</td>
-<td style="text-align: right;">0.000</td>
+<td style="text-align: left; font-weight: bold;">reform1_7</td>
+<td style="text-align: right;">0.025</td>
+<td style="text-align: right;">-0.757</td>
+<td style="text-align: right;">0.807</td>
+<td style="text-align: right;">0.063</td>
+<td style="text-align: right;">0.950</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">femaleFemale</td>
+<td style="text-align: right;">-0.024</td>
+<td style="text-align: right;">-0.406</td>
+<td style="text-align: right;">0.358</td>
+<td style="text-align: right;">-0.124</td>
+<td style="text-align: right;">0.901</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">blgetmg_dYes</td>
+<td style="text-align: right;">-0.899</td>
+<td style="text-align: right;">-2.605</td>
+<td style="text-align: right;">0.806</td>
+<td style="text-align: right;">-1.037</td>
+<td style="text-align: right;">0.300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">fbrneurYes</td>
+<td style="text-align: right;">-1.060</td>
+<td style="text-align: right;">-2.403</td>
+<td style="text-align: right;">0.283</td>
+<td style="text-align: right;">-1.552</td>
+<td style="text-align: right;">0.122</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">mbrneurYes</td>
+<td style="text-align: right;">0.169</td>
+<td style="text-align: right;">-1.204</td>
+<td style="text-align: right;">1.542</td>
+<td style="text-align: right;">0.242</td>
+<td style="text-align: right;">0.809</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">fnotbrneurYes</td>
+<td style="text-align: right;">0.225</td>
+<td style="text-align: right;">-2.459</td>
+<td style="text-align: right;">2.910</td>
+<td style="text-align: right;">0.165</td>
+<td style="text-align: right;">0.869</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">mnotbrneurYes</td>
+<td style="text-align: right;">0.347</td>
+<td style="text-align: right;">-3.405</td>
+<td style="text-align: right;">4.100</td>
+<td style="text-align: right;">0.182</td>
+<td style="text-align: right;">0.856</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(essround)2</td>
+<td style="text-align: right;">0.971</td>
+<td style="text-align: right;">-0.307</td>
+<td style="text-align: right;">2.250</td>
+<td style="text-align: right;">1.495</td>
+<td style="text-align: right;">0.136</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(essround)3</td>
+<td style="text-align: right;">2.076</td>
+<td style="text-align: right;">0.116</td>
+<td style="text-align: right;">4.035</td>
+<td style="text-align: right;">2.084</td>
+<td style="text-align: right;">0.038</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(essround)4</td>
+<td style="text-align: right;">3.129</td>
+<td style="text-align: right;">0.294</td>
+<td style="text-align: right;">5.964</td>
+<td style="text-align: right;">2.171</td>
+<td style="text-align: right;">0.031</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(essround)5</td>
+<td style="text-align: right;">4.097</td>
+<td style="text-align: right;">0.395</td>
+<td style="text-align: right;">7.799</td>
+<td style="text-align: right;">2.177</td>
+<td style="text-align: right;">0.030</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(essround)6</td>
+<td style="text-align: right;">5.022</td>
+<td style="text-align: right;">0.417</td>
+<td style="text-align: right;">9.627</td>
+<td style="text-align: right;">2.145</td>
+<td style="text-align: right;">0.033</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(essround)7</td>
+<td style="text-align: right;">6.382</td>
+<td style="text-align: right;">0.897</td>
+<td style="text-align: right;">11.868</td>
+<td style="text-align: right;">2.289</td>
+<td style="text-align: right;">0.023</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(essround)8</td>
+<td style="text-align: right;">7.511</td>
+<td style="text-align: right;">1.205</td>
+<td style="text-align: right;">13.817</td>
+<td style="text-align: right;">2.343</td>
+<td style="text-align: right;">0.020</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(essround)9</td>
+<td style="text-align: right;">7.815</td>
+<td style="text-align: right;">0.485</td>
+<td style="text-align: right;">15.146</td>
+<td style="text-align: right;">2.097</td>
+<td style="text-align: right;">0.037</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">agea</td>
-<td style="text-align: right;">0.020</td>
-<td style="text-align: right;">0.005</td>
-<td style="text-align: right;">0.034</td>
-<td style="text-align: right;">2.656</td>
-<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.539</td>
+<td style="text-align: right;">-0.705</td>
+<td style="text-align: right;">1.784</td>
+<td style="text-align: right;">0.853</td>
+<td style="text-align: right;">0.395</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; font-weight: bold;">female</td>
-<td style="text-align: right;">-0.204</td>
-<td style="text-align: right;">-0.559</td>
-<td style="text-align: right;">0.151</td>
-<td style="text-align: right;">-1.131</td>
-<td style="text-align: right;">0.259</td>
+<td style="text-align: left; font-weight: bold;">yrbrn</td>
+<td style="text-align: right;">-29.589</td>
+<td style="text-align: right;">-72.854</td>
+<td style="text-align: right;">13.677</td>
+<td style="text-align: right;">-1.345</td>
+<td style="text-align: right;">0.179</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left; font-weight: bold;">paredu_a_high</td>
-<td style="text-align: right;">0.229</td>
-<td style="text-align: right;">-0.185</td>
-<td style="text-align: right;">0.643</td>
-<td style="text-align: right;">1.088</td>
-<td style="text-align: right;">0.277</td>
+<td style="text-align: left; font-weight: bold;">I(agea^2)</td>
+<td style="text-align: right;">-0.010</td>
+<td style="text-align: right;">-0.020</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">-1.931</td>
+<td style="text-align: right;">0.054</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; font-weight: bold;">fmnoncntr</td>
-<td style="text-align: right;">-0.954</td>
-<td style="text-align: right;">-1.833</td>
-<td style="text-align: right;">-0.075</td>
-<td style="text-align: right;">-2.134</td>
-<td style="text-align: right;">0.033</td>
+<td style="text-align: left; font-weight: bold;">I(yrbrn^2)</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">-0.004</td>
+<td style="text-align: right;">0.019</td>
+<td style="text-align: right;">1.316</td>
+<td style="text-align: right;">0.189</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)7</td>
+<td style="text-align: right;">662.225</td>
+<td style="text-align: right;">-595.549</td>
+<td style="text-align: right;">1919.999</td>
+<td style="text-align: right;">1.036</td>
+<td style="text-align: right;">0.301</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)8</td>
+<td style="text-align: right;">-203.414</td>
+<td style="text-align: right;">-781.354</td>
+<td style="text-align: right;">374.526</td>
+<td style="text-align: right;">-0.692</td>
+<td style="text-align: right;">0.489</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)10</td>
+<td style="text-align: right;">61.107</td>
+<td style="text-align: right;">-845.801</td>
+<td style="text-align: right;">968.016</td>
+<td style="text-align: right;">0.133</td>
+<td style="text-align: right;">0.895</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)11</td>
+<td style="text-align: right;">-609.828</td>
+<td style="text-align: right;">-1232.251</td>
+<td style="text-align: right;">12.595</td>
+<td style="text-align: right;">-1.928</td>
+<td style="text-align: right;">0.055</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)12</td>
+<td style="text-align: right;">-772.168</td>
+<td style="text-align: right;">-2067.215</td>
+<td style="text-align: right;">522.879</td>
+<td style="text-align: right;">-1.173</td>
+<td style="text-align: right;">0.242</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)13</td>
+<td style="text-align: right;">-92.291</td>
+<td style="text-align: right;">-665.155</td>
+<td style="text-align: right;">480.574</td>
+<td style="text-align: right;">-0.317</td>
+<td style="text-align: right;">0.751</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)15</td>
+<td style="text-align: right;">-396.977</td>
+<td style="text-align: right;">-875.659</td>
+<td style="text-align: right;">81.705</td>
+<td style="text-align: right;">-1.632</td>
+<td style="text-align: right;">0.104</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)16</td>
+<td style="text-align: right;">143.466</td>
+<td style="text-align: right;">-451.642</td>
+<td style="text-align: right;">738.574</td>
+<td style="text-align: right;">0.474</td>
+<td style="text-align: right;">0.636</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)17</td>
+<td style="text-align: right;">1131.943</td>
+<td style="text-align: right;">-433.067</td>
+<td style="text-align: right;">2696.954</td>
+<td style="text-align: right;">1.423</td>
+<td style="text-align: right;">0.156</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)22</td>
+<td style="text-align: right;">-523.281</td>
+<td style="text-align: right;">-1013.983</td>
+<td style="text-align: right;">-32.579</td>
+<td style="text-align: right;">-2.098</td>
+<td style="text-align: right;">0.037</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)23</td>
+<td style="text-align: right;">-80.618</td>
+<td style="text-align: right;">-1716.372</td>
+<td style="text-align: right;">1555.136</td>
+<td style="text-align: right;">-0.097</td>
+<td style="text-align: right;">0.923</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)24</td>
+<td style="text-align: right;">-414.652</td>
+<td style="text-align: right;">-1069.579</td>
+<td style="text-align: right;">240.275</td>
+<td style="text-align: right;">-1.246</td>
+<td style="text-align: right;">0.214</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)25</td>
+<td style="text-align: right;">-69.812</td>
+<td style="text-align: right;">-783.036</td>
+<td style="text-align: right;">643.413</td>
+<td style="text-align: right;">-0.193</td>
+<td style="text-align: right;">0.847</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">factor(reform_id_num)26</td>
+<td style="text-align: right;">978.626</td>
+<td style="text-align: right;">-439.588</td>
+<td style="text-align: right;">2396.841</td>
+<td style="text-align: right;">1.358</td>
+<td style="text-align: right;">0.176</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)7</td>
+<td style="text-align: right;">-0.338</td>
+<td style="text-align: right;">-0.971</td>
+<td style="text-align: right;">0.295</td>
+<td style="text-align: right;">-1.051</td>
+<td style="text-align: right;">0.294</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)8</td>
+<td style="text-align: right;">0.127</td>
+<td style="text-align: right;">-0.161</td>
+<td style="text-align: right;">0.415</td>
+<td style="text-align: right;">0.866</td>
+<td style="text-align: right;">0.387</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)10</td>
+<td style="text-align: right;">-0.008</td>
+<td style="text-align: right;">-0.465</td>
+<td style="text-align: right;">0.449</td>
+<td style="text-align: right;">-0.033</td>
+<td style="text-align: right;">0.973</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)11</td>
+<td style="text-align: right;">0.330</td>
+<td style="text-align: right;">0.019</td>
+<td style="text-align: right;">0.640</td>
+<td style="text-align: right;">2.090</td>
+<td style="text-align: right;">0.037</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)12</td>
+<td style="text-align: right;">0.465</td>
+<td style="text-align: right;">-0.188</td>
+<td style="text-align: right;">1.119</td>
+<td style="text-align: right;">1.401</td>
+<td style="text-align: right;">0.162</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)13</td>
+<td style="text-align: right;">0.055</td>
+<td style="text-align: right;">-0.234</td>
+<td style="text-align: right;">0.345</td>
+<td style="text-align: right;">0.375</td>
+<td style="text-align: right;">0.708</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)15</td>
+<td style="text-align: right;">0.211</td>
+<td style="text-align: right;">-0.036</td>
+<td style="text-align: right;">0.457</td>
+<td style="text-align: right;">1.679</td>
+<td style="text-align: right;">0.094</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)16</td>
+<td style="text-align: right;">-0.066</td>
+<td style="text-align: right;">-0.368</td>
+<td style="text-align: right;">0.236</td>
+<td style="text-align: right;">-0.430</td>
+<td style="text-align: right;">0.667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)17</td>
+<td style="text-align: right;">-0.558</td>
+<td style="text-align: right;">-1.348</td>
+<td style="text-align: right;">0.233</td>
+<td style="text-align: right;">-1.388</td>
+<td style="text-align: right;">0.166</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)22</td>
+<td style="text-align: right;">0.270</td>
+<td style="text-align: right;">0.021</td>
+<td style="text-align: right;">0.520</td>
+<td style="text-align: right;">2.129</td>
+<td style="text-align: right;">0.034</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)23</td>
+<td style="text-align: right;">0.060</td>
+<td style="text-align: right;">-0.766</td>
+<td style="text-align: right;">0.887</td>
+<td style="text-align: right;">0.143</td>
+<td style="text-align: right;">0.886</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)24</td>
+<td style="text-align: right;">0.219</td>
+<td style="text-align: right;">-0.130</td>
+<td style="text-align: right;">0.567</td>
+<td style="text-align: right;">1.235</td>
+<td style="text-align: right;">0.218</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)25</td>
+<td style="text-align: right;">0.065</td>
+<td style="text-align: right;">-0.300</td>
+<td style="text-align: right;">0.430</td>
+<td style="text-align: right;">0.350</td>
+<td style="text-align: right;">0.726</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">yrbrn:factor(reform_id_num)26</td>
+<td style="text-align: right;">-0.471</td>
+<td style="text-align: right;">-1.186</td>
+<td style="text-align: right;">0.243</td>
+<td style="text-align: right;">-1.297</td>
+<td style="text-align: right;">0.196</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)7</td>
+<td style="text-align: right;">0.915</td>
+<td style="text-align: right;">-1.245</td>
+<td style="text-align: right;">3.074</td>
+<td style="text-align: right;">0.833</td>
+<td style="text-align: right;">0.405</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)8</td>
+<td style="text-align: right;">-1.804</td>
+<td style="text-align: right;">-3.534</td>
+<td style="text-align: right;">-0.074</td>
+<td style="text-align: right;">-2.052</td>
+<td style="text-align: right;">0.041</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)10</td>
+<td style="text-align: right;">-2.040</td>
+<td style="text-align: right;">-3.952</td>
+<td style="text-align: right;">-0.127</td>
+<td style="text-align: right;">-2.098</td>
+<td style="text-align: right;">0.037</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)11</td>
+<td style="text-align: right;">-1.427</td>
+<td style="text-align: right;">-3.651</td>
+<td style="text-align: right;">0.798</td>
+<td style="text-align: right;">-1.262</td>
+<td style="text-align: right;">0.208</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)12</td>
+<td style="text-align: right;">-4.062</td>
+<td style="text-align: right;">-11.167</td>
+<td style="text-align: right;">3.044</td>
+<td style="text-align: right;">-1.125</td>
+<td style="text-align: right;">0.262</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)13</td>
+<td style="text-align: right;">-0.652</td>
+<td style="text-align: right;">-2.368</td>
+<td style="text-align: right;">1.065</td>
+<td style="text-align: right;">-0.747</td>
+<td style="text-align: right;">0.456</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)15</td>
+<td style="text-align: right;">-0.723</td>
+<td style="text-align: right;">-2.247</td>
+<td style="text-align: right;">0.800</td>
+<td style="text-align: right;">-0.934</td>
+<td style="text-align: right;">0.351</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)16</td>
+<td style="text-align: right;">-0.502</td>
+<td style="text-align: right;">-1.936</td>
+<td style="text-align: right;">0.932</td>
+<td style="text-align: right;">-0.689</td>
+<td style="text-align: right;">0.492</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)17</td>
+<td style="text-align: right;">-1.352</td>
+<td style="text-align: right;">-5.243</td>
+<td style="text-align: right;">2.539</td>
+<td style="text-align: right;">-0.684</td>
+<td style="text-align: right;">0.495</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)22</td>
+<td style="text-align: right;">-0.475</td>
+<td style="text-align: right;">-1.904</td>
+<td style="text-align: right;">0.955</td>
+<td style="text-align: right;">-0.654</td>
+<td style="text-align: right;">0.514</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)23</td>
+<td style="text-align: right;">-2.400</td>
+<td style="text-align: right;">-5.442</td>
+<td style="text-align: right;">0.643</td>
+<td style="text-align: right;">-1.551</td>
+<td style="text-align: right;">0.122</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)24</td>
+<td style="text-align: right;">-0.660</td>
+<td style="text-align: right;">-8.127</td>
+<td style="text-align: right;">6.807</td>
+<td style="text-align: right;">-0.174</td>
+<td style="text-align: right;">0.862</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)25</td>
+<td style="text-align: right;">-2.230</td>
+<td style="text-align: right;">-5.582</td>
+<td style="text-align: right;">1.121</td>
+<td style="text-align: right;">-1.309</td>
+<td style="text-align: right;">0.191</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">agea:factor(reform_id_num)26</td>
+<td style="text-align: right;">-2.386</td>
+<td style="text-align: right;">-5.812</td>
+<td style="text-align: right;">1.040</td>
+<td style="text-align: right;">-1.370</td>
+<td style="text-align: right;">0.172</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)7</td>
+<td style="text-align: right;">-0.021</td>
+<td style="text-align: right;">-0.049</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">-1.453</td>
+<td style="text-align: right;">0.147</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)8</td>
+<td style="text-align: right;">0.018</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.034</td>
+<td style="text-align: right;">2.204</td>
+<td style="text-align: right;">0.028</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)10</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.042</td>
+<td style="text-align: right;">2.162</td>
+<td style="text-align: right;">0.031</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)11</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">-0.005</td>
+<td style="text-align: right;">0.034</td>
+<td style="text-align: right;">1.443</td>
+<td style="text-align: right;">0.150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)12</td>
+<td style="text-align: right;">0.032</td>
+<td style="text-align: right;">-0.018</td>
+<td style="text-align: right;">0.081</td>
+<td style="text-align: right;">1.255</td>
+<td style="text-align: right;">0.210</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)13</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">-0.009</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">0.834</td>
+<td style="text-align: right;">0.405</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)15</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">-0.005</td>
+<td style="text-align: right;">0.021</td>
+<td style="text-align: right;">1.223</td>
+<td style="text-align: right;">0.222</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)16</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">-0.009</td>
+<td style="text-align: right;">0.018</td>
+<td style="text-align: right;">0.680</td>
+<td style="text-align: right;">0.497</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)17</td>
+<td style="text-align: right;">0.017</td>
+<td style="text-align: right;">-0.044</td>
+<td style="text-align: right;">0.077</td>
+<td style="text-align: right;">0.536</td>
+<td style="text-align: right;">0.592</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)22</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">-0.006</td>
+<td style="text-align: right;">0.019</td>
+<td style="text-align: right;">0.992</td>
+<td style="text-align: right;">0.322</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)23</td>
+<td style="text-align: right;">0.035</td>
+<td style="text-align: right;">-0.011</td>
+<td style="text-align: right;">0.081</td>
+<td style="text-align: right;">1.509</td>
+<td style="text-align: right;">0.132</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)24</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">-0.053</td>
+<td style="text-align: right;">0.068</td>
+<td style="text-align: right;">0.244</td>
+<td style="text-align: right;">0.808</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)25</td>
+<td style="text-align: right;">0.021</td>
+<td style="text-align: right;">-0.010</td>
+<td style="text-align: right;">0.053</td>
+<td style="text-align: right;">1.331</td>
+<td style="text-align: right;">0.184</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">I(agea^2):factor(reform_id_num)26</td>
+<td style="text-align: right;">0.029</td>
+<td style="text-align: right;">-0.022</td>
+<td style="text-align: right;">0.080</td>
+<td style="text-align: right;">1.127</td>
+<td style="text-align: right;">0.261</td>
 </tr>
 </tbody>
 <tfoot><tr class="odd">
@@ -987,56 +2634,21 @@ table {
 </div>
 </div>
 <p>We have interpreted this model in earlier weeks. Our interest now is in extending it to account for the nesting of cases within different countries.</p>
-</section></section><section><section id="multilevel-models" class="title-slide slide level1 center" data-background-image="../pics/logo_anim.gif"><h1>Multilevel models</h1>
-
-</section><section id="multilevel-models-1" class="slide level2"><h2>Multilevel models</h2>
-<p>The terminology surrounding multilevel models can be confusing. Different disciplines use various names for them, for example:</p>
-<ul>
-<li class="fragment">Variance components</li>
-<li class="fragment">Random intercepts and slopes</li>
-<li class="fragment">Random effects</li>
-<li class="fragment">Random coefficients</li>
-<li class="fragment">Varying coefficients</li>
-<li class="fragment">Intercepts- and/or slopes-as-outcomes</li>
-<li class="fragment">Hierarchical linear models</li>
-<li class="fragment">Multilevel models (implies multiple levels of hierarchically clustered data)</li>
-<li class="fragment">Growth curve models (possibly Latent GCM)</li>
-<li class="fragment">Mixed effects models</li>
-</ul></section><section id="multilevel-models-2" class="slide level2"><h2>Multilevel models</h2>
-<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
-<p><img data-src="../pics/hierarchies/11-multi.png" width="631"></p>
-</section><section id="multilevel-models-3" class="slide level2"><h2>Multilevel models</h2>
-<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
-<p><img data-src="../pics/hierarchies/11-multi2a.png" width="631"></p>
-</section><section id="multilevel-models-4" class="slide level2"><h2>Multilevel models</h2>
-<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
-<p><img data-src="../pics/hierarchies/11-multi2.png" width="635"></p>
-</section><section id="multilevel-models-5" class="slide level2"><h2>Multilevel models</h2>
-<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
-<p><img data-src="../pics/hierarchies/11-multi3.png" width="632"></p>
-</section><section id="multilevel-models-6" class="slide level2"><h2>Multilevel models</h2>
-<iframe src="http://mfviz.com/hierarchical-models/" height="90%" width="100%">
-</iframe>
-</section><section id="multilevel-models-7" class="slide level2"><h2>Multilevel models</h2>
-<p>In our dataset we cannot assume that the observations are fully independent (or that the errors are independently distributed). We know that observations were sampled from within selected countries, so the countries are cluster variables that may have a group-level influence on the behaviour, opinions, conditions etc. of our individual observations.</p>
-<p>With such data, it makes sense to allow regression coefficients to vary by group.</p>
-<p>Such variation can already be achieved by simply including group indicators in a least squares regression framework.</p>
-<p>In other words, we could extend our previous model like such:</p>
-<p><span class="math display">\[trustindex3=\beta_0+\beta_1*eduyears25+\beta_2*agea+\beta_3*female+\\ +\beta_4*{paredu}+\beta_5*{fmnoncntr}+\color{red}{\beta_6*{cntry}}+error\]</span></p>
-</section><section id="multilevel-models-8" class="slide level2"><h2>Multilevel models</h2>
-<p>Some of these terms might be more historical, others are more often seen in a specific discipline, others might refer to a certain data structure, and still others are special cases (e.g.&nbsp;<q>null</q> models with no explanatory variables).</p>
-<p>Though you will hear many definitions, <strong>random effects</strong> are simply those specific to an observational unit, however defined. In our examples We will mostly encounter the case where the observational unit is the level of some grouping factor, but this is only one possibility.</p>
-<p><em>Mixed effects</em> - or simply <q>mixed</q> - models generally refer to a mixture of fixed and random effects. This is probably the most general term, with no specific data structure implied.</p>
 </section><section id="fitting-multilevel-models" class="slide level2"><h2>Fitting multilevel models</h2>
 <p>In <code>R</code> we can fit multilevel models using the <code>lmer</code> function from the <em>lme4</em> package.</p>
-<p>Initially, it is advisable to first fit some simple, preliminary models, in part to establish a baseline for evaluating larger models. Then, we can build toward a final model for description and inference by attempting to add important covariates, centering certain variables, and checking model assumptions.</p>
+<p>Initially, it is advisable to first fit some simple, preliminary models, in part to establish a baseline for evaluating larger models. Then, we can build toward a final model for description and inference by attempting to add important covariates, centring certain variables, and checking model assumptions.</p>
 <p>The standard first step is to model only the outcome measurement, without any predictors, to get a sense for the effect of the clusters; this is often called a <em>random intercepts model</em> or <em>null model</em>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>mod_null <span class="ot">&lt;-</span> <span class="fu">lmer</span>(trustindex3 <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> cntry), <span class="at">data =</span> osterman)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>mod_null <span class="ot">&lt;-</span> <span class="fu">lmer</span>(trustindex3 <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> </span>
+<span id="cb2-2"><a></a>                   (<span class="dv">1</span> <span class="sc">|</span> cntry), </span>
+<span id="cb2-3"><a></a>                 <span class="at">data =</span> osterman)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The second step is then to fit the full covariate model:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>mod_mixed <span class="ot">=</span> <span class="fu">lmer</span>(trustindex3 <span class="sc">~</span> eduyrs25 <span class="sc">+</span> agea <span class="sc">+</span> female <span class="sc">+</span> paredu_a_high <span class="sc">+</span> fmnoncntr <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> cntry), <span class="at">data =</span> osterman)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>mod_mixed <span class="ot">=</span> <span class="fu">lmer</span>(trustindex3 <span class="sc">~</span> reform1_7 <span class="sc">+</span> female <span class="sc">+</span> blgetmg_d <span class="sc">+</span> </span>
+<span id="cb3-2"><a></a>                   fbrneur <span class="sc">+</span> mbrneur <span class="sc">+</span> fnotbrneur <span class="sc">+</span> mnotbrneur <span class="sc">+</span> </span>
+<span id="cb3-3"><a></a>                   (<span class="dv">1</span> <span class="sc">|</span> cntry), </span>
+<span id="cb3-4"><a></a>                 <span class="at">data =</span> osterman)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="fitting-multilevel-models-1" class="slide level2"><h2>Fitting multilevel models</h2>
 <h4 id="results-null-model">Results: <q>null</q> model:</h4>
@@ -1196,7 +2808,7 @@ Grouping Variables
 <table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;"><tbody>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">Observations</td>
-<td style="text-align: right;">376</td>
+<td style="text-align: right;">400</td>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold;">Dependent variable</td>
@@ -1213,19 +2825,19 @@ Grouping Variables
 <table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;"><tbody>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">AIC</td>
-<td style="text-align: right;">1500.20</td>
+<td style="text-align: right;">1596.38</td>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold;">BIC</td>
-<td style="text-align: right;">1531.64</td>
+<td style="text-align: right;">1636.29</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">Pseudo-R² (fixed effects)</td>
-<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.01</td>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold;">Pseudo-R² (total)</td>
-<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">0.09</td>
 </tr>
 </tbody></table>
 </div>
@@ -1258,51 +2870,67 @@ Fixed Effects
 <tbody>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">(Intercept)</td>
-<td style="text-align: right;">2.52</td>
-<td style="text-align: right;">0.63</td>
-<td style="text-align: right;">3.97</td>
-<td style="text-align: right;">182.82</td>
+<td style="text-align: right;">4.99</td>
+<td style="text-align: right;">0.24</td>
+<td style="text-align: right;">20.78</td>
+<td style="text-align: right;">12.55</td>
 <td style="text-align: right;">0.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; font-weight: bold;">eduyrs25</td>
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">0.03</td>
-<td style="text-align: right;">3.82</td>
-<td style="text-align: right;">364.26</td>
-<td style="text-align: right;">0.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left; font-weight: bold;">agea</td>
-<td style="text-align: right;">0.02</td>
-<td style="text-align: right;">0.01</td>
-<td style="text-align: right;">2.76</td>
-<td style="text-align: right;">323.74</td>
-<td style="text-align: right;">0.01</td>
-</tr>
-<tr class="even">
-<td style="text-align: left; font-weight: bold;">female</td>
-<td style="text-align: right;">-0.14</td>
+<td style="text-align: left; font-weight: bold;">reform1_7</td>
+<td style="text-align: right;">-0.08</td>
 <td style="text-align: right;">0.18</td>
-<td style="text-align: right;">-0.77</td>
-<td style="text-align: right;">368.16</td>
-<td style="text-align: right;">0.44</td>
+<td style="text-align: right;">-0.44</td>
+<td style="text-align: right;">389.72</td>
+<td style="text-align: right;">0.66</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left; font-weight: bold;">paredu_a_high</td>
-<td style="text-align: right;">0.23</td>
-<td style="text-align: right;">0.21</td>
-<td style="text-align: right;">1.08</td>
-<td style="text-align: right;">369.33</td>
-<td style="text-align: right;">0.28</td>
+<td style="text-align: left; font-weight: bold;">femaleFemale</td>
+<td style="text-align: right;">-0.06</td>
+<td style="text-align: right;">0.18</td>
+<td style="text-align: right;">-0.33</td>
+<td style="text-align: right;">388.44</td>
+<td style="text-align: right;">0.75</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; font-weight: bold;">fmnoncntr</td>
-<td style="text-align: right;">-0.81</td>
-<td style="text-align: right;">0.44</td>
-<td style="text-align: right;">-1.85</td>
-<td style="text-align: right;">368.28</td>
-<td style="text-align: right;">0.07</td>
+<td style="text-align: left; font-weight: bold;">blgetmg_dYes</td>
+<td style="text-align: right;">-0.31</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">-0.40</td>
+<td style="text-align: right;">386.02</td>
+<td style="text-align: right;">0.69</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">fbrneurYes</td>
+<td style="text-align: right;">-0.86</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">-1.32</td>
+<td style="text-align: right;">388.17</td>
+<td style="text-align: right;">0.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">mbrneurYes</td>
+<td style="text-align: right;">-0.09</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">-0.14</td>
+<td style="text-align: right;">386.60</td>
+<td style="text-align: right;">0.89</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-weight: bold;">fnotbrneurYes</td>
+<td style="text-align: right;">0.13</td>
+<td style="text-align: right;">1.24</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">387.14</td>
+<td style="text-align: right;">0.91</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-weight: bold;">mnotbrneurYes</td>
+<td style="text-align: right;">0.26</td>
+<td style="text-align: right;">1.76</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">388.70</td>
+<td style="text-align: right;">0.88</td>
 </tr>
 </tbody>
 <tfoot><tr class="even">
@@ -1340,12 +2968,12 @@ Random Effects
 <tr class="odd">
 <td>cntry</td>
 <td>(Intercept)</td>
-<td>0.49</td>
+<td>0.53</td>
 </tr>
 <tr class="even">
 <td>Residual</td>
 <td></td>
-<td>1.69</td>
+<td>1.73</td>
 </tr>
 </tbody>
 </table>
@@ -1373,7 +3001,7 @@ Grouping Variables
 <tbody><tr class="odd">
 <td>cntry</td>
 <td>8</td>
-<td>0.08</td>
+<td>0.09</td>
 </tr></tbody>
 </table>
 </div>
