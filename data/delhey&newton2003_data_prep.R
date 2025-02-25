@@ -1,9 +1,6 @@
 ###############################################################################################
 #####
-#####  Data preparation script for SOC2069 
-#####  
-#####   SOC2069 is an introductory quantitative methods module (course) for 2nd-year sociology 
-#####   students at Newcastle University (United Kingdom)
+#####  Data preparation script 
 #####
 #####   The aim of this script is to prepare original raw data from the EUROMODULE survey (1999-2002)
 #####   for use in workshops by students. More on EUROMODULE:

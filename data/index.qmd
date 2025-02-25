@@ -47,7 +47,8 @@ This dataset is the one used by @Osterman2021CanWeTrustEducationFostering for th
 The aim of the article is to use information on educational reforms across European countries as a way to set up a quasi-experimental design testing the effect of *education* on *social trust*.
 With this approach, it aims to overcome the limitations of cross-sectional observational survey data from the European Social Survey by attempting a *causal* - rather than just correlational - explanation.
 
-[{{< fa download size=sm >}} Download](/data/osterman_t3.dta){.btn .btn-ncl}
+[{{< fa download size=sm >}} Download .dta](/data/osterman_t3.dta){.btn .btn-ncl}
+[{{< fa code >}} Data wrangling code (`.R`)](/data/osterman_t3_data_prep.R){.btn .link-secondary} 
 :::
 
 
@@ -61,7 +62,8 @@ This dataset contains data from the [EUROMODULE (1999-2002) surveys](https://sea
 Out of the total of 366 variables measured, only those 100 were kept in this dataset that were used by @DelheyNewton2003WhoTrustsOrigins in their analysis of the various correlates of "social trust".
 The value of the EUROMODULE survey data compared to other comparative surveys that measure social trust is that it offers a much greater variety of explanatory variables that allow @DelheyNewton2003WhoTrustsOrigins to test the relative explanatory power of several complex social theories explaining differences in levels of social trust both at the individual level and at the macro-social level.
 
-[{{< fa download size=sm >}} Download](/data/delhey&newton2003.sav){.btn .btn-ncl} 
+[{{< fa download size=sm >}} Download](/data/delhey&newton2003.sav){.btn .btn-ncl}
+[{{< fa code >}} Data wrangling code (`.R`)](/data/delhey&newton2003_data_prep.R){.btn .link-secondary} 
 <!-- <button type="button" class="btn btn-outline-orange"> [{{< fa file-pdf >}} Original questionnaire](/data/delhey&newton2003_ZA4063_q.pdf){style="text-decoration:none" target="_blank"} </button> <button type="button" class="btn btn-outline-orange"> [{{< fa file-pdf >}} Original Codebook](/data/delhey&newton2003_ZA4063_cod.pdf){style="text-decoration:none" target="_blank"}  -->
 :::
 
