@@ -915,7 +915,7 @@
     "href": "slides/example.html#code",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "Code",
-    "text": "Code\n\n\na &lt;- rnorm(100, 4, 2)\nsummary(a)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n-0.1504  2.6068  3.8516  3.9456  5.3043  7.3268 \n\n\n\n\nhist(a)"
+    "text": "Code\n\n\na &lt;- rnorm(100, 4, 2)\nsummary(a)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n -1.023   2.837   4.366   4.107   5.349   8.713 \n\n\n\n\nhist(a)"
   },
   {
     "objectID": "slides/example.html#testing",
