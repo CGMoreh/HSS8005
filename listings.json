@@ -1,0 +1,28 @@
+[
+  {
+    "listing": "/materials.html",
+    "items": [
+      "/info/week1.html",
+      "/info/week2.html",
+      "/info/week3.html",
+      "/info/week4.html",
+      "/info/week5.html",
+      "/info/week6.html",
+      "/info/week7.html",
+      "/info/week8.html"
+    ]
+  },
+  {
+    "listing": "/theory/index.html",
+    "items": [
+      "/theory/week1.html",
+      "/theory/week2.html",
+      "/theory/week3.html",
+      "/theory/week4.html",
+      "/theory/week5.html",
+      "/theory/week6.html",
+      "/theory/week7.html",
+      "/theory/week8.html"
+    ]
+  }
+]

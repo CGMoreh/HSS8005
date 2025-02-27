@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../pics/ncl_coa_hss8005.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+<meta name="author" content="Dr Chris Moreh">
+<title>Week 1 – Slides</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+<style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    q { quotes: "“" "”" "‘" "’"; }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+<link rel="stylesheet" href="../html/nobiblio.css">
+<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/verticator/verticator.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style>html{ scroll-behavior: smooth; }</style>
+<style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+<style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<script>
+    function move_titleSlide() {
+        var titleSlide = document.querySelector('section#title-slide');
+        var titleSlideClone = titleSlide.cloneNode(true);
+        titleSlideClone.id = 'title-slide-cloned';
+        document.querySelector('.reveal .slides').appendChild(titleSlideClone);
+        Reveal.sync();
+    }
+  
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      move_titleSlide();
+    });
+  </script><style>
+    #title-slide-cloned {
+      text-align: center
+    }
+  
+    #title-slide-cloned .subtitle {
+      margin-bottom: 2.5rem
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-color="white" data-background-image="../pics/logo_anim.gif" data-background-opacity="0.8" data-background-size="100%" data-background-transition="slide-out" data-transition="slide-out" data-transition-speed="default" class="center"><style>
+* {
+  box-sizing: border-box;
+}
+
+.course-title {
+  font-size: 4rem;
+  color: rgba(14, 59, 106, 1);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+    margin-bottom: 25px !important;
+}
+
+.course-details {
+  font-size: 1.5rem;
+  color: rgba(14, 59, 106, 1) !important;
+  font-weight: bold !important;
+  margin-top: 50px !important;
+}
+
+.course-details a {
+  color: rgba(14, 59, 106, 1) !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}
+
+
+.week {
+  font-size: 3.5rem;
+  color: #FFF;
+  font-weight: bold;
+  margin-bottom: 40px !important;
+  text-shadow: 2px 2px 5px black;
+}
+
+.week-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: orange;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.week-subtitle {
+  font-size: 1.8rem;
+  color: #FFF;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 10px;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, .8); /* this adds the "card" effect */
+  text-align: center;
+  background-color: rgba(14, 59, 106, 0.75);
+  padding: 25% 1% 1% 1%;
+  height: 540px !important;
+  max-height: 540px !important;
+}
+
+.course-button {
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(14, 59, 106, 1);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, .8);
+  position: relative;
+  top: 10px;
+  font-size: 18px;
+}
+
+.course-button:hover {background-color: rgb(10, 41, 74)}
+
+.course-button:active {
+  background-color: rgb(10, 41, 74);
+  box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, .6);;
+  transform: translateY(2px);
+}
+
+p.course-button a {
+  color: white;
+}
+p.course-button a:hover {
+  color: orange;
+}
+
+.img-button {
+    margin: -100% 0 !important;
+    height: 25px !important;
+    vertical-align: middle !important;
+    display: inline !important;
+}
+
+</style>
+<div class="row">
+  <div class="column" style="width: 40%; padding: 5% 0 0 25px;">
+    <img src="ncl_coa_hss8005.png" class="img-fluid" width="70%"><p class="course-title">Quantitative analysis <iconify-icon role="img" inline="" icon="bi:plus-square-dotted" aria-label="Icon plus-square-dotted from bi Iconify.design set." title="Icon plus-square-dotted from bi Iconify.design set."></iconify-icon></p> 
+    <p class="course-button"><a href="https://cgmoreh.github.io/HSS8005">2025</a></p>
+    <p class="course-button"><a href="https://www.ncl.ac.uk/gps/staff/profile/chrismoreh.html">Dr Chris Moreh</a></p> 
+  </div>
+  <div class="column" style="width: 60%; padding: 5% 0 0 30px;">
+    <div class="card">
+      <p class="week">Week 1</p>
+            <p class="week-title">Tools</p>
+                  <p class="week-subtitle"><strong>R</strong>, <strong>RStudio</strong>, <strong>Markdown</strong>, <strong>Quarto</strong> and other tools of the trade</p>
+          </div>
+            <p class="course-button">
+      <a href="">Click and press <img src="../pics/f.png" class="img-button"> for full screen</a>
+    </p>
+            <p class="course-button">
+      <a href="https://recap.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=e1516da4-802c-4e8f-92c1-b26d00abf47a">View on <img src="../pics/recap.png" class="img-button" style="height: 20px !important;"></a>
+    </p>
+      </div>
+</div>
+</section><!--
+<section id="title-slide" data-background-color="white" data-background-image="../pics/logo_anim.gif" data-background-opacity="0.8" data-background-size="100%" data-background-transition="slide-out" data-transition="slide-out" data-transition-speed="default">
+  <div class="g-col-3 g-col-sm-5"><img src="ncl_coa_hss8005.png" class="img-fluid" width="200"></div>
+  <div class="course-title">Quantitative analysis <iconify-icon role="img" inline  icon="bi:plus-square-dotted" aria-label="Icon plus-square-dotted from bi Iconify.design set." title="Icon plus-square-dotted from bi Iconify.design set."></iconify-icon></div>
+  <p class="course-details"><a href="https://www.ncl.ac.uk/gps/staff/profile/chrismoreh.html">Dr Chris Moreh</a> | <a href="https://cgmoreh.github.io/HSS8005">2025</a></p>
+</section>
+
+<section id="title-slide" data-background-color="white" data-background-image="../pics/logo_anim.gif" data-background-opacity="0.8" data-background-size="100%" data-background-transition="slide-out" data-transition="slide-out" data-transition-speed="default">
+  <p class="week">Week Week 1</p>
+  <p class="week-title">Tools</p>
+  <p class="week-subtitle"><strong>R</strong>, <strong>RStudio</strong>, <strong>Markdown</strong>, <strong>Quarto</strong> and other tools of the trade</p>
+</section>
+--><section class="slide level2"><style>
+  .fa-play:before {
+    content: ";
+    }
+</style></section><section id="aims" class="slide level2"><h2>Aims</h2>
+<p>By the end of the session, you will:</p>
+<ul>
+<li class="fragment">understand how to use the most important panels in the <strong>RStudio</strong> interface</li>
+<li class="fragment">create an RStudio Project to store your work throughout the course</li>
+<li class="fragment">begin using <strong>R</strong> scripts (.R) and <strong>Quarto</strong> notebooks (.qmd) to record and document your coding progress</li>
+<li class="fragment">understand data types and basic operations in the <code>R</code> language</li>
+<li class="fragment">understand the principles behind <em>functions</em>
+</li>
+<li class="fragment">know how to install, load and use functions from user-written packages</li>
+<li class="fragment">gain familiarity with some useful functions from packages included in the <a href="https://tidyverse.tidyverse.org">tidyverse</a> ecosystem.</li>
+</ul>
+<p>This lab is an introduction to <strong>R</strong> and <strong>RStudio</strong> for the purposes of this module. Those new to <strong>R</strong> should also complete the <a href="https://datacarpentry.org/r-socialsci/"><strong>R for Social Scientists</strong></a> online training course on their own (estimated to take around 5-6 hours), as well as read through the assigned chapters from the <a href="https://r4ds.hadley.nz/"><strong>R4DS</strong></a> textbook.</p>
+</section><section id="r-and-rstudio" class="slide level2"><h2>R and RStudio</h2>
+<p>To install <strong>R</strong> and <strong>RStudio</strong> on your personal computers, <a href="https://posit.co/download/rstudio-desktop/">follow the steps outlined here</a> based on your operating system.</p>
+<p>Although you will only interact directly with <strong>RStudio</strong> in this module, <strong>R</strong> needs to be installed first.</p>
+<p>Think of the relationship between the two as that between the <em>engine</em> of a car (<strong>R</strong>) and the <em>dashboard</em> of a car (<strong>RStudio</strong>):</p>
+<p><img data-src="../pics/tools/R_vs_RStudio.png" style="width:50.0%"></p>
+<p>Or perhaps imagine driving the car on the left vs.&nbsp;the one on the right:</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img data-src="../pics/tools/car_chassis.jpg" style="width:40.0%" alt="R"><img data-src="../pics/tools/car_modern_dashboard.jpg" style="width:40.0%" alt="RStudio"></p>
+</div>
+</div>
+</div>
+</section><section id="the-rstudio-interface" class="slide level2"><h2>The <strong>RStudio</strong> interface</h2>
+<p>The <strong>RStudio</strong> interface consists of four main panes (which can be customised to some degree):</p>
+<p><img data-src="../pics/tools/console_etc.png" style="width:70.0%"></p>
+<p><strong>The R Console Pane</strong></p>
+<p>The R Console, by default the left or lower-left pane in R Studio, is the home of the R <q>engine</q>. This is where the commands are actually run and non-graphic outputs and error/warning messages appear. The <strong>Console</strong> is the direct interface to the <code>R</code> software itself; it’s what we get if instead of <code>RStudio</code> we open the <code>R</code> software: a direct interface to the <code>R</code> programming language, where we can type commands and <strong>where results/messages are printed</strong>.</p>
+<p>You can directly enter and run commands in the R Console, but realize that these commands are not saved as they are when running commands from a script. For this reason, we should not use the <strong>Console</strong> pane directly too much, ad reserve it only for quick and dirty calculations and checks. For typing commands that we want <code>R</code> to execute, we should instead use an <code>R</code> script file, where everything we type can be saved for later and complex analyses can be built up.</p>
+<p><strong>The Source Pane</strong></p>
+<p>This pane, by default in the upper-left, is a space to work with scripts and other text files. This pane is also where datasets (data frames) open up for viewing.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If your RStudio displays only one pane on the left, it is because you have no scripts open yet. We can open an existing one or create a new one. We’ll do that a bit later.</p>
+</div>
+</div>
+</div>
+<p><strong>The Environment Pane</strong></p>
+<p>This pane, by default in the upper-right, is most often used to see brief summaries of <q>objects</q> that are available in an active session. Datasets loaded for analysis would appear here.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>If your Environment is empty, it means that you don’t have any <q>objects</q> loaded or created yet. We will be creating some objects later and we will also import an example dataset.</p>
+</div>
+</div>
+</div>
+<p><strong>Files, Plots, Packages, Help, etc.</strong> The lower-right pane includes several tabs including plots (display of graphics including maps), help, a file library, and available R packages (including installation/update options).</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>You can arrange the panes in various ways, depending on your preferences, using <em>Tools</em> &gt; <em>Global Options</em> in the top menu. So the arrangement of panes may look different on different computers.</p>
+</div>
+</div>
+</div>
+</section><section id="general-settings" class="slide level2"><h2>General settings</h2>
+<p>You can personalise the look and feel of your RStudio setup in various ways using <em>Tools</em> &gt; <em>Global Options</em> from the top menu, but setting some options as default from the very start is highly recommended. You can see these in the pictures below:</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="../pics/tools/glob_opts1.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="../pics/tools/glob_opts2.png"></p>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">The most important setting in the picture on the left is the one to restore .RData at startup and saving the workspace as .RData on exit. Make sure these are un-ticked and set to <q>Never</q>, respectively, as shown in the picture. It’s always safer to start each RStudio session in a clean state, without anything automatically pre-loaded from a previous session. That could lead to serious and hard to trace complications.</li>
+<li class="fragment">In the picture on the right, you have the option to select that the new native pipe operator (|&gt;) (we’ll talk about it later!) be inserted using the <code>Ctrl</code>+<code>Shift</code>+<code>M</code> keyboard shortcut instead of the older version of the pipe (%&gt;%).</li>
+</ul>
+<p>These settings will make more sense later, but it’s a good idea to have them sorted at the very beginning.</p>
+</section><section id="scripts-markdown-documents-and-projects" class="slide level2"><h2>Scripts, markdown documents and projects</h2>
+<p>Writing brief commands that you want to test out in the Console is okay, but what you really want is to save your commands as part of a workflow in a dedicated file that you can reuse, extend and share with others.</p>
+<p>In every quantitative analysis, we need to ensure that each step in our analysis is traceable and reproducible. This is increasingly a professional standard expected of all data analysts in the social sciences. This means that we need to have an efficient way in which to share our <em>analysis code</em>, as well as our <strong>outputs</strong> and <strong>interpretations</strong> of our findings. <code>RStudio</code> has an efficient way of handling this requirement with the use of R <em>script</em> files and versions of the <em>Markdown</em> markup language that allow the efficient combining of plain text (as in the main body of an article) with analysis code and outputs produced in <code>R</code>. The table below lists the main characteristics of these file types:</p>
+<table class="caption-top">
+<thead><tr class="header">
+<th>Format</th>
+<th>Extension</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>R Script</td>
+<td><strong>.R</strong></td>
+<td>Use an <em>R script</em> if you want to document a large amount of code used for a particular analysis project. Scripts should contain working R commands and human-readable comments explaining the code. Commands can be run line-by-line, or the whole R script can be run at once. For example, one can write an R script containing a few hundred or thousands of lines of code that gathers and prepares raw, unruly data for analysis; if this script can run without any errors, then it can be saved and sourced from within another script that contains code that undertakes the analysis using the cleansed dataset. Comments can be added by appending them with a hashtag (#).</td>
+</tr>
+<tr class="even">
+<td><a href="https://rmarkdown.rstudio.com/">R Markdown</a></td>
+<td><strong>.Rmd</strong></td>
+<td>
+<a href="https://www.markdownguide.org/">Markdown</a> is a simple markup language that allows the formatting of plain text documents. <a href="https://rmarkdown.rstudio.com/">R Markdown</a> is a version of this language written by the <strong>R Studio</strong> team, which also allows for <code>R</code> code to be included. Plain text documents having the <strong>.Rmd</strong> extension and containing <strong>R Markdown</strong>-specific code can be <q>knitted</q> (exported) directly into published output document formats such as HTML, PDF or Microsoft Word, which contain both normal text as well as tables and charts produced with the embedded <code>R</code> code. The code itself can also be printed to the output documents.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://quarto.org/">Quarto document</a></td>
+<td><strong>.qmd</strong></td>
+<td>Quarto is a newer version of <strong>R Markdown</strong> which allows better compatibility with other programming languages. It is a broader ecosystem design for academic publishing and communication (for example, the course website was built using quarto), but you will be using only Quarto documents in this module. There isn’t much difference between <strong>.Rmd</strong> and <strong>.qmd</strong> documents for their uses-cases on this module, so one could easily change and <strong>.Rmd</strong> extension to <strong>.qmd</strong> and still produce the same output. <strong>.qmd</strong> documents are <q>rendered</q> instead of <q>knitted</q>, but for RStudio users the underlying engine doing the conversion from Quarto/R Markdown to standard Markdown to output file (HTML, PDF, Word, etc.) is the same. Read more about Quarto document in the <a href="https://tellingstorieswithdata.com/22-rmarkdown.html"><strong>TSD</strong> textbook</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>Creating new files can be done easily via the options <em>File &gt; New File &gt;</em> from the top RStudio menu.</p>
+<p>The best way to use these files are as part of <strong>R project</strong> folders, which allow for cross-references to documents and datasets to be made relative to the path of the project folder root. This makes sure that no absolute paths to files (i.e.&nbsp;things like <q>C:/Documents/Chris/my_article/data_files/my_dataset.rds</q>) need to be used (instead, you would write something like <q>~/data_files/my_dataset.rds</q> if the <q>my_article</q> folder was set up as an R Project). This allows for the same code file to be run on another computer too without an error, ensuring a minimal expected level of reproducibility in your workflow.</p>
+<p>Setting up an existing or a new folder as an R Project involves having a file with the extension <strong>.RProj</strong> saved in it. This can be done easily via the options <em>File &gt; New Project</em> from the top RStudio menu.</p>
+<p><img data-src="../pics/tools/new_files.png"></p>
+</section><section id="r-data-types-and-structures" class="slide level2"><h2>
+<strong>R</strong> data types and structures</h2>
+<p>The basic elements of data in <code>R</code> are called <em>vectors</em>. R has 6 basic data types that you should be aware of:</p>
+<ul>
+<li class="fragment">character: a text string, e.g.&nbsp;<q>name</q>
+</li>
+<li class="fragment">numeric: a real or decimal number</li>
+<li class="fragment">integer: non-decimal number; often represented by a number followed by the letter <q>L</q>, e.g.&nbsp;5L</li>
+<li class="fragment">logical: TRUE or FALSE</li>
+<li class="fragment">complex: complex numbers with real and imaginary parts</li>
+</ul>
+<p>R provides several functions to examine features of vectors and other objects, for example:</p>
+<ul>
+<li class="fragment">class() - what kind of object is it (high-level)?</li>
+<li class="fragment">typeof() - what is the object’s data type (low-level)?</li>
+<li class="fragment">length() - how long is it? What about two dimensional objects?</li>
+<li class="fragment">attributes() - does it have any metadata?</li>
+</ul>
+<p>You can explore some basic vector operations in <em>Exercise 4</em> of the lab worksheet.</p>
+</section><section id="data-frames" class="slide level2"><h2>Data frames</h2>
+<p>It is useful to know about vectors, but we will use them primarily as part of larger <em>data frames</em>. Data frames are objects that contain several vectors of similar length. In a data frame each column is a <em>variable</em> and each row is a <em>case</em>. They look like spreadsheets containing data.</p>
+<p>There are several toy data frames built into R, and we can have a look at one to see how it looks like. You can get a list of the available built-in datasets and their brief descriptions with the <code><a href="https://rdrr.io/r/utils/data.html">data()</a></code> command.</p>
+<p>For example, the <code>mtcars</code> data frame is built into R and so you can access it without loading any files. To get the dimensions, you can use <code><a href="https://rdrr.io/r/base/dim.html">dim()</a></code>, <code><a href="https://rdrr.io/r/base/nrow.html">nrow()</a></code>, and <code><a href="https://rdrr.io/r/base/nrow.html">ncol()</a></code>.</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">dim</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32 11</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">nrow</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ncol</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11</code></pre>
+</div>
+</div></div>
+<p>We can also load the dataset into our Environment and look at it manually:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>mtcars <span class="ot">&lt;-</span> mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+
+</div></div>
+<p>The new object has appeared in the Environment under a new section called Data. We can click on it and the dataset will open up in the Source pane. What do you think this dataset is about?</p>
+<p>You can select each column/variable from the data frame use the <code>$</code>, turning it into a vector:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>mtcars<span class="sc">$</span>wt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 2.620 2.875 2.320 3.215 3.440 3.460 3.570 3.190 3.150 3.440 3.440 4.070
+[13] 3.730 3.780 5.250 5.424 5.345 2.200 1.615 1.835 2.465 3.520 3.435 3.840
+[25] 3.845 1.935 2.140 1.513 3.170 2.770 3.570 2.780</code></pre>
+</div>
+</div></div>
+<p>You can now treat this just like a vector, with the subsets and all.</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>mtcars<span class="sc">$</span>wt[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.62</code></pre>
+</div>
+</div></div>
+<p>We can subset to the first/last k rows of a data frame</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">head</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code>                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">tail</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                mpg cyl  disp  hp drat    wt qsec vs am gear carb
+Porsche 914-2  26.0   4 120.3  91 4.43 2.140 16.7  0  1    5    2
+Lotus Europa   30.4   4  95.1 113 3.77 1.513 16.9  1  1    5    2
+Ford Pantera L 15.8   8 351.0 264 4.22 3.170 14.5  0  1    5    4
+Ferrari Dino   19.7   6 145.0 175 3.62 2.770 15.5  0  1    5    6
+Maserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8
+Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
+</div>
+</div></div>
+<p>There are various ways in which one can further subset and wrangle vectors and data frames using base R functions, but the <a href="https://tidyverse.tidyverse.org">tidyverse</a> and other user-written packages provide more functionality and ease of use. In this course, we will rely mostly on these.</p>
+</section><section id="functions" class="slide level2"><h2>Functions</h2>
+<p>Most of the work in <code>R</code> is done using functions. It’s possible to <strong>create your own functions</strong>. This makes R extremely powerful and extendible. We’re not going to cover making your own functions in this course, but it’s important to be aware of this capability. There are plenty of good resources online for learning how to do this, including <a href="https://www.statmethods.net/management/userfunctions.html">this one</a>.</p>
+</section><section id="packages" class="slide level2 scrollable"><h2>Packages</h2>
+<p>Instead of programming your own functions in the <strong>R</strong> language, you can rely on functions written by other people and bundled within a package that performs some set task.</p>
+<p>When you install <code>R</code>, a set of <q>packages</q> containing various functions are also installed by default. These packages make up what is colloquially referred to as <em>base R</em>. Functions from these packages can be used straight away and they cannot be deleted or installed separately. The functionality of these <em>base R</em> packages is updated with each new edition of <code>R</code>, but not in between new releases of the software. The code below lists the names of all the packages in <em>base R</em>:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">names</span>(<span class="fu">which</span>(<span class="fu">installed.packages</span>()[ ,<span class="st">"Priority"</span>] <span class="sc">==</span> <span class="st">"base"</span>, ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "base"      "compiler"  "datasets"  "graphics"  "grDevices" "grid"     
+ [7] "methods"   "parallel"  "splines"   "stats"     "stats4"    "tcltk"    
+[13] "tools"     "utils"    </code></pre>
+</div>
+</div></div>
+<p>We see in the list that there is also a package called <q>base</q>, which contains 1283 elementary functions. However, when we refer to <em>base R</em>, we usually mean the functions from all the 14 packages listed above.</p>
+<p>Apart from these packages that come pre-installed and pre-loaded with our <code>R</code> installation, there are also a number of <q>recommended</q> packages, which can be thought of as an <em>extended base R</em>. These packages also come pre-installed in binary distributions of <code>R</code>, but they need to be loaded in order to make their functions available for use. These <q>recommended</q> packages are:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">names</span>(<span class="fu">which</span>(<span class="fu">installed.packages</span>()[ ,<span class="st">"Priority"</span>] <span class="sc">==</span> <span class="st">"recommended"</span>, ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "lattice"    "MASS"       "Matrix"     "mgcv"       "nlme"      
+ [6] "boot"       "class"      "cluster"    "codetools"  "foreign"   
+[11] "KernSmooth" "lattice"    "MASS"       "Matrix"     "mgcv"      
+[16] "nlme"       "nnet"       "rpart"      "spatial"    "survival"  </code></pre>
+</div>
+</div></div>
+<p>Apart from these <q>recommended</q> packages, there is a great - and ever increasing - number of user-written packages that satisfy various programming needs. Some packages contain functions that are particularly useful for social scientists. Sometimes a number of packages that contain complementary functionality and are designed to work well together are brought under one <em>meta-package</em>, which allows for all those packages to be installed and loaded at once. The most popular such meta-package is the <a href="https://tidyverse.tidyverse.org">tidyverse</a>, which includes such packages as <a href="https://dplyr.tidyverse.org">dplyr</a> (for data manipulation), <a href="https://readr.tidyverse.org">readr</a> (for reading in rectangular data like <code>.csv</code> files), <a href="https://tidyr.tidyverse.org">tidyr</a> (for cleaning datasets), <a href="https://stringr.tidyverse.org">stringr</a> (for working with <q>strings</q>, that is, textual data), <a href="https://forcats.tidyverse.org/">forcats</a> (for managing <q>factors</q>, that is, categorical variables) or <a href="https://ggplot2.tidyverse.org">ggplot2</a> (for data visualisation), among [several others](https://www.tidyverse.org/packages/.</p>
+<p>The <a href="https://tidyverse.tidyverse.org">tidyverse</a> packages have been developed around a coding philosophy that is very different from that of <q>base R</q>. It is sometimes referred to as a special <q>dialect</q> of the <code>R</code> language and has greatly contributed to popularising <code>R</code> and making it more easily available to practising social scientists who do not have a programming background, by designing code whose <q>grammar</q> is somewhat closer to that of <q>human</q> languages such as English. This is generally thought to lower the entry barriers to <code>R</code> for new users, although <a href="https://github.com/matloff/TidyverseSkeptic">there isn’t a clear consensus on that</a>.</p>
+<p>Another recently developed meta-package, which was specifically designed with non-programmer social scientists in mind, is the <a href="https://easystats.github.io/easystats/">easystats</a> bundle. We will be relying on <a href="https://easystats.github.io/easystats/">easystats</a> packages quite a lot in this module, as they provide a very coherent set of functions that improve on the <a href="https://tidyverse.tidyverse.org">tidyverse</a>.</p>
+<p>Both of these meta-packages and thousands of other packages are available from the <em>Comprehensive R Archive Network</em> (CRAN). Many more packages are distributed as repositories on code-sharing platforms such as <em><a href="https://github.com/">GitHub</a></em> or <em><a href="https://r-universe.dev/search/">R Universe</a></em>.</p>
+<p>Packages made available on CRAN can be installed using the command <code>install.packages("packagename")</code>. Once the package/library is installed (i.e.&nbsp;it is sitting somewhere on your computer), we can then <em>load</em> functions from that package using the <code>::</code> operator (e.g.&nbsp;<code>package::function()</code>), or we can make all the functions from a package available by <em>attaching</em> that package with the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function (e.g.&nbsp;<code><a href="https://rdrr.io/r/base/library.html">library(package)</a></code>).</p>
+<p>So using a package/library is a two-stage process. We:</p>
+<ol type="1">
+<li class="fragment">
+<pre><code> **Install** the package/library onto your computer (from CRAN or another repository)</code></pre>
+2.a. <strong>Load</strong> functions from the package as you use them, or: 2.b. <strong>Attach</strong> the whole package to R’s search path, making all functions available to use by name</li>
+</ol>
+<p>Let’s start by installing the <code>tidyverse</code> meta-package, and then attach it:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)  <span class="do">## this command installs packages from CRAN; note the quotation marks around the package name</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+
+</div></div>
+<p>You can check the suite of packages that are available when you attach the <code>tidyverse</code> library using a command from the <code>tidyverse</code> itself:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">tidyverse_packages</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+
+</div></div>
+<div class="discuss">
+<p><strong>Question</strong></p>
+<p>Why do you think we got an error message when we tried to run the above command?</p>
+</div>
+<p>Because <code>tidyverse_packages()</code> is itself a function from the <code>tidyverse</code>, in order to use that function we need not only to install the <code>tidyverse</code> but also to make its functions available. In other words, we did not yet <em>attach</em> the <code>tidyverse</code> for use in our R session, we only just installed it on our computers.</p>
+<p>If we don’t want to attach a package that we have downloaded - because maybe we only want to use a single function once and we don’t want to burden our computer’s memory, we can load explicitly given functions from a package in the following way:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>tidyverse<span class="sc">::</span><span class="fu">tidyverse_packages</span>()  <span class="co"># Here we state the package followed by two colons, then followed by the function we want</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+
+</div></div>
+<p>But in many cases we do want to use several functions at various points in an analysis session, so it is often useful to <em>attach</em> the entire package or set of packages:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+
+</div></div>
+<p>Now we can use functions from that package without having to explicitly state the name of the package. We can still state the name explicitly, and that may be useful for readers of our code to understand what package a function come from. Also, it may happen that different packages have similarly named functions, and if all those packages are attached, then the functions from a package attached later will override that in the package attached earlier. <code>R</code> will note in a comment whether any functions from a package are <strong>masked</strong> by another, so it’s worth paying attention to the comments and warnings printed by <code>R</code> when we attach packages.</p>
+</section><section id="installing-and-attaching-packages" class="slide level2"><h2>Installing and attaching packages</h2>
+<p>Both <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> and <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> are <em>base R</em> functions, but there are several other user-written packages that provide additional functionality to make it easier and more efficient to install, attach and manage packages. For example, the <code>pacman</code> package contains a function <code>p_load()</code> that allows us to attach several packages at once and install them from CRAN on the fly if they are not yet installed. The sister function <code>p_load_gh()</code> does the same for packages not published on CRAN but stored on personal repositories on GitHub. The <a href="https://github.com/DesiQuintans/librarian">librarian</a> package does the same with the <code>shelf()</code> function, which installs missing packages from CRAN as well as GitHub.</p>
+<p>For example, we can download and attach a number of packages in one go with the command below:</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="co"># First, install {librarian} itself if not yet installed:</span></span>
+<span id="cb25-2"><a></a></span>
+<span id="cb25-3"><a></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"librarian"</span>)) <span class="fu">install.packages</span>(<span class="st">"librarian"</span>) </span>
+<span id="cb25-4"><a></a></span>
+<span id="cb25-5"><a></a><span class="co"># Then attach/install other packages using `librarian::shelf()`:</span></span>
+<span id="cb25-6"><a></a></span>
+<span id="cb25-7"><a></a>librarian<span class="sc">::</span><span class="fu">shelf</span>(</span>
+<span id="cb25-8"><a></a>  tidyverse,</span>
+<span id="cb25-9"><a></a>  easystats,</span>
+<span id="cb25-10"><a></a>  sjlabelled,</span>
+<span id="cb25-11"><a></a>  gtsummary,</span>
+<span id="cb25-12"><a></a>  ggformula</span>
+<span id="cb25-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+
+</div></div>
+<p>These are some useful packages that we will be using in this module. You can read more about the (meta)packages we have just installed here:</p>
+<ul>
+<li class="fragment"><a href="https://www.tidyverse.org/"><code>tidyverse</code></a></li>
+<li class="fragment"><a href="https://easystats.github.io/easystats/"><code>easystats</code></a></li>
+<li class="fragment"><a href="https://strengejacke.github.io/sjlabelled/articles/labelleddata.html"><code>sjlabelled</code></a></li>
+<li class="fragment"><a href="https://www.danieldsjoberg.com/gtsummary/index.html"><code>gtsummary</code></a></li>
+<li class="fragment"><a href="https://www.mosaic-web.org/ggformula/index.html"><code>ggformula</code></a></li>
+</ul></section><section id="about-the-tidyverse" class="slide level2"><h2>About the <code>Tidyverse</code>
+</h2>
+</section><section id="data-frames-and-tibbles" class="slide level2"><h2>Data frames and <q>tibbles</q>
+</h2>
+<p>The <code>Tidyverse</code> is built around the basic concept that data in a table should have one observation per row, one variable per column, and only one value per cell. Once data is in this <q>tidy</q> format, it can be transformed, visualized and modelled for an analysis.</p>
+<p>When using functions in the <code>Tidyverse</code> ecosystem, most data is returned as a <code>tibble</code> object. <code>Tibbles</code> are very similar to the <code>data.frames</code> (which are the basic types of object storing datasets in base <strong><em>R</em></strong>) and it is perfectly fine to use <code>Tidyverse</code> functions on a <code>data.frame</code> object. Just be aware that in most cases, the <code>Tidyverse</code> function will transform your data into a <code>tibble.</code> If you are unobservant, you won’t even notice a difference. However, there are a few differences between the two data types, most of which are just designed to make your life easier. For more info, check <strong>R4DS</strong>.</p>
+</section><section id="selected-dplyr-functions" class="slide level2"><h2>Selected <code>dplyr</code> functions</h2>
+<p>The <code>dplyr</code> package is designed to make it easier to manipulate flat (2-D) data (i.e.&nbsp;the type of datasets we are most likely to use, which are laid out as in a standard spreadsheet, with rows referring to cases (observations; respondents) and columns referring to variables. <code>dplyr</code> provides simple <q>verbs</q>, functions that correspond to the most common data manipulation tasks, to help you translate your thoughts into code. Here are some of the most common functions in <code>dplyr</code>:</p>
+<ul>
+<li class="fragment">
+<code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code> chooses rows based on column values.</li>
+<li class="fragment">
+<code>arrange()</code> changes the order of the rows.</li>
+<li class="fragment">
+<code>select()</code> changes whether or not a column is included.</li>
+<li class="fragment">
+<code>rename()</code> changes the name of columns.</li>
+<li class="fragment">
+<code>mutate()</code>/<code>transmute()</code> changes the values of columns and creates new columns (variables)</li>
+<li class="fragment">
+<code>summarise()</code> compute statistical summaries (e.g., computing the mean or the sum)</li>
+<li class="fragment">
+<code>group_by()</code> group data into rows with the same values</li>
+<li class="fragment">
+<code>ungroup()</code> remove grouping information from data frame.</li>
+<li class="fragment">
+<code>distinct()</code> remove duplicate rows.</li>
+</ul>
+<p>All these functions work similarly as follows:</p>
+<ul>
+<li class="fragment">The first argument is a data frame/tibble</li>
+<li class="fragment">The subsequent arguments are comma separated list of unquoted variable names and the specification of what you want to do</li>
+<li class="fragment">The result is a new data frame</li>
+</ul>
+<p>For more info, check <a href="https://datacarpentry.org/r-socialsci/03-dplyr-tidyr/index.html">R for Social Scientists</a></p>
+<p>Most of the <a href="https://dplyr.tidyverse.org">dplyr</a> verbs perform tasks that can also be done in <em>base R</em>, but they provide more convenience. The table below lists a rough equivalence between <code>dplyr</code> and <em>base R</em> functionality:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead><tr class="header">
+<th>dplyr</th>
+<th>base</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>arrange(df, x)</code></td>
+<td><code>df[order(x), , drop = FALSE]</code></td>
+</tr>
+<tr class="even">
+<td><code>distinct(df, x)</code></td>
+<td>
+<code>df[!duplicated(x), , drop = FALSE]</code>, <code><a href="https://rdrr.io/r/base/unique.html">unique()</a></code>
+</td>
+</tr>
+<tr class="odd">
+<td><code>filter(df, x)</code></td>
+<td>
+<code>df[which(x), , drop = FALSE]</code>, <code><a href="https://rdrr.io/r/base/subset.html">subset()</a></code>
+</td>
+</tr>
+<tr class="even">
+<td><code>mutate(df, z = x + y)</code></td>
+<td>
+<code>df$z &lt;- df$x + df$y</code>, <code><a href="https://rdrr.io/r/base/transform.html">transform()</a></code>
+</td>
+</tr>
+<tr class="odd">
+<td><code>pull(df, 1)</code></td>
+<td><code>df[[1]]</code></td>
+</tr>
+<tr class="even">
+<td><code>pull(df, x)</code></td>
+<td><code>df$x</code></td>
+</tr>
+<tr class="odd">
+<td><code>rename(df, y = x)</code></td>
+<td><code>names(df)[names(df) == "x"] &lt;- "y"</code></td>
+</tr>
+<tr class="even">
+<td><code>relocate(df, y)</code></td>
+<td><code>df[union("y", names(df))]</code></td>
+</tr>
+<tr class="odd">
+<td><code>select(df, x, y)</code></td>
+<td>
+<code>df[c("x", "y")]</code>, <code><a href="https://rdrr.io/r/base/subset.html">subset()</a></code>
+</td>
+</tr>
+<tr class="even">
+<td><code>select(df, starts_with("x"))</code></td>
+<td><code>df[grepl("^x", names(df))]</code></td>
+</tr>
+<tr class="odd">
+<td><code>summarise(df, mean(x))</code></td>
+<td>
+<code>mean(df$x)</code>, <code><a href="https://rdrr.io/r/base/tapply.html">tapply()</a></code>, <code><a href="https://rdrr.io/r/stats/aggregate.html">aggregate()</a></code>, <code><a href="https://rdrr.io/r/base/by.html">by()</a></code>
+</td>
+</tr>
+<tr class="even">
+<td><code>slice(df, c(1, 2, 5))</code></td>
+<td><code>df[c(1, 2, 5), , drop = FALSE]</code></td>
+</tr>
+</tbody>
+</table>
+<p>The above functions allow us to manage single data-frames. A set of other functions (sometimes called <q>two-table verbs</q>) make it possible to combine columns, rows, or both, from two or more data-frames. In <em>base-R</em>, much of this can be achieved with the <code><a href="https://rdrr.io/r/base/merge.html">merge()</a></code> function, while in <code>dplyr</code> the <code>join()</code> function makes this possible, extending some further functionality that is not easily available in <em>base-R</em>. The table below lists these <code>dplyr</code> functions and their <em>base-R</em> equivalents:</p>
+<table class="caption-top">
+<thead><tr class="header">
+<th>dplyr</th>
+<th>base</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>inner_join(df1, df2)</code></td>
+<td><code>merge(df1, df2)</code></td>
+</tr>
+<tr class="even">
+<td><code>left_join(df1, df2)</code></td>
+<td><code>merge(df1, df2, all.x = TRUE)</code></td>
+</tr>
+<tr class="odd">
+<td><code>right_join(df1, df2)</code></td>
+<td><code>merge(df1, df2, all.y = TRUE)</code></td>
+</tr>
+<tr class="even">
+<td><code>full_join(df1, df2)</code></td>
+<td><code>merge(df1, df2, all = TRUE)</code></td>
+</tr>
+<tr class="odd">
+<td><code>semi_join(df1, df2)</code></td>
+<td><code>df1[df1$x %in% df2$x, , drop = FALSE]</code></td>
+</tr>
+<tr class="even">
+<td><code>anti_join(df1, df2)</code></td>
+<td><code>df1[!df1$x %in% df2$x, , drop = FALSE]</code></td>
+</tr>
+</tbody>
+</table></section><section id="the-forward-pipe-workflow" class="slide level2 scrollable"><h2>The forward-pipe (<code>%&gt;%</code>/<code>|&gt;</code>) workflow</h2>
+<p>All of the <code>dplyr</code> functions take a data frame or tibble as the first argument. Rather than forcing the user to either save intermediate objects or nest functions, <code>dplyr</code> provides the forward-pipe operator <code>%&gt;%</code> from the <code>magrittr</code> package. This operator allows us to combine multiple operations into a single sequential chain of actions. As of <code>R 4.1.0</code> there is also a <a href="https://www.r-bloggers.com/2021/05/the-new-r-pipe/">native pipe operator</a> in <strong><em>R</em></strong> (|&gt;), and in RStudio one can set the shortcut to paste the new pipe operator instead (as we have done at the beginning of the lab). Going forward, we’ll use this version of the pipe operator for simplicity, but it’s likely that you will encounter the older version of the operator too in various scripts.</p>
+<p>Let’s start with a hypothetical example. Say you would like to perform a sequence of operations on data frame <code>x</code> using hypothetical functions <code>f()</code>, <code>g()</code>, and <code>h()</code>:</p>
+<ol type="1">
+<li class="fragment">Take x <em>then</em>
+</li>
+<li class="fragment">Use x as an input to a function f() <em>then</em>
+</li>
+<li class="fragment">Use the output of f(x) as an input to a function g() <em>then</em>
+</li>
+<li class="fragment">Use the output of g(f(x)) as an input to a function h()</li>
+</ol>
+<p>One way to achieve this sequence of operations is by using nesting parentheses as follows:</p>
+<pre><code>h(g(f(x)))</code></pre>
+<p>This code isn’t so hard to read since we are applying only three functions: <code>f()</code>, then <code>g()</code>, then <code>h()</code> and each of the functions is short in its name. Further, each of these functions also only has one argument. However, you can imagine that this will get progressively harder to read as the number of functions applied in your sequence increases and the arguments in each function increase as well. This is where the pipe operator <code>|&gt;</code> comes in handy. <code>|&gt;</code> takes the output of one function and then <q>pipes</q> it to be the input of the next function. Furthermore, a helpful trick is to read <code>|&gt;</code> as <q>then</q> or <q>and then.</q> For example, you can obtain the same output as the hypothetical sequence of functions as follows:</p>
+<pre><code>x |&gt; 
+  f() |&gt; 
+  g() |&gt; 
+  h()</code></pre>
+<p>You would read this sequence as:</p>
+<ol type="1">
+<li class="fragment">Take x <em>then</em>
+</li>
+<li class="fragment">Use this output as the input to the next function f() <em>then</em>
+</li>
+<li class="fragment">Use this output as the input to the next function g() <em>then</em>
+</li>
+<li class="fragment">Use this output as the input to the next function h()</li>
+</ol>
+<p>So while both approaches achieve the same goal, the latter is much more human-readable because you can clearly read the sequence of operations line-by-line. Instead of typing out the three strange characters of the operator, one can use the keyboard shortcut <em>Ctrl + Shift + M</em> (Windows) or <em>Cmd + Shift + M</em> (MacOS) to paste the operator.</p>
+
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+
+</div>
+</div>
+</section>
+</div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/verticator/verticator.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
+'smaller': true,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: true,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'slow',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Verticator, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+    
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+    
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+    
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+    
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+              // target, if specified
+              link.setAttribute("target", "_blank");
+              if (link.getAttribute("rel") === null) {
+                link.setAttribute("rel", "noopener");
+              }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

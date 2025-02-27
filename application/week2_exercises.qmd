@@ -1,0 +1,684 @@
+---
+title: "Week 2 Exercises"
+---
+
+## Aims
+
+This session introduces simple and multiple linear regression models. You will be working with data from @Osterman2021CanWeTrustEducationFostering to replicate parts their analysis. We will be covering only basic regression methods in this session, so the article will serve mainly as a broad background to the data here. We will be returning to this article in future weeks too, expanding our modelling strategy as we discover new methods. We will also practice some data management tasks and the basics of data visualisation using principles from 'the **g**rammar of **g**raphics' as implemented in the [`{ggplot2}`](https://ggplot2.tidyverse.org/) package (see Kieran Healy's [*Data Visualization: A practical introduction*](https://socviz.co/) for an introduction with many practical examples).
+
+By the end of the session, you will:
+
+-   learn how to import data from foreign formats (e.g. SPSS, Stata, CSV)
+-   know how to perform basic descriptive statistics on a dataset
+-   understand the basics of data visualisation
+-   know how to fit linear regression models in `R` using different functions
+-   learn a few options for presenting findings from regression models
+
+## Setup
+
+In Week 1 you set up `R` and `RStudio`, and an **RProject** folder (we called it "HSS8005_labs") with an `.R` script and a `.qmd` or `.Rmd` document in it (we called these "Lab_1"). Ideally, you saved this on a cloud drive so you can access it from any computer (e.g. OneDrive). You will be working in this folder. If it's missing, complete Exercise 3 from the Week 1 Worksheet.
+
+You can create a new `.R` script and `.qmd`/`.Rmd` for this week's work (e.g. "Lab_2"). Start working in the `.R` script initially, then switch to `.qmd`/`.Rmd` later in the session to report on your final analysis.
+
+## Exercise 1: Load (and install) R packages needed for this lab
+
+Using function we have learnt in Week 1, load (and install, if needed) the following R packages:
+
+-   [`tidyverse`](https://www.tidyverse.org/)
+-   [`easystats`](https://easystats.github.io/easystats/)
+-   [`gtsummary`](https://www.danieldsjoberg.com/gtsummary/index.html)
+-   [`ggformula`](https://www.mosaic-web.org/ggformula/index.html)
+-   [`sjlabelled`](https://strengejacke.github.io/sjlabelled/index.html)
+
+```{r}
+#| include: false
+library(tidyverse)
+library(easystats)
+library(gtsummary)
+library(ggformula)
+library(sjlabelled)
+```
+
+## Exercise 2: Import external data
+
+As we have seen in Week 1, small datasets that are included in R packages (including base R) for demonstration purposes can be used by simply invoking the name of the dataset. For example, the command `head(mtcars)` would print out the first six rows (cases) in the "mtcars" dataset included in base R (more specifically, in its "datasets" package). To access a dataset from a non-base-R package, the process is similar, however, we need to ensure that the package is installed on our system and that we specify the name of the package; for example, to access the `starwars` dataset (which contains all sorts of information about the characters of Star Wars films), we need to make sure that `{dplyr}` - or the whole `{tidyverse}` - is installed:
+
+```{r}
+#| error: true
+
+head(starwars) # gives an Error
+
+head(dplyr::starwars) # works, as long as {dplyr} or the whole {tidyverse} are installed
+```
+
+Real-life datasets, however, need to be imported into R. Datasets come in various formats. R's native data format has the extension `.rds` and can be imported with the `readRDS()` function. The counterpart function `saveRDS()` exports a dataset to the `.rds` format. The core-tidyverse [{readr}](https://readr.tidyverse.org/index.html) package has similar functions (`read_rds()` / `write_rds()`).
+
+The `.rds` format is useful because it can be compressed to various sizes to take up less space, but can only be directly opened in `R`. It is much more common to encounter data saved in a "delimited" text format, which can be easily opened in a spreadsheet viewer/editor such as Excel. This makes it very interchangeable and therefore very common. The most common is probably the "comma separated values" (`.csv`) format, which can be imported with the base-R function `read.csv()` or the tidyverse `readr::read_csv()` equivalent. Read Chapter 11 in [R4DS](https://r4ds.had.co.nz/data-import.html) for more on these functions.
+
+Very often, you will need to import data saved in the format of another proprietary statistical analysis package such as SPSS or Stata. Large survey projects usually make data available in these formats. The great advantage of these formats is that they can incorporate additional information about variables and the levels of categorical variables (e.g. value labels, specific values for different types of missing values). These additional information can be extremely valuable, but they are not handled straight-forwardly in text-based format, spreadsheets and R's native data format. To make them operational in R, we need a few specially designed functions.
+
+The [{haven}](https://haven.tidyverse.org/index.html) package --- part of the extended {tidyverse}, meaning that it is installed on your system as part of {tidyverse}, but the `library("tidyverse")` command does not load it by default; it needs to be loaded explicitly --- is one of the most commonly used for this purpose. Functions such as `read_sas()`, `read_sav()` and `read_dta()` import datasets specific to the SAS, SPSS and Stata programs, respectively.
+
+It is highly recommended to read the documentation available for the [{haven}](https://haven.tidyverse.org/index.html) package to understand how it operates. Fundamentally, it is designed to import data to a intermediary format which stores the additional labelling information in a special format that allows users to access them, but not making them easy to use directly. A [suite of packages developed by Daniel Lüdecke](https://strengejacke.r-universe.dev/builds) from the University of Hamburg offer some additional functionality to work with labels directly when summarising and plotting data. These packages integrate well with the {tidyverse} and are actively maintained, and we will use them in this course to make our lives a bit easier.
+
+In a previous step, we have installed and loaded the [{sjlabelled}](https://strengejacke.github.io/sjlabelled/index.html) package and the `{easystats}` suite of packages, which includes the `{datawizard}` package that contains a number of functions that make data(frame) manipulations easier.
+
+The functions `sjlabelled::read_sas()`, `sjlabelled::read_spss()` and `sjlabelled::read_stata()` are the `{sjlabelled}` equivalents of the `{haven}` functions mentioned above. [This vignette article](https://strengejacke.github.io/sjlabelled/articles/intro_sjlabelled.html) included with the package explains the main differences between the two.
+
+The more generic function `data_read()` from `{easystats}`'s `{datawizard}` package loads data from various formats based on the source files extension, including files from internet sources or compressed files. It relies on the `{rio}` package, which provides similar functionality.
+
+::: callout-tip
+**It's important** to note that by default the `data_read()` function assumes that numeric variables where all values have a value label are categorical and will convert them into *factors*. That means that all the numeric "values" will be replaced by the "value labels" (e.g. 1="Yes"/ 2="No" will become simply "Yes"/"No").
+
+This is usually a reasonable default behaviour, because the majority of functions in `R` do not handle "value labels" and working with textual (character string) values can be more explicit.
+
+However, this may be less appropriate when the dataset contains many long ordered variables (such as 0-10 scale items), as we will most likely want to treat such variables as *numeric* in statistical models. To cancel this default behaviour, we can add the additional argument `convert_factors = FALSE`. This is also the format that gets imported when using `readRDS()`.
+
+However, most of the common tabulation and graphing functions will not show the category "labels" in the output either, and for that purpose having variables "converted to factors" (with the original "Values" overwritten by the "Value labels") may be a better option.
+:::
+
+As a first step, let's import the **osterman** dataset that underpins the @Osterman2021CanWeTrustEducationFostering article (see the [Data page](https://cgmoreh.github.io/HSS8005-24/data/) on the course website for information about the datasets available in this course):
+
+```{r}
+#| eval: false
+osterman <- datawizard::data_read("https://cgmoreh.github.io/HSS8005-data/osterman.dta")
+```
+
+```{r}
+#| echo: false
+osterman <- data_read("../../data/osterman.dta")
+```
+
+## Exercise 3: Summarise dataset and create a codebook
+
+::: task
+Using functions learnt in Week 1, do the following:
+
+1.  check the dimensions of the dataset; what does it tell you?
+2.  print a summary of the entire dataset; what have you learnt about the data?
+:::
+
+There are various other options available for describing variables in different packages. For example, the `describe_distribution()` function from the `{datawizard}` package which is part of the `{easystats}` ecosystem that we already installed and loaded is useful for summarising *numeric* variables, while the `data_tabulate()` is useful for creating frequency tables of *categorical* variables.
+
+Run the commands below and inspect the outputs:
+
+```{r}
+describe_distribution(osterman)
+```
+
+A very convenient way to create a codebook for a dataset -- especially if it has value-labelled categorical variables -- is offered by `datawizard::data_codebook()` function. The generated codebook describes the variables in the dataset and provides brief summary statistics. We can view this codebook in the RStudio Viewer, or we can save it as an html file. Codebooks are very useful for gaining an overview understanding of a large dataset.
+
+In the command below we create an object storing the codebook; once it's created, open the codebook in the Viewer and inspect it:
+
+```{r, eval=FALSE}
+osterman_codebook <- data_codebook(osterman)
+```
+
+We can also generate and view the codebook interactively, without first saving it to an object:
+
+```{r, eval=FALSE}
+data_codebook(osterman) |> View()
+
+# or
+
+osterman |> data_codebook() |> View()
+
+# or
+
+View(data_codebook(osterman))
+```
+
+The result should be the following:
+
+```{r, echo=FALSE}
+data_codebook(osterman) 
+```
+
+### Problem 1: Some issues when importing data from other software formats
+
+We do notice a few strange values for some variables. For example, let's inspect the `ppltrst` and `dscrgrp` variables in a little more detail:
+
+```{r}
+#| results: hold
+
+osterman |> data_tabulate(c(ppltrst, dscrgrp))
+```
+
+The results in the frequency tables look good. So it's probably something awkward about the labelling. We can check the codebook again; to allow for all levels of the `ppltrst` variable to be tabulated, we can change the number of maximum values shown from the default 10 to something larger:
+
+```{r}
+osterman |> data_codebook(c(ppltrst, dscrgrp), max_values = 20)
+```
+
+As we see, the so-called "tagged" `NA`/missing values are causing the ordering of the values to be unexpected: because of letters appearing as part of a numeric value scale, the scale is automatically ordered following "alphabetic sorting" rather than "natural sorting". `R` is not designed to handle "tagged" `NA`/missing values, but these are commonly used in other statistical software, and the original dataset was imported from a `Stata`/`.dta` format. In most cases this will not pose an issue, but it's safer to convert all "tagged" missing values to standard `NA`s. We can easily do that with the `zap_na_tags()` function from the `{sjlabelled}` package:
+
+```{r}
+osterman <- sjlabelled::zap_na_tags(osterman)
+```
+
+We can test the result to see if it is what we would expect:
+
+```{r}
+## testing the results:
+
+osterman |> data_codebook(c(ppltrst, dscrgrp), max_values = 20)
+
+```
+
+## Exercise 4: Descriptive visualisation
+
+Create some basic descriptive graphs using the `ggplot()` command from the {ggplot2} tidyverse package for the association between the following variables:
+
+1.  ‘trustindex3’ and ‘eduyrs25’
+2.  ‘trustindex3’ and ‘agea’
+3.  ‘trustindex3’ and ‘female’
+
+### 1. ‘trustindex3’ and ‘eduyrs25’
+
+The best way to approach this problem is by working through the first examples in Kieran Healy's [*Data Visualization: A practical introduction*](https://socviz.co/), starting at Chapter 3, and applying them to your data. Outside class, you can develop these basic graphs into better looking ones by adding various extra layers. The `ggplot()` function is part of the `{ggplot2}` package, which is included in the core `{tidyverse}`, so we don't need to load it separately if we have already loaded the tidyverse.
+
+The `ggplot` approach to graphs is to build them up step-by-step using various layers. The basic template code for a `ggplot()` graph is the following:
+
+```         
+ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) +  <GEOM_FUNCTION>()
+```
+
+For example, the code below sets up a totally blank canvas:
+
+```{r}
+ggplot()
+```
+
+The result is the same if we specify a data-frame object only. The commands below are equivalent
+
+```{r}
+ggplot(data = osterman)
+ggplot(osterman)
+```
+
+To start populating the canvas we need to add a first layer containing the variables we want to 'map' using the `aes()` argument (for "aesthetic mapping"). This adds coordinates to the canvas based on the values of the variable we are mapping. For example, in the code below we 'map' the `trustindex3` variable on the `y` (vertical) axis:
+
+```{r error=TRUE, eval=FALSE}
+
+# either:
+ggplot(data = osterman, aes(y = trustindex3))
+
+# or:
+ggplot(osterman, aes(y = trustindex3))
+
+# or:
+ggplot(aes(y = trustindex3), data = osterman)
+
+# but this is not sufficient, as the data is expected to be the first object by default:
+ggplot(aes(y = trustindex3), osterman)
+
+```
+
+```{r}
+ggplot(osterman, aes(y = trustindex3))
+```
+
+We now see the canvas partitioned by horizontal grid lines, equally paced within the minimum value of 0 and maximum of 10, which are the limits of the `trustindex3` variable. We could also 'map' the `trustindex3` variable on the `x` (horizontal) axis:
+
+```{r}
+ggplot(osterman, aes(x = trustindex3))
+```
+
+We have the same canvas as before, but transposed.
+
+If we are interested in plotting the relationship between two variables (in our case, `trustindex3` and `eduyrs25`), we can 'map' one on the `y` axis and the other on the `x` axis. The choice of which variable should go where is our decision, but because in our analysis we are treating `trustindex3` as the outcome (dependent) variable, the convention is to position it on the `y` axis.[^1]
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25))
+```
+
+We now have a basic layer, but no actual data. The next crucial move is to add another layer with the type of graph we wish to produce (called a "geom" in ggplot, short for "geometric object", such as a bar, a line, a boxplot, histogram, etc.) using the `+` operator. For example, we could produce a *histogram* of the `trustindex3` variable by adding `+ geom_histogram()` to the earlier mapping code:
+
+```{r}
+# mapped to `x`
+ggplot(osterman, aes(x = trustindex3)) + geom_histogram()
+
+# mapped to `y`
+ggplot(osterman, aes(y = trustindex3)) + geom_histogram()
+
+```
+
+We could also structure the command differently, by mapping the aesthetics within the geom function:
+
+```{r}
+ggplot(osterman) + geom_histogram(aes(x = trustindex3))
+
+# or simply:
+
+ggplot(osterman) + geom_histogram(aes(trustindex3))
+```
+
+Or even separating the aesthetics specification out completely:
+
+```{r}
+ggplot(osterman)  + aes(trustindex3) + geom_histogram()
+```
+
+Whichever style we choose, we should aim for consistency in our code. Each may have advantages and disadvantages when expanding the function with various other more complex specifications for customising the graphs further, but we will not cover visualisation in that much detail in this course. [Kieran Healy's book on data visualisation](https://socviz.co/) is a good resource for ideas that you can test out.
+
+To visualise the relationship between `trustindex3` and `eduyrs25`, given that both variables are measured on a *numeric* scale (or at least on an *ordinal* scale with seven or more categories), the best option is a **scatterplot**. In `ggplot()`, a scatterplot "geom" is called with `geom_point()`:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) + geom_point()
+```
+
+We now have a scatterplot of the relationship between ‘trustindex3’ and ‘eduyrs25’. However, our data presents some challenges: our measurement scales are relatively short (`length(unique(na.omit(osterman$trustindex3)))` = 40 and `length(unique(na.omit(osterman$eduyrs25)))` = 26) and the data are spread out across all categories. As such, the points that we see on the plot actually represent a great number of overlapping data points. But does each represent the same number of overlapping points, or is there variation? There are a few tricks that we can employ to improve this visualisation. The function `geom_jitter()` (a shortcut to the specification `geom_point(position = "jitter")`) is helpful in such cases because it adds a small amount of random variation to the location of each point, making areas of overlapping points more visible. The commands below do the same thing:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point(position = "jitter")
+```
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point() + 
+  geom_jitter()
+```
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter()
+```
+
+Another useful specification in this case would be to add some level of transparency to the points. That would allow us to distinguish more clearly between the areas with more or fewer overlapping data points, giving a better indication of where the data is clustered and whether there is any noticeable ttrend in that distribution. We can add transparency to a colour with the `alpha` option. An `alpha = 1` means no transparency (the default), while an `alpha` level closer to 0 represents higher levels of transparency. Given the large number of data-points in our case, a rather high transparency level of 0.1 is probably a good option:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_point(position = "jitter", alpha = 0.1)
+```
+
+There seems to be some positive trend in the way the data is distributed, but to get a better sense we can add another geom,  `geom_smooth()`, which provides a set of options. This geom plots "smooth lines" representing various types of regression fit lines. The function fits a regression in the background and graphs the results. The default setting is to fit a *generalized additive model* that captures non-linearities in the data with a *smoothing spline* (the Wikipedia article on [GAMs](https://en.wikipedia.org/wiki/Generalized_additive_model) gives a maths-heavy outline of these models, but they are beyond our interests here). The produced output is probably more informative about the general idea:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth()
+```
+
+But we can also specify other regression methods, and because we are here aiming to model the relationship between *trust* and *education* as a linear model, we can specify the method as "lm":
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm")
+```
+
+Now we get a straight regression line, which is basically the visual representation of the bivariate linear regression model that we will fit in Exercise 5 below. 
+
+There are numerous further specifications that can be added to improve the graph. We won't go into much more detail about these additional options here, but as a taster, let's say that we want to make the regression line more pronounced by changing its colour to *red*:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+
+### 2. ‘trustindex3’ and ‘agea’
+
+We can now do something similar for the relationship between *trust* and *age* (the ‘trustindex3’ and ‘agea’ variables in the dataset). Again, both variables are measured on a *numeric* scale, so a scatterplot should work best. Because we don't know what to expect and therefore what additional settings would improve each individual graph, we start from the most basic informative layer and build up from there. To practice some alternative approaches to working with plots, here we will first save the basic plot as a **ggplot object**, to which we can later add further layers and specifications:
+
+```{r}
+age_plot <- ggplot(osterman, aes(y = trustindex3, x = agea)) +
+  geom_point()
+```
+
+If no output was generated from the command above, that's as expected. The graph was produced, but we didn't ask for it to be printed, we only asked for it to be saved as an object called "age_plot". To see it, we can simply call "age_plot". We can then make various additions to this plot.
+
+```{r}
+age_plot
+```
+
+This looks very similar to the previous graph, so we could add the same additional specifications as in the previous exercise, this time to the plot object that we saved:
+
+```{r}
+age_plot +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+
+The association between age and trust appears very weak, something that we will explore further in Exercise 5.
+
+### 3. ‘trustindex3’ and ‘female’
+
+We can try a similar scatterplot here too, but there may be better options:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_point(alpha = 0.1)
+```
+
+A *scatterplot* expects two continuous variables, but the `female` variable only has two levels (categories) numerically coded as `{0, 1}`. Because of this, the `geom_point()` plot type effectively treats it as a continuous measure with all values in-between 0 and 1 missing. We can see in the plot the variation across `trust` within each sex category, but it's hard to get a sense of any differences between the sexes. We could - as we did before - apply jitter and transparency to the plotted values and add in a linear regression fit line:
+
+```{r}
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_point() +
+  geom_jitter(alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red")
+```
+
+Perhaps this highlights a bit better how the `geom_jitter()` function actually works; it pulls overlapping data points apart, so that the areas with fewer overlapping data points (i.e. where the distribution is thinner) are more clearly distinguishable from the areas with more overlapping data points (i.e. where the distribution is thicker). Here it is much more obvious than in the previous example that the plot with the jitter is just a visual artefact: we, of course, have not created any new "sexes" with values of 0.4 or 0.6 in-between 0 and 1, even though visually that's what we see.
+
+There are various further options that we could add, for example we could change the `width` and `height` of the jitter, the `alpha` level, and even the number of break points on the `x` scale (to make the plot even more confusing):
+
+```{r, message=FALSE}
+
+a <- ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_jitter(width = NULL, 
+              height = NULL,
+              alpha = 1) +
+  geom_smooth(method = "lm", colour = "red", linewidth = 0.1) +
+  scale_x_continuous(breaks = c(0, 0.4, 0.6, 1)) +
+  ggtitle("geom_jitter() defaults")
+
+b <- ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_jitter(width = 0.45, 
+              height = 0.5,
+              alpha = 0.1) +
+  geom_smooth(method = "lm", colour = "red", linewidth = 0.3) +
+  scale_x_continuous(breaks = c(0, 0.4, 0.6, 1)) +
+  ggtitle("w=0.45; h=0.5; \u03b1=0.1")
+
+c <- ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_jitter(width = 0.5, 
+              height = 3,
+              alpha = 0.01) +
+  geom_smooth(method = "lm", colour = "red", linewidth = 0.3) +
+  scale_x_continuous(breaks = c(0, 0.4, 0.6, 1)) +
+  ggtitle("w=0.5; h=3.5; \u03b1=0.01")
+
+```
+
+```{r, echo=FALSE}
+library(patchwork)
+a + b + c
+```
+
+
+Because *female* is a dichotomous/binary factor (categorical) variable, we would be better off using another "geom". A good visualisation tool in the this case is a boxplot, which can be called with the `geom_boxplot()` function:
+
+```{r}
+#| fig-width: 3
+#| fig-height: 4
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_boxplot()
+```
+
+The issue with this graph is that the **female** variable, while a *dichotomous*/*binary* *categorical* variable, is not labelled; instead, the value `1` is taken to represent the "true" value for the name of the variable (i.e. `1` means that one is *female*, as the variable name states, and the value `0` means that they are not female, but *male*).
+
+We could use the `set_labels()` function from the `{sjlabelled}` package to add labels to this variable:
+
+```{r}
+osterman <- osterman |> 
+  sjlabelled::set_labels(female, labels = c("Male", "Female"))
+```
+
+The `{sjlabelled}` package also has a special variable type - `as_label()` - which is useful for forcing `R` to use the *labels* of factor variables in outputs. In the command below, we first change the variable type with `as_label()`, then we run the same `ggplot(_)` function as before:
+
+```{r}
+# We are overwriting the original dataset here, so we better not make a mistake:
+osterman <- osterman |> mutate(female = sjlabelled::as_label(female))
+
+# And from now on the 'female' variable will be treated as a labelled factor:
+ggplot(osterman, aes(y = trustindex3, x = female)) +
+  geom_boxplot()
+```
+
+Box-plots contain a lot of useful summary information about variables, and the interpretation of the shapes is the following:
+
+![box-plot](../pics_materials/1_boxplots.jpg)
+
+```{r, eval=FALSE, include=FALSE}
+
+### source: https://waterdata.usgs.gov/blog/boxplots/
+ggplot_box_legend <- function(family = "serif"){
+
+  # Create data to use in the boxplot legend:
+  set.seed(100)
+
+  sample_df <- data.frame(parameter = "test",
+                        values = sample(500))
+
+  # Extend the top whisker a bit:
+  sample_df$values[1:100] <- 701:800
+  # Make sure there's only 1 lower outlier:
+  sample_df$values[1] <- -350
+
+  # Function to calculate important values:
+  ggplot2_boxplot <- function(x){
+
+    quartiles <- as.numeric(quantile(x,
+                                     probs = c(0.25, 0.5, 0.75)))
+
+    names(quartiles) <- c("25th percentile",
+                          "50th percentile\n(median)",
+                          "75th percentile")
+
+    IQR <- diff(quartiles[c(1,3)])
+
+    upper_whisker <- max(x[x < (quartiles[3] + 1.5 * IQR)])
+    lower_whisker <- min(x[x > (quartiles[1] - 1.5 * IQR)])
+
+    upper_dots <- x[x > (quartiles[3] + 1.5*IQR)]
+    lower_dots <- x[x < (quartiles[1] - 1.5*IQR)]
+
+    return(list("quartiles" = quartiles,
+                "25th percentile" = as.numeric(quartiles[1]),
+                "50th percentile\n(median)" = as.numeric(quartiles[2]),
+                "75th percentile" = as.numeric(quartiles[3]),
+                "IQR" = IQR,
+                "upper_whisker" = upper_whisker,
+                "lower_whisker" = lower_whisker,
+                "upper_dots" = upper_dots,
+                "lower_dots" = lower_dots))
+  }
+
+  # Get those values:
+  ggplot_output <- ggplot2_boxplot(sample_df$values)
+
+  # Lots of text in the legend, make it smaller and consistent font:
+  update_geom_defaults("text",
+                     list(size = 3,
+                          hjust = 0,
+                          family = family))
+  # Labels don't inherit text:
+  update_geom_defaults("label",
+                     list(size = 3,
+                          hjust = 0,
+                          family = family))
+
+  # Create the legend:
+  # The main elements of the plot (the boxplot, error bars, and count)
+  # are the easy part.
+  # The text describing each of those takes a lot of fiddling to
+  # get the location and style just right:
+  explain_plot <- ggplot() +
+    stat_boxplot(data = sample_df,
+                 aes(x = parameter, y=values),
+                 geom ='errorbar', width = 0.3) +
+    geom_boxplot(data = sample_df,
+                 aes(x = parameter, y=values),
+                 width = 0.3, fill = "lightgrey") +
+    theme_minimal(base_size = 5, base_family = family) +
+    geom_segment(aes(x = 2.3, xend = 2.3,
+                     y = ggplot_output[["25th percentile"]],
+                     yend = ggplot_output[["75th percentile"]])) +
+    geom_segment(aes(x = 1.2, xend = 2.3,
+                     y = ggplot_output[["25th percentile"]],
+                     yend = ggplot_output[["25th percentile"]])) +
+    geom_segment(aes(x = 1.2, xend = 2.3,
+                     y = ggplot_output[["75th percentile"]],
+                     yend = ggplot_output[["75th percentile"]])) +
+    geom_text(aes(x = 2.4, y = ggplot_output[["50th percentile\n(median)"]]),
+              label = "Interquartile\nrange", fontface = "bold",
+              vjust = 0.4) +
+    geom_text(aes(x = c(1.17,1.17),
+                  y = c(ggplot_output[["upper_whisker"]],
+                        ggplot_output[["lower_whisker"]]),
+                  label = c("Largest value within 1.5 times\ninterquartile range above\n75th percentile",
+                            "Smallest value within 1.5 times\ninterquartile range below\n25th percentile")),
+                  fontface = "bold", vjust = 0.9) +
+    geom_text(aes(x = c(1.17),
+                  y =  ggplot_output[["lower_dots"]],
+                  label = "Outside value"),
+              vjust = 0.5, fontface = "bold") +
+    geom_text(aes(x = c(1.9),
+                  y =  ggplot_output[["lower_dots"]],
+                  label = "-Value is >1.5 times and"),
+              vjust = 0.5) +
+    geom_text(aes(x = 1.17,
+                  y = ggplot_output[["lower_dots"]],
+                  label = "<3 times the interquartile range\nbeyond either end of the box"),
+              vjust = 1.5) +
+    geom_label(aes(x = 1.17, y = ggplot_output[["quartiles"]],
+                  label = names(ggplot_output[["quartiles"]])),
+              vjust = c(0.4,0.85,0.4),
+              fill = "white", label.size = 0) +
+    ylab("") + xlab("") +
+    theme(axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          panel.grid = element_blank(),
+          aspect.ratio = 4/3,
+          plot.title = element_text(hjust = 0.5, size = 10)) +
+    coord_cartesian(xlim = c(1.4,3.1), ylim = c(-600, 1000)) +
+    labs(title = "Boxplot interpretation")
+
+  return(explain_plot)
+
+}
+
+ggplot_box_legend()
+
+```
+
+In the case above, where we compare the average (median) level of trust across males and females in the data, we find that the two sexes do not differ much at all. We can also check a more precise numeric comparison; using the `{dplyr}` package, we could do:
+
+```{r}
+osterman |> 
+  group_by(female) |> 
+  summarise(Mean=mean(trustindex3), Median=median(trustindex3), SD=sd(trustindex3))
+```
+
+
+## Exercise 5: Fit simple bivariate regression models using OLS
+
+Fit three simple bivariate OLS regressions using the `lm()` function:
+
+1.  Regress ‘trustindex3’ on ‘eduyrs25’ and interpret the results
+2.  Regress ‘trustindex3’ on ‘agea’ and interpret the results
+3.  Regress ‘trustindex3’ on ‘female’ and interpret the results
+4.  Regress ‘trustindex3’ on all three predictors listed above and interpret the results
+
+### 1. Regress ‘trustindex3’ on ‘eduyrs25’ and interpret the results
+
+We will do just that, saving the regression as an object called "m1" (for *model 1*):
+
+```{r}
+m1 <- lm(trustindex3 ~ eduyrs25, data = osterman)
+```
+
+The model object has now been saved in the Environment, and we can inspect it manually if we want by opening it in the Source window. The object is a large list, with various components that we can call and print separately. The most basic information that we can obtain from the model is the coefficients:
+
+```{r}
+coefficients(m1)
+```
+
+This basic information is enough to solve the linear equation underpinning the model:
+
+$$ y_i=b_0+b_1x_i $$ The coefficients correspond to the $b$'s in this simple model, and we can plug the values in to obtain
+
+$$ trust_i=3.91 + 0.11 \times education_i $$
+
+We find, thus, that the number of years spent in education has a positive outcome on social trust, with each additional year of education associated with a 0.11-points higher score on the trust index, above the baseline of 3.91 points in the case when education is equal to 0. With this formula we can calculate predictions of the *trust* score for any individual $i$ from their years of education.
+
+We can also get more information about the model with the `summary()` function. When applied to a linear model object, it provides the following output:
+
+```{r}
+summary(m1)
+```
+
+This output tells us a lot more about the fitted model, for example a summary table of the residuals and an analysis of variance (ANOVA) summary of the residuals, as well as estimates of variation for our coefficients (the standard errors and the p-values associated with t-tests - displayed as *Pr(\>\|t\|)*).
+
+While these are informative, the format is not ideal for further manipulation and presentation. Several user-written functions exist to improve on this output. For example, the [`{broom}`](https://broom.tidymodels.org/) package - part of the [`{tidymodels}`](https://www.tidymodels.org/) suite of packages - has functions to extract model information into "tidy" tibbles (data sets), which can then be further manipulated and plotted. This is especially useful when working with results from many models that would benefit from comparing in a standardised format.
+
+The `summary()` function prints out a lot of information, but it's not the best format if we wish to reuse the various statistical components for further analysis, and the presentation of the output could also be improved. The `model_parameters()` and the `model_performance()` functions from the `{parameters}` package part of `{easystats}` is a better option:
+
+```{r}
+model_parameters(m1) 
+
+model_performance(m1)
+```
+
+The output table shows both 95% confidence intervals (CI) and the standard errors (SE), which can be easier to interpret (CI are calculated as *Estimate +/- (1.96 x Std. Error)*; you can try it out in the Console, replacing in the numeric values).
+
+The best approach is to graph the model results and present them in a figure, but that's not very informative in the case of a simple model with only one predictor, so we can leave it for later.
+
+### 2. Regress ‘trustindex3’ on ‘agea’ and interpret the results
+
+We can do as above:
+
+```{r}
+# Write your own code; name the mode "m2"
+
+
+
+
+
+
+```
+
+### 3. Regress ‘trustindex3’ on ‘female’ and interpret the results
+
+```{r}
+# Write your own code; name the model "m3"
+
+
+
+
+```
+
+### 4. Regress ‘trustindex3’ on all three predictors listed above and interpret the results
+
+Finally we can fit a multiple linear model with several predictors:
+
+```{r}
+# Write your own code; name the model "m4"
+
+
+
+
+
+```
+
+One interesting finding from Model 4 is to notice how radically the statistical significance of the *female* variable changes compared to Model 3. The impact of gender is still very weak in real terms: compared to men of similar age and education level, women score 0.04 points higher on the trust scale; but this is still a stronger effect than in the simple bivariate model (where $b_1$ was 0.008), and our confidence intervals are much narrower.
+
+It's worth noticing that the number of observations used in the two models is not the same, due to missing values in some variables. We could make the samples comparable by selecting out the sample of 68,211 included in Model 4, then refitting Model 3 on that sample only:
+
+```{r}
+sample <- m4$model
+
+m3_new <- lm(trustindex3 ~ female, data = sample)
+
+model_parameters(m3) 
+```
+
+We see that this does not affect the overall picture.
+
+## Exercise 6 (Advanced): Apply the model to a new dataset
+
+The **ostermann** data originates from Waves 1-9 of the European Social Survey. The ESS data are accessible freely upon registration. As part of this exercise, access data from Wave 10 of the survey (from this site: https://www.europeansocialsurvey.org/data/) and perform the following tasks:
+
+-   download the dataset to the Rproject folder
+-   select the variables required to recreate the data to fit the multiple regression model from the previous exercise
+-   create your version of the ‘trustindex3’ variable
+-   fit the models from Exercise 2 and compare the results.
+
+You should already be familiar with the functions needed to complete each of these steps, but it may require some self-study. The most important ***missing information*** required to complete this exercise is to be found in the description on how the **trustindex3** scale was computed:
+
+> To study generalized social trust, I am following the established approach of using a validated three-item scale (Reeskens and Hooghe 2008; Zmerli and Newton 2008). This scale consists of the classic trust question, an item on whether people try to be fair, and an item on whether people are helpful: <br> - ‘Generally speaking, would you say that most people can be trusted, or that you can’t be too careful in dealing with people?’ <br> - ‘Do you think that most people would try to take advantage of you if they got the chance, or would they try to be fair?’ <br> - ‘Would you say that most of the time people try to be helpful or that they are mostly looking out for themselves?’ <br> All of the items may be answered on a scale from 0 to 10 (where 10 represents the highest level of trust) and the scale is calculated as the mean of the three items. The three-item scale clearly improves measurement reliability and cross-country validity compared to using a single item, such as the classic trust question. ... See the Supplementary material for additional information on the construction of the social trust scale (Section A.1), as well as for models using the classic single-item measure of trust (Section A.9).
+
+[^1]: This "convention" makes sense conceptually, if we think about *plotting* in the same way as we think about *modelling*  - i.e. that we are describing the `y` variable as a function of the `x` variable. As we will see later, the `{ggformula}` package expands `{ggplot}` precisely alongside this logic, by simplifying the `ggplot()` syntax so that it resembles the syntax of the linear model-fitting function `lm()`. For our example, `ggplot2::ggplot(osterman, aes(y = trustindex3, x = eduyrs25)) + geom_point()` is equivalent to `ggformula::gf_point(osterman, trustindex3 ~ eduyrs25)`.
