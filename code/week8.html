@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>404 (Page Not Found)</title>
+<title>Introduction to  for HSS8005+</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,21 +17,57 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-<script src="/HSS8005/site_libs/quarto-nav/quarto-nav.js"></script>
-<link href="/HSS8005/./pics/ncl_coa_hss8005.png" rel="icon" type="image/png">
-<script src="/HSS8005/site_libs/clipboard/clipboard.min.js"></script>
-<script src="/HSS8005/site_libs/quarto-html/quarto.js"></script>
-<script src="/HSS8005/site_libs/quarto-html/popper.min.js"></script>
-<script src="/HSS8005/site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="/HSS8005/site_libs/quarto-html/anchor.min.js"></script>
-<link href="/HSS8005/site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="/HSS8005/site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="/HSS8005/site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="/HSS8005/site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="/HSS8005/site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="/HSS8005/site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><script id="quarto-search-options" type="application/json">{
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<link href="../pics/ncl_coa_hss8005.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -332,7 +368,7 @@ globalThis.qwebrSetupRPackages = !(qwebrInstallRPackagesList.indexOf("") !== -1)
 globalThis.qwebrAutoloadRPackages = true;
 
 // Display a startup message?
-globalThis.qwebrShowStartupMessage = false;
+globalThis.qwebrShowStartupMessage = true;
 globalThis.qwebrShowHeaderMessage = false;
 
 // Describe the webR settings that should be used
@@ -344,7 +380,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"warning":"true","results":"markup","label":"unnamed-chunk-1","read-only":"false","dpi":72,"message":"true","comment":"","fig-width":7,"fig-height":5,"editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","out-height":"","out-width":"700px","output":"true","editor-font-scale":"1","autorun":"true","fig-cap":"","classes":"","context":"output"},"code":"Interpret <- function(x = 404) {\n  if (x %in% c(404, Error, Re(Error)))\n    cat(\"The page you were looking for was not found.\\n There may still be content here in the future, so do check back!\\n\")\n  # note: \"\\n\" needed at the end of the \"cat()\" command; see https://stackoverflow.com/a/9137858/16962987\n  else\n    c(\"I don't know that error message.\", \"Check its meaning here: https://datatracker.ietf.org/doc/html/rfc7231#section-6\")\n}"},{"id":2,"options":{"warning":"true","results":"markup","label":"unnamed-chunk-2","read-only":"false","dpi":72,"message":"true","comment":"","fig-width":7,"fig-height":5,"editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","out-height":"","out-width":"700px","output":"true","editor-font-scale":"1","autorun":"false","fig-cap":"","classes":"","context":"interactive"},"code":"# Translate the equation to R code:\n  Error = (-7 * exp(pi * 1i))^3 + ((prod(1:3))^2 + (-25 * exp(pi * 1i)))\n# Display the (real part of the) solution:\n  message(Re(Error))\n# Interpret the meaning of the solution:\n  Interpret(Error)"}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-1"},"code":"# the \"#\" character represents a \"comment\" in R code scripts. Comments are not evaluated by R and are meant to provide information to human readers. comments can be placed either in a separate line or at the end of lines following code\n\nhelp(\"+\")             \n# `help()` is a function that searches R's internal help files for the function/operator/dataset name provided within the parentheses. Beware that in this live R document the result will appear as a long text output underneath the code box. If working in RStudio, the help page will open up in the \"Help\" window in one of the panels.\n\n2 + 2                 \n# a simple mathematical expression using the \"addition\" (+) arithmetic operator \n\nfour <- 2 + 2         \n# an example of saving the result of the mathematical expression as an `object` named `nine` using the `<-` \"assignment operator\"\n\nfour                  \n# a simple statement asking R to print the object `four`\n\nfour + 6              \n# the object can then be used in other expressions\n\nfive = 2 + 2          \n# WARNING: `=` is also an \"assignment operator\" (!!)\n# and yes, we need to be careful with the precision our our language in R just as much as in the real world\n\nfour == five          \n# Whereas `==` is a \"relational operator\" more in line with the common usage of the word \"equal(s)\"\n# We've entered Nineteen Eighty-Four territory here\n\nisFALSE(four == five) \n# `isFALSE` is a \"logical operator\" testing whether the statement in parentheses is TRUE or FALSE\n\nisFALSE(4 == 5)       \n# We're back to reality"},{"id":2,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-2"},"code":"# search for operators in the R Documentation using the `help()` function; replace \"_____\" as required and/or type your own functions in new lines\n\nhelp(____)\n\n"},{"id":3,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-3"},"code":"# Think about what you expect the output from each of the expressions below to be, then run them and check the outputs and think about why that is\n\n4 <- 2 + 2\n\"4\" <- 2 + 2\n`5` <- 2 + 2\n5\n\"5\"\n`5`\nfour + five == 4 + 5\nfour + five == `4` + `5`\nremove(five)\nfour + five == `4` + `5`"},{"id":4,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-4"},"code":"1 + 3 + 5"},{"id":5,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-5"},"code":"nine <- 1 + 3 + 5"},{"id":6,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-6"},"code":"nine - 3\nnine + 15\nnine / 3\nnine * 9"},{"id":7,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-7"},"code":"9 > 5\n9 < 8"},{"id":8,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-8"},"code":"nine = 9"},{"id":9,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-9"},"code":"nine == 9"},{"id":10,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-10"},"code":"nine = 5"},{"id":11,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-11"},"code":"nine == 9\nnine == 5\nfive <- 9\nnine == five\nfive = nine\nnine == five\nnine + five <= 10 # lower than or equal to ..."},{"id":12,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-12"},"code":"x <- c(2.2, 6.2, 1.2, 5.5, 20.1)"},{"id":13,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-13"},"code":"class(x)\ntypeof(x)\nlength(x)\nattributes(x)"},{"id":14,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-14"},"code":"min(x)\nmax(x)\nrange(x)\nmean(x)\nmedian(x)\nsum(x)\nsummary(x)"},{"id":15,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-15"},"code":"numbers <- seq(from = 0, to = 100, by = 5)"},{"id":16,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-16"},"code":"numbers"},{"id":17,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-17"},"code":"200:250"},{"id":18,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-18"},"code":"x[2]"},{"id":19,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-19"},"code":"x[c(2, 5)]"},{"id":20,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-20"},"code":"x[10]"},{"id":21,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-21"},"code":"x[NA]"},{"id":22,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-22"},"code":"x\nx[3] <- 50.3\nx"},{"id":23,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-23"},"code":"x\nx[1:2] <- c(-1.3, 42)\nx"},{"id":24,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-24"},"code":"x[1:2] <- 3.2\nx\n\nx[1:4] <- c(1.2, 2.4)\nx"},{"id":25,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-25"},"code":"jedi <- c(\"Yoda\", \"Obi-Wan\", \"Luke\", \"Leia\", \"Rey\")"},{"id":26,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-26"},"code":"### output is numeric\nx\n\n### output is now character\nc(x, \"hey\")"},{"id":27,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-27"},"code":"logical <- c(TRUE, FALSE, TRUE, TRUE, FALSE)\nlogical"},{"id":28,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-28"},"code":"# Option 1\nleap_year_v1 <- function(year1, year2){\n    ## make a vector of all the years in between year1 and year2, inclusive\n    year <- year1:year2\n    year[(year%%4==0 & year%%100!=0) | year%%400==0]\n}\n\n# Option 2\nleap_year_v2 <- function(year1, year2){\n    ## make an empty vector to store the leap years \n    vector <- c()\n    ## find the leap years (with a 'for' loop) and populate the created vector with them\n    for(year in year1:year2){\n        if((year %% 4 == 0) & (year %% 100 != 0) | (year  %% 400 == 0)){\n            vector <- c(vector, year)\n        }}\n    ## print the leap years\n    return(vector)}\n\n# Option 3\nleap_year_v3 <- function(year1, year2){\n    ## make a vector of all the years\n    year <- year1:year2\n    ## find the leap years ('ifelse')\n    leaps <- ifelse((year %% 4 == 0) & (year %% 100 != 0) | (year  %% 400 == 0), \n                    TRUE, \n                    FALSE)\n    ## print the leap years\n    year[leaps] \n}\n\n# We now have a few functions defined. Let's call one of the functions on all the years between 1900 and 2025 to test it out:\n\nleap_year_...   ## edit the command"}];
 
 </script><script type="module">
 // Declare startupMessageQWebR globally
@@ -1616,14 +1652,14 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script><link rel="stylesheet" href="/HSS8005/html/custom.scss">
+</script><link rel="stylesheet" href="../html/nobiblio.css">
 </head>
-<body class="nav-fixed">
+<body class="docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="/HSS8005/index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">HSS8005 <iconify-icon role="img" inline="" icon="line-md:plus" aria-label="Icon plus from line-md Iconify.design set." title="Icon plus from line-md Iconify.design set."></iconify-icon></span>
     </a>
   </div>
@@ -1633,27 +1669,27 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item">
-    <a class="nav-link" href="/HSS8005/plan.html"> 
+    <a class="nav-link" href="../plan.html"> 
 <span class="menu-text">Module plan</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/HSS8005/materials.html"> 
+    <a class="nav-link" href="../materials.html"> 
 <span class="menu-text">Materials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/HSS8005/resources.html"> 
+    <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/HSS8005/data/index.html"> 
+    <a class="nav-link" href="../data/index.html"> 
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/HSS8005/assessment.html"> 
+    <a class="nav-link" href="../assessment.html"> 
 <span class="menu-text">Assessment</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/HSS8005/{{< var canvas >}}"> 
+    <a class="nav-link" href="{{< var canvas >}}"> 
 <span class="menu-text"><iconify-icon role="img" inline="" icon="arcticons:canvasstudent" style="font-size: l;" aria-label="Icon canvasstudent from arcticons Iconify.design set." title="Icon canvasstudent from arcticons Iconify.design set."></iconify-icon> Canvas</span></a>
   </li>  
 </ul>
@@ -1663,12 +1699,29 @@ window.Quarto = {
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#function-list" id="toc-function-list" class="nav-link active" data-scroll-target="#function-list">Function list</a></li>
+  <li>
+<a href="#elements" id="toc-elements" class="nav-link" data-scroll-target="#elements">Elements</a>
+  <ul class="collapse">
+<li><a href="#expressions" id="toc-expressions" class="nav-link" data-scroll-target="#expressions">Expressions</a></li>
+  <li><a href="#operators-and-other-special-characters" id="toc-operators-and-other-special-characters" class="nav-link" data-scroll-target="#operators-and-other-special-characters">Operators and other special characters</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
+  <li><a href="#r-as-a-simple-calculator" id="toc-r-as-a-simple-calculator" class="nav-link" data-scroll-target="#r-as-a-simple-calculator">R as a simple calculator</a></li>
+  <li><a href="#base-r-packages" id="toc-base-r-packages" class="nav-link" data-scroll-target="#base-r-packages">“Base R” Packages</a></li>
+  <li><a href="#vectors-data-types-and-structures" id="toc-vectors-data-types-and-structures" class="nav-link" data-scroll-target="#vectors-data-types-and-structures">Vectors, data types and structures</a></li>
+  <li><a href="#vector-operations" id="toc-vector-operations" class="nav-link" data-scroll-target="#vector-operations">Vector operations</a></li>
+  </ul>
+</li>
+  </ul></nav>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script><script type="module" id="qwebr-monaco-editor-init">
+<main class="content column-page-right" id="quarto-document-content"><script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script><script type="module" id="qwebr-monaco-editor-init">
 
   // Configure the Monaco Editor's loader
   require.config({
@@ -1948,88 +2001,320 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
   };
   
 }
-</script><div class="error-notice">
-<p><span class="math display">\[
-\textbf{Error = } \left({{-7e^{\pi i}}}\right)^{3} + \left({{ \left({{\prod_{k=1}^{3} k}}\right)^{2} + {{-25e^{\pi i}}}}}\right)
-\]</span></p>
+</script><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Introduction to <i class="fa-brands fa-r-project fa-1x" aria-label="r-project"></i> for HSS8005+</h1>
 </div>
-<p style="text-align:center;  font-size:20px; font-weight: none; color:grey">
-Not sure what this means? Why not ask <img src="/HSS8005/.\pics/R_logo.png" data-vertical-align="bottom" height="18"> ?
-</p>
-<style>
-  .qwebr-output-code-stderr {
-    color: #700001;
-    font-size: 150px;
-    display: grid;
-    font-weight: bolder;
-    padding: 0 0 0 0;
-    text-align: center;
-    align-content: space-evenly;
-    justify-items: center;
-    align-items: baseline;
-    justify-content: space-evenly;
-    font-weight: bolder;
-    line-height: normal;
-    }
-    
-  .qwebr-output-code-stdout {
-    color: #700001;
-    font-size: 20px;
-    display: grid;
-    font-weight: bold;
-    padding: 0 0 0 0;
-    text-align: center;
-    align-content: space-evenly;
-    justify-items: center;
-    align-items: baseline;
-    justify-content: space-evenly;
-    line-height: normal;
-    }
 
-  .view-lines monaco-mouse-cursor-text {
-    position: absolute;
-    font-family: Consolas, "Courier New", monospace;
-    font-weight: normal;
-    font-size: 12px !important;
-    font-feature-settings: "liga" 0, "calt" 0;
-    font-variation-settings: normal;
-    line-height: 20px;
-    letter-spacing: 0px;
-    width: 1079px;
-    height: 144px;
-  }
-</style>
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Description</div>
+    This coding playground introduces some basic R operations. Its aim is to introduce at a basic level those elements of the R programming language that will be most useful for the applied purposes of this course. It is therefore not a comprehensive introduction to R, but a pragmatic one. <br><br> This page contains interactive <a href="https://docs.r-wasm.org/webr/latest/"><code>WebR</code></a> code fields. If the <strong>WEBR STATUS</strong> below is 🟢<strong>Ready!</strong>, then the fields are ready to evaluate the <i class="fa-brands fa-r-project" aria-label="r-project"></i> code within them. You can edit the code in the fields as necessary, even completely replacing the default content. The ‘Start over’ refresh button at the top right end of the fields reinstates the original content. The code in the fields can also be copied, either by manually selecting it or using the copy button at the top right end of the fields.
+  </div>
+</div>
+
+
+</header><section id="function-list" class="level1"><h1>Function list</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<!-- preamble start -->
+
+    <script>
+
+      function styleCell_t9hbhbh09y09m1pbwbx4(i, j, css_id) {
+          var table = document.getElementById("tinytable_t9hbhbh09y09m1pbwbx4");
+          var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_t9hbhbh09y09m1pbwbx4');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_t9hbhbh09y09m1pbwbx4(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_t9hbhbh09y09m1pbwbx4");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: 3, j: 0 }, { i: 3, j: 1 },  ], css_id: 'tinytable_css_tp6wr4e7jy7pxdjv00yy',}, 
+          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 },  ], css_id: 'tinytable_css_mv3b4pr4up0h3z5wpg5o',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_t9hbhbh09y09m1pbwbx4(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script><style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_tp6wr4e7jy7pxdjv00yy, .table th.tinytable_css_tp6wr4e7jy7pxdjv00yy { border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_mv3b4pr4up0h3z5wpg5o, .table th.tinytable_css_mv3b4pr4up0h3z5wpg5o { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+<div class="container">
+      <table class="table table-borderless" id="tinytable_t9hbhbh09y09m1pbwbx4" style="table-layout: fixed; width: 80% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+<thead><tr>
+<th scope="col">Package <span style="color:red"> : : </span> Function</th>
+                <th scope="col">Purpose</th>
+              </tr></thead>
+<tbody>
+<tr>
+<td><code><a href="https://rdrr.io/r/utils/help.html">help()</a></code></td>
+                  <td>The primary interface to R’s built-in help system. It’s main mandatory attribute is <code>topic</code>, usually a name or character string specifying the topic for which help is sought. See, for example, below, where we use the function to get information on built-in arithmetic and logical operators.</td>
+                </tr>
+<tr>
+<td><code><a href="https://rdrr.io/r/base/Arithmetic.html">utils::help(Arithmetic)</a></code></td>
+                  <td>R’s built-in arithmetic operators</td>
+                </tr>
+<tr>
+<td><code><a href="https://rdrr.io/r/base/Comparison.html">utils::help(Comparison)</a></code></td>
+                  <td>R’s built-in relational operators</td>
+                </tr>
+</tbody>
+</table>
+</div>
+<!-- hack to avoid NA insertion in last line -->
+</div>
+</div>
+<div class="codebox">
+<p>If you have more advanced knowledge of <i class="fa-brands fa-r-project" aria-label="r-project"></i> and you find the exercises below too easy, here’s an <i class="fa-brands fa-r-project" aria-label="r-project"></i> programming challenge for you.</p>
+<p>Suppose you want to write a function that lists all the leap years between two specified years. How would you go about writing it? What are the information that you need first? What are the steps that you would take to build up the function? There are several ways of achieving such a function, and you can find three options at the bottom of this worksheet. Work individually or in a small group.</p>
+<p><strong>Tip:</strong></p>
+<ul>
+<li>You first need to check the definition of a leap year and how it is calculated; you can Google this.</li>
+<li>You then need to find out how the arithmetic operations involved in the calculation are implemented in <i class="fa-brands fa-r-project" aria-label="r-project"></i>; try <code><a href="https://rdrr.io/r/base/Arithmetic.html">help(Arithmetic)</a></code> or <code><a href="https://rdrr.io/r/base/Arithmetic.html">?Arithmetic</a></code>.</li>
+<li>When you are done, you can check your results against the example solutions given at the bottom of this page</li>
+</ul>
+</div>
+</section><section id="elements" class="level1"><h1>Elements</h1>
+<section id="expressions" class="level2"><h2 class="anchored" data-anchor-id="expressions">Expressions</h2>
+<p><em>Expressions</em> or <em>statements</em> are the fundamental units of work in <code>R</code>. The <code>R</code> <strong>computing environment</strong> <em>evaluates</em> expressions/statements written in the <code>R</code> <strong>programming language</strong>. Expressions/statements are made up of <em>functions</em>, <em>operators</em> (special characters) and <em>data objects</em>.</p>
+<p>The code block below contains an example of each. Clicking <span class="qwebr-icon-run-code"><i class="fa-solid fa-play" aria-label="play"></i></span> <strong>Run Code</strong> will run all lines of code in the block; to run the expressions one-by-one, click on the desired code line and execute <strong>Ctrl + ENTER</strong> / <strong>Command + RETURN</strong>.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="operators-and-other-special-characters" class="level2"><h2 class="anchored" data-anchor-id="operators-and-other-special-characters">Operators and other special characters</h2>
+<p>We have encountered the <code>+</code> operator above. We have also found out from the <code>R Documentation</code> that <code>+</code> is one of several *arithmetic operators<code>.</code>R` organises its various operators into the following groups:</p>
+<ul>
+<li>Arithmetic operators (see <code><a href="https://rdrr.io/r/base/Arithmetic.html">help(Arithmetic)</a></code>)</li>
+<li>Assignment operators (see <code><a href="https://rdrr.io/r/base/assignOps.html">help(assignOps)</a></code>)</li>
+<li>Comparison/Relational operators (see <code><a href="https://rdrr.io/r/base/Comparison.html">help(Comparison)</a></code>)</li>
+<li>Logical operators (<code>&amp;</code>, <code>&amp;&amp;</code>, <code>|</code>, <code>||</code>, <code>!</code>, <code>isTRUE</code>, <code>isFALSE</code>)</li>
+<li>Miscellaneous operators (<code>:</code>, <code>%in%</code>, <code>%*%</code>)</li>
+</ul>
+<div class="codebox">
+<p>Find out more about each by searching the <code>R Documentation</code> using the <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code> function:</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<style>
-.backbutton {
-  background-color: #700001;
-  border: none;
-  color: white;
-  padding: 10px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 2px 2px;
-  cursor: pointer;
-}
-</style>
-<script>
-function goBack()
-  {
-  window.history.back()
-  }
-</script><button class="backbutton" style="margin: 10px; position: absolute; left: 50%; -ms-transform: translate(-50%); transform: translate(-50%)" onclick="goBack()">
-Go Back
-</button>
+</div>
+<p>There are also a number of other special characters used in <code>R</code>. For example, it’s worth being aware of the role of different types of <em>quotes</em> (check <code><a href="https://rdrr.io/r/base/Quotes.html">help(Quotes)</a></code>). Single (<code>'</code>) and double quotes (<code>"</code>) delimit character constants. They can be used interchangeably but double quotes are preferred (and character constants are printed using double quotes), so single quotes are normally only used to delimit character constants containing double quotes (e.g.&nbsp;<code>'here are "double quotes" in single quotes'</code>. Backslash (```) is used to start an <em>escape sequence</em> inside character constants.</p>
+<p>To check how this works, let’s get back into Nineteen Eighty-Four territory:</p>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section><section id="functions" class="level2"><h2 class="anchored" data-anchor-id="functions">Functions</h2>
+<p>Most of the work in <code>R</code> is done using functions. It’s possible to <strong>create your own functions</strong>. This makes R extremely powerful and extendible. We’re not going to cover making your own functions in this course, but it’s important to be aware of this capability. There are plenty of good resources online for learning how to do this, including <a href="https://www.statmethods.net/management/userfunctions.html">this one</a>.</p>
+</section><section id="r-as-a-simple-calculator" class="level2"><h2 class="anchored" data-anchor-id="r-as-a-simple-calculator">R as a simple calculator</h2>
+<p>The most elementary yet still handy task you can use <i class="fa-brands fa-r-project" aria-label="r-project"></i> for is to perform basic arithmetic operations. This is useful for getting a first experience <em>doing</em> things in the <i class="fa-brands fa-r-project" aria-label="r-project"></i> language. This is aided by <code>R</code>’s <strong><em>arithmetic operators</em></strong>, which we can find out more about if we type and execute the command <code><a href="https://rdrr.io/r/base/Arithmetic.html">help(Arithmetic)</a></code>. Generally, the <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code> function allows us to access <code>R</code>’s internal helper pages.</p>
+<p>Let’s say we want to know the result of adding up three numbers: 1, 3 and 5:</p>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>This will print out the result (9).</p>
+<p>The <code>[1]</code> in the result is just the line number; in this case, our result only consists of a single line.</p>
+<p>We can also save the result of this operation as an <strong><em>object</em></strong>, so we can use it in further operations. We create objects by using the so-called <strong><em>assignment operator</em></strong> consisting of the characters <code>&lt;-</code> (resembling a left-arrow).</p>
+<p>A command involving <code>&lt;-</code> can be read as <strong>“assign the value of the result from the operation on the right hand side (some expression) to the object on the left hand side (short name of object, single word, with no spaces)”</strong>.</p>
+<p>For example, let’s save our result in an object called “<strong>nine</strong>”:</p>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Notice that there is no output printed this time. But there are also no error messages, so the operation must have run without problems. Instead, if you are working in the Console within <code>RStudio</code>, the newly created objects will be listed in the Environment pane; you should have an object called “nine” there that stores the single value “9” in it. We can now use this object for other operations, such as:</p>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>We can also check results of so-called <strong>relational</strong> operations. There are several <em>relational operators</em> that allow us to compare objects in R. The most useful of these are the following:</p>
+<ul>
+<li>
+<code>&gt;</code> greater than, <code>&gt;=</code> greater than or equal to</li>
+<li>
+<code>&lt;</code> less than, <code>&lt;=</code> less than or equal to</li>
+<li>
+<code>==</code> equal to</li>
+<li>
+<code>!=</code> not equal to</li>
+</ul>
+<p>When we use these to compare two objects in R, we end up with a <strong>logical</strong> object.</p>
+<p>For example, let’s check whether 9 is greater than 5, and whether it is lower than 8:</p>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><i class="fa-brands fa-r-project" aria-label="r-project"></i> treats our inputs as statements that we are asking it to evaluate, and we get the answers “TRUE” and “FALSE”, respectively, as we would expect. Let’s now check whether our object “nine” is equal to the number 9. We may assume that we can achieve this by typing “nine = 9”, but let’s see what that results in:</p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Did we get the result we expected? Nothing was printed in the output, so seemingly nothing happened… That’s because the “=” sign is also used as an assignment operator in <i class="fa-brands fa-r-project" aria-label="r-project"></i>, just like “&lt;-”. So we basically assigned the value “9” to the object “nine” again. To use the <em>equal</em> sign as a logical operator we must type it twice (==). Let’s see:</p>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Now we get the answer “TRUE”, as expected.</p>
+<p>This distinction between “=” and “==” is important to keep in mind. What would have happened if we had tried to test whether our object “nine” equals value “5” or not, and instead of the logical operator (==) we used the assignment operator (=)? Let’s see:</p>
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>In the Console we again see no results printed, but if we check our Environment, we see that the value of the object “nine” was changed to 5. So it can be a dangerous business. We’ll be using the “&lt;-” as assignment operator instead of “=” to avoid any confusion in this respect. The distinction between == and = will also emerge in other contexts later.</p>
+<p>So, try out the following commands in turn now and check if the results are what you’d expect:</p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The text following the hashtag (#) in the last line is a comment. If you’d like to comment on any code you write just add a hash (<code>#</code>) or series of hashes in front of it so that <i class="fa-brands fa-r-project" aria-label="r-project"></i> knows it should not evaluate it as a command. This will be useful when writing your commands in an R script that you can save for later, rather than interacting with <i class="fa-brands fa-r-project" aria-label="r-project"></i> live in the Console.</p>
+</section><section id="base-r-packages" class="level2"><h2 class="anchored" data-anchor-id="base-r-packages">“Base R” Packages</h2>
+<p>Instead of programming your own functions in the <strong>R</strong> language, you can rely on functions written by other people and bundled within a package that performs some set task.</p>
+<p>When you install <code>R</code>, a set of “packages” containing various functions are also installed by default. These packages make up what is colloquially referred to as <em>base R</em>. Functions from these packages can be used straight away and they cannot be deleted or installed separately. The functionality of these <em>base R</em> packages is updated with each new edition of <code>R</code>, but not in between new releases of the software. The code below lists the names of all the packages in <em>base R</em>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span> ,<span class="st">"Priority"</span><span class="op">]</span> <span class="op">==</span> <span class="st">"base"</span>, <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We see in the list that there is also a package called “base”, which contains 1283 elementary functions. However, when we refer to <em>base R</em>, we usually mean the functions from all the 14 packages listed above.</p>
+<p>Apart from these packages that come pre-installed and pre-loaded with our <code>R</code> installation, there are also a number of “recommended” packages, which can be thought of as an <em>extended base R</em>. These packages also come pre-installed in binary distributions of <code>R</code>, but they need to be loaded in order to make their functions available for use. These “recommended” packages are:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span> ,<span class="st">"Priority"</span><span class="op">]</span> <span class="op">==</span> <span class="st">"recommended"</span>, <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="vectors-data-types-and-structures" class="level2"><h2 class="anchored" data-anchor-id="vectors-data-types-and-structures">Vectors, data types and structures</h2>
+<p>The basic elements of data in <code>R</code> are called <em>vectors</em>. R has 6 basic data types that you should be aware of:</p>
+<ul>
+<li>
+<code>character</code>: a text string, e.g.&nbsp;“name”</li>
+<li>
+<code>numeric</code>: a real or decimal number</li>
+<li>
+<code>integer</code>: non-decimal number; often represented by a number followed by the letter “L”, e.g.&nbsp;5L</li>
+<li>
+<code>logical</code>: <code>TRUE</code> or <code>FALSE</code>
+</li>
+<li>complex: complex numbers with real and imaginary parts</li>
+</ul>
+<p>R provides several functions to examine features of vectors and other objects, for example:</p>
+<ul>
+<li>
+<code><a href="https://rdrr.io/r/base/class.html">class()</a></code> - what kind of object is it (high-level)?</li>
+<li>
+<code><a href="https://rdrr.io/r/base/typeof.html">typeof()</a></code> - what is the object’s data type (low-level)?</li>
+<li>
+<code><a href="https://rdrr.io/r/base/length.html">length()</a></code> - how long is it? What about two dimensional objects?</li>
+<li>
+<code><a href="https://rdrr.io/r/base/attributes.html">attributes()</a></code> - does it have any metadata?</li>
+</ul></section><section id="vector-operations" class="level2"><h2 class="anchored" data-anchor-id="vector-operations">Vector operations</h2>
+<p>Let’s learn a few vector operations.</p>
+<p>First, let’s use the <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> function to <strong>c</strong>oncatenate vector elements:</p>
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>To run this line of code in an R script, <strong>place the cursor on the line</strong> you want to execute and <em>either</em> click on the small “Run” tab in the upper-right corner of the script’s task bar, <em>or</em> click <em>Ctrl</em>+<em>Enter</em> (on Windows PCs).</p>
+<p>The vector called x that we just created appears in the Environment. We can examine some of its features:</p>
+<div id="qwebr-insertion-location-13"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>These tell us something about the characteristics of the object, but not much about its content (apart from the fact that it has a length of 5). Functions such as <code>min</code>, <code>max</code>, <code>range</code>, <code>mean</code>, <code>median</code>, <code>sum</code> or <code>summary</code> give us some summary statistics about the object:</p>
+<div id="qwebr-insertion-location-14"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The <code><a href="https://rdrr.io/r/base/seq.html">seq()</a></code> function lets us create a sequence from a starting point to an ending point. If you specify the <code>by</code> argument, you can skip values. For instance, if we wanted a vector of every 5th number between 0 and 100, we could write:</p>
+<div id="qwebr-insertion-location-15"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>To print out the result in the console, we can simply type the name of the object:</p>
+<div id="qwebr-insertion-location-16"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>A shorthand version to get a sequence between two numbers counting by 1s is to use the <code>:</code> sign. For example, print out all the numbers between 200 and 250:</p>
+<div id="qwebr-insertion-location-17"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>To access a single element of a vector by position in the vector, use the square brackets <code>[]</code>:</p>
+<div id="qwebr-insertion-location-18"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>If you want to access more than one element of a vector, put a vector of the positions you want to access in the brackets:</p>
+<div id="qwebr-insertion-location-19"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>If you try to access an element past the length of the vector, it will return a missing value <code>NA</code>:</p>
+<div id="qwebr-insertion-location-20"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>If you accidentally subset a vector by <code>NA</code> (the missing value), you get the vector back with all its entries replaced by <code>NA</code>:</p>
+<div id="qwebr-insertion-location-21"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Let’s say you want to modify one value in your vector. You can combine the square bracket subset <code>[]</code> with the assignment operator <code>&lt;-</code> to replace a particular value:</p>
+<div id="qwebr-insertion-location-22"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>You can replace multiple values at the same time by using a vector for subsetting:</p>
+<div id="qwebr-insertion-location-23"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>If the replacement vector (the right-hand side) is shorter than what you are assigning to (the left-hand side), the values will “recycle” or repeat as necessary:</p>
+<div id="qwebr-insertion-location-24"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>You can also create a vector of characters (words, letters, punctuation, etc):</p>
+<div id="qwebr-insertion-location-25"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Note for vectors, you cannot mix characters and numbers in the same vector. If you add a single character element, the whole vector gets converted.</p>
+<div id="qwebr-insertion-location-26"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Logical vectors are just vectors that only contain the special values <code>TRUE</code> or <code>FALSE</code>.</p>
+<div id="qwebr-insertion-location-27"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><code>TRUE</code> and <code>FALSE</code> can be shortened to <code>T</code> and <code>F</code>, respectively. However, it is stylistically recommended to spell them out. Also, note that <i class="fa-brands fa-r-project" aria-label="r-project"></i> is case-sensitive, so typing something like <code>true</code>, <code>True</code> or <code>fALSE</code> would give an error.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Solutions to the advanced exercise: leap year functions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>First, we need to make sure that we have a definition of a <strong>leap year</strong>. We can go for this one, from the <a href="https://www.rmg.co.uk/stories/topics/which-years-are-leap-years-can-you-have-leap-seconds">Royal Museums of Greenwich</a>:</p>
+<blockquote class="blockquote">
+<p>To be a leap year, the year number must be divisible by four – except for end-of-century years, which must be divisible by 400. This means that the year 2000 was a leap year, although 1900 was not.</p>
+</blockquote>
+<p>So, we need to write a function that calculates whether a given number is divisible by another or not. We still need to simplify this further conceptually. If a number is divisible by another, that means that there is no ‘remainder’, or in other words, that the ‘remainder’ is 0. Is there a mathematical operation that could come in handy here? We may remember that the <strong>modulo</strong> operation gives the remainder when dividing. For example, “5 modulo 3 = 2” because <span class="math inline">\({5\over3}=1\)</span> with a remainder of <span class="math inline">\(2\)</span>.</p>
+<p>Knowing this will be extremely helpful, but we also need to know how the modulo operation is implemented in <i class="fa-brands fa-r-project" aria-label="r-project"></i>. We could do a search in <i class="fa-brands fa-r-project" aria-label="r-project"></i> for <code><a href="https://rdrr.io/r/base/Arithmetic.html">?Arithmetic</a></code> to find a list of arithmetic operators, and we’d find that the operator <code>%%</code> stands for the modulo operation.</p>
+<p>We now have all the knowledge elements we need to get down to programming a leap-year function in <i class="fa-brands fa-r-project" aria-label="r-project"></i>:</p>
+<div id="qwebr-insertion-location-28"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
 
 
-
-
-</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

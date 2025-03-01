@@ -68,7 +68,14 @@ The value of the EUROMODULE survey data compared to other comparative surveys th
 :::
 
 
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa solid database >}} **Mitchell, 2021**
 
+This dataset is the one underpinning the analysis carried out by @Mitchell2021SocialTrustAntiimmigrant. The article uses the European Social Survey (2002–2016) to test how differences in social trust, both within and between countries influence attitudes about immigrants. 
+
+[{{< fa download size=sm >}} Download .dta](/data/mitchell2021.rds){.btn .btn-ncl}
+
+:::
 
 
 
