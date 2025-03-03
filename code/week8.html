@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Introduction to  for HSS8005+</title>
+<title>Week 8 coding</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,6 +54,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<link href="../application/week8.html" rel="next">
+<link href="../theory/week8.html" rel="prev">
 <link href="../pics/ncl_coa_hss8005.png" rel="icon" type="image/png">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -65,8 +67,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script><script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -81,1553 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/editor/editor.main.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style type="text/css">
-.monaco-editor pre {
-  background-color: unset !important;
-}
-
-.qwebr-editor-toolbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.qwebr-editor-toolbar-left-buttons, .qwebr-editor-toolbar-right-buttons {
-  display: flex;
-}
-
-.qwebr-non-interactive-loading-container.qwebr-cell-needs-evaluation, .qwebr-non-interactive-loading-container.qwebr-cell-evaluated {
-  justify-content: center;
-  display: flex;
-  background-color: rgba(250, 250, 250, 0.65);
-  border: 1px solid rgba(233, 236, 239, 0.65);
-  border-radius: 0.5rem;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.qwebr-r-project-logo {
-  color: #2767B0; /* R Project's blue color */
-}
-
-.qwebr-icon-status-spinner {
-  color: #7894c4;
-}
-
-.qwebr-icon-run-code {
-  color: #0d9c29
-}
-
-body.quarto-light .qwebr-output-code-stdout {
-  color: #111;
-}
-
-body.quarto-dark .qwebr-output-code-stdout {
-  color: #EEE;
-}
-
-.qwebr-output-code-stderr {
-  color: #db4133;
-}
-
-body.quarto-light .qwebr-editor {
-  border: 1px solid #EEEEEE;
-}
-
-body.quarto-light .qwebr-editor-toolbar {
-  background-color: #EEEEEE;
-  padding: 0.2rem 0.5rem;
-}
-
-body.quarto-dark .qwebr-editor {
-  border: 1px solid #111;
-}
-
-body.quarto-dark .qwebr-editor-toolbar {
-  background-color: #111;
-  padding: 0.2rem 0.5rem;
-}
-
-.qwebr-button {
-  display: inline-block;
-  font-weight: 400;
-  line-height: 1;
-  text-decoration: none;
-  text-align: center;
-  padding: 0.375rem 0.75rem;
-  font-size: .9rem;
-  border-radius: 0.25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-body.quarto-light .qwebr-button {
-  background-color: #EEEEEE;
-  color: #000;
-  border-color: #dee2e6;
-  border: 1px solid rgba(0,0,0,0);
-}
-
-body.quarto-dark .qwebr-button {
-  background-color: #111;
-  color: #EEE;
-  border-color: #dee2e6;
-  border: 1px solid rgba(0,0,0,0);
-}
-
-body.quarto-light .qwebr-button:hover {
-  color: #000;
-  background-color: #d9dce0;
-  border-color: #c8ccd0;
-}
-
-body.quarto-dark .qwebr-button:hover {
-  color: #d9dce0;
-  background-color: #323232;
-  border-color: #d9dce0;
-}
-
-.qwebr-button:disabled,.qwebr-button.disabled,fieldset:disabled .qwebr-button {
-  pointer-events: none;
-  opacity: .65
-}
-
-.qwebr-button-reset {
-  color: #696969; /*#4682b4;*/
-}
-
-.qwebr-button-copy {
-  color: #696969;
-}
-
-/* Style the code highlight lines */
-body.quarto-light .qwebr-editor-highlight-line {
-  background-color: lightblue;
-}
-
-body.quarto-dark .qwebr-editor-highlight-line {
-  background-color: darkblue;
-}
-
-/* Style the modal pop-up */
-
-/* The Modal (background) */
-.qwebr-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content */
-.qwebr-modal-content {
-  background-color: #fefefe;
-  margin: 5% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-.qwebr-modal-content-code {
-  max-height: 50vh;
-  min-height: 5vh;
-  overflow: scroll;
-  border: 1px solid #888;
-}
-
-/* The Close Button */
-.qwebr-modal-close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.qwebr-modal-close:hover,
-.qwebr-modal-close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.qwebr-download-btn {
-  margin-top: 10px;
-  text-decoration: none !important;
-}
-
-/* Styling to download image that is created */
-
-.qwebr-canvas-image {
-  position: relative;
-  display: inline-block;
-  margin: 10px;
-}
-
-.qwebr-canvas-image-download-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-
-figure:hover .qwebr-canvas-image-download-btn {
-  display: block;
-}
-
-/* Custom styling for RevealJS Presentations*/
-
-/* Reset the style of the interactive area */
-.reveal div.qwebr-interactive-area {
-  display: block;
-  box-shadow: none;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Provide space to entries */
-.reveal div.qwebr-output-code-area pre div {
-  margin: 1px 2px 1px 10px;
-}
-
-/* Collapse the inside code tags to avoid extra space between line outputs */
-.reveal pre div code.qwebr-output-code-stdout, .reveal pre div code.qwebr-output-code-stderr {
-  padding: 0;
-  display: contents;
-}
-
-body.reveal.quarto-light pre div code.qwebr-output-code-stdout {
-  color: #111;
-}
-
-body.reveal.quarto-dark pre div code.qwebr-output-code-stdout {
-  color: #EEEEEE;
-}
-
-.reveal pre div code.qwebr-output-code-stderr {
-  color: #db4133;
-}
-
-
-/* Create a border around console and output (does not effect graphs) */
-body.reveal.quarto-light div.qwebr-console-area {
-  border: 1px solid #EEEEEE;
-  box-shadow: 2px 2px 10px #EEEEEE;
-}
-
-body.reveal.quarto-dark div.qwebr-console-area {
-  border: 1px solid #111;
-  box-shadow: 2px 2px 10px #111;
-}
-
-
-/* Cap output height and allow text to scroll */
-/* TODO: Is there a better way to fit contents/max it parallel to the monaco editor size? */
-.reveal div.qwebr-output-code-area pre {
-  max-height: 400px;
-  overflow: scroll;
-}
-
-iframe.qwebr-output-code-browse {
-  width: 100%;
-
-  /*
-    TODO: How to make the height automatic according to the widget size,
-    or respect the quarto code block options?
-  */
-  min-height: 500px;
-}
-
-</style>
-<script type="module">
-// Document level settings ----
-
-// Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = [''];
-
-// Specify possible locations to search for the repository
-globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
-
-// Check to see if we have an empty array, if we do set to skip the installation.
-globalThis.qwebrSetupRPackages = !(qwebrInstallRPackagesList.indexOf("") !== -1);
-globalThis.qwebrAutoloadRPackages = true;
-
-// Display a startup message?
-globalThis.qwebrShowStartupMessage = true;
-globalThis.qwebrShowHeaderMessage = false;
-
-// Describe the webR settings that should be used
-globalThis.qwebrCustomizedWebROptions = {
-  "baseURL": "https://webr.r-wasm.org/v0.4.0/",
-  "serviceWorkerUrl": "",
-  "homedir": "/home/web_user", 
-  "channelType": "ChannelType.Automatic"
-};
-
-// Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-1"},"code":"# the \"#\" character represents a \"comment\" in R code scripts. Comments are not evaluated by R and are meant to provide information to human readers. comments can be placed either in a separate line or at the end of lines following code\n\nhelp(\"+\")             \n# `help()` is a function that searches R's internal help files for the function/operator/dataset name provided within the parentheses. Beware that in this live R document the result will appear as a long text output underneath the code box. If working in RStudio, the help page will open up in the \"Help\" window in one of the panels.\n\n2 + 2                 \n# a simple mathematical expression using the \"addition\" (+) arithmetic operator \n\nfour <- 2 + 2         \n# an example of saving the result of the mathematical expression as an `object` named `nine` using the `<-` \"assignment operator\"\n\nfour                  \n# a simple statement asking R to print the object `four`\n\nfour + 6              \n# the object can then be used in other expressions\n\nfive = 2 + 2          \n# WARNING: `=` is also an \"assignment operator\" (!!)\n# and yes, we need to be careful with the precision our our language in R just as much as in the real world\n\nfour == five          \n# Whereas `==` is a \"relational operator\" more in line with the common usage of the word \"equal(s)\"\n# We've entered Nineteen Eighty-Four territory here\n\nisFALSE(four == five) \n# `isFALSE` is a \"logical operator\" testing whether the statement in parentheses is TRUE or FALSE\n\nisFALSE(4 == 5)       \n# We're back to reality"},{"id":2,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-2"},"code":"# search for operators in the R Documentation using the `help()` function; replace \"_____\" as required and/or type your own functions in new lines\n\nhelp(____)\n\n"},{"id":3,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-3"},"code":"# Think about what you expect the output from each of the expressions below to be, then run them and check the outputs and think about why that is\n\n4 <- 2 + 2\n\"4\" <- 2 + 2\n`5` <- 2 + 2\n5\n\"5\"\n`5`\nfour + five == 4 + 5\nfour + five == `4` + `5`\nremove(five)\nfour + five == `4` + `5`"},{"id":4,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-4"},"code":"1 + 3 + 5"},{"id":5,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-5"},"code":"nine <- 1 + 3 + 5"},{"id":6,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-6"},"code":"nine - 3\nnine + 15\nnine / 3\nnine * 9"},{"id":7,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-7"},"code":"9 > 5\n9 < 8"},{"id":8,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-8"},"code":"nine = 9"},{"id":9,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-9"},"code":"nine == 9"},{"id":10,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-10"},"code":"nine = 5"},{"id":11,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-11"},"code":"nine == 9\nnine == 5\nfive <- 9\nnine == five\nfive = nine\nnine == five\nnine + five <= 10 # lower than or equal to ..."},{"id":12,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-12"},"code":"x <- c(2.2, 6.2, 1.2, 5.5, 20.1)"},{"id":13,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-13"},"code":"class(x)\ntypeof(x)\nlength(x)\nattributes(x)"},{"id":14,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-14"},"code":"min(x)\nmax(x)\nrange(x)\nmean(x)\nmedian(x)\nsum(x)\nsummary(x)"},{"id":15,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-15"},"code":"numbers <- seq(from = 0, to = 100, by = 5)"},{"id":16,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-16"},"code":"numbers"},{"id":17,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-17"},"code":"200:250"},{"id":18,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-18"},"code":"x[2]"},{"id":19,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-19"},"code":"x[c(2, 5)]"},{"id":20,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-20"},"code":"x[10]"},{"id":21,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-21"},"code":"x[NA]"},{"id":22,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-22"},"code":"x\nx[3] <- 50.3\nx"},{"id":23,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-23"},"code":"x\nx[1:2] <- c(-1.3, 42)\nx"},{"id":24,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-24"},"code":"x[1:2] <- 3.2\nx\n\nx[1:4] <- c(1.2, 2.4)\nx"},{"id":25,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-25"},"code":"jedi <- c(\"Yoda\", \"Obi-Wan\", \"Luke\", \"Leia\", \"Rey\")"},{"id":26,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-26"},"code":"### output is numeric\nx\n\n### output is now character\nc(x, \"hey\")"},{"id":27,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-27"},"code":"logical <- c(TRUE, FALSE, TRUE, TRUE, FALSE)\nlogical"},{"id":28,"options":{"dpi":72,"editor-quick-suggestions":"false","comment":"","classes":"","output":"true","editor-word-wrap":"true","fig-width":7,"read-only":"false","message":"true","context":"interactive","results":"markup","fig-height":5,"warning":"true","out-height":"","editor-max-height":"","editor-font-scale":"1","autorun":"false","fig-cap":"","out-width":"700px","label":"unnamed-chunk-28"},"code":"# Option 1\nleap_year_v1 <- function(year1, year2){\n    ## make a vector of all the years in between year1 and year2, inclusive\n    year <- year1:year2\n    year[(year%%4==0 & year%%100!=0) | year%%400==0]\n}\n\n# Option 2\nleap_year_v2 <- function(year1, year2){\n    ## make an empty vector to store the leap years \n    vector <- c()\n    ## find the leap years (with a 'for' loop) and populate the created vector with them\n    for(year in year1:year2){\n        if((year %% 4 == 0) & (year %% 100 != 0) | (year  %% 400 == 0)){\n            vector <- c(vector, year)\n        }}\n    ## print the leap years\n    return(vector)}\n\n# Option 3\nleap_year_v3 <- function(year1, year2){\n    ## make a vector of all the years\n    year <- year1:year2\n    ## find the leap years ('ifelse')\n    leaps <- ifelse((year %% 4 == 0) & (year %% 100 != 0) | (year  %% 400 == 0), \n                    TRUE, \n                    FALSE)\n    ## print the leap years\n    year[leaps] \n}\n\n# We now have a few functions defined. Let's call one of the functions on all the years between 1900 and 2025 to test it out:\n\nleap_year_...   ## edit the command"}];
-
-</script><script type="module">
-// Declare startupMessageQWebR globally
-globalThis.qwebrStartupMessage = document.createElement("p");
-
-// Verify if OffScreenCanvas is supported
-globalThis.qwebrOffScreenCanvasSupport = function() {
-  return typeof OffscreenCanvas !== 'undefined'
-}
-
-// Function to set the button text
-globalThis.qwebrSetInteractiveButtonState = function(buttonText, enableCodeButton = true) {
-  document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
-    btn.innerHTML = buttonText;
-    btn.disabled = !enableCodeButton;
-  });
-}
-
-// Function to update the status message in non-interactive cells
-globalThis.qwebrUpdateStatusMessage = function(message) {
-  document.querySelectorAll(".qwebr-status-text.qwebr-cell-needs-evaluation").forEach((elem) => {
-    elem.innerText = message;
-  });
-}
-
-// Function to update the status message
-globalThis.qwebrUpdateStatusHeader = function(message) {
-  qwebrStartupMessage.innerHTML = `
-    <i class="fa-solid fa-spinner fa-spin qwebr-icon-status-spinner"></i>
-    <span>${message}</span>`;
-}
-
-// Function to return true if element is found, false if not
-globalThis.qwebrCheckHTMLElementExists = function(selector) {
-  const element = document.querySelector(selector);
-  return !!element;
-}
-
-// Function that detects whether reveal.js slides are present
-globalThis.qwebrIsRevealJS = function() {
-  // If the '.reveal .slides' selector exists, RevealJS is likely present
-  return qwebrCheckHTMLElementExists('.reveal .slides');
-}
-
-// Initialize the Quarto sidebar element
-function qwebrSetupQuartoSidebar() {
-  var newSideBarDiv = document.createElement('div');
-  newSideBarDiv.id = 'quarto-margin-sidebar';
-  newSideBarDiv.className = 'sidebar margin-sidebar';
-  newSideBarDiv.style.top = '0px';
-  newSideBarDiv.style.maxHeight = 'calc(0px + 100vh)';
-
-  return newSideBarDiv;
-}
-
-// Position the sidebar in the document
-function qwebrPlaceQuartoSidebar() {
-  // Get the reference to the element with id 'quarto-document-content'
-  var referenceNode = document.getElementById('quarto-document-content');
-
-  // Create the new div element
-  var newSideBarDiv = qwebrSetupQuartoSidebar();
-
-  // Insert the new div before the 'quarto-document-content' element
-  referenceNode.parentNode.insertBefore(newSideBarDiv, referenceNode);
-}
-
-function qwebrPlaceMessageContents(content, html_location = "title-block-header", revealjs_location = "title-slide") {
-
-  // Get references to header elements
-  const headerHTML = document.getElementById(html_location);
-  const headerRevealJS = document.getElementById(revealjs_location);
-
-  // Determine where to insert the quartoTitleMeta element
-  if (headerHTML || headerRevealJS) {
-    // Append to the existing "title-block-header" element or "title-slide" div
-    (headerHTML || headerRevealJS).appendChild(content);
-  } else {
-    // If neither headerHTML nor headerRevealJS is found, insert after "webr-monaco-editor-init" script
-    const monacoScript = document.getElementById("qwebr-monaco-editor-init");
-    const header = document.createElement("header");
-    header.setAttribute("id", "title-block-header");
-    header.appendChild(content);
-    monacoScript.after(header);
-  }
-}
-
-
-
-function qwebrOffScreenCanvasSupportWarningMessage() {
-  
-  // Verify canvas is supported.
-  if(qwebrOffScreenCanvasSupport()) return;
-
-  // Create the main container div
-  var calloutContainer = document.createElement('div');
-  calloutContainer.classList.add('callout', 'callout-style-default', 'callout-warning', 'callout-titled');
-
-  // Create the header div
-  var headerDiv = document.createElement('div');
-  headerDiv.classList.add('callout-header', 'd-flex', 'align-content-center');
-
-  // Create the icon container div
-  var iconContainer = document.createElement('div');
-  iconContainer.classList.add('callout-icon-container');
-
-  // Create the icon element
-  var iconElement = document.createElement('i');
-  iconElement.classList.add('callout-icon');
-
-  // Append the icon element to the icon container
-  iconContainer.appendChild(iconElement);
-
-  // Create the title container div
-  var titleContainer = document.createElement('div');
-  titleContainer.classList.add('callout-title-container', 'flex-fill');
-  titleContainer.innerText = 'Warning: Web Browser Does Not Support Graphing!';
-
-  // Append the icon container and title container to the header div
-  headerDiv.appendChild(iconContainer);
-  headerDiv.appendChild(titleContainer);
-
-  // Create the body container div
-  var bodyContainer = document.createElement('div');
-  bodyContainer.classList.add('callout-body-container', 'callout-body');
-
-  // Create the paragraph element for the body content
-  var paragraphElement = document.createElement('p');
-  paragraphElement.innerHTML = 'This web browser does not have support for displaying graphs through the <code>quarto-webr</code> extension since it lacks an <code>OffScreenCanvas</code>. Please upgrade your web browser to one that supports <code>OffScreenCanvas</code>.';
-
-  // Append the paragraph element to the body container
-  bodyContainer.appendChild(paragraphElement);
-
-  // Append the header div and body container to the main container div
-  calloutContainer.appendChild(headerDiv);
-  calloutContainer.appendChild(bodyContainer);
-
-  // Append the main container div to the document depending on format
-  qwebrPlaceMessageContents(calloutContainer, "title-block-header"); 
-
-}
-
-
-// Function that attaches the document status message and diagnostics
-function displayStartupMessage(showStartupMessage, showHeaderMessage) {
-  if (!showStartupMessage) {
-    return;
-  }
-
-  // Create the outermost div element for metadata
-  const quartoTitleMeta = document.createElement("div");
-  quartoTitleMeta.classList.add("quarto-title-meta");
-
-  // Create the first inner div element
-  const firstInnerDiv = document.createElement("div");
-  firstInnerDiv.setAttribute("id", "qwebr-status-message-area");
-
-  // Create the second inner div element for "WebR Status" heading and contents
-  const secondInnerDiv = document.createElement("div");
-  secondInnerDiv.setAttribute("id", "qwebr-status-message-title");
-  secondInnerDiv.classList.add("quarto-title-meta-heading");
-  secondInnerDiv.innerText = "WebR Status";
-
-  // Create another inner div for contents
-  const secondInnerDivContents = document.createElement("div");
-  secondInnerDivContents.setAttribute("id", "qwebr-status-message-body");
-  secondInnerDivContents.classList.add("quarto-title-meta-contents");
-
-  // Describe the WebR state
-  qwebrStartupMessage.innerText = "🟡 Loading...";
-  qwebrStartupMessage.setAttribute("id", "qwebr-status-message-text");
-  // Add `aria-live` to auto-announce the startup status to screen readers
-  qwebrStartupMessage.setAttribute("aria-live", "assertive");
-
-  // Append the startup message to the contents
-  secondInnerDivContents.appendChild(qwebrStartupMessage);
-
-  // Add a status indicator for COOP and COEP Headers if needed
-  if (showHeaderMessage) {
-    const crossOriginMessage = document.createElement("p");
-    crossOriginMessage.innerText = `${crossOriginIsolated ? '🟢' : '🟡'} COOP & COEP Headers`;
-    crossOriginMessage.setAttribute("id", "qwebr-coop-coep-header");
-    secondInnerDivContents.appendChild(crossOriginMessage);
-  }
-
-  // Combine the inner divs and contents
-  firstInnerDiv.appendChild(secondInnerDiv);
-  firstInnerDiv.appendChild(secondInnerDivContents);
-  quartoTitleMeta.appendChild(firstInnerDiv);
-
-  // Place message on webpage
-  qwebrPlaceMessageContents(quartoTitleMeta); 
-}
-
-function qwebrAddCommandHistoryModal() {
-  // Create the modal div
-  var modalDiv = document.createElement('div');
-  modalDiv.id = 'qwebr-history-modal';
-  modalDiv.className = 'qwebr-modal';
-
-  // Create the modal content div
-  var modalContentDiv = document.createElement('div');
-  modalContentDiv.className = 'qwebr-modal-content';
-
-  // Create the span for closing the modal
-  var closeSpan = document.createElement('span');
-  closeSpan.id = 'qwebr-command-history-close-btn';
-  closeSpan.className = 'qwebr-modal-close';
-  closeSpan.innerHTML = '&times;';
-
-  // Create the h1 element for the modal
-  var modalH1 = document.createElement('h1');
-  modalH1.textContent = 'R History Command Contents';
-
-  // Create an anchor element for downloading the Rhistory file 
-  var downloadLink = document.createElement('a');
-  downloadLink.href = '#';
-  downloadLink.id = 'qwebr-download-history-btn';
-  downloadLink.className = 'qwebr-download-btn';
-
-  // Create an 'i' element for the icon
-  var icon = document.createElement('i');
-  icon.className = 'bi bi-file-code';
-
-  // Append the icon to the anchor element
-  downloadLink.appendChild(icon);
-
-  // Add the text 'Download R History' to the anchor element
-  downloadLink.appendChild(document.createTextNode(' Download R History File'));
-
-  // Create the pre for command history contents
-  var commandContentsPre = document.createElement('pre');
-  commandContentsPre.id = 'qwebr-command-history-contents';
-  commandContentsPre.className = 'qwebr-modal-content-code';
-
-  // Append the close span, h1, and history contents pre to the modal content div
-  modalContentDiv.appendChild(closeSpan);
-  modalContentDiv.appendChild(modalH1);
-  modalContentDiv.appendChild(downloadLink);
-  modalContentDiv.appendChild(commandContentsPre);
-
-  // Append the modal content div to the modal div
-  modalDiv.appendChild(modalContentDiv);
-
-  // Append the modal div to the body
-  document.body.appendChild(modalDiv);
-}
-
-function qwebrRegisterRevealJSCommandHistoryModal() {
-  // Select the <ul> element inside the <div> with data-panel="Custom0"
-  let ulElement = document.querySelector('div[data-panel="Custom0"] > ul.slide-menu-items');
-
-  // Find the last <li> element with class slide-tool-item
-  let lastItem = ulElement.querySelector('li.slide-tool-item:last-child');
-
-  // Calculate the next data-item value
-  let nextItemValue = 0;
-  if (lastItem) {
-      nextItemValue = parseInt(lastItem.dataset.item) + 1;
-  }
-
-  // Create a new <li> element
-  let newListItem = document.createElement('li');
-  newListItem.className = 'slide-tool-item';
-  newListItem.dataset.item = nextItemValue.toString(); // Set the next available data-item value
-
-  // Create the <a> element inside the <li>
-  let newLink = document.createElement('a');
-  newLink.href = '#';
-  newLink.id = 'qwebrRHistoryButton'; // Set the ID for the new link
-  
-  // Create the <kbd> element inside the <a>
-  let newKbd = document.createElement('kbd');
-  newKbd.textContent = ' '; // Set to empty as we are not registering a keyboard shortcut
-
-  // Create text node for the link text
-  let newText = document.createTextNode(' View R History');
-
-  // Append <kbd> and text node to <a>
-  newLink.appendChild(newKbd);
-  newLink.appendChild(newText);
-
-  // Append <a> to <li>
-  newListItem.appendChild(newLink);
-
-  // Append <li> to <ul>
-  ulElement.appendChild(newListItem);
-}
-
-// Handle setting up the R history modal
-function qwebrCodeLinks() {
-
-  if (qwebrIsRevealJS()) {
-    qwebrRegisterRevealJSCommandHistoryModal();
-    return;
-  }
-
-  // Create the container div
-  var containerDiv = document.createElement('div');
-  containerDiv.className = 'quarto-code-links';
-
-  // Create the h2 element
-  var h2 = document.createElement('h2');
-  h2.textContent = 'webR Code Links';
-
-  // Create the ul element
-  var ul = document.createElement('ul');
-
-  // Create the li element
-  var li = document.createElement('li');
-
-  // Create the a_history_btn element
-  var a_history_btn = document.createElement('a');
-  a_history_btn.href = 'javascript:void(0)';
-  a_history_btn.setAttribute('id', 'qwebrRHistoryButton');
-
-  // Create the i_history_btn element
-  var i_history_btn = document.createElement('i');
-  i_history_btn.className = 'bi bi-file-code';
-
-  // Create the text node for the link text
-  var text_history_btn = document.createTextNode('View R History');
-
-  // Append the icon element and link text to the a element
-  a_history_btn.appendChild(i_history_btn);
-  a_history_btn.appendChild(text_history_btn);
-
-  // Append the a element to the li element
-  li.appendChild(a_history_btn);
-
-  // Append the li element to the ul element
-  ul.appendChild(li);
-
-  // Append the h2 and ul elements to the container div
-  containerDiv.appendChild(h2);
-  containerDiv.appendChild(ul);
-
-  // Append the container div to the element with the ID 'quarto-margin-sidebar'
-  var sidebar = document.getElementById('quarto-margin-sidebar');
-    
-  // If the sidebar element is not found, create it
-  if(!sidebar) {
-    qwebrPlaceQuartoSidebar();
-  }
-  
-  // Re-select the sidebar element (if it was just created)
-  sidebar = document.getElementById('quarto-margin-sidebar');   
-
-
-  // If the sidebar element exists, append the container div to it
-  if(sidebar) {
-    // Append the container div to the sidebar
-    sidebar.appendChild(containerDiv);
-    // Force the sidebar to be clickable by removing the 'zindex-bottom' class
-    // added in pre-release: https://github.com/quarto-dev/quarto-cli/commit/f0c53a1ffcaa1de4eccbf07803b096898248adcc
-    sidebar.className = 'sidebar margin-sidebar';
-  } else {
-    // Get a debugger ...
-    console.warn('Element with ID "quarto-margin-sidebar" not found.');
-  }
-}
-
-// Call the function to append the code links for qwebR into the right sidebar
-qwebrCodeLinks();
-
-// Add the command history modal
-qwebrAddCommandHistoryModal();
-
-displayStartupMessage(qwebrShowStartupMessage, qwebrShowHeaderMessage);
-qwebrOffScreenCanvasSupportWarningMessage();
-</script><script type="module">
-// Define a global storage and retrieval solution ----
-
-// Store commands executed in R
-globalThis.qwebrRCommandHistory = [];
-
-// Function to retrieve the command history
-globalThis.qwebrFormatRHistory = function() {
-   return qwebrRCommandHistory.join("\n\n");
-}
-
-// Retrieve HTML Elements ----
-
-// Get the command modal
-const command_history_modal = document.getElementById("qwebr-history-modal");
-
-// Get the button that opens the command modal
-const command_history_btn = document.getElementById("qwebrRHistoryButton");
-
-// Get the <span> element that closes the command modal
-const command_history_close_span = document.getElementById("qwebr-command-history-close-btn");
-
-// Get the download button for r history information
-const command_history_download_btn = document.getElementById("qwebr-download-history-btn");
-
-// Plug in command history into modal/download button ----
-
-// Function to populate the modal with command history
-function populateCommandHistoryModal() {
-    document.getElementById("qwebr-command-history-contents").innerHTML = qwebrFormatRHistory() || "No commands have been executed yet.";
-}
-
-// Function to format the current date and time to
-// a string with the format YYYY-MM-DD-HH-MM-SS
-function formatDateTime() {
-    const now = new Date();
-
-    const year = now.getFullYear();
-    const day = String(now.getDate()).padStart(2, '0');
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-
-    return `${year}-${month}-${day}-${hours}-${minutes}-${seconds}`;
-}
-
-
-// Function to convert document title with datetime to a safe filename
-function safeFileName() {
-    // Get the current page title
-    let pageTitle = document.title;
-
-    // Combine the current page title with the current date and time
-    let pageNameWithDateTime = `Rhistory-${pageTitle}-${formatDateTime()}`;
-
-    // Replace unsafe characters with safe alternatives
-    let safeFilename = pageNameWithDateTime.replace(/[\\/:\*\?! "<>\|]/g, '-');
-
-    return safeFilename;
-}
-
-
-// Function to download list contents as text file
-function downloadRHistory() {
-    // Get the current page title + datetime and use it as the filename
-    const filename = `${safeFileName()}.R`;
-
-    // Get the text contents of the R History list
-    const text = qwebrFormatRHistory();
-
-    // Create a new Blob object with the text contents
-    const blob = new Blob([text], { type: 'text/plain' });
-  
-    // Create a new anchor element for the download
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = URL.createObjectURL(blob);
-    a.download = filename;
-
-    // Append the anchor to the body, click it, and remove it
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-}
-
-// Register event handlers ----
-
-// When the user clicks the View R History button, open the command modal
-command_history_btn.onclick = function() {
-    populateCommandHistoryModal();
-    command_history_modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the command modal
-command_history_close_span.onclick = function() {
-    command_history_modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the command modal, close it
-window.onclick = function(event) {
-    if (event.target == command_history_modal) {
-        command_history_modal.style.display = "none";
-    }
-}
-
-// Add an onclick event listener to the download button so that
-// the user can download the R history as a text file
-command_history_download_btn.onclick = function() {
-    downloadRHistory();
-};
-</script><script type="module">
-// Supported Evaluation Types for Context
-globalThis.EvalTypes = Object.freeze({
-  Interactive: 'interactive',
-  Setup: 'setup',
-  Output: 'output',
-});
-
-// Function that obtains the font size for a given element 
-globalThis.qwebrCurrentFontSizeOnElement = function(element, cssProperty = 'font-size') {
-
-  const currentFontSize = parseFloat(
-    window
-    .getComputedStyle(element)
-    .getPropertyValue(cssProperty)
-  );
-  
-  return currentFontSize;
-}
-
-// Function to determine font scaling
-globalThis.qwebrScaledFontSize = function(div, qwebrOptions) {
-  // Determine if we should compute font-size using RevealJS's `--r-main-font-size` 
-  // or if we can directly use the document's `font-size`.
-  const cssProperty = document.body.classList.contains('reveal') ? 
-    "--r-main-font-size" : "font-size";
-  
-  // Get the current font size on the div element
-  const elementFontSize = qwebrCurrentFontSizeOnElement(div, cssProperty);
-
-  // Determine the scaled font size value
-  const scaledFontSize = ((qwebrOptions['editor-font-scale'] ?? 1) * elementFontSize) ?? 17.5;
-
-  return scaledFontSize;
-}
-
-
-// Function that dispatches the creation request
-globalThis.qwebrCreateHTMLElement = function (
-  cellData
-) {
-
-  // Extract key components
-  const evalType = cellData.options.context;
-  const qwebrCounter = cellData.id;
-
-  // We make an assumption that insertion points are defined by the Lua filter as:
-  // qwebr-insertion-location-{qwebrCounter} 
-  const elementLocator = document.getElementById(`qwebr-insertion-location-${qwebrCounter}`);
-
-  // Figure out the routine to use to insert the element.
-  let qwebrElement;
-  switch ( evalType ) {
-    case EvalTypes.Interactive:
-      qwebrElement = qwebrCreateInteractiveElement(qwebrCounter, cellData.options);
-      break;
-    case EvalTypes.Output: 
-      qwebrElement = qwebrCreateNonInteractiveOutputElement(qwebrCounter, cellData.options);
-      break;
-    case EvalTypes.Setup: 
-      qwebrElement = qwebrCreateNonInteractiveSetupElement(qwebrCounter, cellData.options);
-      break;
-    default: 
-      qwebrElement = document.createElement('div');
-      qwebrElement.textContent = 'Error creating `quarto-webr` element';
-  }
-
-  // Insert the dynamically generated object at the document location.
-  elementLocator.appendChild(qwebrElement);
-};
-
-// Function that setups the interactive element creation
-globalThis.qwebrCreateInteractiveElement = function (qwebrCounter, qwebrOptions) {
-
-  // Create main div element
-  var mainDiv = document.createElement('div');
-  mainDiv.id = 'qwebr-interactive-area-' + qwebrCounter;
-  mainDiv.className = `qwebr-interactive-area`;
-  if (qwebrOptions.classes) {
-    mainDiv.className += " " + qwebrOptions.classes
-  }
-
-  // Add a unique cell identifier that users can customize
-  if (qwebrOptions.label) {
-    mainDiv.setAttribute('data-id', qwebrOptions.label);
-  }
-
-  // Create toolbar div
-  var toolbarDiv = document.createElement('div');
-  toolbarDiv.className = 'qwebr-editor-toolbar';
-  toolbarDiv.id = 'qwebr-editor-toolbar-' + qwebrCounter;
-
-  // Create a div to hold the left buttons
-  var leftButtonsDiv = document.createElement('div');
-  leftButtonsDiv.className = 'qwebr-editor-toolbar-left-buttons';
-
-  // Create a div to hold the right buttons
-  var rightButtonsDiv = document.createElement('div');
-  rightButtonsDiv.className = 'qwebr-editor-toolbar-right-buttons';
-
-  // Create Run Code button
-  var runCodeButton = document.createElement('button');
-  runCodeButton.className = 'btn btn-default qwebr-button qwebr-button-run';
-  runCodeButton.disabled = true;
-  runCodeButton.type = 'button';
-  runCodeButton.id = 'qwebr-button-run-' + qwebrCounter;
-  runCodeButton.textContent = '🟡 Loading webR...';
-  runCodeButton.title = `Run code (Shift + Enter)`;
-
-  // Append buttons to the leftButtonsDiv
-  leftButtonsDiv.appendChild(runCodeButton);
-
-  // Create Reset button
-  var resetButton = document.createElement('button');
-  resetButton.className = 'btn btn-light btn-xs qwebr-button qwebr-button-reset';
-  resetButton.type = 'button';
-  resetButton.id = 'qwebr-button-reset-' + qwebrCounter;
-  resetButton.title = 'Start over';
-  resetButton.innerHTML = '<i class="fa-solid fa-arrows-rotate"></i>';
-
-  // Create Copy button
-  var copyButton = document.createElement('button');
-  copyButton.className = 'btn btn-light btn-xs qwebr-button qwebr-button-copy';
-  copyButton.type = 'button';
-  copyButton.id = 'qwebr-button-copy-' + qwebrCounter;
-  copyButton.title = 'Copy code';
-  copyButton.innerHTML = '<i class="fa-regular fa-copy"></i>';
-
-  // Append buttons to the rightButtonsDiv
-  rightButtonsDiv.appendChild(resetButton);
-  rightButtonsDiv.appendChild(copyButton);
-
-  // Create console area div
-  var consoleAreaDiv = document.createElement('div');
-  consoleAreaDiv.id = 'qwebr-console-area-' + qwebrCounter;
-  consoleAreaDiv.className = 'qwebr-console-area';
-
-  // Create editor div
-  var editorDiv = document.createElement('div');
-  editorDiv.id = 'qwebr-editor-' + qwebrCounter;
-  editorDiv.className = 'qwebr-editor';
-
-  // Create output code area div
-  var outputCodeAreaDiv = document.createElement('div');
-  outputCodeAreaDiv.id = 'qwebr-output-code-area-' + qwebrCounter;
-  outputCodeAreaDiv.className = 'qwebr-output-code-area';
-  outputCodeAreaDiv.setAttribute('aria-live', 'assertive');
-
-  // Create pre element inside output code area
-  var preElement = document.createElement('pre');
-  preElement.style.visibility = 'hidden';
-  outputCodeAreaDiv.appendChild(preElement);
-
-  // Create output graph area div
-  var outputGraphAreaDiv = document.createElement('div');
-  outputGraphAreaDiv.id = 'qwebr-output-graph-area-' + qwebrCounter;
-  outputGraphAreaDiv.className = 'qwebr-output-graph-area';
-
-  // Append buttons to the toolbar
-  toolbarDiv.appendChild(leftButtonsDiv);
-  toolbarDiv.appendChild(rightButtonsDiv);
-
-  // Append all elements to the main div
-  mainDiv.appendChild(toolbarDiv);
-  consoleAreaDiv.appendChild(editorDiv);
-  consoleAreaDiv.appendChild(outputCodeAreaDiv);
-  mainDiv.appendChild(consoleAreaDiv);
-  mainDiv.appendChild(outputGraphAreaDiv);
-
-  return mainDiv;
-}
-
-// Function that adds output structure for non-interactive output
-globalThis.qwebrCreateNonInteractiveOutputElement = function(qwebrCounter, qwebrOptions) {
-  // Create main div element
-  var mainDiv = document.createElement('div');
-  mainDiv.id = 'qwebr-noninteractive-area-' + qwebrCounter;
-  mainDiv.className = `qwebr-noninteractive-area`;
-  if (qwebrOptions.classes) {
-    mainDiv.className += " " + qwebrOptions.classes
-  }
-  
-  // Add a unique cell identifier that users can customize
-  if (qwebrOptions.label) {
-    mainDiv.setAttribute('data-id', qwebrOptions.label);
-  }
-  
-  // Create a status container div
-  var statusContainer = createLoadingContainer(qwebrCounter);
-
-  // Create output code area div
-  var outputCodeAreaDiv = document.createElement('div');
-  outputCodeAreaDiv.id = 'qwebr-output-code-area-' + qwebrCounter;
-  outputCodeAreaDiv.className = 'qwebr-output-code-area';
-  outputCodeAreaDiv.setAttribute('aria-live', 'assertive');
-
-  // Create pre element inside output code area
-  var preElement = document.createElement('pre');
-  preElement.style.visibility = 'hidden';
-  outputCodeAreaDiv.appendChild(preElement);
-
-  // Create output graph area div
-  var outputGraphAreaDiv = document.createElement('div');
-  outputGraphAreaDiv.id = 'qwebr-output-graph-area-' + qwebrCounter;
-  outputGraphAreaDiv.className = 'qwebr-output-graph-area';
-
-  // Append all elements to the main div
-  mainDiv.appendChild(statusContainer);
-  mainDiv.appendChild(outputCodeAreaDiv);
-  mainDiv.appendChild(outputGraphAreaDiv);
-
-  return mainDiv;
-};
-
-// Function that adds a stub in the page to indicate a setup cell was used.
-globalThis.qwebrCreateNonInteractiveSetupElement = function(qwebrCounter, qwebrOptions) {
-  // Create main div element
-  var mainDiv = document.createElement('div');
-  mainDiv.id = `qwebr-noninteractive-setup-area-${qwebrCounter}`;
-  mainDiv.className = `qwebr-noninteractive-setup-area`;
-  if (qwebrOptions.classes) {
-    mainDiv.className += " " + qwebrOptions.classes
-  }
-
-
-  // Add a unique cell identifier that users can customize
-  if (qwebrOptions.label) {
-    mainDiv.setAttribute('data-id', qwebrOptions.label);
-  }
-
-  // Create a status container div
-  var statusContainer = createLoadingContainer(qwebrCounter);
-
-  // Append status onto the main div
-  mainDiv.appendChild(statusContainer);
-
-  return mainDiv;
-}
-
-
-// Function to create loading container with specified ID
-globalThis.createLoadingContainer = function(qwebrCounter) {
-
-  // Create a status container
-  const container = document.createElement('div');
-  container.id = `qwebr-non-interactive-loading-container-${qwebrCounter}`;
-  container.className = 'qwebr-non-interactive-loading-container qwebr-cell-needs-evaluation';
-
-  // Create an R project logo to indicate its a code space
-  const rProjectIcon = document.createElement('i');
-  rProjectIcon.className = 'fa-brands fa-r-project fa-3x qwebr-r-project-logo';
-
-  // Setup a loading icon from font awesome
-  const spinnerIcon = document.createElement('i');
-  spinnerIcon.className = 'fa-solid fa-spinner fa-spin fa-1x qwebr-icon-status-spinner';
-
-  // Add a section for status text
-  const statusText = document.createElement('p');
-  statusText.id = `qwebr-status-text-${qwebrCounter}`;
-  statusText.className = `qwebr-status-text qwebr-cell-needs-evaluation`;
-  statusText.innerText = 'Loading webR...';
-
-  // Incorporate an inner container
-  const innerContainer = document.createElement('div');
-
-  // Append elements to the inner container
-  innerContainer.appendChild(spinnerIcon);
-  innerContainer.appendChild(statusText);
-
-  // Append elements to the main container
-  container.appendChild(rProjectIcon);
-  container.appendChild(innerContainer);
-
-  return container;
-}
-</script><script type="module">
-// Function to install a single package
-async function qwebrInstallRPackage(packageName) {
-  await mainWebR.evalRVoid(`webr::install('${packageName}');`);
-}
-
-// Function to load a single package
-async function qwebrLoadRPackage(packageName) {
-  await mainWebR.evalRVoid(`require('${packageName}', quietly = TRUE)`);
-}
-
-// Generic function to process R packages
-async function qwebrProcessRPackagesWithStatus(packages, processType, displayStatusMessageUpdate = true) {
-  // Switch between contexts
-  const messagePrefix = processType === 'install' ? 'Installing' : 'Loading';
-
-  // Modify button state
-  qwebrSetInteractiveButtonState(`🟡 ${messagePrefix} package ...`, false);
-
-  // Iterate over packages
-  for (let i = 0; i < packages.length; i++) {
-    const activePackage = packages[i];
-    const formattedMessage = `${messagePrefix} package ${i + 1} out of ${packages.length}: ${activePackage}`;
-
-    // Display the update in header
-    if (displayStatusMessageUpdate) {
-      qwebrUpdateStatusHeader(formattedMessage);
-    }
-
-    // Display the update in non-active areas
-    qwebrUpdateStatusMessage(formattedMessage);
-
-    // Run package installation
-    if (processType === 'install') {
-      await qwebrInstallRPackage(activePackage);
-    } else {
-      await qwebrLoadRPackage(activePackage);
-    }
-  }
-
-  // Clean slate
-  if (processType === 'load') {
-    await mainWebR.flush();
-  }
-}
-
-// Start a timer
-const initializeWebRTimerStart = performance.now();
-
-// Encase with a dynamic import statement
-globalThis.qwebrInstance = import(qwebrCustomizedWebROptions.baseURL + "webr.mjs").then(
-  async ({ WebR, ChannelType }) => {
-    // Populate WebR options with defaults or new values based on `webr` meta
-    globalThis.mainWebR = new WebR(qwebrCustomizedWebROptions);
-
-    // Initialization WebR
-    await mainWebR.init();
-
-    // Setup a shelter
-    globalThis.mainWebRCodeShelter = await new mainWebR.Shelter();
-
-    // Setup a pager to allow processing help documentation
-    await mainWebR.evalRVoid('webr::pager_install()');
-
-    // Setup a viewer to allow processing htmlwidgets.
-    // This might not be available in old webr version
-    await mainWebR.evalRVoid('try({ webr::viewer_install() })');
-
-    // Override the existing install.packages() to use webr::install()
-    await mainWebR.evalRVoid('webr::shim_install()');
-
-    // Specify the repositories to pull from
-    // Note: webR does not use the `repos` option, but instead uses `webr_pkg_repos`
-    // inside of `install()`. However, other R functions still pull from `repos`.
-    await mainWebR.evalRVoid(`
-      options(
-        webr_pkg_repos = c(${qwebrPackageRepoURLS.map(repoURL => `'${repoURL}'`).join(',')}),
-        repos = c(${qwebrPackageRepoURLS.map(repoURL => `'${repoURL}'`).join(',')})
-      )
-    `);
-
-    // Check to see if any packages need to be installed
-    if (qwebrSetupRPackages) {
-      // Obtain only a unique list of packages
-      const uniqueRPackageList = Array.from(new Set(qwebrInstallRPackagesList));
-
-      // Install R packages one at a time (either silently or with a status update)
-      await qwebrProcessRPackagesWithStatus(uniqueRPackageList, 'install', qwebrShowStartupMessage);
-
-      if (qwebrAutoloadRPackages) {
-        // Load R packages one at a time (either silently or with a status update)
-        await qwebrProcessRPackagesWithStatus(uniqueRPackageList, 'load', qwebrShowStartupMessage);
-      }
-    }
-  }
-);
-
-// Stop timer
-const initializeWebRTimerEnd = performance.now();
-
-</script><script type="module">
-// Function to verify a given JavaScript Object is empty
-globalThis.qwebrIsObjectEmpty = function (arr) {
-    return Object.keys(arr).length === 0;
-}
-
-// Global version of the Escape HTML function that converts HTML
-// characters to their HTML entities.
-globalThis.qwebrEscapeHTMLCharacters = function(unsafe) {
-    return unsafe
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
-};
-
-// Passthrough results
-globalThis.qwebrIdentity = function(x) {
-    return x;
-};
-
-// Append a comment
-globalThis.qwebrPrefixComment = function(x, comment) {
-    return `${comment}${x}`;
-};
-
-// Function to store the code in the history
-globalThis.qwebrLogCodeToHistory = function(codeToRun, options) {
-    qwebrRCommandHistory.push(
-        `# Ran code in ${options.label} at ${new Date().toLocaleString()} ----\n${codeToRun}`
-    );
-};
-
-// Function to attach a download button onto the canvas
-// allowing the user to download the image.
-function qwebrImageCanvasDownloadButton(canvas, canvasContainer) {
-
-    // Create the download button
-    const downloadButton = document.createElement('button');
-    downloadButton.className = 'qwebr-canvas-image-download-btn';
-    downloadButton.textContent = 'Download Image';
-    canvasContainer.appendChild(downloadButton);
-
-    // Trigger a download of the image when the button is clicked
-    downloadButton.addEventListener('click', function() {
-        const image = canvas.toDataURL('image/png');
-        const link = document.createElement('a');
-        link.href = image;
-        link.download = 'qwebr-canvas-image.png';
-        link.click();
-    });
-}
-
-
-// Function to parse the pager results
-globalThis.qwebrParseTypePager = async function (msg) {
-
-    // Split out the event data
-    const { path, title, deleteFile } = msg.data;
-
-    // Process the pager data by reading the information from disk
-    const paged_data = await mainWebR.FS.readFile(path).then((data) => {
-        // Obtain the file content
-        let content = new TextDecoder().decode(data);
-
-        // Remove excessive backspace characters until none remain
-        while(content.match(/.[\b]/)){
-            content = content.replace(/.[\b]/g, '');
-        }
-
-        // Returned cleaned data
-        return content;
-    });
-
-    // Unlink file if needed
-    if (deleteFile) {
-        await mainWebR.FS.unlink(path);
-    }
-
-    // Return extracted data with spaces
-    return paged_data;
-};
-
-
-// Function to parse the browse results
-globalThis.qwebrParseTypeBrowse = async function (msg) {
-
-    // msg.type === "browse"
-    const path = msg.data.url;
-
-    // Process the browse data by reading the information from disk
-    const browse_data = await mainWebR.FS.readFile(path).then((data) => {
-        // Obtain the file content
-        let content = new TextDecoder().decode(data);
-
-        return content;
-    });
-
-    // Return extracted data as-is
-    return browse_data;
-};
-
-// Function to run the code using webR and parse the output
-globalThis.qwebrComputeEngine = async function(
-    codeToRun,
-    elements,
-    options) {
-
-    // Call into the R compute engine that persists within the document scope.
-    // To be prepared for all scenarios, the following happens:
-    // 1. We setup a canvas device to write to by making a namespace call into the {webr} package
-    // 2. We use values inside of the options array to set the figure size.
-    // 3. We capture the output stream information (STDOUT and STERR)
-    // 4. We disable the current device's image creation.
-    // 5. Piece-wise parse the results into the different output areas
-
-    // Create a pager variable for help/file contents
-    let pager = [];
-
-    // Handle how output is processed
-    let showMarkup = options.results === "markup" && options.output !== "asis";
-    let processOutput;
-
-    if (showMarkup) {
-        processOutput = qwebrEscapeHTMLCharacters;
-    } else {
-        processOutput = qwebrIdentity;
-    }
-
-    // ----
-    // Convert from Inches to Pixels by using DPI (dots per inch)
-    // for bitmap devices (dpi * inches = pixels)
-    let fig_width = options["fig-width"] * options["dpi"];
-    let fig_height = options["fig-height"] * options["dpi"];
-
-    // Initialize webR
-    await mainWebR.init();
-
-    // Configure capture output
-    let captureOutputOptions = {
-        withAutoprint: true,
-        captureStreams: true,
-        captureConditions: false,
-        // env: webR.objs.emptyEnv, // maintain a global environment for webR v0.2.0
-    };
-
-    // Determine if the browser supports OffScreen
-    if (qwebrOffScreenCanvasSupport()) {
-        // Mirror default options of webr::canvas()
-        // with changes to figure height and width.
-        captureOutputOptions.captureGraphics = {
-            width: fig_width,
-            height: fig_height,
-            bg: "white", // default: transparent
-            pointsize: 12,
-            capture: true
-        };
-    }  else {
-        // Disable generating graphics
-        captureOutputOptions.captureGraphics = false;
-    }
-
-    // Store the code to run in history
-    qwebrLogCodeToHistory(codeToRun, options);
-
-    // Setup a webR canvas by making a namespace call into the {webr} package
-    // Evaluate the R code
-    // Remove the active canvas silently
-    const result = await mainWebRCodeShelter.captureR(
-        `${codeToRun}`,
-        captureOutputOptions
-    );
-
-    // -----
-
-    // Start attempting to parse the result data
-    processResultOutput:try {
-
-        // Avoid running through output processing
-        if (options.results === "hide" || options.output === "false") {
-            break processResultOutput;
-        }
-
-        // Merge output streams of STDOUT and STDErr (messages and errors are combined.)
-        // Require both `warning` and `message` to be true to display `STDErr`.
-        const out = result.output
-        .filter(
-            evt => evt.type === "stdout" ||
-            ( evt.type === "stderr" && (options.warning === "true" && options.message === "true"))
-        )
-        .map((evt, index) => {
-            const className = `qwebr-output-code-${evt.type}`;
-            const outputResult = qwebrPrefixComment(processOutput(evt.data), options.comment);
-            return `<code id="${className}-editor-${elements.id}-result-${index + 1}" class="${className}">${outputResult}</code>`;
-        })
-        .join("\n");
-
-
-        // Clean the state
-        // We're now able to process pager events.
-        // As a result, we cannot maintain a true 1-to-1 output order
-        // without individually feeding each line
-        const msgs = await mainWebR.flush();
-
-        // Use `map` to process the filtered "pager" events asynchronously
-        const pager = [];
-        const browse = [];
-
-        await Promise.all(
-            msgs.map(
-                async (msg) => {
-
-                    const msgType = msg.type || "unknown";
-
-                    switch(msgType) {
-                        case 'pager':
-                            const pager_data = await qwebrParseTypePager(msg);
-                            pager.push(pager_data);
-                            break;
-                        case 'browse':
-                            const browse_data = await qwebrParseTypeBrowse(msg);
-                            browse.push(browse_data);
-                            break;
-                    }
-                    return;
-                }
-            )
-        );
-
-        // Nullify the output area of content
-        elements.outputCodeDiv.innerHTML = "";
-        elements.outputGraphDiv.innerHTML = "";
-
-        // Design an output object for messages
-        const pre = document.createElement("pre");
-        if (/\S/.test(out)) {
-            // Display results as HTML elements to retain output styling
-            const div = document.createElement("div");
-            div.innerHTML = out;
-
-            // Calculate a scaled font-size value
-            const scaledFontSize = qwebrScaledFontSize(
-                elements.outputCodeDiv, options);
-
-            // Override output code cell size
-            pre.style.fontSize = `${scaledFontSize}px`;
-            pre.appendChild(div);
-        } else {
-            // If nothing is present, hide the element.
-            pre.style.visibility = "hidden";
-        }
-
-        elements.outputCodeDiv.appendChild(pre);
-
-        // Determine if we have graphs to display
-        if (result.images.length > 0) {
-
-            // Create figure element
-            const figureElement = document.createElement("figure");
-            figureElement.className = "qwebr-canvas-image";
-
-            // Place each rendered graphic onto a canvas element
-            result.images.forEach((img) => {
-
-                // Construct canvas for object
-                const canvas = document.createElement("canvas");
-
-                // Add an image download button
-                qwebrImageCanvasDownloadButton(canvas, figureElement);
-
-                // Set canvas size to image
-                canvas.width = img.width;
-                canvas.height = img.height;
-
-                // Apply output truncations
-                canvas.style.width = options["out-width"] ? options["out-width"] : `${fig_width}px`;
-                if (options["out-height"]) {
-                    canvas.style.height = options["out-height"];
-                }
-
-                // Apply styling
-                canvas.style.display = "block";
-                canvas.style.margin = "auto";
-
-                // Draw image onto Canvas
-                const ctx = canvas.getContext("2d");
-                ctx.drawImage(img, 0, 0, img.width, img.height);
-
-                // Append canvas to figure output area
-                figureElement.appendChild(canvas);
-
-            });
-
-            if (options['fig-cap']) {
-                // Create figcaption element
-                const figcaptionElement = document.createElement('figcaption');
-                figcaptionElement.innerText = options['fig-cap'];
-                // Append figcaption to figure
-                figureElement.appendChild(figcaptionElement);
-            }
-
-            elements.outputGraphDiv.appendChild(figureElement);
-
-        }
-
-        // Display the pager data
-        if (pager.length > 0) {
-            // Use the `pre` element to preserve whitespace.
-            pager.forEach((paged_data, index) => {
-                const pre_pager = document.createElement("pre");
-                pre_pager.innerText = paged_data;
-                pre_pager.classList.add("qwebr-output-code-pager");
-                pre_pager.setAttribute("id", `qwebr-output-code-pager-editor-${elements.id}-result-${index + 1}`);
-                elements.outputCodeDiv.appendChild(pre_pager);
-            });
-        }
-
-        // Display the browse data
-        if (browse.length > 0) {
-            // Use the `pre` element to preserve whitespace.
-            browse.forEach((browse_data, index) => {
-                const iframe_browse = document.createElement('iframe');
-                iframe_browse.classList.add("qwebr-output-code-browse");
-                iframe_browse.setAttribute("id", `qwebr-output-code-browse-editor-${elements.id}-result-${index + 1}`);
-                iframe_browse.style.width = "100%";
-                iframe_browse.style.minHeight = "500px";
-                elements.outputCodeDiv.appendChild(iframe_browse);
-
-                iframe_browse.contentWindow.document.open();
-                iframe_browse.contentWindow.document.write(browse_data);
-                iframe_browse.contentWindow.document.close();
-            });
-        }
-    } finally {
-        // Clean up the remaining code
-        mainWebRCodeShelter.purge();
-    }
-};
-
-// Function to execute the code (accepts code as an argument)
-globalThis.qwebrExecuteCode = async function (
-    codeToRun,
-    id,
-    options = {}) {
-
-    // If options are not passed, we fall back on the bare minimum to handle the computation
-    if (qwebrIsObjectEmpty(options)) {
-        options = {
-            "context": "interactive",
-            "fig-width": 7, "fig-height": 5,
-            "out-width": "700px", "out-height": "",
-            "dpi": 72,
-            "results": "markup",
-            "warning": "true", "message": "true",
-        };
-    }
-
-    // Next, we access the compute areas values
-    const elements = {
-        runButton: document.getElementById(`qwebr-button-run-${id}`),
-        outputCodeDiv: document.getElementById(`qwebr-output-code-area-${id}`),
-        outputGraphDiv: document.getElementById(`qwebr-output-graph-area-${id}`),
-        id: id,
-    }
-
-    // Disallowing execution of other code cells
-    document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
-        btn.disabled = true;
-    });
-
-    if (options.context == EvalTypes.Interactive) {
-        // Emphasize the active code cell
-        elements.runButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin qwebr-icon-status-spinner"></i> <span>Run Code</span>';
-    }
-
-    // Evaluate the code and parse the output into the document
-    await qwebrComputeEngine(codeToRun, elements, options);
-
-    // Switch to allowing execution of code
-    document.querySelectorAll(".qwebr-button-run").forEach((btn) => {
-        btn.disabled = false;
-    });
-
-    if (options.context == EvalTypes.Interactive) {
-        // Revert to the initial code cell state
-        elements.runButton.innerHTML = '<i class="fa-solid fa-play qwebr-icon-run-code"></i> <span>Run Code</span>';
-    }
-}
-
-</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -1654,7 +108,7 @@ window.Quarto = {
 };
 </script><link rel="stylesheet" href="../html/nobiblio.css">
 </head>
-<body class="docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
@@ -1673,7 +127,7 @@ window.Quarto = {
 <span class="menu-text">Module plan</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../materials.html"> 
+    <a class="nav-link active" href="../materials.html" aria-current="page"> 
 <span class="menu-text">Materials</span></a>
   </li>  
   <li class="nav-item">
@@ -1697,312 +151,291 @@ window.Quarto = {
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../info/week8.html">Week 8</a></li><li class="breadcrumb-item"><a href="../code/week8.html">Coding</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Weekly materials</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../info/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week7.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../info/week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../theory/week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Theory</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../code/week8.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Coding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../application/week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../info/conclusions.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusions</span></a>
+  </div>
+</li>
+    </ul>
+</div>
+    <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#function-list" id="toc-function-list" class="nav-link active" data-scroll-target="#function-list">Function list</a></li>
-  <li>
-<a href="#elements" id="toc-elements" class="nav-link" data-scroll-target="#elements">Elements</a>
-  <ul class="collapse">
-<li><a href="#expressions" id="toc-expressions" class="nav-link" data-scroll-target="#expressions">Expressions</a></li>
-  <li><a href="#operators-and-other-special-characters" id="toc-operators-and-other-special-characters" class="nav-link" data-scroll-target="#operators-and-other-special-characters">Operators and other special characters</a></li>
-  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
-  <li><a href="#r-as-a-simple-calculator" id="toc-r-as-a-simple-calculator" class="nav-link" data-scroll-target="#r-as-a-simple-calculator">R as a simple calculator</a></li>
-  <li><a href="#base-r-packages" id="toc-base-r-packages" class="nav-link" data-scroll-target="#base-r-packages">“Base R” Packages</a></li>
-  <li><a href="#vectors-data-types-and-structures" id="toc-vectors-data-types-and-structures" class="nav-link" data-scroll-target="#vectors-data-types-and-structures">Vectors, data types and structures</a></li>
-  <li><a href="#vector-operations" id="toc-vector-operations" class="nav-link" data-scroll-target="#vector-operations">Vector operations</a></li>
-  </ul>
-</li>
+<li><a href="#the-uses-of-simulation-methods" id="toc-the-uses-of-simulation-methods" class="nav-link active" data-scroll-target="#the-uses-of-simulation-methods">The uses of simulation methods</a></li>
+  <li><a href="#sampling-from-a-uniform-distribution" id="toc-sampling-from-a-uniform-distribution" class="nav-link" data-scroll-target="#sampling-from-a-uniform-distribution">Sampling from a uniform distribution</a></li>
+  <li><a href="#sampling-from-a-normal-distribution" id="toc-sampling-from-a-normal-distribution" class="nav-link" data-scroll-target="#sampling-from-a-normal-distribution">Sampling from a normal distribution</a></li>
+  <li><a href="#sampling-from-a-poisson-distribution" id="toc-sampling-from-a-poisson-distribution" class="nav-link" data-scroll-target="#sampling-from-a-poisson-distribution">Sampling from a Poisson distribution</a></li>
+  <li><a href="#sampling-from-a-binomial-distribution" id="toc-sampling-from-a-binomial-distribution" class="nav-link" data-scroll-target="#sampling-from-a-binomial-distribution">Sampling from a binomial distribution</a></li>
+  <li><a href="#random-sampling-using-sample" id="toc-random-sampling-using-sample" class="nav-link" data-scroll-target="#random-sampling-using-sample">Random sampling using <code>sample</code></a></li>
+  <li><a href="#sampling-random-characters-from-a-list" id="toc-sampling-random-characters-from-a-list" class="nav-link" data-scroll-target="#sampling-random-characters-from-a-list">Sampling random characters from a list</a></li>
+  <li><a href="#simulating-data-with-known-correlations" id="toc-simulating-data-with-known-correlations" class="nav-link" data-scroll-target="#simulating-data-with-known-correlations">Simulating data with known correlations</a></li>
   </ul></nav>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content"><script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs/loader.js"></script><script type="module" id="qwebr-monaco-editor-init">
-
-  // Configure the Monaco Editor's loader
-  require.config({
-    paths: {
-      'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.47.0/min/vs'
-    }
-  });
-</script><script type="module">
-// Function to update Monaco Editors when body class changes
-function updateMonacoEditorsOnBodyClassChange() {
-    // Select the body element
-    const body = document.querySelector('body');
-
-    // Options for the observer (which mutations to observe)
-    const observerOptions = {
-        attributes: true,  // Observe changes to attributes
-        attributeFilter: ['class'] // Only observe changes to the 'class' attribute
-    };
-
-    // Callback function to execute when mutations are observed
-    const bodyClassChangeCallback = function(mutationsList, observer) {
-        for(let mutation of mutationsList) {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                // Class attribute has changed
-                // Update all Monaco Editors on the page
-                updateMonacoEditorTheme();
-            }
-        }
-    };
-
-    // Create an observer instance linked to the callback function
-    const observer = new MutationObserver(bodyClassChangeCallback);
-
-    // Start observing the target node for configured mutations
-    observer.observe(body, observerOptions);
-}
-
-// Function to update all instances of Monaco Editors on the page
-function updateMonacoEditorTheme() {
-    // Determine what VS Theme to use
-    const vsThemeToUse = document.body.classList.contains("quarto-dark") ? 'vs-dark' : 'vs' ;
-
-    // Iterate through all initialized Monaco Editors
-    qwebrEditorInstances.forEach( function(editorInstance) { 
-        editorInstance.updateOptions({ theme: vsThemeToUse }); 
-    });
-}
-
-// Call the function to start observing changes to body class
-updateMonacoEditorsOnBodyClassChange();
-</script><script type="module">
-// Global array to store Monaco Editor instances
-globalThis.qwebrEditorInstances = [];
-
-function isValidCodeLineNumbers(stringCodeLineNumbers) {
-  // Regular expression to match valid input strings
-  const regex = /^(\d+(-\d+)?)(,\d+(-\d+)?)*$/;
-  return regex.test(stringCodeLineNumbers);
-}
-
-// Function that builds and registers a Monaco Editor instance    
-globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
-
-  const initialCode = cellData.code;
-  const qwebrCounter = cellData.id;
-  const qwebrOptions = cellData.options;
-
-  // Retrieve the previously created document elements
-  let runButton = document.getElementById(`qwebr-button-run-${qwebrCounter}`);
-  let resetButton = document.getElementById(`qwebr-button-reset-${qwebrCounter}`);
-  let copyButton = document.getElementById(`qwebr-button-copy-${qwebrCounter}`);
-  let editorDiv = document.getElementById(`qwebr-editor-${qwebrCounter}`);
-
-  // Load the Monaco Editor and create an instance
-  let editor;
-  require(['vs/editor/editor.main'], function () {
-    editor = monaco.editor.create(editorDiv, {
-      value: initialCode,
-      language: 'r',
-      theme: 'vs-light',
-      automaticLayout: true,           // Works wonderfully with RevealJS
-      scrollBeyondLastLine: false,
-      minimap: {
-        enabled: false
-      },
-      fontSize: qwebrScaledFontSize(editorDiv, qwebrOptions),         
-      renderLineHighlight: "none",      // Disable current line highlighting
-      hideCursorInOverviewRuler: true,  // Remove cursor indictor in right hand side scroll bar
-      readOnly: qwebrOptions['read-only'] ?? false,
-      quickSuggestions: qwebrOptions['editor-quick-suggestions'] ?? false,
-      wordWrap: (qwebrOptions['editor-word-wrap'] == 'true' ? "on" : "off")
-    });
-
-    // Store the official counter ID to be used in keyboard shortcuts
-    editor.__qwebrCounter = qwebrCounter;
-
-    // Store the official div container ID
-    editor.__qwebrEditorId = `qwebr-editor-${qwebrCounter}`;
-
-    // Store the initial code value and options
-    editor.__qwebrinitialCode = initialCode;
-    editor.__qwebrOptions = qwebrOptions;
-
-    // Set at the model level the preferred end of line (EOL) character to LF.
-    // This prevent `\r\n` from being given to the webR engine if the user is on Windows.
-    // See details in: https://github.com/coatless/quarto-webr/issues/94
-    // Associated error text: 
-    // Error: <text>:1:7 unexpected input
-
-    // Retrieve the underlying model
-    const model = editor.getModel();
-    // Set EOL for the model
-    model.setEOL(monaco.editor.EndOfLineSequence.LF);
-    
-    // Dynamically modify the height of the editor window if new lines are added.
-    let ignoreEvent = false;
-    const updateHeight = () => {
-      // Increment editor height by 2 to prevent vertical scroll bar from appearing
-      const contentHeight = editor.getContentHeight() + 2;
-
-      // Retrieve editor-max-height option
-      const maxEditorHeight = qwebrOptions['editor-max-height'];
-
-      // If editor-max-height is missing, allow infinite growth. Otherwise, threshold.
-      const editorHeight = !maxEditorHeight ?  contentHeight : Math.min(contentHeight, maxEditorHeight);
-
-      // We're avoiding a width change
-      //editorDiv.style.width = `${width}px`;
-      editorDiv.style.height = `${editorHeight}px`;
-      try {
-        ignoreEvent = true;
-
-        // The key to resizing is this call
-        editor.layout();
-      } finally {
-        ignoreEvent = false;
-      }
-    };
-
-    // Function to generate decorations to highlight lines
-    // in the editor based on input string.
-    function decoratorHighlightLines(codeLineNumbers) {
-      // Store the lines to be lighlight
-      let linesToHighlight = [];
-      
-      // Parse the codeLineNumbers string to get the line numbers to highlight
-      // First, split the string by commas
-      codeLineNumbers.split(',').forEach(part => {
-        // Check if we have a range of lines
-        if (part.includes('-')) {
-            // Handle range of lines (e.g., "6-8")
-            const [start, end] = part.split('-').map(Number);
-            for (let i = start; i <= end; i++) {
-                linesToHighlight.push(i);
-            }
-        } else {
-            // Handle single line (e.g., "7")
-            linesToHighlight.push(Number(part));
-        }
-      });
-  
-      // Create monaco decorations for the lines to highlight
-      const decorations = linesToHighlight.map(lineNumber => ({
-          range: new monaco.Range(lineNumber, 1, lineNumber, 1),
-          options: {
-              isWholeLine: true,
-              className: 'qwebr-editor-highlight-line'
-          }
-      }));
-  
-      // Return decorations to be applied to the editor
-      return decorations;
-    }
-
-    // Ensure that the editor-code-line-numbers option is set and valid
-    // then apply styling
-    if (qwebrOptions['editor-code-line-numbers']) {
-      // Remove all whitespace from the string
-      const codeLineNumbers = qwebrOptions['editor-code-line-numbers'].replace(/\s/g,'');
-      // Check if the string is valid for line numbers, e.g., "1,3-5,7"
-      if (isValidCodeLineNumbers(codeLineNumbers)) {
-        // Apply the decorations to the editor
-        editor.createDecorationsCollection(decoratorHighlightLines(codeLineNumbers));
-      } else {
-        // Warn the user that the input is invalid
-        console.warn(`Invalid "editor-code-line-numbers" value in code cell ${qwebrOptions['label']}: ${codeLineNumbers}`);
-      }
-    }
-
-    // Helper function to check if selected text is empty
-    function isEmptyCodeText(selectedCodeText) {
-      return (selectedCodeText === null || selectedCodeText === undefined || selectedCodeText === "");
-    }
-
-    // Registry of keyboard shortcuts that should be re-added to each editor window
-    // when focus changes.
-    const addWebRKeyboardShortCutCommands = () => {
-      // Add a keydown event listener for Shift+Enter to run all code in cell
-      editor.addCommand(monaco.KeyMod.Shift | monaco.KeyCode.Enter, () => {
-
-        // Retrieve all text inside the editor
-        qwebrExecuteCode(editor.getValue(), editor.__qwebrCounter, editor.__qwebrOptions);
-      });
-
-      // Add a keydown event listener for CMD/Ctrl+Enter to run selected code
-      editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
-
-        // Get the selected text from the editor
-        const selectedText = editor.getModel().getValueInRange(editor.getSelection());
-        // Check if no code is selected
-        if (isEmptyCodeText(selectedText)) {
-          // Obtain the current cursor position
-          let currentPosition = editor.getPosition();
-          // Retrieve the current line content
-          let currentLine = editor.getModel().getLineContent(currentPosition.lineNumber);
-
-          // Propose a new position to move the cursor to
-          let newPosition = new monaco.Position(currentPosition.lineNumber + 1, 1);
-
-          // Check if the new position is beyond the last line of the editor
-          if (newPosition.lineNumber > editor.getModel().getLineCount()) {
-            // Add a new line at the end of the editor
-            editor.executeEdits("addNewLine", [{
-            range: new monaco.Range(newPosition.lineNumber, 1, newPosition.lineNumber, 1),
-            text: "\n", 
-            forceMoveMarkers: true,
-            }]);
-          }
-          
-          // Run the entire line of code.
-          qwebrExecuteCode(currentLine, editor.__qwebrCounter, editor.__qwebrOptions);
-
-          // Move cursor to new position
-          editor.setPosition(newPosition);
-        } else {
-          // Code to run when Ctrl+Enter is pressed with selected code
-          qwebrExecuteCode(selectedText, editor.__qwebrCounter, editor.__qwebrOptions);
-        }
-      });
-    }
-
-    // Register an on focus event handler for when a code cell is selected to update
-    // what keyboard shortcut commands should work.
-    // This is a workaround to fix a regression that happened with multiple
-    // editor windows since Monaco 0.32.0 
-    // https://github.com/microsoft/monaco-editor/issues/2947
-    editor.onDidFocusEditorText(addWebRKeyboardShortCutCommands);
-
-    // Register an on change event for when new code is added to the editor window
-    editor.onDidContentSizeChange(updateHeight);
-
-    // Manually re-update height to account for the content we inserted into the call
-    updateHeight();
-
-    // Store the editor instance in the global dictionary
-    qwebrEditorInstances[editor.__qwebrCounter] = editor;
-
-  });
-
-  // Add a click event listener to the run button
-  runButton.onclick = function () {
-    qwebrExecuteCode(editor.getValue(), editor.__qwebrCounter, editor.__qwebrOptions);
-  };
-
-  // Add a click event listener to the reset button
-  copyButton.onclick = function () {
-    // Retrieve current code data
-    const data = editor.getValue();
-    
-    // Write code data onto the clipboard.
-    navigator.clipboard.writeText(data || "");
-  };
-  
-  // Add a click event listener to the copy button
-  resetButton.onclick = function () {
-    editor.setValue(editor.__qwebrinitialCode);
-  };
-  
-}
-</script><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Introduction to <i class="fa-brands fa-r-project fa-1x" aria-label="r-project"></i> for HSS8005+</h1>
+<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../info/week8.html">Week 8</a></li><li class="breadcrumb-item"><a href="../code/week8.html">Coding</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Week 8 coding</h1>
+<p class="subtitle lead">Designs: Simulation-based power analysis for study design</p>
 </div>
 
 
@@ -2014,23 +447,17 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
     
   </div>
   
-<div>
-  <div class="abstract">
-    <div class="block-title">Description</div>
-    This coding playground introduces some basic R operations. Its aim is to introduce at a basic level those elements of the R programming language that will be most useful for the applied purposes of this course. It is therefore not a comprehensive introduction to R, but a pragmatic one. <br><br> This page contains interactive <a href="https://docs.r-wasm.org/webr/latest/"><code>WebR</code></a> code fields. If the <strong>WEBR STATUS</strong> below is 🟢<strong>Ready!</strong>, then the fields are ready to evaluate the <i class="fa-brands fa-r-project" aria-label="r-project"></i> code within them. You can edit the code in the fields as necessary, even completely replacing the default content. The ‘Start over’ refresh button at the top right end of the fields reinstates the original content. The code in the fields can also be copied, either by manually selecting it or using the copy button at the top right end of the fields.
-  </div>
-</div>
 
 
-</header><section id="function-list" class="level1"><h1>Function list</h1>
+</header><p>The application workshop will use functions from the following packages:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <!-- preamble start -->
 
     <script>
 
-      function styleCell_t9hbhbh09y09m1pbwbx4(i, j, css_id) {
-          var table = document.getElementById("tinytable_t9hbhbh09y09m1pbwbx4");
+      function styleCell_3759rooxusz4ixilhcb5(i, j, css_id) {
+          var table = document.getElementById("tinytable_3759rooxusz4ixilhcb5");
           var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
           if (cell) {
               console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
@@ -2040,7 +467,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
           }
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_t9hbhbh09y09m1pbwbx4');
+        var table = document.getElementById('tinytable_3759rooxusz4ixilhcb5');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -2048,8 +475,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_t9hbhbh09y09m1pbwbx4(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_t9hbhbh09y09m1pbwbx4");
+      function spanCell_3759rooxusz4ixilhcb5(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_3759rooxusz4ixilhcb5");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -2079,40 +506,64 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: 3, j: 0 }, { i: 3, j: 1 },  ], css_id: 'tinytable_css_tp6wr4e7jy7pxdjv00yy',}, 
-          { positions: [ { i: 0, j: 0 }, { i: 0, j: 1 },  ], css_id: 'tinytable_css_mv3b4pr4up0h3z5wpg5o',}, 
+          { positions: [ { i: 7, j: 0 },  ], css_id: 'tinytable_css_w3mco67t5toio0o1px4x',}, 
+          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_ptl8trcmlq8a73zcf4s0',}, 
+          { positions: [ { i: 7, j: 1 },  ], css_id: 'tinytable_css_dgwi5qelq6tavshprhiv',}, 
+          { positions: [ { i: 1, j: 1 }, { i: 2, j: 1 }, { i: 3, j: 1 }, { i: 4, j: 1 }, { i: 5, j: 1 }, { i: 6, j: 1 },  ], css_id: 'tinytable_css_d7qtmwbo91sa2qp9n2my',}, 
+          { positions: [ { i: 0, j: 1 },  ], css_id: 'tinytable_css_cpy6blsyhb28l3h5d9c1',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 },  ], css_id: 'tinytable_css_94lozqjib990jkub3anc',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  styleCell_t9hbhbh09y09m1pbwbx4(cell.i, cell.j, group.css_id);
+                  styleCell_3759rooxusz4ixilhcb5(cell.i, cell.j, group.css_id);
               });
           });
       });
     </script><style>
       /* tinytable css entries after */
-      .table td.tinytable_css_tp6wr4e7jy7pxdjv00yy, .table th.tinytable_css_tp6wr4e7jy7pxdjv00yy { border-bottom: solid #d3d8dc 0.1em; }
-      .table td.tinytable_css_mv3b4pr4up0h3z5wpg5o, .table th.tinytable_css_mv3b4pr4up0h3z5wpg5o { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_w3mco67t5toio0o1px4x, .table th.tinytable_css_w3mco67t5toio0o1px4x { border-bottom: solid #d3d8dc 0.1em; width: 30%; }
+      .table td.tinytable_css_ptl8trcmlq8a73zcf4s0, .table th.tinytable_css_ptl8trcmlq8a73zcf4s0 { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; width: 30%; }
+      .table td.tinytable_css_dgwi5qelq6tavshprhiv, .table th.tinytable_css_dgwi5qelq6tavshprhiv { border-bottom: solid #d3d8dc 0.1em; width: 70%; }
+      .table td.tinytable_css_d7qtmwbo91sa2qp9n2my, .table th.tinytable_css_d7qtmwbo91sa2qp9n2my { width: 70%; }
+      .table td.tinytable_css_cpy6blsyhb28l3h5d9c1, .table th.tinytable_css_cpy6blsyhb28l3h5d9c1 { border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; width: 70%; }
+      .table td.tinytable_css_94lozqjib990jkub3anc, .table th.tinytable_css_94lozqjib990jkub3anc { width: 30%; }
     </style>
 <div class="container">
-      <table class="table table-borderless" id="tinytable_t9hbhbh09y09m1pbwbx4" style="table-layout: fixed; width: 80% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table" id="tinytable_3759rooxusz4ixilhcb5" style="table-layout: fixed; width: 100% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
 <thead><tr>
 <th scope="col">Package <span style="color:red"> : : </span> Function</th>
                 <th scope="col">Purpose</th>
               </tr></thead>
 <tbody>
 <tr>
-<td><code><a href="https://rdrr.io/r/utils/help.html">help()</a></code></td>
-                  <td>The primary interface to R’s built-in help system. It’s main mandatory attribute is <code>topic</code>, usually a name or character string specifying the topic for which help is sought. See, for example, below, where we use the function to get information on built-in arithmetic and logical operators.</td>
+<td><code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code></td>
+                  <td>sampling elements from an R object with or without replacement</td>
                 </tr>
 <tr>
-<td><code><a href="https://rdrr.io/r/base/Arithmetic.html">utils::help(Arithmetic)</a></code></td>
-                  <td>R’s built-in arithmetic operators</td>
+<td><code><a href="https://rdrr.io/r/base/lapply.html">replicate()</a></code></td>
+                  <td>it is used to evaluate an expression <code>N</code> number of times repeatedly; often plays a role in conjunction with sampling functions</td>
                 </tr>
 <tr>
-<td><code><a href="https://rdrr.io/r/base/Comparison.html">utils::help(Comparison)</a></code></td>
-                  <td>R’s built-in relational operators</td>
+<td><code><a href="https://rdrr.io/r/stats/Uniform.html">runif()</a></code></td>
+                  <td>sampling from a uniform distribution</td>
+                </tr>
+<tr>
+<td><code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code></td>
+                  <td>sampling from a normal distribution</td>
+                </tr>
+<tr>
+<td><code><a href="https://rdrr.io/r/stats/Binomial.html">rbinom()</a></code></td>
+                  <td>sampling from a binomial distribution</td>
+                </tr>
+<tr>
+<td><code><a href="https://rdrr.io/r/stats/Poisson.html">rpois()</a></code></td>
+                  <td>sampling from a Poisson distribution</td>
+                </tr>
+<tr>
+<td><code>MASS::mvtnorm()</code></td>
+                  <td>sampling from a multivariate normal distribution; sampling multiple variables with a known correlation structure (i.e., we can tell R how variables should be correlated with one another) and normally distributed errors</td>
                 </tr>
 </tbody>
 </table>
@@ -2120,201 +571,259 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <!-- hack to avoid NA insertion in last line -->
 </div>
 </div>
-<div class="codebox">
-<p>If you have more advanced knowledge of <i class="fa-brands fa-r-project" aria-label="r-project"></i> and you find the exercises below too easy, here’s an <i class="fa-brands fa-r-project" aria-label="r-project"></i> programming challenge for you.</p>
-<p>Suppose you want to write a function that lists all the leap years between two specified years. How would you go about writing it? What are the information that you need first? What are the steps that you would take to build up the function? There are several ways of achieving such a function, and you can find three options at the bottom of this worksheet. Work individually or in a small group.</p>
-<p><strong>Tip:</strong></p>
-<ul>
-<li>You first need to check the definition of a leap year and how it is calculated; you can Google this.</li>
-<li>You then need to find out how the arithmetic operations involved in the calculation are implemented in <i class="fa-brands fa-r-project" aria-label="r-project"></i>; try <code><a href="https://rdrr.io/r/base/Arithmetic.html">help(Arithmetic)</a></code> or <code><a href="https://rdrr.io/r/base/Arithmetic.html">?Arithmetic</a></code>.</li>
-<li>When you are done, you can check your results against the example solutions given at the bottom of this page</li>
-</ul>
-</div>
-</section><section id="elements" class="level1"><h1>Elements</h1>
-<section id="expressions" class="level2"><h2 class="anchored" data-anchor-id="expressions">Expressions</h2>
-<p><em>Expressions</em> or <em>statements</em> are the fundamental units of work in <code>R</code>. The <code>R</code> <strong>computing environment</strong> <em>evaluates</em> expressions/statements written in the <code>R</code> <strong>programming language</strong>. Expressions/statements are made up of <em>functions</em>, <em>operators</em> (special characters) and <em>data objects</em>.</p>
-<p>The code block below contains an example of each. Clicking <span class="qwebr-icon-run-code"><i class="fa-solid fa-play" aria-label="play"></i></span> <strong>Run Code</strong> will run all lines of code in the block; to run the expressions one-by-one, click on the desired code line and execute <strong>Ctrl + ENTER</strong> / <strong>Command + RETURN</strong>.</p>
-<div id="qwebr-insertion-location-1"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="operators-and-other-special-characters" class="level2"><h2 class="anchored" data-anchor-id="operators-and-other-special-characters">Operators and other special characters</h2>
-<p>We have encountered the <code>+</code> operator above. We have also found out from the <code>R Documentation</code> that <code>+</code> is one of several *arithmetic operators<code>.</code>R` organises its various operators into the following groups:</p>
-<ul>
-<li>Arithmetic operators (see <code><a href="https://rdrr.io/r/base/Arithmetic.html">help(Arithmetic)</a></code>)</li>
-<li>Assignment operators (see <code><a href="https://rdrr.io/r/base/assignOps.html">help(assignOps)</a></code>)</li>
-<li>Comparison/Relational operators (see <code><a href="https://rdrr.io/r/base/Comparison.html">help(Comparison)</a></code>)</li>
-<li>Logical operators (<code>&amp;</code>, <code>&amp;&amp;</code>, <code>|</code>, <code>||</code>, <code>!</code>, <code>isTRUE</code>, <code>isFALSE</code>)</li>
-<li>Miscellaneous operators (<code>:</code>, <code>%in%</code>, <code>%*%</code>)</li>
-</ul>
-<div class="codebox">
-<p>Find out more about each by searching the <code>R Documentation</code> using the <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code> function:</p>
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-<p>There are also a number of other special characters used in <code>R</code>. For example, it’s worth being aware of the role of different types of <em>quotes</em> (check <code><a href="https://rdrr.io/r/base/Quotes.html">help(Quotes)</a></code>). Single (<code>'</code>) and double quotes (<code>"</code>) delimit character constants. They can be used interchangeably but double quotes are preferred (and character constants are printed using double quotes), so single quotes are normally only used to delimit character constants containing double quotes (e.g.&nbsp;<code>'here are "double quotes" in single quotes'</code>. Backslash (```) is used to start an <em>escape sequence</em> inside character constants.</p>
-<p>To check how this works, let’s get back into Nineteen Eighty-Four territory:</p>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section><section id="functions" class="level2"><h2 class="anchored" data-anchor-id="functions">Functions</h2>
-<p>Most of the work in <code>R</code> is done using functions. It’s possible to <strong>create your own functions</strong>. This makes R extremely powerful and extendible. We’re not going to cover making your own functions in this course, but it’s important to be aware of this capability. There are plenty of good resources online for learning how to do this, including <a href="https://www.statmethods.net/management/userfunctions.html">this one</a>.</p>
-</section><section id="r-as-a-simple-calculator" class="level2"><h2 class="anchored" data-anchor-id="r-as-a-simple-calculator">R as a simple calculator</h2>
-<p>The most elementary yet still handy task you can use <i class="fa-brands fa-r-project" aria-label="r-project"></i> for is to perform basic arithmetic operations. This is useful for getting a first experience <em>doing</em> things in the <i class="fa-brands fa-r-project" aria-label="r-project"></i> language. This is aided by <code>R</code>’s <strong><em>arithmetic operators</em></strong>, which we can find out more about if we type and execute the command <code><a href="https://rdrr.io/r/base/Arithmetic.html">help(Arithmetic)</a></code>. Generally, the <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code> function allows us to access <code>R</code>’s internal helper pages.</p>
-<p>Let’s say we want to know the result of adding up three numbers: 1, 3 and 5:</p>
-<div id="qwebr-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>This will print out the result (9).</p>
-<p>The <code>[1]</code> in the result is just the line number; in this case, our result only consists of a single line.</p>
-<p>We can also save the result of this operation as an <strong><em>object</em></strong>, so we can use it in further operations. We create objects by using the so-called <strong><em>assignment operator</em></strong> consisting of the characters <code>&lt;-</code> (resembling a left-arrow).</p>
-<p>A command involving <code>&lt;-</code> can be read as <strong>“assign the value of the result from the operation on the right hand side (some expression) to the object on the left hand side (short name of object, single word, with no spaces)”</strong>.</p>
-<p>For example, let’s save our result in an object called “<strong>nine</strong>”:</p>
-<div id="qwebr-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Notice that there is no output printed this time. But there are also no error messages, so the operation must have run without problems. Instead, if you are working in the Console within <code>RStudio</code>, the newly created objects will be listed in the Environment pane; you should have an object called “nine” there that stores the single value “9” in it. We can now use this object for other operations, such as:</p>
-<div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>We can also check results of so-called <strong>relational</strong> operations. There are several <em>relational operators</em> that allow us to compare objects in R. The most useful of these are the following:</p>
-<ul>
+<p>Explore the package websites for an overview of the purposes and the main functions of these packages.</p>
+<section id="the-uses-of-simulation-methods" class="level2"><h2 class="anchored" data-anchor-id="the-uses-of-simulation-methods">The uses of simulation methods</h2>
+<p>Simulating data uses generating random data sets with known properties using code (or some other method). This can be useful in various contexts.</p>
+<ol type="1">
 <li>
-<code>&gt;</code> greater than, <code>&gt;=</code> greater than or equal to</li>
+<strong>To better understand our models.</strong> Probability models mimic variation in the world, and the tools of simulation can help us better understand this variation. Patterns of randomness are contrary to normal human thinking and simulation helps in training our intuitions about averages and variation</li>
 <li>
-<code>&lt;</code> less than, <code>&lt;=</code> less than or equal to</li>
+<strong>To run statistical analyses</strong> (e.g., simulating a null distribution against which to compare a sample)</li>
 <li>
-<code>==</code> equal to</li>
-<li>
-<code>!=</code> not equal to</li>
-</ul>
-<p>When we use these to compare two objects in R, we end up with a <strong>logical</strong> object.</p>
-<p>For example, let’s check whether 9 is greater than 5, and whether it is lower than 8:</p>
-<div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><i class="fa-brands fa-r-project" aria-label="r-project"></i> treats our inputs as statements that we are asking it to evaluate, and we get the answers “TRUE” and “FALSE”, respectively, as we would expect. Let’s now check whether our object “nine” is equal to the number 9. We may assume that we can achieve this by typing “nine = 9”, but let’s see what that results in:</p>
-<div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Did we get the result we expected? Nothing was printed in the output, so seemingly nothing happened… That’s because the “=” sign is also used as an assignment operator in <i class="fa-brands fa-r-project" aria-label="r-project"></i>, just like “&lt;-”. So we basically assigned the value “9” to the object “nine” again. To use the <em>equal</em> sign as a logical operator we must type it twice (==). Let’s see:</p>
-<div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Now we get the answer “TRUE”, as expected.</p>
-<p>This distinction between “=” and “==” is important to keep in mind. What would have happened if we had tried to test whether our object “nine” equals value “5” or not, and instead of the logical operator (==) we used the assignment operator (=)? Let’s see:</p>
-<div id="qwebr-insertion-location-10"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>In the Console we again see no results printed, but if we check our Environment, we see that the value of the object “nine” was changed to 5. So it can be a dangerous business. We’ll be using the “&lt;-” as assignment operator instead of “=” to avoid any confusion in this respect. The distinction between == and = will also emerge in other contexts later.</p>
-<p>So, try out the following commands in turn now and check if the results are what you’d expect:</p>
-<div id="qwebr-insertion-location-11"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The text following the hashtag (#) in the last line is a comment. If you’d like to comment on any code you write just add a hash (<code>#</code>) or series of hashes in front of it so that <i class="fa-brands fa-r-project" aria-label="r-project"></i> knows it should not evaluate it as a command. This will be useful when writing your commands in an R script that you can save for later, rather than interacting with <i class="fa-brands fa-r-project" aria-label="r-project"></i> live in the Console.</p>
-</section><section id="base-r-packages" class="level2"><h2 class="anchored" data-anchor-id="base-r-packages">“Base R” Packages</h2>
-<p>Instead of programming your own functions in the <strong>R</strong> language, you can rely on functions written by other people and bundled within a package that performs some set task.</p>
-<p>When you install <code>R</code>, a set of “packages” containing various functions are also installed by default. These packages make up what is colloquially referred to as <em>base R</em>. Functions from these packages can be used straight away and they cannot be deleted or installed separately. The functionality of these <em>base R</em> packages is updated with each new edition of <code>R</code>, but not in between new releases of the software. The code below lists the names of all the packages in <em>base R</em>:</p>
+<strong>To approximate the sampling distribution of data</strong> and propagate this to the sampling distribution of statistical estimates and procedures</li>
+</ol></section><section id="sampling-from-a-uniform-distribution" class="level2"><h2 class="anchored" data-anchor-id="sampling-from-a-uniform-distribution">Sampling from a uniform distribution</h2>
+<p>The <code>runif</code> function returns some number (<code>n</code>) of random numbers from a <a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">uniform distribution</a> with a range from <span class="math inline">\(a\)</span> (<code>min</code>) to <span class="math inline">\(b\)</span> (<code>max</code>) such that <span class="math inline">\(X\sim\mathcal U(a,b)\)</span> (verbally, <span class="math inline">\(X\)</span> is sampled from a uniform distribution with the parameters <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>), where <span class="math inline">\(-\infty &lt; a &lt; b &lt; \infty\)</span> (verbally, <span class="math inline">\(a\)</span> is greater than negative infinity but less than <span class="math inline">\(b\)</span>, and <span class="math inline">\(b\)</span> is finite). The default is to draw from a standard uniform distribution (i.e., <span class="math inline">\(a = 0\)</span> and <span class="math inline">\(b = 1\)</span>):</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span> ,<span class="st">"Priority"</span><span class="op">]</span> <span class="op">==</span> <span class="st">"base"</span>, <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Sample a vector of ten numbers and store the results in the object `rand_unifs`</span></span>
+<span><span class="co"># Note that the numbers will be different each time we re-run the `runif` function above.</span></span>
+<span><span class="co"># If we want to recreate the same sample, we should set a `seed` number first</span></span>
+<span></span>
+<span><span class="va">rand_unifs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10000</span>, min <span class="op">=</span> <span class="fl">0</span>, max <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We see in the list that there is also a package called “base”, which contains 1283 elementary functions. However, when we refer to <em>base R</em>, we usually mean the functions from all the 14 packages listed above.</p>
-<p>Apart from these packages that come pre-installed and pre-loaded with our <code>R</code> installation, there are also a number of “recommended” packages, which can be thought of as an <em>extended base R</em>. These packages also come pre-installed in binary distributions of <code>R</code>, but they need to be loaded in order to make their functions available for use. These “recommended” packages are:</p>
+<p>The first 40 numbers from the sample are:</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span> ,<span class="st">"Priority"</span><span class="op">]</span> <span class="op">==</span> <span class="st">"recommended"</span>, <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 0.37923250 0.91031329 0.51962036 0.73375217 0.39712124 0.92757059
+ [7] 0.68321572 0.27726684 0.73691318 0.37718149 0.09343578 0.38205713
+[13] 0.41005824 0.69462383 0.78355182 0.51796884 0.74805082 0.32270009
+[19] 0.12628188 0.32961120 0.07781008 0.17934783 0.44529315 0.41810640
+[25] 0.32620098 0.70087971 0.97061160 0.75944907 0.49219373 0.90292483
+[31] 0.45282273 0.98193123 0.68761876 0.87881210 0.94842655 0.36379273
+[37] 0.69781239 0.29576034 0.45606897 0.92343322 0.17209839 0.67444064
+[43] 0.20859164 0.85979483 0.64773669 0.20318914 0.72951248 0.53123511
+[49] 0.46795271 0.20732255</code></pre>
 </div>
-</section><section id="vectors-data-types-and-structures" class="level2"><h2 class="anchored" data-anchor-id="vectors-data-types-and-structures">Vectors, data types and structures</h2>
-<p>The basic elements of data in <code>R</code> are called <em>vectors</em>. R has 6 basic data types that you should be aware of:</p>
+</div>
+<p>To visualise the entire sample, we can plot it on a histogram:</p>
+<div class="cell" data-layout-align="center" data-output-location="fragment">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="week8_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="sampling-from-a-normal-distribution" class="level2"><h2 class="anchored" data-anchor-id="sampling-from-a-normal-distribution">Sampling from a normal distribution</h2>
+<p>The <code>rnorm</code> function returns some number (<code>n</code>) of randomly generated values given a set mean (<span class="math inline">\(\mu\)</span>; <code>mean</code>) and standard deviation (<span class="math inline">\(\sigma\)</span>; <code>sd</code>), such that <span class="math inline">\(X\sim\mathcal N(\mu,\sigma^2)\)</span>. The default is to draw from a standard <a href="https://en.wikipedia.org/wiki/Normal_distribution">normal (a.k.a., “Gaussian”) distribution</a> (i.e., <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\sigma = 1\)</span>):</p>
+<div class="cell" data-layout-align="center" data-output-location="fragment">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rand_norms_10000</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10000</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">rand_norms_10000</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] -0.1631028  0.6413395 -0.3517918 -0.1752250  1.0394962  0.2766921
+ [7] -2.5591545  1.2857627 -0.1904977  2.4942241  0.5793675 -0.9459978
+[13]  0.0523763  0.8114741 -0.4730451  0.2539988  1.6975033  0.2382903
+[19] -1.2884085 -0.3570184</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-output-location="fragment">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="week8_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
 <ul>
-<li>
-<code>character</code>: a text string, e.g.&nbsp;“name”</li>
-<li>
-<code>numeric</code>: a real or decimal number</li>
-<li>
-<code>integer</code>: non-decimal number; often represented by a number followed by the letter “L”, e.g.&nbsp;5L</li>
-<li>
-<code>logical</code>: <code>TRUE</code> or <code>FALSE</code>
-</li>
-<li>complex: complex numbers with real and imaginary parts</li>
+<li>Histograms allow us to check how samples from the same distribution might vary.</li>
+</ul></section><section id="sampling-from-a-poisson-distribution" class="level2"><h2 class="anchored" data-anchor-id="sampling-from-a-poisson-distribution">Sampling from a Poisson distribution</h2>
+<p>A Poisson process describes events happening with some given probability over an area of time or space such that <span class="math inline">\(X\sim Poisson(\lambda)\)</span>, where the rate parameter <span class="math inline">\(\lambda\)</span> is both the mean and variance of the Poisson distribution (note that by definition, <span class="math inline">\(\lambda &gt; 0\)</span>, and although <span class="math inline">\(\lambda\)</span> can be any positive real number, data are always integers, as with count data).</p>
+<p>Sampling from a Poisson distribution can be done in R with <code>rpois</code>, which takes only two arguments specifying the number of values to be returned (<code>n</code>) and the rate parameter (<code>lambda</code>). There are no default values for <code>rpois</code>.</p>
+<div class="cell" data-layout-align="center" data-output-location="fragment">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rand_poissons</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10</span>, lambda <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">rand_poissons</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 3 3 0 2 2 1 0 1 0 2</code></pre>
+</div>
+</div>
+<p>A histogram of a large number of values to see the distribution when <span class="math inline">\(\lambda = 4.5\)</span>:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rand_poissons_10000</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10000</span>, lambda <span class="op">=</span> <span class="fl">4.5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="week8_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="sampling-from-a-binomial-distribution" class="level2"><h2 class="anchored" data-anchor-id="sampling-from-a-binomial-distribution">Sampling from a binomial distribution</h2>
+<ul>
+<li><p>A <a href="https://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a> describes the number of ‘successes’ for some number of independent trials (<span class="math inline">\(\Pr(success) = p\)</span>).</p></li>
+<li><p>The <code>rbinom</code> function returns the number of successes after <code>size</code> trials, in which the probability of success in each trial is <code>prob</code>.</p></li>
+<li><p>Sampling from a binomial distribution in R with <code>rbinom</code> is a bit more complex than using <code>runif</code>, <code>rnorm</code>, or <code>rpois</code>.</p></li>
+<li><p>Like those previous functions, the <code>rbinom</code> function returns some number (<code>n</code>) of random numbers, but the arguments and output can be slightly confusing at first.</p></li>
+<li><p>For example, suppose we want to simulate the flipping of a fair coin 1000 times, and we want to know how many times that coin comes up heads (‘success’). We can do this with the following code:</p></li>
 </ul>
-<p>R provides several functions to examine features of vectors and other objects, for example:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">coin_flips</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">rbinom</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1</span>, size <span class="op">=</span> <span class="fl">1000</span>, prob <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">coin_flips</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 493</code></pre>
+</div>
+</div>
 <ul>
-<li>
-<code><a href="https://rdrr.io/r/base/class.html">class()</a></code> - what kind of object is it (high-level)?</li>
-<li>
-<code><a href="https://rdrr.io/r/base/typeof.html">typeof()</a></code> - what is the object’s data type (low-level)?</li>
-<li>
-<code><a href="https://rdrr.io/r/base/length.html">length()</a></code> - how long is it? What about two dimensional objects?</li>
-<li>
-<code><a href="https://rdrr.io/r/base/attributes.html">attributes()</a></code> - does it have any metadata?</li>
-</ul></section><section id="vector-operations" class="level2"><h2 class="anchored" data-anchor-id="vector-operations">Vector operations</h2>
-<p>Let’s learn a few vector operations.</p>
-<p>First, let’s use the <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> function to <strong>c</strong>oncatenate vector elements:</p>
-<div id="qwebr-insertion-location-12"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>To run this line of code in an R script, <strong>place the cursor on the line</strong> you want to execute and <em>either</em> click on the small “Run” tab in the upper-right corner of the script’s task bar, <em>or</em> click <em>Ctrl</em>+<em>Enter</em> (on Windows PCs).</p>
-<p>The vector called x that we just created appears in the Environment. We can examine some of its features:</p>
-<div id="qwebr-insertion-location-13"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>These tell us something about the characteristics of the object, but not much about its content (apart from the fact that it has a length of 5). Functions such as <code>min</code>, <code>max</code>, <code>range</code>, <code>mean</code>, <code>median</code>, <code>sum</code> or <code>summary</code> give us some summary statistics about the object:</p>
-<div id="qwebr-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The <code><a href="https://rdrr.io/r/base/seq.html">seq()</a></code> function lets us create a sequence from a starting point to an ending point. If you specify the <code>by</code> argument, you can skip values. For instance, if we wanted a vector of every 5th number between 0 and 100, we could write:</p>
-<div id="qwebr-insertion-location-15"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>To print out the result in the console, we can simply type the name of the object:</p>
-<div id="qwebr-insertion-location-16"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>A shorthand version to get a sequence between two numbers counting by 1s is to use the <code>:</code> sign. For example, print out all the numbers between 200 and 250:</p>
-<div id="qwebr-insertion-location-17"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>To access a single element of a vector by position in the vector, use the square brackets <code>[]</code>:</p>
-<div id="qwebr-insertion-location-18"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>If you want to access more than one element of a vector, put a vector of the positions you want to access in the brackets:</p>
-<div id="qwebr-insertion-location-19"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>If you try to access an element past the length of the vector, it will return a missing value <code>NA</code>:</p>
-<div id="qwebr-insertion-location-20"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>If you accidentally subset a vector by <code>NA</code> (the missing value), you get the vector back with all its entries replaced by <code>NA</code>:</p>
-<div id="qwebr-insertion-location-21"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Let’s say you want to modify one value in your vector. You can combine the square bracket subset <code>[]</code> with the assignment operator <code>&lt;-</code> to replace a particular value:</p>
-<div id="qwebr-insertion-location-22"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You can replace multiple values at the same time by using a vector for subsetting:</p>
-<div id="qwebr-insertion-location-23"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>If the replacement vector (the right-hand side) is shorter than what you are assigning to (the left-hand side), the values will “recycle” or repeat as necessary:</p>
-<div id="qwebr-insertion-location-24"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You can also create a vector of characters (words, letters, punctuation, etc):</p>
-<div id="qwebr-insertion-location-25"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Note for vectors, you cannot mix characters and numbers in the same vector. If you add a single character element, the whole vector gets converted.</p>
-<div id="qwebr-insertion-location-26"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Logical vectors are just vectors that only contain the special values <code>TRUE</code> or <code>FALSE</code>.</p>
-<div id="qwebr-insertion-location-27"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><code>TRUE</code> and <code>FALSE</code> can be shortened to <code>T</code> and <code>F</code>, respectively. However, it is stylistically recommended to spell them out. Also, note that <i class="fa-brands fa-r-project" aria-label="r-project"></i> is case-sensitive, so typing something like <code>true</code>, <code>True</code> or <code>fALSE</code> would give an error.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<li><p>The above result shows that the coin came up heads 493 times. But note the (required) argument <code>n</code>. This allows us to set the number of sequences to run.</p></li>
+<li><p>If we instead set <code>n = 2</code>, then this could simulate the flipping of a fair coin 1000 times once to see how many times heads comes up, then repeating the whole process a second time to see how many times heads comes up again (or, if it is more intuitive, the flipping of two separate fair coins 1000 times at the same time).</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">coin_flips_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">rbinom</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">2</span>, size <span class="op">=</span> <span class="fl">1000</span>, prob <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">coin_flips_2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 493 504</code></pre>
 </div>
-<div class="callout-title-container flex-fill">
-Solutions to the advanced exercise: leap year functions
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+<ul>
+<li><p>A coin was flipped 1000 times and returned 493 heads, and then another fair coin was flipped 1000 times and returned 504 heads.</p></li>
+<li><p>As with the <code>rnorm</code> and <code>runif</code> functions, we can check to see what the distribution of the binomial function looks like if we repeat this process.</p></li>
+<li><p>Suppose that we want to see the distribution of the number of times heads comes up after 1000 flips. We can simulate the process of flipping 1000 times in a row with 10000 different coins:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">coin_flips_10000</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">rbinom</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10000</span>, size <span class="op">=</span> <span class="fl">1000</span>, prob <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>First, we need to make sure that we have a definition of a <strong>leap year</strong>. We can go for this one, from the <a href="https://www.rmg.co.uk/stories/topics/which-years-are-leap-years-can-you-have-leap-seconds">Royal Museums of Greenwich</a>:</p>
-<blockquote class="blockquote">
-<p>To be a leap year, the year number must be divisible by four – except for end-of-century years, which must be divisible by 400. This means that the year 2000 was a leap year, although 1900 was not.</p>
-</blockquote>
-<p>So, we need to write a function that calculates whether a given number is divisible by another or not. We still need to simplify this further conceptually. If a number is divisible by another, that means that there is no ‘remainder’, or in other words, that the ‘remainder’ is 0. Is there a mathematical operation that could come in handy here? We may remember that the <strong>modulo</strong> operation gives the remainder when dividing. For example, “5 modulo 3 = 2” because <span class="math inline">\({5\over3}=1\)</span> with a remainder of <span class="math inline">\(2\)</span>.</p>
-<p>Knowing this will be extremely helpful, but we also need to know how the modulo operation is implemented in <i class="fa-brands fa-r-project" aria-label="r-project"></i>. We could do a search in <i class="fa-brands fa-r-project" aria-label="r-project"></i> for <code><a href="https://rdrr.io/r/base/Arithmetic.html">?Arithmetic</a></code> to find a list of arithmetic operators, and we’d find that the operator <code>%%</code> stands for the modulo operation.</p>
-<p>We now have all the knowledge elements we need to get down to programming a leap-year function in <i class="fa-brands fa-r-project" aria-label="r-project"></i>:</p>
-<div id="qwebr-insertion-location-28"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="week8_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
 </div>
 </div>
 </div>
+</section><section id="random-sampling-using-sample" class="level2"><h2 class="anchored" data-anchor-id="random-sampling-using-sample">Random sampling using <code>sample</code>
+</h2>
+<ul>
+<li><p>Sometimes it is useful to sample a set of values from a vector or list. The R function <code>sample</code> is very flexible for sampling a subset of numbers or elements from some structure (<code>x</code>) in R according to some set probabilities (<code>prob</code>).</p></li>
+<li><p>Elements can be sampled from <code>x</code> some number of times (<code>size</code>) with or without replacement (<code>replace</code>), though an error will be returned if the <code>size</code> of the sample is larger than <code>x</code> but <code>replace = FALSE</code> (default).</p></li>
+<li><p>Suppose we want to ask R to pick a random number from one to ten with equal probability:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rand_number_1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">rand_number_1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+</div>
+<ul>
+<li>We can increase the <code>size</code> of the sample to <code>10</code>:</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rand_number_10</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, size <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">rand_number_10</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 10  9  6  1  8  4  5  2  3  7</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Note that all numbers from 1 to 10 have been sampled, but in a random order. This is because the default is to sample <strong>without replacement</strong>, meaning that once a number has been sampled for the first element in <code>rand_number_10</code>, it is no longer available to be sampled again.</p></li>
+<li><p>We can change this and allow for sampling with replacement:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rand_number_10_r</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, size <span class="op">=</span> <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">rand_number_10_r</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  5  7  9  6  1  7 10  2  1  2</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Note that the numbers {1, 2, 7} are now repeated in the set of randomly sampled values above.</p></li>
+<li><p>So far, because we have not specified a probability vector <code>prob</code>, the function assumes that every element in <code>1:10</code> is sampled with equal probability</p></li>
+<li><p>Here’s an example in which the numbers 1-5 are sampled with a probability of 0.05, while the numbers 6-10 are sampled with a probability of 0.15, thereby biasing sampling toward larger numbers; we always need to ensure that these probabilities need to sum to 1.</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">prob_vec</span>      <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">0.05</span>, times <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">0.15</span>, times <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rand_num_bias</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, size <span class="op">=</span> <span class="fl">10</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="va">prob_vec</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">rand_num_bias</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 2 6 7 8 9 4 7 5 7 6</code></pre>
+</div>
+</div>
+</section><section id="sampling-random-characters-from-a-list" class="level2"><h2 class="anchored" data-anchor-id="sampling-random-characters-from-a-list">Sampling random characters from a list</h2>
+<ul>
+<li><p>We can also sample characters from a list of elements; it is no different than sampling numbers</p></li>
+<li><p>For example, if we want to create a simulated data set that includes three different species of some plant or animal, we could create a vector of species identities from which to sample:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">species</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"species_A"</span>, <span class="st">"species_B"</span>, <span class="st">"species_C"</span><span class="op">)</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>We can then sample from these three possible categories. For example:</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sp_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">species</span>, size <span class="op">=</span> <span class="fl">24</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, </span>
+<span>                    prob <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">0.25</span>, <span class="fl">0.25</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>What did the code above do?</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "species_A" "species_B" "species_A" "species_A" "species_A" "species_B"
+ [7] "species_A" "species_A" "species_A" "species_B" "species_B" "species_C"
+[13] "species_B" "species_A" "species_B" "species_C" "species_C" "species_A"
+[19] "species_C" "species_B" "species_A" "species_C" "species_A" "species_B"</code></pre>
+</div>
+</div>
+</section><section id="simulating-data-with-known-correlations" class="level2"><h2 class="anchored" data-anchor-id="simulating-data-with-known-correlations">Simulating data with known correlations</h2>
+<ul>
+<li><p>We can generate variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span> that have known correlations <span class="math inline">\(\rho\)</span> with with one another.</p></li>
+<li><p>For example: two standard normal random variables with a sample size of 10000, and with correlation between them of 0.3:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">N</span>   <span class="op">&lt;-</span> <span class="fl">10000</span></span>
+<span><span class="va">rho</span> <span class="op">&lt;-</span> <span class="fl">0.3</span></span>
+<span><span class="va">x1</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="va">N</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">x2</span>  <span class="op">&lt;-</span> <span class="op">(</span><span class="va">rho</span> <span class="op">*</span> <span class="va">x1</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">rho</span><span class="op">*</span><span class="va">rho</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="va">N</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>These variables are generated by first simulating the sample <span class="math inline">\(x_{1}\)</span> (<code>x1</code> above) from a standard normal distribution. Then, <span class="math inline">\(x_{2}\)</span> (<code>x2</code> above) is calculated as</li>
+</ul>
+<p><span class="math inline">\(x_{2} = \rho x_{1} + \sqrt{1 - \rho^{2}}x_{rand}\)</span>,</p>
+<p>where <span class="math inline">\(x_{rand}\)</span> is a sample from a normal distribution with the same variance as <span class="math inline">\(x_{1}\)</span>.</p>
+<ul>
+<li><p>We can generate variables <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span> that have known correlations <span class="math inline">\(\rho\)</span> with with one another.</p></li>
+<li><p>For example: two standard normal random variables with a sample size of 10000, and with correlation between them of 0.3:</p></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">N</span>   <span class="op">&lt;-</span> <span class="fl">10000</span></span>
+<span><span class="va">rho</span> <span class="op">&lt;-</span> <span class="fl">0.3</span></span>
+<span><span class="va">x1</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="va">N</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">x2</span>  <span class="op">&lt;-</span> <span class="op">(</span><span class="va">rho</span> <span class="op">*</span> <span class="va">x1</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">rho</span><span class="op">*</span><span class="va">rho</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="va">N</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Does the correlation equal <code>rho</code> (with some sampling error)?</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.309489</code></pre>
+</div>
+</div>
+<ul>
+<li><p>There is a more efficient way to generate any number of variables with different variances and correlations to one another.</p></li>
+<li><p>We need to use the <a href="https://cran.r-project.org/web/packages/MASS/MASS.pdf">MASS</a> library, which can be installed and loaded as below:</p></li>
+<li><p>In the <a href="https://cran.r-project.org/web/packages/MASS/MASS.pdf">MASS</a> library, the function <code>mvrnorm</code> can be used to generate any number of variables for a pre-specified covariance structure.</p></li>
+</ul>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -2738,124 +1247,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><nav class="page-navigation column-page-right"><div class="nav-page nav-page-previous">
+      <a href="../theory/week8.html" class="pagination-link" aria-label="Theory">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Theory</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../application/week8.html" class="pagination-link" aria-label="Application">
+        <span class="nav-page-text">Application</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-<script type="module">
-// Handle cell initialization initialization
-qwebrCellDetails.map(
-  (entry) => {
-    // Handle the creation of the element
-    qwebrCreateHTMLElement(entry);
-    // In the event of interactive, initialize the monaco editor
-    if (entry.options.context == EvalTypes.Interactive) {
-      qwebrCreateMonacoEditorInstance(entry);
-    }
-  }
-);
 
-// Identify non-interactive cells (in order)
-const filteredEntries = qwebrCellDetails.filter(entry => {
-  const contextOption = entry.options && entry.options.context;
-  return ['output', 'setup'].includes(contextOption) || (contextOption == "interactive" && entry.options && entry.options.autorun === 'true');
-});
-
-// Condition non-interactive cells to only be run after webR finishes its initialization.
-qwebrInstance.then(
-  async () => {
-    const nHiddenCells = filteredEntries.length;
-    var currentHiddenCell = 0;
-
-
-    // Modify button state
-    qwebrSetInteractiveButtonState(`🟡 Running hidden code cells ...`, false);
-
-    // Begin processing non-interactive sections
-    // Due to the iteration policy, we must use a for() loop.
-    // Otherwise, we would need to switch to using reduce with an empty
-    // starting promise
-    for (const entry of filteredEntries) {
-
-      // Determine cell being examined
-      currentHiddenCell = currentHiddenCell + 1;
-      const formattedMessage = `Evaluating hidden cell ${currentHiddenCell} out of ${nHiddenCells}`;
-
-      // Update the document status header
-      if (qwebrShowStartupMessage) {
-        qwebrUpdateStatusHeader(formattedMessage);
-      }
-
-      // Display the update in non-active areas
-      qwebrUpdateStatusMessage(formattedMessage);
-
-      // Extract details on the active cell
-      const evalType = entry.options.context;
-      const cellCode = entry.code;
-      const qwebrCounter = entry.id;
-
-      if (['output', 'setup'].includes(evalType)) {
-        // Disable further global status updates
-        const activeContainer = document.getElementById(`qwebr-non-interactive-loading-container-${qwebrCounter}`);
-        activeContainer.classList.remove('qwebr-cell-needs-evaluation');
-        activeContainer.classList.add('qwebr-cell-evaluated');
-
-        // Update status on the code cell
-        const activeStatus = document.getElementById(`qwebr-status-text-${qwebrCounter}`);
-        activeStatus.innerText = " Evaluating hidden code cell...";
-        activeStatus.classList.remove('qwebr-cell-needs-evaluation');
-        activeStatus.classList.add('qwebr-cell-evaluated');
-      }
-
-      switch (evalType) {
-        case 'interactive':
-          // TODO: Make this more standardized.
-          // At the moment, we're overriding the interactive status update by pretending its
-          // output-like. 
-          const tempOptions = entry.options;
-          tempOptions["context"] = "output"
-          // Run the code in a non-interactive state that is geared to displaying output
-          await qwebrExecuteCode(`${cellCode}`, qwebrCounter, tempOptions);
-          break;
-        case 'output':
-          // Run the code in a non-interactive state that is geared to displaying output
-          await qwebrExecuteCode(`${cellCode}`, qwebrCounter, entry.options);
-          break;
-        case 'setup':
-          const activeDiv = document.getElementById(`qwebr-noninteractive-setup-area-${qwebrCounter}`);
-
-          // Store code in history
-          qwebrLogCodeToHistory(cellCode, entry.options);
-
-          // Run the code in a non-interactive state with all output thrown away
-          await mainWebR.evalRVoid(`${cellCode}`);
-          break;
-        default: 
-          break; 
-      }
-
-      if (['output', 'setup'].includes(evalType)) {
-        // Disable further global status updates
-        const activeContainer = document.getElementById(`qwebr-non-interactive-loading-container-${qwebrCounter}`);
-        // Disable visibility
-        activeContainer.style.visibility = 'hidden';
-        activeContainer.style.display = 'none';
-      }
-    }
-  }
-).then(
-  () => {
-    // Release document status as ready
-
-    if (qwebrShowStartupMessage) {
-      qwebrStartupMessage.innerText = "🟢 Ready!"
-    }
-  
-    qwebrSetInteractiveButtonState(
-      `<i class="fa-solid fa-play qwebr-icon-run-code"></i> <span>Run Code</span>`, 
-      true
-    );  
-  }
-);
-</script>
 
 
 </body></html>
