@@ -31,6 +31,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    q { quotes: "“" "”" "‘" "’"; }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="../html/nobiblio.css">
@@ -535,40 +536,36 @@ p.course-button a:hover {
   <p class="week-subtitle">Linear models and their limitations</p>
 </section>
 -->
-<section class="slide level2 scrollable">
-
-<div class="outline-title">
-<p>Outline</p>
-</div>
-<div class="outline">
-<ol type="1">
-<li class="fragment">Topic 1 <!-- add &emsp;&emsp;&emsp; for v short topic names to adjust centring --></li>
-<li class="fragment">Topic 2</li>
-<li class="fragment">Topic 3</li>
-<li class="fragment">Topic 4</li>
-<li class="fragment">Topic 5</li>
-<li class="fragment">Topic 6</li>
-</ol>
+<section id="description" class="slide level2">
+<h2>Description</h2>
+<div class="small">
+<p>In Edwin <a href="https://www.gutenberg.org/ebooks/97">Abbott’s 1884 novella</a>, the inhabitants of Flatland are geometric shapes living in a two-dimensional world, incapable of imagining the existence of higher dimensions. A sphere passing through the plain of their world is a fascinating but incomprehensible event: Flatlanders can only see a dot becoming a circle, increasing in circumference, then shrinking back in size and disappearing. There are, in this universe, worlds with even more limited views, like the one-dimensional Lineland and the zero-dimensional Pointland. Any attempt to expand the perspective of their inhabitant(s) is doomed to failure. But as in any good adventure story, a chosen Flatland native embarks on a journey of discovery and revelation - and ostracism and imprisonment. The story is interpreted as an allegorical criticism of Victorian-age social structure, but can equally describe the limitations of inhabiting uncritically a methodological world in which all data are <q>normal</q> and all relationships are linear. Moving beyond linearity and acquiring the statistical intuition needed to think in higher dimensions and perceive more complex relationships is indeed a matter of practice-induced revelation. It’s unlikely that we will reach statistical nirvana in this short course, but we’ll attempt to build some more substantial structures upon the arid plains of linear regression. We start by looking around in the Flat-, Line- and Point-lands of quantitative analysis. Incorrigible procrastinators may want to check out <a href="https://www.youtube.com/watch?v=Mfglluny8Z0&amp;t=3602s">a full-length computer animated film version of Flatland on YouTube</a>. Others may be better served by this brief <a href="https://www.youtube.com/watch?v=MGv8MMi8QO0">TED-Ed animation</a>.</p>
 </div>
 </section>
-<section id="topic-1" class="title-slide slide level1 center" data-background-image="../pics/logo_anim.gif">
-<h1>Topic 1</h1>
-<p><img data-src="../pics/die1.png" class="absolute" style="right: 0; top: 0; height: 250px"></p>
-</section>
-
-<section id="topic-2" class="title-slide slide level1 center" data-background-image="../pics/logo_anim.gif">
-<h1>Topic 2</h1>
-<p><img data-src="../pics/die1.png" class="absolute" style="right: 0; top: 0; height: 250px"></p>
-</section>
-
-<section id="topic-3" class="title-slide slide level1 center" data-background-image="../pics/logo_anim.gif">
-<h1>Topic 3</h1>
-<p><img data-src="../pics/die1.png" class="absolute" style="right: 0; top: 0; height: 250px"></p>
-</section>
-
-<section id="topic-4" class="title-slide slide level1 center" data-background-image="../pics/logo_anim.gif">
-<h1>Topic 4</h1>
-<p><img data-src="../pics/die1.png" class="absolute" style="right: 0; top: 0; height: 250px"></p>
+<section id="readings" class="slide level2">
+<h2>Readings</h2>
+<p><strong>Statistics</strong></p>
+<div class="small-list">
+<ul>
+<li><strong><a href="https://avehtari.github.io/ROS-Examples">ROS</a></strong>: Chapters 3, 4, 6-12</li>
+<li><strong><a href="https://rohanalexander.github.io/telling_stories-published/">TSD</a></strong>: Chapter 12 (<q>Linear models</q>)</li>
+</ul>
+</div>
+<p><strong>Coding</strong></p>
+<div class="small-list">
+<ul>
+<li><strong><a href="https://rohanalexander.github.io/telling_stories-published/">TSD</a></strong>: Chapters 9 and 11</li>
+<li><strong><a href="https://r4ds.hadley.nz/">R4DS</a></strong>: Chapters 11, 12</li>
+</ul>
+</div>
+<p><strong>Application</strong></p>
+<div class="small-list">
+<ul>
+<li><em>Chapter 4</em> in Wilkinson, Richard G., and Kate Pickett. 2010. The Spirit Level: Why Greater Equality Makes Societies Stronger. New York: Bloomsbury Press.</li>
+<li>Österman, Marcus. 2021. <q>Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust</q>. <em>Social Indicators Research</em> 154(1):211–33 - (<a href="https://link.springer.com/article/10.1007/s11205-020-02529-y">online</a>)</li>
+<li>Mitchell, Jeffrey. 2021. <q>Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.</q> <em>Frontiers in Sociology</em> 6 (April): 604884 - (<a href="https://doi.org/10.3389/fsoc.2021.604884">online</a>)</li>
+</ul>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -609,7 +606,7 @@ p.course-button a:hover {
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: true,

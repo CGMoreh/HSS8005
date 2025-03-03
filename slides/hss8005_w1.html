@@ -317,7 +317,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -570,46 +569,74 @@ p.course-button a:hover {
   <p class="week-title">Tools</p>
   <p class="week-subtitle"><strong>R</strong>, <strong>RStudio</strong>, <strong>Markdown</strong>, <strong>Quarto</strong> and other tools of the trade</p>
 </section>
---><section class="slide level2"><style>
+--><section id="description" class="slide level2"><h2>Description</h2>
+<style>
   .fa-play:before {
     content: ";
     }
-</style></section><section id="aims" class="slide level2"><h2>Aims</h2>
+</style>
+<p>We start the module with an applied introduction to the programming language <strong>R</strong> and the various tools that we will use to enhance its application to empirical research work in the social sciences. You will only gain a very basic and generic understanding of these software in this first week, but you will learn more throughout the semester, in the form of coding tasks associated with specific data analysis exercises.</p>
+</section><section id="readings" class="slide level2"><h2>Readings</h2>
+<p><strong>Textbook readings</strong></p>
+<div class="small-list">
+<ul>
+<li>
+<strong><a href="https://r4ds.hadley.nz/">R4DS</a></strong>: Chapters 1-10 (<q>Whole game</q>)</li>
+</ul>
+</div>
+<p><strong>Further training</strong></p>
+<div class="small-list">
+<ul>
+<li>For further structured training in the use of R, RStudio and RMarkdown/Quarto, see the <em>R for Social Scientists</em> online course provided by Data Carpentry at <a href="https://datacarpentry.org/r-socialsci/">https://datacarpentry.org/r-socialsci/</a>
+</li>
+<li>
+<a href="https://jennybryan.org/about/">Jenny Bryan’s (RStudio/Posit)</a> university-course-originated online book <a href="https://stat545.com/index.html">Stat545</a> is also a great resource for learning R and RStudio in more depth.</li>
+<li>For a very different approach emphasising the value of learning <q>base</q> R over the RStudio + <a href="https://tidyverse.tidyverse.org">tidyverse</a> utility combo, see <a href="https://heather.cs.ucdavis.edu/matloff.html">Norm Matloff’s</a> course <a href="https://faster-site.netlify.app/"><em>fasteR: Fast Lane to Learning R!</em></a>.</li>
+</ul>
+</div>
+</section><section id="aims" class="slide level2"><h2>Aims</h2>
+<div>
 <p>By the end of the session, you will:</p>
 <ul>
-<li class="fragment">understand how to use the most important panels in the <strong>RStudio</strong> interface</li>
-<li class="fragment">create an RStudio Project to store your work throughout the course</li>
-<li class="fragment">begin using <strong>R</strong> scripts (.R) and <strong>Quarto</strong> notebooks (.qmd) to record and document your coding progress</li>
-<li class="fragment">understand data types and basic operations in the <code>R</code> language</li>
-<li class="fragment">understand the principles behind <em>functions</em>
+<li>understand how to use the most important panels in the <strong>RStudio</strong> interface</li>
+<li>create an RStudio Project to store your work throughout the course</li>
+<li>begin using <strong>R</strong> scripts (.R) and <strong>Quarto</strong> notebooks (.qmd) to record and document your coding progress</li>
+<li>understand data types and basic operations in the <code>R</code> language</li>
+<li>understand the principles behind <em>functions</em>
 </li>
-<li class="fragment">know how to install, load and use functions from user-written packages</li>
-<li class="fragment">gain familiarity with some useful functions from packages included in the <a href="https://tidyverse.tidyverse.org">tidyverse</a> ecosystem.</li>
+<li>know how to install, load and use functions from user-written packages</li>
+<li>gain familiarity with some useful functions from packages included in the <a href="https://tidyverse.tidyverse.org">tidyverse</a> ecosystem.</li>
 </ul>
 <p>This lab is an introduction to <strong>R</strong> and <strong>RStudio</strong> for the purposes of this module. Those new to <strong>R</strong> should also complete the <a href="https://datacarpentry.org/r-socialsci/"><strong>R for Social Scientists</strong></a> online training course on their own (estimated to take around 5-6 hours), as well as read through the assigned chapters from the <a href="https://r4ds.hadley.nz/"><strong>R4DS</strong></a> textbook.</p>
+</div>
 </section><section id="r-and-rstudio" class="slide level2"><h2>R and RStudio</h2>
-<p>To install <strong>R</strong> and <strong>RStudio</strong> on your personal computers, <a href="https://posit.co/download/rstudio-desktop/">follow the steps outlined here</a> based on your operating system.</p>
-<p>Although you will only interact directly with <strong>RStudio</strong> in this module, <strong>R</strong> needs to be installed first.</p>
+<p>To install <strong>R</strong> and <strong>RStudio</strong> on your personal computers, <a href="https://posit.co/download/rstudio-desktop/">follow thesteps outlined here</a> based on your operating system.</p>
+<p>Although you will only interact directly with <strong>RStudio</strong> in this course, <strong>R</strong> needs to be installed first.</p>
 <p>Think of the relationship between the two as that between the <em>engine</em> of a car (<strong>R</strong>) and the <em>dashboard</em> of a car (<strong>RStudio</strong>):</p>
-<p><img data-src="../pics/tools/R_vs_RStudio.png" style="width:50.0%"></p>
-<p>Or perhaps imagine driving the car on the left vs.&nbsp;the one on the right:</p>
-<div>
-
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="../pics/tools/R_vs_RStudio.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
 </div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img data-src="../pics/tools/car_chassis.jpg" style="width:40.0%" alt="R"><img data-src="../pics/tools/car_modern_dashboard.jpg" style="width:40.0%" alt="RStudio"></p>
+<p>Or perhaps more accurately, as the car on the left vs.&nbsp;the one on the right:</p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="../pics/tools/car_chassis.jpg"></p>
+<figcaption>R</figcaption></figure>
 </div>
+</div><div class="column" style="width:29%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="../pics/tools/car_modern_dashboard.jpg"></p>
+<figcaption>RStudio</figcaption></figure>
 </div>
-</div>
+</div></div>
 </section><section id="the-rstudio-interface" class="slide level2"><h2>The <strong>RStudio</strong> interface</h2>
 <p>The <strong>RStudio</strong> interface consists of four main panes (which can be customised to some degree):</p>
 <p><img data-src="../pics/tools/console_etc.png" style="width:70.0%"></p>
-<p><strong>The R Console Pane</strong></p>
+</section><section id="the-r-console-pane" class="slide level2 scrollable"><h2>The R Console Pane</h2>
 <p>The R Console, by default the left or lower-left pane in R Studio, is the home of the R <q>engine</q>. This is where the commands are actually run and non-graphic outputs and error/warning messages appear. The <strong>Console</strong> is the direct interface to the <code>R</code> software itself; it’s what we get if instead of <code>RStudio</code> we open the <code>R</code> software: a direct interface to the <code>R</code> programming language, where we can type commands and <strong>where results/messages are printed</strong>.</p>
 <p>You can directly enter and run commands in the R Console, but realize that these commands are not saved as they are when running commands from a script. For this reason, we should not use the <strong>Console</strong> pane directly too much, ad reserve it only for quick and dirty calculations and checks. For typing commands that we want <code>R</code> to execute, we should instead use an <code>R</code> script file, where everything we type can be saved for later and complex analyses can be built up.</p>
-<p><strong>The Source Pane</strong></p>
+</section><section id="the-source-pane" class="slide level2"><h2>The Source Pane</h2>
 <p>This pane, by default in the upper-left, is a space to work with scripts and other text files. This pane is also where datasets (data frames) open up for viewing.</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -624,7 +651,7 @@ p.course-button a:hover {
 </div>
 </div>
 </div>
-<p><strong>The Environment Pane</strong></p>
+</section><section id="the-environment-pane" class="slide level2"><h2>The Environment Pane</h2>
 <p>This pane, by default in the upper-right, is most often used to see brief summaries of <q>objects</q> that are available in an active session. Datasets loaded for analysis would appear here.</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -663,46 +690,87 @@ p.course-button a:hover {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="../pics/tools/glob_opts1.png"></p>
 </div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li class="fragment">The default setting after installing RStudio is to save your workspace as <code>.RData</code> on exit and to restore saved <code>.RData</code> at startup</li>
+<li class="fragment">
+<strong>Un-tick</strong> the option to restore and set saving to <q>Never</q>, as shown in the picture. It’s always safer to start each RStudio session in a clean state, without anything automatically pre-loaded from a previous session. That could lead to serious and hard to trace complications.</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="general-settings-1" class="slide level2"><h2>General settings</h2>
+<p>You can personalise the look and feel of your RStudio setup in various ways using <em>Tools</em> &gt; <em>Global Options</em> from the top menu, but setting some options as default from the very start is highly recommended. You can see these in the pictures below:</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" width="40%" data-layout-ncol="2">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="../pics/tools/glob_opts2.png"></p>
 </div>
-</div>
-</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
-<li class="fragment">The most important setting in the picture on the left is the one to restore .RData at startup and saving the workspace as .RData on exit. Make sure these are un-ticked and set to <q>Never</q>, respectively, as shown in the picture. It’s always safer to start each RStudio session in a clean state, without anything automatically pre-loaded from a previous session. That could lead to serious and hard to trace complications.</li>
-<li class="fragment">In the picture on the right, you have the option to select that the new native pipe operator (|&gt;) (we’ll talk about it later!) be inserted using the <code>Ctrl</code>+<code>Shift</code>+<code>M</code> keyboard shortcut instead of the older version of the pipe (%&gt;%).</li>
+<li class="fragment">You have the option to select that the new native pipe operator (|&gt;) (we’ll talk about it later!) be inserted using the <code>Ctrl</code>+<code>Shift</code>+<code>M</code> keyboard shortcut instead of the older version of the pipe (%&gt;%).</li>
+<li class="fragment">These settings will make more sense later, but it’s a good idea to have them sorted at the very beginning.</li>
 </ul>
-<p>These settings will make more sense later, but it’s a good idea to have them sorted at the very beginning.</p>
-</section><section id="scripts-markdown-documents-and-projects" class="slide level2"><h2>Scripts, markdown documents and projects</h2>
-<p>Writing brief commands that you want to test out in the Console is okay, but what you really want is to save your commands as part of a workflow in a dedicated file that you can reuse, extend and share with others.</p>
-<p>In every quantitative analysis, we need to ensure that each step in our analysis is traceable and reproducible. This is increasingly a professional standard expected of all data analysts in the social sciences. This means that we need to have an efficient way in which to share our <em>analysis code</em>, as well as our <strong>outputs</strong> and <strong>interpretations</strong> of our findings. <code>RStudio</code> has an efficient way of handling this requirement with the use of R <em>script</em> files and versions of the <em>Markdown</em> markup language that allow the efficient combining of plain text (as in the main body of an article) with analysis code and outputs produced in <code>R</code>. The table below lists the main characteristics of these file types:</p>
+</div>
+</div>
+</div>
+</section><section id="r-scripts-and-r-markdown" class="slide level2"><h2>R scripts and R markdown</h2>
+<ul>
+<li class="fragment"><p>Writing brief commands that you want to test out in the Console is okay, but what you really want is to save your commands as part of a workflow in a dedicated file that you can reuse, extend and share with others.</p></li>
+<li class="fragment"><p>In every quantitative analysis, we need to ensure that each step in our analysis is traceable and reproducible. This is increasingly a professional standard expected of all data analysts in the social sciences.</p></li>
+<li class="fragment"><p>This means that we need to have an efficient way in which to share our <em>analysis code</em>, as well as our <strong>outputs</strong> and <strong>interpretations</strong> of our findings.</p></li>
+<li class="fragment"><p><code>RStudio</code> has an efficient way of handling this requirement with the use of R <em>script</em> files and versions of the <em>Markdown</em> markup language that allow the efficient combining of plain text (as in the main body of an article) with analysis code and outputs produced in <code>R</code>.</p></li>
+</ul></section><section id="r-scripts-and-r-markdown-1" class="slide level2"><h2>R scripts and R markdown</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 8%">
+<col style="width: 74%">
+</colgroup>
+<thead><tr class="header">
+<th>Format</th>
+<th>Extension</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td>R Script</td>
+<td><strong>.R</strong></td>
+<td>Use an <em>R script</em> if you want to document a large amount of code used for a particular analysis project. Scripts should contain working R commands and human-readable comments explaining the code. Commands can be run line-by-line, or the whole R script can be run at once. For example, one can write an R script containing a few hundred or thousands of lines of code that gathers and prepares raw, unruly data for analysis; if this script can run without any errors, then it can be saved and sourced from within another script that contains code that undertakes the analysis using the cleansed dataset. Comments can be added by appending them with a hashtag (#).</td>
+</tr></tbody>
+</table></section><section id="r-scripts-and-r-markdown-2" class="slide level2"><h2>R scripts and R markdown</h2>
 <table class="caption-top">
 <thead><tr class="header">
 <th>Format</th>
 <th>Extension</th>
 <th>Description</th>
 </tr></thead>
-<tbody>
-<tr class="odd">
-<td>R Script</td>
-<td><strong>.R</strong></td>
-<td>Use an <em>R script</em> if you want to document a large amount of code used for a particular analysis project. Scripts should contain working R commands and human-readable comments explaining the code. Commands can be run line-by-line, or the whole R script can be run at once. For example, one can write an R script containing a few hundred or thousands of lines of code that gathers and prepares raw, unruly data for analysis; if this script can run without any errors, then it can be saved and sourced from within another script that contains code that undertakes the analysis using the cleansed dataset. Comments can be added by appending them with a hashtag (#).</td>
-</tr>
-<tr class="even">
+<tbody><tr class="odd">
 <td><a href="https://rmarkdown.rstudio.com/">R Markdown</a></td>
 <td><strong>.Rmd</strong></td>
 <td>
 <a href="https://www.markdownguide.org/">Markdown</a> is a simple markup language that allows the formatting of plain text documents. <a href="https://rmarkdown.rstudio.com/">R Markdown</a> is a version of this language written by the <strong>R Studio</strong> team, which also allows for <code>R</code> code to be included. Plain text documents having the <strong>.Rmd</strong> extension and containing <strong>R Markdown</strong>-specific code can be <q>knitted</q> (exported) directly into published output document formats such as HTML, PDF or Microsoft Word, which contain both normal text as well as tables and charts produced with the embedded <code>R</code> code. The code itself can also be printed to the output documents.</td>
-</tr>
-<tr class="odd">
+</tr></tbody>
+</table></section><section id="r-scripts-and-r-markdown-3" class="slide level2"><h2>R scripts and R markdown</h2>
+<table class="caption-top">
+<thead><tr class="header">
+<th>Format</th>
+<th>Extension</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="odd">
 <td><a href="https://quarto.org/">Quarto document</a></td>
 <td><strong>.qmd</strong></td>
 <td>Quarto is a newer version of <strong>R Markdown</strong> which allows better compatibility with other programming languages. It is a broader ecosystem design for academic publishing and communication (for example, the course website was built using quarto), but you will be using only Quarto documents in this module. There isn’t much difference between <strong>.Rmd</strong> and <strong>.qmd</strong> documents for their uses-cases on this module, so one could easily change and <strong>.Rmd</strong> extension to <strong>.qmd</strong> and still produce the same output. <strong>.qmd</strong> documents are <q>rendered</q> instead of <q>knitted</q>, but for RStudio users the underlying engine doing the conversion from Quarto/R Markdown to standard Markdown to output file (HTML, PDF, Word, etc.) is the same. Read more about Quarto document in the <a href="https://tellingstorieswithdata.com/22-rmarkdown.html"><strong>TSD</strong> textbook</a>.</td>
-</tr>
-</tbody>
-</table>
-<p>Creating new files can be done easily via the options <em>File &gt; New File &gt;</em> from the top RStudio menu.</p>
-<p>The best way to use these files are as part of <strong>R project</strong> folders, which allow for cross-references to documents and datasets to be made relative to the path of the project folder root. This makes sure that no absolute paths to files (i.e.&nbsp;things like <q>C:/Documents/Chris/my_article/data_files/my_dataset.rds</q>) need to be used (instead, you would write something like <q>~/data_files/my_dataset.rds</q> if the <q>my_article</q> folder was set up as an R Project). This allows for the same code file to be run on another computer too without an error, ensuring a minimal expected level of reproducibility in your workflow.</p>
+</tr></tbody>
+</table></section><section id="files-and-projects" class="slide level2"><h2>Files and projects</h2>
+<ul>
+<li class="fragment"><p><em>File &gt; New File &gt;</em> from the top RStudio menu.</p></li>
+<li class="fragment"><p>The best way to use these files are as part of <strong>R project</strong> folders, which allow for cross-references to documents and datasets to be made relative to the path of the project folder root. This makes sure that no absolute paths to files (i.e.&nbsp;things like <q>C:/Documents/Chris/my_article/data_files/my_dataset.rds</q>) need to be used (instead, you would write something like <q>~/data_files/my_dataset.rds</q> if the <q>my_article</q> folder was set up as an R Project).</p></li>
+<li class="fragment"><p>This allows for the same code file to be run on another computer too without an error, ensuring a minimal expected level of reproducibility in your workflow.</p></li>
+</ul>
 <p>Setting up an existing or a new folder as an R Project involves having a file with the extension <strong>.RProj</strong> saved in it. This can be done easily via the options <em>File &gt; New Project</em> from the top RStudio menu.</p>
 <p><img data-src="../pics/tools/new_files.png"></p>
 </section><section id="r-data-types-and-structures" class="slide level2"><h2>
@@ -752,7 +820,8 @@ p.course-button a:hover {
 
 </div></div>
 <p>The new object has appeared in the Environment under a new section called Data. We can click on it and the dataset will open up in the Source pane. What do you think this dataset is about?</p>
-<p>You can select each column/variable from the data frame use the <code>$</code>, turning it into a vector:</p>
+</section><section id="data-frames-1" class="slide level2"><h2>Data frames</h2>
+<p>You can select each column/variable from the data frame using the <code>$</code>, turning it into a vector:</p>
 <div class="cell columns column-output-location">
 <div class="column">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>mtcars<span class="sc">$</span>wt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -820,17 +889,19 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">names</span>(<span class="fu">which</span>(<span class="fu">installed.packages</span>()[ ,<span class="st">"Priority"</span>] <span class="sc">==</span> <span class="st">"recommended"</span>, ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "lattice"    "MASS"       "Matrix"     "mgcv"       "nlme"      
- [6] "boot"       "class"      "cluster"    "codetools"  "foreign"   
-[11] "KernSmooth" "lattice"    "MASS"       "Matrix"     "mgcv"      
-[16] "nlme"       "nnet"       "rpart"      "spatial"    "survival"  </code></pre>
+<pre><code> [1] "class"      "cluster"    "foreign"    "KernSmooth" "lattice"   
+ [6] "MASS"       "Matrix"     "mgcv"       "nlme"       "nnet"      
+[11] "rpart"      "spatial"    "survival"   "boot"       "class"     
+[16] "cluster"    "codetools"  "foreign"    "KernSmooth" "lattice"   
+[21] "MASS"       "Matrix"     "mgcv"       "nlme"       "nnet"      
+[26] "rpart"      "spatial"    "survival"  </code></pre>
 </div>
 </div></div>
 <p>Apart from these <q>recommended</q> packages, there is a great - and ever increasing - number of user-written packages that satisfy various programming needs. Some packages contain functions that are particularly useful for social scientists. Sometimes a number of packages that contain complementary functionality and are designed to work well together are brought under one <em>meta-package</em>, which allows for all those packages to be installed and loaded at once. The most popular such meta-package is the <a href="https://tidyverse.tidyverse.org">tidyverse</a>, which includes such packages as <a href="https://dplyr.tidyverse.org">dplyr</a> (for data manipulation), <a href="https://readr.tidyverse.org">readr</a> (for reading in rectangular data like <code>.csv</code> files), <a href="https://tidyr.tidyverse.org">tidyr</a> (for cleaning datasets), <a href="https://stringr.tidyverse.org">stringr</a> (for working with <q>strings</q>, that is, textual data), <a href="https://forcats.tidyverse.org/">forcats</a> (for managing <q>factors</q>, that is, categorical variables) or <a href="https://ggplot2.tidyverse.org">ggplot2</a> (for data visualisation), among [several others](https://www.tidyverse.org/packages/.</p>
 <p>The <a href="https://tidyverse.tidyverse.org">tidyverse</a> packages have been developed around a coding philosophy that is very different from that of <q>base R</q>. It is sometimes referred to as a special <q>dialect</q> of the <code>R</code> language and has greatly contributed to popularising <code>R</code> and making it more easily available to practising social scientists who do not have a programming background, by designing code whose <q>grammar</q> is somewhat closer to that of <q>human</q> languages such as English. This is generally thought to lower the entry barriers to <code>R</code> for new users, although <a href="https://github.com/matloff/TidyverseSkeptic">there isn’t a clear consensus on that</a>.</p>
 <p>Another recently developed meta-package, which was specifically designed with non-programmer social scientists in mind, is the <a href="https://easystats.github.io/easystats/">easystats</a> bundle. We will be relying on <a href="https://easystats.github.io/easystats/">easystats</a> packages quite a lot in this module, as they provide a very coherent set of functions that improve on the <a href="https://tidyverse.tidyverse.org">tidyverse</a>.</p>
-<p>Both of these meta-packages and thousands of other packages are available from the <em>Comprehensive R Archive Network</em> (CRAN). Many more packages are distributed as repositories on code-sharing platforms such as <em><a href="https://github.com/">GitHub</a></em> or <em><a href="https://r-universe.dev/search/">R Universe</a></em>.</p>
-<p>Packages made available on CRAN can be installed using the command <code>install.packages("packagename")</code>. Once the package/library is installed (i.e.&nbsp;it is sitting somewhere on your computer), we can then <em>load</em> functions from that package using the <code>::</code> operator (e.g.&nbsp;<code>package::function()</code>), or we can make all the functions from a package available by <em>attaching</em> that package with the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function (e.g.&nbsp;<code><a href="https://rdrr.io/r/base/library.html">library(package)</a></code>).</p>
+<p>Both of these meta-packages and thousands of other packages are available from the <em>Comprehensive R Archive Network</em> (CRAN). Many more packages are distributed as repositories on code-sharing platforms such as <a href="https://github.com/"><em>GitHub</em></a> or <a href="https://r-universe.dev/search/"><em>R Universe</em></a>.</p>
+<p>Packages made available on CRAN can be installed using the command <code>install.packages("packagename")</code>. Once the package/library is installed (i.e.&nbsp;it is sitting somewhere on your computer), we can then <em>load</em> functions from that package using the <code>::</code> operator (e.g. <code>package::function()</code>), or we can make all the functions from a package available by <em>attaching</em> that package with the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function (e.g.&nbsp;<code><a href="https://rdrr.io/r/base/library.html">library(package)</a></code>).</p>
 <p>So using a package/library is a two-stage process. We:</p>
 <ol type="1">
 <li class="fragment">
@@ -872,7 +943,10 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 </div></div>
 <p>Now we can use functions from that package without having to explicitly state the name of the package. We can still state the name explicitly, and that may be useful for readers of our code to understand what package a function come from. Also, it may happen that different packages have similarly named functions, and if all those packages are attached, then the functions from a package attached later will override that in the package attached earlier. <code>R</code> will note in a comment whether any functions from a package are <strong>masked</strong> by another, so it’s worth paying attention to the comments and warnings printed by <code>R</code> when we attach packages.</p>
 </section><section id="installing-and-attaching-packages" class="slide level2"><h2>Installing and attaching packages</h2>
-<p>Both <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> and <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> are <em>base R</em> functions, but there are several other user-written packages that provide additional functionality to make it easier and more efficient to install, attach and manage packages. For example, the <code>pacman</code> package contains a function <code>p_load()</code> that allows us to attach several packages at once and install them from CRAN on the fly if they are not yet installed. The sister function <code>p_load_gh()</code> does the same for packages not published on CRAN but stored on personal repositories on GitHub. The <a href="https://github.com/DesiQuintans/librarian">librarian</a> package does the same with the <code>shelf()</code> function, which installs missing packages from CRAN as well as GitHub.</p>
+<ul>
+<li class="fragment">Both <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> and <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> are <em>base R</em> functions, but there are several other user-written packages that provide additional functionality to make it easier and more efficient to install, attach and manage packages.</li>
+<li class="fragment">For example, the <code>pacman</code> package contains a function <code>p_load()</code> that allows us to attach several packages at once and install them from CRAN on the fly if they are not yet installed. The sister function <code>p_load_gh()</code> does the same for packages not published on CRAN but stored on personal repositories on GitHub.</li>
+</ul></section><section id="installing-and-attaching-packages-1" class="slide level2"><h2>Installing and attaching packages</h2>
 <p>For example, we can download and attach a number of packages in one go with the command below:</p>
 <div class="cell columns column-output-location">
 <div class="column">
@@ -892,6 +966,7 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 </div><div class="column fragment">
 
 </div></div>
+</section><section id="installing-and-attaching-packages-2" class="slide level2"><h2>Installing and attaching packages</h2>
 <p>These are some useful packages that we will be using in this module. You can read more about the (meta)packages we have just installed here:</p>
 <ul>
 <li class="fragment"><a href="https://www.tidyverse.org/"><code>tidyverse</code></a></li>
@@ -899,9 +974,7 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 <li class="fragment"><a href="https://strengejacke.github.io/sjlabelled/articles/labelleddata.html"><code>sjlabelled</code></a></li>
 <li class="fragment"><a href="https://www.danieldsjoberg.com/gtsummary/index.html"><code>gtsummary</code></a></li>
 <li class="fragment"><a href="https://www.mosaic-web.org/ggformula/index.html"><code>ggformula</code></a></li>
-</ul></section><section id="about-the-tidyverse" class="slide level2"><h2>About the <code>Tidyverse</code>
-</h2>
-</section><section id="data-frames-and-tibbles" class="slide level2"><h2>Data frames and <q>tibbles</q>
+</ul></section><section id="data-frames-and-tibbles" class="slide level2"><h2>Data frames and <q>tibbles</q>
 </h2>
 <p>The <code>Tidyverse</code> is built around the basic concept that data in a table should have one observation per row, one variable per column, and only one value per cell. Once data is in this <q>tidy</q> format, it can be transformed, visualized and modelled for an analysis.</p>
 <p>When using functions in the <code>Tidyverse</code> ecosystem, most data is returned as a <code>tibble</code> object. <code>Tibbles</code> are very similar to the <code>data.frames</code> (which are the basic types of object storing datasets in base <strong><em>R</em></strong>) and it is perfectly fine to use <code>Tidyverse</code> functions on a <code>data.frame</code> object. Just be aware that in most cases, the <code>Tidyverse</code> function will transform your data into a <code>tibble.</code> If you are unobservant, you won’t even notice a difference. However, there are a few differences between the two data types, most of which are just designed to make your life easier. For more info, check <strong>R4DS</strong>.</p>
@@ -926,7 +999,7 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 <code>ungroup()</code> remove grouping information from data frame.</li>
 <li class="fragment">
 <code>distinct()</code> remove duplicate rows.</li>
-</ul>
+</ul></section><section id="selected-dplyr-functions-1" class="slide level2"><h2>Selected <code>dplyr</code> functions</h2>
 <p>All these functions work similarly as follows:</p>
 <ul>
 <li class="fragment">The first argument is a data frame/tibble</li>
@@ -934,7 +1007,9 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 <li class="fragment">The result is a new data frame</li>
 </ul>
 <p>For more info, check <a href="https://datacarpentry.org/r-socialsci/03-dplyr-tidyr/index.html">R for Social Scientists</a></p>
+</section><section id="selected-dplyr-functions-2" class="slide level2"><h2>Selected <code>dplyr</code> functions</h2>
 <p>Most of the <a href="https://dplyr.tidyverse.org">dplyr</a> verbs perform tasks that can also be done in <em>base R</em>, but they provide more convenience. The table below lists a rough equivalence between <code>dplyr</code> and <em>base R</em> functionality:</p>
+<div class="small">
 <table class="caption-top">
 <colgroup>
 <col style="width: 38%">
@@ -1005,7 +1080,9 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 </tr>
 </tbody>
 </table>
-<p>The above functions allow us to manage single data-frames. A set of other functions (sometimes called <q>two-table verbs</q>) make it possible to combine columns, rows, or both, from two or more data-frames. In <em>base-R</em>, much of this can be achieved with the <code><a href="https://rdrr.io/r/base/merge.html">merge()</a></code> function, while in <code>dplyr</code> the <code>join()</code> function makes this possible, extending some further functionality that is not easily available in <em>base-R</em>. The table below lists these <code>dplyr</code> functions and their <em>base-R</em> equivalents:</p>
+</div>
+</section><section id="selected-dplyr-functions-3" class="slide level2"><h2>Selected <code>dplyr</code> functions</h2>
+<p>The previous functions allow us to manage single data-frames. A set of other functions (sometimes called <q>two-table verbs</q>) make it possible to combine columns, rows, or both, from two or more data-frames. In <em>base-R</em>, much of this can be achieved with the <code><a href="https://rdrr.io/r/base/merge.html">merge()</a></code> function, while in <code>dplyr</code> the <code>join()</code> function makes this possible, extending some further functionality that is not easily available in <em>base-R</em>. The table below lists these <code>dplyr</code> functions and their <em>base-R</em> equivalents:</p>
 <table class="caption-top">
 <thead><tr class="header">
 <th>dplyr</th>
@@ -1037,34 +1114,40 @@ Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2</code></pre>
 <td><code>df1[!df1$x %in% df2$x, , drop = FALSE]</code></td>
 </tr>
 </tbody>
-</table></section><section id="the-forward-pipe-workflow" class="slide level2 scrollable"><h2>The forward-pipe (<code>%&gt;%</code>/<code>|&gt;</code>) workflow</h2>
-<p>All of the <code>dplyr</code> functions take a data frame or tibble as the first argument. Rather than forcing the user to either save intermediate objects or nest functions, <code>dplyr</code> provides the forward-pipe operator <code>%&gt;%</code> from the <code>magrittr</code> package. This operator allows us to combine multiple operations into a single sequential chain of actions. As of <code>R 4.1.0</code> there is also a <a href="https://www.r-bloggers.com/2021/05/the-new-r-pipe/">native pipe operator</a> in <strong><em>R</em></strong> (|&gt;), and in RStudio one can set the shortcut to paste the new pipe operator instead (as we have done at the beginning of the lab). Going forward, we’ll use this version of the pipe operator for simplicity, but it’s likely that you will encounter the older version of the operator too in various scripts.</p>
-<p>Let’s start with a hypothetical example. Say you would like to perform a sequence of operations on data frame <code>x</code> using hypothetical functions <code>f()</code>, <code>g()</code>, and <code>h()</code>:</p>
+</table></section><section id="the-forward-pipe-workflow" class="slide level2"><h2>The forward-pipe (<code>%&gt;%</code>/<code>|&gt;</code>) workflow</h2>
+<p>All of the <code>dplyr</code> functions take a data frame or tibble as the first argument. Rather than forcing the user to either save intermediate objects or nest functions, <code>dplyr</code> provides the forward-pipe operator <code>%&gt;%</code> from the <code>magrittr</code> package. This operator allows us to combine multiple operations into a single sequential chain of actions. As of <code>R 4.1.0</code> there is also a <a href="https://www.r-bloggers.com/2021/05/the-new-r-pipe/">native pipe operator</a> in <strong><em>R</em></strong> (|&gt;), and in RStudio one can set the shortcut to paste the new pipe operator instead (as we have done at the beginning of the lab). Going forward, we’ll use this version of the pipe operator for simplicity, but it’s likely that you will encounter the older version of the operator too in various scripts. <br><br> Let’s start with a hypothetical example. Say you would like to perform a sequence of operations on data frame <code>x</code> using hypothetical functions <code>f()</code>, <code>g()</code>, and <code>h()</code>:</p>
 <ol type="1">
-<li class="fragment">Take x <em>then</em>
+<li class="fragment">Take x, <br><em>then</em>
 </li>
-<li class="fragment">Use x as an input to a function f() <em>then</em>
+<li class="fragment">Use x as an input to a function f(), <em>then</em>
 </li>
-<li class="fragment">Use the output of f(x) as an input to a function g() <em>then</em>
+<li class="fragment">Use the output of f(x) as an input to a function g(), <em>then</em>
 </li>
 <li class="fragment">Use the output of g(f(x)) as an input to a function h()</li>
-</ol>
+</ol></section><section id="the-forward-pipe-workflow-1" class="slide level2"><h2>The forward-pipe (<code>%&gt;%</code>/<code>|&gt;</code>) workflow</h2>
 <p>One way to achieve this sequence of operations is by using nesting parentheses as follows:</p>
-<pre><code>h(g(f(x)))</code></pre>
-<p>This code isn’t so hard to read since we are applying only three functions: <code>f()</code>, then <code>g()</code>, then <code>h()</code> and each of the functions is short in its name. Further, each of these functions also only has one argument. However, you can imagine that this will get progressively harder to read as the number of functions applied in your sequence increases and the arguments in each function increase as well. This is where the pipe operator <code>|&gt;</code> comes in handy. <code>|&gt;</code> takes the output of one function and then <q>pipes</q> it to be the input of the next function. Furthermore, a helpful trick is to read <code>|&gt;</code> as <q>then</q> or <q>and then.</q> For example, you can obtain the same output as the hypothetical sequence of functions as follows:</p>
+<p><code>h(g(f(x)))</code></p>
+<div class="fragment">
+<p>This code isn’t so hard to read since we are applying only three functions: <code>f()</code>, then <code>g()</code>, then <code>h()</code> and each of the functions is short in its name.</p>
+</div>
+<div class="fragment">
+<p>Further, each of these functions only has one argument. However, you can imagine that this will get progressively harder to read as the number of functions applied in your sequence increases and the arguments in each function increase as well.</p>
+</div>
+</section><section id="the-forward-pipe-workflow-2" class="slide level2"><h2>The forward-pipe (<code>%&gt;%</code>/<code>|&gt;</code>) workflow</h2>
+<p>This is where the pipe operator <code>|&gt;</code> comes in handy. <code>|&gt;</code> takes the output of one function and then <q>pipes</q> it to be the input of the next function. Furthermore, a helpful trick is to read <code>|&gt;</code> as <q>then</q> or <q>and then.</q> For example, you can obtain the same output as the hypothetical sequence of functions as follows:</p>
 <pre><code>x |&gt; 
   f() |&gt; 
   g() |&gt; 
   h()</code></pre>
 <p>You would read this sequence as:</p>
 <ol type="1">
-<li class="fragment">Take x <em>then</em>
+<li class="fragment">Take x, <em>then</em>
 </li>
-<li class="fragment">Use this output as the input to the next function f() <em>then</em>
+<li class="fragment">Use this output as the input to the next function f(), <em>then</em>
 </li>
-<li class="fragment">Use this output as the input to the next function g() <em>then</em>
+<li class="fragment">Use this output as the input to the next function g(), <em>then</em>
 </li>
-<li class="fragment">Use this output as the input to the next function h()</li>
+<li class="fragment">Use this output as the input to the next function h(),</li>
 </ol>
 <p>So while both approaches achieve the same goal, the latter is much more human-readable because you can clearly read the sequence of operations line-by-line. Instead of typing out the three strange characters of the operator, one can use the keyboard shortcut <em>Ctrl + Shift + M</em> (Windows) or <em>Cmd + Shift + M</em> (MacOS) to paste the operator.</p>
 

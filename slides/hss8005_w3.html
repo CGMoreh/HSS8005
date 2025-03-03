@@ -31,7 +31,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    q { quotes: "“" "”" "‘" "’"; }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="../html/nobiblio.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -535,12 +555,48 @@ p.course-button a:hover {
   <p class="week-subtitle">Logistic regression and other generalised linear models</p>
 </section>
 -->
-<section class="slide level2">
-
+<section id="description" class="slide level2">
+<h2>Description</h2>
+<div class="small">
+<p>It wasn’t until the last quarter of the 20th century that a unified vision of statistical modelling emerged, allowing practitioners to see how the <em>general</em> linear model we have explored so far is only a specific case of a <em>more general</em> class of models. We could have had a fancy, memorable name for this class of models - as John Nelder, one of its inventors, acknowledged later in life <span class="citation" data-cites="senn2003">(<a href="#/readings" role="doc-biblioref" onclick="">Senn 2003:127</a>)</span> - but back then academics were not required to undertake marketing training on the tweetabilty-factor of the chosen names for their theories; so we ended up with <q><em>generalised</em> linear models</q>. These models can be applied to explananda (<q>explained</q>, <q>response</q>, <q>outcome</q>, <q>dependent</q> etc. variables, our <code>y</code>s) whose possible values have certain constraints (such as being limited by a lower bound or constrained to discreet choices) that makes the parameters of the Gaussian (<q>normal</q>) distribution inefficient in describing them. Instead, they follow some of the other <q>exponential distributions</q> (and not only the exponential: cf. <span class="citation" data-cites="GelmanEtAl2020RegressionOtherStories">Gelman, Hill, and Vehtari (<a href="#/readings" role="doc-biblioref" onclick="">2020:264</a>)</span>), of which the Poisson, gamma, beta, binomial and multinomial are probably the most common in human and social sciences research. Their <q>generalised linear modelling</q> involves mapping them unto a linear model using a so-called <q>link function</q>. We will explore what all of this means in practice and how it can be applied to data that we are interested in most in our respective fields of study.</p>
+</div>
+</section>
+<section id="readings" class="slide level2 smaller scrollable">
+<h2>Readings</h2>
+<p><strong>Statistics</strong></p>
+<div class="small-list">
+<ul>
+<li><a href="https://avehtari.github.io/ROS-Examples">ROS</a>: Chapters 13-15</li>
+<li>Connelly, Roxanne, Vernon Gayle, and Paul S. Lambert. 2016. <q>Statistical Modelling of Key Variables in Social Survey Data Analysis</q>. <em>Methodological Innovations</em> 9:205979911663800. <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_doaj_primary_oai_doaj_org_article_029bcc6c56f646088461ca38c89b7bfc">Library access</a></li>
+</ul>
+</div>
+<p><strong>Coding</strong></p>
+<div class="small-list">
+<ul>
+<li><a href="https://rohanalexander.github.io/telling_stories-published/">TSD</a>: Chapter 13</li>
+</ul>
+</div>
+<p><strong>Application</strong></p>
+<div class="small-list">
+<ol type="1">
+<li>Wu, Cary. 2021. <q>Education and Social Trust in Global Perspective</q>. <em>Sociological Perspectives</em> 64(6):1166–86. Available here: <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_proquest_journals_2597748144Links">Library access</a></li>
+<li>Dingemans, Ellen, and Erik Van Ingen. 2015. <q>Does Religion Breed Trust? A Cross-National Study of the Effects of Religious Involvement, Religious Faith, and Religious Context on Social Trust</q>. <em>Journal for the Scientific Study of Religion</em> 54(4):739–55. <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_proquest_journals_1783257402Links">Library access</a></li>
+<li>Elgar, Frank J., Anna Stefaniak, and Michael J. A. Wohl. 2020. <q>The Trouble with Trust: Time-Series Analysis of Social Capital, Income Inequality, and COVID-19 Deaths in 84 Countries.</q> Social Science &amp; Medicine 263: 113365.</li>
+<li>Weiss, Alexa, Corinna Michels, Pascal Burgmer, Thomas Mussweiler, Axel Ockenfels, and Wilhelm Hofmann. 2021. <q>Trust in Everyday Life</q>. Journal of Personality and Social Psychology 121:95–114. doi: 10.1037/pspi0000334 (<a href="https://osf.io/vz2cw">access preprint version here</a>) <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_proquest_miscellaneous_2436396810">Library access</a></li>
+</ol>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-GelmanEtAl2020RegressionOtherStories" class="csl-entry" role="listitem">
+Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. <em><span>Regression and other stories</span></em>. <span>Cambridge</span>: <span>Cambridge University Press</span>.
+</div>
+<div id="ref-senn2003" class="csl-entry" role="listitem">
+Senn, Stephen. 2003. <span>“A Conversation with John Nelder.”</span> <em>Statistical Science</em> 18(1):118–31. doi: <a href="https://doi.org/10.1214/ss/1056397489">10.1214/ss/1056397489</a>.
 </div>
 </div>
 </section>
@@ -577,7 +633,7 @@ p.course-button a:hover {
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: true,

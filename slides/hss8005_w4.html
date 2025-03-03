@@ -33,6 +33,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    q { quotes: "“" "”" "‘" "’"; }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { line-height: 1.25; }
@@ -713,7 +714,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"code":"## To start with\n\nnumbers = 1:42\n\n## Built-in arithmetic functions\nlength(numbers) == 42\nmean(numbers)   == sum(numbers)/length(numbers) \nvar(numbers)    == sum( (numbers - mean(numbers))^2 / (length(numbers)-1) )\nsd(numbers)     == sqrt(var(numbers))\nsqrt(numbers)   == numbers^(1/2)\nexp(1)          == sum(1/factorial(0:100))\nexp(1)          == 2.718282  # FALSE\nidentical(exp(1), 2.718282)  # FALSE\nall.equal(exp(1), 2.718282)  # \"Mean relative difference: 6.310639e-08\"\nall.equal(exp(1), 2.7182818) # TRUE\nround(exp(1), 6)== 2.718282  # TRUE\nexp(numbers)    == exp(1)^numbers\nall.equal(exp(numbers), exp(1)^numbers)\nall.equal(exp(numbers), sum(1/factorial(0:100))^numbers)","id":1,"options":{"fig-cap":"","autorun":"false","fig-height":5,"out-width":"700px","label":"unnamed-chunk-1","read-only":"false","message":"true","editor-max-height":"","context":"interactive","results":"markup","classes":"","out-height":"","dpi":72,"fig-width":7,"warning":"true","output":"true","editor-font-scale":"0.5","editor-word-wrap":"true","editor-quick-suggestions":"false","comment":""}}];
+  globalThis.qwebrCellDetails = [{"code":"## To start with\n\nnumbers = 1:42\n\n## Built-in arithmetic functions\nlength(numbers) == 42\nmean(numbers)   == sum(numbers)/length(numbers) \nvar(numbers)    == sum( (numbers - mean(numbers))^2 / (length(numbers)-1) )\nsd(numbers)     == sqrt(var(numbers))\nsqrt(numbers)   == numbers^(1/2)\nexp(1)          == sum(1/factorial(0:100))\nexp(1)          == 2.718282  # FALSE\nidentical(exp(1), 2.718282)  # FALSE\nall.equal(exp(1), 2.718282)  # \"Mean relative difference: 6.310639e-08\"\nall.equal(exp(1), 2.7182818) # TRUE\nround(exp(1), 6)== 2.718282  # TRUE\nexp(numbers)    == exp(1)^numbers\nall.equal(exp(numbers), exp(1)^numbers)\nall.equal(exp(numbers), sum(1/factorial(0:100))^numbers)","options":{"output":"true","results":"markup","message":"true","editor-font-scale":"0.5","comment":"","classes":"","warning":"true","editor-quick-suggestions":"false","read-only":"false","fig-width":7,"context":"interactive","out-width":"700px","autorun":"false","out-height":"","fig-cap":"","label":"unnamed-chunk-1","dpi":72,"editor-max-height":"","fig-height":5,"editor-word-wrap":"true"},"id":1}];
 
   </script><script type="module">
   // Declare startupMessageQWebR globally
@@ -2396,7 +2397,46 @@ p.course-button a:hover {
   <p class="week-title">Interactions</p>
   <p class="week-subtitle">Estimating, plotting and interpreting interaction effects</p>
 </section>
---><section id="some-equivalent-arithmetic-functions" class="slide level2"><h2>Some equivalent arithmetic functions</h2>
+--><section id="description" class="slide level2"><h2>Description</h2>
+<div class="small">
+<p>This week we will return to some of the models we fit over the past two weeks and turn our attention to the right-hand side of the regression equations. We will explore <em>interaction</em> effects, which allow for the association between a predictor and an outcome to depend upon the value of another predictor. Understanding interaction effects - and the concept of <em>conditioning</em> more broadly - can help avoid serious misrepresentations and misunderstandings of our data. Some famous statistical <q>paradoxes</q> can highlight these dangers, and the lecture will build on these conceptual examples before moving on to questions of model-building. It is technically very simple to fit models with complex interactions, however, their interpretation can be very difficult. As with the logistic regression model we covered in Week 3, we will explore ways to present and visualise results from interaction models, which make their interpretation easier. Exploring <em>interactions</em> also allows us to begin thinking about causality and causal modelling, a topic that we will expand upon in Week 5.</p>
+</div>
+</section><section id="readings" class="slide level2 smaller"><h2>Readings</h2>
+<p><strong>Statistics</strong></p>
+<div class="small-list">
+<ul>
+<li>
+<strong><a href="https://avehtari.github.io/ROS-Examples">ROS</a></strong>: Chapters 10-12</li>
+</ul>
+</div>
+<p><strong>Advanced statistics readings</strong></p>
+<div class="small-list">
+<ul>
+<li>Brambor, T., W. R. Clark, and M. Golder. 2006. <q>Understanding Interaction Models: Improving Empirical Analyses.</q> <em>Political Analysis</em> 14(1): 63–82. <a href="https://doi.org/10.1093/pan/mpi014">https://doi.org/10.1093/pan/mpi014</a>
+</li>
+<li>Hainmueller, J., J. Mummolo, and Y. Q. Xu. 2019. <q>How Much Should We Trust Estimates from Multiplicative Interaction Models? Simple Tools to Improve Empirical Practice.</q> <em>Political Analysis</em> 27(2): 163–92 <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_openaire_primary_doi_dedup_a6b1df08b1255e7c2583c420c81bd042">Library access here</a>
+</li>
+<li>Rohrer, Julia M., and Ruben C. Arslan. 2021. <q>Precise Answers to Vague Questions: Issues With Interactions.</q> <em>Advances in Methods and Practices in Psychological Science</em> 4(2): 25152459211007368 <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_unpaywall_primary_10_1177_25152459211007368">Library access here</a>
+</li>
+</ul>
+</div>
+<p><strong>Coding</strong></p>
+<div class="small-list">
+<ul>
+<li>
+<strong><a href="https://rohanalexander.github.io/telling_stories-published/">TSD</a></strong>: Chapter 15</li>
+</ul>
+</div>
+<p><strong>Application</strong></p>
+<div class="small-list">
+<ul>
+<li>Akaeda, Naoki. 2023. <q>Trust and the Educational Gap in the Demand for Redistribution: Evidence from the World Values Survey and the European Value Study.</q> <em>International Sociology</em> 38(3): 290–310 <a href="https://libsearch.ncl.ac.uk/permalink/f/15e3e4n/TN_cdi_openaire_primary_doi_79eac40142aab41ece14cf7b0bcc42c3">Library access</a>
+</li>
+<li>Österman, Marcus. 2021. <q>Can We Trust Education for Fostering Trust? Quasi-Experimental Evidence on the Effect of Education and Tracking on Social Trust</q>. <em>Social Indicators Research</em> 154(1):211–33 - (<a href="https://link.springer.com/article/10.1007/s11205-020-02529-y">online</a>)</li>
+<li>Ladd, Jonathan McDonald, and Gabriel S. Lenz. 2009. <q>Exploiting a Rare Communication Shift to Document the Persuasive Power of the News Media</q>. <em>American Journal of Political Science</em> 53(2):394–410. <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1540-5907.2009.00377.x">doi: 10.1111/j.1540-5907.2009.00377.x.</a>(published version should be accessible with university login; additional <a href="https://cgmoreh.github.io/HSS8005-data/LaddLenz_appendix.pdf">Appendix available here</a>)</li>
+</ul>
+</div>
+</section><section id="some-equivalent-arithmetic-functions" class="slide level2"><h2>Some equivalent arithmetic functions</h2>
 <style>
   .fa-play:before {
     content: ";
@@ -2449,7 +2489,7 @@ p.course-button a:hover {
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: true,

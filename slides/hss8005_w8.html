@@ -31,6 +31,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    q { quotes: "“" "”" "‘" "’"; }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="../html/nobiblio.css">
@@ -535,8 +536,18 @@ p.course-button a:hover {
   <p class="week-subtitle">Simulation-based power analysis for study design</p>
 </section>
 -->
-<section class="slide level2">
-
+<section id="description" class="slide level2 smaller">
+<h2>Description</h2>
+<p>We’ll practice some basic methods of computer simulation in <em>R</em> for statistical inference and for generating data that has some idealised characteristics. Such methods play an increasingly important role in computational statistics and are extremely useful for designing robust data collection and analysis plans. Of course, this topic also raises some much deeper existential issues. We have <em>known</em> ever since science-fiction author Philip K. Dick’s memorable <q>Metz address</q> of 1977 that our world is nothing but a complex computer simulation. We won’t be actively searching for empirical proof of this in class, but should we make a mistake in our code and end up in an infinite loop, we may be tempted to ponder whether if something like this can happen to our data, who says it couldn’t happen to us? If it happens and you’re afraid that stopping the process may cause the known universe to implode, you can watch <a href="https://www.youtube.com/watch?v=DQbYiXyRZjM">Dick on YouTube</a> while you wait.</p>
+</section>
+<section id="readings" class="slide level2">
+<h2>Readings</h2>
+<div class="small-list">
+<ul>
+<li><strong><a href="https://avehtari.github.io/ROS-Examples">ROS</a></strong>: Chapters 5 (pp.&nbsp;69-76) and 16 (pp.&nbsp;291-310)</li>
+<li><strong><a href="https://rohanalexander.github.io/telling_stories-published/">TSD</a></strong>: <strong>TDS</strong> makes extensive use of <em>simulation</em> methods for various purposes at different stages of a research project (e.g.&nbsp;from data preparation through statistical inference to sharing results and data openly). A search on a keyword stub <q>simulat</q> can point you various sections of interest that are all worth reading.</li>
+</ul>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -577,7 +588,7 @@ p.course-button a:hover {
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: true,

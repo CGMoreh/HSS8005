@@ -31,6 +31,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    q { quotes: "“" "”" "‘" "’"; }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="../html/nobiblio.css">
@@ -535,8 +536,28 @@ p.course-button a:hover {
   <p class="week-subtitle">Panel, longitudinal and time-series analysis</p>
 </section>
 -->
-<section class="slide level2">
-
+<section id="description" class="slide level2 smaller">
+<h2>Description</h2>
+<p>We consider the <q>temporal</q> aspects of data and the opportunities (and challenges) they pose. The special kind of multilevel data structure we consider here involves repeated measurements on persons (or other units); measurements are therefore clustered within persons (or other units), and predictors can be available at the measurement or person level. Such datasets are often called <em>panel</em> or <em>longitudinal</em>. In settings where overall time trends are important, repeated measurement data are sometimes called <em>time-series cross-sectional</em>. <em>Time-series cross-sectional</em> data typically contain observations at regular time interval, and they commonly exhibit overall time patterns. In many such contexts one must consider how measurements cluster not only in the <q>temporal</q> variable but also in the <q>spatial</q> variable (e.g.&nbsp;country-year-level observations clustered within <em>countries</em> as well as <em>years</em>), with the potential for predictors at three levels (individual, temporal and spatial). We will consider such three (and higher)-level hierarchical analyses.</p>
+</section>
+<section id="readings" class="slide level2">
+<h2>Readings</h2>
+<p><strong>Textbook</strong></p>
+<div class="small-list">
+<ul>
+<li><strong><a href="https://libsearch.ncl.ac.uk/permalink/f/1jraif3/NCL_ALMA51207467300002411">ARM</a></strong>: Chapters 11 (pp.&nbsp;237-249) and 12 (pp.&nbsp;251-278)</li>
+</ul>
+</div>
+<p><strong>Application</strong></p>
+<div class="small-list">
+<ul>
+<li>Mitchell, Jeffrey. 2021. <q>Social Trust and Anti-immigrant Attitudes in Europe: A Longitudinal Multi-Level Analysis.</q> <em>Frontiers in Sociology</em> 6 (April): 604884 - (<a href="https://doi.org/10.3389/fsoc.2021.604884">online</a>)</li>
+<li>Kumove, Michael. 2024. <q>Take Five? Testing the Cultural and Experiential Theories of Generalised Trust Against Five Criteria.</q> Political Studies (<a href="https://doi.org/10.1177/00323217231224971">online</a>)</li>
+<li>Dawson, Chris. 2019. <q>How Persistent Is Generalised Trust?</q> Sociology 53(3): 590–99. (<a href="https://doi.org/10.1177/0038038517718991">online</a>)</li>
+<li>Botzen, Katrin. 2015. <q>Are Joiners Trusters? A Panel Analysis of Participation and Generalized Trust.</q> Zeitschrift für Soziologie 44(5): 314–29. (<a href="https://www.degruyter.com/document/doi/10.1515/zfsoz-2015-0502/html">online</a>)</li>
+<li>Sturgis, Patrick, Roger Patulny, Nick Allum, and Franz Buscha. 2012. Social Connectedness and Generalized Trust: A Longitudinal Perspective. Working Paper. ISER Working Paper Series. (<a href="https://www.econstor.eu/handle/10419/65913">online</a>)</li>
+</ul>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -577,7 +598,7 @@ p.course-button a:hover {
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: true,

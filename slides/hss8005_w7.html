@@ -31,6 +31,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    q { quotes: "“" "”" "‘" "’"; }
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="../html/nobiblio.css">
@@ -535,8 +536,27 @@ p.course-button a:hover {
   <p class="week-subtitle">Graphical models and considerations for causal analysis</p>
 </section>
 -->
-<section class="slide level2">
-
+<section id="description" class="slide level2">
+<h2>Description</h2>
+<p>This week we ask some essential conceptual questions that can clarify various stated and unstated assumptions about our empirical data, theoretical questions and the models we aim to fit to them. We’ll explore the possibilities and challenges of asking causal questions of observational data, and we’ll think about ways to avoid what evolutionary anthropologist Richard McElreath calls <a href="https://elevanth.org/blog/2021/06/15/regression-fire-and-dangerous-things-1-3/"><q>causal salad</q></a>. More generally, we explore ways of thinking about and dealing with the various <em>biases</em> that affect quantitative analyses.</p>
+</section>
+<section id="readings" class="slide level2">
+<h2>Readings</h2>
+<p><strong>Statistics</strong></p>
+<div class="small-list">
+<ul>
+<li>Cinelli, Carlos, Andrew Forney, and Judea Pearl. 2022. <q>A Crash Course in Good and Bad Controls.</q> Sociological Methods &amp; Research <a href="https://journals.sagepub.com/doi/full/10.1177/00491241221099552">https://journals.sagepub.com/doi/full/10.1177/00491241221099552</a></li>
+<li>Lundberg, Ian, Rebecca Johnson, and Brandon M. Stewart. 2021. <q>What Is Your Estimand? Defining the Target Quantity Connects Statistical Evidence to Theory.</q> American Sociological Review 86(3): 532–65. <a href="https://doi.org/10.1177/00031224211004187">https://doi.org/10.1177/00031224211004187</a></li>
+<li><strong><a href="https://avehtari.github.io/ROS-Examples">ROS</a></strong>: Chapters 18-20</li>
+</ul>
+</div>
+<p><strong>Application</strong></p>
+<div class="small-list">
+<ul>
+<li>Griffith, Gareth J., Tim T. Morris, Matthew J. Tudball, Annie Herbert, Giulia Mancano, Lindsey Pike, Gemma C. Sharp, Jonathan Sterne, Tom M. Palmer, George Davey Smith, Kate Tilling, Luisa Zuccolo, Neil M. Davies, and Gibran Hemani. 2020. <q>Collider Bias Undermines Our Understanding of COVID-19 Disease Risk and Severity.</q> Nature Communications 11(1): 5749. <a href="https://www.nature.com/articles/s41467-020-19478-2">https://www.nature.com/articles/s41467-020-19478-2</a></li>
+<li>Breen, Richard. 2018. <q>Some Methodological Problems in the Study of Multigenerational Mobility.</q> European Sociological Review 34(6): 603–11. <a href="https://doi.org/10.1093/esr/jcy037">https://doi.org/10.1093/esr/jcy037</a></li>
+</ul>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -577,7 +597,7 @@ p.course-button a:hover {
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'verticator': {"themetag":"h1","color":"","inversecolor":"","skipuncounted":false,"clickable":true,"position":"auto","offset":"3vmin","autogenerate":true,"tooltip":false,"scale":1},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: true,
