@@ -1309,7 +1309,7 @@
     "href": "slides/example.html#code",
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "Code",
-    "text": "Code\n\n\na &lt;- rnorm(100, 4, 2)\nsummary(a)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n -2.374   2.905   4.168   3.953   5.323   9.082 \n\n\n\n\nhist(a)"
+    "text": "Code\n\n\na &lt;- rnorm(100, 4, 2)\nsummary(a)\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n -2.177   2.319   4.015   3.968   5.724   8.407 \n\n\n\n\nhist(a)"
   },
   {
     "objectID": "slides/example.html#testing",
@@ -1984,5 +1984,110 @@
     "title": "Quantitative analysis ",
     "section": "Readings",
     "text": "Readings\n\n\nROS: Chapters 5 (pp. 69-76) and 16 (pp. 291-310)\nTSD: TDS makes extensive use of simulation methods for various purposes at different stages of a research project (e.g. from data preparation through statistical inference to sharing results and data openly). A search on a keyword stub “simulat” can point you various sections of interest that are all worth reading."
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#section-2",
+    "href": "slides/hss8005_w8_conclusions.html#section-2",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "",
+    "text": "apps.chrismoreh.com/Monty"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#lets-play",
+    "href": "slides/hss8005_w8_conclusions.html#lets-play",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Let’s play!",
+    "text": "Let’s play!\n\n\n\n\n\n\napps.chrismoreh.com/Monty"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#take-home-exercises",
+    "href": "slides/hss8005_w8_conclusions.html#take-home-exercises",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Take-home exercises",
+    "text": "Take-home exercises\n\n\nPlay some more before and after this lecture, then download all your data from the app\nBuild some plots of the data to address these questions, making some transformations to the dataset if/as required:\n\nHow many games have you won in total?\nWhat was your overall win rate?\nHow often have you switched away from your initial door?\nHow often did you win when you switched, and how often when you stayed?\n\n\nTest the statistical association between switching and winning\nHow has your switching behaviour developed over time? Test the association between time (the Timestamp column/variable) and switching choice\nHas your switching behaviour changed between and after the lecture? Test this causal question statistically."
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#the-solution",
+    "href": "slides/hss8005_w8_conclusions.html#the-solution",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "The solution",
+    "text": "The solution\n\n\nSimulation\nTransmutation\nEnumeration"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#lets-play-1",
+    "href": "slides/hss8005_w8_conclusions.html#lets-play-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Let’s play!",
+    "text": "Let’s play!\n\n\n\n\n\napps.chrismoreh.com/Monty"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#solutions",
+    "href": "slides/hss8005_w8_conclusions.html#solutions",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Solutions",
+    "text": "Solutions\n\n\nSimulation\nTransmutation\nEnumeration\nCausal reasoning (graphical model)\nBayesian reasoning"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#simulation",
+    "href": "slides/hss8005_w8_conclusions.html#simulation",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Simulation",
+    "text": "Simulation\n\n  n_games           = 1000\n  balanced          = FALSE\n  \n  df_games          = data.frame()\n  \n  for (i in 1:n_games) {\n    winning_door    = sample(c(\"Door 1\", \"Door 2\", \"Door 3\"), size = 1)\n    original_choice = sample(c(\"Door 1\", \"Door 2\", \"Door 3\"), size = 1)\n    losing_doors    = setdiff(c(\"Door 1\", \"Door 2\", \"Door 3\"), winning_door)\n    revealed_door   = ifelse(original_choice == winning_door,\n                             sample(losing_doors, size = 1),\n                             setdiff(losing_doors, original_choice)\n                             )\n    switched        = ifelse(balanced,\n                             ifelse(i &lt;= n_games/2, \"Switched\", \"Not switched\"),\n                             sample(c(\"Switched\", \"Not switched\"), size = 1)\n                             )\n    final_choice    = ifelse(switched == \"Switched\", \n                             setdiff(c(\"Door 1\", \"Door 2\", \"Door 3\"), c(revealed_door, original_choice)), \n                             original_choice\n                             )\n    outcome         = ifelse(final_choice == winning_door,\n                             \"Won\",\n                             \"Lost\"\n                             )\n    \n    game            = cbind(game = i,\n                            winning_door,\n                            original_choice,\n                            switched,\n                            outcome\n                            )\n    df_games        = rbind(df_games, \n                            game)\n  }"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#simulation-1",
+    "href": "slides/hss8005_w8_conclusions.html#simulation-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Simulation",
+    "text": "Simulation\n\n  n_games           = 1000\n  balanced          = FALSE\n  \nmonty &lt;- function(n_games = 1000, balanced = TRUE) {\n  \n  df_games          = data.frame()\n  \n  for (i in 1:n_games) {\n    winning_door    = sample(c(\"Door 1\", \"Door 2\", \"Door 3\"), size = 1)\n    original_choice = sample(c(\"Door 1\", \"Door 2\", \"Door 3\"), size = 1)\n    losing_doors    = setdiff(c(\"Door 1\", \"Door 2\", \"Door 3\"), winning_door)\n    revealed_door   = ifelse(original_choice == winning_door,\n                             sample(losing_doors, size = 1),\n                             setdiff(losing_doors, original_choice)\n                             )\n    switched        = ifelse(balanced,\n                             ifelse(i &lt;= n_games/2, \"Switched\", \"Not switched\"),\n                             sample(c(\"Switched\", \"Not switched\"), size = 1)\n                             )\n    final_choice    = ifelse(switched == \"Switched\", \n                             setdiff(c(\"Door 1\", \"Door 2\", \"Door 3\"), c(revealed_door, original_choice)), \n                             original_choice\n                             )\n    outcome         = ifelse(final_choice == winning_door,\n                             \"Won\",\n                             \"Lost\"\n                             )\n    \n    game            = cbind(game = i,\n                            winning_door,\n                            original_choice,\n                            switched,\n                            outcome\n                            )\n    df_games        = rbind(df_games, \n                            game)\n  }\n\n  return(df_games)\n}"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#causal-reasoning-graphical-model",
+    "href": "slides/hss8005_w8_conclusions.html#causal-reasoning-graphical-model",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Causal reasoning (graphical model)",
+    "text": "Causal reasoning (graphical model)\n\n\nlibrary(DiagrammeR)\n\nDiagrammeR::grViz(\"\ndigraph {\n  graph []\n  node [shape = plaintext]\n    A [label = 'First choice door']\n    Y [label = 'Lung cancer']\n  edge []\n    A-&gt;Y\n}\n\")"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#simulation-output",
+    "href": "slides/hss8005_w8_conclusions.html#simulation-output",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Simulation",
+    "text": "Simulation"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#simulation-1-output",
+    "href": "slides/hss8005_w8_conclusions.html#simulation-1-output",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Simulation",
+    "text": "Simulation"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#simulation-2",
+    "href": "slides/hss8005_w8_conclusions.html#simulation-2",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Simulation",
+    "text": "Simulation\n\nmonty(100) |&gt;\n  ggplot(aes(x = switched, fill = outcome)) + \n  geom_bar(position=\"fill\", stat=\"count\") + \n  scale_fill_manual(values = c(\"#880e0e50\", \"#396e0a\")) + \n  labs(x = \"\\nDid the player switch their choice?\", \n       fill = \"Outcome \", y = \"Percent (%) of games\\n\") +\n  theme_minimal() +\n  theme(legend.position = \"top\")"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#simulation-3",
+    "href": "slides/hss8005_w8_conclusions.html#simulation-3",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Simulation",
+    "text": "Simulation\n\nmonty(100) |&gt;\n  ggplot(aes(x = switched, fill = outcome)) + \n  geom_bar(position=\"fill\", stat=\"count\") + \n  scale_fill_manual(values = c(\"#880e0e50\", \"#396e0a\")) + \n  labs(x = \"\\nDid the player switch their choice?\", \n       fill = \"Outcome \", y = \"Percent (%) of games\\n\") +\n  theme_minimal() +\n  theme(legend.position = \"top\")"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#simulation-4",
+    "href": "slides/hss8005_w8_conclusions.html#simulation-4",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Simulation",
+    "text": "Simulation\n\nplot = list()\n\nfor (i in 1:49) {\nplot[[i]] &lt;- \nmonty(1000) |&gt;\n  ggplot(aes(x = switched, fill = outcome)) + \n  geom_bar(position=\"fill\", stat=\"count\") + \n  scale_fill_manual(values = c(\"#880e0e50\", \"#396e0a\")) + \n  scale_y_continuous(labels = scales::percent_format()) +\n  labs(x = NULL, \n       fill = NULL, \n       y = NULL) +\n  theme_minimal() +\n  theme(legend.position = \"none\")\n}\n\npatchwork::wrap_plots(plot)"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#simulation-4-output",
+    "href": "slides/hss8005_w8_conclusions.html#simulation-4-output",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Simulation",
+    "text": "Simulation"
   }
 ]
