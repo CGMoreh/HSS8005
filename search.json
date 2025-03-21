@@ -2089,5 +2089,26 @@
     "title": "HSS8005 {{< iconify line-md plus >}}",
     "section": "Simulation",
     "text": "Simulation"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#enumeration",
+    "href": "slides/hss8005_w8_conclusions.html#enumeration",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Enumeration",
+    "text": "Enumeration"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#enumeration-1",
+    "href": "slides/hss8005_w8_conclusions.html#enumeration-1",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Enumeration",
+    "text": "Enumeration"
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#bayesian-reasoning",
+    "href": "slides/hss8005_w8_conclusions.html#bayesian-reasoning",
+    "title": "HSS8005 {{< iconify line-md plus >}}",
+    "section": "Bayesian reasoning",
+    "text": "Bayesian reasoning\n\n\n\nHost could not open Door 1 after you chose it — but he could have opened Door 2.\nThe fact that he did not, makes it more likely that he opened Door 3 because he was forced to.\nThus there is more evidence than before that the prize is behind Door 2.\nAny hypothesis that has survived some test that threatens its validity becomes more likely. The greater the threat, the more likely it becomes after surviving."
   }
 ]
