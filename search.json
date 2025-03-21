@@ -1963,5 +1963,26 @@
       "Week 7",
       "Application"
     ]
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html",
+    "href": "slides/hss8005_w8_conclusions.html",
+    "title": "Quantitative analysis ",
+    "section": "",
+    "text": "We’ll practice some basic methods of computer simulation in R for statistical inference and for generating data that has some idealised characteristics. Such methods play an increasingly important role in computational statistics and are extremely useful for designing robust data collection and analysis plans. Of course, this topic also raises some much deeper existential issues. We have known ever since science-fiction author Philip K. Dick’s memorable “Metz address” of 1977 that our world is nothing but a complex computer simulation. We won’t be actively searching for empirical proof of this in class, but should we make a mistake in our code and end up in an infinite loop, we may be tempted to ponder whether if something like this can happen to our data, who says it couldn’t happen to us? If it happens and you’re afraid that stopping the process may cause the known universe to implode, you can watch Dick on YouTube while you wait."
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#description",
+    "href": "slides/hss8005_w8_conclusions.html#description",
+    "title": "Quantitative analysis ",
+    "section": "",
+    "text": "We’ll practice some basic methods of computer simulation in R for statistical inference and for generating data that has some idealised characteristics. Such methods play an increasingly important role in computational statistics and are extremely useful for designing robust data collection and analysis plans. Of course, this topic also raises some much deeper existential issues. We have known ever since science-fiction author Philip K. Dick’s memorable “Metz address” of 1977 that our world is nothing but a complex computer simulation. We won’t be actively searching for empirical proof of this in class, but should we make a mistake in our code and end up in an infinite loop, we may be tempted to ponder whether if something like this can happen to our data, who says it couldn’t happen to us? If it happens and you’re afraid that stopping the process may cause the known universe to implode, you can watch Dick on YouTube while you wait."
+  },
+  {
+    "objectID": "slides/hss8005_w8_conclusions.html#readings",
+    "href": "slides/hss8005_w8_conclusions.html#readings",
+    "title": "Quantitative analysis ",
+    "section": "Readings",
+    "text": "Readings\n\n\nROS: Chapters 5 (pp. 69-76) and 16 (pp. 291-310)\nTSD: TDS makes extensive use of simulation methods for various purposes at different stages of a research project (e.g. from data preparation through statistical inference to sharing results and data openly). A search on a keyword stub “simulat” can point you various sections of interest that are all worth reading."
   }
 ]
